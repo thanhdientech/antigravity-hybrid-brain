@@ -21,7 +21,6 @@ from __future__ import annotations
 import argparse
 import asyncio
 import ctypes
-from ctypes import wintypes
 import inspect
 import json
 import math
@@ -1028,6 +1027,8 @@ def capture_screen_wgc(
     def _poll_win32_cursor(start_perf: float) -> None:
         if os.name != "nt":
             return
+        from ctypes import wintypes
+
         user32 = ctypes.windll.user32
         screen_w = max(1, int(user32.GetSystemMetrics(0)))
         screen_h = max(1, int(user32.GetSystemMetrics(1)))
