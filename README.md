@@ -1,6 +1,6 @@
 # 🧠 Antigravity x Javis Hybrid Skill Brain & 5-Gate Anti-Hallucination Suite
 
-> **Hệ điều hành Tri thức Lai (Hybrid Knowledge & Skill Router), Khung Kiểm soát Chống Ảo Giác 5 Chốt Chặn Đa Lĩnh Vực (18 Ngành) và Hệ sinh thái 84 Kỹ năng Chuyên sâu (25 Global Skills + 12 Bộ Plugins) dành cho Google Antigravity IDE / CLI (`agy`).**
+> **Hệ điều hành Tri thức Lai (Hybrid Knowledge & Skill Router), Khung Kiểm soát Chống Ảo Giác 5 Chốt Chặn Đa Lĩnh Vực (18 Ngành) và Hệ sinh thái 85 Kỹ năng Chuyên sâu (26 Global Skills + 12 Bộ Plugins) dành cho Google Antigravity IDE / CLI (`agy`).**
 
 ---
 
@@ -15,11 +15,11 @@ Bộ giải pháp này giải quyết triệt để cả 3 bài toán thông qua
 
 | Chỉ Số Vận Hành Thực Tế | Kết Quả Đạt Được | Cơ Chế Kỹ Thuật Đằng Sau |
 | :--- | :--- | :--- |
-| **Quy mô tri thức quản lý** | **84 Skills** (`2,125+` files, `18,060+` chunks) | Quét đa tầng: Workspace $\rightarrow$ Global (`25`) $\rightarrow$ Plugins (`50`) $\rightarrow$ Builtin (`9`) |
+| **Quy mô tri thức quản lý** | **85 Skills** (`2,129+` files, `18,088+` chunks) | Quét đa tầng: Workspace $\rightarrow$ Global (`26`) $\rightarrow$ Plugins (`50`) $\rightarrow$ Builtin (`9`) |
 | **Tốc độ tìm kiếm lai (Warm Search)** | **`6 ms – 56 ms`** | SQLite WAL + FTS5 tiếng Việt không dấu (`đ/Đ`) + Reciprocal Rank Fusion (RRF) |
 | **Tốc độ cập nhật Delta SHA-256** | **`~210 ms – 420 ms`** | Chỉ cập nhật đúng file có thay đổi mã băm SHA-256 với FTS5 `contentless_delete=1` |
 | **Tiết kiệm Context Token** | **`70% – 85%`** | Lazy Section Excerpt: chỉ cắt đúng mục Heading hoặc đoạn dòng `L_start..L_end` |
-| **Ngân sách định tuyến Frontmatter** | **`~3,153 / 4,000` ký tự** | Chuẩn hóa mỗi `SKILL.md` `description <= 150` ký tự, đẩy chi tiết xuống `references/` |
+| **Ngân sách định tuyến Frontmatter** | **`~3,274 / 4,000` ký tự** | Chuẩn hóa mỗi `SKILL.md` `description <= 150` ký tự, đẩy chi tiết xuống `references/` |
 
 ---
 
@@ -31,7 +31,7 @@ flowchart TD
 
     subgraph Javis_Brain ["🧠 Bộ Não Lai Javis Hybrid Skill Brain (config/scripts/)"]
         Hook -->|"Đọc 192KB cuối transcript (< 1ms)"| Engine["🔍 agy_skill_engine.py v2\n(SQLite WAL + FTS5 Tiếng Việt đ/Đ + RRF + Đồng nghĩa Việt-Anh)"]
-        Engine <-->|"Quét Delta SHA-256 (~210ms)"| IndexDB[("agy_skill_index.db\n2,125+ Files | 18,060+ Chunks")]
+        Engine <-->|"Quét Delta SHA-256 (~210ms)"| IndexDB[("agy_skill_index.db\n2,129+ Files | 18,088+ Chunks")]
         Engine -->|"Tiêm gợi ý Top 3 Skill + Dòng L_start..L_end\n(ephemeralMessage tự hủy)"| Agent["🤖 Antigravity AI Agent"]
         Agent <-->|"Gọi 4 Tools qua MCP Stdio"| MCP["🔌 Trạm MCP: agy-skill-hub\n(agy_skill_mcp_server.py)"]
         MCP <--> Engine
@@ -95,9 +95,9 @@ Thư mục `config/scripts/` đóng vai trò là **nhân điều phối trung t�
 
 ---
 
-## 🧰 5. Danh Mục & Giải Thích Chi Tiết 25 Global Skills (`config/skills/`)
+## 🧰 5. Danh Mục & Giải Thích Chi Tiết 26 Global Skills (`config/skills/`)
 
-Toàn bộ **25 Global Skills** được tổ chức thành **8 Cụm Chuyên Môn** hiệp đồng chặt chẽ:
+Toàn bộ **26 Global Skills** được tổ chức thành **8 Cụm Chuyên Môn** hiệp đồng chặt chẽ:
 
 ### Cụm A — Điều Phối Đa Tác Tử, Quản Trị Tri Thức & Kiểm Toán AI (5 Skills)
 | Tên Skill | Vai Trò & Năng Lực Cốt Lõi | Công Cụ / CLI Đi Kèm |
@@ -113,7 +113,7 @@ Toàn bộ **25 Global Skills** được tổ chức thành **8 Cụm Chuyên M�
 | :--- | :--- | :--- |
 | **`security-audit`** | Rà soát bảo mật chuyên sâu (AppSec) cho mã nguồn, Web/API, CLI & dịch vụ ngầm theo danh mục lớp tấn công (Injection, Auth, SSRF, Deserialization, Path Traversal), bắt buộc đối chứng Coverage Ledger chống bỏ sót tệp. *(Đã vá tương thích 100% trên cả Windows & POSIX)*. | `scripts/validate-findings.cjs`, `scripts/validate-coverage-ledger.cjs`, `references/ATTACK-CLASSES.md` |
 
-### Cụm C — Sản Xuất Phim AI, Hoạt Hình Code-as-Video & Đồ Họa Chuyển Động (7 Skills)
+### Cụm C — Sản Xuất Phim AI, Quay Màn Hình Hướng Dẫn Thuyết Minh `.SRT`, Hoạt Hình Code-as-Video & Đồ Họa Chuyển Động (8 Skills)
 | Tên Skill | Vai Trò & Năng Lực Cốt Lõi | Công Cụ / Engine Đi Kèm |
 | :--- | :--- | :--- |
 | **`lam-phim-video-master`** | **Siêu Hub Tổng Hợp 13 Bộ Skill Làm Phim (`1,875+` files)**: điều phối trọn gói 5 giai đoạn từ biên kịch, khóa nhân vật 3D, dựng video bằng code đến hậu kỳ & xuất bản. | Bao hàm 13 module con (`01` $\rightarrow$ `13`), kho 703 mẫu Code-as-Video & PromptDirector |
@@ -123,6 +123,7 @@ Toàn bộ **25 Global Skills** được tổ chức thành **8 Cụm Chuyên M�
 | **`kinetic-reel`** | Dựng video Kinetic Typography, Showreel & Product Promo (MP4) hoàn toàn bằng code với bố cục chữ chuyển động cường độ cao, lớp 3D WebGL và nhạc điện tử tự tổng hợp khớp từng khung hình (*beat-locked score*). | Canvas 2D + `Three.js` WebGL + Headless Chrome `render.mjs` + Node `score.mjs` + FFmpeg |
 | **`painted-animation`** | Sản xuất phim hoạt hình vẽ tay **Màu Nước & Mực Tàu** (MP4) bằng code, hỗ trợ diễn xuất biểu cảm nhân vật, đồng bộ lời bài hát (LRC/BPM) và render song song đa luồng. | `p5.js` + `p5.brush` + `scripts/beat_grid.py` + Headless Chrome + FFmpeg |
 | **`gsap-skills`** | Bộ kỹ năng chính thức lập trình hiệu ứng chuyển động Web & Video tốc độ 60fps bằng thư viện GreenSock (GSAP). | Tweens, Timelines, ScrollTrigger, SplitText, MorphSVG, Flip, React `useGSAP` |
+| **`recordly-tutorial-ai`** | Quay màn hình hướng dẫn sử dụng phần mềm/ERP/Web với **Recordly v1.4.0** kết hợp AI tự động đọc lời bình giải thích từng bước (`vi-VN-HoaiMyNeural` / `vi-VN-NamMinhNeural` + 40 ngôn ngữ), tự sinh phụ đề **`.srt` / `.vtt`** khớp từng mili-giây theo `WordBoundary`, xuất kép dự án **`.recordly` v2** (`audioRegions`, `autoCaptions`, `zoomRegions`, `annotationRegions`, `RECORDLY_SMOKE_EXPORT=1`) và video **`.mp4`** đốt sẵn phụ đề Tiếng Việt sắc nét. | `scripts/recordly_tutorial_pipeline.py` (`discover`, `capture` `wgc-capture.exe` 60fps, `transcribe` `whisper-cli.exe`, `build`, `--self-test`) |
 
 ### Cụm D — Thiết Kế UI/UX Phần Mềm Đa Ngành, Nhận Diện Thương Hiệu, Dàn Trang Ấn Phẩm, Web/LP & SEO/GEO (5 Skills)
 | Tên Skill | Vai Trò & Năng Lực Cốt Lõi | Công Cụ / CLI Đi Kèm |
@@ -160,7 +161,7 @@ Toàn bộ **25 Global Skills** được tổ chức thành **8 Cụm Chuyên M�
 
 ## 🧩 6. Hệ Sinh Thái 12 Bộ Plugins Mở Rộng (`config/plugins/` — 50+ Sub-Skills)
 
-Bên cạnh 25 Global Skills, gói cài đặt tích hợp sẵn **12 Bộ Plugins chuyên ngành**:
+Bên cạnh 26 Global Skills, gói cài đặt tích hợp sẵn **12 Bộ Plugins chuyên ngành**:
 
 1. **`science` (27 Kỹ năng Nghiên cứu Khoa học & Y Sinh học Quốc tế):**
    - *Cấu trúc Protein & Phân tử 3D:* `alphafold-database-fetch-and-analyze`, `pdb-database`, `uniprot-database`, `interpro-database`, `foldseek-structural-search`, `protein-sequence-msa`, `protein-sequence-similarity-search`, `pymol` và trình xem cấu trúc 3D tương tác trực tiếp **`biomolecular-structure-viewer` (Mol\* Sidecar)**.
@@ -189,7 +190,7 @@ Bên cạnh 25 Global Skills, gói cài đặt tích hợp sẵn **12 Bộ Plugi
    cd antigravity-hybrid-brain
    ```
 2. Nhấp đúp chạy **`CAI_DAT_1_CLICK_WINDOWS.bat`**:
-   - Tự động sao chép `GEMINI.md`, sổ tay quy trình, `scripts/`, **25 Global Skills** và **12 Plugins** vào `%USERPROFILE%\.gemini\config\`.
+   - Tự động sao chép `GEMINI.md`, sổ tay quy trình, `scripts/`, **26 Global Skills** và **12 Plugins** vào `%USERPROFILE%\.gemini\config\`.
    - Tự động chạy `setup_portable_antigravity.py` để đăng ký MCP Server `agy-skill-hub` và `PreInvocation Hook` khớp với đường dẫn Python của máy mới.
 3. Nhấp đúp chạy tiếp **`CAI_THU_VIEN_PYTHON_CHO_SKILLS.bat`**:
    - Cài đặt đầy đủ các thư viện Python (`mcp`, `pyyaml`, `aiohttp`, `websockets`, `beautifulsoup4`, `requests`, `playwright`, `pyodbc`, `pymssql`, `reportlab`, `pydantic`, `rich`...) và trình duyệt Chromium Headless.
@@ -216,7 +217,7 @@ python3 ~/.gemini/config/scripts/setup_portable_antigravity.py
 
 ### Kiểm Tra Trạng Thái Bộ Não Lai Sau Khi Cài Đặt
 ```bash
-# Kiểm toán sức khỏe 84 Skills và đo tốc độ chỉ mục:
+# Kiểm toán sức khỏe 85 Skills và đo tốc độ chỉ mục:
 python ~/.gemini/config/scripts/agy_skill_engine.py --audit
 
 # Thử nghiệm tìm kiếm lai tiếng Việt không dấu / song ngữ (< 50ms):
@@ -225,6 +226,7 @@ python ~/.gemini/config/scripts/agy_skill_engine.py --search "audit google ads p
 python ~/.gemini/config/scripts/agy_skill_engine.py --search "tu vi dau so bat tu 24 tiet khi"
 python ~/.gemini/config/scripts/agy_skill_engine.py --search "thiet ke giao dien phan mem design to code react"
 python ~/.gemini/config/scripts/agy_skill_engine.py --search "thiet ke logo svg bo nhan dien bao gia tap chi a4"
+python ~/.gemini/config/scripts/agy_skill_engine.py --search "quay man hinh huong dan phan mem tao phu de srt recordly"
 ```
 
 ---

@@ -1,0 +1,55 @@
+{
+  "title": "Hướng dẫn tra cứu và xuất báo cáo nhanh trên phần mềm",
+  "voice": "vi-VN-HoaiMyNeural",
+  "rate": "+0%",
+  "aspect_ratio": "16:9",
+  "system_audio_volume": 0.15,
+  "caption_animation": "fade",
+  "steps": [
+    {
+      "start_sec": 0.4,
+      "text": "Bước một, mở phân hệ Báo cáo quản trị trên thanh điều hướng bên trái.",
+      "zoom": {
+        "cx": 0.18,
+        "cy": 0.32,
+        "depth": 2,
+        "duration_sec": 3.0
+      },
+      "callout": {
+        "text": "1. Chọn Báo cáo quản trị",
+        "x": 28,
+        "y": 24
+      }
+    },
+    {
+      "start_sec": 4.2,
+      "text": "Bước hai, chọn kỳ dữ liệu cần kiểm tra và nhấn nút Lọc kết quả.",
+      "zoom": {
+        "cx": 0.52,
+        "cy": 0.25,
+        "depth": 3,
+        "duration_sec": 3.2
+      },
+      "callout": {
+        "text": "2. Chọn kỳ & Lọc dữ liệu",
+        "x": 52,
+        "y": 18
+      }
+    },
+    {
+      "start_sec": 8.2,
+      "text": "Bước ba, nhấn Xuất tệp PDF ở góc phải để tải báo cáo hoàn chỉnh về máy.",
+      "zoom": {
+        "cx": 0.84,
+        "cy": 0.22,
+        "depth": 3,
+        "duration_sec": 3.0
+      },
+      "callout": {
+        "text": "3. Xuất tệp PDF",
+        "x": 76,
+        "y": 32
+      }
+    }
+  ]
+}

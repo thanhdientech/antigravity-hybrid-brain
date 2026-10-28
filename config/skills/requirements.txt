@@ -1,5 +1,5 @@
 # ==============================================================================
-# DANH SÁCH THƯ VIỆN PYTHON CHO BỘ NÃO LAI JAVIS (agy-skill-hub) & 23 GLOBAL SKILLS
+# DANH SÁCH THƯ VIỆN PYTHON CHO BỘ NÃO LAI JAVIS (agy-skill-hub) & 26 GLOBAL SKILLS
 # ==============================================================================
 # 1. Bộ Não Lai Javis Hybrid Skill Brain (agy_skill_engine.py + agy_skill_mcp_server.py)
 mcp>=1.2.0
@@ -44,3 +44,7 @@ questionary>=2.0.0
 iztro-py>=0.5.0
 lunar_python>=1.4.0
 lunarcalendar>=0.0.9
+
+# 8. recordly-tutorial-ai: Tổng hợp giọng đọc AI Neural thuyết minh (Sec-MS-GEC v2) & xuất phụ đề .SRT
+edge-tts>=7.3.1
+gTTS>=2.5.0
