@@ -313,8 +313,8 @@ Medium close-up, low angle, a young woman in a red áo dài walks slowly through
    - Hỗ trợ đồng thời nhiều Profile khác nhau trên Chrome và Cốc Cốc:
      - `coccoc_default`: Profile Cốc Cốc chính của Sếp.
      - `7`: Profile Chrome 7 (Email `creator_account@...`).
-     - `54`: Profile Chrome 54 (Email `scmsap2022@...`).
-     - `67`: Profile Chrome 67 (Tài khoản Suno AI `regsunoai2026@...`).
+     - `54`: Profile Chrome 54 (Email `erp_account@...`).
+     - `67`: Profile Chrome 67 (Tài khoản Suno AI `suno_account@...`).
      - `tomi`, `enterprise`...
    - Tự động phân luồng lệnh tới đúng Profile dựa trên tên gắn nhãn hoặc email đang đăng nhập.
 2. **Nạp File Nhị Phân Ngầm Qua CDP `DOM.setFileInputFiles` (Bypass Windows Dialog):**
@@ -561,4 +561,17 @@ Khi cả 2 lệnh trên đều trả về kết quả thành công (Exit Code 0)
 
 ---
 
-*Tài liệu được cập nhật toàn diện và đối soát thực chứng trực tiếp từ 9 bộ kỹ năng thực tế tại hệ thống Antigravity.*
+## 🚀 PHẦN BỔ SUNG: SIÊU HUB GOOGLE ADS & CRO (`google-ads-master`)
+
+Hệ thống tích hợp thêm **Siêu Hub [`google-ads-master`](./google-ads-master/SKILL.md)** hợp nhất **12 bộ kỹ năng chuyên sâu Google Ads, Phân tích Từ khóa Hành trình Khách hàng & Tối ưu Chuyển đổi Trang đích (CRO)** kèm **14 công cụ Python CLI** và **4 hợp đồng dữ liệu JSON/YAML**:
+
+| Nhóm Chức Năng | Bộ Skill Thành Phần (`skills/`) | Vai Trò & Công Cụ Thực Thi | Đầu Ra Chuẩn |
+| :--- | :--- | :--- | :--- |
+| **1. Điều phối & Nền tảng** | `google-ads`, `google-ads-shared`, `setup` | Điều phối vòng đời 18 Module v3, kho 15 Playbook A1–A14, `validate_context.py` | `account-context.yaml` |
+| **2. Chẩn đoán Read-Only** | `measurement`, `audit`, `toi-uu-chuyen-doi-web` | Kiểm định Conversion Tracking / GA4 / CAPI, `money_leak_report.py`, `a14_product_report.py`, CRO Audit | `AUDIT.html`, CRO HTML Dashboard, `PASS/WARN/FAIL` |
+| **3. Kế hoạch & Sáng tạo** | `keyword-analysis`, `plan`, `builder-search`, `assets` | Phân nhóm từ khóa L1–L3 ra `.xlsx` 6 sheets (`recalc_xlsx_check.py`), `forecaster.py`, `spec_to_xlsx.py`, RSA/PMax copy | `GOOGLE-ADS-PLAN.md`, `blueprint.xlsx`, `campaign-spec.json` |
+| **4. Tối ưu & Xuất bản** | `optimizer`, `pusher` | `search_term_miner.py`, `tiering.py`, `validate_spec.py`, `validate_changeset.py`, `spec_to_editor_csv.py` | `change-set.json`, Google Ads Editor CSV (`PAUSED`) |
+
+---
+
+*Tài liệu được cập nhật toàn diện và đối soát thực chứng trực tiếp từ hệ sinh thái kỹ năng thực tế tại hệ thống Antigravity.*

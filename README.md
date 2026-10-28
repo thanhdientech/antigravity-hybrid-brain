@@ -1,6 +1,6 @@
 # 🧠 Antigravity x Javis Hybrid Skill Brain & 5-Gate Anti-Hallucination Suite
 
-> **Hệ điều hành Tri thức Lai (Hybrid Knowledge & Skill Router), Khung Kiểm soát Chống Ảo Giác 5 Chốt Chặn Đa Lĩnh Vực (18 Ngành) và Hệ sinh thái 80 Kỹ năng Chuyên sâu (21 Global Skills + 12 Bộ Plugins) dành cho Google Antigravity IDE / CLI (`agy`).**
+> **Hệ điều hành Tri thức Lai (Hybrid Knowledge & Skill Router), Khung Kiểm soát Chống Ảo Giác 5 Chốt Chặn Đa Lĩnh Vực (18 Ngành) và Hệ sinh thái 81 Kỹ năng Chuyên sâu (22 Global Skills + 12 Bộ Plugins) dành cho Google Antigravity IDE / CLI (`agy`).**
 
 ---
 
@@ -15,11 +15,11 @@ Bộ giải pháp này giải quyết triệt để cả 3 bài toán thông qua
 
 | Chỉ Số Vận Hành Thực Tế | Kết Quả Đạt Được | Cơ Chế Kỹ Thuật Đằng Sau |
 | :--- | :--- | :--- |
-| **Quy mô tri thức quản lý** | **80 Skills** (`1,668+` files, `11,600+` chunks) | Quét đa tầng: Workspace $\rightarrow$ Global (`21`) $\rightarrow$ Plugins (`50`) $\rightarrow$ Builtin (`9`) |
-| **Tốc độ tìm kiếm lai (Warm Search)** | **`14 ms – 56 ms`** | SQLite WAL + FTS5 tiếng Việt không dấu (`đ/Đ`) + Reciprocal Rank Fusion (RRF) |
-| **Tốc độ cập nhật Delta SHA-256** | **`~340 ms – 420 ms`** | Chỉ cập nhật đúng file có thay đổi mã băm SHA-256 với FTS5 `contentless_delete=1` |
+| **Quy mô tri thức quản lý** | **81 Skills** (`1,714+` files, `11,995+` chunks) | Quét đa tầng: Workspace $\rightarrow$ Global (`22`) $\rightarrow$ Plugins (`50`) $\rightarrow$ Builtin (`9`) |
+| **Tốc độ tìm kiếm lai (Warm Search)** | **`6 ms – 56 ms`** | SQLite WAL + FTS5 tiếng Việt không dấu (`đ/Đ`) + Reciprocal Rank Fusion (RRF) |
+| **Tốc độ cập nhật Delta SHA-256** | **`~210 ms – 420 ms`** | Chỉ cập nhật đúng file có thay đổi mã băm SHA-256 với FTS5 `contentless_delete=1` |
 | **Tiết kiệm Context Token** | **`70% – 85%`** | Lazy Section Excerpt: chỉ cắt đúng mục Heading hoặc đoạn dòng `L_start..L_end` |
-| **Ngân sách định tuyến Frontmatter** | **`~2,609 / 4,000` ký tự** | Chuẩn hóa mỗi `SKILL.md` `description <= 150` ký tự, đẩy chi tiết xuống `references/` |
+| **Ngân sách định tuyến Frontmatter** | **`~2,744 / 4,000` ký tự** | Chuẩn hóa mỗi `SKILL.md` `description <= 150` ký tự, đẩy chi tiết xuống `references/` |
 
 ---
 
@@ -31,7 +31,7 @@ flowchart TD
 
     subgraph Javis_Brain ["🧠 Bộ Não Lai Javis Hybrid Skill Brain (config/scripts/)"]
         Hook -->|"Đọc 192KB cuối transcript (< 1ms)"| Engine["🔍 agy_skill_engine.py v2\n(SQLite WAL + FTS5 Tiếng Việt đ/Đ + RRF + Đồng nghĩa Việt-Anh)"]
-        Engine <-->|"Quét Delta SHA-256 (~350ms)"| IndexDB[("agy_skill_index.db\n1,668+ Files | 11,604+ Chunks")]
+        Engine <-->|"Quét Delta SHA-256 (~210ms)"| IndexDB[("agy_skill_index.db\n1,714+ Files | 11,995+ Chunks")]
         Engine -->|"Tiêm gợi ý Top 3 Skill + Dòng L_start..L_end\n(ephemeralMessage tự hủy)"| Agent["🤖 Antigravity AI Agent"]
         Agent <-->|"Gọi 4 Tools qua MCP Stdio"| MCP["🔌 Trạm MCP: agy-skill-hub\n(agy_skill_mcp_server.py)"]
         MCP <--> Engine
@@ -95,9 +95,9 @@ Thư mục `config/scripts/` đóng vai trò là **nhân điều phối trung t�
 
 ---
 
-## 🧰 5. Danh Mục & Giải Thích Chi Tiết 21 Global Skills (`config/skills/`)
+## 🧰 5. Danh Mục & Giải Thích Chi Tiết 22 Global Skills (`config/skills/`)
 
-Toàn bộ **21 Global Skills** được tổ chức thành **6 Cụm Chuyên Môn** hiệp đồng chặt chẽ:
+Toàn bộ **22 Global Skills** được tổ chức thành **7 Cụm Chuyên Môn** hiệp đồng chặt chẽ:
 
 ### Cụm A — Điều Phối Đa Tác Tử, Quản Trị Tri Thức & Kiểm Toán AI (5 Skills)
 | Tên Skill | Vai Trò & Năng Lực Cốt Lõi | Công Cụ / CLI Đi Kèm |
@@ -144,11 +144,16 @@ Toàn bộ **21 Global Skills** được tổ chức thành **6 Cụm Chuyên M�
 | **`viet-sql-sap-b1`** | Kỹ sư trưởng viết & tối ưu hóa truy vấn T-SQL / HANA SQLScript cho SAP B1 & Beas: chuẩn nối bảng `DocEntry`/`BaseEntry`, thiết kế Formatted Search (FMS), `SBO_SP_TransactionNotification` và kho **300+ mẫu truy vấn SQL thực chiến**. | `references/` (`310+` tệp mẫu `.sql` & cẩm nang tối ưu) |
 | **`sql-sap-b1`** | Công cụ kết nối cơ sở dữ liệu SAP B1 ở chế độ **An toàn Chỉ Đọc (*Strict Read-Only*)** để đối chiếu số liệu thực tế và xuất báo cáo trực tiếp ra `.xlsx`, `.pdf`, `.csv`. *(Đi kèm tệp mẫu `config.example.json`, tự động bảo vệ thông tin kết nối thật qua `.gitignore`)*. | `scripts/sap_customer_sql_plugin.py`, `config.example.json` |
 
+### Cụm G — Quảng Cáo Google Ads Thực Chiến, Phân Tích Từ Khóa & Tối Ưu Chuyển Đổi CRO (1 Siêu Hub / 12 Bộ Skill Thành Phần)
+| Tên Skill | Vai Trò & Năng Lực Cốt Lõi | Công Cụ / CLI Đi Kèm |
+| :--- | :--- | :--- |
+| **`google-ads-master`** | **Siêu Hub Tổng Hợp 12 Bộ Skill Google Ads & CRO (`51` files — Lộ trình 18 Module v3)**: điều phối xuyên suốt vòng đời tài khoản quảng cáo từ thiết lập hồ sơ `account-context.yaml` (`setup`), cổng kiểm định Conversion Tracking / GA4 / CAPI chống đếm trùng (`measurement`), kiểm toán sức khỏe & chẩn đoán rò rỉ ngân sách A1–A14 bằng GAQL (`audit`), kiểm toán trang đích CRO xuất HTML Dashboard (`toi-uu-chuyen-doi-web`), gom nhóm từ khóa CSV Keyword Planner theo 3 giai đoạn hành trình ra Excel 6 sheets (`keyword-analysis`), lập kế hoạch ngân sách & dự báo CPA/ROAS (`plan`), dựng chiến dịch Search & RSA/PMax Assets (`builder-search`, `assets`), khai thác Search Terms / Negative Keywords & phân hạng tối ưu tài khoản đang chạy (`optimizer`), đến kiểm định an toàn & xuất tệp Google Ads Editor CSV luôn ở trạng thái `PAUSED` (`pusher`). | **14 Python CLI Scripts** (`validate_context.py`, `money_leak_report.py`, `a14_product_report.py`, `forecaster.py`, `search_term_miner.py`, `tiering.py`, `validate_spec.py`, `validate_changeset.py`, `spec_to_editor_csv.py`, `spec_to_paste.py`, `spec_to_pmax_checklist.py`, `changeset_to_actions.py`, `spec_to_xlsx.py`, `recalc_xlsx_check.py`) + **18 Playbooks A1–A14** + **4 JSON/YAML Contracts** |
+
 ---
 
 ## 🧩 6. Hệ Sinh Thái 12 Bộ Plugins Mở Rộng (`config/plugins/` — 50+ Sub-Skills)
 
-Bên cạnh 21 Global Skills, gói cài đặt tích hợp sẵn **12 Bộ Plugins chuyên ngành**:
+Bên cạnh 22 Global Skills, gói cài đặt tích hợp sẵn **12 Bộ Plugins chuyên ngành**:
 
 1. **`science` (27 Kỹ năng Nghiên cứu Khoa học & Y Sinh học Quốc tế):**
    - *Cấu trúc Protein & Phân tử 3D:* `alphafold-database-fetch-and-analyze`, `pdb-database`, `uniprot-database`, `interpro-database`, `foldseek-structural-search`, `protein-sequence-msa`, `protein-sequence-similarity-search`, `pymol` và trình xem cấu trúc 3D tương tác trực tiếp **`biomolecular-structure-viewer` (Mol\* Sidecar)**.
@@ -177,7 +182,7 @@ Bên cạnh 21 Global Skills, gói cài đặt tích hợp sẵn **12 Bộ Plugi
    cd antigravity-hybrid-brain
    ```
 2. Nhấp đúp chạy **`CAI_DAT_1_CLICK_WINDOWS.bat`**:
-   - Tự động sao chép `GEMINI.md`, sổ tay quy trình, `scripts/`, **21 Global Skills** và **12 Plugins** vào `%USERPROFILE%\.gemini\config\`.
+   - Tự động sao chép `GEMINI.md`, sổ tay quy trình, `scripts/`, **22 Global Skills** và **12 Plugins** vào `%USERPROFILE%\.gemini\config\`.
    - Tự động chạy `setup_portable_antigravity.py` để đăng ký MCP Server `agy-skill-hub` và `PreInvocation Hook` khớp với đường dẫn Python của máy mới.
 3. Nhấp đúp chạy tiếp **`CAI_THU_VIEN_PYTHON_CHO_SKILLS.bat`**:
    - Cài đặt đầy đủ các thư viện Python (`mcp`, `pyyaml`, `aiohttp`, `websockets`, `beautifulsoup4`, `requests`, `playwright`, `pyodbc`, `pymssql`, `reportlab`, `pydantic`, `rich`...) và trình duyệt Chromium Headless.
@@ -204,11 +209,12 @@ python3 ~/.gemini/config/scripts/setup_portable_antigravity.py
 
 ### Kiểm Tra Trạng Thái Bộ Não Lai Sau Khi Cài Đặt
 ```bash
-# Kiểm toán sức khỏe 80 Skills và đo tốc độ chỉ mục:
+# Kiểm toán sức khỏe 81 Skills và đo tốc độ chỉ mục:
 python ~/.gemini/config/scripts/agy_skill_engine.py --audit
 
 # Thử nghiệm tìm kiếm lai tiếng Việt không dấu / song ngữ (< 50ms):
 python ~/.gemini/config/scripts/agy_skill_engine.py --search "lech kho gia thanh wip 154"
+python ~/.gemini/config/scripts/agy_skill_engine.py --search "audit google ads pmax money leak"
 ```
 
 ---
@@ -242,3 +248,4 @@ Kho mã nguồn đã được trang bị sẵn tệp **`.gitignore`** nhiều l�
 • **Reciprocal Rank Fusion (RRF — Cormack, Clarke & Buettcher):** Thuật toán hợp nhất xếp hạng đa luồng tìm kiếm không phụ thuộc thang điểm tuyệt đối (*SIGIR Proceedings*).
 • **OWASP Application Security Verification Standard (ASVS):** Khung đối chiếu các lớp lỗ hổng bảo mật mã nguồn và dịch vụ Web/API (*OWASP Foundation*).
 • **Google Search Central & Schema.org Structured Data:** Bộ tiêu chuẩn kỹ thuật đánh giá Core Web Vitals, tín hiệu chuyên gia E-E-A-T và dữ liệu có cấu trúc (*Google Developers Documentation*).
+• **Google Ads Query Language (GAQL) & Google Ads Editor Import Specification:** Chuẩn truy vấn chẩn đoán tài khoản quảng cáo, đo lường chuyển đổi và hợp đồng xuất tệp chiến dịch an toàn (*Google Ads API Official Documentation*).

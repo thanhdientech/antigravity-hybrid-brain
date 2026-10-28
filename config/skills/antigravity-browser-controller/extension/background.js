@@ -34,7 +34,7 @@ async function detectAndSyncProfileIdentity() {
           currentProfileName = "enterprise";
           await chrome.storage.local.set({ profile_name: "enterprise" });
           return;
-        } else if (currentProfileEmail.includes("scmsap2022")) {
+        } else if (currentProfileEmail.includes("erp_account")) {
           currentProfileName = "54";
           await chrome.storage.local.set({ profile_name: "54" });
           return;
@@ -42,13 +42,13 @@ async function detectAndSyncProfileIdentity() {
           currentProfileName = "7";
           await chrome.storage.local.set({ profile_name: "7" });
           return;
-        } else if (currentProfileEmail.includes("regsunoai2026")) {
+        } else if (currentProfileEmail.includes("suno_account")) {
           currentProfileName = "67";
           await chrome.storage.local.set({ profile_name: "67" });
           return;
-        } else if (currentProfileEmail.includes("nerhor.densankhau")) {
-          currentProfileName = "nerhordensankhau";
-          await chrome.storage.local.set({ profile_name: "nerhordensankhau" });
+        } else if (currentProfileEmail.includes("store_account")) {
+          currentProfileName = "store_profile";
+          await chrome.storage.local.set({ profile_name: "store_profile" });
           return;
         }
       }

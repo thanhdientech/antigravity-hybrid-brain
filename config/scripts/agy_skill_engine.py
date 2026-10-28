@@ -116,7 +116,8 @@ HIGH_SPECIFICITY_SINGLE_TOKENS = {
     "alphafold", "clinvar", "gnomad", "uniprot", "pubmed", "pmid", "arxiv", "biorxiv",
     "openalex", "europepmc", "chembl", "pubchem", "openfda", "reactome", "foldseek",
     "pymol", "kinetic", "watercolor", "watercolour", "pentest", "owasp", "xss", "ssrf",
-    "gdocs", "gsheets", "gdrive", "gslides",
+    "gdocs", "gsheets", "gdrive", "gslides", "gaql", "pmax", "troas", "tcpa",
+    "sitelinks", "callouts",
 }
 
 CONCEPT_SYNONYMS: list[tuple[set[str], list[str]]] = [
@@ -174,6 +175,12 @@ CONCEPT_SYNONYMS: list[tuple[set[str], list[str]]] = [
      ["alphafold", "uniprot", "clinvar", "openfda", "chembl", "pubchem"]),
     ({"google", "docs", "sheets", "slides", "drive", "gdocs", "gsheets", "gdrive", "gslides"},
      ["gdocs", "gsheets", "gdrive", "gslides"]),
+    ({"google", "ads", "gaql", "pmax", "troas", "tcpa", "rsa", "sitelink", "sitelinks", "callout", "callouts", "wasted", "leak"},
+     ["google-ads-master", "gaql", "pmax", "roas", "cpa", "campaign", "audit"]),
+    ({"tu", "khoa", "keyword", "planner", "nhom", "ngan", "sach", "phu", "dinh", "negative"},
+     ["google-ads-master", "keyword-analysis", "planner", "negative", "cpc"]),
+    ({"chuyen", "doi", "cro", "trang", "dich", "tracking", "conversion", "message", "match"},
+     ["google-ads-master", "toi-uu-chuyen-doi-web", "measurement", "conversion", "cro"]),
 ]
 
 
