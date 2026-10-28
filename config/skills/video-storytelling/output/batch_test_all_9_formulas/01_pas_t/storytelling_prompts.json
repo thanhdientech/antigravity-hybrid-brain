@@ -1,0 +1,311 @@
+{
+  "title": "Hành Trình Lột Xác Cùng Kem Phục Hồi Hàng Rào Bảo Vệ Da Ceramide B5",
+  "topic": "Kem Phục Hồi Hàng Rào Bảo Vệ Da Ceramide B5",
+  "formula": "pas_t",
+  "cinematic_style": "commercial_clean",
+  "character_sheet": {
+    "character_identity": "Lan, a 25-year-old Vietnamese office woman with natural facial features, shoulder-length black hair, fair sensitive skin",
+    "turnaround_prompt_raw": "character sheet, model turnaround sheet of Lan, an attractive 25-year-old Vietnamese office woman with natural facial features, shoulder-length black hair, wearing casual modern streetwear, minimalist beige neutral tone. Four views: full body front view, full body 3/4 view, side profile view, back view. Same female person, identical facial features, consistent hair and body proportions across all panels. Neutral clean studio grey background, soft documentary lighting, high detail skin texture, cinematic photorealism, 8k, shot on 35mm lens --ar 16:9",
+    "midjourney_command": "/imagine prompt: character sheet, model turnaround sheet of Lan, an attractive 25-year-old Vietnamese office woman with natural facial features, shoulder-length black hair, wearing casual modern streetwear, minimalist beige neutral tone. Four views: full body front view, full body 3/4 view, side profile view, back view. Same female person, identical facial features, consistent hair and body proportions across all panels. Neutral clean studio grey background, soft documentary lighting, high detail skin texture, cinematic photorealism, 8k, shot on 35mm lens --ar 16:9 --v 6.1 --style raw",
+    "flux_prompt": "character sheet, model turnaround sheet of Lan, an attractive 25-year-old Vietnamese office woman with natural facial features, shoulder-length black hair, wearing casual modern streetwear, minimalist beige neutral tone. Four views: full body front view, full body 3/4 view, side profile view, back view. Same female person, identical facial features, consistent hair and body proportions across all panels. Neutral clean studio grey background, soft documentary lighting, high detail skin texture, cinematic photorealism, 8k, shot on 35mm lens --ar 16:9",
+    "instructions": [
+      "1. Render bảng nhân vật trên Midjourney hoặc Flux để có 1 tấm ảnh 4 góc nhìn chuẩn.",
+      "2. Cắt lấy tấm ảnh góc đẹp nhất (thường là góc 3/4) làm Anchor Frame (@Image 1 cho Seedance hoặc First Frame cho Veo 3).",
+      "3. Dùng ảnh này làm input cố định xuyên suốt toàn bộ các cảnh trong video."
+    ]
+  },
+  "story_script": {
+    "title": "Hành Trình Lột Xác Cùng Kem Phục Hồi Hàng Rào Bảo Vệ Da Ceramide B5",
+    "product_or_topic": "Kem Phục Hồi Hàng Rào Bảo Vệ Da Ceramide B5",
+    "target_audience": "Khán giả khao khát nội dung giá trị, tri thức thực chứng hoặc giải pháp chuyển hóa",
+    "character_name": "Lan",
+    "character_appearance": "Lan, an attractive 25-year-old Vietnamese office woman with natural facial features, shoulder-length black hair, wearing fitting modern minimalist beige attire",
+    "format_type": "SHORT_FORM_60S",
+    "formula": "pas_t",
+    "moral_or_takeaway": "Giải pháp đúng chuẩn giúp giải phóng con người khỏi da bong tróc ửng đỏ sau khi dùng treatment sai cách.",
+    "cinematic_style": "commercial_clean",
+    "beats": [
+      {
+        "beat_id": "BEAT_01_HOOK",
+        "timestamp": "00:00 - 00:05",
+        "phase": "HOOK (In Media Res)",
+        "voiceover": "Từng có lúc cô ấy suýt bỏ cuộc, chấp nhận sống chung với làn da kích ứng và bong tróc sau những lần treatment sai cách...",
+        "dialogue": "Lan thì thầm với chính mình, \"Mình không thể tiếp tục như thế này nữa...\"",
+        "visual_action": "Lan, an attractive 25-year-old Vietnamese woman, đứng thẫn thờ nhìn vào gương trong phòng ngủ mờ tối, ánh mắt kiệt sức, bàn tay khẽ chạm lên gò má ửng đỏ đầy mệt mỏi.",
+        "camera_movement": "Slow push-in, low-angle intimate medium close-up, shallow depth of field focusing on Lan's expression",
+        "sound_fx": "Tiếng tích tắc đồng hồ chậm rãi vọng lại cùng tiếng thở dài nghẹn ngào",
+        "ambient_noise": "Căn phòng tĩnh lặng tuyệt đối với tiếng mưa rào nhẹ ngoài cửa sổ",
+        "emotion_tone": "Tuyệt vọng, bế tắc, chạm đáy cảm xúc",
+        "cinematic": {
+          "shot_size": "Medium close-up (MCU)",
+          "camera_angle": "Eye-level intimate angle",
+          "camera_movement": "Slow dolly in focusing on micro-expression",
+          "lighting": "Soft window light with subtle rim lighting",
+          "lens_and_depth": "85mm portrait macro lens, pristine softbox diffusion, studio lighting",
+          "composition": "Rule of thirds, strong foreground interest",
+          "color_grading": "Clean vibrant commercial color science, pristine high-key tones",
+          "film_grain": "Zero grain, ultra-sharp 8k ARRI Alexa LF digital clarity",
+          "mood_keywords": "vulnerable, relatable, intimate"
+        }
+      },
+      {
+        "beat_id": "BEAT_02_STRUGGLE",
+        "timestamp": "00:05 - 00:15",
+        "phase": "STRUGGLE (Đỉnh Điểm Bế Tắc)",
+        "voiceover": "Thử qua đủ liệu trình đắt đỏ, tốn kém hàng triệu đồng nhưng kết quả nhận lại chỉ là sự thất vọng kéo dài.",
+        "dialogue": null,
+        "visual_action": "Lan, an attractive 25-year-old Vietnamese woman, thở dài đặt các chai lọ mỹ phẩm không hiệu quả sang một bên bàn làm việc, ánh sáng ban mai bắt đầu le lói qua khe rèm.",
+        "camera_movement": "Fast tracking shot ngang bàn làm việc, dynamic whip pan sang gương mặt ưu tư của Lan",
+        "sound_fx": "Âm thanh va chạm của đồ vật trên mặt bàn gỗ + tiếng nhịp tim đập dồn dập",
+        "ambient_noise": "Tiếng gió rít khẽ qua khe cửa sổ kính",
+        "emotion_tone": "Thất vọng, chán nản nhưng âm ỉ sự không cam chịu",
+        "cinematic": {
+          "shot_size": "Medium shot transitioning to Dutch tilt",
+          "camera_angle": "High angle or canted Dutch tilt to evoke pressure",
+          "camera_movement": "Handheld with subtle tension shake, fast whip pan",
+          "lighting": "Low-key chiaroscuro lighting, harsh shadows, overcast tones",
+          "lens_and_depth": "85mm portrait macro lens, pristine softbox diffusion, studio lighting",
+          "composition": "Framing within a frame, cramped negative space",
+          "color_grading": "Clean vibrant commercial color science, pristine high-key tones",
+          "film_grain": "Zero grain, ultra-sharp 8k ARRI Alexa LF digital clarity",
+          "mood_keywords": "tense, overwhelmed, melancholic"
+        }
+      },
+      {
+        "beat_id": "BEAT_03_EPIPHANY",
+        "timestamp": "00:15 - 00:35",
+        "phase": "EPIPHANY (Bước Ngoặt Thức Tỉnh)",
+        "voiceover": "Cho đến khi Lan khám phá ra giải pháp khoa học thực chứng: phục hồi màng lipid tự nhiên với phức hợp Ceramide B5 khóa ẩm đa tầng.",
+        "dialogue": "Lan mỉm cười rạng rỡ, \"Hóa ra bí quyết phục hồi lại đơn giản và kỳ diệu đến vậy!\"",
+        "visual_action": "Lan, an attractive 25-year-old Vietnamese woman, mở chiếc hộp thiết kế tối giản sang trọng, cầm sản phẩm Kem Phục Hồi Ceramide B5 trên tay, ánh sáng vàng ấm áp bao trùm không gian.",
+        "camera_movement": "Macro cinematic tracking shot xoay 45 độ quanh sản phẩm, chuyển nét mượt mà từ sản phẩm sang ánh mắt rạng rỡ của Lan",
+        "sound_fx": "Tiếng mở hộp tinh tế (soft crisp click) + tiếng chuông trong trẻo (gentle chime)",
+        "ambient_noise": "Giai điệu piano du dương ấm áp bắt đầu vang lên nâng đỡ cảm xúc",
+        "emotion_tone": "Thức tỉnh, hy vọng tràn trề, phấn chấn",
+        "cinematic": {
+          "shot_size": "Extreme close-up / Macro on eyes and product",
+          "camera_angle": "Low angle hero perspective",
+          "camera_movement": "Smooth 45-degree arc shot revealing solution",
+          "lighting": "Rembrandt lighting transitioning into warm golden glow, volumetric light rays",
+          "lens_and_depth": "85mm portrait macro lens, pristine softbox diffusion, studio lighting",
+          "composition": "Centered symmetry, luminous vanishing point",
+          "color_grading": "Clean vibrant commercial color science, pristine high-key tones",
+          "film_grain": "Zero grain, ultra-sharp 8k ARRI Alexa LF digital clarity",
+          "mood_keywords": "epiphanic, hopeful, awakening"
+        }
+      },
+      {
+        "beat_id": "BEAT_04_TRANSFORMATION",
+        "timestamp": "00:35 - 00:50",
+        "phase": "TRANSFORMATION (Sự Lột Xác)",
+        "voiceover": "Chỉ sau 2 tuần kiên trì, làn da đã căng bóng, khỏe mạnh trở lại, mang theo sự tự tin rạng rỡ của tuổi trẻ.",
+        "dialogue": null,
+        "visual_action": "Lan, an attractive 25-year-old Vietnamese woman with glowing healthy smooth skin, bước đi tự tin trên con phố ngập nắng ban mai, tà áo bay nhẹ trong gió, nụ cười tươi tắn rạng ngời.",
+        "camera_movement": "Smooth Steadicam tracking shot đi lùi trước mặt Lan, góc rộng điện ảnh cinematic wide angle",
+        "sound_fx": "Tiếng bước chân vững chãi + tiếng chim hót xa xa",
+        "ambient_noise": "Âm thanh phố phường nhộn nhịp tích cực buổi sớm",
+        "emotion_tone": "Tự do, hạnh phúc viên mãn, tự hào",
+        "cinematic": {
+          "shot_size": "Wide establishing shot transitioning to Full body shot",
+          "camera_angle": "Low-angle empowering hero shot",
+          "camera_movement": "Smooth Steadicam tracking shot moving gracefully backward",
+          "lighting": "Sun-drenched golden hour, soft volumetric God rays, warm rim light",
+          "lens_and_depth": "85mm portrait macro lens, pristine softbox diffusion, studio lighting",
+          "composition": "Expansive negative space, triumphant leading lines",
+          "color_grading": "Clean vibrant commercial color science, pristine high-key tones",
+          "film_grain": "Zero grain, ultra-sharp 8k ARRI Alexa LF digital clarity",
+          "mood_keywords": "liberating, confident, joyful"
+        }
+      },
+      {
+        "beat_id": "BEAT_05_RESOLUTION_CTA",
+        "timestamp": "00:50 - 01:00",
+        "phase": "RESOLUTION_CTA (Kêu Gọi Hành Động)",
+        "voiceover": "Đừng để những tổn thương làn da lấy đi nụ cười và sự tự tin của bạn thêm một ngày nào nữa.",
+        "dialogue": "Lan nhìn thẳng vào ống kính máy quay mỉm cười, \"Hãy bắt đầu hành trình yêu thương làn da cùng Lan ngay hôm nay nhé!\"",
+        "visual_action": "Lan, an attractive 25-year-old Vietnamese woman, nở nụ cười rạng rỡ nhìn thẳng vào ống kính máy quay, bàn tay khẽ hướng xuống phần banner ưu đãi nổi bật phía dưới.",
+        "camera_movement": "Eye-level medium portrait shot, bokeh nền phố xá lung linh phía sau, slow push-in",
+        "sound_fx": "Âm thanh chuông báo tin nhắn vui tai + nốt nhạc cao trào khép lại bài hát",
+        "ambient_noise": "Nhạc nền cao trào đầy cảm hứng",
+        "emotion_tone": "Tin cậy, dứt khoát, thôi thúc hành động",
+        "cinematic": {
+          "shot_size": "Medium portrait shot",
+          "camera_angle": "Direct eye-level engaging angle",
+          "camera_movement": "Slow subtle push-in commanding authority and trust",
+          "lighting": "Three-point commercial beauty lighting, soft bokeh highlights in background",
+          "lens_and_depth": "85mm portrait macro lens, pristine softbox diffusion, studio lighting",
+          "composition": "Centered balanced composition, direct magnetic gaze",
+          "color_grading": "Clean vibrant commercial color science, pristine high-key tones",
+          "film_grain": "Zero grain, ultra-sharp 8k ARRI Alexa LF digital clarity",
+          "mood_keywords": "trustworthy, inspiring, resolute"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "name": "Trang thông tin sản phẩm chính thức: Kem Phục Hồi Hàng Rào Bảo Vệ Da Ceramide B5",
+        "author_or_manufacturer": "Nhà sản xuất chính thức của Kem Phục Hồi Hàng Rào Bảo Vệ Da Ceramide B5",
+        "source_url_or_id": "https://official-kemphụchồihàngràobảovệdaceramideb5.com/specs",
+        "verified_claims": "Bảng thông số kỹ thuật công bố chính thức, thành phần/cơ chế công nghệ khóa ẩm đa tầng và phục hồi màng lipid tự nhiên, xuất xứ linh kiện và hướng dẫn sử dụng"
+      },
+      {
+        "name": "Hồ sơ kiểm định chất lượng xuất xưởng & Chứng nhận an toàn",
+        "author_or_manufacturer": "Cơ quan kiểm định độc lập / Cục Quản lý Tiêu chuẩn & Đo lường",
+        "source_url_or_id": "ISO 9001 / CE Mark / GMP Compliance Record",
+        "verified_claims": "Chứng chỉ kiểm định độ an toàn thực tế, quy trình sản xuất đạt chuẩn công bố, không chứa chất cấm"
+      }
+    ]
+  },
+  "seedance_engine": {
+    "engine": "Seedance 2.0 / 2.5 (ByteDance)",
+    "title": "Hành Trình Lột Xác Cùng Kem Phục Hồi Hàng Rào Bảo Vệ Da Ceramide B5",
+    "multimodal_mapping": {
+      "@Image 1": "Character consistency anchor (Tuấn)",
+      "@Image 2": "Product anchor (Kem Phục Hồi Hàng Rào Bảo Vệ Da Ceramide B5)"
+    },
+    "shots": [
+      {
+        "shot_number": 1,
+        "beat_id": "BEAT_01_HOOK",
+        "timestamp": "00:00 - 00:05",
+        "seedance_prompt": "References: Character anchor from @Image 1, Product anchor from @Image 2.\nSetting: Realistic cinematic environment, authentic atmospheric lighting, high dynamic range.\nAction: character from @Image 1 đứng thẫn thờ nhìn vào gương trong phòng mờ tối, ánh mắt kiệt sức, bàn tay khẽ chạm lên má đầy mệt mỏi.. Realistic physical interaction, subtle micro-expressions, true-to-life physics. Character speaks: \"Tuấn thì thầm, \"Mình không thể tiếp tục như thế này nữa.\"\"\nCamera: Medium close-up (MCU), Eye-level intimate angle, Slow push-in, low-angle intimate medium close-up, shallow depth of field, 85mm portrait macro lens, pristine softbox diffusion, studio lighting.\nStyle: Cinematic photorealism, Soft window light with subtle rim lighting, Clean vibrant commercial color science, pristine high-key tones, Zero grain, ultra-sharp 8k ARRI Alexa LF digital clarity, 8k, 24fps.\nAudio: Ambient: Căn phòng tĩnh lặng tuyệt đối với tiếng mưa rào nhẹ ngoài cửa sổ. SFX: Tiếng tích tắc đồng hồ chậm rãi vọng lại cùng tiếng thở dài nghẹn ngào.",
+        "recommended_settings": {
+          "model": "Seedance 2.0 / 2.5",
+          "duration_seconds": 5,
+          "aspect_ratio": "9:16",
+          "reference_inputs": {
+            "@Image 1": "Bảng nhân vật Character Sheet (Tuấn)",
+            "@Image 2": "Hình ảnh sản phẩm / bối cảnh (Kem Phục Hồi Hàng Rào Bảo Vệ Da Ceramide B5)"
+          }
+        }
+      },
+      {
+        "shot_number": 2,
+        "beat_id": "BEAT_02_STRUGGLE",
+        "timestamp": "00:05 - 00:15",
+        "seedance_prompt": "References: Character anchor from @Image 1, Product anchor from @Image 2.\nSetting: Realistic cinematic environment, authentic atmospheric lighting, high dynamic range.\nAction: character from @Image 1 ném tập tài liệu và các chai lọ không hiệu quả sang một bên bàn làm việc, ánh sáng ban mai bắt đầu le lói qua khe rèm.. Realistic physical interaction, subtle micro-expressions, true-to-life physics.\nCamera: Medium shot transitioning to Dutch tilt, High angle or canted Dutch tilt to evoke pressure, Fast tracking shot ngang bàn làm việc, dynamic whip pan sang gương mặt nhân vật, 85mm portrait macro lens, pristine softbox diffusion, studio lighting.\nStyle: Cinematic photorealism, Low-key chiaroscuro lighting, harsh shadows, overcast tones, Clean vibrant commercial color science, pristine high-key tones, Zero grain, ultra-sharp 8k ARRI Alexa LF digital clarity, 8k, 24fps.\nAudio: Ambient: Tiếng gió rít khẽ qua khe cửa sổ kính. SFX: Âm thanh va chạm của đồ vật trên mặt bàn gỗ + tiếng nhịp tim đập dồn dập.",
+        "recommended_settings": {
+          "model": "Seedance 2.0 / 2.5",
+          "duration_seconds": 10,
+          "aspect_ratio": "9:16",
+          "reference_inputs": {
+            "@Image 1": "Bảng nhân vật Character Sheet (Tuấn)",
+            "@Image 2": "Hình ảnh sản phẩm / bối cảnh (Kem Phục Hồi Hàng Rào Bảo Vệ Da Ceramide B5)"
+          }
+        }
+      },
+      {
+        "shot_number": 3,
+        "beat_id": "BEAT_03_EPIPHANY",
+        "timestamp": "00:15 - 00:35",
+        "seedance_prompt": "References: Character anchor from @Image 1, Product anchor from @Image 2.\nSetting: Realistic cinematic environment, authentic atmospheric lighting, high dynamic range.\nAction: character from @Image 1 mở một chiếc hộp thiết kế tối giản sang trọng, cầm featured product in @Image 2 Kem Phục Hồi Hàng Rào Bảo Vệ Da Ceramide B5 trên tay, ánh sáng vàng ấm áp bao trùm không gian.. Realistic physical interaction, subtle micro-expressions, true-to-life physics. Character speaks: \"Tuấn mỉm cười nói, \"Hóa ra câu trả lời lại nằm ngay trước mắt.\"\"\nCamera: Extreme close-up / Macro on eyes and product, Low angle hero perspective, Macro cinematic tracking shot xoay 45 độ quanh sản phẩm, chuyển nét mượt mà từ sản phẩm sang ánh mắt rạng rỡ của nhân vật, 85mm portrait macro lens, pristine softbox diffusion, studio lighting.\nStyle: Cinematic photorealism, Rembrandt lighting transitioning into warm golden glow, volumetric light rays, Clean vibrant commercial color science, pristine high-key tones, Zero grain, ultra-sharp 8k ARRI Alexa LF digital clarity, 8k, 24fps.\nAudio: Ambient: Giai điệu piano du dương ấm áp bắt đầu vang lên nâng đỡ cảm xúc. SFX: Tiếng mở hộp tinh tế (soft crisp click) + tiếng chuông trong trẻo (gentle chime).",
+        "recommended_settings": {
+          "model": "Seedance 2.0 / 2.5",
+          "duration_seconds": 10,
+          "aspect_ratio": "9:16",
+          "reference_inputs": {
+            "@Image 1": "Bảng nhân vật Character Sheet (Tuấn)",
+            "@Image 2": "Hình ảnh sản phẩm / bối cảnh (Kem Phục Hồi Hàng Rào Bảo Vệ Da Ceramide B5)"
+          }
+        }
+      },
+      {
+        "shot_number": 4,
+        "beat_id": "BEAT_04_TRANSFORMATION",
+        "timestamp": "00:35 - 00:50",
+        "seedance_prompt": "References: Character anchor from @Image 1, Product anchor from @Image 2.\nSetting: Realistic cinematic environment, authentic atmospheric lighting, high dynamic range.\nAction: character from @Image 1 bước đi tự tin trên con phố ngập nắng ban mai, tà áo bay nhẹ trong gió, nụ cười tươi tắn rạng ngời chào đón ngày mới.. Realistic physical interaction, subtle micro-expressions, true-to-life physics.\nCamera: Wide establishing shot transitioning to Full body shot, Low-angle empowering hero shot, Smooth Steadicam tracking shot đi lùi trước mặt nhân vật, góc rộng điện ảnh cinematic wide angle, 85mm portrait macro lens, pristine softbox diffusion, studio lighting.\nStyle: Cinematic photorealism, Sun-drenched golden hour, soft volumetric God rays, warm rim light, Clean vibrant commercial color science, pristine high-key tones, Zero grain, ultra-sharp 8k ARRI Alexa LF digital clarity, 8k, 24fps.\nAudio: Ambient: Âm thanh phố phường nhộn nhịp tích cực buổi sớm. SFX: Tiếng bước chân vững chãi + tiếng chim hót xa xa.",
+        "recommended_settings": {
+          "model": "Seedance 2.0 / 2.5",
+          "duration_seconds": 5,
+          "aspect_ratio": "9:16",
+          "reference_inputs": {
+            "@Image 1": "Bảng nhân vật Character Sheet (Tuấn)",
+            "@Image 2": "Hình ảnh sản phẩm / bối cảnh (Kem Phục Hồi Hàng Rào Bảo Vệ Da Ceramide B5)"
+          }
+        }
+      },
+      {
+        "shot_number": 5,
+        "beat_id": "BEAT_05_RESOLUTION_CTA",
+        "timestamp": "00:50 - 01:00",
+        "seedance_prompt": "References: Character anchor from @Image 1, Product anchor from @Image 2.\nSetting: Realistic cinematic environment, authentic atmospheric lighting, high dynamic range.\nAction: character from @Image 1 nở nụ cười ấm áp nhìn thẳng vào ống kính máy quay, bàn tay khẽ hướng xuống phần banner ưu đãi nổi bật phía dưới.. Realistic physical interaction, subtle micro-expressions, true-to-life physics. Character speaks: \"Tuấn nhìn thẳng ống kính nói, \"Hãy bắt đầu hành trình của bạn ngay hôm nay.\"\"\nCamera: Medium portrait shot, Direct eye-level engaging angle, Eye-level medium portrait shot, bokeh nền phố xá lung linh phía sau, 85mm portrait macro lens, pristine softbox diffusion, studio lighting.\nStyle: Cinematic photorealism, Three-point commercial beauty lighting, soft bokeh highlights in background, Clean vibrant commercial color science, pristine high-key tones, Zero grain, ultra-sharp 8k ARRI Alexa LF digital clarity, 8k, 24fps.\nAudio: Ambient: Nhạc nền cao trào đầy cảm hứng. SFX: Âm thanh chuông báo tin nhắn vui tai + nốt nhạc cao trào khép lại bài hát.",
+        "recommended_settings": {
+          "model": "Seedance 2.0 / 2.5",
+          "duration_seconds": 5,
+          "aspect_ratio": "9:16",
+          "reference_inputs": {
+            "@Image 1": "Bảng nhân vật Character Sheet (Tuấn)",
+            "@Image 2": "Hình ảnh sản phẩm / bối cảnh (Kem Phục Hồi Hàng Rào Bảo Vệ Da Ceramide B5)"
+          }
+        }
+      }
+    ]
+  },
+  "veo3_engine": {
+    "engine": "Google Veo 3 / 3.1 (DeepMind)",
+    "title": "Hành Trình Lột Xác Cùng Kem Phục Hồi Hàng Rào Bảo Vệ Da Ceramide B5",
+    "formula_applied": "[Cinematography] + [Subject] + [Action] + [Context] + [Style & Ambiance]",
+    "shots": [
+      {
+        "shot_number": 1,
+        "beat_id": "BEAT_01_HOOK",
+        "timestamp": "00:00 - 00:05",
+        "veo3_prompt": "A cinematic high-end commercial shot. Subject: Lan, an attractive 25-year-old Vietnamese woman with natural hair and facial features. Action: Lan, an attractive 25-year-old Vietnamese woman, đứng thẫn thờ nhìn vào gương trong phòng ngủ mờ tối, ánh mắt kiệt sức, bàn tay khẽ chạm lên gò má ửng đỏ đầy mệt mỏi.. Camera: Slow push-in, low-angle intimate medium close-up, shallow depth of field focusing on Lan's expression, 85mm portrait lens, shallow depth of field, 8k resolution, photorealistic. Lighting: Soft cinematic commercial lighting, clean vibrant commercial color science, authentic skin texture, zero grain. She speaks with natural emotion: Lan thì thầm với chính mình, \"Mình không thể tiếp tục như thế này nữa...\"",
+        "recommended_settings": {
+          "model": "Google Veo 3 / 3.1",
+          "mode": "Image-to-Video (First Frame) hoặc Text-to-Video",
+          "aspect_ratio": "9:16",
+          "audio_enabled": true
+        }
+      },
+      {
+        "shot_number": 2,
+        "beat_id": "BEAT_02_STRUGGLE",
+        "timestamp": "00:05 - 00:15",
+        "veo3_prompt": "A cinematic high-end commercial shot. Subject: Lan, an attractive 25-year-old Vietnamese woman with natural hair and facial features. Action: Lan, an attractive 25-year-old Vietnamese woman, thở dài đặt các chai lọ mỹ phẩm không hiệu quả sang một bên bàn làm việc, ánh sáng ban mai bắt đầu le lói qua khe rèm.. Camera: Fast tracking shot ngang bàn làm việc, dynamic whip pan sang gương mặt ưu tư của Lan, 85mm portrait lens, shallow depth of field, 8k resolution, photorealistic. Lighting: Soft cinematic commercial lighting, clean vibrant commercial color science, authentic skin texture, zero grain. ",
+        "recommended_settings": {
+          "model": "Google Veo 3 / 3.1",
+          "mode": "Image-to-Video (First Frame) hoặc Text-to-Video",
+          "aspect_ratio": "9:16",
+          "audio_enabled": true
+        }
+      },
+      {
+        "shot_number": 3,
+        "beat_id": "BEAT_03_EPIPHANY",
+        "timestamp": "00:15 - 00:35",
+        "veo3_prompt": "A cinematic high-end commercial shot. Subject: Lan, an attractive 25-year-old Vietnamese woman with natural hair and facial features. Action: Lan, an attractive 25-year-old Vietnamese woman, mở chiếc hộp thiết kế tối giản sang trọng, cầm sản phẩm Kem Phục Hồi Ceramide B5 trên tay, ánh sáng vàng ấm áp bao trùm không gian.. Camera: Macro cinematic tracking shot xoay 45 độ quanh sản phẩm, chuyển nét mượt mà từ sản phẩm sang ánh mắt rạng rỡ của Lan, 85mm portrait lens, shallow depth of field, 8k resolution, photorealistic. Lighting: Soft cinematic commercial lighting, clean vibrant commercial color science, authentic skin texture, zero grain. She speaks with natural emotion: Lan mỉm cười rạng rỡ, \"Hóa ra bí quyết phục hồi lại đơn giản và kỳ diệu đến vậy!\"",
+        "recommended_settings": {
+          "model": "Google Veo 3 / 3.1",
+          "mode": "Image-to-Video (First Frame) hoặc Text-to-Video",
+          "aspect_ratio": "9:16",
+          "audio_enabled": true
+        }
+      },
+      {
+        "shot_number": 4,
+        "beat_id": "BEAT_04_TRANSFORMATION",
+        "timestamp": "00:35 - 00:50",
+        "veo3_prompt": "A cinematic high-end commercial shot. Subject: Lan, an attractive 25-year-old Vietnamese woman with natural hair and facial features. Action: Lan, an attractive 25-year-old Vietnamese woman with glowing healthy smooth skin, bước đi tự tin trên con phố ngập nắng ban mai, tà áo bay nhẹ trong gió, nụ cười tươi tắn rạng ngời.. Camera: Smooth Steadicam tracking shot đi lùi trước mặt Lan, góc rộng điện ảnh cinematic wide angle, 85mm portrait lens, shallow depth of field, 8k resolution, photorealistic. Lighting: Soft cinematic commercial lighting, clean vibrant commercial color science, authentic skin texture, zero grain. ",
+        "recommended_settings": {
+          "model": "Google Veo 3 / 3.1",
+          "mode": "Image-to-Video (First Frame) hoặc Text-to-Video",
+          "aspect_ratio": "9:16",
+          "audio_enabled": true
+        }
+      },
+      {
+        "shot_number": 5,
+        "beat_id": "BEAT_05_RESOLUTION_CTA",
+        "timestamp": "00:50 - 01:00",
+        "veo3_prompt": "A cinematic high-end commercial shot. Subject: Lan, an attractive 25-year-old Vietnamese woman with natural hair and facial features. Action: Lan, an attractive 25-year-old Vietnamese woman, nở nụ cười rạng rỡ nhìn thẳng vào ống kính máy quay, bàn tay khẽ hướng xuống phần banner ưu đãi nổi bật phía dưới.. Camera: Eye-level medium portrait shot, bokeh nền phố xá lung linh phía sau, slow push-in, 85mm portrait lens, shallow depth of field, 8k resolution, photorealistic. Lighting: Soft cinematic commercial lighting, clean vibrant commercial color science, authentic skin texture, zero grain. She speaks with natural emotion: Lan nhìn thẳng vào ống kính máy quay mỉm cười, \"Hãy bắt đầu hành trình yêu thương làn da cùng Lan ngay hôm nay nhé!\"",
+        "recommended_settings": {
+          "model": "Google Veo 3 / 3.1",
+          "mode": "Image-to-Video (First Frame) hoặc Text-to-Video",
+          "aspect_ratio": "9:16",
+          "audio_enabled": true
+        }
+      }
+    ]
+  }
+}

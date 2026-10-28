@@ -1,0 +1,25 @@
+{
+  "connections": [
+    {
+      "id": "example_sap_prod",
+      "name": "Example SAP B1 Production (Read-Only)",
+      "customer_code": "EXAMPLE",
+      "aliases": ["example", "prod"],
+      "sap_version": "10.0",
+      "has_beas": true,
+      "server": "YOUR_SQL_SERVER_IP,1433",
+      "database": "SBO_COMPANY_PROD",
+      "username": "readonly_sql_user",
+      "password": "CHANGE_ME_READONLY_PASSWORD",
+      "service_layer_url": "https://your-sap-server:50000/b1s/v1",
+      "sl_username": "",
+      "sl_password": "",
+      "allow_service_layer": false,
+      "allow_unsafe": false,
+      "grant_all_folders": false,
+      "mapped_folders": [],
+      "source_banner": "SAP B1 Read-Only Connection Template",
+      "notes": "Copy file nay thanh config.json va dien thong tin Read-Only SQL User cua doanh nghiep."
+    }
+  ]
+}

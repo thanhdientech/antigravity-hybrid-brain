@@ -1,0 +1,211 @@
+{
+  "title": "Cây Cầu Chuyển Hóa Với Phần Mềm Quản Lý Bán Hàng Tự Động POS AI",
+  "topic": "Phần Mềm Quản Lý Bán Hàng Tự Động POS AI",
+  "formula": "conversion_bab",
+  "cinematic_style": "commercial_clean",
+  "character_sheet": {
+    "character_identity": "Chủ cửa hàng thời trang nam 30 tuổi bận rộn",
+    "turnaround_prompt_raw": "character sheet, model turnaround sheet of Chủ cửa hàng thời trang nam 30 tuổi bận rộn, wearing casual modern streetwear, minimalist beige neutral tone. Four views: full body front view, full body 3/4 view, side profile view, back view. Same person, identical facial features, consistent hair and body proportions across all panels. Neutral clean studio grey background, soft documentary lighting, high detail skin texture, cinematic photorealism, 8k, shot on 35mm lens --ar 16:9",
+    "midjourney_command": "/imagine prompt: character sheet, model turnaround sheet of Chủ cửa hàng thời trang nam 30 tuổi bận rộn, wearing casual modern streetwear, minimalist beige neutral tone. Four views: full body front view, full body 3/4 view, side profile view, back view. Same person, identical facial features, consistent hair and body proportions across all panels. Neutral clean studio grey background, soft documentary lighting, high detail skin texture, cinematic photorealism, 8k, shot on 35mm lens --ar 16:9 --v 6.1 --style raw",
+    "flux_prompt": "character sheet, model turnaround sheet of Chủ cửa hàng thời trang nam 30 tuổi bận rộn, wearing casual modern streetwear, minimalist beige neutral tone. Four views: full body front view, full body 3/4 view, side profile view, back view. Same person, identical facial features, consistent hair and body proportions across all panels. Neutral clean studio grey background, soft documentary lighting, high detail skin texture, cinematic photorealism, 8k, shot on 35mm lens --ar 16:9",
+    "instructions": [
+      "1. Render bảng nhân vật trên Midjourney hoặc Flux để có 1 tấm ảnh 4 góc nhìn chuẩn.",
+      "2. Cắt lấy tấm ảnh góc đẹp nhất (thường là góc 3/4) làm Anchor Frame (@Image 1 cho Seedance hoặc First Frame cho Veo 3).",
+      "3. Dùng ảnh này làm input cố định xuyên suốt toàn bộ các cảnh trong video."
+    ]
+  },
+  "story_script": {
+    "title": "Cây Cầu Chuyển Hóa Với Phần Mềm Quản Lý Bán Hàng Tự Động POS AI",
+    "product_or_topic": "Phần Mềm Quản Lý Bán Hàng Tự Động POS AI",
+    "target_audience": "Khán giả khao khát nội dung giá trị, tri thức thực chứng hoặc giải pháp chuyển hóa",
+    "character_name": "Tuấn",
+    "character_appearance": "Chủ cửa hàng thời trang nam 30 tuổi bận rộn, authentic natural features, wearing fitting modern minimalist attire",
+    "format_type": "SHORT_FORM_60S",
+    "formula": "conversion_bab",
+    "moral_or_takeaway": "Chấm dứt hoàn toàn mất 3 tiếng mỗi đêm cộng sổ sách thủ công và sai sót kho hàng khi bước qua cây cầu Phần Mềm Quản Lý Bán Hàng Tự Động POS AI.",
+    "cinematic_style": "commercial_clean",
+    "beats": [
+      {
+        "beat_id": "BEAT_01_BEFORE",
+        "timestamp": "00:00 - 00:12",
+        "phase": "STRUGGLE (Painful Reality)",
+        "voiceover": "Mỗi ngày trôi qua với mất 3 tiếng mỗi đêm cộng sổ sách thủ công và sai sót kho hàng đều là một cuộc chiến mệt mỏi và tốn kém...",
+        "dialogue": "Tuấn thở dài mệt mỏi, \"Mình đã quá ngột ngạt với tình cảnh này.\"",
+        "visual_action": "Tuấn ngồi bế tắc giữa mớ lộn xộn trong phòng mờ tối, ánh sáng xanh lạnh lẽo hắt lên gương mặt.",
+        "camera_movement": "Slow handheld camera tracking with subtle shake",
+        "sound_fx": "Tiếng thở dài nặng trĩu + tiếng mưa đêm rơi",
+        "ambient_noise": "Căn phòng u tối tĩnh mịch",
+        "emotion_tone": "Áp lực, kiệt quệ, đồng cảm",
+        "cinematic": {
+          "shot_size": "Medium shot transitioning to Dutch tilt",
+          "camera_angle": "High angle or canted Dutch tilt to evoke pressure",
+          "camera_movement": "Handheld with subtle tension shake, fast whip pan",
+          "lighting": "Low-key chiaroscuro lighting, harsh shadows, overcast tones",
+          "lens_and_depth": "85mm portrait macro lens, pristine softbox diffusion, studio lighting",
+          "composition": "Framing within a frame, cramped negative space",
+          "color_grading": "Clean vibrant commercial color science, pristine high-key tones",
+          "film_grain": "Zero grain, ultra-sharp 8k ARRI Alexa LF digital clarity",
+          "mood_keywords": "tense, overwhelmed, melancholic"
+        }
+      },
+      {
+        "beat_id": "BEAT_02_AFTER",
+        "timestamp": "00:12 - 00:28",
+        "phase": "TRANSFORMATION (Ideal Future)",
+        "voiceover": "Nhưng hãy nhìn vào bức tranh này: Mọi âu lo tan biến, kết quả đạt được nhẹ nhàng và chuẩn xác từng milimet.",
+        "dialogue": "Tuấn mỉm cười tự tin, \"Một cảm giác nhẹ nhõm không thể diễn tả bằng lời.\"",
+        "visual_action": "Không gian bừng sáng ngập tràn ánh nắng, Tuấn mỉm cười rạng rỡ làm chủ mọi tình huống.",
+        "camera_movement": "Smooth Steadicam tracking forward, golden hour lighting",
+        "sound_fx": "Tiếng chuông ngân vang ấm áp (gentle melodic chime)",
+        "ambient_noise": "Giai điệu piano truyền cảm hứng",
+        "emotion_tone": "Thanh thản, tự do, hy vọng",
+        "cinematic": {
+          "shot_size": "Wide establishing shot transitioning to Full body shot",
+          "camera_angle": "Low-angle empowering hero shot",
+          "camera_movement": "Smooth Steadicam tracking shot moving gracefully backward",
+          "lighting": "Sun-drenched golden hour, soft volumetric God rays, warm rim light",
+          "lens_and_depth": "85mm portrait macro lens, pristine softbox diffusion, studio lighting",
+          "composition": "Expansive negative space, triumphant leading lines",
+          "color_grading": "Clean vibrant commercial color science, pristine high-key tones",
+          "film_grain": "Zero grain, ultra-sharp 8k ARRI Alexa LF digital clarity",
+          "mood_keywords": "liberating, confident, joyful"
+        }
+      },
+      {
+        "beat_id": "BEAT_03_BRIDGE",
+        "timestamp": "00:28 - 00:45",
+        "phase": "RESOLUTION_CTA (The Product Bridge)",
+        "voiceover": "Cây cầu duy nhất đưa bạn từ bế tắc sang viên mãn chính là Phần Mềm Quản Lý Bán Hàng Tự Động POS AI nhờ hệ thống đồng bộ tự động đa kênh và quét mã vạch tức thì. Trải nghiệm miễn phí 14 ngày không cần thẻ tín dụng!",
+        "dialogue": "Tuấn đưa sản phẩm về phía ống kính, \"Hãy bước qua cây cầu chuyển hóa ngay hôm nay.\"",
+        "visual_action": "Tuấn cầm Phần Mềm Quản Lý Bán Hàng Tự Động POS AI trên tay, ánh sáng rim lighting làm nổi bật đường nét tinh tế của sản phẩm.",
+        "camera_movement": "Macro hero arc shot, elegant 360 rotation",
+        "sound_fx": "Tiếng ting xác nhận hoàn hảo",
+        "ambient_noise": "Nhạc nền kết thúc cao trào rực rỡ",
+        "emotion_tone": "Tin cậy, thúc đẩy, quyết định",
+        "cinematic": {
+          "shot_size": "Medium portrait shot",
+          "camera_angle": "Direct eye-level engaging angle",
+          "camera_movement": "Slow subtle push-in commanding authority and trust",
+          "lighting": "Three-point commercial beauty lighting, soft bokeh highlights in background",
+          "lens_and_depth": "85mm portrait macro lens, pristine softbox diffusion, studio lighting",
+          "composition": "Centered balanced composition, direct magnetic gaze",
+          "color_grading": "Clean vibrant commercial color science, pristine high-key tones",
+          "film_grain": "Zero grain, ultra-sharp 8k ARRI Alexa LF digital clarity",
+          "mood_keywords": "trustworthy, inspiring, resolute"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "name": "Trang thông tin sản phẩm chính thức: Phần Mềm Quản Lý Bán Hàng Tự Động POS AI",
+        "author_or_manufacturer": "Nhà sản xuất chính thức của Phần Mềm Quản Lý Bán Hàng Tự Động POS AI",
+        "source_url_or_id": "https://official-phầnmềmquảnlýbánhàngtựđộngposai.com/specs",
+        "verified_claims": "Bảng thông số kỹ thuật công bố chính thức, thành phần/cơ chế hệ thống đồng bộ tự động đa kênh và quét mã vạch tức thì, xuất xứ linh kiện và hướng dẫn sử dụng"
+      },
+      {
+        "name": "Hồ sơ kiểm định chất lượng xuất xưởng & Chứng nhận an toàn",
+        "author_or_manufacturer": "Cơ quan kiểm định độc lập / Cục Quản lý Tiêu chuẩn & Đo lường",
+        "source_url_or_id": "ISO 9001 / CE Mark / GMP Compliance Record",
+        "verified_claims": "Chứng chỉ kiểm định độ an toàn thực tế, quy trình sản xuất đạt chuẩn công bố, không chứa chất cấm"
+      }
+    ]
+  },
+  "seedance_engine": {
+    "engine": "Seedance 2.0 / 2.5 (ByteDance)",
+    "title": "Cây Cầu Chuyển Hóa Với Phần Mềm Quản Lý Bán Hàng Tự Động POS AI",
+    "multimodal_mapping": {
+      "@Image 1": "Character consistency anchor (Tuấn)",
+      "@Image 2": "Product anchor (Phần Mềm Quản Lý Bán Hàng Tự Động POS AI)"
+    },
+    "shots": [
+      {
+        "shot_number": 1,
+        "beat_id": "BEAT_01_BEFORE",
+        "timestamp": "00:00 - 00:12",
+        "seedance_prompt": "References: Character anchor from @Image 1, Product anchor from @Image 2.\nSetting: Realistic cinematic environment, authentic atmospheric lighting, high dynamic range.\nAction: character from @Image 1 ngồi bế tắc giữa mớ lộn xộn trong phòng mờ tối, ánh sáng xanh lạnh lẽo hắt lên gương mặt.. Realistic physical interaction, subtle micro-expressions, true-to-life physics. Character speaks: \"Tuấn thở dài mệt mỏi, \"Mình đã quá ngột ngạt với tình cảnh này.\"\"\nCamera: Medium shot transitioning to Dutch tilt, High angle or canted Dutch tilt to evoke pressure, Slow handheld camera tracking with subtle shake, 85mm portrait macro lens, pristine softbox diffusion, studio lighting.\nStyle: Cinematic photorealism, Low-key chiaroscuro lighting, harsh shadows, overcast tones, Clean vibrant commercial color science, pristine high-key tones, Zero grain, ultra-sharp 8k ARRI Alexa LF digital clarity, 8k, 24fps.\nAudio: Ambient: Căn phòng u tối tĩnh mịch. SFX: Tiếng thở dài nặng trĩu + tiếng mưa đêm rơi.",
+        "recommended_settings": {
+          "model": "Seedance 2.0 / 2.5",
+          "duration_seconds": 5,
+          "aspect_ratio": "9:16",
+          "reference_inputs": {
+            "@Image 1": "Bảng nhân vật Character Sheet (Tuấn)",
+            "@Image 2": "Hình ảnh sản phẩm / bối cảnh (Phần Mềm Quản Lý Bán Hàng Tự Động POS AI)"
+          }
+        }
+      },
+      {
+        "shot_number": 2,
+        "beat_id": "BEAT_02_AFTER",
+        "timestamp": "00:12 - 00:28",
+        "seedance_prompt": "References: Character anchor from @Image 1, Product anchor from @Image 2.\nSetting: Realistic cinematic environment, authentic atmospheric lighting, high dynamic range.\nAction: Không gian bừng sáng ngập tràn ánh nắng, character from @Image 1 mỉm cười rạng rỡ làm chủ mọi tình huống.. Realistic physical interaction, subtle micro-expressions, true-to-life physics. Character speaks: \"Tuấn mỉm cười tự tin, \"Một cảm giác nhẹ nhõm không thể diễn tả bằng lời.\"\"\nCamera: Wide establishing shot transitioning to Full body shot, Low-angle empowering hero shot, Smooth Steadicam tracking forward, golden hour lighting, 85mm portrait macro lens, pristine softbox diffusion, studio lighting.\nStyle: Cinematic photorealism, Sun-drenched golden hour, soft volumetric God rays, warm rim light, Clean vibrant commercial color science, pristine high-key tones, Zero grain, ultra-sharp 8k ARRI Alexa LF digital clarity, 8k, 24fps.\nAudio: Ambient: Giai điệu piano truyền cảm hứng. SFX: Tiếng chuông ngân vang ấm áp (gentle melodic chime).",
+        "recommended_settings": {
+          "model": "Seedance 2.0 / 2.5",
+          "duration_seconds": 10,
+          "aspect_ratio": "9:16",
+          "reference_inputs": {
+            "@Image 1": "Bảng nhân vật Character Sheet (Tuấn)",
+            "@Image 2": "Hình ảnh sản phẩm / bối cảnh (Phần Mềm Quản Lý Bán Hàng Tự Động POS AI)"
+          }
+        }
+      },
+      {
+        "shot_number": 3,
+        "beat_id": "BEAT_03_BRIDGE",
+        "timestamp": "00:28 - 00:45",
+        "seedance_prompt": "References: Character anchor from @Image 1, Product anchor from @Image 2.\nSetting: Realistic cinematic environment, authentic atmospheric lighting, high dynamic range.\nAction: character from @Image 1 cầm Phần Mềm Quản Lý Bán Hàng Tự Động POS AI trên tay, ánh sáng rim lighting làm nổi bật đường nét tinh tế của featured product in @Image 2.. Realistic physical interaction, subtle micro-expressions, true-to-life physics. Character speaks: \"Tuấn đưa sản phẩm về phía ống kính, \"Hãy bước qua cây cầu chuyển hóa ngay hôm nay.\"\"\nCamera: Medium portrait shot, Direct eye-level engaging angle, Macro hero arc shot, elegant 360 rotation, 85mm portrait macro lens, pristine softbox diffusion, studio lighting.\nStyle: Cinematic photorealism, Three-point commercial beauty lighting, soft bokeh highlights in background, Clean vibrant commercial color science, pristine high-key tones, Zero grain, ultra-sharp 8k ARRI Alexa LF digital clarity, 8k, 24fps.\nAudio: Ambient: Nhạc nền kết thúc cao trào rực rỡ. SFX: Tiếng ting xác nhận hoàn hảo.",
+        "recommended_settings": {
+          "model": "Seedance 2.0 / 2.5",
+          "duration_seconds": 10,
+          "aspect_ratio": "9:16",
+          "reference_inputs": {
+            "@Image 1": "Bảng nhân vật Character Sheet (Tuấn)",
+            "@Image 2": "Hình ảnh sản phẩm / bối cảnh (Phần Mềm Quản Lý Bán Hàng Tự Động POS AI)"
+          }
+        }
+      }
+    ]
+  },
+  "veo3_engine": {
+    "engine": "Google Veo 3 / 3.1 (DeepMind)",
+    "title": "Cây Cầu Chuyển Hóa Với Phần Mềm Quản Lý Bán Hàng Tự Động POS AI",
+    "formula_applied": "[Cinematography] + [Subject] + [Action] + [Context] + [Style & Ambiance]",
+    "shots": [
+      {
+        "shot_number": 1,
+        "beat_id": "BEAT_01_BEFORE",
+        "timestamp": "00:00 - 00:12",
+        "veo3_prompt": "A cinematic Medium shot transitioning to Dutch tilt, High angle or canted Dutch tilt to evoke pressure, Slow handheld camera tracking with subtle shake, 85mm portrait macro lens, pristine softbox diffusion, studio lighting, Framing within a frame, cramped negative space. A Chủ cửa hàng thời trang nam 30 tuổi bận rộn, authentic natural features, wearing fitting modern minimalist attire. Tuấn ngồi bế tắc giữa mớ lộn xộn trong phòng mờ tối, ánh sáng xanh lạnh lẽo hắt lên gương mặt.. Atmospheric environment with nuanced, natural cinematic lighting and rich depth. Cinematic lighting (Low-key chiaroscuro lighting, harsh shadows, overcast tones), Clean vibrant commercial color science, pristine high-key tones, Zero grain, ultra-sharp 8k ARRI Alexa LF digital clarity, tense, overwhelmed, melancholic mood, photorealistic 8k, authentic human texture. He speaks with natural emotion, \"Tuấn thở dài mệt mỏi, Mình đã quá ngột ngạt với tình cảnh này..\" SFX: Tiếng thở dài nặng trĩu + tiếng mưa đêm rơi. Ambient noise: Căn phòng u tối tĩnh mịch.",
+        "recommended_settings": {
+          "model": "Google Veo 3 / 3.1",
+          "mode": "Image-to-Video (First Frame) hoặc Text-to-Video",
+          "aspect_ratio": "9:16",
+          "audio_enabled": true
+        }
+      },
+      {
+        "shot_number": 2,
+        "beat_id": "BEAT_02_AFTER",
+        "timestamp": "00:12 - 00:28",
+        "veo3_prompt": "A cinematic Wide establishing shot transitioning to Full body shot, Low-angle empowering hero shot, Smooth Steadicam tracking forward, golden hour lighting, 85mm portrait macro lens, pristine softbox diffusion, studio lighting, Expansive negative space, triumphant leading lines. A Chủ cửa hàng thời trang nam 30 tuổi bận rộn, authentic natural features, wearing fitting modern minimalist attire. Không gian bừng sáng ngập tràn ánh nắng, Tuấn mỉm cười rạng rỡ làm chủ mọi tình huống.. Atmospheric environment with nuanced, natural cinematic lighting and rich depth. Cinematic lighting (Sun-drenched golden hour, soft volumetric God rays, warm rim light), Clean vibrant commercial color science, pristine high-key tones, Zero grain, ultra-sharp 8k ARRI Alexa LF digital clarity, liberating, confident, joyful mood, photorealistic 8k, authentic human texture. He speaks with natural emotion, \"Tuấn mỉm cười tự tin, Một cảm giác nhẹ nhõm không thể diễn tả bằng lời..\" SFX: Tiếng chuông ngân vang ấm áp (gentle melodic chime). Ambient noise: Giai điệu piano truyền cảm hứng.",
+        "recommended_settings": {
+          "model": "Google Veo 3 / 3.1",
+          "mode": "Image-to-Video (First Frame) hoặc Text-to-Video",
+          "aspect_ratio": "9:16",
+          "audio_enabled": true
+        }
+      },
+      {
+        "shot_number": 3,
+        "beat_id": "BEAT_03_BRIDGE",
+        "timestamp": "00:28 - 00:45",
+        "veo3_prompt": "A cinematic Medium portrait shot, Direct eye-level engaging angle, Macro hero arc shot, elegant 360 rotation, 85mm portrait macro lens, pristine softbox diffusion, studio lighting, Centered balanced composition, direct magnetic gaze. A Chủ cửa hàng thời trang nam 30 tuổi bận rộn, authentic natural features, wearing fitting modern minimalist attire. Tuấn cầm Phần Mềm Quản Lý Bán Hàng Tự Động POS AI trên tay, ánh sáng rim lighting làm nổi bật đường nét tinh tế của sản phẩm.. Atmospheric environment with nuanced, natural cinematic lighting and rich depth. Cinematic lighting (Three-point commercial beauty lighting, soft bokeh highlights in background), Clean vibrant commercial color science, pristine high-key tones, Zero grain, ultra-sharp 8k ARRI Alexa LF digital clarity, trustworthy, inspiring, resolute mood, photorealistic 8k, authentic human texture. He speaks with natural emotion, \"Tuấn đưa sản phẩm về phía ống kính, Hãy bước qua cây cầu chuyển hóa ngay hôm nay..\" SFX: Tiếng ting xác nhận hoàn hảo. Ambient noise: Nhạc nền kết thúc cao trào rực rỡ.",
+        "recommended_settings": {
+          "model": "Google Veo 3 / 3.1",
+          "mode": "Image-to-Video (First Frame) hoặc Text-to-Video",
+          "aspect_ratio": "9:16",
+          "audio_enabled": true
+        }
+      }
+    ]
+  }
+}

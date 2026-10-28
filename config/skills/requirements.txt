@@ -1,0 +1,41 @@
+# ==============================================================================
+# DANH SÁCH THƯ VIỆN PYTHON CHO BỘ NÃO LAI JAVIS (agy-skill-hub) & 21 GLOBAL SKILLS
+# ==============================================================================
+# 1. Bộ Não Lai Javis Hybrid Skill Brain (agy_skill_engine.py + agy_skill_mcp_server.py)
+mcp>=1.2.0
+pyyaml>=6.0.1
+
+# 2. verified-source-researcher: Kiểm tra link sống HTTP 200, CrossRef, PubMed, ISBN
+requests>=2.31.0
+urllib3>=2.0.0
+
+# 3. antigravity-browser-controller: WebSocket & CDP điều khiển đa trình duyệt
+aiohttp>=3.9.0
+websockets>=12.0
+
+# 4. claude-seo: Kiểm toán Technical SEO, E-E-A-T, Schema & GEO AI Search
+beautifulsoup4>=4.12.0
+lxml>=5.0.0
+lxml_html_clean>=0.1.0
+trafilatura>=1.8.0
+htmldate>=1.7.0
+courlan>=1.0.0
+playwright>=1.40.0
+openpyxl>=3.1.0
+matplotlib>=3.8.0
+numpy>=1.26.0
+
+# 5. sql-sap-b1 & viet-sql-sap-b1: Kết nối SQL Server Read-Only & xuất báo cáo PDF/Excel
+pyodbc>=5.0.0
+pymssql>=2.2.0
+reportlab>=4.0.0
+
+# 6. ifixai-agent-auditor: Động cơ kiểm toán độc lập AI Agent 5 trụ cột
+pydantic>=2.5.0
+typing_extensions>=4.9.0
+jsonschema>=4.20.0
+click>=8.1.0
+python-dateutil>=2.8.2
+json-repair>=0.25.0
+rich>=13.7.0
+questionary>=2.0.0

@@ -1,0 +1,3 @@
+select t0.number,t0.TaxDate as 'Doc. Date',t0.RefDate as 'Posting date',t1.Account,t2.acctname,t1.Debit,t1.fcdebit as 'Foreign Debit', t1.Credit, t1.FCCredit as 'Foreign Credit',t1.LineMemo,t1.Ref1,t1.Ref2,t1.ProfitCode,t0.U_belnrid as 'WO No.',t0.U_belposid as 'WO Pos.'
+from ojdt t0 inner join jdt1 t1 on t0.transid = t1.TransId left join oact t2 on t1.Account = t2.AcctCode where t1.account = @AcctCode and
+t0.TaxDate between @StartDate and @EndDate

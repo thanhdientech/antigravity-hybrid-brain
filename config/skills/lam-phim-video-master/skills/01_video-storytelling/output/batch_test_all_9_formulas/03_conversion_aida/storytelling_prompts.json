@@ -1,0 +1,261 @@
+{
+  "title": "Đột Phá Cùng Chảo Titan Khắc Laser Tổ Ong Không Trầy Xước",
+  "topic": "Chảo Titan Khắc Laser Tổ Ong Không Trầy Xước",
+  "formula": "conversion_aida",
+  "cinematic_style": "commercial_clean",
+  "character_sheet": {
+    "character_identity": "Người phụ nữ nội trợ hiện đại 32 tuổi chu toàn",
+    "turnaround_prompt_raw": "character sheet, model turnaround sheet of Người phụ nữ nội trợ hiện đại 32 tuổi chu toàn, wearing casual modern streetwear, minimalist beige neutral tone. Four views: full body front view, full body 3/4 view, side profile view, back view. Same person, identical facial features, consistent hair and body proportions across all panels. Neutral clean studio grey background, soft documentary lighting, high detail skin texture, cinematic photorealism, 8k, shot on 35mm lens --ar 16:9",
+    "midjourney_command": "/imagine prompt: character sheet, model turnaround sheet of Người phụ nữ nội trợ hiện đại 32 tuổi chu toàn, wearing casual modern streetwear, minimalist beige neutral tone. Four views: full body front view, full body 3/4 view, side profile view, back view. Same person, identical facial features, consistent hair and body proportions across all panels. Neutral clean studio grey background, soft documentary lighting, high detail skin texture, cinematic photorealism, 8k, shot on 35mm lens --ar 16:9 --v 6.1 --style raw",
+    "flux_prompt": "character sheet, model turnaround sheet of Người phụ nữ nội trợ hiện đại 32 tuổi chu toàn, wearing casual modern streetwear, minimalist beige neutral tone. Four views: full body front view, full body 3/4 view, side profile view, back view. Same person, identical facial features, consistent hair and body proportions across all panels. Neutral clean studio grey background, soft documentary lighting, high detail skin texture, cinematic photorealism, 8k, shot on 35mm lens --ar 16:9",
+    "instructions": [
+      "1. Render bảng nhân vật trên Midjourney hoặc Flux để có 1 tấm ảnh 4 góc nhìn chuẩn.",
+      "2. Cắt lấy tấm ảnh góc đẹp nhất (thường là góc 3/4) làm Anchor Frame (@Image 1 cho Seedance hoặc First Frame cho Veo 3).",
+      "3. Dùng ảnh này làm input cố định xuyên suốt toàn bộ các cảnh trong video."
+    ]
+  },
+  "story_script": {
+    "title": "Đột Phá Cùng Chảo Titan Khắc Laser Tổ Ong Không Trầy Xước",
+    "product_or_topic": "Chảo Titan Khắc Laser Tổ Ong Không Trầy Xước",
+    "target_audience": "Khán giả khao khát nội dung giá trị, tri thức thực chứng hoặc giải pháp chuyển hóa",
+    "character_name": "Mai",
+    "character_appearance": "Người phụ nữ nội trợ hiện đại 32 tuổi chu toàn, authentic natural features, wearing fitting modern minimalist attire",
+    "format_type": "SHORT_FORM_60S",
+    "formula": "conversion_aida",
+    "moral_or_takeaway": "Chảo Titan Khắc Laser Tổ Ong Không Trầy Xước là giải pháp ưu việt thay thế mọi phương thức cũ.",
+    "cinematic_style": "commercial_clean",
+    "beats": [
+      {
+        "beat_id": "BEAT_01_ATTENTION",
+        "timestamp": "00:00 - 00:08",
+        "phase": "HOOK (Attention Grabber)",
+        "voiceover": "Tại sao 90% mọi người đều thất bại khi xử lý chảo chống dính thông thường bong tróc lớp phủ độc hại?",
+        "dialogue": "Mai nhíu mày, \"Bởi vì chúng ta đã làm sai cách ngay từ đầu.\"",
+        "visual_action": "Mai đứng trước bảng nghiên cứu so sánh đầy các dấu gạch chéo đỏ, ánh mắt đầy trăn trở.",
+        "camera_movement": "Slow tracking push-in, low-angle MCU",
+        "sound_fx": "Tiếng bass drop trầm đục tạo kịch tính",
+        "ambient_noise": "Không gian studio tối giản hiện đại",
+        "emotion_tone": "Gây sốc, tò mò, thách thức nhận thức",
+        "cinematic": {
+          "shot_size": "Medium close-up (MCU)",
+          "camera_angle": "Eye-level intimate angle",
+          "camera_movement": "Slow dolly in focusing on micro-expression",
+          "lighting": "Soft window light with subtle rim lighting",
+          "lens_and_depth": "85mm portrait macro lens, pristine softbox diffusion, studio lighting",
+          "composition": "Rule of thirds, strong foreground interest",
+          "color_grading": "Clean vibrant commercial color science, pristine high-key tones",
+          "film_grain": "Zero grain, ultra-sharp 8k ARRI Alexa LF digital clarity",
+          "mood_keywords": "vulnerable, relatable, intimate"
+        }
+      },
+      {
+        "beat_id": "BEAT_02_INTEREST",
+        "timestamp": "00:08 - 00:25",
+        "phase": "STRUGGLE (Build Interest)",
+        "voiceover": "Bí mật nằm ở chỗ: Phương pháp thông thường chỉ chữa triệu chứng, trong khi Chảo Titan Khắc Laser Tổ Ong Không Trầy Xước áp dụng cơ chế cấu trúc vi khắc laser tổ ong bảo vệ lớp chống dính vĩnh cửu.",
+        "dialogue": null,
+        "visual_action": "Cắt lớp đồ họa 3D hiển thị chi tiết cơ chế hoạt động bên trong của Chảo Titan Khắc Laser Tổ Ong Không Trầy Xước.",
+        "camera_movement": "3D orbiting camera scan, technical close-up",
+        "sound_fx": "Âm thanh quét laser công nghệ (subtle digital sweep)",
+        "ambient_noise": "Âm thanh synth ambient khoa học tinh tế",
+        "emotion_tone": "Trí tuệ, hào hứng, thuyết phục",
+        "cinematic": {
+          "shot_size": "Medium close-up (MCU)",
+          "camera_angle": "Eye-level intimate angle",
+          "camera_movement": "Slow dolly in focusing on micro-expression",
+          "lighting": "Soft window light with subtle rim lighting",
+          "lens_and_depth": "85mm portrait macro lens, pristine softbox diffusion, studio lighting",
+          "composition": "Rule of thirds, strong foreground interest",
+          "color_grading": "Clean vibrant commercial color science, pristine high-key tones",
+          "film_grain": "Zero grain, ultra-sharp 8k ARRI Alexa LF digital clarity",
+          "mood_keywords": "vulnerable, relatable, intimate"
+        }
+      },
+      {
+        "beat_id": "BEAT_03_DESIRE",
+        "timestamp": "00:25 - 00:45",
+        "phase": "TRANSFORMATION (Ignite Desire)",
+        "voiceover": "Hãy tưởng tượng mỗi ngày thức dậy, nỗi lo về chảo chống dính thông thường bong tróc lớp phủ độc hại hoàn toàn biến mất, nhường chỗ cho sự thảnh thơi và hiệu suất vượt trội.",
+        "dialogue": "Mai rạng rỡ, \"Cảm giác kiểm soát hoàn toàn cuộc sống thật tuyệt vời.\"",
+        "visual_action": "Mai tận hưởng cuộc sống trọn vẹn bên bàn làm việc ngập tràn ánh nắng ấm áp.",
+        "camera_movement": "Smooth Steadicam dolly out, wide lens",
+        "sound_fx": "Tiếng nhạc nâng tone ấm áp đầy hy vọng",
+        "ambient_noise": "Tiếng chim hót và gió sớm",
+        "emotion_tone": "Khao khát, thỏa mãn, phấn chấn",
+        "cinematic": {
+          "shot_size": "Wide establishing shot transitioning to Full body shot",
+          "camera_angle": "Low-angle empowering hero shot",
+          "camera_movement": "Smooth Steadicam tracking shot moving gracefully backward",
+          "lighting": "Sun-drenched golden hour, soft volumetric God rays, warm rim light",
+          "lens_and_depth": "85mm portrait macro lens, pristine softbox diffusion, studio lighting",
+          "composition": "Expansive negative space, triumphant leading lines",
+          "color_grading": "Clean vibrant commercial color science, pristine high-key tones",
+          "film_grain": "Zero grain, ultra-sharp 8k ARRI Alexa LF digital clarity",
+          "mood_keywords": "liberating, confident, joyful"
+        }
+      },
+      {
+        "beat_id": "BEAT_04_ACTION",
+        "timestamp": "00:45 - 00:60",
+        "phase": "RESOLUTION_CTA (Urgent Action)",
+        "voiceover": "Ưu đãi đặc biệt chỉ dành cho 50 người đăng ký sớm nhất trong hôm nay. Đặt mua ngay hôm nay để nhận bộ 3 dao Nhật cao cấp trị giá 500k!",
+        "dialogue": "Mai chỉ tay dứt khoát, \"Đừng bỏ lỡ cơ hội này.\"",
+        "visual_action": "Hộp sản phẩm Chảo Titan Khắc Laser Tổ Ong Không Trầy Xước xuất hiện sang trọng với tem chứng nhận chất lượng và nút bấm hành động.",
+        "camera_movement": "Centered locked-off commercial hero shot",
+        "sound_fx": "Tiếng click chuông chốt đơn dứt khoát",
+        "ambient_noise": "Nhạc nền cao trào hào hứng",
+        "emotion_tone": "Khẩn trương, tin cậy, quyết đoán",
+        "cinematic": {
+          "shot_size": "Medium portrait shot",
+          "camera_angle": "Direct eye-level engaging angle",
+          "camera_movement": "Slow subtle push-in commanding authority and trust",
+          "lighting": "Three-point commercial beauty lighting, soft bokeh highlights in background",
+          "lens_and_depth": "85mm portrait macro lens, pristine softbox diffusion, studio lighting",
+          "composition": "Centered balanced composition, direct magnetic gaze",
+          "color_grading": "Clean vibrant commercial color science, pristine high-key tones",
+          "film_grain": "Zero grain, ultra-sharp 8k ARRI Alexa LF digital clarity",
+          "mood_keywords": "trustworthy, inspiring, resolute"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "name": "Trang thông tin sản phẩm chính thức: Chảo Titan Khắc Laser Tổ Ong Không Trầy Xước",
+        "author_or_manufacturer": "Nhà sản xuất chính thức của Chảo Titan Khắc Laser Tổ Ong Không Trầy Xước",
+        "source_url_or_id": "https://official-chảotitankhắclasertổongkhôngtrầyxước.com/specs",
+        "verified_claims": "Bảng thông số kỹ thuật công bố chính thức, thành phần/cơ chế cấu trúc vi khắc laser tổ ong bảo vệ lớp chống dính vĩnh cửu, xuất xứ linh kiện và hướng dẫn sử dụng"
+      },
+      {
+        "name": "Hồ sơ kiểm định chất lượng xuất xưởng & Chứng nhận an toàn",
+        "author_or_manufacturer": "Cơ quan kiểm định độc lập / Cục Quản lý Tiêu chuẩn & Đo lường",
+        "source_url_or_id": "ISO 9001 / CE Mark / GMP Compliance Record",
+        "verified_claims": "Chứng chỉ kiểm định độ an toàn thực tế, quy trình sản xuất đạt chuẩn công bố, không chứa chất cấm"
+      }
+    ]
+  },
+  "seedance_engine": {
+    "engine": "Seedance 2.0 / 2.5 (ByteDance)",
+    "title": "Đột Phá Cùng Chảo Titan Khắc Laser Tổ Ong Không Trầy Xước",
+    "multimodal_mapping": {
+      "@Image 1": "Character consistency anchor (Mai)",
+      "@Image 2": "Product anchor (Chảo Titan Khắc Laser Tổ Ong Không Trầy Xước)"
+    },
+    "shots": [
+      {
+        "shot_number": 1,
+        "beat_id": "BEAT_01_ATTENTION",
+        "timestamp": "00:00 - 00:08",
+        "seedance_prompt": "References: Character anchor from @Image 1, Product anchor from @Image 2.\nSetting: Realistic cinematic environment, authentic atmospheric lighting, high dynamic range.\nAction: character from @Image 1 đứng trước bảng nghiên cứu so sánh đầy các dấu gạch chéo đỏ, ánh mắt đầy trăn trở.. Realistic physical interaction, subtle micro-expressions, true-to-life physics. Character speaks: \"Mai nhíu mày, \"Bởi vì chúng ta đã làm sai cách ngay từ đầu.\"\"\nCamera: Medium close-up (MCU), Eye-level intimate angle, Slow tracking push-in, low-angle MCU, 85mm portrait macro lens, pristine softbox diffusion, studio lighting.\nStyle: Cinematic photorealism, Soft window light with subtle rim lighting, Clean vibrant commercial color science, pristine high-key tones, Zero grain, ultra-sharp 8k ARRI Alexa LF digital clarity, 8k, 24fps.\nAudio: Ambient: Không gian studio tối giản hiện đại. SFX: Tiếng bass drop trầm đục tạo kịch tính.",
+        "recommended_settings": {
+          "model": "Seedance 2.0 / 2.5",
+          "duration_seconds": 5,
+          "aspect_ratio": "9:16",
+          "reference_inputs": {
+            "@Image 1": "Bảng nhân vật Character Sheet (Mai)",
+            "@Image 2": "Hình ảnh sản phẩm / bối cảnh (Chảo Titan Khắc Laser Tổ Ong Không Trầy Xước)"
+          }
+        }
+      },
+      {
+        "shot_number": 2,
+        "beat_id": "BEAT_02_INTEREST",
+        "timestamp": "00:08 - 00:25",
+        "seedance_prompt": "References: Character anchor from @Image 1, Product anchor from @Image 2.\nSetting: Realistic cinematic environment, authentic atmospheric lighting, high dynamic range.\nAction: Cắt lớp đồ họa 3D hiển thị chi tiết cơ chế hoạt động bên trong của Chảo Titan Khắc Laser Tổ Ong Không Trầy Xước.. Realistic physical interaction, subtle micro-expressions, true-to-life physics.\nCamera: Medium close-up (MCU), Eye-level intimate angle, 3D orbiting camera scan, technical close-up, 85mm portrait macro lens, pristine softbox diffusion, studio lighting.\nStyle: Cinematic photorealism, Soft window light with subtle rim lighting, Clean vibrant commercial color science, pristine high-key tones, Zero grain, ultra-sharp 8k ARRI Alexa LF digital clarity, 8k, 24fps.\nAudio: Ambient: Âm thanh synth ambient khoa học tinh tế. SFX: Âm thanh quét laser công nghệ (subtle digital sweep).",
+        "recommended_settings": {
+          "model": "Seedance 2.0 / 2.5",
+          "duration_seconds": 10,
+          "aspect_ratio": "9:16",
+          "reference_inputs": {
+            "@Image 1": "Bảng nhân vật Character Sheet (Mai)",
+            "@Image 2": "Hình ảnh sản phẩm / bối cảnh (Chảo Titan Khắc Laser Tổ Ong Không Trầy Xước)"
+          }
+        }
+      },
+      {
+        "shot_number": 3,
+        "beat_id": "BEAT_03_DESIRE",
+        "timestamp": "00:25 - 00:45",
+        "seedance_prompt": "References: Character anchor from @Image 1, Product anchor from @Image 2.\nSetting: Realistic cinematic environment, authentic atmospheric lighting, high dynamic range.\nAction: character from @Image 1 tận hưởng cuộc sống trọn vẹn bên bàn làm việc ngập tràn ánh nắng ấm áp.. Realistic physical interaction, subtle micro-expressions, true-to-life physics. Character speaks: \"Mai rạng rỡ, \"Cảm giác kiểm soát hoàn toàn cuộc sống thật tuyệt vời.\"\"\nCamera: Wide establishing shot transitioning to Full body shot, Low-angle empowering hero shot, Smooth Steadicam dolly out, wide lens, 85mm portrait macro lens, pristine softbox diffusion, studio lighting.\nStyle: Cinematic photorealism, Sun-drenched golden hour, soft volumetric God rays, warm rim light, Clean vibrant commercial color science, pristine high-key tones, Zero grain, ultra-sharp 8k ARRI Alexa LF digital clarity, 8k, 24fps.\nAudio: Ambient: Tiếng chim hót và gió sớm. SFX: Tiếng nhạc nâng tone ấm áp đầy hy vọng.",
+        "recommended_settings": {
+          "model": "Seedance 2.0 / 2.5",
+          "duration_seconds": 10,
+          "aspect_ratio": "9:16",
+          "reference_inputs": {
+            "@Image 1": "Bảng nhân vật Character Sheet (Mai)",
+            "@Image 2": "Hình ảnh sản phẩm / bối cảnh (Chảo Titan Khắc Laser Tổ Ong Không Trầy Xước)"
+          }
+        }
+      },
+      {
+        "shot_number": 4,
+        "beat_id": "BEAT_04_ACTION",
+        "timestamp": "00:45 - 00:60",
+        "seedance_prompt": "References: Character anchor from @Image 1, Product anchor from @Image 2.\nSetting: Realistic cinematic environment, authentic atmospheric lighting, high dynamic range.\nAction: Hộp featured product in @Image 2 Chảo Titan Khắc Laser Tổ Ong Không Trầy Xước xuất hiện sang trọng với tem chứng nhận chất lượng và nút bấm hành động.. Realistic physical interaction, subtle micro-expressions, true-to-life physics. Character speaks: \"Mai chỉ tay dứt khoát, \"Đừng bỏ lỡ cơ hội này.\"\"\nCamera: Medium portrait shot, Direct eye-level engaging angle, Centered locked-off commercial hero shot, 85mm portrait macro lens, pristine softbox diffusion, studio lighting.\nStyle: Cinematic photorealism, Three-point commercial beauty lighting, soft bokeh highlights in background, Clean vibrant commercial color science, pristine high-key tones, Zero grain, ultra-sharp 8k ARRI Alexa LF digital clarity, 8k, 24fps.\nAudio: Ambient: Nhạc nền cao trào hào hứng. SFX: Tiếng click chuông chốt đơn dứt khoát.",
+        "recommended_settings": {
+          "model": "Seedance 2.0 / 2.5",
+          "duration_seconds": 5,
+          "aspect_ratio": "9:16",
+          "reference_inputs": {
+            "@Image 1": "Bảng nhân vật Character Sheet (Mai)",
+            "@Image 2": "Hình ảnh sản phẩm / bối cảnh (Chảo Titan Khắc Laser Tổ Ong Không Trầy Xước)"
+          }
+        }
+      }
+    ]
+  },
+  "veo3_engine": {
+    "engine": "Google Veo 3 / 3.1 (DeepMind)",
+    "title": "Đột Phá Cùng Chảo Titan Khắc Laser Tổ Ong Không Trầy Xước",
+    "formula_applied": "[Cinematography] + [Subject] + [Action] + [Context] + [Style & Ambiance]",
+    "shots": [
+      {
+        "shot_number": 1,
+        "beat_id": "BEAT_01_ATTENTION",
+        "timestamp": "00:00 - 00:08",
+        "veo3_prompt": "A cinematic Medium close-up (MCU), Eye-level intimate angle, Slow tracking push-in, low-angle MCU, 85mm portrait macro lens, pristine softbox diffusion, studio lighting, Rule of thirds, strong foreground interest. A Người phụ nữ nội trợ hiện đại 32 tuổi chu toàn, authentic natural features, wearing fitting modern minimalist attire. Mai đứng trước bảng nghiên cứu so sánh đầy các dấu gạch chéo đỏ, ánh mắt đầy trăn trở.. Atmospheric environment with nuanced, natural cinematic lighting and rich depth. Cinematic lighting (Soft window light with subtle rim lighting), Clean vibrant commercial color science, pristine high-key tones, Zero grain, ultra-sharp 8k ARRI Alexa LF digital clarity, vulnerable, relatable, intimate mood, photorealistic 8k, authentic human texture. She speaks with natural emotion, \"Mai nhíu mày, Bởi vì chúng ta đã làm sai cách ngay từ đầu..\" SFX: Tiếng bass drop trầm đục tạo kịch tính. Ambient noise: Không gian studio tối giản hiện đại.",
+        "recommended_settings": {
+          "model": "Google Veo 3 / 3.1",
+          "mode": "Image-to-Video (First Frame) hoặc Text-to-Video",
+          "aspect_ratio": "9:16",
+          "audio_enabled": true
+        }
+      },
+      {
+        "shot_number": 2,
+        "beat_id": "BEAT_02_INTEREST",
+        "timestamp": "00:08 - 00:25",
+        "veo3_prompt": "A cinematic Medium close-up (MCU), Eye-level intimate angle, 3D orbiting camera scan, technical close-up, 85mm portrait macro lens, pristine softbox diffusion, studio lighting, Rule of thirds, strong foreground interest. A Người phụ nữ nội trợ hiện đại 32 tuổi chu toàn, authentic natural features, wearing fitting modern minimalist attire. Cắt lớp đồ họa 3D hiển thị chi tiết cơ chế hoạt động bên trong của Chảo Titan Khắc Laser Tổ Ong Không Trầy Xước.. Atmospheric environment with nuanced, natural cinematic lighting and rich depth. Cinematic lighting (Soft window light with subtle rim lighting), Clean vibrant commercial color science, pristine high-key tones, Zero grain, ultra-sharp 8k ARRI Alexa LF digital clarity, vulnerable, relatable, intimate mood, photorealistic 8k, authentic human texture. SFX: Âm thanh quét laser công nghệ (subtle digital sweep). Ambient noise: Âm thanh synth ambient khoa học tinh tế.",
+        "recommended_settings": {
+          "model": "Google Veo 3 / 3.1",
+          "mode": "Image-to-Video (First Frame) hoặc Text-to-Video",
+          "aspect_ratio": "9:16",
+          "audio_enabled": true
+        }
+      },
+      {
+        "shot_number": 3,
+        "beat_id": "BEAT_03_DESIRE",
+        "timestamp": "00:25 - 00:45",
+        "veo3_prompt": "A cinematic Wide establishing shot transitioning to Full body shot, Low-angle empowering hero shot, Smooth Steadicam dolly out, wide lens, 85mm portrait macro lens, pristine softbox diffusion, studio lighting, Expansive negative space, triumphant leading lines. A Người phụ nữ nội trợ hiện đại 32 tuổi chu toàn, authentic natural features, wearing fitting modern minimalist attire. Mai tận hưởng cuộc sống trọn vẹn bên bàn làm việc ngập tràn ánh nắng ấm áp.. Atmospheric environment with nuanced, natural cinematic lighting and rich depth. Cinematic lighting (Sun-drenched golden hour, soft volumetric God rays, warm rim light), Clean vibrant commercial color science, pristine high-key tones, Zero grain, ultra-sharp 8k ARRI Alexa LF digital clarity, liberating, confident, joyful mood, photorealistic 8k, authentic human texture. She speaks with natural emotion, \"Mai rạng rỡ, Cảm giác kiểm soát hoàn toàn cuộc sống thật tuyệt vời..\" SFX: Tiếng nhạc nâng tone ấm áp đầy hy vọng. Ambient noise: Tiếng chim hót và gió sớm.",
+        "recommended_settings": {
+          "model": "Google Veo 3 / 3.1",
+          "mode": "Image-to-Video (First Frame) hoặc Text-to-Video",
+          "aspect_ratio": "9:16",
+          "audio_enabled": true
+        }
+      },
+      {
+        "shot_number": 4,
+        "beat_id": "BEAT_04_ACTION",
+        "timestamp": "00:45 - 00:60",
+        "veo3_prompt": "A cinematic Medium portrait shot, Direct eye-level engaging angle, Centered locked-off commercial hero shot, 85mm portrait macro lens, pristine softbox diffusion, studio lighting, Centered balanced composition, direct magnetic gaze. A Người phụ nữ nội trợ hiện đại 32 tuổi chu toàn, authentic natural features, wearing fitting modern minimalist attire. Hộp sản phẩm Chảo Titan Khắc Laser Tổ Ong Không Trầy Xước xuất hiện sang trọng với tem chứng nhận chất lượng và nút bấm hành động.. Atmospheric environment with nuanced, natural cinematic lighting and rich depth. Cinematic lighting (Three-point commercial beauty lighting, soft bokeh highlights in background), Clean vibrant commercial color science, pristine high-key tones, Zero grain, ultra-sharp 8k ARRI Alexa LF digital clarity, trustworthy, inspiring, resolute mood, photorealistic 8k, authentic human texture. She speaks with natural emotion, \"Mai chỉ tay dứt khoát, Đừng bỏ lỡ cơ hội này..\" SFX: Tiếng click chuông chốt đơn dứt khoát. Ambient noise: Nhạc nền cao trào hào hứng.",
+        "recommended_settings": {
+          "model": "Google Veo 3 / 3.1",
+          "mode": "Image-to-Video (First Frame) hoặc Text-to-Video",
+          "aspect_ratio": "9:16",
+          "audio_enabled": true
+        }
+      }
+    ]
+  }
+}

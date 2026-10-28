@@ -1,0 +1,5 @@
+/* ================== PARAMETERS (SSMS) ================== */
+DECLARE @FromDate DATE = '2026-01-01';
+DECLARE @ToDate   DATE = '2026-12-31';
+
+SELECT DISTINCT    T0.[DocNum] AS 'So_Landed_Cost',    T0.[DocDate] AS 'Ngay_Landed_Cost',    T2.[DocNum] AS 'So_Hoa_Don_AP_Broker',    T2.[CardName] AS 'Ten_Don_Vi_Van_Chuyen',    T2.[DocDate] AS 'Ngay_Hoa_Don',    CASE         WHEN T2.[DocNum] IS NOT NULL THEN N'Đã có AP Invoice'        ELSE N'Chưa làm AP Invoice'    END AS 'Trang_Thai'FROM     OIPF T0 -- Bảng Header của Landed CostLEFT JOIN     PCH1 T1 ON T0.[DocEntry] = T1.[BaseEntry] AND T1.[BaseType] = 69     -- BaseType = 69 là mã cứng (Object Code) của Landed Cost trong SAP B1LEFT JOIN     OPCH T2 ON T1.[DocEntry] = T2.[DocEntry] -- Nối lên Header của AP Invoice để lấy Số hóa đơnWHERE T0.[DocDate] >= @FromDate AND T0.[DocDate] <= @ToDate

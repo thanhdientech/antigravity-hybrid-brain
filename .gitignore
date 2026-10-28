@@ -1,0 +1,48 @@
+# ==============================================================================
+# ANTIGRAVITY x JAVIS HYBRID SKILL BRAIN — GIT SECURITY & BLOAT SHIELD
+# ==============================================================================
+
+# 1. Machine-specific runtime indexes & SQLite WAL files (rebuilt automatically via agy_skill_engine.py)
+agy_skill_index.db
+agy_skill_index.db-wal
+agy_skill_index.db-shm
+*.db
+*.db-wal
+*.db-shm
+
+# 2. Local MCP / Hook / OAuth / Env Secrets (NEVER commit personal tokens or hardcoded paths)
+config/mcp_config.json
+config/hooks.json
+config/config.json
+.env
+.env.*
+!.env.example
+*credentials*.json
+*token*.json
+*secret*.json
+cookies.json
+
+# 3. Internal ERP / SAP B1 SQL Server Credentials Shield (Use config.example.json instead)
+config/skills/sql-sap-b1/config.json
+config/skills/sql-sap-b1/scripts/THONG_TIN_KET_NOI_USER_CAC_SERVER.txt
+config/skills/sql-sap-b1/scripts/*OpenVPN*.ps1
+
+# 4. Python, Node.js, Virtual Environments & Audit Run Logs
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+node_modules/
+runs/
+backups/
+*.bak
+*.log
+
+# 5. OS & Archive Artifacts
+.DS_Store
+Thumbs.db
+desktop.ini
+*.rar
+*.zip

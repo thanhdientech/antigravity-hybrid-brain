@@ -1,0 +1,13 @@
+{
+  "name": "content-writing-by-noti-plugin",
+  "version": "4.0.0",
+  "description": "Skill viết content bán hàng theo 14 công thức by Noti.vn",
+  "author": {
+    "name": "User"
+  },
+  "keywords": [
+    "content",
+    "writing",
+    "noti"
+  ]
+}

@@ -1,0 +1,313 @@
+# Kho Tri Thức & Các Mẫu Đúc Kết Tinh Gọn (Learned Patterns)
+
+Tài liệu này là nơi lưu trữ các tri thức kỹ thuật, mẫu sửa lỗi tối thiểu và bài học tiết kiệm quota được chắt lọc sau khi người dùng bấm xác nhận "OK".
+
+---
+
+## Mẫu 1: [Database] Gunbound Season 2 - ACID & Inventory Desync
+- **Nguyên nhân gốc**: Cơ chế cập nhật CSDL không gộp giao dịch (Transaction ACID), dẫn đến việc trừ tiền thành công nhưng chưa kịp commit bản ghi item vào `item.chest`.
+- **Giải pháp tối thiểu**: Sử dụng Transaction Scope bao bọc toàn bộ khối cập nhật số dư ví và chèn rương đồ, rollback ngay lập tức nếu bất kỳ câu lệnh nào thất bại. Lệnh test concurrency đạt Exit code 0.
+- **Tiết kiệm Quota**: Gatekeeper chạy `Model: "flash"` kiểm thử độc lập giúp giảm hơn 70% token so với việc spawn hội đồng audit nhiều người.
+
+## Mẫu 2: [Architecture] Custom Skill Độc Lập & Progressive Disclosure
+- **Nguyên nhân gốc**: Nhúng quy tắc subagent phức tạp vào global rule làm đè và xung đột với `/teamwork-preview` mặc định của hệ thống.
+- **Giải pháp tối thiểu**: Tách toàn bộ kiến trúc nâng cao ra thành Custom Skill độc lập (`lean-teamwork`), khôi phục GEMINI.md toàn cục về nguyên bản nhẹ nhàng. Áp dụng Progressive Disclosure: chỉ nạp chi tiết skill khi thực sự cần.
+- **Tiết kiệm Quota**: Giảm 80% overhead context nạp khởi đầu trên mọi phiên làm việc mới.
+
+## Mẫu 3: [UI/Workflow] Dual-Modal Interactive Paradigm & Two-Beat Acceptance Gate (v1.4.2)
+- **Nguyên nhân gốc**: Dùng GUI ngoài/HTML bị hệ thống chạy nền ẩn; dùng chung timeout làm trôi mất popup nghiệm thu; gọi modal che mất chữ báo cáo đối chứng thực tế.
+- **Giải pháp tối thiểu**: Chuẩn hóa 2 modal đối lập trực quan qua `ask_question`:
+  - 🧭 **Đề Xuất Kỹ Thuật**: Timeout 2.5 phút, tự động chọn `(Recommended)` nếu user vắng mặt để tránh đứt đoạn mạch làm việc.
+  - 💎 **Nghiệm Thu Hoàn Thiện (Tách Nhịp 2 Bước)**: Bước 1 in toàn văn báo cáo phân tích ra màn hình, cấm mở modal che chữ. Bước 2 mới mở modal `💎 [NGHIỆM THU HOÀN THIỆN]` treo cố định (NO TIMEOUT) để chờ user đối chứng thực tế.
+- **Lệnh test**: `py tests/test_skill_integrity.py` -> 10/10 PASS (Exit code 0).
+
+## Mẫu 4: [Debugging] Two-State Autonomous Popup & Superpowers Systematic Debugging
+- **Nguyên nhân gốc**: Menu popup phân mảnh nhiều options thừa thãi; sửa lỗi trực tiếp trên main agent làm phình context và hao phí quota nghiêm trọng.
+- **Giải pháp tối thiểu**: Thu gọn popup đúng 2 trạng thái (`ask_question`): `💎 [100% HOÀN TẤT] ✨` vs `⚡ [SUPERPOWERS DEBUG] 🛠️`. Khi debug, ủy quyền Subagent `flash` tự điều tra & sửa lỗi theo 4 pha Superpowers độc lập (Reproduce -> Root Cause -> Minimal Fix -> Verify).
+- **Tiết kiệm Quota**: Giữ sạch main agent context, tiết kiệm 60-80% token so với debug trực tiếp trên luồng chính.
+
+## Mẫu 5: [Sync/Automation] Zero-Touch Two-Way Lifecycle Sync Giữa PC & Laptop
+- **Nguyên nhân gốc**: Chuyển đổi qua lại giữa PC và Laptop dễ quên đồng bộ thủ công gây lệch phiên bản; quét toàn bộ repo làm phình context và lãng phí token.
+- **Giải pháp tối thiểu**: Zero-Touch PreInvocation Hook (`hooks.json`) tự động chạy ngầm kiểm tra; thuật toán Two-Way Adaptive Sync (`sync_skill.py`) so sánh SemVer để tự PULL/PUSH và cân bằng 2 chiều `learned_patterns.md`.
+- **Kiểm toán Quota & Barrier**: Zero-Scan Protocol tiết kiệm 100% token quét mã; Ratchet Barrier bảo đảm toàn vẹn 10/10 tests PASS (Exit code 0).
+
+## Mẫu 6: [Protocol] First-Time Right, Anti-Survivorship Bias & Trajectory Churn Audit
+- **Nguyên nhân gốc**: Nghịch lý "Blind Lean" (ngại đọc tài liệu Turn 1 dẫn đến đoán mò, gây lặp 5-10 lượt sửa sai tốn kém) và "Survivorship Bias" (chỉ nhìn diff thành công cuối cùng mà mù trước chuỗi thất bại trước đó).
+- **Giải pháp tối thiểu**:
+  - **Inspect First**: Bắt buộc đọc kỹ tài liệu/mã nguồn liên quan ngay Turn 1; cấm đoán mò.
+  - **Clarification Gate**: Dừng lại hỏi rõ khi gặp ngã rẽ kiến trúc (kèm timeout 2.5m Best-Path Fallback).
+  - **Trajectory Churn Audit**: Kiểm toán turn budget và tỷ lệ First-Time Right trong báo cáo phản tư chu kỳ.
+- **Lệnh test**: `py tests/test_skill_integrity.py` -> 10/10 PASS (Exit code 0).
+
+## Mẫu 7: [Meta-Learning] 6-Point Reflective Inquiry & Continuous Knowledge Pruning
+- **Nguyên nhân gốc**: Thói quen "gặp lỗi đâu đẻ luật đấy" làm tập quy tắc phình to vô hạn, gây mâu thuẫn chỉ dẫn và quá tải nhận thức cho AI.
+- **Giải pháp tối thiểu**: Áp dụng Bộ Khung Tự Vấn 6 Chiều sau mỗi phiên nghiệm thu:
+  1. *Root Cause & Churn*: Tìm căn nguyên và phân tích số turn lãng phí.
+  2. *First-Time Right*: Biện pháp đảm bảo thành công ngay Turn 1.
+  3. *Token Economy*: Cắt giảm triệt để các thao tác lãng phí context.
+  4. *Velocity & Automation*: Tự động hóa tối đa qua hook/scripts.
+  5. *Rule Pruning & Anti-Bloat*: Gộp (Merge) và Tỉa (Prune) các quy tắc trùng lặp, giữ kho tri thức tối đa 10 patterns tinh hoa.
+  6. *Meta-Questioning & Chronic Bottlenecks*: Tự vấn đệ quy về điểm nghẽn mãn tính và hành động xử lý dứt điểm.
+- **Nguyên tắc cốt lõi**: Tuyệt đối không sửa/ghi vào `SKILL.md`; mọi tri thức tích lũy đều cách ly tại `learned_patterns.md`.
+
+## Mẫu 8: [Client/Reverse] Gunbound Season 2 - Crash 0xc0000005 & Windowed Mode
+- **Nguyên nhân gốc**: `GunBound.gme` đọc ngược 96 ký tự hex từ cuối command line; thừa ký tự làm lệch nibble hỏng AES decrypt gây crash heap. DirectDraw gọi `DDSCL_EXCLUSIVE` ép fullscreen gây lỗi hiển thị.
+- **Giải pháp tối thiểu**: Chuẩn hóa chuỗi 96-hex AES (`encUser+encPass+encZero`); dùng wrapper proxy `ddraw.dll` (cnc-ddraw v7.1) ép `windowed=true` (800x600) giữ nguyên tỷ lệ, dọn sạch launcher rác.
+- **Lệnh test**: Khởi chạy `GunBound.exe` -> Exit code 0, cửa sổ 800x600 hiển thị mượt mà.
+
+## Mẫu 9: [Bot AI] Gunbound Season 2 - Virtual Player Presence & Lobby/Invite Simulation
+- **Nguyên nhân gốc**: GameServer chỉ hiển thị người chơi ở Sảnh và danh sách Mời khi có socket TCP client đang online trong Channel; nạp DB đơn thuần chỉ lưu hồ sơ offline.
+- **Giải pháp tối thiểu**: Nạp 12 hồ sơ Virtual Player phân cấp rõ rệt (Gà -> Rồng) vào bảng `user`/`game`/`buddylist`; chạy Virtual Client Worker kết nối TCP giữ hiện diện và tự động phản hồi Invite vào phòng thi đấu.
+- **Kiểm chứng**: Danh sách người chơi sảnh hiển thị đầy đủ, nhận lời mời vào phòng thi đấu tức thì.
+
+## Mẫu 10: [Inspection/Quota] Context-Aware Inspection vs Rigid Line-Count Anti-Pattern (Case Study Serene-Bose & Antigravity Widget)
+- **Nguyên nhân gốc**: Ép buộc các con số đếm dòng cứng nhắc ("cấm đọc dưới 50 dòng", "bắt đọc 100–400 dòng") làm AI bị rối loạn biên độ đọc trong các session dài, gây kẹt lặp vô tận (như kẹt đọc 1 đoạn 15 dòng ở Widget). Ngược lại, việc chỉ đọc vài dòng chắp vá không nắm ngữ cảnh cũng làm đứt gãy mạch logic.
+- **Giải pháp tối thiểu**: Loại bỏ hoàn toàn mọi ràng buộc đếm dòng cơ học. Áp dụng **Context-Aware Inspection**: Đọc linh hoạt theo trọn vẹn ngữ cảnh hàm/class/module cần thiết để hiểu rõ nguyên nhân gốc ngay từ lượt đầu (First-Time Right), tuyệt đối không đoán mò.
+- **Lệnh test**: `py tests/test_skill_integrity.py` -> 10/10 PASS (Exit code 0).
+
+## Mẫu 3: [UI/Workflow] Dual-Modal Interactive Paradigm & Persistent Side Panel
+- **Nguyên nhân gốc**: Dùng GUI ngoài/HTML bị hệ thống chạy nền ẩn; dùng chung timeout làm trôi mất popup nghiệm thu khi người dùng chưa kịp đối chứng thực tế.
+- **Giải pháp tối thiểu**: Chuẩn hóa 2 modal đối lập trực quan qua `ask_question`:
+  - 🧭 **Đề Xuất Kỹ Thuật**: Timeout 2.5 phút, tự động chọn `(Recommended)` nếu user vắng mặt để tránh đứt đoạn mạch làm việc.
+  - 💎 **Nghiệm Thu Hoàn Thiện**: Treo cố định vĩnh viễn (NO TIMEOUT) để bảo vệ quyền kiểm chứng tối thượng của người dùng.
+  - Hiển thị kết quả bằng Markdown native trực tiếp trên Side Panel Antigravity; cách ly tri thức ra ngoài `SKILL.md`.
+- **Lệnh test**: `py tests/test_skill_integrity.py` -> 10/10 PASS (Exit code 0).
+
+## Mẫu 7: [Meta-Learning] 5-Point Reflective Inquiry & Continuous Knowledge Pruning
+- **Nguyên nhân gốc**: Thói quen "gặp lỗi đâu đẻ luật đấy" làm tập quy tắc phình to vô hạn, gây mâu thuẫn chỉ dẫn và quá tải nhận thức cho AI.
+- **Giải pháp tối thiểu**: Áp dụng Bộ Khung Tự Vấn 5 Chiều sau mỗi phiên nghiệm thu:
+  1. *Root Cause & Churn*: Tìm căn nguyên và phân tích số turn lãng phí.
+  2. *First-Time Right*: Biện pháp đảm bảo thành công ngay Turn 1.
+  3. *Token Economy*: Cắt giảm triệt để các thao tác lãng phí context.
+  4. *Velocity & Automation*: Tự động hóa tối đa qua hook/scripts.
+  5. *Rule Pruning & Anti-Bloat*: Định kỳ Gộp (Merge & Generalize) và Tỉa (Prune) các quy tắc trùng lặp/vụn vặt, duy trì kho tri thức tối đa 10 patterns tinh hoa.
+- **Nguyên tắc cốt lõi**: Tuyệt đối không sửa/ghi vào `SKILL.md`; mọi tri thức tích lũy đều cách ly tại `learned_patterns.md`.
+
+## Mẫu 1: Case Study Gunbound Season 2 - ACID & Inventory Desync
+- **Nguyên nhân gốc**: Cơ chế cập nhật CSDL không gộp giao dịch (Transaction ACID), dẫn đến việc trừ tiền nhưng chưa kịp commit bản ghi item vào `item.chest`.
+- **Mẫu sửa tối ưu**: Sử dụng Transaction Scope bao bọc toàn bộ khối cập nhật số dư ví và chèn rương đồ, rollback ngay lập tức nếu bất kỳ câu lệnh nào thất bại.
+- **Bài học Token**: Sử dụng Gatekeeper chạy `Model: "flash"` kiểm thử độc lập giúp giảm hơn 70% token so với việc spawn hội đồng audit nhiều người.
+
+## Mẫu 2: [UI/Workflow] Persistent Side Panel Gate & Knowledge Segregation
+- **[UI/Workflow] [Persistent Side Panel & Knowledge Segregation]**:
+  - *Nguyên nhân*: Dùng GUI ngoài / file HTML bị hệ thống chạy nền ẩn không hiển thị; nhồi nhét tri thức vào `SKILL.md` làm phình context token mỗi khi nạp agent.
+  - *Giải pháp tối thiểu*: Dùng Artifact Markdown native hiển thị trực tiếp ở Side Panel Antigravity (khung chat bên trái tự do 100%); cách ly toàn bộ tri thức nghiệm thu ra file ngoài `learned_patterns.md` bằng Subagent `flash` sau khi người dùng xác nhận "OK".
+  - *Lệnh test*: `py tests/test_skill_integrity.py` -> 6/6 PASS (Exit code 0).
+
+## Mẫu 3: [Popup/Debugging] Two-State Autonomous Popup & Superpowers Systematic Debugging
+- **[Popup/Debugging] [Two-State Popup & Superpowers Systematic Debugging]**:
+  - *Nguyên nhân*: Menu popup phân mảnh options thừa thãi; sửa lỗi trực tiếp trên main agent làm phình context và hao phí quota token.
+  - *Giải pháp tối thiểu*: Thu gọn popup đúng 2 trạng thái (`ask_question`); ủy quyền Subagent `flash` tự điều tra & sửa lỗi theo 4 pha Superpowers độc lập; cách ly tri thức ra `learned_patterns.md`.
+  - *Lệnh test*: `py tests/test_skill_integrity.py` -> 6/6 PASS (Exit code 0).
+
+## Mẫu 4: [Sync/Automation] Zero-Touch Two-Way Lifecycle Sync Giữa PC & Laptop
+- **[Sync/Automation] [Zero-Touch Two-Way Lifecycle Sync Giữa PC & Laptop]**:
+  - *Nguyên nhân*: Chuyển đổi qua lại giữa PC và Laptop dễ quên đồng bộ thủ công gây lệch phiên bản; quét toàn bộ repo làm phình context và lãng phí token.
+  - *Giải pháp tối thiểu*: Zero-Touch PreInvocation Hook (`hooks.json`) tự động chạy ngầm; thuật toán Two-Way Adaptive Sync so sánh SemVer để tự PULL/PUSH và hợp nhất 2 chiều `learned_patterns.md`.
+  - *Kiểm toán Quota & Barrier*: Zero-Scan tiết kiệm 100% token quét mã; Ratchet Barrier bảo đảm toàn vẹn 8/8 tests PASS (Exit code 0).
+
+## Danh Mục Tri Thức Đã Đúc Kết
+
+- **[Database] [Gunbound Season 2 - ACID / Inventory]**:
+  - *Nguyên nhân*: Thiếu Transaction Scope khi vừa trừ tiền vừa ghi rương đồ.
+  - *Giải pháp tối thiểu*: Gói trong 1 transaction duy nhất, rollback ngay nếu có lỗi. Lệnh test concurrency exit 0.
+  - *Tiết kiệm Quota*: Gatekeeper `flash` độc lập giảm hơn 70% token so với hội đồng audit.
+
+- **[Architecture] [Antigravity Custom Skill & Clean Global Rules]**:
+  - *Nguyên nhân*: Nhúng quy tắc subagent phức tạp vào global rule làm đè và xung đột với `/teamwork-preview` gốc.
+  - *Giải pháp tối thiểu*: Tách kiến trúc nâng cao ra thành Custom Skill độc lập (`lean-teamwork`), khôi phục `/teamwork-preview` về nguyên bản. Ở cấp toàn cục chỉ giữ `Daily Lean Workflow` siêu nhẹ.
+  - *Tiết kiệm Quota*: Progressive disclosure — chỉ nạp chi tiết skill khi thực sự cần.
+
+- **[Workflow] [Self-Evolution & Pattern Retrieval Loop]**:
+  - *Nguyên nhân*: Kiến thức sau khi sửa lỗi không được tái sử dụng, dẫn đến điều tra lại từ đầu ở các phiên sau.
+  - *Giải pháp tối thiểu*: Khép kín vòng lặp: Inspect First liếc nhanh `learned_patterns.md` -> Sửa minimal diff -> Xin xác nhận OK -> Tự động append 2-3 dòng.
+  - *Tiết kiệm Quota*: Tiết kiệm 50-70% token cho các lỗi lặp lại.
+
+- **[Client/Reverse] [Gunbound Season 2 - Crash 0xc0000005 & Windowed Mode]**:
+  - *Nguyên nhân*: `GunBound.gme` đọc ngược 96 ký tự hex từ cuối command line; thừa ký tự làm lệch nibble hỏng AES decrypt gây crash heap. DirectDraw gọi `DDSCL_EXCLUSIVE` ép fullscreen.
+  - *Giải pháp tối thiểu*: Chuẩn hóa chuỗi 96-hex AES (`encUser+encPass+encZero`); dùng wrapper proxy `ddraw.dll` (cnc-ddraw v7.1) ép `windowed=true` (800x600) giữ nguyên tỷ lệ, dọn sạch launcher rác.
+  - *Lệnh test*: Khởi chạy `GunBound.exe` -> Exit code 0, cửa sổ 800x600 hiển thị mượt mà.
+
+- **[Bot AI] [Gunbound Season 2 - Virtual Player Presence & Lobby/Invite]**:
+  - *Nguyên nhân*: GameServer chỉ hiển thị người chơi ở Sảnh và danh sách Mời khi có socket TCP client đang online trong Channel; nạp DB đơn thuần chỉ lưu hồ sơ offline.
+  - *Giải pháp tối thiểu*: Nạp 12 hồ sơ Virtual Player phân cấp rõ rệt (Gà -> Rồng) vào bảng `user`/`game`/`buddylist`; chạy Virtual Client Worker kết nối TCP giữ hiện diện và tự động phản hồi Invite vào phòng thi đấu.
+
+- **[Teamwork/Workflow] [Ambiguity & Decision Checkpoints - Ask First, Suggest Options]**:
+  - *Nguyên nhân*: Khi gặp ngã rẽ kiến trúc (Server vs Client, cấu hình vs code mới) hoặc yêu cầu còn mơ hồ, agent tự phỏng đoán làm lan man gây sai lệch ý đồ người dùng và lãng phí token.
+  - *Giải pháp tối thiểu*: Bắt buộc dừng lại, dùng `ask_question` gợi ý các phương án cụ thể (ưu/nhược điểm, phương án đề xuất `Recommended`) để người dùng chọn trước khi bắt tay thực hiện.
+  - *Tiết kiệm Quota*: Tránh 100% việc viết code mò mẫm, sửa nhầm hướng và phải hoàn tác tốn kém.
+
+- **[UI/Workflow] [Persistent Side Panel & Knowledge Segregation]**:
+  - *Nguyên nhân*: Cố tạo GUI ngoài / file HTML bị hệ thống chạy nền ẩn không hiển thị; nhồi nhét tri thức vào `SKILL.md` làm phình context token mỗi phiên.
+  - *Giải pháp tối thiểu*: Dùng Artifact Markdown native hiển thị trực tiếp ở Side Panel Antigravity (khung chat tự do); cách ly toàn bộ tri thức nghiệm thu ra file ngoài `learned_patterns.md` qua Subagent `flash`.
+  - *Lệnh test*: `py tests/test_skill_integrity.py` -> 6/6 PASS (Exit code 0).
+
+- **[Popup/Debugging] [Two-State Popup & Superpowers Systematic Debugging]**:
+  - *Nguyên nhân*: Menu popup phân mảnh options thừa thãi; sửa lỗi trực tiếp trên main agent làm phình context và hao phí quota token.
+  - *Giải pháp tối thiểu*: Thu gọn popup đúng 2 trạng thái (`ask_question`); ủy quyền Subagent `flash` tự điều tra & sửa lỗi theo 4 pha Superpowers độc lập; cách ly tri thức ra `learned_patterns.md`.
+  - *Lệnh test*: `py tests/test_skill_integrity.py` -> 6/6 PASS (Exit code 0).
+
+- **[Anti-Pattern] [Blind Lean & Trajectory Churn]**: Ngại đọc tài liệu Turn 1 dẫn đến đoán mò, gây ra chuỗi 5-10 lượt chat sửa sai lặp lại -> Bắt buộc First-Time Right Protocol (Inspect First đọc sâu tài liệu/code ngay Turn 1) -> `py tests/test_skill_integrity.py` (Exit code 0)
+- **[Anti-Pattern] [Survivorship Bias in Evaluation]**: Đúc kết chỉ nhìn vào Git Diff thành công cuối cùng mà mù trước chuỗi thất bại -> Trajectory Churn Audit kiểm toán toàn bộ lịch sử turn và tỷ lệ First-Time Right -> `py tests/test_skill_integrity.py` (Exit code 0)
+- **[Protocol] [First-Time Right & Anti-Churn]**: Thiếu cơ chế kiểm soát chất lượng từ đầu gây lãng phí quota -> Phân tích nguyên nhân gốc + kiểm toán vết thực thi (trajectory audit) trước khi chốt nghiệm thu -> `py tests/test_skill_integrity.py` (Exit code 0)
+- **[Gate/Quota] [Global Clarification Gate & Zero-Guesswork]**: Không phỏng vấn làm rõ khi gặp ngã rẽ kỹ thuật dẫn đến phỏng đoán mò mẫm hao phí quota -> Kích hoạt Clarification Gate qua `ask_question` (kèm timeout 2.5m Best-Path Fallback) trong GEMINI.md toàn cục -> `py tests/test_skill_integrity.py` (Exit code 0)
+- **[UI/UX] [Premium 2-State Popup Identity]**: Menu nghiệm thu đơn điệu, thiếu phân định trực quan giữa chốt phiên và debug -> Chuẩn hóa bộ nhận diện icon cao cấp tương phản (`💎 ✨` Hoàn tất vs `⚡ 🛠️` Superpowers Debug) trên modal `ask_question` -> `py tests/test_skill_integrity.py` (Exit code 0)
+
+## Mẫu 10: [Inspection/Quota] Cohesive Block Inspection vs Micro-Peeking Anti-Pattern (Case Study Serene-Bose)
+- **Nguyên nhân gốc**: Hiểu sai tính "Lean" dẫn tới tật đọc vụn vặt 50 dòng (`Micro-Peeking`). Cắt đứt ngữ cảnh của hàm/class làm AI phải grep đi grep lại hơn 30 tool calls chắp vá, gây tốn token gấp 5 lần và người dùng rất ức chế.
+- **Giải pháp tối thiểu**: Thiết lập nguyên tắc **Cohesive Block Inspection** — Đọc trọn vẹn 100–400 dòng của hàm/class liên quan trong **1 lần gọi `view_file` duy nhất**. CẤM chuỗi thao tác lặp: grep -> đọc 50 dòng -> grep lại trong cùng file. Đọc trọn vẹn ngữ cảnh ngay Turn 1 giúp làm đúng ngay lần đầu (First-Time Right) trong 1 diff duy nhất.
+- **Lệnh test**: `py tests/test_skill_integrity.py` -> 10/10 PASS (Exit code 0).
+
+## Mẫu 11: [UI/UX & Architecture] Desktop Widget HUD Decoupled & Chat Freedom (Lean Teamwork v1.5.0)
+- **[UI/UX & Architecture] [Desktop Widget HUD Decoupled & Chat Freedom]**:
+  - *Nguyên nhân gốc*: Modal popup cũ (ask_question) là lệnh chặn cứng (hard-blocking) chiếm trọn khung chat, che mất nội dung phân tích/code và đóng băng tiến trình AI, làm người dùng rất vướng víu và ức chế.
+  - *Giải pháp tối thiểu*: Chuyển hướng 100% Đề xuất Kỹ thuật (🧭) và Bảng Nghiệm Thu (💎) ra ngoài Desktop Widget Popover HUD qua IPC Bridge (teamwork_bridge.py). Khung chat rảnh rang tuyệt đối, chỉ hiển thị báo cáo sạch sẽ. Tương tác 1 chạm trực tiếp từ Desktop Widget tự động focus và gửi lệnh phím xuống IDE.
+  - *Khắc phục hiển thị*: Popover tự động co giãn (compute_dynamic_layout), word-wrap toàn diện cho tiêu đề, tự thích ứng vùng làm việc SPI_GETWORKAREA (trừ taskbar) chống cắt cụt nút bấm và mất chữ.
+  - *Lệnh test*: py tests/test_skill_integrity.py -> 11/11 PASS (Exit code 0).
+
+## Mẫu 12: [Architecture & Onboarding] Dual Account Detection, Zero-Pip Portability & From-Last-Completion Retrospective Anchor (v1.5.1)
+- **[Architecture & Onboarding] [Dual Account Detection, Zero-Pip Portability & From-Last-Completion Retrospective Anchor]**:
+  - *Nguyên nhân gốc*:
+    1. Khi tải repo sang máy tính mới chưa cài Cockpit Tool, Widget bị lỗi hiển thị `Offline` / `No Acc` do thiếu cơ chế kết nối trực tiếp tài khoản Google trong Antigravity IDE.
+    2. Khi người dùng gặp lỗi tiếp tục chat mà chưa ấn Hoàn tất, nếu agent chỉ nhìn vào lượt cuối cùng sẽ mắc bẫy *Survivorship Bias*, bỏ sót toàn bộ chuỗi lỗi trung gian chưa được rút kinh nghiệm.
+    3. Việc chứa đường dẫn tuyệt đối cứng (`%USERPROFILE%...`) hoặc yêu cầu cài thêm thư viện qua pip khiến máy mới không thể chạy ngay lập tức.
+  - *Giải pháp tối thiểu*:
+    1. **Dual Account Detection**: Trích xuất trực tiếp tài khoản Google đang đăng nhập từ SQLite native của Antigravity IDE (`%APPDATA%\Antigravity IDE\User\globalStorage\state.vscdb`) làm fallback khi máy mới chưa có Cockpit Tool, hiển thị đầy đủ tên, email và trạng thái hoạt động 100%.
+    2. **From-Last-Completion Retrospective Anchor**: Lưu mốc thời gian `last_completed_at` trong `teamwork_bridge.py` và `teamwork_service.py`. Khi thực hiện đúc kết bài học (Self-Evolution), bắt buộc rà soát và tổng hợp toàn bộ các lỗi trung gian phát sinh từ lần bấm Hoàn tất gần nhất đến nay.
+    3. **Zero-Pip Portability & 1-Click Zero-Scan**: Toàn bộ hệ sinh thái chạy 100% trên Python Standard Library (`ctypes` GDI+, `sqlite3`, `json`), khử hoàn toàn đường dẫn cứng. Tích hợp chỉ dẫn `AGENTS.md` / `GEMINI.md` để AI trên máy mới chỉ cần chạy DUY NHẤT 1 lệnh `install.ps1` là đạt Full Parity ngay lập tức không tốn token quét mã.
+  - *Lệnh test*: `py -m unittest discover -s tests` -> 18/18 PASS (Exit code 0).
+
+## Mẫu 13: [Protocol & UI] Acceptance Passcode ("OK 💎") & Anti-False-Acceptance Guard (v1.5.2)
+- **[Protocol & UI] [Acceptance Passcode ("OK 💎") & Anti-False-Acceptance Guard]**:
+  - *Nguyên nhân gốc*: Sử dụng chuỗi nghiệm thu "OK" trơn quá đơn giản và thông dụng trong văn phong trò chuyện hàng ngày. Khi người dùng trao đổi ("ok bạn", "ok làm tiếp đi", "ok để mình xem"...), AI rất dễ phán đoán sai là người dùng đã nghiệm thu chấp thuận và vội vàng đóng phiên đúc kết tri thức.
+  - *Giải pháp tối thiểu*:
+    1. **Chuẩn Hóa Mật Mã Nghiệm Thu (`OK 💎`)**: Desktop Widget HUD Popover khi người dùng bấm `[💎 100% HOÀN TẤT]` tự động gõ gửi chuỗi mật mã `OK 💎` xuống Antigravity IDE thông qua Win32 `KEYEVENTF_UNICODE` (hỗ trợ đầy đủ UTF-16 surrogate pairs cho emoji).
+    2. **Anti-False-Acceptance Guard (`is_acceptance_signal`)**: Main Agent loại trừ 100% các từ "ok" giao tiếp tự nhiên nếu không đi kèm emoji kim cương 💎 hoặc không khớp đúng mật mã `OK 💎`. Chỉ khi nhận diện đúng mật mã `OK 💎` (hoặc `💎 OK`, `[ACCEPT] 💎`), AI mới kích hoạt chu trình Self-Evolution và hoàn tất task.
+  - *Lệnh test*: `py -m unittest discover -s tests` -> 19/19 PASS (Exit code 0).
+
+## Mẫu 14: [Architecture & Workflow] Dual-Track Proposals (Chat Stream + Widget HUD) & Auto-Return-1 on Timeout (v1.5.3)
+- **[Architecture & Workflow] [Dual-Track Proposals & Auto-Return-1 on Timeout]**:
+  - *Nguyên nhân gốc*:
+    1. Modal `ask_question` là hard-blocking khiến IDE đóng băng tiến trình AI, hoàn toàn không thể tự chạy khi hết giờ.
+    2. Khi chuyển sang in text, AI quên gọi công cụ `schedule` khiến phiên rơi vào trạng thái Idle vô tận.
+    3. Trong Widget HUD: Việc chỉ so sánh `current_tw_st != last_tw_st` khiến các turn đề xuất liên tiếp bị bỏ qua không bung Popover, và `popover_until = +25.0s` tự đóng sớm; đồng thời Widget thiếu cơ chế tự động gửi phím `1` về IDE khi đếm hết 150s.
+  - *Giải pháp tối thiểu*:
+    1. **Lối 1 (Khung Chat Antigravity)**: In trực tiếp các phương án ra chat kèm `[1] (Recommended) ⭐` và BẮT BUỘC gọi công cụ `schedule(DurationSeconds=150, TimerCondition="any")` để tự động đánh thức AI nếu vắng mặt.
+    2. **Lối 2 (Desktop Widget HUD Popover)**: Nhận diện Proposal mới qua timestamp `updated_at > last_tw_updated_at`, giữ Popover mở suốt thời gian đếm ngược, hiển thị đồng hồ đếm ngược từng giây. Khi đếm hết 150s mà chưa chọn, Widget tự động gửi phím '1' về IDE cho gọn và tự đóng.
+  - *Lệnh test*: `py -m unittest discover -s tests` -> PASS 100% (Exit code 0).
+
+## Mẫu 15: [UX & Window Management] Auto-Collapse on IDE Minimize & Autonomous Popover Alert (v1.5.4)
+- **[UX & Window Management] [Auto-Collapse on IDE Minimize & Autonomous Popover Alert]**:
+  - *Nguyên nhân gốc*: Khi người dùng thu nhỏ (minimize) Antigravity IDE xuống taskbar để chuyển sang cửa sổ khác làm việc, thanh Widget HUD dài vẫn nổi lơ lửng trên desktop gây vướng tầm nhìn, chiếm diện tích màn hình và dễ bị click nhầm gây lỗi.
+  - *Giải pháp tối thiểu*:
+    1. **Auto-Collapse (Thu gọn khi Minimize)**: Khi phát hiện cửa sổ Antigravity IDE ở trạng thái Iconic (minimized), thanh Widget chính tự động ẩn đi (`SW_HIDE`), giải phóng hoàn toàn màn hình Desktop. Khi người dùng click mở lại IDE, Widget tự động hiện lại (`SW_SHOWNA`) và gắn vào cửa sổ IDE.
+    2. **Autonomous Popover Alert (Chỉ mở cửa sổ nghiệm thu / đề xuất khi có thông báo)**: Nếu trong lúc IDE đang minimize mà có sự kiện Đề xuất (`PROPOSAL`) hoặc Nghiệm thu (`ACCEPTANCE`) mới tới, Popover vẫn tự động bung lên ở góc trên bên phải màn hình desktop (vùng làm việc an toàn trừ Taskbar) để người dùng kịp thời nhận biết và duyệt. Sau khi tương tác hoặc hết giờ, Popover tự ẩn, màn hình desktop lại sạch sẽ hoàn toàn.
+  - *Lệnh test*: `py -m unittest discover -s tests` -> 10/10 PASS (Exit code 0).
+
+## Mẫu 16: [UI/UX & Dynamic Layout] Auto-Collapse to Standalone Teamwork Chip on Desktop (v1.5.5)
+- **[UI/UX & Dynamic Layout] [Auto-Collapse to Standalone Teamwork Chip on Desktop]**:
+  - *Nguyên nhân gốc*: Khi không có Antigravity IDE (hoặc khi IDE bị thu nhỏ xuống taskbar), thanh Widget HUD vẫn vẽ đầy đủ toàn bộ chip (Account, 5H, Weekly, Switch, Refresh, Lock), tạo thành một thanh dài chiếm ngang màn hình Desktop và dễ gây vướng víu/lỗi cho người dùng.
+  - *Giải pháp tối thiểu*:
+    1. **Compact Teamwork Only Layout**: Tích hợp cờ `compact_teamwork_only` trong `horizontal_layout` và `sync_dimensions`. Khi phát hiện không có Antigravity IDE đang active trên màn hình, thanh Widget tự động thu gọn toàn bộ, **CHỈ HIỆN DUY NHẤT CHIP TEAMWORK (Nghiệm thu / Đề xuất)** với kích thước siêu nhỏ gọn (vừa khít 1 viên pill ~160px). Toàn bộ các chip Account, 5H, Week, Switch, Refresh, Lock được ẩn sạch sẽ.
+    2. **Seamless State Expansion**: Khi người dùng mở lại Antigravity IDE, Widget tự động bung to trở lại đầy đủ tất cả các chip và dock vào cửa sổ IDE như bình thường.
+  - *Lệnh test*: `py -m unittest discover -s tests` -> 10/10 PASS (Exit code 0).
+
+## Mẫu 17: [Active Window Awareness & Multi-Location Parity] Foreground Detection & Dual-Folder Widget Sync (v1.5.6)
+- **[Active Window Awareness & Multi-Location Parity] [Foreground Detection & Dual-Folder Widget Sync]**:
+  - *Nguyên nhân gốc*: Trong thực tế người dùng, "không có Antigravity" không chỉ là bấm Minimize `-`, mà phổ biến nhất là người dùng click chuyển sang ứng dụng khác (Telegram, Browser, Notepad...). Nếu chỉ kiểm tra `IsIconic()`, khi người dùng đang ở Telegram/Browser, thanh Widget vẫn lầm tưởng IDE đang dùng nên hiển thị dải dài 636px che khuất màn hình. Thêm vào đó, người dùng thường chạy Widget từ thư mục Desktop riêng (`Desktop\Du An\CockpitQuotaWidget`), dẫn đến nếu không đồng bộ sang thư mục đó thì Widget đang chạy thực tế vẫn giữ mã nguồn cũ.
+  - *Giải pháp tối thiểu*:
+    1. **Foreground & Hover Context Awareness**: Kiểm tra `GetForegroundWindow()` đối chiếu với PID của Antigravity IDE, đồng thời lắng nghe `mouse_over` trên Widget. Khi người dùng click sang app khác (Telegram, Chrome...), Widget nhận biết ngay Antigravity không còn là foreground window và tự động thu gọn về duy nhất viên pill Nghiệm thu siêu nhỏ (115px). Khi click lại vào Antigravity IDE hoặc hover chuột vào viên pill, Widget lập tức bung đầy đủ các chip.
+    2. **Dual-Folder Auto-Sync**: Nâng cấp `sync_skill.py` tự động phát hiện và đồng bộ song song mã nguồn Widget từ repo vào thư mục `Desktop\Du An\CockpitQuotaWidget`, đảm bảo khởi chạy từ bất kỳ shortcut nào cũng luôn đạt 100% bản mới nhất.
+  - *Lệnh test*: `py tests/test_teamwork_bridge.py` & Win32 API rect inspection -> 115x34px compact verified (Exit code 0).
+
+## Mẫu 18: [Quota Discipline & Video Asset Optimization] Zero-Token IDE Proposals & 97% Compression (v1.5.7)
+- **[Quota Discipline & Video Asset Optimization] [Zero-Token IDE Proposals & 97% Compression]**:
+  - *Nguyên nhân gốc*: Việc chèn ảnh SVG đồng hồ đếm ngược (`technical_proposal_timer.svg`) vào khung chat IDE làm tốn token/quota không cần thiết trong khi người dùng hoàn toàn có thể theo dõi thời gian thực trực quan trên Popover của Desktop Widget HUD. Đồng thời, việc dùng `GetForegroundWindow()` quá khắt khe khiến Widget bị co lại bất thường khi nhận đề xuất ngay trong IDE. Bên cạnh đó, video quay màn hình 2.5K dung lượng 131.7 MB sẽ bị GitHub từ chối khi push (giới hạn 100 MB).
+  - *Giải pháp tối thiểu*:
+    1. **Zero-Token Proposal Stream**: Loại bỏ hoàn toàn ảnh SVG đồng hồ khỏi khung chat IDE. Chỉ in danh sách lựa chọn trực tiếp kèm `[1] (Recommended) ⭐`. Toàn bộ giao diện đếm ngược 150s thời gian thực được chuyển giao độc quyền cho Desktop Widget HUD Popover.
+    2. **Definitive Full vs Compact Boundary**: Khi Antigravity IDE đang mở trên màn hình (`left > -10000` và `not IsIconic`), Widget LUÔN HIỂN THỊ FULL 100% (587px - 636px) và không bao giờ co lại. Chế độ thu nhỏ về viên pill compact (~67px) CHỈ kích hoạt khi Antigravity IDE bị Minimize xuống taskbar hoặc hoàn toàn không chạy để giải phóng màn hình Desktop.
+    3. **Asset Size Compression Protocol**: Dùng FFmpeg chuyển đổi video Retina 2.5K sang H.264 1080p (`scale=1920:-2`, `-crf 23`, `+faststart`), giảm dung lượng từ 131.7 MB xuống còn 3.65 MB (giảm 97.2%) giúp push GitHub thành công 100% và xem mượt mà trên web.
+  - *Lệnh test*: `py tests/test_teamwork_bridge.py` & `py sync_skill.py` -> 100% PASS (Exit code 0).
+
+## Mẫu 19: [CI/CD Parity & Portability] Triệt Tiêu Tuyệt Đối Đường Dẫn Cứng Cục Bộ Cho GitHub Actions Runners (v1.5.8)
+- **[CI/CD Parity & Portability] [Triệt Tiêu Tuyệt Đối Đường Dẫn Cứng Cục Bộ Cho GitHub Actions Runners]**:
+  - *Nguyên nhân gốc*: Trong mã nguồn kiểm thử hoặc dịch vụ nền, việc vô tình để sót đường dẫn tuyệt đối cục bộ của máy phát triển cá nhân (ví dụ: `%USERPROFILE%\...`) khiến toàn bộ các bộ chạy tự động trên môi trường CI/CD (như GitHub Actions `ubuntu-latest` chạy tại `/home/runner` hoặc `windows-latest` tại `C:\Users\runneradmin`) lập tức bị ném ngoại lệ `AssertionError` hoặc `FileNotFoundError` và làm sập 100% các jobs kiểm thử tự động.
+  - *Giải pháp tối thiểu*:
+    1. **Repo-Relative Test Target**: Trong tất cả các file kiểm thử (`tests/`), các tài nguyên mã nguồn và dịch vụ widget phải luôn được định vị tương đối thông qua gốc dự án: `REPO_ROOT / "widget" / "core"`, tuyệt đối không dùng đường dẫn tuyệt đối của máy dev.
+    2. **Universal User Home Resolution**: Thay thế toàn bộ các khai báo dự phòng `os.environ.get('USERPROFILE', r'%USERPROFILE%')` bằng `Path.home()` tiêu chuẩn (hoặc `Path(os.environ.get('USERPROFILE') or os.path.expanduser('~'))`). Điều này đảm bảo hoạt động chuẩn xác trên cả Windows, Linux và macOS runners mà không bị phụ thuộc vào biến môi trường cục bộ hay tên tài khoản cụ thể.
+  - *Lệnh test*: `gh run view 34771122612` -> 6/6 jobs PASS 100% trên cả Ubuntu & Windows runners với Python 3.10, 3.11, 3.12 (Exit code 0).
+
+## Mẫu 20: [Context Quota Optimization] Kiểm Toán Kỹ Năng Đa Chu Kỳ & Cất Gọn Theo Nhu Cầu (Multi-Cycle Skill Usage Audit & On-Demand Context Pruning) (v1.5.9)
+- **[Context Quota Optimization] [Kiểm Toán Kỹ Năng Đa Chu Kỳ & Cất Gọn Theo Nhu Cầu]**:
+  - *Nguyên nhân gốc*: Môi trường Antigravity IDE cài đặt hơn 300 skills khiến thẻ `<skills>` trong system prompt bị quá tải ngân sách context (`context budget limits`), làm tràn hàng nghìn tokens vô ích ở mọi lượt gọi model cho các công nghệ không liên quan (như Laravel, Django, Quarkus, Blender, F#, Homelab...).
+  - *Giải pháp tối thiểu*:
+    1. **Multi-Cycle Skill Usage Audit**: Khi nghiệm thu, Agent nhìn lại toàn bộ hành trình qua 3–4 chu kỳ nghiệm thu gần nhất (dựa trên `completion_history`). Rà soát và phân loại các kỹ năng sẵn có trong `~/.gemini/config/skills/`: giữ nguyên các kỹ năng nòng cốt (`lean-teamwork`, `git-workflow`...) và các kỹ năng thuộc tech-stack của dự án hiện tại.
+    2. **On-Demand Context Pruning (`skills_archive`)**: Sử dụng công cụ `py scripts/manage_skills.py --prune` để tạm cất gọn các skills không dùng tới vào thư mục lưu trữ `~/.gemini/config/skills_archive/`, giải phóng ngay lập tức context window cho Antigravity IDE.
+    3. **Transparent Reporting & Instant Recall**: Báo cáo minh bạch danh sách các skill đã cất và lý do. Bất cứ khi nào cần lại skill nào trong tương lai, người dùng hoặc AI chỉ cần nói: *"Bật lại skill [tên skill]"* (hoặc chạy `py scripts/manage_skills.py --restore <tên_skill>`), kỹ năng sẽ lập tức quay trở lại thư mục active 100%.
+  - *Lệnh test*: `py scripts/manage_skills.py --audit` & `py tests/test_skill_integrity.py` -> 100% PASS (Exit code 0).
+
+## Mẫu 21: [Window Lifecycle & Realtime Account Sync] MinTrackSize Constraints & Timestamp-Based Multi-Source Account Resolution (v1.5.10)
+- **[Window Lifecycle & Realtime Account Sync] [MinTrackSize Constraints & Timestamp-Based Account Resolution]**:
+  - *Nguyên nhân gốc*:
+    1. Khi người dùng thu nhỏ Antigravity IDE, Widget không thu gọn về chip nghiệm thu được do `WM_GETMINMAXINFO` bị chặn cứng ở `limits.ptMinTrackSize.x = 350px`, đồng thời lỗi `NameError: tw_service` làm văng vòng lặp timer 250ms khiến Widget bị đơ không cập nhật trạng thái hiển thị.
+    2. Hàm `_current_account_id()` và `_current_email()` trong `antigravity_service.py` ưu tiên đọc `instances.json` cũ (chứa `bindAccountId` từ 2 ngày trước) thay vì đọc `current_account.json` và `accounts.json` (mới nhất vừa cập nhật khi đổi tài khoản), khiến Widget liên tục hiển thị tài khoản cũ và cache hạn mức không khớp.
+  - *Giải pháp tối thiểu*:
+    1. **Hạ MinTrackSize & Xóa lỗi Timer**: Đặt `limits.ptMinTrackSize.x = 40px` cho phép cửa sổ co giãn mượt mà xuống kích thước chip nghiệm thu (~84-152px), sửa `tw_service` thành `self.teamwork_service`, bổ sung kiểm tra `DwmGetWindowAttribute(DWMWA_CLOAKED)` và `not IsWindowVisible` trong `window_tracker.py` để nhận biết ngay lập tức khi IDE bị minimize/cloaked.
+    2. **Đồng Bộ Tài Khoản Mới Nhất**: Tái cấu trúc `_current_email()` và `_current_account_id()` ưu tiên `current_account.json` và `accounts.json['current_account_id']`, khớp chính xác với tập tin cache quota mới nhất của tài khoản đang chọn (tài khoản người dùng đang đăng nhập).
+  - *Lệnh test*: `py -m unittest discover -s tests` -> 12/12 PASS 100% (Exit code 0).
+
+## Mẫu 22: [Safe IPC & Window Integrity] Triệt Tiêu Giả Lập Bàn Phím (Eliminate Blind keybd_event) & Chống Đột Tử Antigravity IDE (v1.5.11)
+- **[Safe IPC & Window Integrity] [Eliminate Blind keybd_event & Anti-Crash Window Guard]**:
+  - *Nguyên nhân gốc*: Khi người dùng bấm nút nghiệm thu `[💎 100% HOÀN TẤT]` hoặc chọn phương án trên Desktop Widget Popover, hàm `send_to_antigravity()` sử dụng Win32 `keybd_event` để gõ ký tự và bấm phím `Enter` (`0x0D`) mù quáng xuống cửa sổ Antigravity IDE. Trong kiến trúc Electron/VS Code, nếu tiêu điểm (keyboard focus) không nằm trong ô nhập chat mà đang rơi vào hộp thoại đóng tab/close window/menu/close dialog, việc gửi phím `Enter` lập tức kích hoạt lệnh đóng/thoát cửa sổ Antigravity IDE.
+  - *Giải pháp tối thiểu*:
+    1. **Triệt Tiêu Hoàn Toàn Giả Lập Bàn Phím**: Khử bỏ toàn bộ `keybd_event` trong `send_to_antigravity` và `overlay_window.py`. Thay thế bằng phương thức `focus_antigravity()` thuần túy — chỉ kích hoạt đưa cửa sổ IDE lên foreground an toàn mà tuyệt đối không tiêm bất kỳ phím giả lập nào.
+    2. **Điều Phối IPC Thuần Khiết Qua Bridge File**: Tất cả hành động nghiệm thu (`ACCEPT`), gỡ lỗi (`DEBUG`), và chọn phương án (`SELECT_OPTION`) được lưu giữ qua `teamwork_service.submit_response()` ghi vào `~/.antigravity_cockpit/teamwork_bridge.json`. Vòng đời hook tự động bắt sự kiện và thông báo xuống Agent mà không cần can thiệp bàn phím, đồng thời người dùng hoàn toàn có thể xác nhận trực tiếp bằng chat ('ok' / 'OK 💎') mà không bị lệ thuộc vào click ngoài desktop.
+  - *Lệnh test*: `py -m unittest discover -s tests` -> 13/13 PASS (Exit code 0).
+
+## Mẫu 23: [Window Tracking & Focus Isolation] Lọc Sạch Cửa Sổ Phantom & Cô Lập Tiêu Điểm Không Can Thiệp Trạng Thái Cửa Sổ IDE (v1.5.12)
+- **[Window Tracking & Focus Isolation] [Phantom Window Filtering & Focus Isolation Guard]**:
+  - *Nguyên nhân gốc*:
+    1. `window_tracker.py` dùng điều kiện `not vis` để phán đoán minimized window, khiến các cửa sổ ngầm vô hình (kích thước 0x0, không tiêu đề) của Chromium bị nhận nhầm thành cửa sổ Antigravity. Khi tiến trình gọi `focus_antigravity()`, Windows 11 kích hoạt nhầm cửa sổ phụ và đẩy cửa sổ Antigravity chính xuống trạng thái minimize.
+    2. Popover tự ý gọi `focus_antigravity()` mỗi khi người dùng bấm nút (`ACCEPT`, `DEBUG`, `SELECT_OPTION`), gây tranh chấp tiêu điểm (focus competition) và làm phiền trải nghiệm người dùng.
+    3. Việc vô tình ghi địa chỉ email cá nhân vào văn bản ghi chép tạo nguy cơ rò rỉ khi push mã nguồn lên repository công khai.
+  - *Giải pháp tối thiểu*:
+    1. **Lọc Sạch Cửa Sổ Phantom**: Bỏ điều kiện `not vis` khỏi phán đoán minimized trong `window_tracker.py`. Bắt buộc kiểm tra tiêu đề hợp lệ (`title_str and title_str not in ('Default IME', 'MSCTFIME UI', 'DDE Server Window')`), triệt tiêu 100% việc nhận diện nhầm cửa sổ rác.
+    2. **Cô Lập Tiêu Điểm Popover**: Xóa bỏ các lệnh gọi `focus_antigravity()` tự ý khi click các nút hành động trên Popover. Chỉ kích hoạt đưa cửa sổ lên khi người dùng chủ động bấm nút *"🚀 Mở Cửa Sổ Antigravity IDE Đang Làm Việc"*.
+    3. **Kiểm Toán Bảo Mật & Lọc Dữ Liệu Cá Nhân**: Khử sạch toàn bộ email, tài khoản thực và thông tin nhạy cảm khỏi `learned_patterns.md` và mã nguồn kiểm thử. Kiểm toán tự động bằng regex đảm bảo `0` email, `0` token, `0` credential trong toàn bộ Git Diff trước khi commit/push.
+  - *Lệnh test*: `py -m unittest discover -s tests` -> 13/13 PASS (Exit code 0).
+
+## Mẫu 24: [Skill Lifecycle & Context Hygiene] Chuyển Giao Kỹ Năng Động & Dự Phóng Nhu Cầu Đón Đầu (Predictive Skill Switcher & Sandboxing) (v1.5.13)
+- **[Skill Lifecycle & Context Hygiene] [Predictive Skill Switcher & Sandboxing]**:
+  - *Nguyên nhân gốc*:
+    1. **Bơm Skill Tràn Lan Vào Main Context**: Khi chuẩn bị nghiệm thu, việc nạp các kỹ năng kiểm thử và QA nặng (`browser-qa`, `playwright-testing`, `e2e-testing`, `a11y-debugging`...) trực tiếp vào Main Context làm phình to context window từ vài nghìn đến hàng chục nghìn tokens.
+    2. **Xung Đột Quy Tắc (Instruction Drift)**: Các ràng buộc cứng của kỹ năng cũ (ví dụ: yêu cầu mọi thay đổi phải viết Playwright test và chụp ảnh màn hình) lưu cữu trong bộ nhớ ngắn hạn, gây xung đột trực tiếp với các tác vụ nhẹ ở lượt kế tiếp (như sửa hàm tiện ích, cấu hình hoặc tài liệu).
+    3. **Suy Giảm Chú Ý (Attention Degradation) & Đốt Quota**: Sự chú ý của mô hình đối với câu lệnh thực tế của người dùng bị suy yếu, dẫn đến sinh code ẩu, quên quy ước và đốt token vô nghĩa qua nhiều lượt hội thoại.
+  - *Giải pháp tối thiểu*:
+    1. **Skill Sandboxing (Cô lập skill kiểm thử qua Subagent)**: Cấm tuyệt đối việc nạp skill kiểm thử nặng vào Main Context. Mọi hoạt động kiểm thử E2E/QA được ủy quyền cho Subagent độc lập (`Model: "flash"`, `Role: "test-engineer"`). Khi Subagent hoàn tất, context skill tự động giải phóng hoàn toàn cùng phiên subagent, giữ Main Context sạch 100%.
+    2. **Dự Phóng Bước Kế Tiếp & Gợi Ý Skill Tại Bước 1 Nghiệm Thu (Speculative Next-Step Proposal)**: Tại Bước 1 của Nghiệm Thu Hoàn Thiện, Agent phân tích thành quả vừa hoàn thành và chủ động dự phóng 2-3 kịch bản logic tự nhiên tiếp theo cùng bộ kỹ năng tương ứng (`py scripts/manage_skills.py --predict <domain>`), chỉ rõ kỹ năng đề xuất cất gọn (`unload`) và kỹ năng đón đầu (`preload`).
+    3. **Chuyển Giao Kỹ Năng Động (Dynamic Skill Switch)**: Tự động hóa qua `py scripts/manage_skills.py --switch --unload <a,b> --load <c,d>` giúp cất gọn kỹ năng thừa vào `skills_archive` và kích hoạt đúng kỹ năng cần thiết cho pha mới mà không gây ô nhiễm ngữ cảnh.
+  - *Lệnh test*: `py scripts/manage_skills.py --predict ui_core` & `py tests/test_skill_integrity.py` -> 100% PASS (Exit code 0).
+
+## Mẫu 25: [UI/UX Governance & Aesthetic Memory] Kho Thẩm Mỹ UI/UX Riêng & Tự Động Nạp Gu Thiết Kế (Dedicated UI/UX Design DNA & Auto-Taste Injection) (v1.5.14)
+- **[UI/UX Governance & Aesthetic Memory] [Dedicated UI/UX Design DNA & Auto-Taste Injection]**:
+  - *Nguyên nhân gốc*:
+    1. **Thuế Gõ Lại Mô Tả Giao Diện (UI Prompting Tax)**: Mỗi lần yêu cầu AI làm giao diện mới (Web, Widget, Dashboard, Mobile UI), người dùng phải mất công gõ lại một đoạn prompt dài ngoằng mô tả gu thẩm mỹ (dark mode, bo góc 12-16px squircle, kính mờ acrylic-blur, thanh tiến trình macOS spectrum 7 màu, không viền đen thô...). Nếu quên không dặn, AI mặc định vẽ giao diện generic thô cứng, tốn thêm 2–3 lượt chat chỉ để sửa CSS/styling.
+    2. **Xung Đột Kho Tri Thức Khi Trộn Lẫn**: Nếu nhồi nhét quy chuẩn CSS/thẩm mỹ vào `learned_patterns.md` (vốn chuyên ghi nhận lỗi logic, ACID, deadlock, crash, IPC), kho tri thức bị phân mảnh và làm vấy bẩn ngữ cảnh khi AI chỉ đang thực hiện các tác vụ Backend/Script thuần túy.
+  - *Giải pháp tối thiểu*:
+    1. **Kho Thẩm Mỹ Độc Lập (`docs/ui_ux_taste_profile.md`)**: Cách ly toàn bộ quy chuẩn thiết kế, token màu sắc, vật liệu kính mờ, bo góc squircle, phông chữ và anti-patterns vào kho riêng biệt `docs/ui_ux_taste_profile.md` (và đồng bộ toàn cục tại `~/.gemini/config/ui_ux_taste_profile.md`).
+    2. **Khối Design DNA Siêu Tinh Gọn (~150 Tokens)**: Chuẩn hóa khối thẻ `<UI_UX_DESIGN_DNA>` chứa đầy đủ các thông số thẩm mỹ đã được người dùng gật đầu chấp thuận. Khi bước vào tác vụ UI/UX, chỉ nạp đúng khối này (hoặc chạy `py scripts/manage_skills.py --dna`) giúp AI thiết kế chuẩn gu 100% ngay từ Turn 1 (First-Time Right UI).
+    3. **Tự Động Trích Xuất & Tiến Hóa Khi Nghiệm Thu**: Khi hoàn tất giao diện và người dùng bấm nghiệm thu `💎 [100% HOÀN TẤT] ✨`, Agent tự động trích xuất các điều chỉnh thẩm mỹ mới nhất để cập nhật vào Taste Profile, đảm bảo hệ thống tự hoàn thiện và đồng điệu tuyệt đối với người dùng qua thời gian.
+  - *Lệnh test*: `py scripts/manage_skills.py --dna` & `py tests/test_skill_integrity.py` -> 100% PASS (Exit code 0).
+
+
+## Mẫu 26: [Anti-Hallucination & Lean-Teamwork Synergy] Hợp Nhất Quy Trình 5 Chốt Chặn (18 Ngành), Silent Pass & Tách Bạch Sản Phẩm Sạch (v1.6.1)
+- **[Anti-Hallucination & Lean-Teamwork Synergy] [Tiered 5-Gate, Silent Pass & Clean Deliverable Separation]**:
+  - *Nguyên nhân gốc*:
+    1. **Xung đột Chốt 1 vs Timeout 150s & Vâng lời mù quáng**: Thiếu cơ chế thẩm định ngược lệnh sai logic/rủi ro hệ thống của người dùng; hoặc nếu thiếu dữ kiện sự thật đầu vào mà áp dụng Timeout 150s sẽ khiến AI tự đoán mò dữ kiện gốc.
+    2. **Lỗi logic AND vs OR & Lỗi chèn Bảng Kiểm Chứng vào bài viết công khai ở Chốt 2**: Bắt buộc ghi Bảng Ánh Xạ Nguồn "ở cuối bài viết" khiến AI chèn nguyên mục `Bảng Ánh Xạ Nguồn Cấp 1`, `RULE[user_global]` và tên DB nội bộ (`SBO_MAIN_PROD`) vào thẳng bài viết web/báo giá/video thành phẩm.
+    3. **Audit Theater & HEAD 404**: `support.google.com` trả về 404 với `HEAD` request (nhưng 200 với `GET`); `ifixai-agent-auditor/cli.py` chưa kiểm tra link chết trong `P1 Fabrication` và chưa chặn rò rỉ metadata kiểm chứng trong `P5 Opacity`.
+  - *Giải pháp tối thiểu*:
+    1. **Phân 2 Luồng & Tách Chốt 1A/1B/1C**: Luồng 1 (Hỏi nhanh) trả lời trực tiếp kèm nguồn; Luồng 2 (Dự án lớn) bật đủ 5 Chốt Chặn + `lean-teamwork`. Tại Chốt 1: `(1A)` Thẩm định ngược rủi ro hệ thống + `Silent Pass` (chống bắt bẻ vặt khi lệnh hợp lệ); `(1B)` Thiếu dữ kiện gốc -> `Hard Stop 100%`; `(1C)` Chọn phương án kỹ thuật -> `Timeout 150s Recommended`.
+    2. **Quy tắc Làm Sạch Sản Phẩm & Tách 2 File (`Clean Deliverable & Dual-File Separation`)**: Nội dung sản phẩm (bài viết web, báo giá, video, HTML) phải sạch 100%; phần kiểm chứng nguồn & `Bảng Ánh Xạ 6 Cột` chỉ trả lời riêng cho người dùng trên khung Chat hoặc tách thành file thứ 2 (`<Ten_San_Pham>_THAM_CHIEU_NGUON.md`).
+    3. **Nâng cấp CLI Kiểm toán**: `link_validator.py` tự động fallback `HEAD -> GET` và kiểm tra ISBN chuẩn ISO 2108; `ifixai-agent-auditor/cli.py` quét link chết ở `P1` và chặn rò rỉ `RULE[user_global]` / `Bảng Ánh Xạ Nguồn` trong file sản phẩm `.html`/`voiceover.txt` ở `P5`.
+  - *Lệnh test*: `python skills/verified-source-researcher/cli.py audit-file "QUY_TRINH_CHUNG_5_CHOT_CHAN_CHONG_AO_GIAC_AI.md"` & `python skills/ifixai-agent-auditor/cli.py "GEMINI.md"` -> 100% HTTP 200 & GRADE A (100/100) (Exit code 0).

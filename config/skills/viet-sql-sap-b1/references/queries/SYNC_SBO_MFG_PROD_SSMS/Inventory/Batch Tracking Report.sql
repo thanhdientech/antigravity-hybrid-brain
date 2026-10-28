@@ -1,0 +1,142 @@
+/* ================== PARAMETERS (SSMS) ================== */
+DECLARE @ToDate   NVARCHAR(20) = '2026-12-31'; -- Ngày chốt báo cáo (VD: '2026-12-31'), để NULL để lấy tất cả
+DECLARE @ItemCode NVARCHAR(50) = NULL;         -- Mã vật tư (VD: 'RM001'), NULL: tất cả
+DECLARE @BatchNum NVARCHAR(50) = NULL;         -- Số lô Batch (VD: 'BATCH001'), NULL: tất cả
+DECLARE @WhsCode  NVARCHAR(50) = NULL;         -- Mã kho (VD: 'W01'), NULL: tất cả
+
+-- Safe Date Conversion
+DECLARE @RealToDate DATETIME = NULL;
+IF LEN(ISNULL(@ToDate, '')) > 0 SET @RealToDate = TRY_CONVERT(DATETIME, @ToDate);
+
+
+SELECT 
+    -- =======================================================
+    -- [MỚI]: THÊM CỘT TÊN CHI NHÁNH VÀO VỊ TRÍ ĐẦU TIÊN
+    -- =======================================================
+    ISNULL((SELECT TOP 1 T_BPL.BPLName FROM OWHS T_WHS INNER JOIN OBPL T_BPL ON T_WHS.BPLid = T_BPL.BPLId WHERE T_WHS.WhsCode = T1.WhsCode), N'Trụ sở chính') AS [Tên_Chi_Nhánh],
+
+    T1.ItemCode AS [Mã_Vật_Tư],
+    T1.BatchNum AS [Số_Lô_Batch],
+
+    -- TỒN KHO HIỆN TẠI (Lấy real-time lúc chạy báo cáo)
+    ISNULL(T_Stock.Quantity, 0) AS [Tồn_Kho_Tại_Mã_Kho_Này],
+    ISNULL(T_Batch_Total.TotalQty, 0) AS [Tổng_Tồn_Tất_Cả_Kho],
+    
+    T_Batch.MnfSerial AS [batch_gộp_1],
+    T_Batch.LotNumber AS [batch_gộp_2],
+    T_Batch.Notes AS [wo_batch_gộp],
+
+    T2.ItemName AS [Tên_Vật_Tư],
+
+    -- LOẠI GIAO DỊCH VÀ SỐ CHỨNG TỪ 
+    CASE T1.BaseType
+        WHEN 20 THEN N'Nhập - GRPO'
+        WHEN 59 THEN N'Nhập - Goods Receipt'
+        WHEN 60 THEN N'Xuất - Goods Issue'
+        WHEN 15 THEN N'Xuất - Delivery'
+        WHEN 16 THEN N'Trả hàng - Sales Return'
+        WHEN 21 THEN N'Trả hàng - Goods Return'
+        WHEN 67 THEN N'Điều chuyển kho'
+        ELSE N'Khác (' + CAST(T1.BaseType AS NVARCHAR) + ')'
+    END AS [Loại_Giao_Dịch],
+    T1.BaseNum AS [Số_Chứng_Từ],
+
+    T1.WhsCode AS [Mã_Kho],
+    T3.ItmsGrpCod AS [Mã_Nhóm],
+    T3.ItmsGrpNam AS [Tên_Nhóm],
+    
+    T1.DocDate AS [Ngày_Giao_Dịch],
+
+    -- GIỜ TẠO PHIẾU TỪ HỆ THỐNG
+    LEFT(RIGHT('0000' + CAST(T_OINM.DocTime AS NVARCHAR), 4), 2) + ':' + RIGHT(RIGHT('0000' + CAST(T_OINM.DocTime AS NVARCHAR), 4), 2) AS [Giờ_Tạo],
+
+    -- GỘP CỘT SỐ LƯỢNG (DƯƠNG = NHẬP, ÂM = XUẤT)
+    CASE WHEN T1.Direction = 0 THEN T1.Quantity ELSE -T1.Quantity END AS [Số_Lượng],
+
+    -- WO DOCUMENT & POSITION LÊN SAU SỐ LƯỢNG
+    COALESCE(T21.U_belnrid, T31.U_belnrid) AS [WO_Document],
+    COALESCE(T21.U_belposid, T31.U_belposid) AS [Work_Order_Position],
+
+    -- CÁC TRƯỜNG CÒN LẠI
+    CASE 
+        WHEN T1.BaseType = 20 AND T10.CANCELED = 'Y' THEN N'Chứng từ này đã BỊ HỦY'
+        WHEN T1.BaseType = 20 AND T10.CANCELED = 'C' THEN N'Đây là PHIẾU HỦY'
+        WHEN T1.BaseType = 20 THEN N'Bình thường'
+        ELSE NULL 
+    END AS [Trạng_Thái_Hủy_GRPO],
+    T11.BaseRef AS [Kế_Thừa_Từ_PO_Số],
+    T41.BaseRef AS [Kế_Thừa_Từ_SO_Số],
+    T10.CardCode AS [Mã_Vendor],
+    COALESCE(T40.CardName, T10.CardName) AS [Tên_Đối_Tác],
+
+    COALESCE(T20.Ref2, T30.Ref2, T10.Ref2, T40.Ref2) AS [Reference_2],
+    COALESCE(T40.NumAtCard, T10.NumAtCard, T20.NumAtCard, T30.NumAtCard) AS [Customer_Ref_No],
+    COALESCE(T10.Comments, T20.Comments, T30.Comments, T40.Comments) AS [Remarks],
+
+    -- GIÁ VỐN LẤY CHÍNH XÁC TẠI DÒNG PHIẾU ĐÓ
+    ABS(ROUND(T_OINM.TransValue / NULLIF(T_OINM.InQty + T_OINM.OutQty, 0), 4)) AS [Giá_Vốn_Tại_Phiếu]
+
+FROM IBT1 T1
+INNER JOIN OITM T2 ON T1.ItemCode = T2.ItemCode
+INNER JOIN OITB T3 ON T2.ItmsGrpCod = T3.ItmsGrpCod
+
+-- MÓC DỮ LIỆU BẢNG MASTER LÔ ĐỂ LẤY BATCH ATTRIBUTES
+LEFT JOIN OBTN T_Batch ON T1.ItemCode = T_Batch.ItemCode AND T1.BatchNum = T_Batch.DistNumber
+
+-- MÓC BẢNG OBTQ ĐỂ LẤY SỐ TỒN KHO HIỆN TẠI Ở KHO ĐÓ
+LEFT JOIN OBTQ T_Stock ON T_Batch.ItemCode = T_Stock.ItemCode AND T_Batch.SysNumber = T_Stock.SysNumber AND T1.WhsCode = T_Stock.WhsCode
+
+-- MÓC LẠI BẢNG OBTQ ĐỂ TÍNH TỔNG TỒN CỦA LÔ TRÊN TOÀN BỘ CÁC KHO
+LEFT JOIN (
+    SELECT ItemCode, SysNumber, SUM(Quantity) AS TotalQty
+    FROM OBTQ
+    GROUP BY ItemCode, SysNumber
+) T_Batch_Total ON T_Batch.ItemCode = T_Batch_Total.ItemCode AND T_Batch.SysNumber = T_Batch_Total.SysNumber
+
+
+-- MÓC DỮ LIỆU GRPO (BaseType = 20)
+LEFT JOIN OPDN T10 ON T1.BaseEntry = T10.DocEntry AND T1.BaseType = 20
+LEFT JOIN PDN1 T11 ON T1.BaseEntry = T11.DocEntry AND T1.BaseLinNum = T11.LineNum AND T1.BaseType = 20
+
+-- MÓC DỮ LIỆU GOODS RECEIPT (BaseType = 59)
+LEFT JOIN OIGN T20 ON T1.BaseEntry = T20.DocEntry AND T1.BaseType = 59
+LEFT JOIN IGN1 T21 ON T1.BaseEntry = T21.DocEntry AND T1.BaseLinNum = T21.LineNum AND T1.BaseType = 59
+
+-- MÓC DỮ LIỆU GOODS ISSUE (BaseType = 60)
+LEFT JOIN OIGE T30 ON T1.BaseEntry = T30.DocEntry AND T1.BaseType = 60
+LEFT JOIN IGE1 T31 ON T1.BaseEntry = T31.DocEntry AND T1.BaseLinNum = T31.LineNum AND T1.BaseType = 60
+
+-- MÓC DỮ LIỆU DELIVERY (BaseType = 15)
+LEFT JOIN ODLN T40 ON T1.BaseEntry = T40.DocEntry AND T1.BaseType = 15
+LEFT JOIN DLN1 T41 ON T1.BaseEntry = T41.DocEntry AND T1.BaseLinNum = T41.LineNum AND T1.BaseType = 15
+
+-- MÓC DỮ LIỆU NHẬT KÝ KHO OINM ĐỂ LẤY GIÁ VỐN & GIỜ
+LEFT JOIN OINM T_OINM ON T1.BaseType = T_OINM.TransType 
+                     AND T1.BaseEntry = T_OINM.CreatedBy 
+                     AND T1.BaseLinNum = T_OINM.DocLineNum 
+                     AND T1.ItemCode = T_OINM.ItemCode
+                     AND T1.WhsCode = T_OINM.Warehouse
+
+WHERE T2.ManBtchNum = 'Y'
+  -- Nếu nhập ngày thì lọc tới ngày đó, nếu để trống thì lấy tất cả
+  AND (CONVERT(DATETIME, T1.DocDate) <= @RealToDate OR @RealToDate IS NULL)
+  AND (T1.ItemCode = @ItemCode OR @ItemCode IS NULL)
+  AND (T1.BatchNum = @BatchNum OR @BatchNum IS NULL)
+  AND (T1.WhsCode = @WhsCode OR @WhsCode IS NULL)
+
+ORDER BY 
+    T1.ItemCode, 
+    T1.BatchNum, 
+    T1.DocDate, 
+    T_OINM.DocTime,
+    CASE T1.BaseType
+        WHEN 20 THEN 1 
+        WHEN 59 THEN 1 
+        WHEN 67 THEN 2 
+        WHEN 60 THEN 3 
+        WHEN 21 THEN 4 
+        WHEN 16 THEN 4 
+        WHEN 15 THEN 5 
+        ELSE 6
+    END,
+    T1.Direction DESC

@@ -1,0 +1,2 @@
+[console_scripts]
+ifixai = ifixai.cli.main:main

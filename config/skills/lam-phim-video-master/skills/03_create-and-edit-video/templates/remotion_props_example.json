@@ -1,0 +1,49 @@
+{
+  "slug": "create_and_edit_video_showcase",
+  "projectTitle": "DEMO SẢN XUẤT VIDEO TỰ ĐỘNG",
+  "niche": "coding",
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "showSubtitles": false,
+  "scenes": [
+    {
+      "sceneId": "SCENE_01",
+      "sceneNumber": 1,
+      "engineMode": "remotion_2d",
+      "archetype": "CHAPTER_INTRO",
+      "niche": "coding",
+      "durationSec": 15,
+      "title": "HỆ THỐNG BIÊN TẬP CREATE & EDIT VIDEO",
+      "subtitle": "Quy trình hợp nhất 5 Engine sản xuất video tự động từ A-Z",
+      "dateText": "AUTOMATION // VIDEO AI 2026",
+      "narration": "Chào mừng đến với hệ thống tự động hóa biên tập và kiến tạo video toàn năng kết hợp giữa Remotion, Motion Canvas, Manim, Auto-Editor và Editly."
+    },
+    {
+      "sceneId": "SCENE_02",
+      "sceneNumber": 2,
+      "engineMode": "remotion_2d",
+      "archetype": "ARCHITECTURE_FLOW",
+      "niche": "coding",
+      "durationSec": 20,
+      "title": "LUỒNG DỮ LIỆU LIÊN HOÀN 5 ENGINE",
+      "statValue": "Tốc độ xử lý: 60 FPS // GPU Accelerated",
+      "narration": "Từ khâu cắt gọt khoảng lặng âm thanh tự động bằng Auto-Editor, diễn họa toán học sắc nét bằng Manim, đến ghép nối khung hình mượt mà bằng Remotion."
+    },
+    {
+      "sceneId": "SCENE_03",
+      "sceneNumber": 3,
+      "engineMode": "remotion_2d",
+      "archetype": "METRIC_GAUGE",
+      "niche": "coding",
+      "durationSec": 15,
+      "title": "HIỆU NĂNG TỐI ƯU HÓA QUY TRÌNH",
+      "subtitle": "Tiết kiệm 90% thời gian dựng phim thủ công",
+      "statLabel": "TỶ LỆ TỰ ĐỘNG HÓA THÀNH CÔNG",
+      "counterValue": 99.5,
+      "counterSuffix": "%",
+      "stampText": "GRADE A CERTIFIED",
+      "narration": "Hệ thống giúp tăng tốc độ sản xuất video gấp 10 lần, đảm bảo chuẩn mực chất lượng điện ảnh Full HD và 4K cho toàn bộ kênh."
+    }
+  ]
+}

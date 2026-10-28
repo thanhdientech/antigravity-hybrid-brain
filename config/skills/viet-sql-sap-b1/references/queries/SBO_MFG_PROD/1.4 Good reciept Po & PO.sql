@@ -1,0 +1,33 @@
+DECLARE @FromDate DATE;
+DECLARE @ToDate   DATE;
+SET @FromDate = '2026-01-01';
+SET @ToDate   = '2026-03-31';
+SELECT
+    T0.DocDate,
+    T1.BaseEntry        AS [PO No],
+    T0.CardCode,
+    T0.CardName,
+    T1.DocEntry         AS [Good Receipt No],
+    T1.ItemCode,
+    T1.Dscription,
+     T1.WhsCode as  [WhsCode],
+    T2.Quantity         AS [PO Order Quantity],
+    T1.Quantity         AS [GR Quantity],
+    T1.UnitMSR         AS [GR UOM],
+    T1.InvQty          AS  [INV Quantity],
+    T4.InvnTryUom AS [INV UOM ],
+    T1.ShipDate         AS [PO Delivery Date],
+    T1.ActDelDate       AS [Good Receipt Date]
+    --, T1.*
+FROM OPDN T0 WITH (NOLOCK)
+INNER JOIN PDN1 T1 WITH (NOLOCK)
+    ON T0.DocEntry = T1.DocEntry
+LEFT JOIN POR1 T2 WITH (NOLOCK)
+    ON T2.DocEntry = T1.BaseEntry
+   AND T2.LineNum  = T1.BaseLine
+LEFT JOIN OPOR T3 WITH (NOLOCK)
+    ON T3.DocEntry = T2.DocEntry
+INNER JOIN OITM  T4 ON T4.ItemCode = T1.ItemCode 
+WHERE T0.DocDate BETWEEN @FromDate AND @ToDate
+
+  AND T0.CANCELED   = 'N'

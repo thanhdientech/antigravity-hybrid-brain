@@ -1,0 +1,1 @@
+EXEC SBO_Report_WorkOrderLGF @SDate,@EDate

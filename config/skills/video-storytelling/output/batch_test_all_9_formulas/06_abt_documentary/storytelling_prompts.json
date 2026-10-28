@@ -1,0 +1,211 @@
+{
+  "title": "Giải Mã Bí Ẩn: Đại Dương Nước Lỏng Dưới Lòng Băng Vệ Tinh Europa",
+  "topic": "Đại Dương Nước Lỏng Dưới Lòng Băng Vệ Tinh Europa",
+  "formula": "abt_documentary",
+  "cinematic_style": "hollywood_dramatic",
+  "character_sheet": {
+    "character_identity": "Nhà thiên văn học quan sát bầu trời đêm qua kính viễn vọng",
+    "turnaround_prompt_raw": "character sheet, model turnaround sheet of Nhà thiên văn học quan sát bầu trời đêm qua kính viễn vọng, wearing casual modern streetwear, minimalist beige neutral tone. Four views: full body front view, full body 3/4 view, side profile view, back view. Same person, identical facial features, consistent hair and body proportions across all panels. Neutral clean studio grey background, soft documentary lighting, high detail skin texture, cinematic photorealism, 8k, shot on 35mm lens --ar 16:9",
+    "midjourney_command": "/imagine prompt: character sheet, model turnaround sheet of Nhà thiên văn học quan sát bầu trời đêm qua kính viễn vọng, wearing casual modern streetwear, minimalist beige neutral tone. Four views: full body front view, full body 3/4 view, side profile view, back view. Same person, identical facial features, consistent hair and body proportions across all panels. Neutral clean studio grey background, soft documentary lighting, high detail skin texture, cinematic photorealism, 8k, shot on 35mm lens --ar 16:9 --v 6.1 --style raw",
+    "flux_prompt": "character sheet, model turnaround sheet of Nhà thiên văn học quan sát bầu trời đêm qua kính viễn vọng, wearing casual modern streetwear, minimalist beige neutral tone. Four views: full body front view, full body 3/4 view, side profile view, back view. Same person, identical facial features, consistent hair and body proportions across all panels. Neutral clean studio grey background, soft documentary lighting, high detail skin texture, cinematic photorealism, 8k, shot on 35mm lens --ar 16:9",
+    "instructions": [
+      "1. Render bảng nhân vật trên Midjourney hoặc Flux để có 1 tấm ảnh 4 góc nhìn chuẩn.",
+      "2. Cắt lấy tấm ảnh góc đẹp nhất (thường là góc 3/4) làm Anchor Frame (@Image 1 cho Seedance hoặc First Frame cho Veo 3).",
+      "3. Dùng ảnh này làm input cố định xuyên suốt toàn bộ các cảnh trong video."
+    ]
+  },
+  "story_script": {
+    "title": "Giải Mã Bí Ẩn: Đại Dương Nước Lỏng Dưới Lòng Băng Vệ Tinh Europa",
+    "product_or_topic": "Đại Dương Nước Lỏng Dưới Lòng Băng Vệ Tinh Europa",
+    "target_audience": "Khán giả khao khát nội dung giá trị, tri thức thực chứng hoặc giải pháp chuyển hóa",
+    "character_name": "Tuấn",
+    "character_appearance": "Nhà thiên văn học quan sát bầu trời đêm qua kính viễn vọng, authentic natural features, wearing fitting modern minimalist attire",
+    "format_type": "SHORT_FORM_60S",
+    "formula": "abt_documentary",
+    "moral_or_takeaway": "Nghịch lý Đại Dương Nước Lỏng Dưới Lòng Băng Vệ Tinh Europa đã buộc khoa học hiện đại phải tái định nghĩa chân lý.",
+    "cinematic_style": "hollywood_dramatic",
+    "beats": [
+      {
+        "beat_id": "BEAT_01_AND",
+        "timestamp": "00:00 - 00:25",
+        "phase": "HOOK (AND - Baseline Context)",
+        "voiceover": "Suốt nhiều thập kỷ, nhân loại luôn tin rằng Đại Dương Nước Lỏng Dưới Lòng Băng Vệ Tinh Europa vận hành theo quy luật tự nhiên bất biến VÀ mọi thí nghiệm đều cho kết quả hoàn toàn trùng khớp.",
+        "dialogue": null,
+        "visual_action": "Khung cảnh phòng thí nghiệm thiên văn cổ điển với các kính viễn vọng khổng lồ hướng lên bầu trời đêm sao sáng.",
+        "camera_movement": "Slow crane down, majestic wide establishing shot",
+        "sound_fx": "Tiếng bánh răng kính thiên văn quay chậm rãi",
+        "ambient_noise": "Âm thanh đêm tĩnh lặng dưới bầu trời cao nguyên",
+        "emotion_tone": "Yên bình, vững tin, khoa học",
+        "cinematic": {
+          "shot_size": "Medium close-up (MCU)",
+          "camera_angle": "Eye-level intimate angle",
+          "camera_movement": "Slow dolly in focusing on micro-expression",
+          "lighting": "Soft window light with subtle rim lighting",
+          "lens_and_depth": "35mm storytelling prime lens, shallow depth of field, oval bokeh",
+          "composition": "Rule of thirds, strong foreground interest",
+          "color_grading": "Teal and orange cinematic grading, high dynamic range",
+          "film_grain": "35mm anamorphic film grain, subtle halation",
+          "mood_keywords": "vulnerable, relatable, intimate"
+        }
+      },
+      {
+        "beat_id": "BEAT_02_BUT",
+        "timestamp": "00:25 - 00:50",
+        "phase": "STRUGGLE (BUT - The Contradiction)",
+        "voiceover": "NHƯNG các số liệu đo đạc mới nhất bất ngờ xuất hiện một dị thường kỳ lạ: bề mặt đóng băng âm 160 độ C tưởng chừng không có sự sống không tuân theo bất kỳ định luật vật lý nào.",
+        "dialogue": "Tuấn kinh ngạc nhìn vào màn hình dữ liệu, \"Con số này là hoàn toàn bất khả thi.\"",
+        "visual_action": "Tuấn đứng sững sờ trước biểu đồ xung nhịp tăng vọt dị thường, ánh sáng màn hình phản chiếu sự bàng hoàng.",
+        "camera_movement": "Fast push-in macro shot on anomalous waveform data",
+        "sound_fx": "Tiếng cảnh báo radar điện tử bíp dồn dập",
+        "ambient_noise": "Tiếng tim đập hòa cùng tiếng gió rít bên ngoài đài quan sát",
+        "emotion_tone": "Bàng hoàng, bí ẩn, khủng hoảng nhận thức",
+        "cinematic": {
+          "shot_size": "Medium shot transitioning to Dutch tilt",
+          "camera_angle": "High angle or canted Dutch tilt to evoke pressure",
+          "camera_movement": "Handheld with subtle tension shake, fast whip pan",
+          "lighting": "Low-key chiaroscuro lighting, harsh shadows, overcast tones",
+          "lens_and_depth": "35mm storytelling prime lens, shallow depth of field, oval bokeh",
+          "composition": "Framing within a frame, cramped negative space",
+          "color_grading": "Teal and orange cinematic grading, high dynamic range",
+          "film_grain": "35mm anamorphic film grain, subtle halation",
+          "mood_keywords": "tense, overwhelmed, melancholic"
+        }
+      },
+      {
+        "beat_id": "BEAT_03_THEREFORE",
+        "timestamp": "00:50 - 01:15",
+        "phase": "EPIPHANY (THEREFORE - The Paradigm Shift)",
+        "voiceover": "DO ĐÓ, giới khoa học buộc phải thừa nhận nhiệt lượng ma sát thủy triều của Sao Mộc sưởi ấm đại dương ngầm sâu 100km, mở ra một kỷ nguyên khám phá hoàn toàn mới về Đại Dương Nước Lỏng Dưới Lòng Băng Vệ Tinh Europa.",
+        "dialogue": null,
+        "visual_action": "Mô hình vũ trụ 3D mở rộng đa chiều rực rỡ với các dải ngân hà kết nối ánh sáng thần tiên.",
+        "camera_movement": "Spectacular 360-degree cosmic fly-through shot",
+        "sound_fx": "Tiếng nốt nhạc dâng trào tráng lệ đầy cảm hứng",
+        "ambient_noise": "Giai điệu giao hưởng vũ trụ ngân vang",
+        "emotion_tone": "Khai sáng, hùng vĩ, chấn động trí tuệ",
+        "cinematic": {
+          "shot_size": "Medium close-up (MCU)",
+          "camera_angle": "Eye-level intimate angle",
+          "camera_movement": "Slow dolly in focusing on micro-expression",
+          "lighting": "Soft window light with subtle rim lighting",
+          "lens_and_depth": "35mm storytelling prime lens, shallow depth of field, oval bokeh",
+          "composition": "Rule of thirds, strong foreground interest",
+          "color_grading": "Teal and orange cinematic grading, high dynamic range",
+          "film_grain": "35mm anamorphic film grain, subtle halation",
+          "mood_keywords": "vulnerable, relatable, intimate"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "name": "Báo cáo quan sát khoa học chuyên sâu: Đại Dương Nước Lỏng Dưới Lòng Băng Vệ Tinh Europa",
+        "author_or_manufacturer": "Viện Hàn lâm Khoa học Quốc tế / Đài quan sát Thiên văn",
+        "source_url_or_id": "https://science.org/doi/10.1126/science.abf8742",
+        "verified_claims": "Dữ liệu đo đạc thực tế, phân tích quang phổ và bằng chứng đột phá giải mã bề mặt đóng băng âm 160 độ C tưởng chừng không có sự sống"
+      },
+      {
+        "name": "Houston, We Have a Narrative: Why Science Needs Story",
+        "author_or_manufacturer": "Dr. Randy Olson (Marine Biologist & Filmmaker)",
+        "source_url_or_id": "ISBN: 978-0226270845 - University of Chicago Press",
+        "verified_claims": "Mô hình tự sự And, But, Therefore (ABT) cấu trúc lập luận khoa học logic chặt chẽ"
+      }
+    ]
+  },
+  "seedance_engine": {
+    "engine": "Seedance 2.0 / 2.5 (ByteDance)",
+    "title": "Giải Mã Bí Ẩn: Đại Dương Nước Lỏng Dưới Lòng Băng Vệ Tinh Europa",
+    "multimodal_mapping": {
+      "@Image 1": "Character consistency anchor (Tuấn)",
+      "@Image 2": "Product anchor (Đại Dương Nước Lỏng Dưới Lòng Băng Vệ Tinh Europa)"
+    },
+    "shots": [
+      {
+        "shot_number": 1,
+        "beat_id": "BEAT_01_AND",
+        "timestamp": "00:00 - 00:25",
+        "seedance_prompt": "References: Character anchor from @Image 1, Product anchor from @Image 2.\nSetting: Realistic cinematic environment, authentic atmospheric lighting, high dynamic range.\nAction: Khung cảnh phòng thí nghiệm thiên văn cổ điển với các kính viễn vọng khổng lồ hướng lên bầu trời đêm sao sáng.. Realistic physical interaction, subtle micro-expressions, true-to-life physics.\nCamera: Medium close-up (MCU), Eye-level intimate angle, Slow crane down, majestic wide establishing shot, 35mm storytelling prime lens, shallow depth of field, oval bokeh.\nStyle: Cinematic photorealism, Soft window light with subtle rim lighting, Teal and orange cinematic grading, high dynamic range, 35mm anamorphic film grain, subtle halation, 8k, 24fps.\nAudio: Ambient: Âm thanh đêm tĩnh lặng dưới bầu trời cao nguyên. SFX: Tiếng bánh răng kính thiên văn quay chậm rãi.",
+        "recommended_settings": {
+          "model": "Seedance 2.0 / 2.5",
+          "duration_seconds": 5,
+          "aspect_ratio": "9:16",
+          "reference_inputs": {
+            "@Image 1": "Bảng nhân vật Character Sheet (Tuấn)",
+            "@Image 2": "Hình ảnh sản phẩm / bối cảnh (Đại Dương Nước Lỏng Dưới Lòng Băng Vệ Tinh Europa)"
+          }
+        }
+      },
+      {
+        "shot_number": 2,
+        "beat_id": "BEAT_02_BUT",
+        "timestamp": "00:25 - 00:50",
+        "seedance_prompt": "References: Character anchor from @Image 1, Product anchor from @Image 2.\nSetting: Realistic cinematic environment, authentic atmospheric lighting, high dynamic range.\nAction: character from @Image 1 đứng sững sờ trước biểu đồ xung nhịp tăng vọt dị thường, ánh sáng màn hình phản chiếu sự bàng hoàng.. Realistic physical interaction, subtle micro-expressions, true-to-life physics. Character speaks: \"Tuấn kinh ngạc nhìn vào màn hình dữ liệu, \"Con số này là hoàn toàn bất khả thi.\"\"\nCamera: Medium shot transitioning to Dutch tilt, High angle or canted Dutch tilt to evoke pressure, Fast push-in macro shot on anomalous waveform data, 35mm storytelling prime lens, shallow depth of field, oval bokeh.\nStyle: Cinematic photorealism, Low-key chiaroscuro lighting, harsh shadows, overcast tones, Teal and orange cinematic grading, high dynamic range, 35mm anamorphic film grain, subtle halation, 8k, 24fps.\nAudio: Ambient: Tiếng tim đập hòa cùng tiếng gió rít bên ngoài đài quan sát. SFX: Tiếng cảnh báo radar điện tử bíp dồn dập.",
+        "recommended_settings": {
+          "model": "Seedance 2.0 / 2.5",
+          "duration_seconds": 10,
+          "aspect_ratio": "9:16",
+          "reference_inputs": {
+            "@Image 1": "Bảng nhân vật Character Sheet (Tuấn)",
+            "@Image 2": "Hình ảnh sản phẩm / bối cảnh (Đại Dương Nước Lỏng Dưới Lòng Băng Vệ Tinh Europa)"
+          }
+        }
+      },
+      {
+        "shot_number": 3,
+        "beat_id": "BEAT_03_THEREFORE",
+        "timestamp": "00:50 - 01:15",
+        "seedance_prompt": "References: Character anchor from @Image 1, Product anchor from @Image 2.\nSetting: Realistic cinematic environment, authentic atmospheric lighting, high dynamic range.\nAction: Mô hình vũ trụ 3D mở rộng đa chiều rực rỡ với các dải ngân hà kết nối ánh sáng thần tiên.. Realistic physical interaction, subtle micro-expressions, true-to-life physics.\nCamera: Medium close-up (MCU), Eye-level intimate angle, Spectacular 360-degree cosmic fly-through shot, 35mm storytelling prime lens, shallow depth of field, oval bokeh.\nStyle: Cinematic photorealism, Soft window light with subtle rim lighting, Teal and orange cinematic grading, high dynamic range, 35mm anamorphic film grain, subtle halation, 8k, 24fps.\nAudio: Ambient: Giai điệu giao hưởng vũ trụ ngân vang. SFX: Tiếng nốt nhạc dâng trào tráng lệ đầy cảm hứng.",
+        "recommended_settings": {
+          "model": "Seedance 2.0 / 2.5",
+          "duration_seconds": 10,
+          "aspect_ratio": "9:16",
+          "reference_inputs": {
+            "@Image 1": "Bảng nhân vật Character Sheet (Tuấn)",
+            "@Image 2": "Hình ảnh sản phẩm / bối cảnh (Đại Dương Nước Lỏng Dưới Lòng Băng Vệ Tinh Europa)"
+          }
+        }
+      }
+    ]
+  },
+  "veo3_engine": {
+    "engine": "Google Veo 3 / 3.1 (DeepMind)",
+    "title": "Giải Mã Bí Ẩn: Đại Dương Nước Lỏng Dưới Lòng Băng Vệ Tinh Europa",
+    "formula_applied": "[Cinematography] + [Subject] + [Action] + [Context] + [Style & Ambiance]",
+    "shots": [
+      {
+        "shot_number": 1,
+        "beat_id": "BEAT_01_AND",
+        "timestamp": "00:00 - 00:25",
+        "veo3_prompt": "A cinematic Medium close-up (MCU), Eye-level intimate angle, Slow crane down, majestic wide establishing shot, 35mm storytelling prime lens, shallow depth of field, oval bokeh, Rule of thirds, strong foreground interest. A Nhà thiên văn học quan sát bầu trời đêm qua kính viễn vọng, authentic natural features, wearing fitting modern minimalist attire. Khung cảnh phòng thí nghiệm thiên văn cổ điển với các kính viễn vọng khổng lồ hướng lên bầu trời đêm sao sáng.. Atmospheric environment with nuanced, natural cinematic lighting and rich depth. Cinematic lighting (Soft window light with subtle rim lighting), Teal and orange cinematic grading, high dynamic range, 35mm anamorphic film grain, subtle halation, vulnerable, relatable, intimate mood, photorealistic 8k, authentic human texture. SFX: Tiếng bánh răng kính thiên văn quay chậm rãi. Ambient noise: Âm thanh đêm tĩnh lặng dưới bầu trời cao nguyên.",
+        "recommended_settings": {
+          "model": "Google Veo 3 / 3.1",
+          "mode": "Image-to-Video (First Frame) hoặc Text-to-Video",
+          "aspect_ratio": "9:16",
+          "audio_enabled": true
+        }
+      },
+      {
+        "shot_number": 2,
+        "beat_id": "BEAT_02_BUT",
+        "timestamp": "00:25 - 00:50",
+        "veo3_prompt": "A cinematic Medium shot transitioning to Dutch tilt, High angle or canted Dutch tilt to evoke pressure, Fast push-in macro shot on anomalous waveform data, 35mm storytelling prime lens, shallow depth of field, oval bokeh, Framing within a frame, cramped negative space. A Nhà thiên văn học quan sát bầu trời đêm qua kính viễn vọng, authentic natural features, wearing fitting modern minimalist attire. Tuấn đứng sững sờ trước biểu đồ xung nhịp tăng vọt dị thường, ánh sáng màn hình phản chiếu sự bàng hoàng.. Atmospheric environment with nuanced, natural cinematic lighting and rich depth. Cinematic lighting (Low-key chiaroscuro lighting, harsh shadows, overcast tones), Teal and orange cinematic grading, high dynamic range, 35mm anamorphic film grain, subtle halation, tense, overwhelmed, melancholic mood, photorealistic 8k, authentic human texture. He speaks with natural emotion, \"Tuấn kinh ngạc nhìn vào màn hình dữ liệu, Con số này là hoàn toàn bất khả thi..\" SFX: Tiếng cảnh báo radar điện tử bíp dồn dập. Ambient noise: Tiếng tim đập hòa cùng tiếng gió rít bên ngoài đài quan sát.",
+        "recommended_settings": {
+          "model": "Google Veo 3 / 3.1",
+          "mode": "Image-to-Video (First Frame) hoặc Text-to-Video",
+          "aspect_ratio": "9:16",
+          "audio_enabled": true
+        }
+      },
+      {
+        "shot_number": 3,
+        "beat_id": "BEAT_03_THEREFORE",
+        "timestamp": "00:50 - 01:15",
+        "veo3_prompt": "A cinematic Medium close-up (MCU), Eye-level intimate angle, Spectacular 360-degree cosmic fly-through shot, 35mm storytelling prime lens, shallow depth of field, oval bokeh, Rule of thirds, strong foreground interest. A Nhà thiên văn học quan sát bầu trời đêm qua kính viễn vọng, authentic natural features, wearing fitting modern minimalist attire. Mô hình vũ trụ 3D mở rộng đa chiều rực rỡ với các dải ngân hà kết nối ánh sáng thần tiên.. Atmospheric environment with nuanced, natural cinematic lighting and rich depth. Cinematic lighting (Soft window light with subtle rim lighting), Teal and orange cinematic grading, high dynamic range, 35mm anamorphic film grain, subtle halation, vulnerable, relatable, intimate mood, photorealistic 8k, authentic human texture. SFX: Tiếng nốt nhạc dâng trào tráng lệ đầy cảm hứng. Ambient noise: Giai điệu giao hưởng vũ trụ ngân vang.",
+        "recommended_settings": {
+          "model": "Google Veo 3 / 3.1",
+          "mode": "Image-to-Video (First Frame) hoặc Text-to-Video",
+          "aspect_ratio": "9:16",
+          "audio_enabled": true
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,1 @@
+select * from OACT where postable = 'Y' and acctcode between @StartAcc and @EndAcc

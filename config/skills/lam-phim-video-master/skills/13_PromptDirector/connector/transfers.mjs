@@ -1,0 +1,171 @@
+import { open, mkdir, rename, unlink, stat, realpath } from 'node:fs/promises';
+import { constants } from 'node:fs';
+import { createHash, randomUUID } from 'node:crypto';
+import { basename, dirname, isAbsolute, join } from 'node:path';
+import { connectorRoot, ensurePrivateRoot } from './paths.mjs';
+import { readablePath } from './sensitive-paths.mjs';
+import { leaseCacheFile, maintainTransferCache, recordCacheFile, rememberVerifiedFile, verifyCachedFile } from './transfer-cache.mjs';
+
+async function digest(handle) {
+  const hash = createHash('sha256');
+  for await (const data of handle.createReadStream({ autoClose: false, start: 0 })) hash.update(data);
+  return hash.digest('hex');
+}
+export async function stageFiles(files, bodyFile, requestId, call, { purpose, limits } = {}) {
+  if (bodyFile && !files.some(file => file.path === bodyFile)) throw new Error('正文文件必须同时列入附件。');
+  if (limits) {
+    if (files.length > limits.maxFileCount) throw new Error('Skill包文件数量超过插件导入上限，未开始上传。');
+    let totalBytes = 0;
+    let textBytes = 0;
+    const packagePaths = files.map(file => file.packagePath?.replace(/\\/g, '/') || '');
+    const skillPath = purpose === 'skill-file' && packagePaths.find(path => path === 'SKILL.md' || path.endsWith('/SKILL.md'));
+    const skillRoot = (skillPath || '').slice(0, -'SKILL.md'.length);
+    for (const [index, file] of files.entries()) {
+      if (!isAbsolute(file.path)) throw new Error('附件必须使用绝对路径。');
+      const info = await stat(await readablePath(file.path));
+      if (!info.isFile()) throw new Error('Skill附件必须是普通文件。');
+      if (info.size > limits.maxFileBytes) throw new Error('Skill单文件超过插件导入上限，未开始上传。');
+      totalBytes += info.size;
+      const relativePath = packagePaths[index].startsWith(skillRoot) ? packagePaths[index].slice(skillRoot.length) : '';
+      if (purpose === 'skill-file' && (relativePath === 'SKILL.md' || /^references\/.+\.md$/iu.test(relativePath))) textBytes += info.size;
+    }
+    if (totalBytes > limits.maxArchiveBytes) throw new Error('Skill包总大小超过插件导入上限，未开始上传。');
+    if (Number.isSafeInteger(limits.maxTextBytes) && textBytes > limits.maxTextBytes) throw Object.assign(new Error('Skill正文与引用超过插件本次解析预算，未开始上传；保留完整文件，请分批整理，不要删减原文。'), { code: 'RESOURCE_BUDGET_REACHED' });
+  }
+  const transferIds = []; const filePrompts = {}; let bodyTransferId;
+  for (const [index, file] of files.entries()) {
+    if (!isAbsolute(file.path)) throw new Error('附件必须使用绝对路径。');
+    const path = await readablePath(file.path);
+    const isCache = dirname(path) === await realpath(join(connectorRoot(), 'files')).catch(() => '');
+    const release = isCache ? await leaseCacheFile(path) : null;
+    if (isCache && !release) throw new Error('临时附件正在使用或清理，请重试。');
+    let handle;
+    try {
+      handle = await open(path, constants.O_RDONLY | (constants.O_NOFOLLOW || 0));
+      if (isCache) await recordCacheFile(path).catch(() => {});
+      const stat = await handle.stat();
+      if (!stat.isFile() || (!stat.size && purpose !== 'skill-file')) throw new Error('附件必须是普通文件；案例附件不能为空。');
+      const sha256 = await digest(handle);
+      const id = createHash('sha256').update(JSON.stringify([requestId, index, sha256, file.path, ...(purpose ? [purpose] : [])])).digest('hex');
+      const receipt = await call('begin_transfer', { id, name: basename(file.path), mimeType: file.mimeType,
+        byteSize: stat.size, sha256, forceImport: file.forceImport === true, ...(purpose ? { purpose } : {}) });
+      if (receipt.state === 'uploading') {
+        let offset = receipt.offset;
+        const buffer = Buffer.alloc(receipt.chunkBytes);
+        while (offset < stat.size) {
+          const { bytesRead } = await handle.read(buffer, 0, Math.min(buffer.length, stat.size - offset), offset);
+          if (!bytesRead) throw new Error('读取期间附件发生变化，请重试。');
+          const next = await call('append_transfer', { id, offset, data: buffer.subarray(0, bytesRead).toString('base64') });
+          offset = next.offset;
+        }
+      }
+      await call('finish_transfer', { id });
+      transferIds.push(id); if (file.originalPrompt) filePrompts[id] = file.originalPrompt; if (bodyFile === file.path) bodyTransferId = id;
+    } finally { await handle?.close(); await release?.(); }
+  }
+  return { transferIds, filePrompts, ...(bodyTransferId ? { bodyTransferId } : {}) };
+}
+export async function receiveMedia(input, call, root = connectorRoot()) {
+  await ensurePrivateRoot(root);
+  const directory = join(root, 'files'); await mkdir(directory, { recursive: true, mode: 0o700 });
+  await maintainTransferCache(directory);
+  // Always consult the current library before reusing a file: deletion, changed
+  // membership or a new original must never be hidden by the local cache.
+  const first = await call('read_media', { ...input, offset: 0 });
+  if (first.offset !== 0 || !/^[a-f0-9]{64}$/u.test(first.sha256) || !Number.isSafeInteger(first.byteSize) || first.byteSize < 0) {
+    throw new Error('媒体分块不一致。');
+  }
+  const name = basename(String(first.name || input.assetId || 'media')).replace(/[^\p{L}\p{N}._-]/gu, '_').slice(-100) || 'media';
+  let path = join(directory, `${first.sha256}-${name}`);
+  let release = await leaseCacheFile(path);
+  // A concurrent reader/cleaner owns the canonical copy. Deliver a separate
+  // verified copy rather than wait on or replace that process's file.
+  if (!release) {
+    path = join(directory, `${first.sha256}-${randomUUID()}-${name}`);
+    release = await leaseCacheFile(path);
+  }
+  try {
+    const result = { path, mimeType: first.mimeType, byteSize: first.byteSize, sha256: first.sha256, caseId: input.caseId, assetId: input.assetId };
+    let cached, occupied = false;
+    try {
+      cached = await open(path, constants.O_RDONLY | (constants.O_NOFOLLOW || 0));
+      const stat = await cached.stat();
+      if (stat.isFile() && stat.size === first.byteSize && await verifyCachedFile(path, cached, first.sha256, digest)) {
+        await recordCacheFile(path).catch(() => {});
+        return result;
+      }
+    } catch (error) {
+      occupied = error.code === 'ELOOP';
+      if (!['ENOENT', 'ELOOP'].includes(error.code)) throw error;
+    } finally { await cached?.close(); }
+    if (cached || occupied) {
+      await release?.();
+      path = join(directory, `${first.sha256}-${randomUUID()}-${name}`);
+      release = await leaseCacheFile(path);
+      result.path = path;
+    }
+    const temp = join(directory, `${randomUUID()}.partial`);
+    const handle = await open(temp, 'wx', 0o600);
+    let offset = 0;
+    const hash = createHash('sha256');
+    try {
+      do {
+        const part = offset === 0 ? first : await call('read_media', { ...input, offset, expectedHash: first.sha256 });
+        const bytes = Buffer.from(part.data, 'base64');
+        if (part.offset !== offset || part.sha256 !== first.sha256 || part.byteSize !== first.byteSize || (!bytes.length && offset < first.byteSize)) throw new Error('媒体分块不一致。');
+        await handle.writeFile(bytes); hash.update(bytes); offset += bytes.length;
+        if (part.nextOffset === null) break;
+        if (part.nextOffset !== offset) throw new Error('媒体分块位置错误。');
+      } while (offset < first.byteSize);
+      if (offset !== first.byteSize || hash.digest('hex') !== first.sha256) throw new Error('原件完整性验证失败，未交付文件。');
+      await rename(temp, path);
+      await rememberVerifiedFile(path, handle, first.sha256).catch(() => {});
+      await handle.close();
+      await recordCacheFile(path, { owned: true }).catch(() => {});
+      return result;
+    } catch (error) { await handle.close().catch(() => {}); await unlink(temp).catch(() => {}); throw error; }
+  } finally { await release?.(); }
+}
+
+// A viewport capture is ephemeral, unlike a case original. Its opaque capture identity fixes
+// all chunks to one browser frame; no original-media cache or repeated digest is involved.
+export async function receiveWorkspaceScreenshot(input, call, root = connectorRoot()) {
+  const first = await call('capture_workspace', input);
+  if (first.state !== 'captured') return first;
+  if (first.offset !== 0 || typeof first.screenshotId !== 'string' || !first.screenshotId
+    || first.mimeType !== 'image/png' || !Number.isSafeInteger(first.byteSize) || first.byteSize <= 0) {
+    throw new Error('插件截图回包无效。');
+  }
+  const parts = [];
+  let offset = 0, part = first;
+  while (true) {
+    if (part.screenshotId !== first.screenshotId || part.offset !== offset || part.byteSize !== first.byteSize
+      || part.tabId !== first.tabId || part.surface !== first.surface || part.capturedAt !== first.capturedAt
+      || part.mimeType !== first.mimeType || typeof part.data !== 'string') throw new Error('插件截图分块不一致。');
+    const bytes = Buffer.from(part.data, 'base64');
+    if (!bytes.length || offset + bytes.length > first.byteSize) throw new Error('插件截图分块长度无效。');
+    parts.push(bytes);
+    offset += bytes.length;
+    if (part.nextOffset === null) break;
+    if (part.nextOffset !== offset) throw new Error('插件截图分块位置无效。');
+    part = await call('capture_workspace', { screenshotId: first.screenshotId, offset });
+  }
+  if (offset !== first.byteSize) throw new Error('插件截图未完整接收。');
+  const bytes = Buffer.concat(parts);
+  if (!bytes.subarray(0, 8).equals(Buffer.from([137, 80, 78, 71, 13, 10, 26, 10]))) throw new Error('插件截图不是PNG图像。');
+  await ensurePrivateRoot(root);
+  const directory = join(root, 'files');
+  await mkdir(directory, { recursive: true, mode: 0o700 });
+  await maintainTransferCache(directory);
+  const path = join(directory, `workspace-${randomUUID()}.png`);
+  const release = await leaseCacheFile(path);
+  try {
+    const handle = await open(path, 'wx', 0o600);
+    try { await handle.writeFile(bytes); }
+    catch (error) { await handle.close(); await unlink(path).catch(() => {}); throw error; }
+    await handle.close();
+    await recordCacheFile(path, { owned: true }).catch(() => {});
+    const { data, nextOffset, offset: _offset, ...metadata } = first;
+    return { ...metadata, path, image: { data: bytes.toString('base64'), mimeType: 'image/png' } };
+  } finally { await release?.(); }
+}

@@ -1,0 +1,1 @@
+select U_znr from oitm where itemcode = @Itemcode

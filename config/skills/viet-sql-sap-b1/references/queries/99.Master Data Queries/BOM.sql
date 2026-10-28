@@ -1,0 +1,25 @@
+;With RootNodeCTE(ItemCode,Num,Id,IdName,ParentId,Qty,INPUT_UNIT,WhsCode,POS_ID,PQty,scrappercent,useowndescription,MENGE_JE,INPUT_QTY) 
+As 
+( 
+Select T2.ItemCode,1 AS Num,T2.ART1_ID,T4.ItemName,T2.ItemCode,
+CAST(CAST(dbo.F_PUnitToSUnitNew(T2.ART1_ID,T2.INPUT_UNIT,T4.InvntryUom,T2.MENGE_VERBRAUCH,T2.ItemCode) AS FLOAT) / T2.MENGE_JE * 1 * (1 + (ISNULL(T2.ScrapPercent,0)/100.0)) AS FLOAT) AS Qty ,
+CASE WHEN T2.INPUT_UNIT IS NULL THEN T3.U_me_verbr ELSE T2.INPUT_UNIT END AS INPUT_UNIT,T2.WhsCode,T2.POS_ID
+,CAST(CAST(T2.MENGE_VERBRAUCH AS FLOAT) / T2.MENGE_JE * 1 * (1 + (ISNULL(T2.ScrapPercent,0)/100.0)) AS FLOAT) AS PQty
+,scrappercent,useowndescription,MENGE_JE,INPUT_QTY
+From BEAS_STL T2 
+INNER JOIN OITM T3 On T2.ItemCode = T3.ItemCode
+INNER JOIN OITM T4 ON T2.ART1_ID = T4.ItemCode
+WHERE T2.ItemCode = @Itemcode
+Union All 
+Select RootNodeCTE.ItemCode,RootNodeCTE.Num + 1 AS Num,BEAS_STL.ART1_ID,OITM.ItemName,BEAS_STL.ItemCode,
+CAST(CAST(dbo.F_PUnitToSUnitNew(BEAS_STL.ART1_ID,BEAS_STL.INPUT_UNIT,OITM.InvntryUom,BEAS_STL.MENGE_VERBRAUCH,BEAS_STL.ItemCode) AS FLOAT) / BEAS_STL.MENGE_JE * RootNodeCTE.PQty * (1 + (ISNULL(BEAS_STL.ScrapPercent,0)/100.0)) AS FLOAT),
+CASE WHEN BEAS_STL.INPUT_UNIT IS NULL THEN OITM.U_me_verbr ELSE BEAS_STL.INPUT_UNIT END AS INPUT_UNIT,BEAS_STL.WhsCode,BEAS_STL.POS_ID
+,CAST(CAST(BEAS_STL.MENGE_VERBRAUCH AS FLOAT) / BEAS_STL.MENGE_JE * RootNodeCTE.PQty * (1 + (ISNULL(BEAS_STL.ScrapPercent,0)/100.0)) AS FLOAT) AS PQty
+,BEAS_STL.scrappercent,BEAS_STL.useowndescription,BEAS_STL.MENGE_JE,BEAS_STL.INPUT_QTY
+From RootNodeCTE 
+INNER JOIN BEAS_STL
+On RootNodeCTE.Id = BEAS_STL.ItemCode 
+INNER JOIN OITM ON BEAS_STL.ART1_ID = OITM.ItemCode
+)
+
+SELECT ParentId AS itemcode,POS_ID,Id AS 'Material Code',INPUT_QTY,MENGE_JE AS 'PER',INPUT_UNIT,scrappercent,useowndescription,IdName AS description FROM RootNodeCTE

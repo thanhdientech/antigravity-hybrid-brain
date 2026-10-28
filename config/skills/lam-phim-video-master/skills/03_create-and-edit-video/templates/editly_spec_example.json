@@ -1,0 +1,56 @@
+{
+  "outPath": "output_editly_demo.mp4",
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "defaults": {
+    "transition": {
+      "name": "fade",
+      "duration": 0.5
+    }
+  },
+  "clips": [
+    {
+      "duration": 4,
+      "transition": {
+        "name": "fade",
+        "duration": 0.5
+      },
+      "layers": [
+        {
+          "type": "fill-color",
+          "color": "#0B0F19"
+        },
+        {
+          "type": "title",
+          "text": "HỆ THỐNG BIÊN TẬP VIDEO AI 2026",
+          "textColor": "#00FFCC",
+          "position": "center"
+        }
+      ]
+    },
+    {
+      "duration": 5,
+      "transition": {
+        "name": "directional-wipe",
+        "duration": 0.4
+      },
+      "layers": [
+        {
+          "type": "fill-color",
+          "color": "#111827"
+        },
+        {
+          "type": "title",
+          "text": "RENDER TỰ ĐỘNG BẰNG JSON SPEC",
+          "textColor": "#F59E0B",
+          "position": "center"
+        },
+        {
+          "type": "subtitle",
+          "text": "Tích hợp FFmpeg và GLSL Shaders không cần code giao diện"
+        }
+      ]
+    }
+  ]
+}

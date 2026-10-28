@@ -1,0 +1,10 @@
+{
+  "email_to_profile": {
+    "work_account": "work",
+    "marketing_account": "marketing"
+  },
+  "domain_to_profile": {
+    "business.facebook.com": "marketing",
+    "search.google.com": "work"
+  }
+}

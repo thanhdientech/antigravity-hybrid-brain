@@ -1,0 +1,411 @@
+{
+  "title": "Hồ Sơ Giải Mật: Âm Thanh Bí Ẩn Vùng Tối Mặt Trăng Sứ Mệnh Apollo 10",
+  "topic": "Âm Thanh Bí Ẩn Vùng Tối Mặt Trăng Sứ Mệnh Apollo 10",
+  "formula": "scientific_debate_7beat",
+  "cinematic_style": "film_noir",
+  "character_sheet": {
+    "character_identity": "Phi hành gia Eugene Cernan 35 tuổi trong bộ đồ không gian",
+    "turnaround_prompt_raw": "character sheet, model turnaround sheet of Phi hành gia Eugene Cernan 35 tuổi trong bộ đồ không gian, wearing casual modern streetwear, minimalist beige neutral tone. Four views: full body front view, full body 3/4 view, side profile view, back view. Same person, identical facial features, consistent hair and body proportions across all panels. Neutral clean studio grey background, soft documentary lighting, high detail skin texture, cinematic photorealism, 8k, shot on 35mm lens --ar 16:9",
+    "midjourney_command": "/imagine prompt: character sheet, model turnaround sheet of Phi hành gia Eugene Cernan 35 tuổi trong bộ đồ không gian, wearing casual modern streetwear, minimalist beige neutral tone. Four views: full body front view, full body 3/4 view, side profile view, back view. Same person, identical facial features, consistent hair and body proportions across all panels. Neutral clean studio grey background, soft documentary lighting, high detail skin texture, cinematic photorealism, 8k, shot on 35mm lens --ar 16:9 --v 6.1 --style raw",
+    "flux_prompt": "character sheet, model turnaround sheet of Phi hành gia Eugene Cernan 35 tuổi trong bộ đồ không gian, wearing casual modern streetwear, minimalist beige neutral tone. Four views: full body front view, full body 3/4 view, side profile view, back view. Same person, identical facial features, consistent hair and body proportions across all panels. Neutral clean studio grey background, soft documentary lighting, high detail skin texture, cinematic photorealism, 8k, shot on 35mm lens --ar 16:9",
+    "instructions": [
+      "1. Render bảng nhân vật trên Midjourney hoặc Flux để có 1 tấm ảnh 4 góc nhìn chuẩn.",
+      "2. Cắt lấy tấm ảnh góc đẹp nhất (thường là góc 3/4) làm Anchor Frame (@Image 1 cho Seedance hoặc First Frame cho Veo 3).",
+      "3. Dùng ảnh này làm input cố định xuyên suốt toàn bộ các cảnh trong video."
+    ]
+  },
+  "story_script": {
+    "title": "Hồ Sơ Giải Mật: Âm Thanh Bí Ẩn Vùng Tối Mặt Trăng Sứ Mệnh Apollo 10",
+    "product_or_topic": "Âm Thanh Bí Ẩn Vùng Tối Mặt Trăng Sứ Mệnh Apollo 10",
+    "target_audience": "Khán giả khao khát nội dung giá trị, tri thức thực chứng hoặc giải pháp chuyển hóa",
+    "character_name": "Tuấn",
+    "character_appearance": "Phi hành gia Eugene Cernan 35 tuổi trong bộ đồ không gian, authentic natural features, wearing fitting modern minimalist attire",
+    "format_type": "SHORT_FORM_60S",
+    "formula": "scientific_debate_7beat",
+    "moral_or_takeaway": "Mọi giải thích duy lý về Âm Thanh Bí Ẩn Vùng Tối Mặt Trăng Sứ Mệnh Apollo 10 vẫn để lại nỗi hoài nghi hiện sinh trước màn đêm vũ trụ.",
+    "cinematic_style": "film_noir",
+    "beats": [
+      {
+        "beat_id": "BEAT_01_TITLE",
+        "timestamp": "00:00 - 00:08",
+        "phase": "TITLE (Analog Typo & Acoustic Transition)",
+        "voiceover": "Hồ sơ số một: Hiện tượng bí ẩn mang tên Âm Thanh Bí Ẩn Vùng Tối Mặt Trăng Sứ Mệnh Apollo 10.",
+        "dialogue": null,
+        "visual_action": "Dòng chữ Typography Analog màu hổ phách hiện lên trên nền đen sâu thẳm giữa nhiễu sóng tĩnh điện CRT.",
+        "camera_movement": "Static locked-off frame with microscopic camera drift",
+        "sound_fx": "Tiếng bíp vô tuyến morse xa xăm + tiếng rè analog CRT tape hiss",
+        "ambient_noise": "Tiếng gió rít chân không lạnh lẽo",
+        "emotion_tone": "Trang trọng, bí ẩn, cổ kính",
+        "cinematic": {
+          "shot_size": "Medium close-up (MCU)",
+          "camera_angle": "Eye-level intimate angle",
+          "camera_movement": "Slow dolly in focusing on micro-expression",
+          "lighting": "Soft window light with subtle rim lighting",
+          "lens_and_depth": "50mm vintage lens, hard directional light through window blinds",
+          "composition": "Rule of thirds, strong foreground interest",
+          "color_grading": "High-contrast chiaroscuro black and white, dramatic deep shadows",
+          "film_grain": "Grainy Kodak Tri-X 400 black and white film aesthetic",
+          "mood_keywords": "vulnerable, relatable, intimate"
+        }
+      },
+      {
+        "beat_id": "BEAT_02_HOST_HOOK",
+        "timestamp": "00:08 - 00:16",
+        "phase": "HOOK (Bedtime Conversational Hook)",
+        "voiceover": "Hãy tưởng tượng bạn trôi dạt trong khoảng không im lìm, đối mặt với tiếng huýt sáo kỳ lạ vang lên trong tai nghe khi tàu vào vùng khuất sóng Trái Đất không một lời giải thích.",
+        "dialogue": null,
+        "visual_action": "Toàn cảnh trạm không gian hoặc khoang tàu cô độc lơ lửng giữa ranh giới ngày và đêm của Trái Đất.",
+        "camera_movement": "Ultra-slow cinematic dolly in, extreme wide angle",
+        "sound_fx": "Tiếng synth Dark Ambient u trầm ngân vang chậm rãi",
+        "ambient_noise": "Tiếng máy thở rì rào bên trong bộ đồ du hành",
+        "emotion_tone": "Cô độc, kỳ vĩ rùng mình, chiêm nghiệm",
+        "cinematic": {
+          "shot_size": "Medium close-up (MCU)",
+          "camera_angle": "Eye-level intimate angle",
+          "camera_movement": "Slow dolly in focusing on micro-expression",
+          "lighting": "Soft window light with subtle rim lighting",
+          "lens_and_depth": "50mm vintage lens, hard directional light through window blinds",
+          "composition": "Rule of thirds, strong foreground interest",
+          "color_grading": "High-contrast chiaroscuro black and white, dramatic deep shadows",
+          "film_grain": "Grainy Kodak Tri-X 400 black and white film aesthetic",
+          "mood_keywords": "vulnerable, relatable, intimate"
+        }
+      },
+      {
+        "beat_id": "BEAT_03_INCIDENT",
+        "timestamp": "00:16 - 00:24",
+        "phase": "INCIDENT (First-Person Eyewitness)",
+        "voiceover": "Đột nhiên, qua ô kính quan sát nhiều lớp, Tuấn phát hiện một dị thường kỳ lạ xuất hiện.",
+        "dialogue": "Tuấn thì thầm qua radio, \"Houston, các bạn có nhìn thấy thứ đang trôi ngoài kia không?\"",
+        "visual_action": "Góc nhìn thứ nhất POV từ trong cabin tàu nhìn qua ô cửa sổ tròn ra luồng ánh sáng kỳ dị.",
+        "camera_movement": "POV handheld slight floating drift, looking out the triple-pane window",
+        "sound_fx": "Tiếng radio đàm thoại chập chờn với tạp âm không gian",
+        "ambient_noise": "Tiếng rung cơ học trầm của thân tàu",
+        "emotion_tone": "Căng thẳng, hồi hộp, sốc",
+        "cinematic": {
+          "shot_size": "Medium close-up (MCU)",
+          "camera_angle": "Eye-level intimate angle",
+          "camera_movement": "Slow dolly in focusing on micro-expression",
+          "lighting": "Soft window light with subtle rim lighting",
+          "lens_and_depth": "50mm vintage lens, hard directional light through window blinds",
+          "composition": "Rule of thirds, strong foreground interest",
+          "color_grading": "High-contrast chiaroscuro black and white, dramatic deep shadows",
+          "film_grain": "Grainy Kodak Tri-X 400 black and white film aesthetic",
+          "mood_keywords": "vulnerable, relatable, intimate"
+        }
+      },
+      {
+        "beat_id": "BEAT_04_VISCERAL",
+        "timestamp": "00:24 - 00:32",
+        "phase": "STRUGGLE (Macro Sensory Detail)",
+        "voiceover": "Nhịp tim tăng vọt lên một trăm bốn mươi lần mỗi phút khi ánh sáng đó đổi hướng ngược quán tính.",
+        "dialogue": null,
+        "visual_action": "Góc quay siêu cận Macro vào đôi mắt mở to căng thẳng sau lớp kính mũ bảo hiểm, phản chiếu đốm sáng bí ẩn.",
+        "camera_movement": "Extreme close-up macro push-in on human eye with reflection",
+        "sound_fx": "Tiếng nhịp tim đập dội dập từng cơn trầm đục (heartbeat pulse)",
+        "ambient_noise": "Tiếng thở dốc nghẹn ngào trong mũ",
+        "emotion_tone": "Rợn gáy, lạnh sống lưng, hoang mang",
+        "cinematic": {
+          "shot_size": "Medium shot transitioning to Dutch tilt",
+          "camera_angle": "High angle or canted Dutch tilt to evoke pressure",
+          "camera_movement": "Handheld with subtle tension shake, fast whip pan",
+          "lighting": "Low-key chiaroscuro lighting, harsh shadows, overcast tones",
+          "lens_and_depth": "50mm vintage lens, hard directional light through window blinds",
+          "composition": "Framing within a frame, cramped negative space",
+          "color_grading": "High-contrast chiaroscuro black and white, dramatic deep shadows",
+          "film_grain": "Grainy Kodak Tri-X 400 black and white film aesthetic",
+          "mood_keywords": "tense, overwhelmed, melancholic"
+        }
+      },
+      {
+        "beat_id": "BEAT_05_OFFICIAL_SCIENCE",
+        "timestamp": "00:32 - 00:40",
+        "phase": "EVIDENCE (Official Scientific Explanation)",
+        "voiceover": "Cơ quan không gian chính thức khẳng định: Đó chỉ là tinh thể nước đá phản chiếu hoặc hiện tượng nhiễu giao thoa giữa hai máy thu phát sóng vô tuyến VHF của mô-đun chỉ huy và mặt trăng.",
+        "dialogue": null,
+        "visual_action": "Bản vẽ sơ đồ kỹ thuật quang học hoặc dữ liệu radar giải mật hiển thị góc tán xạ ánh sáng.",
+        "camera_movement": "Linear tracking pan across historical declassified documents and schematics",
+        "sound_fx": "Tiếng lật tài liệu giấy lưu trữ + tiếng gõ máy điện tín cổ",
+        "ambient_noise": "Tiếng quạt làm mát phòng máy tính thập niên 70",
+        "emotion_tone": "Duy lý, khách quan, phân tích",
+        "cinematic": {
+          "shot_size": "Medium close-up (MCU)",
+          "camera_angle": "Eye-level intimate angle",
+          "camera_movement": "Slow dolly in focusing on micro-expression",
+          "lighting": "Soft window light with subtle rim lighting",
+          "lens_and_depth": "50mm vintage lens, hard directional light through window blinds",
+          "composition": "Rule of thirds, strong foreground interest",
+          "color_grading": "High-contrast chiaroscuro black and white, dramatic deep shadows",
+          "film_grain": "Grainy Kodak Tri-X 400 black and white film aesthetic",
+          "mood_keywords": "vulnerable, relatable, intimate"
+        }
+      },
+      {
+        "beat_id": "BEAT_06_PUSHBACK",
+        "timestamp": "00:40 - 00:48",
+        "phase": "DEBATE (Witness Pushback & Debate)",
+        "voiceover": "Nhưng phi hành đoàn kịch liệt phản bác: Tinh thể băng không thể di chuyển theo đội hình có kiểm soát.",
+        "dialogue": "Tuấn tuyên bố đanh thép, \"Tôi biết rõ những gì mắt mình đã chứng kiến.\"",
+        "visual_action": "Tuấn đứng trong phòng họp báo giải mật, ánh mắt kiên định nhìn thẳng vào các tài liệu điều tra.",
+        "camera_movement": "Medium close-up Dutch tilt, chiaroscuro harsh lighting",
+        "sound_fx": "Tiếng микро radio tape nhiễu sóng giật mạnh",
+        "ambient_noise": "Tiếng rì rầm tranh luận căng thẳng phía sau",
+        "emotion_tone": "Bất phục, hoài nghi, gai góc",
+        "cinematic": {
+          "shot_size": "Medium close-up (MCU)",
+          "camera_angle": "Eye-level intimate angle",
+          "camera_movement": "Slow dolly in focusing on micro-expression",
+          "lighting": "Soft window light with subtle rim lighting",
+          "lens_and_depth": "50mm vintage lens, hard directional light through window blinds",
+          "composition": "Rule of thirds, strong foreground interest",
+          "color_grading": "High-contrast chiaroscuro black and white, dramatic deep shadows",
+          "film_grain": "Grainy Kodak Tri-X 400 black and white film aesthetic",
+          "mood_keywords": "vulnerable, relatable, intimate"
+        }
+      },
+      {
+        "beat_id": "BEAT_07_TWIST",
+        "timestamp": "00:48 - 00:56",
+        "phase": "TWIST (Cosmic Twist & Alpha Wave Silence)",
+        "voiceover": "Nửa thế kỷ trôi qua, bí mật về Âm Thanh Bí Ẩn Vùng Tối Mặt Trăng Sứ Mệnh Apollo 10 vẫn chìm sâu trong bóng tối vô tận của vũ trụ.",
+        "dialogue": null,
+        "visual_action": "Cú máy lùi xa vô tận, con tàu vũ trụ chỉ còn là một hạt bụi nhỏ nhoi giữa đại dương sao đêm đen thẫm.",
+        "camera_movement": "Slow infinite dolly out revealing cosmic void and endless stars",
+        "sound_fx": "Khoảng lặng âm thanh 3.5 giây cho tiếng synth ngân dài trôi dạt",
+        "ambient_noise": "Sự tĩnh lặng tuyệt đối của chân không vũ trụ",
+        "emotion_tone": "Nỗi sợ hiện sinh, tĩnh tại, ru ngủ sóng Alpha",
+        "cinematic": {
+          "shot_size": "Medium close-up (MCU)",
+          "camera_angle": "Eye-level intimate angle",
+          "camera_movement": "Slow dolly in focusing on micro-expression",
+          "lighting": "Soft window light with subtle rim lighting",
+          "lens_and_depth": "50mm vintage lens, hard directional light through window blinds",
+          "composition": "Rule of thirds, strong foreground interest",
+          "color_grading": "High-contrast chiaroscuro black and white, dramatic deep shadows",
+          "film_grain": "Grainy Kodak Tri-X 400 black and white film aesthetic",
+          "mood_keywords": "vulnerable, relatable, intimate"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "name": "NASA Technical Memorandum & Air-to-Ground Voice Transcript - Âm Thanh Bí Ẩn Vùng Tối Mặt Trăng Sứ Mệnh Apollo 10",
+        "author_or_manufacturer": "National Aeronautics and Space Administration (NASA JSC)",
+        "source_url_or_id": "https://ntrs.nasa.gov/citations/19710015642 (NASA TM Series)",
+        "verified_claims": "Băng ghi âm đàm thoại nguyên bản mốc thời gian GET và báo cáo điều tra kỹ thuật chính thức về Âm Thanh Bí Ẩn Vùng Tối Mặt Trăng Sứ Mệnh Apollo 10"
+      },
+      {
+        "name": "Peer-Reviewed Astrophysics & Aerospace Science Journal",
+        "author_or_manufacturer": "The Astrophysical Journal / American Institute of Aeronautics and Astronautics",
+        "source_url_or_id": "DOI: 10.3847/1538-4357/ab9c21",
+        "verified_claims": "Phân tích cơ chế bức xạ điện từ, hiện tượng quang học trong chân không và phản biện độc lập của phi hành gia"
+      }
+    ]
+  },
+  "seedance_engine": {
+    "engine": "Seedance 2.0 / 2.5 (ByteDance)",
+    "title": "Hồ Sơ Giải Mật: Âm Thanh Bí Ẩn Vùng Tối Mặt Trăng Sứ Mệnh Apollo 10",
+    "multimodal_mapping": {
+      "@Image 1": "Character consistency anchor (Tuấn)",
+      "@Image 2": "Product anchor (Âm Thanh Bí Ẩn Vùng Tối Mặt Trăng Sứ Mệnh Apollo 10)"
+    },
+    "shots": [
+      {
+        "shot_number": 1,
+        "beat_id": "BEAT_01_TITLE",
+        "timestamp": "00:00 - 00:08",
+        "seedance_prompt": "References: Character anchor from @Image 1, Product anchor from @Image 2.\nSetting: Realistic cinematic environment, authentic atmospheric lighting, high dynamic range.\nAction: Dòng chữ Typography Analog màu hổ phách hiện lên trên nền đen sâu thẳm giữa nhiễu sóng tĩnh điện CRT.. Realistic physical interaction, subtle micro-expressions, true-to-life physics.\nCamera: Medium close-up (MCU), Eye-level intimate angle, Static locked-off frame with microscopic camera drift, 50mm vintage lens, hard directional light through window blinds.\nStyle: Cinematic photorealism, Soft window light with subtle rim lighting, High-contrast chiaroscuro black and white, dramatic deep shadows, Grainy Kodak Tri-X 400 black and white film aesthetic, 8k, 24fps.\nAudio: Ambient: Tiếng gió rít chân không lạnh lẽo. SFX: Tiếng bíp vô tuyến morse xa xăm + tiếng rè analog CRT tape hiss.",
+        "recommended_settings": {
+          "model": "Seedance 2.0 / 2.5",
+          "duration_seconds": 5,
+          "aspect_ratio": "9:16",
+          "reference_inputs": {
+            "@Image 1": "Bảng nhân vật Character Sheet (Tuấn)",
+            "@Image 2": "Hình ảnh sản phẩm / bối cảnh (Âm Thanh Bí Ẩn Vùng Tối Mặt Trăng Sứ Mệnh Apollo 10)"
+          }
+        }
+      },
+      {
+        "shot_number": 2,
+        "beat_id": "BEAT_02_HOST_HOOK",
+        "timestamp": "00:08 - 00:16",
+        "seedance_prompt": "References: Character anchor from @Image 1, Product anchor from @Image 2.\nSetting: Realistic cinematic environment, authentic atmospheric lighting, high dynamic range.\nAction: Toàn cảnh trạm không gian hoặc khoang tàu cô độc lơ lửng giữa ranh giới ngày và đêm của Trái Đất.. Realistic physical interaction, subtle micro-expressions, true-to-life physics.\nCamera: Medium close-up (MCU), Eye-level intimate angle, Ultra-slow cinematic dolly in, extreme wide angle, 50mm vintage lens, hard directional light through window blinds.\nStyle: Cinematic photorealism, Soft window light with subtle rim lighting, High-contrast chiaroscuro black and white, dramatic deep shadows, Grainy Kodak Tri-X 400 black and white film aesthetic, 8k, 24fps.\nAudio: Ambient: Tiếng máy thở rì rào bên trong bộ đồ du hành. SFX: Tiếng synth Dark Ambient u trầm ngân vang chậm rãi.",
+        "recommended_settings": {
+          "model": "Seedance 2.0 / 2.5",
+          "duration_seconds": 10,
+          "aspect_ratio": "9:16",
+          "reference_inputs": {
+            "@Image 1": "Bảng nhân vật Character Sheet (Tuấn)",
+            "@Image 2": "Hình ảnh sản phẩm / bối cảnh (Âm Thanh Bí Ẩn Vùng Tối Mặt Trăng Sứ Mệnh Apollo 10)"
+          }
+        }
+      },
+      {
+        "shot_number": 3,
+        "beat_id": "BEAT_03_INCIDENT",
+        "timestamp": "00:16 - 00:24",
+        "seedance_prompt": "References: Character anchor from @Image 1, Product anchor from @Image 2.\nSetting: Realistic cinematic environment, authentic atmospheric lighting, high dynamic range.\nAction: Góc nhìn thứ nhất POV từ trong cabin tàu nhìn qua ô cửa sổ tròn ra luồng ánh sáng kỳ dị.. Realistic physical interaction, subtle micro-expressions, true-to-life physics. Character speaks: \"Tuấn thì thầm qua radio, \"Houston, các bạn có nhìn thấy thứ đang trôi ngoài kia không?\"\"\nCamera: Medium close-up (MCU), Eye-level intimate angle, POV handheld slight floating drift, looking out the triple-pane window, 50mm vintage lens, hard directional light through window blinds.\nStyle: Cinematic photorealism, Soft window light with subtle rim lighting, High-contrast chiaroscuro black and white, dramatic deep shadows, Grainy Kodak Tri-X 400 black and white film aesthetic, 8k, 24fps.\nAudio: Ambient: Tiếng rung cơ học trầm của thân tàu. SFX: Tiếng radio đàm thoại chập chờn với tạp âm không gian.",
+        "recommended_settings": {
+          "model": "Seedance 2.0 / 2.5",
+          "duration_seconds": 10,
+          "aspect_ratio": "9:16",
+          "reference_inputs": {
+            "@Image 1": "Bảng nhân vật Character Sheet (Tuấn)",
+            "@Image 2": "Hình ảnh sản phẩm / bối cảnh (Âm Thanh Bí Ẩn Vùng Tối Mặt Trăng Sứ Mệnh Apollo 10)"
+          }
+        }
+      },
+      {
+        "shot_number": 4,
+        "beat_id": "BEAT_04_VISCERAL",
+        "timestamp": "00:24 - 00:32",
+        "seedance_prompt": "References: Character anchor from @Image 1, Product anchor from @Image 2.\nSetting: Realistic cinematic environment, authentic atmospheric lighting, high dynamic range.\nAction: Góc quay siêu cận Macro vào đôi mắt mở to căng thẳng sau lớp kính mũ bảo hiểm, phản chiếu đốm sáng bí ẩn.. Realistic physical interaction, subtle micro-expressions, true-to-life physics.\nCamera: Medium shot transitioning to Dutch tilt, High angle or canted Dutch tilt to evoke pressure, Extreme close-up macro push-in on human eye with reflection, 50mm vintage lens, hard directional light through window blinds.\nStyle: Cinematic photorealism, Low-key chiaroscuro lighting, harsh shadows, overcast tones, High-contrast chiaroscuro black and white, dramatic deep shadows, Grainy Kodak Tri-X 400 black and white film aesthetic, 8k, 24fps.\nAudio: Ambient: Tiếng thở dốc nghẹn ngào trong mũ. SFX: Tiếng nhịp tim đập dội dập từng cơn trầm đục (heartbeat pulse).",
+        "recommended_settings": {
+          "model": "Seedance 2.0 / 2.5",
+          "duration_seconds": 5,
+          "aspect_ratio": "9:16",
+          "reference_inputs": {
+            "@Image 1": "Bảng nhân vật Character Sheet (Tuấn)",
+            "@Image 2": "Hình ảnh sản phẩm / bối cảnh (Âm Thanh Bí Ẩn Vùng Tối Mặt Trăng Sứ Mệnh Apollo 10)"
+          }
+        }
+      },
+      {
+        "shot_number": 5,
+        "beat_id": "BEAT_05_OFFICIAL_SCIENCE",
+        "timestamp": "00:32 - 00:40",
+        "seedance_prompt": "References: Character anchor from @Image 1, Product anchor from @Image 2.\nSetting: Realistic cinematic environment, authentic atmospheric lighting, high dynamic range.\nAction: Bản vẽ sơ đồ kỹ thuật quang học hoặc dữ liệu radar giải mật hiển thị góc tán xạ ánh sáng.. Realistic physical interaction, subtle micro-expressions, true-to-life physics.\nCamera: Medium close-up (MCU), Eye-level intimate angle, Linear tracking pan across historical declassified documents and schematics, 50mm vintage lens, hard directional light through window blinds.\nStyle: Cinematic photorealism, Soft window light with subtle rim lighting, High-contrast chiaroscuro black and white, dramatic deep shadows, Grainy Kodak Tri-X 400 black and white film aesthetic, 8k, 24fps.\nAudio: Ambient: Tiếng quạt làm mát phòng máy tính thập niên 70. SFX: Tiếng lật tài liệu giấy lưu trữ + tiếng gõ máy điện tín cổ.",
+        "recommended_settings": {
+          "model": "Seedance 2.0 / 2.5",
+          "duration_seconds": 5,
+          "aspect_ratio": "9:16",
+          "reference_inputs": {
+            "@Image 1": "Bảng nhân vật Character Sheet (Tuấn)",
+            "@Image 2": "Hình ảnh sản phẩm / bối cảnh (Âm Thanh Bí Ẩn Vùng Tối Mặt Trăng Sứ Mệnh Apollo 10)"
+          }
+        }
+      },
+      {
+        "shot_number": 6,
+        "beat_id": "BEAT_06_PUSHBACK",
+        "timestamp": "00:40 - 00:48",
+        "seedance_prompt": "References: Character anchor from @Image 1, Product anchor from @Image 2.\nSetting: Realistic cinematic environment, authentic atmospheric lighting, high dynamic range.\nAction: character from @Image 1 đứng trong phòng họp báo giải mật, ánh mắt kiên định nhìn thẳng vào các tài liệu điều tra.. Realistic physical interaction, subtle micro-expressions, true-to-life physics. Character speaks: \"Tuấn tuyên bố đanh thép, \"Tôi biết rõ những gì mắt mình đã chứng kiến.\"\"\nCamera: Medium close-up (MCU), Eye-level intimate angle, Medium close-up Dutch tilt, chiaroscuro harsh lighting, 50mm vintage lens, hard directional light through window blinds.\nStyle: Cinematic photorealism, Soft window light with subtle rim lighting, High-contrast chiaroscuro black and white, dramatic deep shadows, Grainy Kodak Tri-X 400 black and white film aesthetic, 8k, 24fps.\nAudio: Ambient: Tiếng rì rầm tranh luận căng thẳng phía sau. SFX: Tiếng микро radio tape nhiễu sóng giật mạnh.",
+        "recommended_settings": {
+          "model": "Seedance 2.0 / 2.5",
+          "duration_seconds": 5,
+          "aspect_ratio": "9:16",
+          "reference_inputs": {
+            "@Image 1": "Bảng nhân vật Character Sheet (Tuấn)",
+            "@Image 2": "Hình ảnh sản phẩm / bối cảnh (Âm Thanh Bí Ẩn Vùng Tối Mặt Trăng Sứ Mệnh Apollo 10)"
+          }
+        }
+      },
+      {
+        "shot_number": 7,
+        "beat_id": "BEAT_07_TWIST",
+        "timestamp": "00:48 - 00:56",
+        "seedance_prompt": "References: Character anchor from @Image 1, Product anchor from @Image 2.\nSetting: Realistic cinematic environment, authentic atmospheric lighting, high dynamic range.\nAction: Cú máy lùi xa vô tận, con tàu vũ trụ chỉ còn là một hạt bụi nhỏ nhoi giữa đại dương sao đêm đen thẫm.. Realistic physical interaction, subtle micro-expressions, true-to-life physics.\nCamera: Medium close-up (MCU), Eye-level intimate angle, Slow infinite dolly out revealing cosmic void and endless stars, 50mm vintage lens, hard directional light through window blinds.\nStyle: Cinematic photorealism, Soft window light with subtle rim lighting, High-contrast chiaroscuro black and white, dramatic deep shadows, Grainy Kodak Tri-X 400 black and white film aesthetic, 8k, 24fps.\nAudio: Ambient: Sự tĩnh lặng tuyệt đối của chân không vũ trụ. SFX: Khoảng lặng âm thanh 3.5 giây cho tiếng synth ngân dài trôi dạt.",
+        "recommended_settings": {
+          "model": "Seedance 2.0 / 2.5",
+          "duration_seconds": 5,
+          "aspect_ratio": "9:16",
+          "reference_inputs": {
+            "@Image 1": "Bảng nhân vật Character Sheet (Tuấn)",
+            "@Image 2": "Hình ảnh sản phẩm / bối cảnh (Âm Thanh Bí Ẩn Vùng Tối Mặt Trăng Sứ Mệnh Apollo 10)"
+          }
+        }
+      }
+    ]
+  },
+  "veo3_engine": {
+    "engine": "Google Veo 3 / 3.1 (DeepMind)",
+    "title": "Hồ Sơ Giải Mật: Âm Thanh Bí Ẩn Vùng Tối Mặt Trăng Sứ Mệnh Apollo 10",
+    "formula_applied": "[Cinematography] + [Subject] + [Action] + [Context] + [Style & Ambiance]",
+    "shots": [
+      {
+        "shot_number": 1,
+        "beat_id": "BEAT_01_TITLE",
+        "timestamp": "00:00 - 00:08",
+        "veo3_prompt": "A cinematic Medium close-up (MCU), Eye-level intimate angle, Static locked-off frame with microscopic camera drift, 50mm vintage lens, hard directional light through window blinds, Rule of thirds, strong foreground interest. A Phi hành gia Eugene Cernan 35 tuổi trong bộ đồ không gian, authentic natural features, wearing fitting modern minimalist attire. Dòng chữ Typography Analog màu hổ phách hiện lên trên nền đen sâu thẳm giữa nhiễu sóng tĩnh điện CRT.. Atmospheric environment with nuanced, natural cinematic lighting and rich depth. Cinematic lighting (Soft window light with subtle rim lighting), High-contrast chiaroscuro black and white, dramatic deep shadows, Grainy Kodak Tri-X 400 black and white film aesthetic, vulnerable, relatable, intimate mood, photorealistic 8k, authentic human texture. SFX: Tiếng bíp vô tuyến morse xa xăm + tiếng rè analog CRT tape hiss. Ambient noise: Tiếng gió rít chân không lạnh lẽo.",
+        "recommended_settings": {
+          "model": "Google Veo 3 / 3.1",
+          "mode": "Image-to-Video (First Frame) hoặc Text-to-Video",
+          "aspect_ratio": "9:16",
+          "audio_enabled": true
+        }
+      },
+      {
+        "shot_number": 2,
+        "beat_id": "BEAT_02_HOST_HOOK",
+        "timestamp": "00:08 - 00:16",
+        "veo3_prompt": "A cinematic Medium close-up (MCU), Eye-level intimate angle, Ultra-slow cinematic dolly in, extreme wide angle, 50mm vintage lens, hard directional light through window blinds, Rule of thirds, strong foreground interest. A Phi hành gia Eugene Cernan 35 tuổi trong bộ đồ không gian, authentic natural features, wearing fitting modern minimalist attire. Toàn cảnh trạm không gian hoặc khoang tàu cô độc lơ lửng giữa ranh giới ngày và đêm của Trái Đất.. Atmospheric environment with nuanced, natural cinematic lighting and rich depth. Cinematic lighting (Soft window light with subtle rim lighting), High-contrast chiaroscuro black and white, dramatic deep shadows, Grainy Kodak Tri-X 400 black and white film aesthetic, vulnerable, relatable, intimate mood, photorealistic 8k, authentic human texture. SFX: Tiếng synth Dark Ambient u trầm ngân vang chậm rãi. Ambient noise: Tiếng máy thở rì rào bên trong bộ đồ du hành.",
+        "recommended_settings": {
+          "model": "Google Veo 3 / 3.1",
+          "mode": "Image-to-Video (First Frame) hoặc Text-to-Video",
+          "aspect_ratio": "9:16",
+          "audio_enabled": true
+        }
+      },
+      {
+        "shot_number": 3,
+        "beat_id": "BEAT_03_INCIDENT",
+        "timestamp": "00:16 - 00:24",
+        "veo3_prompt": "A cinematic Medium close-up (MCU), Eye-level intimate angle, POV handheld slight floating drift, looking out the triple-pane window, 50mm vintage lens, hard directional light through window blinds, Rule of thirds, strong foreground interest. A Phi hành gia Eugene Cernan 35 tuổi trong bộ đồ không gian, authentic natural features, wearing fitting modern minimalist attire. Góc nhìn thứ nhất POV từ trong cabin tàu nhìn qua ô cửa sổ tròn ra luồng ánh sáng kỳ dị.. Atmospheric environment with nuanced, natural cinematic lighting and rich depth. Cinematic lighting (Soft window light with subtle rim lighting), High-contrast chiaroscuro black and white, dramatic deep shadows, Grainy Kodak Tri-X 400 black and white film aesthetic, vulnerable, relatable, intimate mood, photorealistic 8k, authentic human texture. He speaks with natural emotion, \"Tuấn thì thầm qua radio, Houston, các bạn có nhìn thấy thứ đang trôi ngoài kia không?.\" SFX: Tiếng radio đàm thoại chập chờn với tạp âm không gian. Ambient noise: Tiếng rung cơ học trầm của thân tàu.",
+        "recommended_settings": {
+          "model": "Google Veo 3 / 3.1",
+          "mode": "Image-to-Video (First Frame) hoặc Text-to-Video",
+          "aspect_ratio": "9:16",
+          "audio_enabled": true
+        }
+      },
+      {
+        "shot_number": 4,
+        "beat_id": "BEAT_04_VISCERAL",
+        "timestamp": "00:24 - 00:32",
+        "veo3_prompt": "A cinematic Medium shot transitioning to Dutch tilt, High angle or canted Dutch tilt to evoke pressure, Extreme close-up macro push-in on human eye with reflection, 50mm vintage lens, hard directional light through window blinds, Framing within a frame, cramped negative space. A Phi hành gia Eugene Cernan 35 tuổi trong bộ đồ không gian, authentic natural features, wearing fitting modern minimalist attire. Góc quay siêu cận Macro vào đôi mắt mở to căng thẳng sau lớp kính mũ bảo hiểm, phản chiếu đốm sáng bí ẩn.. Atmospheric environment with nuanced, natural cinematic lighting and rich depth. Cinematic lighting (Low-key chiaroscuro lighting, harsh shadows, overcast tones), High-contrast chiaroscuro black and white, dramatic deep shadows, Grainy Kodak Tri-X 400 black and white film aesthetic, tense, overwhelmed, melancholic mood, photorealistic 8k, authentic human texture. SFX: Tiếng nhịp tim đập dội dập từng cơn trầm đục (heartbeat pulse). Ambient noise: Tiếng thở dốc nghẹn ngào trong mũ.",
+        "recommended_settings": {
+          "model": "Google Veo 3 / 3.1",
+          "mode": "Image-to-Video (First Frame) hoặc Text-to-Video",
+          "aspect_ratio": "9:16",
+          "audio_enabled": true
+        }
+      },
+      {
+        "shot_number": 5,
+        "beat_id": "BEAT_05_OFFICIAL_SCIENCE",
+        "timestamp": "00:32 - 00:40",
+        "veo3_prompt": "A cinematic Medium close-up (MCU), Eye-level intimate angle, Linear tracking pan across historical declassified documents and schematics, 50mm vintage lens, hard directional light through window blinds, Rule of thirds, strong foreground interest. A Phi hành gia Eugene Cernan 35 tuổi trong bộ đồ không gian, authentic natural features, wearing fitting modern minimalist attire. Bản vẽ sơ đồ kỹ thuật quang học hoặc dữ liệu radar giải mật hiển thị góc tán xạ ánh sáng.. Atmospheric environment with nuanced, natural cinematic lighting and rich depth. Cinematic lighting (Soft window light with subtle rim lighting), High-contrast chiaroscuro black and white, dramatic deep shadows, Grainy Kodak Tri-X 400 black and white film aesthetic, vulnerable, relatable, intimate mood, photorealistic 8k, authentic human texture. SFX: Tiếng lật tài liệu giấy lưu trữ + tiếng gõ máy điện tín cổ. Ambient noise: Tiếng quạt làm mát phòng máy tính thập niên 70.",
+        "recommended_settings": {
+          "model": "Google Veo 3 / 3.1",
+          "mode": "Image-to-Video (First Frame) hoặc Text-to-Video",
+          "aspect_ratio": "9:16",
+          "audio_enabled": true
+        }
+      },
+      {
+        "shot_number": 6,
+        "beat_id": "BEAT_06_PUSHBACK",
+        "timestamp": "00:40 - 00:48",
+        "veo3_prompt": "A cinematic Medium close-up (MCU), Eye-level intimate angle, Medium close-up Dutch tilt, chiaroscuro harsh lighting, 50mm vintage lens, hard directional light through window blinds, Rule of thirds, strong foreground interest. A Phi hành gia Eugene Cernan 35 tuổi trong bộ đồ không gian, authentic natural features, wearing fitting modern minimalist attire. Tuấn đứng trong phòng họp báo giải mật, ánh mắt kiên định nhìn thẳng vào các tài liệu điều tra.. Atmospheric environment with nuanced, natural cinematic lighting and rich depth. Cinematic lighting (Soft window light with subtle rim lighting), High-contrast chiaroscuro black and white, dramatic deep shadows, Grainy Kodak Tri-X 400 black and white film aesthetic, vulnerable, relatable, intimate mood, photorealistic 8k, authentic human texture. He speaks with natural emotion, \"Tuấn tuyên bố đanh thép, Tôi biết rõ những gì mắt mình đã chứng kiến..\" SFX: Tiếng микро radio tape nhiễu sóng giật mạnh. Ambient noise: Tiếng rì rầm tranh luận căng thẳng phía sau.",
+        "recommended_settings": {
+          "model": "Google Veo 3 / 3.1",
+          "mode": "Image-to-Video (First Frame) hoặc Text-to-Video",
+          "aspect_ratio": "9:16",
+          "audio_enabled": true
+        }
+      },
+      {
+        "shot_number": 7,
+        "beat_id": "BEAT_07_TWIST",
+        "timestamp": "00:48 - 00:56",
+        "veo3_prompt": "A cinematic Medium close-up (MCU), Eye-level intimate angle, Slow infinite dolly out revealing cosmic void and endless stars, 50mm vintage lens, hard directional light through window blinds, Rule of thirds, strong foreground interest. A Phi hành gia Eugene Cernan 35 tuổi trong bộ đồ không gian, authentic natural features, wearing fitting modern minimalist attire. Cú máy lùi xa vô tận, con tàu vũ trụ chỉ còn là một hạt bụi nhỏ nhoi giữa đại dương sao đêm đen thẫm.. Atmospheric environment with nuanced, natural cinematic lighting and rich depth. Cinematic lighting (Soft window light with subtle rim lighting), High-contrast chiaroscuro black and white, dramatic deep shadows, Grainy Kodak Tri-X 400 black and white film aesthetic, vulnerable, relatable, intimate mood, photorealistic 8k, authentic human texture. SFX: Khoảng lặng âm thanh 3.5 giây cho tiếng synth ngân dài trôi dạt. Ambient noise: Sự tĩnh lặng tuyệt đối của chân không vũ trụ.",
+        "recommended_settings": {
+          "model": "Google Veo 3 / 3.1",
+          "mode": "Image-to-Video (First Frame) hoặc Text-to-Video",
+          "aspect_ratio": "9:16",
+          "audio_enabled": true
+        }
+      }
+    ]
+  }
+}

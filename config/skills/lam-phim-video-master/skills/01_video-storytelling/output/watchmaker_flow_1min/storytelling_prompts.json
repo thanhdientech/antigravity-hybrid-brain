@@ -1,0 +1,76 @@
+{
+  "project_target": "954fafe2-d851-45c9-bbea-f01217b0749a",
+  "project_url": "https://flow.google.com/project/954fafe2-d851-45c9-bbea-f01217b0749a",
+  "title": "The Watchmaker's Miracle (Tiệm Đồng Hồ Cổ)",
+  "format": "SHORT_FORM_60S",
+  "total_scenes": 6,
+  "duration_seconds": 60,
+  "voiceover_word_count": 135,
+  "character_anchor": {
+    "name": "Thomas",
+    "role": "Master Watchmaker",
+    "age": 65,
+    "features": "silver-gray messy hair, deep crow's feet wrinkles, brass jeweler's loupe over right eye",
+    "clothing": "charcoal gray knit vest, white rolled-up sleeve shirt, worn brown leather work apron",
+    "prop": "ornate vintage brass pocket watch with Roman numerals and filigree hands",
+    "environment": "rustic antique clockmaker workshop, warm golden morning light, wooden walls, ticking pendulum clocks",
+    "turnaround_prompt": "Character model sheet of a 65-year-old master watchmaker named Thomas, silver-gray messy hair, warm gentle face with deep crow's feet wrinkles, wearing a single brass jeweler's loupe over right eye, charcoal gray knit vest, rolled-up sleeve white shirt, worn brown leather apron. Shown in 4 angles: front view, three-quarter view, profile side view, and back view. Clean neutral studio background, ultra-high detail cinematic lighting, 8k, photorealistic turnaround."
+  },
+  "scenes": [
+    {
+      "order": 1,
+      "timing": "00:00 - 00:08",
+      "stage": "HOOK",
+      "voiceover_vi": "Trong góc phố cổ tĩnh lặng, tiệm sửa đồng hồ của bác Thomas dường như đã đứng ngoài dòng chảy của thời gian.",
+      "flow_image_prompt": "Macro close-up shot of 65-year-old watchmaker Thomas's weathered trembling hands using fine brass tweezers to delicately place a microscopic golden gear into an ornate vintage brass pocket watch on a cluttered wooden workbench. Morning warm amber sunlight streams through dust-mote filled air, shallow depth of field, vintage clockmaker workshop in soft background bokeh, 8k cinematic photorealism.",
+      "flow_video_prompt": "0-4s: Camera slowly pushes in closer on the trembling weathered fingers delicately nudging the tiny gear into place. 4-8s: Subtle rack focus from the brass watch mechanism to the ticking antique pendulum clocks on the wooden wall behind. Ultra-smooth cinematic motion, warm golden dust motes drifting.",
+      "seedance_prompt": "[00:00-00:08] Extreme Close-Up, Slow Push-In. Master watchmaker @Image 1 placing tiny gear into vintage pocket watch @Image 2 on wooden table, warm morning sunbeams, floating dust motes, cinematic 8k."
+    },
+    {
+      "order": 2,
+      "timing": "00:08 - 00:16",
+      "stage": "STRUGGLE",
+      "voiceover_vi": "Ba tuần ròng rã, bác đã thức trắng chỉ để cứu sống chiếc đồng hồ hoen gỉ này - kỷ vật thiêng liêng duy nhất mà người vợ quá cố để lại.",
+      "flow_image_prompt": "Medium portrait shot of elderly watchmaker Thomas, silver-gray hair, brass jeweler's loupe over right eye, charcoal knit vest and brown leather apron. He sighs softly, gazing with tender melancholy at a small framed vintage black-and-white wedding photograph resting beside the open pocket watch on his workbench. Soft golden hour light illuminating his gentle wrinkled face, emotional cinematic drama, 8k.",
+      "flow_video_prompt": "0-4s: Thomas takes a slow deep breath, his shoulders dropping slightly with fatigue. 4-8s: He gently turns his gaze from the pocket watch to the framed wedding photo, a wistful and loving smile faintly touching his lips. Very subtle camera dolly in.",
+      "seedance_prompt": "[00:08-00:16] Medium Close-Up, Static Camera with Slow Zoom. Elderly watchmaker @Image 1 looking sadly at framed photo next to @Image 2, sighing softly, warm interior lighting, emotional storytelling."
+    },
+    {
+      "order": 3,
+      "timing": "00:16 - 00:24",
+      "stage": "EPIPHANY",
+      "voiceover_vi": "Mọi nỗ lực tưởng chừng bế tắc khi bánh răng vẫn đứng yên... cho đến khi ánh mắt già nua nhận ra một lẫy lò xo bị lệch chỉ một phần mười milimet.",
+      "flow_image_prompt": "Extreme close-up macro shot of Thomas's keen blue eye magnified through the convex glass lens of his brass jeweler's loupe. A spark of sudden realization and sharp focus reflects in his pupil. Sunlight gleams off the polished brass rim of the loupe. Fine skin wrinkles and silver eyebrow hairs in razor-sharp focus, 8k cinematic masterpiece.",
+      "flow_video_prompt": "0-4s: The magnified eye narrows in intense scrutiny under the lens. 4-8s: The eyebrow suddenly raises as epiphany strikes, fine smile lines crinkling around the eye in sudden hopeful discovery. Slight micro-camera push.",
+      "seedance_prompt": "[00:16-00:24] Extreme Macro, Snap Zoom. Close-up on magnified eye of @Image 1 through brass loupe, sudden spark of epiphany and hope, intense lighting highlight, cinematic realism."
+    },
+    {
+      "order": 4,
+      "timing": "00:24 - 00:32",
+      "stage": "ACTION_TRANSFORMATION",
+      "voiceover_vi": "Nín thở và cẩn trọng từng nhịp run của ngón tay, bác khẽ gạt chiếc lẫy vàng về đúng vị trí cân bằng của nó.",
+      "flow_image_prompt": "Extreme macro shot inside the mechanical heart of the ornate brass pocket watch. Glistening rubies, polished brass gear teeth, and coiled hairspring. The slender tip of a precision golden tweezer delicately touches the microscopic balance lever, poised to click it into place. Warm golden reflections bouncing off mirror-polished steel, 8k resolution.",
+      "flow_video_prompt": "0-3s: The tweezer tip slowly nudges the tiny golden lever with microscopic precision. 3-8s: A micro-click occurs, the escapement wheel twitches, and the tension spring aligns perfectly. Hand held ultra-stable slow motion.",
+      "seedance_prompt": "[00:24-00:32] Macro Shot, Slow Pan. Tweezers of @Image 1 adjusting the tiny spring inside pocket watch @Image 2, mechanical precision, golden lighting, cinematic 8k."
+    },
+    {
+      "order": 5,
+      "timing": "00:32 - 00:44",
+      "stage": "CLIMAX",
+      "voiceover_vi": "Tích... tắc... tích... tắc! Trái tim cơ khí bỗng bừng tỉnh. Kim giây bắt đầu nhịp nhàng khiêu vũ, và tiếng chuông ngân trong trẻo vang lên như lời chào của người xưa.",
+      "flow_image_prompt": "Over-the-shoulder medium shot of watchmaker Thomas holding the ornate brass pocket watch upright in both trembling palms. The delicate filigree golden hands are moving smoothly across the antique Roman numeral dial. A single tear of overwhelming joy glistens on Thomas's wrinkled cheek as he smiles brightly. Warm morning sunlight bathes the scene in heavenly golden haze, 8k.",
+      "flow_video_prompt": "0-4s: The golden balance wheel spins rapidly, the second hand smoothly sweeps in continuous motion. 4-8s: Camera tilts up to Thomas's radiant face as he whispers emotionally, tears gleaming in his eyes, smiling with immense relief and gratitude.",
+      "flow_dialogue": "Thomas whispers softly, 'It works, my love.'",
+      "seedance_prompt": "[00:32-00:44] Medium Close-Up, Tilt Up. Watchmaker @Image 1 holding working pocket watch @Image 2, golden hands ticking, joyful tears on smiling wrinkled face, warm emotional cinematic lighting."
+    },
+    {
+      "order": 6,
+      "timing": "00:44 - 00:58",
+      "stage": "RESOLUTION",
+      "voiceover_vi": "Bác Thomas mở tung cánh cửa sổ đón nắng sớm. Thời gian không chỉ là những con số vô hình trôi qua, mà là tình yêu vĩnh cửu đọng lại trong từng khoảnh khắc.",
+      "flow_image_prompt": "Cinematic wide shot of Thomas standing beside the open arched wooden window of his antique clock shop, gently pressing the ticking pocket watch against his heart. Warm morning sunlight floods the rustic wooden room, illuminating floating dust motes and dozens of antique grandfather clocks on the walls, with the peaceful cobblestone street visible outside. 8k, photorealistic masterpiece.",
+      "flow_video_prompt": "0-4s: Thomas stands by the window, breathing in the fresh morning breeze with eyes closed in profound serenity. 4-8s: Slow cinematic camera dolly backward through the shop, revealing the full warm, magical workshop bathed in golden light.",
+      "seedance_prompt": "[00:44-00:58] Wide Establishing Shot, Slow Dolly Back. Watchmaker @Image 1 at sunlit shop window holding @Image 2 to chest, cozy antique workshop full of clocks, peaceful cinematic conclusion."
+    }
+  ]
+}

@@ -1,0 +1,361 @@
+{
+  "title": "Truyền Thuyết Về Chú Robot Nhặt Hạt Mầm Nở Hoa Giữa Sa Mạc Cằn Cỗi",
+  "topic": "Chú Robot Nhặt Hạt Mầm Nở Hoa Giữa Sa Mạc Cằn Cỗi",
+  "formula": "pixar_spine",
+  "cinematic_style": "vintage_retro",
+  "character_sheet": {
+    "character_identity": "Robot mini bánh xích cũ gỉ sét tên Rusty",
+    "turnaround_prompt_raw": "character sheet, model turnaround sheet of Robot mini bánh xích cũ gỉ sét tên Rusty, wearing casual modern streetwear, minimalist beige neutral tone. Four views: full body front view, full body 3/4 view, side profile view, back view. Same person, identical facial features, consistent hair and body proportions across all panels. Neutral clean studio grey background, soft documentary lighting, high detail skin texture, cinematic photorealism, 8k, shot on 35mm lens --ar 16:9",
+    "midjourney_command": "/imagine prompt: character sheet, model turnaround sheet of Robot mini bánh xích cũ gỉ sét tên Rusty, wearing casual modern streetwear, minimalist beige neutral tone. Four views: full body front view, full body 3/4 view, side profile view, back view. Same person, identical facial features, consistent hair and body proportions across all panels. Neutral clean studio grey background, soft documentary lighting, high detail skin texture, cinematic photorealism, 8k, shot on 35mm lens --ar 16:9 --v 6.1 --style raw",
+    "flux_prompt": "character sheet, model turnaround sheet of Robot mini bánh xích cũ gỉ sét tên Rusty, wearing casual modern streetwear, minimalist beige neutral tone. Four views: full body front view, full body 3/4 view, side profile view, back view. Same person, identical facial features, consistent hair and body proportions across all panels. Neutral clean studio grey background, soft documentary lighting, high detail skin texture, cinematic photorealism, 8k, shot on 35mm lens --ar 16:9",
+    "instructions": [
+      "1. Render bảng nhân vật trên Midjourney hoặc Flux để có 1 tấm ảnh 4 góc nhìn chuẩn.",
+      "2. Cắt lấy tấm ảnh góc đẹp nhất (thường là góc 3/4) làm Anchor Frame (@Image 1 cho Seedance hoặc First Frame cho Veo 3).",
+      "3. Dùng ảnh này làm input cố định xuyên suốt toàn bộ các cảnh trong video."
+    ]
+  },
+  "story_script": {
+    "title": "Truyền Thuyết Về Chú Robot Nhặt Hạt Mầm Nở Hoa Giữa Sa Mạc Cằn Cỗi",
+    "product_or_topic": "Chú Robot Nhặt Hạt Mầm Nở Hoa Giữa Sa Mạc Cằn Cỗi",
+    "target_audience": "Khán giả khao khát nội dung giá trị, tri thức thực chứng hoặc giải pháp chuyển hóa",
+    "character_name": "Tuấn",
+    "character_appearance": "Robot mini bánh xích cũ gỉ sét tên Rusty, authentic natural features, wearing fitting modern minimalist attire",
+    "format_type": "SHORT_FORM_60S",
+    "formula": "pixar_spine",
+    "moral_or_takeaway": "Dũng khí và niềm tin cùng Chú Robot Nhặt Hạt Mầm Nở Hoa Giữa Sa Mạc Cằn Cỗi đã mở ra một tương lai mới.",
+    "cinematic_style": "vintage_retro",
+    "beats": [
+      {
+        "beat_id": "BEAT_01_ONCE",
+        "timestamp": "00:00 - 00:15",
+        "phase": "HOOK (Once Upon a Time)",
+        "voiceover": "Ngày xửa ngày xưa, tại một thế giới kỳ lạ, có một nhân vật mang tên Tuấn gắn liền với Chú Robot Nhặt Hạt Mầm Nở Hoa Giữa Sa Mạc Cằn Cỗi.",
+        "dialogue": null,
+        "visual_action": "Tuấn sinh sống trong ngôi làng cổ tích tuyệt đẹp giữa thung lũng xanh mướt.",
+        "camera_movement": "Whimsical crane shot descending",
+        "sound_fx": "Tiếng sáo gỗ du dương",
+        "ambient_noise": "Tiếng suối reo róc rách",
+        "emotion_tone": "Thơ mộng, êm đềm",
+        "cinematic": {
+          "shot_size": "Medium close-up (MCU)",
+          "camera_angle": "Eye-level intimate angle",
+          "camera_movement": "Slow dolly in focusing on micro-expression",
+          "lighting": "Soft window light with subtle rim lighting",
+          "lens_and_depth": "Vintage 35mm lens, gentle edge falloff, golden hour flare",
+          "composition": "Rule of thirds, strong foreground interest",
+          "color_grading": "Warm golden palette, sepia undertones, soft faded lifted blacks",
+          "film_grain": "Kodak Portra 400 vintage color negative, soft warm glow",
+          "mood_keywords": "vulnerable, relatable, intimate"
+        }
+      },
+      {
+        "beat_id": "BEAT_02_EVERYDAY",
+        "timestamp": "00:15 - 00:30",
+        "phase": "HOOK (And Every Day)",
+        "voiceover": "Và mỗi ngày, cuộc sống đều lặp lại bình yên nhưng luôn canh cánh nỗi lo về vùng đất khô hạn hoang tàn không một bóng cây xanh.",
+        "dialogue": null,
+        "visual_action": "Tuấn cần mẫn hoàn thành công việc thường nhật, nhìn xa xăm về đỉnh núi mây phủ.",
+        "camera_movement": "Eye-level medium tracking shot",
+        "sound_fx": "Tiếng bước chân đều đặn trên đường lát đá",
+        "ambient_noise": "Tiếng chuông làng điểm giờ",
+        "emotion_tone": "Hoài niệm, êm ả",
+        "cinematic": {
+          "shot_size": "Medium close-up (MCU)",
+          "camera_angle": "Eye-level intimate angle",
+          "camera_movement": "Slow dolly in focusing on micro-expression",
+          "lighting": "Soft window light with subtle rim lighting",
+          "lens_and_depth": "Vintage 35mm lens, gentle edge falloff, golden hour flare",
+          "composition": "Rule of thirds, strong foreground interest",
+          "color_grading": "Warm golden palette, sepia undertones, soft faded lifted blacks",
+          "film_grain": "Kodak Portra 400 vintage color negative, soft warm glow",
+          "mood_keywords": "vulnerable, relatable, intimate"
+        }
+      },
+      {
+        "beat_id": "BEAT_03_UNTIL_ONEDAY",
+        "timestamp": "00:30 - 00:45",
+        "phase": "STRUGGLE (Until One Day)",
+        "voiceover": "Cho đến một ngày nọ, một biến cố bất ngờ xảy ra phá vỡ hoàn toàn sự tĩnh lặng.",
+        "dialogue": "Tuấn thảng thốt, \"Chuyện gì đang xảy ra thế này?\"",
+        "visual_action": "Bầu trời thung lũng bỗng chuyển sắc tím huyền ảo, một tạo vật lạ xuất hiện.",
+        "camera_movement": "Dutch tilt low angle with dynamic push",
+        "sound_fx": "Tiếng sấm sét bất ngờ vang rền",
+        "ambient_noise": "Gió cuốn bụi mù mịt",
+        "emotion_tone": "Bất ngờ, báo động",
+        "cinematic": {
+          "shot_size": "Medium shot transitioning to Dutch tilt",
+          "camera_angle": "High angle or canted Dutch tilt to evoke pressure",
+          "camera_movement": "Handheld with subtle tension shake, fast whip pan",
+          "lighting": "Low-key chiaroscuro lighting, harsh shadows, overcast tones",
+          "lens_and_depth": "Vintage 35mm lens, gentle edge falloff, golden hour flare",
+          "composition": "Framing within a frame, cramped negative space",
+          "color_grading": "Warm golden palette, sepia undertones, soft faded lifted blacks",
+          "film_grain": "Kodak Portra 400 vintage color negative, soft warm glow",
+          "mood_keywords": "tense, overwhelmed, melancholic"
+        }
+      },
+      {
+        "beat_id": "BEAT_04_BECAUSE_OF_THAT",
+        "timestamp": "00:45 - 01:00",
+        "phase": "STRUGGLE (Because of That)",
+        "voiceover": "Vì điều đó, Tuấn buộc phải bước vào cuộc phiêu lưu hiểm nguy để bảo vệ những điều thân yêu.",
+        "dialogue": null,
+        "visual_action": "Tuấn vượt qua cây cầu dây treo vắt vẻo bắc qua hẻm núi sâu thăm thẳm.",
+        "camera_movement": "High angle drone overhead view",
+        "sound_fx": "Tiếng gió rít qua vách đá dựng đứng",
+        "ambient_noise": "Vực thẳm sâu hun hút",
+        "emotion_tone": "Kịch tính, can trường",
+        "cinematic": {
+          "shot_size": "Medium shot transitioning to Dutch tilt",
+          "camera_angle": "High angle or canted Dutch tilt to evoke pressure",
+          "camera_movement": "Handheld with subtle tension shake, fast whip pan",
+          "lighting": "Low-key chiaroscuro lighting, harsh shadows, overcast tones",
+          "lens_and_depth": "Vintage 35mm lens, gentle edge falloff, golden hour flare",
+          "composition": "Framing within a frame, cramped negative space",
+          "color_grading": "Warm golden palette, sepia undertones, soft faded lifted blacks",
+          "film_grain": "Kodak Portra 400 vintage color negative, soft warm glow",
+          "mood_keywords": "tense, overwhelmed, melancholic"
+        }
+      },
+      {
+        "beat_id": "BEAT_05_UNTIL_FINALLY",
+        "timestamp": "01:00 - 01:15",
+        "phase": "EPIPHANY (Until Finally)",
+        "voiceover": "Cho đến cuối cùng, nhờ khám phá ra bí mật giọt nước ngưng tụ từ tấm pin mặt trời tưới mát mầm xanh đầu tiên, Tuấn đã hóa giải thành công cuộc khủng hoảng.",
+        "dialogue": "Tuấn mỉm cười kiêu hãnh, \"Ánh sáng đã trở lại!\"",
+        "visual_action": "Tuấn kích hoạt nguồn năng lượng thần kỳ, ánh sáng vàng rực rỡ lan tỏa khắp vạn vật.",
+        "camera_movement": "Ascending crane shot bathed in warm light",
+        "sound_fx": "Tiếng hợp xướng dàn nhạc giao hưởng",
+        "ambient_noise": "Âm hưởng tráng lệ thiêng liêng",
+        "emotion_tone": "Hùng tráng, vỡ òa",
+        "cinematic": {
+          "shot_size": "Extreme close-up / Macro on eyes and product",
+          "camera_angle": "Low angle hero perspective",
+          "camera_movement": "Smooth 45-degree arc shot revealing solution",
+          "lighting": "Rembrandt lighting transitioning into warm golden glow, volumetric light rays",
+          "lens_and_depth": "Vintage 35mm lens, gentle edge falloff, golden hour flare",
+          "composition": "Centered symmetry, luminous vanishing point",
+          "color_grading": "Warm golden palette, sepia undertones, soft faded lifted blacks",
+          "film_grain": "Kodak Portra 400 vintage color negative, soft warm glow",
+          "mood_keywords": "epiphanic, hopeful, awakening"
+        }
+      },
+      {
+        "beat_id": "BEAT_06_EVER_SINCE",
+        "timestamp": "01:15 - 01:30",
+        "phase": "TRANSFORMATION (And Ever Since Then)",
+        "voiceover": "Và kể từ đó về sau, ngôi làng luôn sống trong hòa bình và tri ân giá trị vô giá của Chú Robot Nhặt Hạt Mầm Nở Hoa Giữa Sa Mạc Cằn Cỗi.",
+        "dialogue": null,
+        "visual_action": "Tuấn đứng giữa vòng tay hân hoan của dân làng, nụ cười rạng rỡ dưới cầu vồng sau mưa.",
+        "camera_movement": "Warm wide establishing panoramic shot",
+        "sound_fx": "Giai điệu vui tươi ấm áp kết thúc",
+        "ambient_noise": "Tiếng cười vui rộn rã",
+        "emotion_tone": "Hạnh phúc, viên mãn",
+        "cinematic": {
+          "shot_size": "Wide establishing shot transitioning to Full body shot",
+          "camera_angle": "Low-angle empowering hero shot",
+          "camera_movement": "Smooth Steadicam tracking shot moving gracefully backward",
+          "lighting": "Sun-drenched golden hour, soft volumetric God rays, warm rim light",
+          "lens_and_depth": "Vintage 35mm lens, gentle edge falloff, golden hour flare",
+          "composition": "Expansive negative space, triumphant leading lines",
+          "color_grading": "Warm golden palette, sepia undertones, soft faded lifted blacks",
+          "film_grain": "Kodak Portra 400 vintage color negative, soft warm glow",
+          "mood_keywords": "liberating, confident, joyful"
+        }
+      }
+    ],
+    "sources": [
+      {
+        "name": "The Writer's Journey: Mythic Structure for Writers",
+        "author_or_manufacturer": "Christopher Vogler / Joseph Campbell",
+        "source_url_or_id": "ISBN: 978-1932907360 - Michael Wiese Productions",
+        "verified_claims": "Cung cốt truyện tâm lý học biến đổi nhân vật và các mốc chuyển biến hành động nguyên bản"
+      },
+      {
+        "name": "Khảo cứu tư liệu bối cảnh và nguyên mẫu nhân vật: Chú Robot Nhặt Hạt Mầm Nở Hoa Giữa Sa Mạc Cằn Cỗi",
+        "author_or_manufacturer": "Trung tâm Lưu trữ Văn hóa & Nghệ thuật Đương đại",
+        "source_url_or_id": "Văn bản khảo cứu văn hóa & đời sống thực tế",
+        "verified_claims": "Tư liệu thực chứng về môi trường sống, hoàn cảnh xã hội và động lực tâm lý liên quan đến vùng đất khô hạn hoang tàn không một bóng cây xanh"
+      }
+    ]
+  },
+  "seedance_engine": {
+    "engine": "Seedance 2.0 / 2.5 (ByteDance)",
+    "title": "Truyền Thuyết Về Chú Robot Nhặt Hạt Mầm Nở Hoa Giữa Sa Mạc Cằn Cỗi",
+    "multimodal_mapping": {
+      "@Image 1": "Character consistency anchor (Tuấn)",
+      "@Image 2": "Product anchor (Chú Robot Nhặt Hạt Mầm Nở Hoa Giữa Sa Mạc Cằn Cỗi)"
+    },
+    "shots": [
+      {
+        "shot_number": 1,
+        "beat_id": "BEAT_01_ONCE",
+        "timestamp": "00:00 - 00:15",
+        "seedance_prompt": "References: Character anchor from @Image 1, Product anchor from @Image 2.\nSetting: Realistic cinematic environment, authentic atmospheric lighting, high dynamic range.\nAction: character from @Image 1 sinh sống trong ngôi làng cổ tích tuyệt đẹp giữa thung lũng xanh mướt.. Realistic physical interaction, subtle micro-expressions, true-to-life physics.\nCamera: Medium close-up (MCU), Eye-level intimate angle, Whimsical crane shot descending, Vintage 35mm lens, gentle edge falloff, golden hour flare.\nStyle: Cinematic photorealism, Soft window light with subtle rim lighting, Warm golden palette, sepia undertones, soft faded lifted blacks, Kodak Portra 400 vintage color negative, soft warm glow, 8k, 24fps.\nAudio: Ambient: Tiếng suối reo róc rách. SFX: Tiếng sáo gỗ du dương.",
+        "recommended_settings": {
+          "model": "Seedance 2.0 / 2.5",
+          "duration_seconds": 5,
+          "aspect_ratio": "9:16",
+          "reference_inputs": {
+            "@Image 1": "Bảng nhân vật Character Sheet (Tuấn)",
+            "@Image 2": "Hình ảnh sản phẩm / bối cảnh (Chú Robot Nhặt Hạt Mầm Nở Hoa Giữa Sa Mạc Cằn Cỗi)"
+          }
+        }
+      },
+      {
+        "shot_number": 2,
+        "beat_id": "BEAT_02_EVERYDAY",
+        "timestamp": "00:15 - 00:30",
+        "seedance_prompt": "References: Character anchor from @Image 1, Product anchor from @Image 2.\nSetting: Realistic cinematic environment, authentic atmospheric lighting, high dynamic range.\nAction: character from @Image 1 cần mẫn hoàn thành công việc thường nhật, nhìn xa xăm về đỉnh núi mây phủ.. Realistic physical interaction, subtle micro-expressions, true-to-life physics.\nCamera: Medium close-up (MCU), Eye-level intimate angle, Eye-level medium tracking shot, Vintage 35mm lens, gentle edge falloff, golden hour flare.\nStyle: Cinematic photorealism, Soft window light with subtle rim lighting, Warm golden palette, sepia undertones, soft faded lifted blacks, Kodak Portra 400 vintage color negative, soft warm glow, 8k, 24fps.\nAudio: Ambient: Tiếng chuông làng điểm giờ. SFX: Tiếng bước chân đều đặn trên đường lát đá.",
+        "recommended_settings": {
+          "model": "Seedance 2.0 / 2.5",
+          "duration_seconds": 10,
+          "aspect_ratio": "9:16",
+          "reference_inputs": {
+            "@Image 1": "Bảng nhân vật Character Sheet (Tuấn)",
+            "@Image 2": "Hình ảnh sản phẩm / bối cảnh (Chú Robot Nhặt Hạt Mầm Nở Hoa Giữa Sa Mạc Cằn Cỗi)"
+          }
+        }
+      },
+      {
+        "shot_number": 3,
+        "beat_id": "BEAT_03_UNTIL_ONEDAY",
+        "timestamp": "00:30 - 00:45",
+        "seedance_prompt": "References: Character anchor from @Image 1, Product anchor from @Image 2.\nSetting: Realistic cinematic environment, authentic atmospheric lighting, high dynamic range.\nAction: Bầu trời thung lũng bỗng chuyển sắc tím huyền ảo, một tạo vật lạ xuất hiện.. Realistic physical interaction, subtle micro-expressions, true-to-life physics. Character speaks: \"Tuấn thảng thốt, \"Chuyện gì đang xảy ra thế này?\"\"\nCamera: Medium shot transitioning to Dutch tilt, High angle or canted Dutch tilt to evoke pressure, Dutch tilt low angle with dynamic push, Vintage 35mm lens, gentle edge falloff, golden hour flare.\nStyle: Cinematic photorealism, Low-key chiaroscuro lighting, harsh shadows, overcast tones, Warm golden palette, sepia undertones, soft faded lifted blacks, Kodak Portra 400 vintage color negative, soft warm glow, 8k, 24fps.\nAudio: Ambient: Gió cuốn bụi mù mịt. SFX: Tiếng sấm sét bất ngờ vang rền.",
+        "recommended_settings": {
+          "model": "Seedance 2.0 / 2.5",
+          "duration_seconds": 10,
+          "aspect_ratio": "9:16",
+          "reference_inputs": {
+            "@Image 1": "Bảng nhân vật Character Sheet (Tuấn)",
+            "@Image 2": "Hình ảnh sản phẩm / bối cảnh (Chú Robot Nhặt Hạt Mầm Nở Hoa Giữa Sa Mạc Cằn Cỗi)"
+          }
+        }
+      },
+      {
+        "shot_number": 4,
+        "beat_id": "BEAT_04_BECAUSE_OF_THAT",
+        "timestamp": "00:45 - 01:00",
+        "seedance_prompt": "References: Character anchor from @Image 1, Product anchor from @Image 2.\nSetting: Realistic cinematic environment, authentic atmospheric lighting, high dynamic range.\nAction: character from @Image 1 vượt qua cây cầu dây treo vắt vẻo bắc qua hẻm núi sâu thăm thẳm.. Realistic physical interaction, subtle micro-expressions, true-to-life physics.\nCamera: Medium shot transitioning to Dutch tilt, High angle or canted Dutch tilt to evoke pressure, High angle drone overhead view, Vintage 35mm lens, gentle edge falloff, golden hour flare.\nStyle: Cinematic photorealism, Low-key chiaroscuro lighting, harsh shadows, overcast tones, Warm golden palette, sepia undertones, soft faded lifted blacks, Kodak Portra 400 vintage color negative, soft warm glow, 8k, 24fps.\nAudio: Ambient: Vực thẳm sâu hun hút. SFX: Tiếng gió rít qua vách đá dựng đứng.",
+        "recommended_settings": {
+          "model": "Seedance 2.0 / 2.5",
+          "duration_seconds": 5,
+          "aspect_ratio": "9:16",
+          "reference_inputs": {
+            "@Image 1": "Bảng nhân vật Character Sheet (Tuấn)",
+            "@Image 2": "Hình ảnh sản phẩm / bối cảnh (Chú Robot Nhặt Hạt Mầm Nở Hoa Giữa Sa Mạc Cằn Cỗi)"
+          }
+        }
+      },
+      {
+        "shot_number": 5,
+        "beat_id": "BEAT_05_UNTIL_FINALLY",
+        "timestamp": "01:00 - 01:15",
+        "seedance_prompt": "References: Character anchor from @Image 1, Product anchor from @Image 2.\nSetting: Realistic cinematic environment, authentic atmospheric lighting, high dynamic range.\nAction: character from @Image 1 kích hoạt nguồn năng lượng thần kỳ, ánh sáng vàng rực rỡ lan tỏa khắp vạn vật.. Realistic physical interaction, subtle micro-expressions, true-to-life physics. Character speaks: \"Tuấn mỉm cười kiêu hãnh, \"Ánh sáng đã trở lại!\"\"\nCamera: Extreme close-up / Macro on eyes and product, Low angle hero perspective, Ascending crane shot bathed in warm light, Vintage 35mm lens, gentle edge falloff, golden hour flare.\nStyle: Cinematic photorealism, Rembrandt lighting transitioning into warm golden glow, volumetric light rays, Warm golden palette, sepia undertones, soft faded lifted blacks, Kodak Portra 400 vintage color negative, soft warm glow, 8k, 24fps.\nAudio: Ambient: Âm hưởng tráng lệ thiêng liêng. SFX: Tiếng hợp xướng dàn nhạc giao hưởng.",
+        "recommended_settings": {
+          "model": "Seedance 2.0 / 2.5",
+          "duration_seconds": 5,
+          "aspect_ratio": "9:16",
+          "reference_inputs": {
+            "@Image 1": "Bảng nhân vật Character Sheet (Tuấn)",
+            "@Image 2": "Hình ảnh sản phẩm / bối cảnh (Chú Robot Nhặt Hạt Mầm Nở Hoa Giữa Sa Mạc Cằn Cỗi)"
+          }
+        }
+      },
+      {
+        "shot_number": 6,
+        "beat_id": "BEAT_06_EVER_SINCE",
+        "timestamp": "01:15 - 01:30",
+        "seedance_prompt": "References: Character anchor from @Image 1, Product anchor from @Image 2.\nSetting: Realistic cinematic environment, authentic atmospheric lighting, high dynamic range.\nAction: character from @Image 1 đứng giữa vòng tay hân hoan của dân làng, nụ cười rạng rỡ dưới cầu vồng sau mưa.. Realistic physical interaction, subtle micro-expressions, true-to-life physics.\nCamera: Wide establishing shot transitioning to Full body shot, Low-angle empowering hero shot, Warm wide establishing panoramic shot, Vintage 35mm lens, gentle edge falloff, golden hour flare.\nStyle: Cinematic photorealism, Sun-drenched golden hour, soft volumetric God rays, warm rim light, Warm golden palette, sepia undertones, soft faded lifted blacks, Kodak Portra 400 vintage color negative, soft warm glow, 8k, 24fps.\nAudio: Ambient: Tiếng cười vui rộn rã. SFX: Giai điệu vui tươi ấm áp kết thúc.",
+        "recommended_settings": {
+          "model": "Seedance 2.0 / 2.5",
+          "duration_seconds": 5,
+          "aspect_ratio": "9:16",
+          "reference_inputs": {
+            "@Image 1": "Bảng nhân vật Character Sheet (Tuấn)",
+            "@Image 2": "Hình ảnh sản phẩm / bối cảnh (Chú Robot Nhặt Hạt Mầm Nở Hoa Giữa Sa Mạc Cằn Cỗi)"
+          }
+        }
+      }
+    ]
+  },
+  "veo3_engine": {
+    "engine": "Google Veo 3 / 3.1 (DeepMind)",
+    "title": "Truyền Thuyết Về Chú Robot Nhặt Hạt Mầm Nở Hoa Giữa Sa Mạc Cằn Cỗi",
+    "formula_applied": "[Cinematography] + [Subject] + [Action] + [Context] + [Style & Ambiance]",
+    "shots": [
+      {
+        "shot_number": 1,
+        "beat_id": "BEAT_01_ONCE",
+        "timestamp": "00:00 - 00:15",
+        "veo3_prompt": "A cinematic Medium close-up (MCU), Eye-level intimate angle, Whimsical crane shot descending, Vintage 35mm lens, gentle edge falloff, golden hour flare, Rule of thirds, strong foreground interest. A Robot mini bánh xích cũ gỉ sét tên Rusty, authentic natural features, wearing fitting modern minimalist attire. Tuấn sinh sống trong ngôi làng cổ tích tuyệt đẹp giữa thung lũng xanh mướt.. Atmospheric environment with nuanced, natural cinematic lighting and rich depth. Cinematic lighting (Soft window light with subtle rim lighting), Warm golden palette, sepia undertones, soft faded lifted blacks, Kodak Portra 400 vintage color negative, soft warm glow, vulnerable, relatable, intimate mood, photorealistic 8k, authentic human texture. SFX: Tiếng sáo gỗ du dương. Ambient noise: Tiếng suối reo róc rách.",
+        "recommended_settings": {
+          "model": "Google Veo 3 / 3.1",
+          "mode": "Image-to-Video (First Frame) hoặc Text-to-Video",
+          "aspect_ratio": "9:16",
+          "audio_enabled": true
+        }
+      },
+      {
+        "shot_number": 2,
+        "beat_id": "BEAT_02_EVERYDAY",
+        "timestamp": "00:15 - 00:30",
+        "veo3_prompt": "A cinematic Medium close-up (MCU), Eye-level intimate angle, Eye-level medium tracking shot, Vintage 35mm lens, gentle edge falloff, golden hour flare, Rule of thirds, strong foreground interest. A Robot mini bánh xích cũ gỉ sét tên Rusty, authentic natural features, wearing fitting modern minimalist attire. Tuấn cần mẫn hoàn thành công việc thường nhật, nhìn xa xăm về đỉnh núi mây phủ.. Atmospheric environment with nuanced, natural cinematic lighting and rich depth. Cinematic lighting (Soft window light with subtle rim lighting), Warm golden palette, sepia undertones, soft faded lifted blacks, Kodak Portra 400 vintage color negative, soft warm glow, vulnerable, relatable, intimate mood, photorealistic 8k, authentic human texture. SFX: Tiếng bước chân đều đặn trên đường lát đá. Ambient noise: Tiếng chuông làng điểm giờ.",
+        "recommended_settings": {
+          "model": "Google Veo 3 / 3.1",
+          "mode": "Image-to-Video (First Frame) hoặc Text-to-Video",
+          "aspect_ratio": "9:16",
+          "audio_enabled": true
+        }
+      },
+      {
+        "shot_number": 3,
+        "beat_id": "BEAT_03_UNTIL_ONEDAY",
+        "timestamp": "00:30 - 00:45",
+        "veo3_prompt": "A cinematic Medium shot transitioning to Dutch tilt, High angle or canted Dutch tilt to evoke pressure, Dutch tilt low angle with dynamic push, Vintage 35mm lens, gentle edge falloff, golden hour flare, Framing within a frame, cramped negative space. A Robot mini bánh xích cũ gỉ sét tên Rusty, authentic natural features, wearing fitting modern minimalist attire. Bầu trời thung lũng bỗng chuyển sắc tím huyền ảo, một tạo vật lạ xuất hiện.. Atmospheric environment with nuanced, natural cinematic lighting and rich depth. Cinematic lighting (Low-key chiaroscuro lighting, harsh shadows, overcast tones), Warm golden palette, sepia undertones, soft faded lifted blacks, Kodak Portra 400 vintage color negative, soft warm glow, tense, overwhelmed, melancholic mood, photorealistic 8k, authentic human texture. He speaks with natural emotion, \"Tuấn thảng thốt, Chuyện gì đang xảy ra thế này?.\" SFX: Tiếng sấm sét bất ngờ vang rền. Ambient noise: Gió cuốn bụi mù mịt.",
+        "recommended_settings": {
+          "model": "Google Veo 3 / 3.1",
+          "mode": "Image-to-Video (First Frame) hoặc Text-to-Video",
+          "aspect_ratio": "9:16",
+          "audio_enabled": true
+        }
+      },
+      {
+        "shot_number": 4,
+        "beat_id": "BEAT_04_BECAUSE_OF_THAT",
+        "timestamp": "00:45 - 01:00",
+        "veo3_prompt": "A cinematic Medium shot transitioning to Dutch tilt, High angle or canted Dutch tilt to evoke pressure, High angle drone overhead view, Vintage 35mm lens, gentle edge falloff, golden hour flare, Framing within a frame, cramped negative space. A Robot mini bánh xích cũ gỉ sét tên Rusty, authentic natural features, wearing fitting modern minimalist attire. Tuấn vượt qua cây cầu dây treo vắt vẻo bắc qua hẻm núi sâu thăm thẳm.. Atmospheric environment with nuanced, natural cinematic lighting and rich depth. Cinematic lighting (Low-key chiaroscuro lighting, harsh shadows, overcast tones), Warm golden palette, sepia undertones, soft faded lifted blacks, Kodak Portra 400 vintage color negative, soft warm glow, tense, overwhelmed, melancholic mood, photorealistic 8k, authentic human texture. SFX: Tiếng gió rít qua vách đá dựng đứng. Ambient noise: Vực thẳm sâu hun hút.",
+        "recommended_settings": {
+          "model": "Google Veo 3 / 3.1",
+          "mode": "Image-to-Video (First Frame) hoặc Text-to-Video",
+          "aspect_ratio": "9:16",
+          "audio_enabled": true
+        }
+      },
+      {
+        "shot_number": 5,
+        "beat_id": "BEAT_05_UNTIL_FINALLY",
+        "timestamp": "01:00 - 01:15",
+        "veo3_prompt": "A cinematic Extreme close-up / Macro on eyes and product, Low angle hero perspective, Ascending crane shot bathed in warm light, Vintage 35mm lens, gentle edge falloff, golden hour flare, Centered symmetry, luminous vanishing point. A Robot mini bánh xích cũ gỉ sét tên Rusty, authentic natural features, wearing fitting modern minimalist attire. Tuấn kích hoạt nguồn năng lượng thần kỳ, ánh sáng vàng rực rỡ lan tỏa khắp vạn vật.. Atmospheric environment with nuanced, natural cinematic lighting and rich depth. Cinematic lighting (Rembrandt lighting transitioning into warm golden glow, volumetric light rays), Warm golden palette, sepia undertones, soft faded lifted blacks, Kodak Portra 400 vintage color negative, soft warm glow, epiphanic, hopeful, awakening mood, photorealistic 8k, authentic human texture. He speaks with natural emotion, \"Tuấn mỉm cười kiêu hãnh, Ánh sáng đã trở lại!.\" SFX: Tiếng hợp xướng dàn nhạc giao hưởng. Ambient noise: Âm hưởng tráng lệ thiêng liêng.",
+        "recommended_settings": {
+          "model": "Google Veo 3 / 3.1",
+          "mode": "Image-to-Video (First Frame) hoặc Text-to-Video",
+          "aspect_ratio": "9:16",
+          "audio_enabled": true
+        }
+      },
+      {
+        "shot_number": 6,
+        "beat_id": "BEAT_06_EVER_SINCE",
+        "timestamp": "01:15 - 01:30",
+        "veo3_prompt": "A cinematic Wide establishing shot transitioning to Full body shot, Low-angle empowering hero shot, Warm wide establishing panoramic shot, Vintage 35mm lens, gentle edge falloff, golden hour flare, Expansive negative space, triumphant leading lines. A Robot mini bánh xích cũ gỉ sét tên Rusty, authentic natural features, wearing fitting modern minimalist attire. Tuấn đứng giữa vòng tay hân hoan của dân làng, nụ cười rạng rỡ dưới cầu vồng sau mưa.. Atmospheric environment with nuanced, natural cinematic lighting and rich depth. Cinematic lighting (Sun-drenched golden hour, soft volumetric God rays, warm rim light), Warm golden palette, sepia undertones, soft faded lifted blacks, Kodak Portra 400 vintage color negative, soft warm glow, liberating, confident, joyful mood, photorealistic 8k, authentic human texture. SFX: Giai điệu vui tươi ấm áp kết thúc. Ambient noise: Tiếng cười vui rộn rã.",
+        "recommended_settings": {
+          "model": "Google Veo 3 / 3.1",
+          "mode": "Image-to-Video (First Frame) hoặc Text-to-Video",
+          "aspect_ratio": "9:16",
+          "audio_enabled": true
+        }
+      }
+    ]
+  }
+}

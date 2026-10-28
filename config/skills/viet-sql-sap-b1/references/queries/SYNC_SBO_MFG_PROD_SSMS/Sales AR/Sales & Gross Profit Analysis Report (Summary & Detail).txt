@@ -1,0 +1,212 @@
+
+
+-- Khai báo khoảng thời gian xem báo cáo (Tùy chỉnh ngày tại đây)
+DECLARE @FromDate DATE = '2026-01-01';
+DECLARE @ToDate   DATE = GETDATE();
+
+WITH RawSalesData AS (
+    -- 1. A/R INVOICES (Hóa đơn bán hàng - Số dương)
+    SELECT
+        FORMAT(t0.DocDate, 'yyyy-MM') AS [YearMonth],
+        ISNULL(CAST(t0.BPLId AS VARCHAR(20)), 'MAIN') AS [BranchCode],
+        ISNULL(t7.BPLName, ISNULL(t0.BPLName, N'Trụ sở chính / Mặc định')) AS [BranchName],
+        'AR Invoice' AS [DocumentType],
+        t0.DocEntry AS [DocEntry],
+        t0.DocNum AS [DocumentNumber],
+        t0.DocDate AS [PostingDate],
+        t0.DocDueDate AS [DueDate],
+        ISNULL(t0.CardCode, 'UNKNOWN') AS [CustomerCode],
+        ISNULL(t1.CardFName, t1.CardName) AS [CustomerName],
+        t11.GroupName AS [CustomerGroup],
+        t6.SlpName AS [SalesEmployee],
+        t3.LineNum + 1 AS [LineNumber],
+        ISNULL(t3.ItemCode, 'SERVICE/NO-ITEM') AS [ItemCode],
+        t3.Dscription AS [ItemDescription],
+        t5.ItmsGrpNam AS [ItemGroup],
+        t3.WhsCode AS [WarehouseCode],
+        t3.unitMsr AS [UoM],
+        CAST(t3.Quantity AS DECIMAL(18, 2)) AS [Quantity],
+        CAST(t3.PriceBefDi AS DECIMAL(18, 2)) AS [UnitPrice],
+        CAST(t3.DiscPrcnt AS DECIMAL(18, 2)) AS [DiscountPercent],
+        t3.Currency AS [PriceCurrency],
+        CAST(t3.LineTotal AS DECIMAL(18, 2)) AS [NetRevenue],
+        CAST((t3.LineTotal - t3.GrssProfit) AS DECIMAL(18, 2)) AS [COGS],
+        CAST(t3.GrssProfit AS DECIMAL(18, 2)) AS [GrossProfit],
+        CAST(t3.TotalFrgn AS DECIMAL(18, 2)) AS [ForeignRevenue]
+    FROM OINV t0
+    INNER JOIN INV1 t3 ON t0.DocEntry = t3.DocEntry
+    LEFT JOIN OCRD t1 ON t0.CardCode = t1.CardCode
+    LEFT JOIN OCRG t11 ON t1.GroupCode = t11.GroupCode
+    LEFT JOIN OITM t4 ON t3.ItemCode = t4.ItemCode
+    LEFT JOIN OITB t5 ON t4.ItmsGrpCod = t5.ItmsGrpCod
+    LEFT JOIN OSLP t6 ON t0.SlpCode = t6.SlpCode
+    LEFT JOIN OBPL t7 ON t0.BPLId = t7.BPLId
+    WHERE t0.CANCELED = 'N'
+      AND t0.DocDate BETWEEN @FromDate AND @ToDate
+
+    UNION ALL
+
+    -- 2. A/R CREDIT MEMOS (Hàng bán trả lại / Giảm giá - Số âm)
+    SELECT
+        FORMAT(t0.DocDate, 'yyyy-MM') AS [YearMonth],
+        ISNULL(CAST(t0.BPLId AS VARCHAR(20)), 'MAIN') AS [BranchCode],
+        ISNULL(t7.BPLName, ISNULL(t0.BPLName, N'Trụ sở chính / Mặc định')) AS [BranchName],
+        'AR Credit Memo' AS [DocumentType],
+        t0.DocEntry AS [DocEntry],
+        t0.DocNum AS [DocumentNumber],
+        t0.DocDate AS [PostingDate],
+        t0.DocDueDate AS [DueDate],
+        ISNULL(t0.CardCode, 'UNKNOWN') AS [CustomerCode],
+        ISNULL(t1.CardFName, t1.CardName) AS [CustomerName],
+        t11.GroupName AS [CustomerGroup],
+        t6.SlpName AS [SalesEmployee],
+        t3.LineNum + 1 AS [LineNumber],
+        ISNULL(t3.ItemCode, 'SERVICE/NO-ITEM') AS [ItemCode],
+        t3.Dscription AS [ItemDescription],
+        t5.ItmsGrpNam AS [ItemGroup],
+        t3.WhsCode AS [WarehouseCode],
+        t3.unitMsr AS [UoM],
+        CAST(-t3.Quantity AS DECIMAL(18, 2)) AS [Quantity],
+        CAST(t3.PriceBefDi AS DECIMAL(18, 2)) AS [UnitPrice],
+        CAST(t3.DiscPrcnt AS DECIMAL(18, 2)) AS [DiscountPercent],
+        t3.Currency AS [PriceCurrency],
+        CAST(-t3.LineTotal AS DECIMAL(18, 2)) AS [NetRevenue],
+        CAST(-(t3.LineTotal - t3.GrssProfit) AS DECIMAL(18, 2)) AS [COGS],
+        CAST(-t3.GrssProfit AS DECIMAL(18, 2)) AS [GrossProfit],
+        CAST(-t3.TotalFrgn AS DECIMAL(18, 2)) AS [ForeignRevenue]
+    FROM ORIN t0
+    INNER JOIN RIN1 t3 ON t0.DocEntry = t3.DocEntry
+    LEFT JOIN OCRD t1 ON t0.CardCode = t1.CardCode
+    LEFT JOIN OCRG t11 ON t1.GroupCode = t11.GroupCode
+    LEFT JOIN OITM t4 ON t3.ItemCode = t4.ItemCode
+    LEFT JOIN OITB t5 ON t4.ItmsGrpCod = t5.ItmsGrpCod
+    LEFT JOIN OSLP t6 ON t0.SlpCode = t6.SlpCode
+    LEFT JOIN OBPL t7 ON t0.BPLId = t7.BPLId
+    WHERE t0.CANCELED = 'N'
+      AND t0.DocDate BETWEEN @FromDate AND @ToDate
+)
+
+-- 3. TRÌNH BÀY BÁO CÁO PHÂN CẤP TỪ TỔNG -> CHI TIẾT
+SELECT
+    -- Cột hiển thị cấp độ phân cấp trực quan (Thụt lề theo cấp)
+    CASE
+        WHEN GROUPING([YearMonth]) = 1 AND GROUPING([BranchName]) = 1 AND GROUPING([CustomerCode]) = 1 AND GROUPING([ItemCode]) = 1 
+            THEN N'1. [GRAND TOTAL] - TỔNG TOÀN BỘ'
+        WHEN GROUPING([YearMonth]) = 0 AND GROUPING([BranchName]) = 1 AND GROUPING([CustomerCode]) = 1 AND GROUPING([ItemCode]) = 1 
+            THEN N'  2. [MONTH TOTAL] - Tháng ' + [YearMonth]
+        WHEN GROUPING([YearMonth]) = 0 AND GROUPING([BranchName]) = 0 AND GROUPING([CustomerCode]) = 1 AND GROUPING([ItemCode]) = 1 
+            THEN N'    3. [BRANCH IN MONTH] - Chi nhánh: ' + [BranchName]
+        WHEN GROUPING([YearMonth]) = 0 AND GROUPING([BranchName]) = 0 AND GROUPING([CustomerCode]) = 0 AND GROUPING([ItemCode]) = 1 
+            THEN N'      4. [CUSTOMER IN MONTH] - ' + [CustomerCode] + N' (' + ISNULL([CustomerName], '') + N')'
+        WHEN GROUPING([YearMonth]) = 0 AND GROUPING([BranchName]) = 0 AND GROUPING([CustomerCode]) = 0 AND GROUPING([ItemCode]) = 0 AND GROUPING([DocEntry]) = 1 
+            THEN N'        5. [ITEM SUMMARY] - ' + [ItemCode]
+        WHEN GROUPING([DocEntry]) = 0 
+            THEN N'          6. [INVOICE DETAIL] - Chứng từ #' + CAST([DocumentNumber] AS VARCHAR(20))
+        -- 3 Nhóm tổng độc lập toàn kỳ (Chi nhánh, Khách hàng & Mặt hàng) ở cuối báo cáo
+        WHEN GROUPING([YearMonth]) = 1 AND GROUPING([BranchName]) = 0 AND GROUPING([CustomerCode]) = 1 AND GROUPING([ItemCode]) = 1 
+            THEN N'[OVERALL BRANCH TOTAL] - Tổng Chi nhánh: ' + [BranchName]
+        WHEN GROUPING([YearMonth]) = 1 AND GROUPING([BranchName]) = 1 AND GROUPING([CustomerCode]) = 0 AND GROUPING([ItemCode]) = 1 
+            THEN N'[OVERALL CUSTOMER TOTAL] - Tổng Khách hàng: ' + [CustomerCode]
+        WHEN GROUPING([YearMonth]) = 1 AND GROUPING([BranchName]) = 1 AND GROUPING([CustomerCode]) = 1 AND GROUPING([ItemCode]) = 0 
+            THEN N'[OVERALL ITEM TOTAL] - Tổng Mặt hàng: ' + [ItemCode]
+    END AS [HierarchyLevel],
+
+    [YearMonth],
+    [BranchCode],
+    [BranchName],
+    [CustomerCode],
+    [CustomerName],
+    [CustomerGroup],
+    [ItemCode],
+    [ItemDescription],
+    [ItemGroup],
+    [UoM],
+    [DocumentType],
+    [DocumentNumber],
+    [PostingDate],
+    [DueDate],
+    [SalesEmployee],
+    [LineNumber],
+    [WarehouseCode],
+    
+    -- Các chỉ số Số lượng, Đơn giá, Doanh thu, Giá vốn, Lãi gộp
+    SUM([Quantity]) AS [Quantity],
+    [UnitPrice],
+    [DiscountPercent],
+    [PriceCurrency],
+    
+    SUM([NetRevenue]) AS [NetRevenue],
+    SUM([COGS]) AS [COGS],
+    SUM([GrossProfit]) AS [GrossProfit],
+    CAST(
+        CASE 
+            WHEN SUM([NetRevenue]) = 0 THEN 0 
+            ELSE (SUM([GrossProfit]) / SUM([NetRevenue])) * 100 
+        END AS DECIMAL(18, 2)
+    ) AS [GrossMarginPct],
+    SUM([ForeignRevenue]) AS [ForeignRevenue]
+
+FROM RawSalesData
+GROUP BY GROUPING SETS (
+    -- Cấp 1: Tổng toàn bộ báo cáo (Grand Total)
+    (),
+    
+    -- Cấp 2: Tổng theo từng Tháng
+    ([YearMonth]),
+    
+    -- Cấp 3: Tổng theo từng Chi nhánh trong Tháng đó
+    ([YearMonth], [BranchCode], [BranchName]),
+    
+    -- Cấp 4: Tổng theo từng Khách hàng của Chi nhánh trong Tháng đó
+    ([YearMonth], [BranchCode], [BranchName], [CustomerCode], [CustomerName], [CustomerGroup]),
+    
+    -- Cấp 5: Tổng theo từng Mặt hàng của Khách hàng trong Tháng đó
+    ([YearMonth], [BranchCode], [BranchName], [CustomerCode], [CustomerName], [CustomerGroup], [ItemCode], [ItemDescription], [ItemGroup], [UoM]),
+    
+    -- Cấp 6: Chi tiết từng dòng Hóa đơn / Hàng trả lại
+    ([YearMonth], [BranchCode], [BranchName], [CustomerCode], [CustomerName], [CustomerGroup], [ItemCode], [ItemDescription], [ItemGroup], [UoM],
+     [DocumentType], [DocEntry], [DocumentNumber], [PostingDate], [DueDate], [SalesEmployee], [LineNumber], 
+     [WarehouseCode], [UnitPrice], [DiscountPercent], [PriceCurrency]),
+
+    -- Phụ lục A: Tổng theo từng Chi nhánh (Toàn kỳ)
+    ([BranchCode], [BranchName]),
+
+    -- Phụ lục B: Tổng theo từng Khách hàng (Toàn kỳ)
+    ([CustomerCode], [CustomerName], [CustomerGroup]),
+
+    -- Phụ lục C: Tổng theo từng Mặt hàng (Toàn kỳ)
+    ([ItemCode], [ItemDescription], [ItemGroup], [UoM])
+)
+ORDER BY
+    -- Nhóm 1: Cây phân cấp từ Tổng -> Tháng -> Chi nhánh -> Khách hàng -> Mặt hàng -> Chi tiết hóa đơn
+    -- Nhóm 2: Bảng tổng hợp Chi nhánh toàn kỳ
+    -- Nhóm 3: Bảng tổng hợp Khách hàng toàn kỳ
+    -- Nhóm 4: Bảng tổng hợp Mặt hàng toàn kỳ
+    CASE 
+        WHEN GROUPING([YearMonth]) = 1 AND GROUPING([BranchName]) = 0 THEN 2   -- Phụ lục Chi nhánh toàn kỳ
+        WHEN GROUPING([YearMonth]) = 1 AND GROUPING([CustomerCode]) = 0 THEN 3 -- Phụ lục Khách hàng toàn kỳ
+        WHEN GROUPING([YearMonth]) = 1 AND GROUPING([ItemCode]) = 0 THEN 4     -- Phụ lục Mặt hàng toàn kỳ
+        ELSE 1                                                                 -- Cây phân cấp chính
+    END ASC,
+
+    -- 1. Đẩy dòng Tổng Tháng / Grand Total lên đầu
+    GROUPING([YearMonth]) DESC,
+    [YearMonth] DESC,
+
+    -- 2. Trong mỗi Tháng: Đẩy dòng Tổng Tháng lên trước, rồi mới tới từng Chi nhánh
+    GROUPING([BranchName]) DESC,
+    [BranchCode] ASC,
+
+    -- 3. Trong mỗi Chi nhánh: Đẩy dòng Tổng Chi nhánh lên trước, rồi mới tới từng Khách hàng
+    GROUPING([CustomerCode]) DESC,
+    [CustomerCode] ASC,
+
+    -- 4. Trong mỗi Khách hàng: Đẩy dòng Tổng Khách hàng lên trước, rồi mới tới từng Mặt hàng
+    GROUPING([ItemCode]) DESC,
+    [ItemCode] ASC,
+
+    -- 5. Trong mỗi Mặt hàng: Đẩy dòng Tổng Mặt hàng lên trước, rồi mới tới Chi tiết từng Hóa đơn
+    GROUPING([DocEntry]) DESC,
+    [PostingDate] DESC,
+    [DocumentNumber] DESC,
+    [LineNumber] ASC;

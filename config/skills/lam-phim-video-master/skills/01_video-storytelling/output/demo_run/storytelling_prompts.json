@@ -1,0 +1,238 @@
+{
+  "title": "Hành Trình Lột Xác Cùng Serum phục hồi da mụn",
+  "topic": "Serum phục hồi da mụn",
+  "character_sheet": {
+    "character_identity": "cô gái trẻ 25 tuổi thanh lịch",
+    "turnaround_prompt_raw": "character sheet, model turnaround sheet of cô gái trẻ 25 tuổi thanh lịch, wearing casual modern streetwear, minimalist beige neutral tone. Four views: full body front view, full body 3/4 view, side profile view, back view. Same person, identical facial features, consistent hair and body proportions across all panels. Neutral clean studio grey background, soft documentary lighting, high detail skin texture, cinematic photorealism, 8k, shot on 35mm lens --ar 16:9",
+    "midjourney_command": "/imagine prompt: character sheet, model turnaround sheet of cô gái trẻ 25 tuổi thanh lịch, wearing casual modern streetwear, minimalist beige neutral tone. Four views: full body front view, full body 3/4 view, side profile view, back view. Same person, identical facial features, consistent hair and body proportions across all panels. Neutral clean studio grey background, soft documentary lighting, high detail skin texture, cinematic photorealism, 8k, shot on 35mm lens --ar 16:9 --v 6.1 --style raw",
+    "flux_prompt": "character sheet, model turnaround sheet of cô gái trẻ 25 tuổi thanh lịch, wearing casual modern streetwear, minimalist beige neutral tone. Four views: full body front view, full body 3/4 view, side profile view, back view. Same person, identical facial features, consistent hair and body proportions across all panels. Neutral clean studio grey background, soft documentary lighting, high detail skin texture, cinematic photorealism, 8k, shot on 35mm lens --ar 16:9",
+    "instructions": [
+      "1. Render bảng nhân vật trên Midjourney hoặc Flux để có 1 tấm ảnh 4 góc nhìn chuẩn.",
+      "2. Cắt lấy tấm ảnh góc đẹp nhất (thường là góc 3/4) làm Anchor Frame (@Image 1 cho Seedance hoặc First Frame cho Veo 3).",
+      "3. Dùng ảnh này làm input cố định xuyên suốt toàn bộ các cảnh trong video."
+    ]
+  },
+  "story_script": {
+    "title": "Hành Trình Lột Xác Cùng Serum phục hồi da mụn",
+    "product_or_topic": "Serum phục hồi da mụn",
+    "target_audience": "Khách hàng khao khát thay đổi bản thân và tìm kiếm giải pháp thực chứng",
+    "character_name": "Tuấn",
+    "character_appearance": "cô gái trẻ 25 tuổi thanh lịch, natural Asian features, wearing authentic modern minimalist casual attire",
+    "format_type": "SHORT_FORM_60S",
+    "moral_or_takeaway": "Giải pháp đúng chuẩn giúp giải phóng con người khỏi da mụn thâm kéo dài tự ti.",
+    "beats": [
+      {
+        "beat_id": "BEAT_01_HOOK",
+        "timestamp": "00:00 - 00:05",
+        "phase": "HOOK (In Media Res)",
+        "voiceover": "Tôi đã suýt bỏ cuộc và chấp nhận sống chung với da mụn thâm kéo dài tự ti suốt đời...",
+        "dialogue": "Tuấn thì thầm, \"Mình không thể tiếp tục như thế này nữa.\"",
+        "visual_action": "Tuấn đứng thẫn thờ nhìn vào gương trong phòng mờ tối, ánh mắt kiệt sức, bàn tay khẽ chạm lên má đầy mệt mỏi.",
+        "camera_movement": "Slow push-in, low-angle intimate medium close-up, shallow depth of field",
+        "sound_fx": "Tiếng tích tắc đồng hồ chậm rãi vọng lại cùng tiếng thở dài nghẹn ngào",
+        "ambient_noise": "Căn phòng tĩnh lặng tuyệt đối với tiếng mưa rào nhẹ ngoài cửa sổ",
+        "emotion_tone": "Tuyệt vọng, bế tắc, chạm đáy cảm xúc"
+      },
+      {
+        "beat_id": "BEAT_02_STRUGGLE",
+        "timestamp": "00:05 - 00:15",
+        "phase": "STRUGGLE (Đỉnh Điểm Bế Tắc)",
+        "voiceover": "Thử đủ 5-7 phương pháp, tốn kém hàng triệu đồng nhưng kết quả chỉ là những lời hứa sáo rỗng.",
+        "dialogue": null,
+        "visual_action": "Tuấn ném tập tài liệu và các chai lọ không hiệu quả sang một bên bàn làm việc, ánh sáng ban mai bắt đầu le lói qua khe rèm.",
+        "camera_movement": "Fast tracking shot ngang bàn làm việc, dynamic whip pan sang gương mặt nhân vật",
+        "sound_fx": "Âm thanh va chạm của đồ vật trên mặt bàn gỗ + tiếng nhịp tim đập dồn dập",
+        "ambient_noise": "Tiếng gió rít khẽ qua khe cửa sổ kính",
+        "emotion_tone": "Thất vọng, chán nản nhưng âm ỉ sự không cam chịu"
+      },
+      {
+        "beat_id": "BEAT_03_EPIPHANY",
+        "timestamp": "00:15 - 00:35",
+        "phase": "EPIPHANY (Bước Ngoặt Thức Tỉnh)",
+        "voiceover": "Cho đến ngày tôi phát hiện ra chân tướng: Vấn đề không nằm ở sự kiên trì, mà nằm ở công nghệ vi sinh tái tạo tầng sâu cùng Serum phục hồi da mụn.",
+        "dialogue": "Tuấn mỉm cười nói, \"Hóa ra câu trả lời lại nằm ngay trước mắt.\"",
+        "visual_action": "Tuấn mở một chiếc hộp thiết kế tối giản sang trọng, cầm sản phẩm Serum phục hồi da mụn trên tay, ánh sáng vàng ấm áp bao trùm không gian.",
+        "camera_movement": "Macro cinematic tracking shot xoay 45 độ quanh sản phẩm, chuyển nét mượt mà từ sản phẩm sang ánh mắt rạng rỡ của nhân vật",
+        "sound_fx": "Tiếng mở hộp tinh tế (soft crisp click) + tiếng chuông trong trẻo (gentle chime)",
+        "ambient_noise": "Giai điệu piano du dương ấm áp bắt đầu vang lên nâng đỡ cảm xúc",
+        "emotion_tone": "Thức tỉnh, hy vọng tràn trề, phấn chấn"
+      },
+      {
+        "beat_id": "BEAT_04_TRANSFORMATION",
+        "timestamp": "00:35 - 00:50",
+        "phase": "TRANSFORMATION (Sự Lột Xác)",
+        "voiceover": "Chỉ sau 2 tuần, cảm giác tự tin quay trở lại trọn vẹn. Không còn nỗi lo âu, không còn những đêm trăn trở.",
+        "dialogue": null,
+        "visual_action": "Tuấn bước đi tự tin trên con phố ngập nắng ban mai, tà áo bay nhẹ trong gió, nụ cười tươi tắn rạng ngời chào đón ngày mới.",
+        "camera_movement": "Smooth Steadicam tracking shot đi lùi trước mặt nhân vật, góc rộng điện ảnh cinematic wide angle",
+        "sound_fx": "Tiếng bước chân vững chãi + tiếng chim hót xa xa",
+        "ambient_noise": "Âm thanh phố phường nhộn nhịp tích cực buổi sớm",
+        "emotion_tone": "Tự do, hạnh phúc viên mãn, tự hào"
+      },
+      {
+        "beat_id": "BEAT_05_RESOLUTION_CTA",
+        "timestamp": "00:50 - 01:00",
+        "phase": "RESOLUTION_CTA (Kêu Gọi Hành Động)",
+        "voiceover": "Đừng để da mụn thâm kéo dài tự ti đánh cắp thêm một ngày nào của bạn nữa. Đặt mua ngay hôm nay để nhận ưu đãi 50%.",
+        "dialogue": "Tuấn nhìn thẳng ống kính nói, \"Hãy bắt đầu hành trình của bạn ngay hôm nay.\"",
+        "visual_action": "Tuấn nở nụ cười ấm áp nhìn thẳng vào ống kính máy quay, bàn tay khẽ hướng xuống phần banner ưu đãi nổi bật phía dưới.",
+        "camera_movement": "Eye-level medium portrait shot, bokeh nền phố xá lung linh phía sau",
+        "sound_fx": "Âm thanh chuông báo tin nhắn vui tai + nốt nhạc cao trào khép lại bài hát",
+        "ambient_noise": "Nhạc nền cao trào đầy cảm hứng",
+        "emotion_tone": "Tin cậy, dứt khoát, thôi thúc hành động"
+      }
+    ]
+  },
+  "seedance_engine": {
+    "engine": "Seedance 2.0 / 2.5 (ByteDance)",
+    "title": "Hành Trình Lột Xác Cùng Serum phục hồi da mụn",
+    "multimodal_mapping": {
+      "@Image 1": "Character consistency anchor (Tuấn)",
+      "@Image 2": "Product anchor (Serum phục hồi da mụn)"
+    },
+    "shots": [
+      {
+        "shot_number": 1,
+        "beat_id": "BEAT_01_HOOK",
+        "timestamp": "00:00 - 00:05",
+        "seedance_prompt": "References: Character anchor from @Image 1, Product anchor from @Image 2.\nSetting: Realistic cinematic environment, authentic atmospheric lighting, high dynamic range.\nAction: character from @Image 1 đứng thẫn thờ nhìn vào gương trong phòng mờ tối, ánh mắt kiệt sức, bàn tay khẽ chạm lên má đầy mệt mỏi.. Realistic physical interaction, subtle micro-expressions, true-to-life physics. Character speaks: \"Tuấn thì thầm, \"Mình không thể tiếp tục như thế này nữa.\"\"\nCamera: Slow push-in, low-angle intimate medium close-up, shallow depth of field.\nStyle: Cinematic photorealism, 8k resolution, 24fps motion cadence, natural documentary grade.\nAudio: Ambient: Căn phòng tĩnh lặng tuyệt đối với tiếng mưa rào nhẹ ngoài cửa sổ. SFX: Tiếng tích tắc đồng hồ chậm rãi vọng lại cùng tiếng thở dài nghẹn ngào.",
+        "recommended_settings": {
+          "model": "Seedance 2.0 / 2.5",
+          "duration_seconds": 5,
+          "aspect_ratio": "9:16",
+          "reference_inputs": {
+            "@Image 1": "Bảng nhân vật Character Sheet (Tuấn)",
+            "@Image 2": "Hình ảnh sản phẩm / bối cảnh (Serum phục hồi da mụn)"
+          }
+        }
+      },
+      {
+        "shot_number": 2,
+        "beat_id": "BEAT_02_STRUGGLE",
+        "timestamp": "00:05 - 00:15",
+        "seedance_prompt": "References: Character anchor from @Image 1, Product anchor from @Image 2.\nSetting: Realistic cinematic environment, authentic atmospheric lighting, high dynamic range.\nAction: character from @Image 1 ném tập tài liệu và các chai lọ không hiệu quả sang một bên bàn làm việc, ánh sáng ban mai bắt đầu le lói qua khe rèm.. Realistic physical interaction, subtle micro-expressions, true-to-life physics.\nCamera: Fast tracking shot ngang bàn làm việc, dynamic whip pan sang gương mặt nhân vật.\nStyle: Cinematic photorealism, 8k resolution, 24fps motion cadence, natural documentary grade.\nAudio: Ambient: Tiếng gió rít khẽ qua khe cửa sổ kính. SFX: Âm thanh va chạm của đồ vật trên mặt bàn gỗ + tiếng nhịp tim đập dồn dập.",
+        "recommended_settings": {
+          "model": "Seedance 2.0 / 2.5",
+          "duration_seconds": 10,
+          "aspect_ratio": "9:16",
+          "reference_inputs": {
+            "@Image 1": "Bảng nhân vật Character Sheet (Tuấn)",
+            "@Image 2": "Hình ảnh sản phẩm / bối cảnh (Serum phục hồi da mụn)"
+          }
+        }
+      },
+      {
+        "shot_number": 3,
+        "beat_id": "BEAT_03_EPIPHANY",
+        "timestamp": "00:15 - 00:35",
+        "seedance_prompt": "References: Character anchor from @Image 1, Product anchor from @Image 2.\nSetting: Realistic cinematic environment, authentic atmospheric lighting, high dynamic range.\nAction: character from @Image 1 mở một chiếc hộp thiết kế tối giản sang trọng, cầm featured product in @Image 2 Serum phục hồi da mụn trên tay, ánh sáng vàng ấm áp bao trùm không gian.. Realistic physical interaction, subtle micro-expressions, true-to-life physics. Character speaks: \"Tuấn mỉm cười nói, \"Hóa ra câu trả lời lại nằm ngay trước mắt.\"\"\nCamera: Macro cinematic tracking shot xoay 45 độ quanh sản phẩm, chuyển nét mượt mà từ sản phẩm sang ánh mắt rạng rỡ của nhân vật.\nStyle: Cinematic photorealism, 8k resolution, 24fps motion cadence, natural documentary grade.\nAudio: Ambient: Giai điệu piano du dương ấm áp bắt đầu vang lên nâng đỡ cảm xúc. SFX: Tiếng mở hộp tinh tế (soft crisp click) + tiếng chuông trong trẻo (gentle chime).",
+        "recommended_settings": {
+          "model": "Seedance 2.0 / 2.5",
+          "duration_seconds": 10,
+          "aspect_ratio": "9:16",
+          "reference_inputs": {
+            "@Image 1": "Bảng nhân vật Character Sheet (Tuấn)",
+            "@Image 2": "Hình ảnh sản phẩm / bối cảnh (Serum phục hồi da mụn)"
+          }
+        }
+      },
+      {
+        "shot_number": 4,
+        "beat_id": "BEAT_04_TRANSFORMATION",
+        "timestamp": "00:35 - 00:50",
+        "seedance_prompt": "References: Character anchor from @Image 1, Product anchor from @Image 2.\nSetting: Realistic cinematic environment, authentic atmospheric lighting, high dynamic range.\nAction: character from @Image 1 bước đi tự tin trên con phố ngập nắng ban mai, tà áo bay nhẹ trong gió, nụ cười tươi tắn rạng ngời chào đón ngày mới.. Realistic physical interaction, subtle micro-expressions, true-to-life physics.\nCamera: Smooth Steadicam tracking shot đi lùi trước mặt nhân vật, góc rộng điện ảnh cinematic wide angle.\nStyle: Cinematic photorealism, 8k resolution, 24fps motion cadence, natural documentary grade.\nAudio: Ambient: Âm thanh phố phường nhộn nhịp tích cực buổi sớm. SFX: Tiếng bước chân vững chãi + tiếng chim hót xa xa.",
+        "recommended_settings": {
+          "model": "Seedance 2.0 / 2.5",
+          "duration_seconds": 5,
+          "aspect_ratio": "9:16",
+          "reference_inputs": {
+            "@Image 1": "Bảng nhân vật Character Sheet (Tuấn)",
+            "@Image 2": "Hình ảnh sản phẩm / bối cảnh (Serum phục hồi da mụn)"
+          }
+        }
+      },
+      {
+        "shot_number": 5,
+        "beat_id": "BEAT_05_RESOLUTION_CTA",
+        "timestamp": "00:50 - 01:00",
+        "seedance_prompt": "References: Character anchor from @Image 1, Product anchor from @Image 2.\nSetting: Realistic cinematic environment, authentic atmospheric lighting, high dynamic range.\nAction: character from @Image 1 nở nụ cười ấm áp nhìn thẳng vào ống kính máy quay, bàn tay khẽ hướng xuống phần banner ưu đãi nổi bật phía dưới.. Realistic physical interaction, subtle micro-expressions, true-to-life physics. Character speaks: \"Tuấn nhìn thẳng ống kính nói, \"Hãy bắt đầu hành trình của bạn ngay hôm nay.\"\"\nCamera: Eye-level medium portrait shot, bokeh nền phố xá lung linh phía sau.\nStyle: Cinematic photorealism, 8k resolution, 24fps motion cadence, natural documentary grade.\nAudio: Ambient: Nhạc nền cao trào đầy cảm hứng. SFX: Âm thanh chuông báo tin nhắn vui tai + nốt nhạc cao trào khép lại bài hát.",
+        "recommended_settings": {
+          "model": "Seedance 2.0 / 2.5",
+          "duration_seconds": 5,
+          "aspect_ratio": "9:16",
+          "reference_inputs": {
+            "@Image 1": "Bảng nhân vật Character Sheet (Tuấn)",
+            "@Image 2": "Hình ảnh sản phẩm / bối cảnh (Serum phục hồi da mụn)"
+          }
+        }
+      }
+    ]
+  },
+  "veo3_engine": {
+    "engine": "Google Veo 3 / 3.1 (DeepMind)",
+    "title": "Hành Trình Lột Xác Cùng Serum phục hồi da mụn",
+    "formula_applied": "[Cinematography] + [Subject] + [Action] + [Context] + [Style & Ambiance]",
+    "shots": [
+      {
+        "shot_number": 1,
+        "beat_id": "BEAT_01_HOOK",
+        "timestamp": "00:00 - 00:05",
+        "veo3_prompt": "A cinematic Slow push-in, low-angle intimate medium close-up, shallow depth of field. A cô gái trẻ 25 tuổi thanh lịch, natural Asian features, wearing authentic modern minimalist casual attire. Tuấn đứng thẫn thờ nhìn vào gương trong phòng mờ tối, ánh mắt kiệt sức, bàn tay khẽ chạm lên má đầy mệt mỏi.. Atmospheric environment with nuanced, natural cinematic lighting and rich depth. Cinematic photorealism, authentic human texture, 35mm film aesthetic, photorealistic 4k, hyper-detailed. He speaks with natural emotion, \"Tuấn thì thầm, Mình không thể tiếp tục như thế này nữa..\" SFX: Tiếng tích tắc đồng hồ chậm rãi vọng lại cùng tiếng thở dài nghẹn ngào. Ambient noise: Căn phòng tĩnh lặng tuyệt đối với tiếng mưa rào nhẹ ngoài cửa sổ.",
+        "recommended_settings": {
+          "model": "Google Veo 3 / 3.1",
+          "mode": "Image-to-Video (First Frame) hoặc Text-to-Video",
+          "aspect_ratio": "9:16",
+          "audio_enabled": true
+        }
+      },
+      {
+        "shot_number": 2,
+        "beat_id": "BEAT_02_STRUGGLE",
+        "timestamp": "00:05 - 00:15",
+        "veo3_prompt": "A cinematic Fast tracking shot ngang bàn làm việc, dynamic whip pan sang gương mặt nhân vật. A cô gái trẻ 25 tuổi thanh lịch, natural Asian features, wearing authentic modern minimalist casual attire. Tuấn ném tập tài liệu và các chai lọ không hiệu quả sang một bên bàn làm việc, ánh sáng ban mai bắt đầu le lói qua khe rèm.. Atmospheric environment with nuanced, natural cinematic lighting and rich depth. Cinematic photorealism, authentic human texture, 35mm film aesthetic, photorealistic 4k, hyper-detailed. SFX: Âm thanh va chạm của đồ vật trên mặt bàn gỗ + tiếng nhịp tim đập dồn dập. Ambient noise: Tiếng gió rít khẽ qua khe cửa sổ kính.",
+        "recommended_settings": {
+          "model": "Google Veo 3 / 3.1",
+          "mode": "Image-to-Video (First Frame) hoặc Text-to-Video",
+          "aspect_ratio": "9:16",
+          "audio_enabled": true
+        }
+      },
+      {
+        "shot_number": 3,
+        "beat_id": "BEAT_03_EPIPHANY",
+        "timestamp": "00:15 - 00:35",
+        "veo3_prompt": "A cinematic Macro cinematic tracking shot xoay 45 độ quanh sản phẩm, chuyển nét mượt mà từ sản phẩm sang ánh mắt rạng rỡ của nhân vật. A cô gái trẻ 25 tuổi thanh lịch, natural Asian features, wearing authentic modern minimalist casual attire. Tuấn mở một chiếc hộp thiết kế tối giản sang trọng, cầm sản phẩm Serum phục hồi da mụn trên tay, ánh sáng vàng ấm áp bao trùm không gian.. Atmospheric environment with nuanced, natural cinematic lighting and rich depth. Cinematic photorealism, authentic human texture, 35mm film aesthetic, photorealistic 4k, hyper-detailed. He speaks with natural emotion, \"Tuấn mỉm cười nói, Hóa ra câu trả lời lại nằm ngay trước mắt..\" SFX: Tiếng mở hộp tinh tế (soft crisp click) + tiếng chuông trong trẻo (gentle chime). Ambient noise: Giai điệu piano du dương ấm áp bắt đầu vang lên nâng đỡ cảm xúc.",
+        "recommended_settings": {
+          "model": "Google Veo 3 / 3.1",
+          "mode": "Image-to-Video (First Frame) hoặc Text-to-Video",
+          "aspect_ratio": "9:16",
+          "audio_enabled": true
+        }
+      },
+      {
+        "shot_number": 4,
+        "beat_id": "BEAT_04_TRANSFORMATION",
+        "timestamp": "00:35 - 00:50",
+        "veo3_prompt": "A cinematic Smooth Steadicam tracking shot đi lùi trước mặt nhân vật, góc rộng điện ảnh cinematic wide angle. A cô gái trẻ 25 tuổi thanh lịch, natural Asian features, wearing authentic modern minimalist casual attire. Tuấn bước đi tự tin trên con phố ngập nắng ban mai, tà áo bay nhẹ trong gió, nụ cười tươi tắn rạng ngời chào đón ngày mới.. Atmospheric environment with nuanced, natural cinematic lighting and rich depth. Cinematic photorealism, authentic human texture, 35mm film aesthetic, photorealistic 4k, hyper-detailed. SFX: Tiếng bước chân vững chãi + tiếng chim hót xa xa. Ambient noise: Âm thanh phố phường nhộn nhịp tích cực buổi sớm.",
+        "recommended_settings": {
+          "model": "Google Veo 3 / 3.1",
+          "mode": "Image-to-Video (First Frame) hoặc Text-to-Video",
+          "aspect_ratio": "9:16",
+          "audio_enabled": true
+        }
+      },
+      {
+        "shot_number": 5,
+        "beat_id": "BEAT_05_RESOLUTION_CTA",
+        "timestamp": "00:50 - 01:00",
+        "veo3_prompt": "A cinematic Eye-level medium portrait shot, bokeh nền phố xá lung linh phía sau. A cô gái trẻ 25 tuổi thanh lịch, natural Asian features, wearing authentic modern minimalist casual attire. Tuấn nở nụ cười ấm áp nhìn thẳng vào ống kính máy quay, bàn tay khẽ hướng xuống phần banner ưu đãi nổi bật phía dưới.. Atmospheric environment with nuanced, natural cinematic lighting and rich depth. Cinematic photorealism, authentic human texture, 35mm film aesthetic, photorealistic 4k, hyper-detailed. He speaks with natural emotion, \"Tuấn nhìn thẳng ống kính nói, Hãy bắt đầu hành trình của bạn ngay hôm nay..\" SFX: Âm thanh chuông báo tin nhắn vui tai + nốt nhạc cao trào khép lại bài hát. Ambient noise: Nhạc nền cao trào đầy cảm hứng.",
+        "recommended_settings": {
+          "model": "Google Veo 3 / 3.1",
+          "mode": "Image-to-Video (First Frame) hoặc Text-to-Video",
+          "aspect_ratio": "9:16",
+          "audio_enabled": true
+        }
+      }
+    ]
+  }
+}
