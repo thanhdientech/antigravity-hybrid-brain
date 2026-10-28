@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Dàn Trang Tạp Chí Doanh Nghiệp Đa Cột — Chuẩn A4</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,800;1,600&display=swap');
+    @page { size: A4 portrait; margin: 16mm 18mm; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Be Vietnam Pro', 'Segoe UI', sans-serif;
+      color: #16181D;
+      background: #FFFFFF;
+      font-size: 9.8pt;
+      line-height: 1.65;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .folio {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid #16181D;
+      padding-bottom: 6px;
+      margin-bottom: 22px;
+      font-size: 8pt;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      font-weight: 700;
+    }
+    .kicker { color: #B45309; font-size: 8.5pt; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 8px; }
+    h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 27pt;
+      line-height: 1.15;
+      font-weight: 800;
+      margin-bottom: 12px;
+      letter-spacing: -0.01em;
+    }
+    .deck {
+      font-size: 11.5pt;
+      color: #4B5563;
+      line-height: 1.5;
+      border-left: 3px solid #B45309;
+      padding-left: 14px;
+      margin-bottom: 20px;
+    }
+    .hero-visual {
+      width: 100%;
+      height: 185px;
+      background: linear-gradient(135deg, #0F172A 0%, #1E3A5F 55%, #B45309 100%);
+      border-radius: 4px;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: flex-end;
+      padding: 18px 22px;
+      color: #F8FAFC;
+    }
+    .caption { font-size: 8pt; color: #6B7280; margin-bottom: 18px; font-style: italic; }
+    .columns { column-count: 2; column-gap: 9mm; text-align: justify; }
+    .columns p { margin-bottom: 11px; }
+    .dropcap::first-letter {
+      font-family: 'Playfair Display', Georgia, serif;
+      float: left;
+      font-size: 38pt;
+      line-height: 0.82;
+      padding-right: 8px;
+      padding-top: 4px;
+      font-weight: 800;
+      color: #0F172A;
+    }
+    .pull-quote {
+      break-inside: avoid;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-style: italic;
+      font-size: 13pt;
+      line-height: 1.4;
+      color: #0F172A;
+      border-top: 2px solid #0F172A;
+      border-bottom: 1px solid #D1D5DB;
+      padding: 12px 0;
+      margin: 14px 0;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+  <div class="folio">
+    <span>TẠP CHÍ KIẾN TRÚC SỐ &amp; QUẢN TRỊ • ẤN PHẨM THÁNG 10/2026</span>
+    <span>CHUYÊN ĐỀ DESIGN SYSTEM • TRANG 04</span>
+  </div>
+  <div class="kicker">Chuyển Đổi Giao Diện Đa Ngành</div>
+  <h1>Khi Ngôn Ngữ Thiết Kế Trở Thành Lợi Thế Cạnh Tranh Cốt Lõi Của Phần Mềm</h1>
+  <div class="deck">Từ các nền tảng ERP sản xuất công nghiệp đến ứng dụng tài chính số, hệ thống Design Tokens chuẩn hóa giúp doanh nghiệp rút ngắn 60% thời gian phát triển giao diện.</div>
+  <div class="hero-visual">
+    <div style="font-size:10pt;letter-spacing:0.06em;text-transform:uppercase;font-weight:600;">Minh họa Hệ thống Lưới Biên tập Swiss Modular Grid &amp; Tỷ lệ Tương phản WCAG</div>
+  </div>
+  <div class="caption">Hình 1.1 — Cấu trúc phân tầng từ Primitive Tokens đến Component UI đa nền tảng.</div>
+  <div class="columns">
+    <p class="dropcap">Trong kỷ nguyên phần mềm doanh nghiệp hiện đại, người dùng không còn chấp nhận những bảng biểu rối mắt hay biểu tượng thiếu đồng nhất. Một hệ thống nhận diện thương hiệu bài bản phải xuyên suốt từ chiếc danh thiếp, bản báo giá thương mại A4 cho tới từng nút bấm trên màn hình điều hành sản xuất.</p>
+    <p>Việc tách bạch rõ ràng giữa tầng quy chuẩn màu sắc ngữ nghĩa (Semantic Colors), hệ thống chữ viết (Type Scale) và quy tắc khoảng cách (Spatial Rhythm) cho phép đội ngũ kỹ sư chuyển đổi bản vẽ thành mã nguồn React, Tailwind, Flutter hay WPF ngay trong lượt đầu tiên mà không lệch một pixel.</p>
+    <div class="pull-quote">“Thiết kế đỉnh cao không nằm ở việc thêm thật nhiều hiệu ứng, mà ở sự chính xác tuyệt đối của cấu trúc thông tin.”</div>
+    <p>Khi áp dụng chuẩn dàn trang Paged CSS kết hợp cùng động cơ kết xuất Chromium hoặc Typst, doanh nghiệp có thể tự động hóa hoàn toàn khâu xuất bản hồ sơ năng lực, báo cáo thường niên và tạp chí nội bộ với chất lượng in ấn sắc nét chuẩn nhà xuất bản quốc tế.</p>
+  </div>
+</body>
+</html>

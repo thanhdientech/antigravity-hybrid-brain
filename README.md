@@ -1,6 +1,6 @@
 # 🧠 Antigravity x Javis Hybrid Skill Brain & 5-Gate Anti-Hallucination Suite
 
-> **Hệ điều hành Tri thức Lai (Hybrid Knowledge & Skill Router), Khung Kiểm soát Chống Ảo Giác 5 Chốt Chặn Đa Lĩnh Vực (18 Ngành) và Hệ sinh thái 82 Kỹ năng Chuyên sâu (23 Global Skills + 12 Bộ Plugins) dành cho Google Antigravity IDE / CLI (`agy`).**
+> **Hệ điều hành Tri thức Lai (Hybrid Knowledge & Skill Router), Khung Kiểm soát Chống Ảo Giác 5 Chốt Chặn Đa Lĩnh Vực (18 Ngành) và Hệ sinh thái 84 Kỹ năng Chuyên sâu (25 Global Skills + 12 Bộ Plugins) dành cho Google Antigravity IDE / CLI (`agy`).**
 
 ---
 
@@ -15,11 +15,11 @@ Bộ giải pháp này giải quyết triệt để cả 3 bài toán thông qua
 
 | Chỉ Số Vận Hành Thực Tế | Kết Quả Đạt Được | Cơ Chế Kỹ Thuật Đằng Sau |
 | :--- | :--- | :--- |
-| **Quy mô tri thức quản lý** | **82 Skills** (`1,721+` files, `12,042+` chunks) | Quét đa tầng: Workspace $\rightarrow$ Global (`23`) $\rightarrow$ Plugins (`50`) $\rightarrow$ Builtin (`9`) |
+| **Quy mô tri thức quản lý** | **84 Skills** (`2,125+` files, `18,060+` chunks) | Quét đa tầng: Workspace $\rightarrow$ Global (`25`) $\rightarrow$ Plugins (`50`) $\rightarrow$ Builtin (`9`) |
 | **Tốc độ tìm kiếm lai (Warm Search)** | **`6 ms – 56 ms`** | SQLite WAL + FTS5 tiếng Việt không dấu (`đ/Đ`) + Reciprocal Rank Fusion (RRF) |
 | **Tốc độ cập nhật Delta SHA-256** | **`~210 ms – 420 ms`** | Chỉ cập nhật đúng file có thay đổi mã băm SHA-256 với FTS5 `contentless_delete=1` |
 | **Tiết kiệm Context Token** | **`70% – 85%`** | Lazy Section Excerpt: chỉ cắt đúng mục Heading hoặc đoạn dòng `L_start..L_end` |
-| **Ngân sách định tuyến Frontmatter** | **`~2,884 / 4,000` ký tự** | Chuẩn hóa mỗi `SKILL.md` `description <= 150` ký tự, đẩy chi tiết xuống `references/` |
+| **Ngân sách định tuyến Frontmatter** | **`~3,153 / 4,000` ký tự** | Chuẩn hóa mỗi `SKILL.md` `description <= 150` ký tự, đẩy chi tiết xuống `references/` |
 
 ---
 
@@ -31,7 +31,7 @@ flowchart TD
 
     subgraph Javis_Brain ["🧠 Bộ Não Lai Javis Hybrid Skill Brain (config/scripts/)"]
         Hook -->|"Đọc 192KB cuối transcript (< 1ms)"| Engine["🔍 agy_skill_engine.py v2\n(SQLite WAL + FTS5 Tiếng Việt đ/Đ + RRF + Đồng nghĩa Việt-Anh)"]
-        Engine <-->|"Quét Delta SHA-256 (~210ms)"| IndexDB[("agy_skill_index.db\n1,721+ Files | 12,042+ Chunks")]
+        Engine <-->|"Quét Delta SHA-256 (~210ms)"| IndexDB[("agy_skill_index.db\n2,125+ Files | 18,060+ Chunks")]
         Engine -->|"Tiêm gợi ý Top 3 Skill + Dòng L_start..L_end\n(ephemeralMessage tự hủy)"| Agent["🤖 Antigravity AI Agent"]
         Agent <-->|"Gọi 4 Tools qua MCP Stdio"| MCP["🔌 Trạm MCP: agy-skill-hub\n(agy_skill_mcp_server.py)"]
         MCP <--> Engine
@@ -95,9 +95,9 @@ Thư mục `config/scripts/` đóng vai trò là **nhân điều phối trung t�
 
 ---
 
-## 🧰 5. Danh Mục & Giải Thích Chi Tiết 23 Global Skills (`config/skills/`)
+## 🧰 5. Danh Mục & Giải Thích Chi Tiết 25 Global Skills (`config/skills/`)
 
-Toàn bộ **23 Global Skills** được tổ chức thành **8 Cụm Chuyên Môn** hiệp đồng chặt chẽ:
+Toàn bộ **25 Global Skills** được tổ chức thành **8 Cụm Chuyên Môn** hiệp đồng chặt chẽ:
 
 ### Cụm A — Điều Phối Đa Tác Tử, Quản Trị Tri Thức & Kiểm Toán AI (5 Skills)
 | Tên Skill | Vai Trò & Năng Lực Cốt Lõi | Công Cụ / CLI Đi Kèm |
@@ -124,9 +124,11 @@ Toàn bộ **23 Global Skills** được tổ chức thành **8 Cụm Chuyên M�
 | **`painted-animation`** | Sản xuất phim hoạt hình vẽ tay **Màu Nước & Mực Tàu** (MP4) bằng code, hỗ trợ diễn xuất biểu cảm nhân vật, đồng bộ lời bài hát (LRC/BPM) và render song song đa luồng. | `p5.js` + `p5.brush` + `scripts/beat_grid.py` + Headless Chrome + FFmpeg |
 | **`gsap-skills`** | Bộ kỹ năng chính thức lập trình hiệu ứng chuyển động Web & Video tốc độ 60fps bằng thư viện GreenSock (GSAP). | Tweens, Timelines, ScrollTrigger, SplitText, MorphSVG, Flip, React `useGSAP` |
 
-### Cụm D — Thiết Kế Web, Landing Page Chuyển Đổi Cao & Kiểm Toán SEO/GEO (3 Skills)
+### Cụm D — Thiết Kế UI/UX Phần Mềm Đa Ngành, Nhận Diện Thương Hiệu, Dàn Trang Ấn Phẩm, Web/LP & SEO/GEO (5 Skills)
 | Tên Skill | Vai Trò & Năng Lực Cốt Lõi | Công Cụ / CLI Đi Kèm |
 | :--- | :--- | :--- |
+| **`ui-ux-design-pro-max`** | **Siêu Hub UI/UX Phần Mềm & Web Đa Ngành Nghề + Design-to-Code (`308` files)**: hợp nhất động cơ suy luận Python BM25 cho **192 ngành nghề** (ERP, SaaS, Fintech, Ngân hàng, Y tế, TMĐT, BĐS, F&B, Spa, Pháp lý, Giáo dục...), **79 phong cách UI**, **192 bảng màu theo ngành**, **74 cặp Google Fonts**, **25 biểu đồ Dashboard**, **119 luật UX**, kiến trúc Design Tokens 3 tầng, kho **84 hồ sơ `DESIGN.md` thương hiệu quốc tế** (*Apple, Stripe, Linear, Vercel, Figma, Airbnb, Shopify, Notion, WIRED, Ferrari...*), `frontend-design` (Anthropic), bộ lọc `no-ai-design-slop` và quy chuẩn chuyển thiết kế sang code cho **22 Tech Stacks** (`HTML+Tailwind`, `React`, `Next.js`, `shadcn/ui`, `Vue`, `Nuxt`, `Angular`, `Laravel`, `Svelte`, `Flutter`, `React Native`, `SwiftUI`, `Jetpack Compose`, `WPF`, `WinUI 3`, `JavaFX`...). | `skills/01_ui-ux-pro-max/scripts/search.py`, `scripts/search_brand_design.py`, 35 bảng CSV offline & 84 bộ `brands/*/DESIGN.md` |
+| **`brand-editorial-graphic-studio`** | **Siêu Hub Thiết Kế Logo SVG, Bộ Nhận Diện Thương Hiệu CIP, Ảnh/Banner, Báo Giá & Tạp Chí Dàn Trang (`450+` files)**: thiết kế **Logo Vector SVG hình học** (55+ phong cách, 30 bảng màu tâm lý học, 25 ngành nghề), **Bộ Nhận Diện Thương Hiệu CIP** (50+ hạng mục ấn phẩm văn phòng/thương mại & đồng bộ `design-tokens`), **Ảnh Banner Quảng Cáo & Poster** (22 trường phái + 14 phong cách Illustration + `canvas-design` chuẩn Safe-zone & tỷ lệ chữ `<20%` Meta Ads), cùng hệ thống chế bản **Báo Giá Thương Mại A4, Hồ Sơ Năng Lực, Hồ Sơ Thầu & Dàn Trang Tạp Chí Đa Cột** bằng Paged CSS `@page` / Typst xuất thẳng ra **PDF A4 chuẩn in ấn**, **Word (`.docx`)**, **PowerPoint (`.pptx`)** và **PNG 2x Retina**. | `scripts/editorial_pdf_renderer.py` (Dual-Engine Playwright + Zero-Dependency Native Chromium), `logo/search.py`, `cip/search.py`, `typst/scripts/search-api.py` & 3 mẫu HTML/SVG A4 |
 | **`design-landingpage-vip-v2`** | Thiết kế Landing Page chuyển đổi cao đóng gói gọn trong 1 tệp HTML hoàn chỉnh: 9 Design Systems (Liquid Glass, Apple, E-commerce...), 138 icon SVG inline, form đăng ký, mã thanh toán VietQR động & Server-side Meta/TikTok CAPI qua Webhook (tuyệt đối không lộ Token ở Frontend). | 9 bộ `system-design/`, kho 138 SVG `assets/icons/`, mẫu workflow `n8n` |
 | **`wordpress-flatsome-designer`** | Thiết kế & tùy biến giao diện WordPress chuẩn Theme Flatsome 3.x với 100% Native UX Builder Shortcodes, cấu trúc Child Theme an toàn và tối ưu tốc độ tải trang. | Bộ mẫu UX Builder Shortcodes & Hooks `functions.php` |
 | **`claude-seo`** | Hệ thống kiểm toán Technical SEO & Tối ưu hóa Công cụ Tìm kiếm AI (*GEO / AI Overviews*) v2.4.2: Core Web Vitals (LCP, INP, CLS), E-E-A-T, Schema JSON-LD, Sitemap & `llms.txt`. | 26 sub-skills, `scripts/` phân tích HTML/Playwright |
@@ -158,7 +160,7 @@ Toàn bộ **23 Global Skills** được tổ chức thành **8 Cụm Chuyên M�
 
 ## 🧩 6. Hệ Sinh Thái 12 Bộ Plugins Mở Rộng (`config/plugins/` — 50+ Sub-Skills)
 
-Bên cạnh 23 Global Skills, gói cài đặt tích hợp sẵn **12 Bộ Plugins chuyên ngành**:
+Bên cạnh 25 Global Skills, gói cài đặt tích hợp sẵn **12 Bộ Plugins chuyên ngành**:
 
 1. **`science` (27 Kỹ năng Nghiên cứu Khoa học & Y Sinh học Quốc tế):**
    - *Cấu trúc Protein & Phân tử 3D:* `alphafold-database-fetch-and-analyze`, `pdb-database`, `uniprot-database`, `interpro-database`, `foldseek-structural-search`, `protein-sequence-msa`, `protein-sequence-similarity-search`, `pymol` và trình xem cấu trúc 3D tương tác trực tiếp **`biomolecular-structure-viewer` (Mol\* Sidecar)**.
@@ -187,7 +189,7 @@ Bên cạnh 23 Global Skills, gói cài đặt tích hợp sẵn **12 Bộ Plugi
    cd antigravity-hybrid-brain
    ```
 2. Nhấp đúp chạy **`CAI_DAT_1_CLICK_WINDOWS.bat`**:
-   - Tự động sao chép `GEMINI.md`, sổ tay quy trình, `scripts/`, **23 Global Skills** và **12 Plugins** vào `%USERPROFILE%\.gemini\config\`.
+   - Tự động sao chép `GEMINI.md`, sổ tay quy trình, `scripts/`, **25 Global Skills** và **12 Plugins** vào `%USERPROFILE%\.gemini\config\`.
    - Tự động chạy `setup_portable_antigravity.py` để đăng ký MCP Server `agy-skill-hub` và `PreInvocation Hook` khớp với đường dẫn Python của máy mới.
 3. Nhấp đúp chạy tiếp **`CAI_THU_VIEN_PYTHON_CHO_SKILLS.bat`**:
    - Cài đặt đầy đủ các thư viện Python (`mcp`, `pyyaml`, `aiohttp`, `websockets`, `beautifulsoup4`, `requests`, `playwright`, `pyodbc`, `pymssql`, `reportlab`, `pydantic`, `rich`...) và trình duyệt Chromium Headless.
@@ -214,13 +216,15 @@ python3 ~/.gemini/config/scripts/setup_portable_antigravity.py
 
 ### Kiểm Tra Trạng Thái Bộ Não Lai Sau Khi Cài Đặt
 ```bash
-# Kiểm toán sức khỏe 82 Skills và đo tốc độ chỉ mục:
+# Kiểm toán sức khỏe 84 Skills và đo tốc độ chỉ mục:
 python ~/.gemini/config/scripts/agy_skill_engine.py --audit
 
 # Thử nghiệm tìm kiếm lai tiếng Việt không dấu / song ngữ (< 50ms):
 python ~/.gemini/config/scripts/agy_skill_engine.py --search "lech kho gia thanh wip 154"
 python ~/.gemini/config/scripts/agy_skill_engine.py --search "audit google ads pmax money leak"
 python ~/.gemini/config/scripts/agy_skill_engine.py --search "tu vi dau so bat tu 24 tiet khi"
+python ~/.gemini/config/scripts/agy_skill_engine.py --search "thiet ke giao dien phan mem design to code react"
+python ~/.gemini/config/scripts/agy_skill_engine.py --search "thiet ke logo svg bo nhan dien bao gia tap chi a4"
 ```
 
 ---

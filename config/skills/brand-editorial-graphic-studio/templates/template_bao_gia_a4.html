@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Bảng Báo Giá Thương Mại — Chuẩn In Ấn A4</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap');
+    :root {
+      --brand-primary: #0F2942;
+      --brand-accent: #C89B3C;
+      --surface-muted: #F6F8FA;
+      --border-subtle: #DCE3EA;
+      --text-main: #1A2430;
+      --text-muted: #5B6B7C;
+    }
+    @page { size: A4 portrait; margin: 14mm 16mm; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Be Vietnam Pro', 'Segoe UI', Arial, sans-serif;
+      color: var(--text-main);
+      font-size: 10pt;
+      line-height: 1.5;
+      background: #FFFFFF;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding-bottom: 14px;
+      border-bottom: 2.5px solid var(--brand-primary);
+      margin-bottom: 18px;
+    }
+    .brand-box { display: flex; align-items: center; gap: 14px; }
+    .brand-name { font-size: 15pt; font-weight: 800; color: var(--brand-primary); letter-spacing: -0.02em; }
+    .brand-meta { font-size: 8.5pt; color: var(--text-muted); margin-top: 3px; }
+    .doc-badge { text-align: right; }
+    .doc-title { font-size: 18pt; font-weight: 800; color: var(--brand-primary); letter-spacing: 0.04em; }
+    .doc-code { font-size: 9pt; color: var(--brand-accent); font-weight: 700; margin-top: 2px; }
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      gap: 14px;
+      background: var(--surface-muted);
+      border: 1px solid var(--border-subtle);
+      border-left: 4px solid var(--brand-accent);
+      border-radius: 6px;
+      padding: 12px 16px;
+      margin-bottom: 18px;
+    }
+    .info-label { font-size: 8pt; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted); font-weight: 700; }
+    .info-val { font-size: 10pt; font-weight: 600; margin-top: 2px; }
+    table { width: 100%; border-collapse: collapse; margin-bottom: 16px; }
+    thead { display: table-header-group; }
+    th {
+      background: var(--brand-primary);
+      color: #FFFFFF;
+      font-size: 8.5pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      padding: 9px 10px;
+      text-align: left;
+    }
+    td { padding: 9px 10px; border-bottom: 1px solid var(--border-subtle); vertical-align: top; }
+    tr { break-inside: avoid; }
+    .num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+    .center { text-align: center; }
+    .item-title { font-weight: 700; color: var(--brand-primary); }
+    .item-desc { font-size: 8.5pt; color: var(--text-muted); margin-top: 2px; }
+    .summary-wrap {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      break-inside: avoid;
+      margin-top: 8px;
+    }
+    .terms { flex: 1.15; font-size: 8.5pt; color: var(--text-muted); }
+    .terms h4 { color: var(--brand-primary); font-size: 9.5pt; margin-bottom: 5px; }
+    .terms ul { padding-left: 16px; }
+    .totals { flex: 0.85; border: 1px solid var(--border-subtle); border-radius: 6px; overflow: hidden; }
+    .tot-row { display: flex; justify-content: space-between; padding: 7px 12px; font-size: 9.5pt; border-bottom: 1px solid var(--border-subtle); }
+    .tot-final { background: var(--brand-primary); color: #FFFFFF; font-weight: 800; font-size: 11pt; border-bottom: none; }
+    .signatures {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin-top: 28px;
+      text-align: center;
+      break-inside: avoid;
+    }
+    .sig-role { font-weight: 700; color: var(--brand-primary); font-size: 9.5pt; }
+    .sig-note { font-size: 8pt; color: var(--text-muted); margin-bottom: 58px; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="brand-box">
+      <svg width="46" height="46" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="64" height="64" rx="14" fill="#0F2942"/>
+        <path d="M18 44L32 16L46 44H38.5L32 30.5L25.5 44H18Z" fill="#FFFFFF"/>
+        <circle cx="32" cy="43" r="4" fill="#C89B3C"/>
+      </svg>
+      <div>
+        <div class="brand-name">APEX ENTERPRISE SOLUTIONS</div>
+        <div class="brand-meta">Tầng 18, Tòa nhà Trung tâm Thương mại • MST: 0310000000 • contact@example.com</div>
+      </div>
+    </div>
+    <div class="doc-badge">
+      <div class="doc-title">BẢNG BÁO GIÁ</div>
+      <div class="doc-code">Số: BG-2026-089 • Ngày: 28/10/2026</div>
+    </div>
+  </div>
+
+  <div class="info-grid">
+    <div>
+      <div class="info-label">Kính gửi Khách hàng</div>
+      <div class="info-val">CÔNG TY CỔ PHẦN ĐẦU TƯ &amp; SẢN XUẤT MINH PHÁT</div>
+      <div class="brand-meta">Người nhận: Ban Giám đốc &amp; Phòng Công nghệ Thông tin</div>
+    </div>
+    <div>
+      <div class="info-label">Dự án &amp; Hiệu lực</div>
+      <div class="info-val">Thiết kế Hệ thống Nhận diện &amp; Giao diện Phần mềm Web/App</div>
+      <div class="brand-meta">Hiệu lực báo giá: 30 ngày • Bảo hành kỹ thuật: 12 tháng</div>
+    </div>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th class="center" style="width:42px;">STT</th>
+        <th>Hạng Mục &amp; Quy Chuẩn Bàn Giao</th>
+        <th class="center" style="width:64px;">ĐVT</th>
+        <th class="num" style="width:52px;">SL</th>
+        <th class="num" style="width:115px;">Đơn Giá (VNĐ)</th>
+        <th class="num" style="width:125px;">Thành Tiền (VNĐ)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="center">01</td>
+        <td>
+          <div class="item-title">Thiết kế Logo Vector &amp; Cẩm nang Nhận diện Thương hiệu (Brand Book)</div>
+          <div class="item-desc">3 phương án sáng tạo, bản vẽ lưới hình học SVG, quy chuẩn màu CMYK/RGB/HEX và bộ ấn phẩm văn phòng CIP.</div>
+        </td>
+        <td class="center">Gói</td>
+        <td class="num">1</td>
+        <td class="num">25.000.000</td>
+        <td class="num">25.000.000</td>
+      </tr>
+      <tr>
+        <td class="center">02</td>
+        <td>
+          <div class="item-title">Thiết kế Hệ thống Design System &amp; Giao diện UI/UX Phần mềm Quản trị</div>
+          <div class="item-desc">Bộ Component Tokens chuẩn WCAG 4.5:1, 18 màn hình Dashboard/Form/Báo cáo kèm mã nguồn React + Tailwind CSS.</div>
+        </td>
+        <td class="center">Hệ thống</td>
+        <td class="num">1</td>
+        <td class="num">45.000.000</td>
+        <td class="num">45.000.000</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="summary-wrap">
+    <div class="terms">
+      <h4>Điều khoản &amp; Tiến độ Thanh toán</h4>
+      <ul>
+        <li>Đợt 1: Tạm ứng 40% giá trị ngay sau khi ký kết hợp đồng triển khai.</li>
+        <li>Đợt 2: Thanh toán 60% còn lại sau khi nghiệm thu toàn bộ hồ sơ thiết kế &amp; mã nguồn giao diện.</li>
+        <li>Bàn giao đầy đủ tệp gốc Vector SVG, PDF in ấn 300 DPI và kho mã nguồn sạch.</li>
+      </ul>
+    </div>
+    <div class="totals">
+      <div class="tot-row"><span>Cộng trước thuế:</span><span class="num">70.000.000 đ</span></div>
+      <div class="tot-row"><span>Thuế GTGT (8%):</span><span class="num">5.600.000 đ</span></div>
+      <div class="tot-row tot-final"><span>TỔNG THANH TOÁN:</span><span class="num">75.600.000 đ</span></div>
+    </div>
+  </div>
+
+  <div class="signatures">
+    <div>
+      <div class="sig-role">XÁC NHẬN CỦA KHÁCH HÀNG</div>
+      <div class="sig-note">(Ký, ghi rõ họ tên &amp; đóng dấu)</div>
+    </div>
+    <div>
+      <div class="sig-role">ĐẠI DIỆN ĐƠN VỊ LẬP BÁO GIÁ</div>
+      <div class="sig-note">(Ký, ghi rõ họ tên &amp; đóng dấu)</div>
+    </div>
+  </div>
+</body>
+</html>
