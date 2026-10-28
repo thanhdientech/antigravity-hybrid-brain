@@ -1,9 +1,9 @@
 {
-  "email_to_profile": {
+  "email_map": {
     "work_account": "work",
     "marketing_account": "marketing"
   },
-  "domain_to_profile": {
+  "url_map": {
     "business.facebook.com": "marketing",
     "search.google.com": "work"
   }
