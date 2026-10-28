@@ -117,7 +117,7 @@ HIGH_SPECIFICITY_SINGLE_TOKENS = {
     "openalex", "europepmc", "chembl", "pubchem", "openfda", "reactome", "foldseek",
     "pymol", "kinetic", "watercolor", "watercolour", "pentest", "owasp", "xss", "ssrf",
     "gdocs", "gsheets", "gdrive", "gslides", "gaql", "pmax", "troas", "tcpa",
-    "sitelinks", "callouts",
+    "sitelinks", "callouts", "iztro", "pythagoras", "numerology", "bazi",
 }
 
 CONCEPT_SYNONYMS: list[tuple[set[str], list[str]]] = [
@@ -181,6 +181,12 @@ CONCEPT_SYNONYMS: list[tuple[set[str], list[str]]] = [
      ["google-ads-master", "keyword-analysis", "planner", "negative", "cpc"]),
     ({"chuyen", "doi", "cro", "trang", "dich", "tracking", "conversion", "message", "match"},
      ["google-ads-master", "toi-uu-chuyen-doi-web", "measurement", "conversion", "cro"]),
+    ({"tu", "vi", "dau", "bat", "tru", "binh", "dung", "than", "menh", "tiet", "khi", "iztro", "bazi", "astrolabe"},
+     ["tu-vi-bat-tu-than-so-hoc", "iztro", "pythagoras", "bazi", "tiet", "khi"]),
+    ({"pythagoras", "numerology", "nhan", "than", "hoc", "duong", "doi", "linh", "hon", "pinnacle"},
+     ["tu-vi-bat-tu-than-so-hoc", "pythagoras", "numerology", "phillips"]),
+    ({"kim", "lau", "hoang", "oc", "tam", "tai", "hon", "phoi", "dai", "hoa"},
+     ["tu-vi-bat-tu-than-so-hoc", "kim", "lau", "hoang", "oc", "hon", "phoi"]),
 ]
 
 

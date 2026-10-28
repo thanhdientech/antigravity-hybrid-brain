@@ -1,4 +1,4 @@
-# 📦 HƯỚNG DẪN ĐEM TRỌN BỘ ANTIGRAVITY 5 CHỐT CHẶN + BỘ NÃO LAI JAVIS + 22 SKILLS & 12 PLUGINS SANG MÁY KHÁC
+# 📦 HƯỚNG DẪN ĐEM TRỌN BỘ ANTIGRAVITY 5 CHỐT CHẶN + BỘ NÃO LAI JAVIS + 23 SKILLS & 12 PLUGINS SANG MÁY KHÁC
 
 Gói này đã đóng gói đồng bộ **100% phiên bản nâng cấp mới nhất**:
 1. **Luật Vận Hành Toàn Cục 5 Chốt Chặn (18 Ngành — Chuẩn Trình Bày Nguồn 3 Tầng Sạch):** `GEMINI.md` & `QUY_TRINH_CHUNG_5_CHOT_CHAN_CHONG_AO_GIAC_AI.md`.
@@ -8,7 +8,7 @@ Gói này đã đóng gói đồng bộ **100% phiên bản nâng cấp mới nh
    - `auto_reanchor_hook.py`: PreInvocation Lifecycle Hook chống trôi ngữ cảnh (`Anti-Context Drift`) & gợi ý tự động Top 3 Skill ngay đầu lượt.
    - `setup_portable_antigravity.py`: Trình tự động nhận diện Python trên máy mới, đăng ký MCP `agy-skill-hub` + Hook vào `mcp_config.json` / `hooks.json` (không hardcode đường dẫn máy cũ) và dựng mới chỉ mục `agy_skill_index.db`.
 3. **Sổ Tay Nạp Tài Liệu Mới Chuẩn 5 Bước:** `HUONG_DAN_NAP_TAI_LIEU_VA_SKILL_ANTIGRAVITY.md`.
-4. **Trọn Bộ 22 Global Skills** (bao gồm Siêu Hub `lam-phim-video-master` & `google-ads-master`, đã chuẩn hóa `description <= 150` ký tự chuẩn Javis Router Budget `< 4,000` ký tự) & **12 Bộ Plugins Mở Rộng (50+ Sub-skills)**.
+4. **Trọn Bộ 23 Global Skills** (bao gồm Siêu Hub `lam-phim-video-master`, `google-ads-master` & động cơ `tu-vi-bat-tu-than-so-hoc`, đã chuẩn hóa `description <= 150` ký tự chuẩn Javis Router Budget `< 4,000` ký tự) & **12 Bộ Plugins Mở Rộng (50+ Sub-skills)**.
 
 ---
 
@@ -18,7 +18,7 @@ Gói này đã đóng gói đồng bộ **100% phiên bản nâng cấp mới nh
 GOI_DEM_SANG_MAY_KHAC_ANTIGRAVITY/
 ├── 📄 README.md                                        <-- Tài liệu tổng quan kiến trúc & giải thích công cụ chuẩn GitHub
 ├── 🛡️ .gitignore                                       <-- Lá chắn bảo mật chặn lộ mật khẩu DB / Token khi đẩy lên Git
-├── 🚀 CAI_DAT_1_CLICK_WINDOWS.bat                      <-- Bước 1: Chép toàn bộ Config, Scripts, 22 Skills, 12 Plugins & đăng ký MCP/Hook
+├── 🚀 CAI_DAT_1_CLICK_WINDOWS.bat                      <-- Bước 1: Chép toàn bộ Config, Scripts, 23 Skills, 12 Plugins & đăng ký MCP/Hook
 ├── 🐍 CAI_THU_VIEN_PYTHON_CHO_SKILLS.bat               <-- Bước 2: Cài thư viện Python (mcp, pyyaml, playwright...) & dựng chỉ mục FTS5
 ├── 📖 QUY_TRINH_CHUNG_5_CHOT_CHAN_CHONG_AO_GIAC_AI.md  <-- Sổ tay 5 Chốt Chặn Chống Ảo Giác AI (18 Ngành)
 ├── 📘 HUONG_DAN_NAP_TAI_LIEU_VA_SKILL_ANTIGRAVITY.md   <-- Sổ tay 5 bước nạp PDF/Word/Sách/SQL thành Skill chuẩn Javis
@@ -36,7 +36,7 @@ GOI_DEM_SANG_MAY_KHAC_ANTIGRAVITY/
     │   ├── auto_reanchor_hook.py
     │   └── setup_portable_antigravity.py
     ├── 📂 plugins/                                     <-- 12 Bộ Plugins (Science 27 DB, Google Docs/Drive/Sheets/Slides, Android CLI, Noti v4...)
-    └── 📂 skills/                                      <-- Trọn bộ 22 Global Skills cốt lõi
+    └── 📂 skills/                                      <-- Trọn bộ 23 Global Skills cốt lõi
 ```
 
 ---
@@ -46,10 +46,10 @@ GOI_DEM_SANG_MAY_KHAC_ANTIGRAVITY/
 ### ✅ Cách 1: Tự Động 1-Click Trên Windows (Khuyên dùng)
 1. Cài sẵn **Python 3.11+** (khuyên dùng Python 3.11–3.13 để hỗ trợ SQLite `contentless_delete=1` siêu tốc) và **Node.js 20+** (cho `security-audit`, `kinetic-reel`, `painted-animation`).
 2. Nhấp đúp chạy **`CAI_DAT_1_CLICK_WINDOWS.bat`**:
-   - Tự động chép toàn bộ `GEMINI.md`, `scripts\`, **22 Skills**, **12 Plugins** vào `%USERPROFILE%\.gemini\config\`.
+   - Tự động chép toàn bộ `GEMINI.md`, `scripts\`, **23 Skills**, **12 Plugins** vào `%USERPROFILE%\.gemini\config\`.
    - Tự động gọi `setup_portable_antigravity.py` để đăng ký MCP `agy-skill-hub` và `PreInvocation Hook` theo đúng đường dẫn Python của máy mới.
 3. Nhấp đúp chạy tiếp **`CAI_THU_VIEN_PYTHON_CHO_SKILLS.bat`**:
-   - Tự động cài `mcp`, `pyyaml`, `aiohttp`, `websockets`, `beautifulsoup4`, `requests`, `playwright`, `pyodbc`, `pymssql`, `reportlab`, `pydantic`, `rich`...
+   - Tự động cài `mcp`, `pyyaml`, `aiohttp`, `websockets`, `beautifulsoup4`, `requests`, `playwright`, `pyodbc`, `pymssql`, `reportlab`, `pydantic`, `rich`, `iztro-py`, `lunar_python`...
    - Tự động quét và dựng mới chỉ mục `agy_skill_index.db` ngay trên máy đích.
 4. Khởi động lại **Antigravity IDE** hoặc **Antigravity CLI (`agy`)** để kích hoạt toàn bộ hệ thống.
 

@@ -1,5 +1,5 @@
 # ==============================================================================
-# DANH SÁCH THƯ VIỆN PYTHON CHO BỘ NÃO LAI JAVIS (agy-skill-hub) & 21 GLOBAL SKILLS
+# DANH SÁCH THƯ VIỆN PYTHON CHO BỘ NÃO LAI JAVIS (agy-skill-hub) & 23 GLOBAL SKILLS
 # ==============================================================================
 # 1. Bộ Não Lai Javis Hybrid Skill Brain (agy_skill_engine.py + agy_skill_mcp_server.py)
 mcp>=1.2.0
@@ -39,3 +39,8 @@ python-dateutil>=2.8.2
 json-repair>=0.25.0
 rich>=13.7.0
 questionary>=2.0.0
+
+# 7. tu-vi-bat-tu-than-so-hoc: Lõi Tử Vi Đẩu Số (iztro-py) & Bát Tự 24 Tiết Khí (lunar_python)
+iztro-py>=0.5.0
+lunar_python>=1.4.0
+lunarcalendar>=0.0.9

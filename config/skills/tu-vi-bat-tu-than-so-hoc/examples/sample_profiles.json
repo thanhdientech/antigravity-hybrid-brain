@@ -1,0 +1,18 @@
+[
+  {
+    "id": "Nguyen_Van_An",
+    "ho_ten": "Nguyễn Văn An",
+    "gioi_tinh": "Nam",
+    "ngay_sinh_duong_lich": "1990-08-15",
+    "gio_sinh_duong_lich": "10:30",
+    "noi_sinh": "TP. Hồ Chí Minh"
+  },
+  {
+    "id": "Tran_Minh_Ngoc",
+    "ho_ten": "Trần Minh Ngọc",
+    "gioi_tinh": "Nữ",
+    "ngay_sinh_duong_lich": "1993-04-22",
+    "gio_sinh_duong_lich": "14:15",
+    "noi_sinh": "Hà Nội"
+  }
+]

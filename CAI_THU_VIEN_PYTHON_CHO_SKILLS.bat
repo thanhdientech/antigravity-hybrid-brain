@@ -1,8 +1,8 @@
 @echo off
 chcp 65001 >nul
-title Cai Dat Thu Vien Python Cho Bo Nao Javis & 21 Skills Antigravity
+title Cai Dat Thu Vien Python Cho Bo Nao Javis & 23 Skills Antigravity
 echo ==============================================================================
-echo   CAI DAT THU VIEN PYTHON CHO BO NAO JAVIS ^& 21 SKILLS ANTIGRAVITY (1-CLICK)
+echo   CAI DAT THU VIEN PYTHON CHO BO NAO JAVIS ^& 23 SKILLS ANTIGRAVITY (1-CLICK)
 echo ==============================================================================
 echo.
 
@@ -24,7 +24,7 @@ python -m pip install pyodbc pymssql reportlab
 
 echo.
 echo [5/6] Cai thu vien cho ifixai-agent-auditor Full SDK (pydantic, jsonschema, rich, click, questionary)...
-python -m pip install pydantic typing_extensions pyyaml jsonschema click python-dateutil json-repair rich questionary
+python -m pip install pydantic typing_extensions pyyaml jsonschema click python-dateutil json-repair rich questionary iztro-py lunar_python lunarcalendar
 
 echo.
 echo [6/6] Cai trinh duyet Chromium cho Playwright ^& Khoi tao Chi muc Lai agy_skill_index.db...
