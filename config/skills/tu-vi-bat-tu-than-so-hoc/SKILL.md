@@ -1,6 +1,6 @@
 ---
 name: tu-vi-bat-tu-than-so-hoc
-description: "Luận giải Tử Vi Đẩu Số (iztro-py), Bát Tự Tứ Trụ 24 Tiết Khí & Thần Số Học Pythagoras: xuất 10 hồ sơ SOP V3.0, tinh bàn HTML & kiểm toán QA."
+description: "Luận giải Tử Vi Đẩu Số (iztro-py), Bát Tự 24 Tiết Khí & Thần Số Học Pythagoras: xuất 10 hồ sơ SOP V3.0 & tinh bàn HTML."
 group: "Huyền Học & Khai Vấn"
 ---
 

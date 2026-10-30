@@ -1,0 +1,82 @@
+{
+  "description": "Danh sách kho Git gốc (Upstream GitHub) của các Global Skills đã đóng gói/băm nhỏ không giữ thư mục .git trực tiếp trong ~/.gemini/config/skills.",
+  "tracked_upstreams": [
+    {
+      "skill": "project-blueprint-architect (superpowers)",
+      "remote_url": "https://github.com/obra/superpowers.git",
+      "local_dir": "~/.gemini/config/skills/project-blueprint-architect",
+      "recorded_sha": "2ce8aa15d05bd57213e6f746f953aafb7ded7a8b",
+      "recorded_date": "2026-10-21"
+    },
+    {
+      "skill": "project-blueprint-architect (mattpocock)",
+      "remote_url": "https://github.com/mattpocock/skills.git",
+      "local_dir": "~/.gemini/config/skills/project-blueprint-architect",
+      "recorded_sha": "a496f5513d4a4cf889bc48e189e579f4b0bdf6aa",
+      "recorded_date": "2026-10-29"
+    },
+    {
+      "skill": "project-blueprint-architect (spec-kit)",
+      "remote_url": "https://github.com/github/spec-kit.git",
+      "local_dir": "~/.gemini/config/skills/project-blueprint-architect",
+      "recorded_sha": "7370e592f3cd9c06e5b698983957e227c75b30e2",
+      "recorded_date": "2026-10-30"
+    },
+    {
+      "skill": "project-blueprint-architect (pm-skills)",
+      "remote_url": "https://github.com/product-on-purpose/pm-skills.git",
+      "local_dir": "~/.gemini/config/skills/project-blueprint-architect",
+      "recorded_sha": "9335f2c33d54a5ee6074296ae2e3172eea8e321c",
+      "recorded_date": "2026-10-29"
+    },
+    {
+      "skill": "reverse-engineer-anything",
+      "remote_url": "https://github.com/morluto/rea.git",
+      "local_dir": "~/.gemini/config/skills/reverse-engineer-anything",
+      "recorded_sha": "ce5bc8cb0149c230e571126e2e7d9f43c86a823d",
+      "recorded_date": "2026-10-22"
+    },
+    {
+      "skill": "gsap-skills",
+      "remote_url": "https://github.com/greensock/gsap-skills.git",
+      "local_dir": "~/.gemini/config/skills/gsap-skills",
+      "recorded_sha": "aed9cfd3277740755f6bfc1155c7aa645403b760",
+      "recorded_date": "2026-10-30"
+    },
+    {
+      "skill": "security-audit",
+      "remote_url": "https://github.com/cloudflare/security-audit-skill.git",
+      "local_dir": "~/.gemini/config/skills/security-audit",
+      "recorded_sha": "c1c8a8c1471069fb0e188eeaff69b8e8db6564a8",
+      "recorded_date": "2026-10-30"
+    },
+    {
+      "skill": "ui-ux-design-pro-max (ui-ux-pro-max)",
+      "remote_url": "https://github.com/nextlevelbuilder/ui-ux-pro-max-skill.git",
+      "local_dir": "~/.gemini/config/skills/ui-ux-design-pro-max",
+      "recorded_sha": "28b3b8dee8c976df4fa3e94aed4e092ad43fcb03",
+      "recorded_date": "2026-10-30"
+    },
+    {
+      "skill": "ui-ux-design-pro-max (awesome-design-md)",
+      "remote_url": "https://github.com/VoltAgent/awesome-design-md.git",
+      "local_dir": "~/.gemini/config/skills/ui-ux-design-pro-max",
+      "recorded_sha": "fcc70284932276d085f01ef9f83edde90b1258cb",
+      "recorded_date": "2026-10-30"
+    },
+    {
+      "skill": "brand-editorial-graphic-studio (office-skills)",
+      "remote_url": "https://github.com/claude-office-skills/skills.git",
+      "local_dir": "~/.gemini/config/skills/brand-editorial-graphic-studio",
+      "recorded_sha": "9c4c7d5cd2813a8936bf2c9fdb174ea883b85a11",
+      "recorded_date": "2026-10-30"
+    },
+    {
+      "skill": "prompts-chat",
+      "remote_url": "https://github.com/f/prompts.chat.git",
+      "local_dir": "~/.gemini/config/skills/prompts-chat",
+      "recorded_sha": "332cba7db387f092987ff8b3b3744c1c754c244e",
+      "recorded_date": "2026-10-30"
+    }
+  ]
+}

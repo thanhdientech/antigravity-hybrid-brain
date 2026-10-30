@@ -1,6 +1,6 @@
 ---
 name: yt-shortcode-commander
-description: "Trung tâm điều khiển dây chuyền sản xuất YouTube & Facebook 6 lệnh (Nội dung, Prompt, Render, Đăng lịch, Nuôi nick, Xây kênh mới)."
+description: "Điều khiển dây chuyền sản xuất YouTube & Facebook 6 lệnh (Nội dung, Prompt, Render, Đăng lịch, Nuôi nick, Kênh mới)."
 group: "YouTube & Tự Động Hóa MXH"
 ---
 

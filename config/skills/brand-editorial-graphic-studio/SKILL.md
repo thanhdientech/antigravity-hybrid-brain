@@ -1,6 +1,6 @@
 ---
 name: brand-editorial-graphic-studio
-description: "Siêu Hub thiết kế Logo SVG, Bộ nhận diện thương hiệu CIP, Ảnh/Banner quảng cáo, Báo giá, Tạp chí & Dàn trang in ấn PDF/DOCX/PPTX/Typst."
+description: "Siêu Hub thiết kế Logo SVG, Bộ nhận diện CIP, Banner Ads, Báo giá, Tạp chí & Dàn trang in ấn PDF/DOCX/PPTX/Typst."
 group: "Thiết Kế Web, UI/UX & Thương Hiệu"
 ---
 

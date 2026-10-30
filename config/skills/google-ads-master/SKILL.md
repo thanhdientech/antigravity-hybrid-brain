@@ -1,6 +1,6 @@
 ---
 name: google-ads-master
-description: "Siêu Hub 12 bộ skill Google Ads & CRO: phân tích từ khóa, tracking, audit A1-A14, lập ngân sách, Search/PMax, tối ưu ROAS & Editor CSV."
+description: "Siêu Hub 12 skill Google Ads & CRO: từ khóa, tracking, audit A1-A14, ngân sách, Search/PMax, tối ưu ROAS & Editor CSV."
 group: "Quảng Cáo & Marketing"
 ---
 
