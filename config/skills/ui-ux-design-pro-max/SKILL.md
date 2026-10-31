@@ -1,6 +1,6 @@
 ---
 name: ui-ux-design-pro-max
-description: "Siêu Hub UI/UX Phần mềm & Web 192 ngành nghề: 79 UI styles, 84 hệ DESIGN.md thương hiệu lớn & chuyển thiết kế sang code 22 frameworks."
+description: "Siêu Hub UI/UX 192 ngành: 79 UI styles, 84 hệ DESIGN.md thương hiệu lớn & chuyển thiết kế sang code 22 frameworks."
 group: "Thiết Kế Web, UI/UX & Thương Hiệu"
 ---
 

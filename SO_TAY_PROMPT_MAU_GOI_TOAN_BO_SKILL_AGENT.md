@@ -1,10 +1,10 @@
-# Sổ Tay Prompt Mẫu Gọi Chuẩn Toàn Bộ 91 Skill Trên Antigravity & Javis
+# Sổ Tay Prompt Mẫu Gọi Chuẩn Toàn Bộ 92 Skill Trên Antigravity & Javis
 
-Tài liệu này tổng hợp các **Prompt mẫu thực chiến (Copy & Paste điền khung `[...]` dùng ngay)** cho toàn bộ **91 Kỹ năng (Skills)** đang hoạt động trong hệ thống của anh (`32 Global Skills` + `50 Plugin Skills` + `9 Builtin Skills`). Mỗi mẫu câu lệnh đã được thiết kế sẵn đủ **Từ khóa kích hoạt (`Trigger`)** và **Dữ kiện đầu vào bắt buộc**, giúp AI Agent bắt đúng công cụ và thực thi chuẩn ngay lần đầu tiên mà không cần dừng lại hỏi bổ sung thông tin cơ bản.
+Tài liệu này tổng hợp các **Prompt mẫu thực chiến (Copy & Paste điền khung `[...]` dùng ngay)** cho toàn bộ **92 Kỹ năng (Skills)** đang hoạt động trong hệ thống của anh (`33 Global Skills` + `50 Plugin Skills` + `9 Builtin Skills`). Mỗi mẫu câu lệnh đã được thiết kế sẵn đủ **Từ khóa kích hoạt (`Trigger`)** và **Dữ kiện đầu vào bắt buộc**, giúp AI Agent bắt đúng công cụ và thực thi chuẩn ngay lần đầu tiên mà không cần dừng lại hỏi bổ sung thông tin cơ bản.
 
 > [!IMPORTANT]
 > **QUY TẮC BƯỚC 0 BẮT BUỘC KHI TẠO PROJECT MỚI HOẶC LÀM CHỨC NĂNG MỚI (`BLUEPRINT-FIRST RULE`):**
-> Mỗi khi bắt đầu **một dự án mới** (Phần mềm, Website, SEO, Marketing/Ads, Bảo mật, Server/VPS, ERP SAP B1/Beas, Học tập/Sản phẩm số) hoặc **thêm một chức năng / phân hệ lớn mới**, anh **luôn gọi [`project-blueprint-architect`](./config/skills/project-blueprint-architect/SKILL.md) ĐẦU TIÊN** (xem **Bước 0** ngay bên dưới). Agent sẽ đóng vai **CEO + CPO + Kiến trúc sư trưởng** phỏng vấn gỡ điểm mù (`Grill-Me`) và xuất ra **1 file chốt yêu cầu duy nhất (`BLUEPRINT_<TEN_DU_AN>.md`)** quy định rõ *Yêu cầu chức năng (`FR/NFR`) + Công nghệ sử dụng + Từng Phase gọi đúng Skill nào trong 91 Skills + Prompt thực thi từng Phase*. Chốt xong file này mới bắt đầu làm!
+> Mỗi khi bắt đầu **một dự án mới** (Phần mềm, Website, SEO, Marketing/Ads, Bảo mật, Server/VPS, ERP SAP B1/Beas, Học tập/Sản phẩm số) hoặc **thêm một chức năng / phân hệ lớn mới**, anh **luôn gọi [`project-blueprint-architect`](./config/skills/project-blueprint-architect/SKILL.md) ĐẦU TIÊN** (xem **Bước 0** ngay bên dưới). Agent sẽ đóng vai **CEO + CPO + Kiến trúc sư trưởng** phỏng vấn gỡ điểm mù (`Grill-Me`) và xuất ra **1 file chốt yêu cầu duy nhất (`BLUEPRINT_<TEN_DU_AN>.md`)** quy định rõ *Yêu cầu chức năng (`FR/NFR`) + Công nghệ sử dụng + Từng Phase gọi đúng Skill nào trong 92 Skills + Prompt thực thi từng Phase*. Chốt xong file này mới bắt đầu làm!
 
 > [!TIP]
 > **Công Thức Vàng 4 Thành Phần Khi Giao Việc Cho Agent:**
@@ -27,7 +27,7 @@ Dùng skill `project-blueprint-architect` đóng vai CEO & Kiến trúc sư trư
 Yêu cầu:
 1. TUYỆT ĐỐI CHƯA VIẾT CODE HAY LÀM THỰC THI NGAY.
 2. Áp dụng checklist chuyên ngành của skill để phỏng vấn ngược lại anh (Grill-Me) bằng 1 Bảng Quyết Định gọn 5–7 điểm mù quan trọng nhất kèm phương án `[⭐ Khuyên dùng]`.
-3. Sau khi anh chốt bảng quyết định, hãy xuất 1 file đặc tả hoàn chỉnh duy nhất tại `[Đường dẫn/BLUEPRINT_TEN_DU_AN.md]` (gồm In-Scope/Out-of-Scope, FR/NFR, 5 tình huống biên dễ vỡ, sơ đồ kiến trúc Mermaid, Tech Stack, lộ trình từng Phase ánh xạ chính xác vào các Skill trong 91 Skills trên máy và bộ Prompt mẫu cho từng Phase), rồi chạy `validate_blueprint.py` kiểm định đạt Exit code 0.
+3. Sau khi anh chốt bảng quyết định, hãy xuất 1 file đặc tả hoàn chỉnh duy nhất tại `[Đường dẫn/BLUEPRINT_TEN_DU_AN.md]` (gồm In-Scope/Out-of-Scope, FR/NFR, 5 tình huống biên dễ vỡ, sơ đồ kiến trúc Mermaid, Tech Stack, lộ trình từng Phase ánh xạ chính xác vào các Skill trong 92 Skills trên máy và bộ Prompt mẫu cho từng Phase), rồi chạy `validate_blueprint.py` kiểm định đạt Exit code 0.
 ```
 
 **Mẫu 0B — Xây dựng thêm một Chức Năng / Phân Hệ Mới vào Dự Án đang có sẵn:**
@@ -42,8 +42,8 @@ Yêu cầu: Không hỏi lại những gì code đã có; chỉ lập 1 Bảng G
 
 | Nhu Cầu Thực Tế Của Anh | Các Skill Chủ Lực Sẽ Kích Hoạt | Đi Tới Mục |
 | :--- | :--- | :--- |
-| **🏛️ [BƯỚC 0] Tạo Project mới hoặc Chức năng mới — Phỏng vấn chốt 1 file Master Blueprint** | `project-blueprint-architect` *(Ánh xạ công nghệ & lộ trình 91 Skills cho 8 ngành)* | **Bước 0** |
-| **Làm giao diện phần mềm, Web App, Dashboard, Landing Page, WordPress, Webcake, Hiệu ứng Web** | `ui-ux-design-pro-max`, `generative_ui`, `design-landingpage-vip-v2`, `wordpress-flatsome-designer`, `html-to-webcake`, `gsap-skills` | **Nhóm 1** |
+| **🏛️ [BƯỚC 0] Tạo Project mới hoặc Chức năng mới — Phỏng vấn chốt 1 file Master Blueprint** | `project-blueprint-architect` *(Ánh xạ công nghệ & lộ trình 92 Skills cho 8 ngành)* | **Bước 0** |
+| **Làm giao diện Web App thao tác chức năng (User/Admin/ERP/SaaS), Mobile App, Landing Page, WordPress, Webcake** | `webapp-app-ux-workflow`, `ui-ux-design-pro-max`, `generative_ui`, `design-landingpage-vip-v2`, `wordpress-flatsome-designer`, `html-to-webcake`, `gsap-skills` | **Nhóm 1** |
 | **Thiết kế Logo SVG, Bộ nhận diện CIP, Banner Ads, Báo giá PDF A4, Hồ sơ năng lực, Tạp chí** | `brand-editorial-graphic-studio` *(5 Modules đồ họa & chế bản in ấn)* | **Nhóm 2** |
 | **Kiểm toán SEO / AI Search (GEO), Chạy Google Ads, Tối ưu CRO, Vẽ chân dung khách, Viết Content, Ebook** | `claude-seo`, `google-ads-master`, `chan-dung-khach-hang-9-phan`, `cong-thuc-viet-content-by-noti-v4`, `tao-san-pham-so-bang-ai` | **Nhóm 3** |
 | **Kiểm tra Bảo mật Web/Code/API, Dịch ngược phần mềm (REA), Kiểm toán AI, Tra nguồn, Nạp tài liệu, Check Update Git** | `security-audit`, `reverse-engineer-anything`, `ifixai-agent-auditor`, `verified-source-researcher`, `lean-teamwork`, `nap-tai-lieu-antigravity`, `prompts-chat` + 9 Builtin/SDK | **Nhóm 4** |
@@ -54,7 +54,40 @@ Yêu cầu: Không hỏi lại những gì code đã có; chỉ lập 1 Bảng G
 
 ---
 
-## Nhóm 1 — Thiết Kế Giao Diện Phần Mềm (UI/UX), Web App, Landing Page & Hiệu Ứng
+## Nhóm 1 — Thiết Kế Giao Diện Web App Thao Tác Chức Năng (`Operate Mode`), Mobile App, Landing Page & Hiệu Ứng
+
+### 1.0. Kiến Trúc Luồng Thao Tác UX, Logic State/URL & CRUD Cho Web App (User/Admin/ERP/SaaS) & Mobile App — [`webapp-app-ux-workflow`](./config/skills/webapp-app-ux-workflow/SKILL.md)
+*Hợp nhất tinh hoa từ 8 kho Design Engineering chuẩn quốc tế (`pbakaus/impeccable` v4.8.0 `Operate Mode`, `emilkowalski/skill` `break-ui`, `vercel-labs/web-interface-guidelines` + `agent-skills`, `carmahhawwari/ui-design-brain` 60+ SaaS Components, `ibelick/ui-skills`, `callstack` React Navigation & `flutter` GoRouter). Chuyên trị **Web App người dùng/Admin thao tác chức năng thực tế** — tách biệt hoàn toàn với web xem tin/quảng cáo thông thường.*
+
+**Mẫu 1.0A — Thiết kế & code Web App Người Dùng / Trang Quản Trị Admin / ERP / SaaS có luồng thao tác chặt chẽ:**
+```text
+Kết hợp skill `webapp-app-ux-workflow` (kiểm soát luồng thao tác `Operate Mode` & logic State) và `ui-ux-design-pro-max` (hệ màu & token ngành nghề) để thiết kế và lập trình phân hệ Web App: [Tên phân hệ, VD: Cổng Quản lý Đơn hàng & Duyệt Chi Phí Đa Cấp / Portal Khách hàng Tra cứu & Gửi Yêu cầu Bảo hành].
+- Vai trò sử dụng & Phân quyền (RBAC): [VD: Nhân viên tạo phiếu, Trưởng phòng duyệt <= 50 triệu, Admin toàn quyền; nút vượt thẩm quyền phải Disabled kèm Tooltip nêu rõ lý do].
+- Công nghệ (Stack): [VD: Next.js / React + Tailwind CSS + shadcn/ui HOẶC HTML + Tailwind + JS thuần].
+- Luồng nghiệp vụ chính cần làm: [VD: Danh sách lọc đa tiêu chí -> Xem/Sửa nhanh trên Slide-over Drawer cạnh phải -> Tạo mới qua Multi-step Wizard 3 bước -> Duyệt hàng loạt & Xóa an toàn qua AlertDialog].
+Yêu cầu bắt buộc theo `webapp-app-ux-workflow`:
+1. Dùng App Shell `100dvh` (`min-h-dvh`), thang chữ `rem` gọn sắc nét chuẩn `Operate Mode`, tìm kiếm nhanh `⌘K`.
+2. Đồng bộ bộ lọc, tìm kiếm, tab, phân trang và ngăn kéo chi tiết lên URL Query Params (`URL-as-State`) để F5 hoặc gửi link không mất ngữ cảnh.
+3. Bảng dữ liệu bật `tabular-nums` căn phải cột số/tiền, có thanh `Bulk Action Bar`; Form gắn `type="button"` cho mọi nút phụ, chống bấm đúp Submit, cảnh báo rời trang khi sửa dở (`Dirty-state Guard`) và đủ 8 trạng thái UI (kể cả Actionable Empty State).
+4. Kiểm định mã nguồn bằng `audit_webapp_ux.py --strict` đạt Exit code 0 trước khi bàn giao tại `[Đường dẫn thư mục dự án]`.
+```
+
+**Mẫu 1.0B — Thiết kế Luồng Màn hình & Điều hướng chuẩn cho Mobile App (`iOS / Android`):**
+```text
+Dùng skill `webapp-app-ux-workflow` (tài liệu `04-mobile-app-navigation-gestures-responsive-shell.md`) thiết kế kiến trúc điều hướng và giao diện thao tác cho ứng dụng di động: [Tên App, VD: App Nhân viên Kho Quét Mã & Kiểm Kê / App Đặt lịch & Theo dõi Dịch vụ].
+- Nền tảng: [React Native Expo / Flutter GoRouter / Kotlin Jetpack Compose / Mobile Web App PWA].
+- Các luồng màn hình chính: [VD: 4 Bottom Tabs giữ nguyên trạng thái cuộn (Stateful Tabs), luồng Stack chi tiết đơn, và Bottom Form Sheet cho bộ lọc/nhập ghi chú nhanh].
+Yêu cầu: Đảm bảo vùng chạm tối thiểu `44x44pt` / `48x48dp`, cỡ chữ ô nhập `>= 16px` (chống lỗi tự zoom trên iOS), tôn trọng `SafeAreaInsets`, tự đẩy Form lên trên bàn phím ảo và đủ trạng thái Offline / Retry.
+```
+
+**Mẫu 1.0C — Thử lửa phá giao diện với dữ liệu xấu nhất (`Break-UI`) & Quét lỗi logic UI tự động:**
+```text
+Dùng skill `webapp-app-ux-workflow` (quy trình `05-gia-co-edge-cases-harden-va-break-ui.md` & công cụ `scripts/audit_webapp_ux.py`) kiểm định và gia cố toàn bộ giao diện Web App tại `[Đường dẫn thư mục code UI]`:
+1. Chạy `audit_webapp_ux.py` phát hiện và sửa sạch 12 nhóm lỗi thao tác (nút trong `<form>` thiếu `type`, `<div onClick>` liệt phím Tab, mất vòng `focus-visible`, `100vh` che nút đáy mobile, bảng thiếu `tabular-nums`, chặn Paste...).
+2. Gia cố chống vỡ khung với dữ liệu cực hạn (`Break-UI`): tên tiếng Việt dài 120 ký tự (`min-w-0` + `truncate`), chuỗi mã/URL không khoảng trắng, số tiền hàng trăm tỷ, mảng rỗng `[]` và lỗi mạng `401/422/500` không làm mất dữ liệu người dùng vừa nhập.
+```
+
+---
 
 ### 1.1. Thiết Kế Giao Diện Phần Mềm & Web App 192 Ngành — [`ui-ux-design-pro-max`](./config/skills/ui-ux-design-pro-max/SKILL.md)
 *Hợp nhất 6 module: 192 quy tắc ngành nghề, 22 frameworks (`React`, `Next.js`, `HTML+Tailwind`, `Vue`, `Flutter`, `WPF`, `WinUI 3`...), kiến trúc Token 3 tầng, `shadcn/ui`, **84 hồ sơ `DESIGN.md` thương hiệu lớn** (`Stripe`, `Linear`, `Apple`, `Vercel`, `Notion`, `Shopify`, `Supabase`...) và bộ lọc chống giao diện AI rập khuôn (`no-ai-design-slop`).*

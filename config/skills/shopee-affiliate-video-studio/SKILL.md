@@ -1,6 +1,6 @@
 ---
 name: shopee-affiliate-video-studio
-description: "Phân tích ngách Shopee, dùng AI đọc ảnh/thông số NSX sáng tác câu chuyện đời thường đa ngành, ghi text lên video & dựng MP4 9:16."
+description: "Phân tích ngách Shopee, AI đọc ảnh/thông số NSX sáng tác câu chuyện đa ngành, ghi text lên video & dựng MP4 9:16."
 group: "Làm Phim & Video AI"
 ---
 

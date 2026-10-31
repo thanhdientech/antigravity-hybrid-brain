@@ -1,6 +1,6 @@
 ---
 name: project-blueprint-architect
-description: "Kiến trúc sư phỏng vấn ý tưởng (Grill-Me) & chốt 1 file Master Blueprint đa ngành: yêu cầu, công nghệ & ánh xạ 91 Skills."
+description: "Kiến trúc sư phỏng vấn ý tưởng (Grill-Me) & chốt 1 file Master Blueprint đa ngành: yêu cầu, công nghệ & ánh xạ 92 Skills."
 group: "Kiểm Toán & Điều Phối AI"
 ---
 
@@ -10,7 +10,7 @@ group: "Kiểm Toán & Điều Phối AI"
 ## Khi nào dùng (Triggers & Ngữ cảnh kích hoạt đầy đủ)
 
 > **QUY TẮC BƯỚC 0 BẮT BUỘC:** Kích hoạt ĐẦU TIÊN mỗi khi người dùng khởi tạo một dự án mới (New Project) hoặc xây dựng một chức năng / phân hệ / chiến dịch lớn mới (New Feature / Module / Campaign) thuộc bất kỳ lĩnh vực nào trong 8 nhóm ngành: Phần mềm/Web App/Mobile/Automation, Website/Landing Page/Thương hiệu, SEO/AI Search (GEO), Marketing/Quảng cáo/Sản phẩm số, Bảo mật/Dịch ngược, Server/VPS/Hạ tầng, ERP SAP Business One/Boyum Beas/SQL, hoặc Học tập/Nghiên cứu khoa học.
-> Đóng vai trò **CEO + Giám đốc Sản phẩm (CPO) + Kiến trúc sư trưởng (Chief Architect)**: **TUYỆT ĐỐI KHÔNG** lao vào viết code, dựng giao diện hay viết bài thực thi ngay; thay vào đó thực hiện phỏng vấn khai thác điểm mù (`Grill-Me`), khóa biên giới phạm vi (`In-Scope` vs `Out-of-Scope`), chốt yêu cầu chức năng (`FR`) / phi chức năng (`NFR`), lựa chọn Tech Stack và xuất ra **1 file Master Blueprint duy nhất (`BLUEPRINT_<TEN_DU_AN>.md`)** chỉ định rõ từng bước dùng công nghệ gì, gọi chính xác Skill nào trong **91 Skills** trên máy kèm Prompt thực thi từng giai đoạn.
+> Đóng vai trò **CEO + Giám đốc Sản phẩm (CPO) + Kiến trúc sư trưởng (Chief Architect)**: **TUYỆT ĐỐI KHÔNG** lao vào viết code, dựng giao diện hay viết bài thực thi ngay; thay vào đó thực hiện phỏng vấn khai thác điểm mù (`Grill-Me`), khóa biên giới phạm vi (`In-Scope` vs `Out-of-Scope`), chốt yêu cầu chức năng (`FR`) / phi chức năng (`NFR`), lựa chọn Tech Stack và xuất ra **1 file Master Blueprint duy nhất (`BLUEPRINT_<TEN_DU_AN>.md`)** chỉ định rõ từng bước dùng công nghệ gì, gọi chính xác Skill nào trong **92 Skills** trên máy kèm Prompt thực thi từng giai đoạn.
 > TRIGGERS: "lập blueprint", "lap blueprint", "master blueprint", "lên kế hoạch dự án", "len ke hoach du an", "tạo project mới", "tao project moi", "dự án mới", "du an moi", "làm chức năng mới", "lam chuc nang moi", "thêm tính năng mới", "them tinh nang moi", "chốt yêu cầu", "chot yeu cau", "đặc tả yêu cầu", "dac ta yeu cau", "đặc tả chức năng", "viết prd", "viet prd", "product requirements document", "grill me", "phỏng vấn yêu cầu", "spec driven", "spec-kit", "kiến trúc dự án", "lộ trình triển khai", "project-blueprint-architect".
 <!-- JAVIS_TRIGGER_ARCHIVE_END -->
 
@@ -35,7 +35,7 @@ group: "Kiểm Toán & Điều Phối AI"
 | Bước Thực Thi | Tệp Tham Chiếu / Công Cụ | Nội Dung Cốt Lõi Cần Nạp |
 | :--- | :--- | :--- |
 | **Bước 1 — Phỏng vấn `Grill-Me` & Khóa Phạm Vi** | [`references/01-phuong-phap-grill-me-va-khoa-pham-vi.md`](./references/01-phuong-phap-grill-me-va-khoa-pham-vi.md) | Tự đọc Workspace trước khi hỏi; gom 5–7 câu hỏi tử huyệt vào 1 Bảng Tư Vấn có `[⭐ Khuyên dùng]`; tách `In-Scope` vs `Out-of-Scope`. |
-| **Bước 2 — Checklist 8 Ngành & Ánh Xạ 91 Skills** | [`references/02-checklist-8-nganh-cong-nghe-va-anh-xa-91-skills.md`](./references/02-checklist-8-nganh-cong-nghe-va-anh-xa-91-skills.md) | Bộ câu hỏi chống sót yêu cầu, Tech Stack chuẩn & Bảng ánh xạ chính xác từng giai đoạn sang **91 Skills** cho 8 ngành. |
+| **Bước 2 — Checklist 8 Ngành & Ánh Xạ 92 Skills** | [`references/02-checklist-8-nganh-cong-nghe-va-anh-xa-91-skills.md`](./references/02-checklist-8-nganh-cong-nghe-va-anh-xa-91-skills.md) | Bộ câu hỏi chống sót yêu cầu, Tech Stack chuẩn & Bảng ánh xạ chính xác từng giai đoạn sang **92 Skills** cho 8 ngành. |
 | **Bước 3 — Xuất 1 File Master Blueprint Duy Nhất** | [`references/03-mau-1-file-master-blueprint-chuan.md`](./references/03-mau-1-file-master-blueprint-chuan.md) | Khung chuẩn 10 phần của file `BLUEPRINT_<TEN_DU_AN>.md` kèm sơ đồ Mermaid, bảng `FR/NFR`, Hợp đồng Agent & Prompt từng pha. |
 | **Bước 4 — Kiểm Định Tự Động File Blueprint (`Exit 0`)** | [`scripts/validate_blueprint.py`](./scripts/validate_blueprint.py) | Script kiểm tra đủ 10 mục bắt buộc, `0` chỗ trống `TBD/TODO`, và đối chiếu 100% tên `@skill` khớp với `agy_skill_index.db`. |
 
@@ -50,7 +50,7 @@ group: "Kiểm Toán & Điều Phối AI"
    - Nếu thiếu dữ kiện gốc hoặc có ngã rẽ kiến trúc quan trọng, trình bày gọn trong **1 Bảng Quyết Định (5–7 câu hỏi cốt lõi nhất)**, mỗi câu đều kèm **Phương án đề xuất `[⭐ Khuyên dùng]`** và lý do thực tế để người dùng chỉ cần gật đầu hoặc sửa nhanh 1 dòng.
 3. **Bước 3 — Biên soạn 1 File Duy Nhất `BLUEPRINT_<TEN_DU_AN>.md`:**
    - Theo đúng mẫu 10 mục tại `references/03-mau-1-file-master-blueprint-chuan.md`.
-   - Bắt buộc có **Bảng Lộ Trình Thực Thi Từng Giai Đoạn (Phase 1 -> Phase N)**: ghi rõ *Đầu vào (`Consumes`) $\rightarrow$ Công nghệ sử dụng $\rightarrow$ Gọi chính xác Skill nào trong 91 Skills $\rightarrow$ Sản phẩm đầu ra (`Produces`) $\rightarrow$ Lệnh/Tiêu chí nghiệm thu (`Exit code 0`)* + **Khung Prompt Mẫu Copy-Paste cho từng Phase**.
+   - Bắt buộc có **Bảng Lộ Trình Thực Thi Từng Giai Đoạn (Phase 1 -> Phase N)**: ghi rõ *Đầu vào (`Consumes`) $\rightarrow$ Công nghệ sử dụng $\rightarrow$ Gọi chính xác Skill nào trong 92 Skills $\rightarrow$ Sản phẩm đầu ra (`Produces`) $\rightarrow$ Lệnh/Tiêu chí nghiệm thu (`Exit code 0`)* + **Khung Prompt Mẫu Copy-Paste cho từng Phase**.
 4. **Bước 4 — Chạy Kiểm Định `validate_blueprint.py` & Trình Duyệt:**
    - Chạy lệnh kiểm tra tự động đạt `Exit code 0`:
      ```powershell

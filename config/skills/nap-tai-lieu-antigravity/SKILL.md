@@ -1,6 +1,6 @@
 ---
 name: nap-tai-lieu-antigravity
-description: "Quy chuẩn 5 bước nạp tài liệu mới (PDF, Word, Sách, SQL) & tạo/sửa Skill trên Antigravity chuẩn Bộ Não Lai Javis (agy-skill-hub)."
+description: "Quy chuẩn 5 bước nạp tài liệu mới (PDF, Word, Sách, SQL) & tạo/sửa Skill chuẩn Bộ Não Lai Javis (agy-skill-hub)."
 group: "Kiểm Toán & Điều Phối AI"
 ---
 

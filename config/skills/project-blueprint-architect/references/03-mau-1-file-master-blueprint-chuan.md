@@ -80,10 +80,10 @@ flowchart LR
 
 ---
 
-## 7. Lộ Trình Triển Khai Cuốn Chiếu & Bảng Ánh Xạ Chính Xác Vào 91 Skills
+## 7. Lộ Trình Triển Khai Cuốn Chiếu & Bảng Ánh Xạ Chính Xác Vào 92 Skills
 | Giai Đoạn (Phase) | Hạng Mục Công Việc (Atomic Task) | Công Nghệ Sử Dụng | Skill Chủ Lực Cần Gọi (`@skill`) | Đầu Vào (`Consumes`) -> Đầu Ra (`Produces`) | Cổng Nghiệm Thu (`Gate Check`) |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Phase 1** | [Tên bước 1] | [Công nghệ 1] | `ui-ux-design-pro-max` | Spec -> Design System & Giao diện | Hiển thị chuẩn, `0` lỗi console |
+| **Phase 1** | [Tên bước 1] | [Công nghệ 1] | `webapp-app-ux-workflow`, `ui-ux-design-pro-max` | Spec -> Luồng UX, Design System & UI | `audit_webapp_ux.py` `Exit 0` |
 | **Phase 2** | [Tên bước 2] | [Công nghệ 2] | `lean-teamwork` | Giao diện -> Logic & DB hoàn chỉnh | Unit/Integration test `Exit 0` |
 | **Phase 3** | [Tên bước 3] | [Công nghệ 3] | `security-audit`, `ifixai-agent-auditor` | Toàn bộ mã nguồn -> Báo cáo Audit | `0` lỗ hổng Critical/High, `Grade A` |
 

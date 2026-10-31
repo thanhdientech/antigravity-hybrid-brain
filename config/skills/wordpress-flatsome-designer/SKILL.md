@@ -1,6 +1,6 @@
 ---
 name: wordpress-flatsome-designer
-description: "Thiết kế & tùy biến website WordPress theme Flatsome 3.x: Shortcodes UX Builder chuẩn 100%, Child Theme, chuẩn SEO & chuyển đổi."
+description: "Thiết kế website WordPress theme Flatsome 3.x: Shortcodes UX Builder chuẩn 100%, Child Theme, tối ưu SEO & CRO."
 group: "Marketing, Web & SEO"
 ---
 

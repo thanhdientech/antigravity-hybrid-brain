@@ -46,7 +46,7 @@ def load_installed_skills() -> set:
     config_dir = home / ".gemini" / "config"
     agy_dir = home / ".gemini" / "antigravity"
 
-    # 1. Ưu tiên đọc chuẩn xác 91 Skills từ agy_skill_index.db nếu đã có
+    # 1. Ưu tiên đọc chuẩn xác 92 Skills từ agy_skill_index.db nếu đã có
     for db_candidate in [
         config_dir / "agy_skill_index.db",
         config_dir / "scripts" / "agy_skill_index.db",

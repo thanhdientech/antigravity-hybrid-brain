@@ -1,6 +1,6 @@
 ---
 name: tao-san-pham-so-bang-ai
-description: "Đồng hành tạo sản phẩm số đầu tiên (ebook, workbook, template) từ kinh nghiệm thật trong 7 ngày: Tư duy - Chiến lược - Bán hàng."
+description: "Đồng hành tạo sản phẩm số (ebook, workbook, template) từ kinh nghiệm thật trong 7 ngày: Tư duy - Chiến lược - Bán."
 group: "Quảng Cáo & Marketing"
 ---
 

@@ -1,9 +1,9 @@
 @echo off
 chcp 65001 >nul
-title Cai Dat Antigravity 5 Chot Chan + Javis Hybrid Skill Brain (32 Global Skills + 12 Plugins = 91 Skills)
+title Cai Dat Antigravity 5 Chot Chan + Javis Hybrid Skill Brain (33 Global Skills + 12 Plugins = 92 Skills)
 echo ==============================================================================
 echo   CAI DAT ANTIGRAVITY: 5 CHOT CHAN + JAVIS HYBRID SKILL BRAIN (1-CLICK)
-echo   [32 Global Skills + 12 Plugins + MCP agy-skill-hub + PreInvocation Hook]
+echo   [33 Global Skills + 12 Plugins + MCP agy-skill-hub + PreInvocation Hook]
 echo ==============================================================================
 echo.
 
@@ -23,7 +23,7 @@ if exist "%~dp0config\docs" xcopy /E /I /H /Y "%~dp0config\docs\*" "%USERPROFILE
 echo [2/5] Sao chep Bo Nao Lai Javis Hybrid Skill Engine ^& Hook (config\scripts)...
 xcopy /E /I /H /Y "%~dp0config\scripts\*" "%USERPROFILE%\.gemini\config\scripts\" >nul
 
-echo [3/5] Sao chep Tron Bo 32 Global Skills vao %USERPROFILE%\.gemini\config\skills\...
+echo [3/5] Sao chep Tron Bo 33 Global Skills vao %USERPROFILE%\.gemini\config\skills\...
 xcopy /E /I /H /Y "%~dp0config\skills\*" "%USERPROFILE%\.gemini\config\skills\" >nul
 
 echo [4/5] Sao chep Tron Bo 12 Plugins vao %USERPROFILE%\.gemini\config\plugins\...
@@ -43,7 +43,7 @@ if %ERRORLEVEL% EQU 0 (
 
 echo.
 echo ==============================================================================
-echo [HOAN TAT 100%%] Da cai dat 5 Chot Chan + Bo Nao Javis + 32 Global Skills + 12 Plugins = 91 Skills
+echo [HOAN TAT 100%%] Da cai dat 5 Chot Chan + Bo Nao Javis + 33 Global Skills + 12 Plugins = 92 Skills
 echo Vi tri: %USERPROFILE%\.gemini\config\
 echo Buoc tiep theo: Chay CAI_THU_VIEN_PYTHON_CHO_SKILLS.bat (neu may moi chua cai thu vien Python)
 echo ==============================================================================

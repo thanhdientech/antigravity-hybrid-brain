@@ -21,6 +21,7 @@ GLOBAL_SKILLS_DIR = os.path.expanduser(os.path.join("~", ".gemini", "config", "s
 EXTRA_SOURCE_ROOTS = [
     os.environ.get("AGY_SKILL_SOURCE_DIR", ""),
     os.path.join(os.environ.get("AGY_SKILL_SOURCE_DIR", ""), "blueprint-repos"),
+    os.path.join(os.environ.get("AGY_SKILL_SOURCE_DIR", ""), "ui-workflow-repos"),
 ]
 MANIFEST_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "skill_upstreams.json")
 
@@ -35,6 +36,14 @@ LOCAL_REPO_TO_SKILL = {
     "mattpocock-skills": "project-blueprint-architect (mattpocock)",
     "spec-kit": "project-blueprint-architect (spec-kit)",
     "pm-skills": "project-blueprint-architect (pm-skills)",
+    "impeccable": "webapp-app-ux-workflow (impeccable)",
+    "emilkowalski-skill": "webapp-app-ux-workflow (emilkowalski)",
+    "vercel-agent-skills": "webapp-app-ux-workflow (vercel-agent-skills)",
+    "web-interface-guidelines": "webapp-app-ux-workflow (vercel-wig)",
+    "ui-design-brain": "webapp-app-ux-workflow (ui-design-brain)",
+    "ui-skills": "webapp-app-ux-workflow (ibelick-ui-skills)",
+    "callstack-rn-skills": "webapp-app-ux-workflow (callstack-rn)",
+    "flutter-skills": "webapp-app-ux-workflow (flutter-skills)",
 }
 
 

@@ -1,10 +1,10 @@
 # 🧠 Antigravity x Javis Hybrid Skill Brain & 5-Gate Anti-Hallucination Suite
 
-> **Hệ điều hành Tri thức Lai (Hybrid Knowledge & Skill Router), Quy Tắc Bước 0 Lập Master Blueprint Đa Ngành (`project-blueprint-architect`), Khung Kiểm soát Chống Ảo Giác 5 Chốt Chặn (18 Ngành) và Hệ sinh thái 91 Kỹ năng Chuyên sâu (32 Global Skills + 12 Bộ Plugins + 9 Builtin) dành cho Google Antigravity IDE / CLI (`agy`).**
+> **Hệ điều hành Tri thức Lai (Hybrid Knowledge & Skill Router), Quy Tắc Bước 0 Lập Master Blueprint Đa Ngành (`project-blueprint-architect`), Khung Kiểm soát Chống Ảo Giác 5 Chốt Chặn (18 Ngành) và Hệ sinh thái 92 Kỹ năng Chuyên sâu (33 Global Skills + 12 Bộ Plugins + 9 Builtin) dành cho Google Antigravity IDE / CLI (`agy`).**
 
 > [!IMPORTANT]
 > **GHI CHÚ QUY TẮC BƯỚC 0 BẮT BUỘC (`BLUEPRINT-FIRST RULE`):**
-> Mỗi khi **tạo một Project mới** (Phần mềm, Website/LP, SEO/GEO, Marketing/Ads, Bảo mật, Server/VPS, ERP SAP B1/Beas, Học tập/Sản phẩm số) hoặc **xây dựng một Chức năng / Phân hệ lớn mới**, bắt buộc áp dụng **`project-blueprint-architect` ĐẦU TIÊN**. AI đóng vai **CEO + CPO + Kiến trúc sư trưởng** phỏng vấn gỡ điểm mù (`Grill-Me`) và xuất ra **1 file chốt yêu cầu duy nhất (`BLUEPRINT_<TEN_DU_AN>.md`)** quy định rõ Yêu cầu (`FR/NFR`), Công nghệ sử dụng, Bảng ánh xạ từng bước vào đúng Skill trong **91 Skills** và Bộ Prompt thực thi từng Phase (kiểm định bằng `validate_blueprint.py` đạt `Exit code 0`) trước khi bắt tay vào code hay thiết kế. *(Xem mẫu câu lệnh gọi nhanh tại [`SO_TAY_PROMPT_MAU_GOI_TOAN_BO_SKILL_AGENT.md`](./SO_TAY_PROMPT_MAU_GOI_TOAN_BO_SKILL_AGENT.md)).*
+> Mỗi khi **tạo một Project mới** (Phần mềm, Website/LP, SEO/GEO, Marketing/Ads, Bảo mật, Server/VPS, ERP SAP B1/Beas, Học tập/Sản phẩm số) hoặc **xây dựng một Chức năng / Phân hệ lớn mới**, bắt buộc áp dụng **`project-blueprint-architect` ĐẦU TIÊN**. AI đóng vai **CEO + CPO + Kiến trúc sư trưởng** phỏng vấn gỡ điểm mù (`Grill-Me`) và xuất ra **1 file chốt yêu cầu duy nhất (`BLUEPRINT_<TEN_DU_AN>.md`)** quy định rõ Yêu cầu (`FR/NFR`), Công nghệ sử dụng, Bảng ánh xạ từng bước vào đúng Skill trong **92 Skills** và Bộ Prompt thực thi từng Phase (kiểm định bằng `validate_blueprint.py` đạt `Exit code 0`) trước khi bắt tay vào code hay thiết kế. *(Xem mẫu câu lệnh gọi nhanh tại [`SO_TAY_PROMPT_MAU_GOI_TOAN_BO_SKILL_AGENT.md`](./SO_TAY_PROMPT_MAU_GOI_TOAN_BO_SKILL_AGENT.md)).*
 
 ---
 
@@ -19,11 +19,11 @@ Bộ giải pháp này giải quyết triệt để cả 3 bài toán thông qua
 
 | Chỉ Số Vận Hành Thực Tế | Kết Quả Đạt Được | Cơ Chế Kỹ Thuật Đằng Sau |
 | :--- | :--- | :--- |
-| **Quy mô tri thức quản lý** | **91 Skills** (`2,155+` files, `18,323+` chunks) | Quét đa tầng: Workspace $\rightarrow$ Global (`32`) $\rightarrow$ Plugins (`50`) $\rightarrow$ Builtin (`9`) |
+| **Quy mô tri thức quản lý** | **92 Skills** (`2,163+` files, `18,415+` chunks) | Quét đa tầng: Workspace $\rightarrow$ Global (`33`) $\rightarrow$ Plugins (`50`) $\rightarrow$ Builtin (`9`) |
 | **Tốc độ tìm kiếm lai (Warm Search)** | **`6 ms – 56 ms`** | SQLite WAL + FTS5 tiếng Việt không dấu (`đ/Đ`) + Reciprocal Rank Fusion (RRF) |
 | **Tốc độ cập nhật Delta SHA-256** | **`~210 ms – 420 ms`** | Chỉ cập nhật đúng file có thay đổi mã băm SHA-256 với FTS5 `contentless_delete=1` |
 | **Tiết kiệm Context Token** | **`70% – 85%`** | Lazy Section Excerpt: chỉ cắt đúng mục Heading hoặc đoạn dòng `L_start..L_end` |
-| **Ngân sách định tuyến Frontmatter** | **`~3,936 / 4,000` ký tự** | Chuẩn hóa mỗi `SKILL.md` `description <= 150` ký tự, đẩy chi tiết xuống `references/` |
+| **Ngân sách định tuyến Frontmatter** | **`~3,951 / 4,000` ký tự** | Chuẩn hóa mỗi `SKILL.md` `description <= 150` ký tự, đẩy chi tiết xuống `references/` |
 
 ---
 
@@ -82,7 +82,7 @@ Thư mục `config/scripts/` đóng vai trò là **nhân điều phối trung t�
 - Cập nhật `hooks.json`, khởi tạo tệp cấu hình mẫu từ `config.example.json` (nếu tải về từ Git) và dựng mới hoàn toàn `agy_skill_index.db`.
 
 ### 3.5. `check_skill_git_updates.py` & `skill_upstreams.json` — Trình Kiểm Tra Bản Cập Nhật Từ GitHub Gốc (Read-Only 100%)
-- Sử dụng `git ls-remote` song song đa luồng siêu nhẹ để kiểm tra xem **17 kho GitHub mã nguồn mở gốc** của các bộ Skill đã có commit nâng cấp mới hay chưa mà không tốn ổ cứng và tuyệt đối không ghi đè làm hỏng Frontmatter Tiếng Việt (`<= 150` ký tự) của `SKILL.md`.
+- Sử dụng `git ls-remote` song song đa luồng siêu nhẹ để kiểm tra xem **25 kho GitHub mã nguồn mở gốc** của các bộ Skill đã có commit nâng cấp mới hay chưa mà không tốn ổ cứng và tuyệt đối không ghi đè làm hỏng Frontmatter Tiếng Việt (`<= 150` ký tự) của `SKILL.md`.
 
 ---
 
@@ -102,14 +102,14 @@ Thư mục `config/scripts/` đóng vai trò là **nhân điều phối trung t�
 
 ---
 
-## 🧰 5. Danh Mục & Giải Thích Chi Tiết 32 Global Skills (`config/skills/`)
+## 🧰 5. Danh Mục & Giải Thích Chi Tiết 33 Global Skills (`config/skills/`)
 
-Toàn bộ **32 Global Skills** được tổ chức thành **8 Cụm Chuyên Môn** hiệp đồng chặt chẽ (kèm sổ tay [`SO_TAY_PROMPT_MAU_GOI_TOAN_BO_SKILL_AGENT.md`](./SO_TAY_PROMPT_MAU_GOI_TOAN_BO_SKILL_AGENT.md) chứa mẫu câu lệnh gọi chuẩn cho toàn bộ 91 Skills):
+Toàn bộ **33 Global Skills** được tổ chức thành **8 Cụm Chuyên Môn** hiệp đồng chặt chẽ (kèm sổ tay [`SO_TAY_PROMPT_MAU_GOI_TOAN_BO_SKILL_AGENT.md`](./SO_TAY_PROMPT_MAU_GOI_TOAN_BO_SKILL_AGENT.md) chứa mẫu câu lệnh gọi chuẩn cho toàn bộ 92 Skills):
 
 ### Cụm A — Kiến Trúc Blueprint Dự Án, Điều Phối Đa Tác Tử, Quản Trị Tri Thức & Kiểm Toán AI (6 Skills)
 | Tên Skill | Vai Trò & Năng Lực Cốt Lõi | Công Cụ / CLI Đi Kèm |
 | :--- | :--- | :--- |
-| **`project-blueprint-architect`** | **[Bước 0 Bắt Buộc Khi Tạo Project Mới / Chức Năng Mới]** Đóng vai CEO + CPO + Kiến trúc sư trưởng phỏng vấn Socratic (`Grill-Me`), khóa phạm vi `In-Scope / Out-of-Scope`, áp dụng checklist 8 ngành và xuất **1 file Master Blueprint duy nhất (`BLUEPRINT_<TEN_DU_AN>.md`)** quy định rõ `FR/NFR`, Tech Stack, sơ đồ Mermaid, ánh xạ từng Phase vào đúng **91 Skills** và bộ Prompt thực thi. | `scripts/validate_blueprint.py` (`--self-test`), hợp nhất từ `superpowers`, `mattpocock/skills`, `spec-kit`, `pm-skills` |
+| **`project-blueprint-architect`** | **[Bước 0 Bắt Buộc Khi Tạo Project Mới / Chức Năng Mới]** Đóng vai CEO + CPO + Kiến trúc sư trưởng phỏng vấn Socratic (`Grill-Me`), khóa phạm vi `In-Scope / Out-of-Scope`, áp dụng checklist 8 ngành và xuất **1 file Master Blueprint duy nhất (`BLUEPRINT_<TEN_DU_AN>.md`)** quy định rõ `FR/NFR`, Tech Stack, sơ đồ Mermaid, ánh xạ từng Phase vào đúng **92 Skills** và bộ Prompt thực thi. | `scripts/validate_blueprint.py` (`--self-test`), hợp nhất từ `superpowers`, `mattpocock/skills`, `spec-kit`, `pm-skills` |
 | **`lean-teamwork`** | Điều phối đa tác tử tinh gọn, tối ưu Token/Quota, chia nhỏ Atomic Task Cards, 3 Thiết luật First-Time Right & kết nối Desktop Widget HUD. | `scripts/teamwork_bridge.py`, `scripts/manage_skills.py`, `sync_skill.py` |
 | **`nap-tai-lieu-antigravity`** | Quy chuẩn 5 bước chưng cất tài liệu mới (PDF, Word, Sách dài 3-Pass, SQL) thành Skill chuẩn Javis (`description <= 150` ký tự) & đồng bộ chỉ mục. | Kết nối trực tiếp 4 MCP Tools của `agy-skill-hub` |
 | **`verified-source-researcher`** | Động cơ kiểm chứng nguồn sự thật gốc: quét link sống `HTTP 200`, xác thực mã học thuật CrossRef DOI, PubMed PMID, OpenLibrary ISBN. | `cli.py`, `scripts/link_validator.py`, `academic_checker.py`, `book_checker.py` |
@@ -135,9 +135,10 @@ Toàn bộ **32 Global Skills** được tổ chức thành **8 Cụm Chuyên M�
 | **`recordly-tutorial-ai`** | Quay màn hình hướng dẫn sử dụng phần mềm/ERP/Web với **Recordly v1.4.0** kết hợp AI tự động đọc lời bình giải thích từng bước (`vi-VN-HoaiMyNeural` / `vi-VN-NamMinhNeural` + 40 ngôn ngữ), tự sinh phụ đề **`.srt` / `.vtt`** khớp từng mili-giây theo `WordBoundary`, xuất kép dự án **`.recordly` v2** (`audioRegions`, `autoCaptions`, `zoomRegions`, `annotationRegions`, `RECORDLY_SMOKE_EXPORT=1`) và video **`.mp4`** đốt sẵn phụ đề Tiếng Việt sắc nét. | `scripts/recordly_tutorial_pipeline.py` (`discover`, `capture` `wgc-capture.exe` 60fps, `transcribe` `whisper-cli.exe`, `build`, `--self-test`) |
 | **`shopee-affiliate-video-studio`** | Phân tích sâu từ khóa ngách Shopee (gom cụm so sánh giá `Image dHash + TF-IDF` & chấm điểm `Winning Score 0–100`), bóc thông số kỹ thuật NSX thật, dùng AI Vision đọc ảnh sản phẩm sáng tác câu chuyện đời thường 5 cảnh đa ngành, ghi chữ 3 vùng lên màn hình & kết xuất video `.MP4` dọc `9:16` (`1080x1920`). | `scripts/shopee_story_cli.py` (`status`, `scan`, `niche-analyze`, `extract`, `story-render`, `sync-8500`) |
 
-### Cụm D — Thiết Kế UI/UX Phần Mềm Đa Ngành, Nhận Diện Thương Hiệu, Dàn Trang Ấn Phẩm, Web/LP/Webcake & SEO/GEO (6 Skills)
+### Cụm D — Kiến Trúc Luồng UX Web App/App (`Operate Mode`), UI/UX Đa Ngành, Nhận Diện Thương Hiệu, Báo Giá/Tạp Chí, Web/LP & SEO/GEO (7 Skills)
 | Tên Skill | Vai Trò & Năng Lực Cốt Lõi | Công Cụ / CLI Đi Kèm |
 | :--- | :--- | :--- |
+| **`webapp-app-ux-workflow`** | **Kiến Trúc Luồng Thao Tác UX, Logic State/URL & CRUD Cho Web App (`User/Admin/ERP/SaaS`) & Mobile App (`Operate Mode`)**: tách biệt rõ phần mềm thao tác chức năng thực tế với web xem tin/quảng cáo; quy chuẩn 6 bước bắt buộc từ vẽ Task Flow & phân quyền `RBAC`, ma trận quyết định `60+` SaaS Components (chống lạm dụng Modal, ưu tiên Inline/Slide-over Drawer/Wizard), khóa trạng thái `URL-as-State` & đủ 8 trạng thái UI, chuẩn hóa Enterprise Data Table (`tabular-nums`, Bulk Actions) & Form (`Dirty-state Guard`, `AlertDialog`), App Shell `100dvh` & điều hướng Mobile App (`Stateful Tabs / Stack / Form Sheet`), đến thử tải dữ liệu xấu nhất **`Break-UI`**. | `scripts/audit_webapp_ux.py` (`--self-test`, quét 12 lỗi UX logic) + 6 sổ tay `references/01..06` hợp nhất từ 8 kho (`impeccable`, `emilkowalski`, `vercel-labs`, `ui-design-brain`, `ui-skills`, `callstack`, `flutter`) |
 | **`ui-ux-design-pro-max`** | **Siêu Hub UI/UX Phần Mềm & Web Đa Ngành Nghề + Design-to-Code (`308` files)**: hợp nhất động cơ suy luận Python BM25 cho **192 ngành nghề** (ERP, SaaS, Fintech, Ngân hàng, Y tế, TMĐT, BĐS, F&B, Spa, Pháp lý, Giáo dục...), **79 phong cách UI**, **192 bảng màu theo ngành**, **74 cặp Google Fonts**, **25 biểu đồ Dashboard**, **119 luật UX**, kiến trúc Design Tokens 3 tầng, kho **84 hồ sơ `DESIGN.md` thương hiệu quốc tế** (*Apple, Stripe, Linear, Vercel, Figma, Airbnb, Shopify, Notion, WIRED, Ferrari...*), `frontend-design` (Anthropic), bộ lọc `no-ai-design-slop` và quy chuẩn chuyển thiết kế sang code cho **22 Tech Stacks** (`HTML+Tailwind`, `React`, `Next.js`, `shadcn/ui`, `Vue`, `Nuxt`, `Angular`, `Laravel`, `Svelte`, `Flutter`, `React Native`, `SwiftUI`, `Jetpack Compose`, `WPF`, `WinUI 3`, `JavaFX`...). | `skills/01_ui-ux-pro-max/scripts/search.py`, `scripts/search_brand_design.py`, 35 bảng CSV offline & 84 bộ `brands/*/DESIGN.md` |
 | **`brand-editorial-graphic-studio`** | **Siêu Hub Thiết Kế Logo SVG, Bộ Nhận Diện Thương Hiệu CIP, Ảnh/Banner, Báo Giá & Tạp Chí Dàn Trang (`450+` files)**: thiết kế **Logo Vector SVG hình học** (55+ phong cách, 30 bảng màu tâm lý học, 25 ngành nghề), **Bộ Nhận Diện Thương Hiệu CIP** (50+ hạng mục ấn phẩm văn phòng/thương mại & đồng bộ `design-tokens`), **Ảnh Banner Quảng Cáo & Poster** (22 trường phái + 14 phong cách Illustration + `canvas-design` chuẩn Safe-zone & tỷ lệ chữ `<20%` Meta Ads), cùng hệ thống chế bản **Báo Giá Thương Mại A4, Hồ Sơ Năng Lực, Hồ Sơ Thầu & Dàn Trang Tạp Chí Đa Cột** bằng Paged CSS `@page` / Typst xuất thẳng ra **PDF A4 chuẩn in ấn**, **Word (`.docx`)**, **PowerPoint (`.pptx`)** và **PNG 2x Retina**. | `scripts/editorial_pdf_renderer.py` (Dual-Engine Playwright + Zero-Dependency Native Chromium), `logo/search.py`, `cip/search.py`, `typst/scripts/search-api.py` & 3 mẫu HTML/SVG A4 |
 | **`design-landingpage-vip-v2`** | Thiết kế Landing Page chuyển đổi cao đóng gói gọn trong 1 tệp HTML hoàn chỉnh: 9 Design Systems (Liquid Glass, Apple, E-commerce...), 138 icon SVG inline, form đăng ký, mã thanh toán VietQR động & Server-side Meta/TikTok CAPI qua Webhook (tuyệt đối không lộ Token ở Frontend). | 9 bộ `system-design/`, kho 138 SVG `assets/icons/`, mẫu workflow `n8n` |
@@ -175,7 +176,7 @@ Toàn bộ **32 Global Skills** được tổ chức thành **8 Cụm Chuyên M�
 
 ## 🧩 6. Hệ Sinh Thái 12 Bộ Plugins Mở Rộng (`config/plugins/` — 50+ Sub-Skills)
 
-Bên cạnh 32 Global Skills, gói cài đặt tích hợp sẵn **12 Bộ Plugins chuyên ngành**:
+Bên cạnh 33 Global Skills, gói cài đặt tích hợp sẵn **12 Bộ Plugins chuyên ngành**:
 
 1. **`science` (27 Kỹ năng Nghiên cứu Khoa học & Y Sinh học Quốc tế):**
    - *Cấu trúc Protein & Phân tử 3D:* `alphafold-database-fetch-and-analyze`, `pdb-database`, `uniprot-database`, `interpro-database`, `foldseek-structural-search`, `protein-sequence-msa`, `protein-sequence-similarity-search`, `pymol` và trình xem cấu trúc 3D tương tác trực tiếp **`biomolecular-structure-viewer` (Mol\* Sidecar)**.
@@ -204,7 +205,7 @@ Bên cạnh 32 Global Skills, gói cài đặt tích hợp sẵn **12 Bộ Plugi
    cd antigravity-hybrid-brain
    ```
 2. Nhấp đúp chạy **`CAI_DAT_1_CLICK_WINDOWS.bat`**:
-   - Tự động sao chép `GEMINI.md`, sổ tay quy trình, sổ tay Prompt mẫu 91 Skills, `scripts/`, **32 Global Skills** và **12 Plugins** vào `%USERPROFILE%\.gemini\config\`.
+   - Tự động sao chép `GEMINI.md`, sổ tay quy trình, sổ tay Prompt mẫu 92 Skills, `scripts/`, **33 Global Skills** và **12 Plugins** vào `%USERPROFILE%\.gemini\config\`.
    - Tự động chạy `setup_portable_antigravity.py` để đăng ký MCP Server `agy-skill-hub` và `PreInvocation Hook` khớp với đường dẫn Python của máy mới.
 3. Nhấp đúp chạy tiếp **`CAI_THU_VIEN_PYTHON_CHO_SKILLS.bat`**:
    - Cài đặt đầy đủ các thư viện Python (`mcp`, `pyyaml`, `aiohttp`, `websockets`, `beautifulsoup4`, `requests`, `playwright`, `pyodbc`, `pymssql`, `reportlab`, `pydantic`, `rich`...) và trình duyệt Chromium Headless.
@@ -231,10 +232,10 @@ python3 ~/.gemini/config/scripts/setup_portable_antigravity.py
 
 ### Kiểm Tra Trạng Thái Bộ Não Lai & Check Update Git Sau Khi Cài Đặt
 ```bash
-# Kiểm toán sức khỏe 91 Skills và đo tốc độ chỉ mục:
+# Kiểm toán sức khỏe 92 Skills và đo tốc độ chỉ mục:
 python ~/.gemini/config/scripts/agy_skill_engine.py --audit
 
-# Kiểm tra an toàn (Read-Only) xem 17 kho Skill có bản cập nhật mới từ GitHub gốc không:
+# Kiểm tra an toàn (Read-Only) xem 25 kho Skill có bản cập nhật mới từ GitHub gốc không:
 python ~/.gemini/config/scripts/check_skill_git_updates.py
 
 # Thử nghiệm tìm kiếm lai tiếng Việt không dấu / song ngữ (< 50ms):
@@ -243,6 +244,7 @@ python ~/.gemini/config/scripts/agy_skill_engine.py --search "dich nguoc phan me
 python ~/.gemini/config/scripts/agy_skill_engine.py --search "lech kho gia thanh wip 154"
 python ~/.gemini/config/scripts/agy_skill_engine.py --search "audit google ads pmax money leak"
 python ~/.gemini/config/scripts/agy_skill_engine.py --search "tu vi dau so bat tu 24 tiet khi"
+python ~/.gemini/config/scripts/agy_skill_engine.py --search "luong thao tac web app admin url state crud table"
 python ~/.gemini/config/scripts/agy_skill_engine.py --search "thiet ke giao dien phan mem design to code react"
 python ~/.gemini/config/scripts/agy_skill_engine.py --search "thiet ke logo svg bo nhan dien bao gia tap chi a4"
 python ~/.gemini/config/scripts/agy_skill_engine.py --search "quay man hinh huong dan phan mem tao phu de srt recordly"

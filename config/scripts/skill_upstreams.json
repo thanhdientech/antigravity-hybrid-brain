@@ -77,6 +77,62 @@
       "local_dir": "~/.gemini/config/skills/prompts-chat",
       "recorded_sha": "332cba7db387f092987ff8b3b3744c1c754c244e",
       "recorded_date": "2026-10-30"
+    },
+    {
+      "skill": "webapp-app-ux-workflow (impeccable)",
+      "remote_url": "https://github.com/pbakaus/impeccable.git",
+      "local_dir": "~/.gemini/config/skills/webapp-app-ux-workflow",
+      "recorded_sha": "df3a4abe7d0840d5f60324812c432e00b66a4e75",
+      "recorded_date": "2026-10-30"
+    },
+    {
+      "skill": "webapp-app-ux-workflow (emilkowalski)",
+      "remote_url": "https://github.com/emilkowalski/skill.git",
+      "local_dir": "~/.gemini/config/skills/webapp-app-ux-workflow",
+      "recorded_sha": "a81dbca07f2217b7103e510c0f13f8d5b017afc9",
+      "recorded_date": "2026-10-28"
+    },
+    {
+      "skill": "webapp-app-ux-workflow (vercel-agent-skills)",
+      "remote_url": "https://github.com/vercel-labs/agent-skills.git",
+      "local_dir": "~/.gemini/config/skills/webapp-app-ux-workflow",
+      "recorded_sha": "1a2c79d4e6c4a2283dc2c614b6538cbe1ed5ca62",
+      "recorded_date": "2026-10-27"
+    },
+    {
+      "skill": "webapp-app-ux-workflow (vercel-wig)",
+      "remote_url": "https://github.com/vercel-labs/web-interface-guidelines.git",
+      "local_dir": "~/.gemini/config/skills/webapp-app-ux-workflow",
+      "recorded_sha": "434b7f91364665f2f733b310ec54809bf8f37937",
+      "recorded_date": "2026-10-05"
+    },
+    {
+      "skill": "webapp-app-ux-workflow (ui-design-brain)",
+      "remote_url": "https://github.com/carmahhawwari/ui-design-brain.git",
+      "local_dir": "~/.gemini/config/skills/webapp-app-ux-workflow",
+      "recorded_sha": "38f04c5a1dee55d99c686a16643cef4e2ce0f7a2",
+      "recorded_date": "2026-02-27"
+    },
+    {
+      "skill": "webapp-app-ux-workflow (ibelick-ui-skills)",
+      "remote_url": "https://github.com/ibelick/ui-skills.git",
+      "local_dir": "~/.gemini/config/skills/webapp-app-ux-workflow",
+      "recorded_sha": "3823f1573f6fb564a091a062594b95066dbd974c",
+      "recorded_date": "2026-10-30"
+    },
+    {
+      "skill": "webapp-app-ux-workflow (callstack-rn)",
+      "remote_url": "https://github.com/callstackincubator/agent-skills.git",
+      "local_dir": "~/.gemini/config/skills/webapp-app-ux-workflow",
+      "recorded_sha": "59e9d17446a248b21d86f078fcd0bd2d36db1ca4",
+      "recorded_date": "2026-10-08"
+    },
+    {
+      "skill": "webapp-app-ux-workflow (flutter-skills)",
+      "remote_url": "https://github.com/flutter/skills.git",
+      "local_dir": "~/.gemini/config/skills/webapp-app-ux-workflow",
+      "recorded_sha": "1bd8f2caa144c11b9153706c8de5f6d3e074b799",
+      "recorded_date": "2026-10-30"
     }
   ]
 }

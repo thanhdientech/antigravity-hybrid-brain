@@ -1,6 +1,6 @@
 ---
 name: video-storytelling
-description: "Biên kịch video đa thể loại theo 20+ công thức quốc tế (AIDA, ABT, 7-Beat, Pixar) kèm luồng prompt Seedance 2.0 & Google Veo 3."
+description: "Biên kịch video đa thể loại theo 20+ công thức (AIDA, ABT, 7-Beat, Pixar) kèm luồng prompt Seedance 2.0 & Veo 3."
 group: "Làm Phim & Video AI"
 ---
 
