@@ -5,6 +5,7 @@
 > [!IMPORTANT]
 > **GHI CHÚ QUY TẮC BƯỚC 0 BẮT BUỘC (`BLUEPRINT-FIRST RULE`):**
 > Mỗi khi **tạo một Project mới** (Phần mềm, Website/LP, SEO/GEO, Marketing/Ads, Bảo mật, Server/VPS, ERP SAP B1/Beas, Học tập/Sản phẩm số) hoặc **xây dựng một Chức năng / Phân hệ lớn mới**, bắt buộc áp dụng **`project-blueprint-architect` ĐẦU TIÊN**. AI đóng vai **CEO + CPO + Kiến trúc sư trưởng** phỏng vấn gỡ điểm mù (`Grill-Me`) và xuất ra **1 file chốt yêu cầu duy nhất (`BLUEPRINT_<TEN_DU_AN>.md`)** quy định rõ Yêu cầu (`FR/NFR`), Công nghệ sử dụng, Bảng ánh xạ từng bước vào đúng Skill trong **92 Skills** và Bộ Prompt thực thi từng Phase (kiểm định bằng `validate_blueprint.py` đạt `Exit code 0`) trước khi bắt tay vào code hay thiết kế. *(Xem mẫu câu lệnh gọi nhanh tại [`SO_TAY_PROMPT_MAU_GOI_TOAN_BO_SKILL_AGENT.md`](./SO_TAY_PROMPT_MAU_GOI_TOAN_BO_SKILL_AGENT.md)).*
+> - **MỚI — Tách Bạch Giao Diện Web App Thao Tác Chức Năng (`webapp-app-ux-workflow` — `Operate Mode`):** Khi xây dựng **Web App người dùng (`User Portal`), Trang quản trị (`Admin Panel`), Hệ thống SaaS / ERP / CRM / MES hoặc Mobile App (`iOS/Android`)**, hệ thống kích hoạt chuyên biệt **`webapp-app-ux-workflow`** (khóa luồng `Shape Flow & RBAC` $\rightarrow$ Ma trận `60+` Component chống lạm dụng Modal $\rightarrow$ `URL-as-State` & `8` trạng thái UI $\rightarrow$ `Enterprise Data Table / Form / Wizard` $\rightarrow$ `100dvh` App Shell & Mobile Navigation $\rightarrow$ Thử tải dữ liệu xấu nhất `Break-UI` & quét lỗi logic tự động bằng `audit_webapp_ux.py`), không bị lẫn với phong cách Landing Page xem tin thông thường.
 
 ---
 
@@ -35,7 +36,7 @@ flowchart TD
 
     subgraph Javis_Brain ["🧠 Bộ Não Lai Javis Hybrid Skill Brain (config/scripts/)"]
         Hook -->|"Đọc 192KB cuối transcript (< 1ms)"| Engine["🔍 agy_skill_engine.py v2\n(SQLite WAL + FTS5 Tiếng Việt đ/Đ + RRF + Đồng nghĩa Việt-Anh)"]
-        Engine <-->|"Quét Delta SHA-256 (~210ms)"| IndexDB[("agy_skill_index.db\n2,129+ Files | 18,088+ Chunks")]
+        Engine <-->|"Quét Delta SHA-256 (~210ms)"| IndexDB[("agy_skill_index.db\n2,163+ Files | 18,415+ Chunks")]
         Engine -->|"Tiêm gợi ý Top 3 Skill + Dòng L_start..L_end\n(ephemeralMessage tự hủy)"| Agent["🤖 Antigravity AI Agent"]
         Agent <-->|"Gọi 4 Tools qua MCP Stdio"| MCP["🔌 Trạm MCP: agy-skill-hub\n(agy_skill_mcp_server.py)"]
         MCP <--> Engine
@@ -146,6 +147,13 @@ Toàn bộ **33 Global Skills** được tổ chức thành **8 Cụm Chuyên M�
 | **`wordpress-flatsome-designer`** | Thiết kế & tùy biến giao diện WordPress chuẩn Theme Flatsome 3.x với 100% Native UX Builder Shortcodes, cấu trúc Child Theme an toàn và tối ưu tốc độ tải trang. | Bộ mẫu UX Builder Shortcodes & Hooks `functions.php` |
 | **`claude-seo`** | Hệ thống kiểm toán Technical SEO & Tối ưu hóa Công cụ Tìm kiếm AI (*GEO / AI Overviews*) v2.4.2: Core Web Vitals (LCP, INP, CLS), E-E-A-T, Schema JSON-LD, Sitemap & `llms.txt`. | 26 sub-skills, `scripts/` phân tích HTML/Playwright |
 
+> **🧭 Bảng Phân Định Nhanh: Làm Giao Diện Gì — Gọi Đúng Skill Nào?**
+> | Loại Sản Phẩm Giao Diện | Chế Độ Thiết Kế | Skill Chủ Lực Cần Gọi |
+> | :--- | :--- | :--- |
+> | **Web App Người Dùng (`User Portal`), Trang Quản Trị (`Admin`), `ERP/SaaS/CRM/MES` & `Mobile App`** *(nơi người dùng đăng nhập thao tác chức năng nghiệp vụ)* | **`Operate Mode`** *(Tối ưu tốc độ thao tác, logic State/URL, CRUD Table/Form/Drawer & chống lỗi biên)* | **`webapp-app-ux-workflow`** *(kết hợp `ui-ux-design-pro-max` khi cần tra màu ngành nghề / `DESIGN.md`)* |
+> | **Hệ màu 192 ngành, Cặp Font, Design Tokens & 84 phong cách thương hiệu lớn (`Linear`, `Stripe`, `Apple`...)** | **`Visual Design System`** *(Thẩm mỹ, màu sắc & chuyển sang 22 frameworks)* | **`ui-ux-design-pro-max`** |
+> | **Landing Page bán hàng/sự kiện, Website giới thiệu doanh nghiệp, WordPress Flatsome, Webcake** | **`Persuade / Read Mode`** *(Thuyết phục chuyển đổi, VietQR & CAPI)* | **`design-landingpage-vip-v2`**, **`wordpress-flatsome-designer`**, **`html-to-webcake`** |
+
 ### Cụm E — Tự Động Hóa Trình Duyệt Đa Profile & Dây Chuyền Kênh Video (2 Skills)
 | Tên Skill | Vai Trò & Năng Lực Cốt Lõi | Công Cụ / CLI Đi Kèm |
 | :--- | :--- | :--- |
@@ -238,6 +246,9 @@ python ~/.gemini/config/scripts/agy_skill_engine.py --audit
 # Kiểm tra an toàn (Read-Only) xem 25 kho Skill có bản cập nhật mới từ GitHub gốc không:
 python ~/.gemini/config/scripts/check_skill_git_updates.py
 
+# Tự kiểm định trình quét 12 lỗi UX & Logic thao tác Web App / App (Exit code 0):
+python ~/.gemini/config/skills/webapp-app-ux-workflow/scripts/audit_webapp_ux.py --self-test
+
 # Thử nghiệm tìm kiếm lai tiếng Việt không dấu / song ngữ (< 50ms):
 python ~/.gemini/config/scripts/agy_skill_engine.py --search "tao project moi lap master blueprint chot yeu cau"
 python ~/.gemini/config/scripts/agy_skill_engine.py --search "dich nguoc phan mem exe electron asar rea"
@@ -283,3 +294,4 @@ Kho mã nguồn đã được trang bị sẵn tệp **`.gitignore`** nhiều l�
 • **Google Search Central & Schema.org Structured Data:** Bộ tiêu chuẩn kỹ thuật đánh giá Core Web Vitals, tín hiệu chuyên gia E-E-A-T và dữ liệu có cấu trúc (*Google Developers Documentation*).
 • **Google Ads Query Language (GAQL) & Google Ads Editor Import Specification:** Chuẩn truy vấn chẩn đoán tài khoản quảng cáo, đo lường chuyển đổi và hợp đồng xuất tệp chiến dịch an toàn (*Google Ads API Official Documentation*).
 • **Astronomical Solar-Term BaZi & Purple Star Astrolabe Engines (`iztro-py` & `lunar_python`):** Động cơ tính toán lịch pháp Âm Dương, 24 Tiết Khí mặt trời và an sao Tử Vi Đẩu Số đa ngôn ngữ tất định (*Open-Source Ephemeris & Zi Wei Dou Shu Specifications*).
+• **Vercel Web Interface Guidelines & Impeccable Operate-Mode UX Specification:** Bộ tiêu chuẩn kỹ nghệ giao diện phần mềm thao tác chức năng (`URL-as-State`, `Compound Components`, `Progressive Disclosure`, `Adversarial Break-UI` & `WCAG Focus/Form Ergonomics`) (*Vercel Labs & Impeccable v4.8 Design Engineering Docs*).

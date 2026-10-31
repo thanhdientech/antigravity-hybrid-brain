@@ -118,6 +118,7 @@ HIGH_SPECIFICITY_SINGLE_TOKENS = {
     "pymol", "kinetic", "watercolor", "watercolour", "pentest", "owasp", "xss", "ssrf",
     "gdocs", "gsheets", "gdrive", "gslides", "gaql", "pmax", "troas", "tcpa",
     "sitelinks", "callouts", "iztro", "pythagoras", "numerology", "bazi",
+    "webapp", "impeccable", "rbac", "stepper", "gorouter", "blueprint", "asar", "ghidra", "pyinstaller", "recordly", "webcake",
 }
 
 CONCEPT_SYNONYMS: list[tuple[set[str], list[str]]] = [
@@ -187,6 +188,20 @@ CONCEPT_SYNONYMS: list[tuple[set[str], list[str]]] = [
      ["tu-vi-bat-tu-than-so-hoc", "pythagoras", "numerology", "phillips"]),
     ({"kim", "lau", "hoang", "oc", "tam", "tai", "hon", "phoi", "dai", "hoa"},
      ["tu-vi-bat-tu-than-so-hoc", "kim", "lau", "hoang", "oc", "hon", "phoi"]),
+    ({"webapp", "admin", "rbac", "crud", "drawer", "wizard", "stepper", "impeccable", "operate", "luong", "thao", "tac", "quan", "tri"},
+     ["webapp-app-ux-workflow", "ui-ux-design-pro-max", "operate", "rbac", "crud", "drawer", "tabular"]),
+    ({"blueprint", "prd", "grill", "spec", "chot", "yeu", "cau", "project"},
+     ["project-blueprint-architect", "blueprint", "grill", "spec"]),
+    ({"rea", "asar", "decompile", "ghidra", "pyinstaller", "dich", "nguoc", "reverse", "engineer"},
+     ["reverse-engineer-anything", "rea", "asar", "decompile"]),
+    ({"recordly", "srt", "tutorial", "quay", "man", "hinh", "phu", "de"},
+     ["recordly-tutorial-ai", "recordly", "srt", "tutorial"]),
+    ({"logo", "cip", "typst", "poster", "tap", "chi", "bao", "gia", "banner"},
+     ["brand-editorial-graphic-studio", "logo", "cip", "typst"]),
+    ({"webcake", "pke"},
+     ["html-to-webcake", "webcake", "pke"]),
+    ({"shopee", "affiliate", "dhash"},
+     ["shopee-affiliate-video-studio", "shopee", "affiliate"]),
 ]
 
 
