@@ -29,7 +29,8 @@ group: "Thiết Kế Web, UI/UX & Thương Hiệu"
 | :--- | :--- | :--- |
 | **Web giới thiệu, Landing Page bán hàng, Trang sự kiện** | `Persuade / Read Mode` *(Thuyết phục & Đọc)* | `design-landingpage-vip-v2` hoặc `wordpress-flatsome-designer` |
 | **Tra bảng màu 192 ngành, Cặp Font, Tokens & 84 hệ `DESIGN.md`** | `Visual System & Styling` *(Thẩm mỹ & Màu)* | `ui-ux-design-pro-max` *(kết hợp cùng skill này khi cần chọn màu)* |
-| **Web App (User / Admin / SaaS / ERP) & Mobile App thao tác chức năng** | **`Operate Mode` *(Thực thi tác vụ nghiệp vụ)*** | **`webapp-app-ux-workflow` *(Skill này — Chủ lực kiểm soát Logic & Workflow)*** |
+| **Web App (User / Admin / SaaS / ERP) & Mobile App thao tác chức năng** | **`Operate Mode` *(Thực thi tác vụ nghiệp vụ)*** | **`webapp-app-ux-workflow` *(Skill này — Chủ lực kiến trúc Logic & Workflow)*** |
+| **Kiểm toán độc lập Logic UI Web App, Responsive Mobile, Web DN & CRO LP** | `Audit & QA Mode` *(Quét lỗi P0–P2 + CDP 3-Viewport)* | **`ui-ux-cro-auditor`** *(`audit_ui_ux_cro.py --surface webapp\|mobile\|corporate\|landing`)* |
 
 ---
 

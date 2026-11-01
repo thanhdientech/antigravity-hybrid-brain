@@ -1,6 +1,6 @@
-# Khung Checklist 8 Ngành Trọng Điểm, Công Nghệ Khuyến Nghị & Bảng Ánh Xạ 92 Skills
+# Khung Checklist 8 Ngành Trọng Điểm, Công Nghệ Khuyến Nghị & Bảng Ánh Xạ 93 Skills
 
-Tài liệu này giúp `project-blueprint-architect` thẩm định không sót bất kỳ góc khuất nghiệp vụ nào của **8 lĩnh vực cốt lõi** và ánh xạ chính xác từng giai đoạn thực thi vào đúng các bộ **Skills trong tổng số 92 Skills** đang cài sẵn trên hệ thống.
+Tài liệu này giúp `project-blueprint-architect` thẩm định không sót bất kỳ góc khuất nghiệp vụ nào của **8 lĩnh vực cốt lõi** và ánh xạ chính xác từng giai đoạn thực thi vào đúng các bộ **Skills trong tổng số 93 Skills** đang cài sẵn trên hệ thống.
 
 ---
 
@@ -14,13 +14,13 @@ Tài liệu này giúp `project-blueprint-architect` thẩm định không sót 
 - **Luồng UX `URL-as-State` & 8 Trạng thái UI bắt buộc:** Đồng bộ Filter/Search/Tab/Page/Drawer lên URL Query Params; đủ 8 trạng thái (`Default`, `Hover`, `Focus-Visible`, `Active`, `Disabled`, `Loading Skeleton`, `Actionable Empty State`, `Error Recovery`).
 
 ### B. Công Nghệ Chuẩn & Ánh Xạ Skill Thực Thi
-| Giai Đoạn (Phase) | Công Nghệ / Tiêu Chuẩn Đề Xuất | Skill Chính Xác Cần Gọi (Trong 92 Skills) |
+| Giai Đoạn (Phase) | Công Nghệ / Tiêu Chuẩn Đề Xuất | Skill Chính Xác Cần Gọi (Trong 93 Skills) |
 | :--- | :--- | :--- |
 | **P0. Khảo sát / Bóc tách phần mềm mẫu (nếu có)** | REA Static/Dynamic Decompilation, HAR/API trace | `reverse-engineer-anything` |
 | **P1. Kiến trúc Luồng UX Web App/Admin & Design System** | `Operate Mode`, `URL-as-State`, CRUD Table/Form/Drawer, Next.js/React + Tailwind + `shadcn/ui`, `audit_webapp_ux.py` | `webapp-app-ux-workflow`, `ui-ux-design-pro-max`, `generative_ui`, `gsap-skills` |
 | **P2. Xây dựng Mobile App & Điều hướng Bản địa (nếu có)** | Stateful Bottom Tabs/Stack/Sheet, Kotlin Jetpack Compose / React Native / Flutter, Android SDK CLI | `webapp-app-ux-workflow`, `android-cli`, `android-device-hub`, `compose-preview` |
 | **P3. Lập trình Backend, DB & Tác vụ tự động** | FastAPI / Node.js / Python, SQLite WAL / PostgreSQL / MS SQL | `lean-teamwork`, `automation`, `antigravity-guide` |
-| **P4. Kiểm toán Bảo mật & Chất lượng Nghiệm thu** | OWASP ASVS, Coverage Ledger, iFixAi 5 Pillars (`Grade A`) | `security-audit`, `ifixai-agent-auditor` |
+| **P4. Kiểm toán Logic UI, Responsive Mobile, Bảo mật & Nghiệm thu** | CDP 3-Viewport UI Audit (`375/768/1440px`), OWASP ASVS, iFixAi (`Grade A`) | `ui-ux-cro-auditor`, `security-audit`, `ifixai-agent-auditor` |
 
 ---
 
@@ -33,13 +33,13 @@ Tài liệu này giúp `project-blueprint-architect` thẩm định không sót 
 - **Đo lường quảng cáo (`Tracking & Privacy`):** Có gắn Meta Pixel + CAPI / TikTok Events API / Google Tag qua Backend Webhook không? Các trang Chính sách bảo mật / Điều khoản đã đủ chuẩn duyệt Ads chưa?
 
 ### B. Công Nghệ Chuẩn & Ánh Xạ Skill Thực Thi
-| Giai Đoạn (Phase) | Công Nghệ / Tiêu Chuẩn Đề Xuất | Skill Chính Xác Cần Gọi (Trong 92 Skills) |
+| Giai Đoạn (Phase) | Công Nghệ / Tiêu Chuẩn Đề Xuất | Skill Chính Xác Cần Gọi (Trong 93 Skills) |
 | :--- | :--- | :--- |
 | **P1. Chân dung khách hàng & Thông điệp bán hàng** | Value Proposition 9 phần + 14 công thức Copywriting | `chan-dung-khach-hang-9-phan`, `cong-thuc-viet-content-by-noti-v4` |
 | **P2. Thiết kế Logo SVG, CIP, Banner & Hồ sơ PDF** | Geometric SVG, Paged CSS `@page` / Typst xuất PDF A4 | `brand-editorial-graphic-studio` |
 | **P3A. Dựng Landing Page HTML + VietQR + CAPI** | HTML5/CSS3 Liquid Glass, 138 SVG inline, Backend Webhook CAPI | `design-landingpage-vip-v2`, `gsap-skills` |
 | **P3B. Hoặc chuyển sang Webcake / WordPress Flatsome** | File `.pke` Webcake (`420px/960px`) hoặc Flatsome UX Shortcodes | `html-to-webcake` hoặc `wordpress-flatsome-designer` |
-| **P4. Kiểm toán SEO, Tốc độ & Bảo mật Frontend** | Core Web Vitals, Schema JSON-LD, Không lộ Token ở JS | `claude-seo`, `security-audit` |
+| **P4. Kiểm toán CRO Trang đích, Mobile UI, SEO & Bảo mật Frontend** | CRO 7-Dimension, CDP 3-Viewport, CWV/WCAG 2.2 AA, Schema JSON-LD, Không lộ Token JS | `ui-ux-cro-auditor`, `claude-seo`, `security-audit` |
 
 ---
 
@@ -51,7 +51,7 @@ Tài liệu này giúp `project-blueprint-architect` thẩm định không sót 
 - **Tín hiệu Chuyên gia (`E-E-A-T`) & Nguồn xác thực:** Ai là tác giả chuyên môn đứng tên? Có số liệu thực tế và tài liệu tham chiếu chuẩn xuất bản chưa?
 
 ### B. Công Nghệ Chuẩn & Ánh Xạ Skill Thực Thi
-| Giai Đoạn (Phase) | Công Nghệ / Tiêu Chuẩn Đề Xuất | Skill Chính Xác Cần Gọi (Trong 92 Skills) |
+| Giai Đoạn (Phase) | Công Nghệ / Tiêu Chuẩn Đề Xuất | Skill Chính Xác Cần Gọi (Trong 93 Skills) |
 | :--- | :--- | :--- |
 | **P1. Kiểm toán Technical SEO, CWV & Kiến trúc URL** | LCP `< 2.5s`, INP `< 200ms`, CLS `< 0.1`, Crawlability, `llms.txt` | `claude-seo` |
 | **P2. Quy hoạch Cụm Chủ đề & Nguồn Thực Chứng** | Topic Clusters, Kiểm tra link `HTTP 200` / DOI / Văn bản gốc | `claude-seo`, `verified-source-researcher` |
@@ -68,7 +68,7 @@ Tài liệu này giúp `project-blueprint-architect` thẩm định không sót 
 - **Kênh phân phối & Định dạng nội dung:** Google Search / PMax, Facebook Reels/Ads, TikTok, YouTube Dài/Shorts, hay Video Tiếp thị liên kết Shopee 9:16?
 
 ### B. Công Nghệ Chuẩn & Ánh Xạ Skill Thực Thi
-| Giai Đoạn (Phase) | Công Nghệ / Tiêu Chuẩn Đề Xuất | Skill Chính Xác Cần Gọi (Trong 92 Skills) |
+| Giai Đoạn (Phase) | Công Nghệ / Tiêu Chuẩn Đề Xuất | Skill Chính Xác Cần Gọi (Trong 93 Skills) |
 | :--- | :--- | :--- |
 | **P1. Nghiên cứu Khách hàng & Đóng gói Sản phẩm/Offer** | Chân dung 9 phần, Chiến lược 3 vòng tròn sản phẩm số | `chan-dung-khach-hang-9-phan`, `tao-san-pham-so-bang-ai` |
 | **P2. Sản xuất Copywriting, Ảnh Banner & Báo giá** | 14 công thức Noti v4, Banner `<20%` text safe-zone | `cong-thuc-viet-content-by-noti-v4`, `brand-editorial-graphic-studio` |
@@ -84,7 +84,7 @@ Tài liệu này giúp `project-blueprint-architect` thẩm định không sót 
 - **Bề mặt tấn công (`Attack Surface`) & Tài sản nhạy cảm:** Cổng xác thực JWT/Session, Upload file, Truy vấn SQL động, SSRF/Webhook, Hardcoded Secrets/API Keys, phân quyền đa người thuê (`Multi-tenant IDOR`).
 
 ### B. Công Nghệ Chuẩn & Ánh Xạ Skill Thực Thi
-| Giai Đoạn (Phase) | Công Nghệ / Tiêu Chuẩn Đề Xuất | Skill Chính Xác Cần Gọi (Trong 92 Skills) |
+| Giai Đoạn (Phase) | Công Nghệ / Tiêu Chuẩn Đề Xuất | Skill Chính Xác Cần Gọi (Trong 93 Skills) |
 | :--- | :--- | :--- |
 | **P1. Lập Sổ cái Bao phủ (`Coverage Ledger`) & Threat Model** | Liệt kê 100% file/endpoint trong phạm vi để chống bỏ sót | `security-audit` |
 | **P2. Dịch ngược tệp nhị phân / Gói đóng gói (nếu không có source)** | REA CLI/MCP (`app.asar`, `.NET`, `PyInstaller`, `.apk`, `Ghidra`) | `reverse-engineer-anything` |
@@ -102,7 +102,7 @@ Tài liệu này giúp `project-blueprint-architect` thẩm định không sót 
 - **Giám sát & Tự khởi động lại:** Docker Compose (`restart: unless-stopped`) hay `systemd` / Windows Service? Giới hạn dung lượng Log (`logrotate`) chống đầy ổ đĩa 100%?
 
 ### B. Công Nghệ Chuẩn & Ánh Xạ Skill Thực Thi
-| Giai Đoạn (Phase) | Công Nghệ / Tiêu Chuẩn Đề Xuất | Skill Chính Xác Cần Gọi (Trong 92 Skills) |
+| Giai Đoạn (Phase) | Công Nghệ / Tiêu Chuẩn Đề Xuất | Skill Chính Xác Cần Gọi (Trong 93 Skills) |
 | :--- | :--- | :--- |
 | **P1. Quy hoạch Topology mạng, Cổng dịch vụ & Sizing** | Sơ đồ Mermaid kiến trúc mạng, phân tách Public vs Private Subnet | `project-blueprint-architect`, `verified-source-researcher` |
 | **P2. Đóng gói Dịch vụ, Reverse Proxy, Firewall & Backup** | Docker Compose / Systemd / PowerShell, TLS, Cron Backup 3-2-1 | `lean-teamwork`, `automation` |
@@ -118,7 +118,7 @@ Tài liệu này giúp `project-blueprint-architect` thẩm định không sót 
 - **Thiết luật Bảo hành Hãng SAP:** Tuyệt đối **KHÔNG `UPDATE / INSERT / DELETE` trực tiếp vào bảng chuẩn SAP B1** (`OINV`, `ORDR`, `OWOR`, `OJDT`, `OINM`...). Mọi thao tác ghi dữ liệu phải đi qua **Service Layer REST API / DI API / DTW**, còn chặn kiểm soát nghiệp vụ đặt tại `SBO_SP_TransactionNotification`.
 
 ### B. Công Nghệ Chuẩn & Ánh Xạ Skill Thực Thi
-| Giai Đoạn (Phase) | Công Nghệ / Tiêu Chuẩn Đề Xuất | Skill Chính Xác Cần Gọi (Trong 92 Skills) |
+| Giai Đoạn (Phase) | Công Nghệ / Tiêu Chuẩn Đề Xuất | Skill Chính Xác Cần Gọi (Trong 93 Skills) |
 | :--- | :--- | :--- |
 | **P1. Thiết kế Quy trình Nghiệp vụ Sản xuất, Kho & Giá thành** | Chuẩn SAP B1 + Boyum Beas, đối chiếu `OINM - OJDT`, `WIP 154`, TT 99/2025 | `sap-b1-beas`, `verified-source-researcher` |
 | **P2. Viết Truy vấn Báo cáo, FMS & TransactionNotification** | Chuẩn nối `DocEntry/BaseEntry/BaseType`, 323 mẫu SQL thực chiến | `viet-sql-sap-b1` |
@@ -134,7 +134,7 @@ Tài liệu này giúp `project-blueprint-architect` thẩm định không sót 
 - **Chuẩn độ tin cậy nguồn trích dẫn:** Bắt buộc nguồn học thuật Tier 1–2 có mã **DOI, PMID, PMCID, arXiv ID, UniProt ID, rsID, ISBN** thật 100% (cấm bịa trích dẫn).
 
 ### B. Công Nghệ Chuẩn & Ánh Xạ Skill Thực Thi
-| Giai Đoạn (Phase) | Công Nghệ / Tiêu Chuẩn Đề Xuất | Skill Chính Xác Cần Gọi (Trong 92 Skills) |
+| Giai Đoạn (Phase) | Công Nghệ / Tiêu Chuẩn Đề Xuất | Skill Chính Xác Cần Gọi (Trong 93 Skills) |
 | :--- | :--- | :--- |
 | **P1. Truy xuất Văn헌 Khoa học Mở Quốc tế** | PubMed, EuropePMC, OpenAlex, arXiv, bioRxiv/medRxiv | `pubmed-database`, `literature-search-openalex`, `literature-search-europepmc`, `literature-search-arxiv`, `literature-search-biorxiv`, `verified-source-researcher` |
 | **P2. Phân tích Y Sinh học, Hệ Gen, Protein 3D & Dược phẩm** | AlphaFold, PDB, Mol* 3D Sidecar, UniProt, ClinVar, gnomAD, ChEMBL, OpenFDA, ClinicalTrials | `alphafold-database-fetch-and-analyze`, `pdb-database`, `biomolecular-structure-viewer`, `uniprot-database`, `clinvar-database`, `gnomad-database`, `chembl-database`, `pubchem-database`, `openfda-database`, `clinical-trials-database` *(và cụm 27 DB `science`)* |

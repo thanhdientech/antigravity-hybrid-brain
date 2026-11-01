@@ -22,6 +22,7 @@ EXTRA_SOURCE_ROOTS = [
     os.environ.get("AGY_SKILL_SOURCE_DIR", ""),
     os.path.join(os.environ.get("AGY_SKILL_SOURCE_DIR", ""), "blueprint-repos"),
     os.path.join(os.environ.get("AGY_SKILL_SOURCE_DIR", ""), "ui-workflow-repos"),
+    os.path.join(os.environ.get("AGY_SKILL_SOURCE_DIR", ""), "ui-audit-repos"),
 ]
 MANIFEST_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "skill_upstreams.json")
 
@@ -36,7 +37,7 @@ LOCAL_REPO_TO_SKILL = {
     "mattpocock-skills": "project-blueprint-architect (mattpocock)",
     "spec-kit": "project-blueprint-architect (spec-kit)",
     "pm-skills": "project-blueprint-architect (pm-skills)",
-    "impeccable": "webapp-app-ux-workflow (impeccable)",
+    "impeccable": "webapp-app-ux-workflow / ui-ux-cro-auditor (impeccable)",
     "emilkowalski-skill": "webapp-app-ux-workflow (emilkowalski)",
     "vercel-agent-skills": "webapp-app-ux-workflow (vercel-agent-skills)",
     "web-interface-guidelines": "webapp-app-ux-workflow (vercel-wig)",
@@ -44,6 +45,11 @@ LOCAL_REPO_TO_SKILL = {
     "ui-skills": "webapp-app-ux-workflow (ibelick-ui-skills)",
     "callstack-rn-skills": "webapp-app-ux-workflow (callstack-rn)",
     "flutter-skills": "webapp-app-ux-workflow (flutter-skills)",
+    "gstack": "ui-ux-cro-auditor (gstack)",
+    "web-quality-skills": "ui-ux-cro-auditor (web-quality-skills)",
+    "marketingskills": "ui-ux-cro-auditor (marketingskills)",
+    "ux-audit": "ui-ux-cro-auditor (ux-audit)",
+    "ui-audit": "ui-ux-cro-auditor (ui-audit)",
 }
 
 

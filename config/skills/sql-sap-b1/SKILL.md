@@ -1,6 +1,6 @@
 ---
 name: sql-sap-b1
-description: "K?t n?i, ??nh tuy?n ?a m?y ch? SAP B1, ch?y SQL Read-Only kh?p s? th?c t?, g?i Service Layer & xu?t b?o c?o."
+description: "Kết nối, định tuyến đa máy chủ SAP B1, chạy SQL Read-Only khớp số thực tế, Service Layer & xuất file."
 group: "ERP SAP B1 & SQL"
 ---
 

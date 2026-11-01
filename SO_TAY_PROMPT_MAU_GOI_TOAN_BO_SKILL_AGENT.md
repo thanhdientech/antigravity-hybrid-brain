@@ -1,10 +1,10 @@
-# Sổ Tay Prompt Mẫu Gọi Chuẩn Toàn Bộ 92 Skill Trên Antigravity & Javis
+# Sổ Tay Prompt Mẫu Gọi Chuẩn Toàn Bộ 93 Skill Trên Antigravity & Javis
 
-Tài liệu này tổng hợp các **Prompt mẫu thực chiến (Copy & Paste điền khung `[...]` dùng ngay)** cho toàn bộ **92 Kỹ năng (Skills)** đang hoạt động trong hệ thống của anh (`33 Global Skills` + `50 Plugin Skills` + `9 Builtin Skills`). Mỗi mẫu câu lệnh đã được thiết kế sẵn đủ **Từ khóa kích hoạt (`Trigger`)** và **Dữ kiện đầu vào bắt buộc**, giúp AI Agent bắt đúng công cụ và thực thi chuẩn ngay lần đầu tiên mà không cần dừng lại hỏi bổ sung thông tin cơ bản.
+Tài liệu này tổng hợp các **Prompt mẫu thực chiến (Copy & Paste điền khung `[...]` dùng ngay)** cho toàn bộ **92 Kỹ năng (Skills)** đang hoạt động trong hệ thống của anh (`34 Global Skills` + `50 Plugin Skills` + `9 Builtin Skills`). Mỗi mẫu câu lệnh đã được thiết kế sẵn đủ **Từ khóa kích hoạt (`Trigger`)** và **Dữ kiện đầu vào bắt buộc**, giúp AI Agent bắt đúng công cụ và thực thi chuẩn ngay lần đầu tiên mà không cần dừng lại hỏi bổ sung thông tin cơ bản.
 
 > [!IMPORTANT]
 > **QUY TẮC BƯỚC 0 BẮT BUỘC KHI TẠO PROJECT MỚI HOẶC LÀM CHỨC NĂNG MỚI (`BLUEPRINT-FIRST RULE`):**
-> Mỗi khi bắt đầu **một dự án mới** (Phần mềm, Website, SEO, Marketing/Ads, Bảo mật, Server/VPS, ERP SAP B1/Beas, Học tập/Sản phẩm số) hoặc **thêm một chức năng / phân hệ lớn mới**, anh **luôn gọi [`project-blueprint-architect`](./config/skills/project-blueprint-architect/SKILL.md) ĐẦU TIÊN** (xem **Bước 0** ngay bên dưới). Agent sẽ đóng vai **CEO + CPO + Kiến trúc sư trưởng** phỏng vấn gỡ điểm mù (`Grill-Me`) và xuất ra **1 file chốt yêu cầu duy nhất (`BLUEPRINT_<TEN_DU_AN>.md`)** quy định rõ *Yêu cầu chức năng (`FR/NFR`) + Công nghệ sử dụng + Từng Phase gọi đúng Skill nào trong 92 Skills + Prompt thực thi từng Phase*. Chốt xong file này mới bắt đầu làm!
+> Mỗi khi bắt đầu **một dự án mới** (Phần mềm, Website, SEO, Marketing/Ads, Bảo mật, Server/VPS, ERP SAP B1/Beas, Học tập/Sản phẩm số) hoặc **thêm một chức năng / phân hệ lớn mới**, anh **luôn gọi [`project-blueprint-architect`](./config/skills/project-blueprint-architect/SKILL.md) ĐẦU TIÊN** (xem **Bước 0** ngay bên dưới). Agent sẽ đóng vai **CEO + CPO + Kiến trúc sư trưởng** phỏng vấn gỡ điểm mù (`Grill-Me`) và xuất ra **1 file chốt yêu cầu duy nhất (`BLUEPRINT_<TEN_DU_AN>.md`)** quy định rõ *Yêu cầu chức năng (`FR/NFR`) + Công nghệ sử dụng + Từng Phase gọi đúng Skill nào trong 93 Skills + Prompt thực thi từng Phase*. Chốt xong file này mới bắt đầu làm!
 
 > [!TIP]
 > **Công Thức Vàng 4 Thành Phần Khi Giao Việc Cho Agent:**
@@ -27,7 +27,7 @@ Dùng skill `project-blueprint-architect` đóng vai CEO & Kiến trúc sư trư
 Yêu cầu:
 1. TUYỆT ĐỐI CHƯA VIẾT CODE HAY LÀM THỰC THI NGAY.
 2. Áp dụng checklist chuyên ngành của skill để phỏng vấn ngược lại anh (Grill-Me) bằng 1 Bảng Quyết Định gọn 5–7 điểm mù quan trọng nhất kèm phương án `[⭐ Khuyên dùng]`.
-3. Sau khi anh chốt bảng quyết định, hãy xuất 1 file đặc tả hoàn chỉnh duy nhất tại `[Đường dẫn/BLUEPRINT_TEN_DU_AN.md]` (gồm In-Scope/Out-of-Scope, FR/NFR, 5 tình huống biên dễ vỡ, sơ đồ kiến trúc Mermaid, Tech Stack, lộ trình từng Phase ánh xạ chính xác vào các Skill trong 92 Skills trên máy và bộ Prompt mẫu cho từng Phase), rồi chạy `validate_blueprint.py` kiểm định đạt Exit code 0.
+3. Sau khi anh chốt bảng quyết định, hãy xuất 1 file đặc tả hoàn chỉnh duy nhất tại `[Đường dẫn/BLUEPRINT_TEN_DU_AN.md]` (gồm In-Scope/Out-of-Scope, FR/NFR, 5 tình huống biên dễ vỡ, sơ đồ kiến trúc Mermaid, Tech Stack, lộ trình từng Phase ánh xạ chính xác vào các Skill trong 93 Skills trên máy và bộ Prompt mẫu cho từng Phase), rồi chạy `validate_blueprint.py` kiểm định đạt Exit code 0.
 ```
 
 **Mẫu 0B — Xây dựng thêm một Chức Năng / Phân Hệ Mới vào Dự Án đang có sẵn:**
@@ -42,8 +42,8 @@ Yêu cầu: Không hỏi lại những gì code đã có; chỉ lập 1 Bảng G
 
 | Nhu Cầu Thực Tế Của Anh | Các Skill Chủ Lực Sẽ Kích Hoạt | Đi Tới Mục |
 | :--- | :--- | :--- |
-| **🏛️ [BƯỚC 0] Tạo Project mới hoặc Chức năng mới — Phỏng vấn chốt 1 file Master Blueprint** | `project-blueprint-architect` *(Ánh xạ công nghệ & lộ trình 92 Skills cho 8 ngành)* | **Bước 0** |
-| **Làm giao diện Web App thao tác chức năng (User/Admin/ERP/SaaS), Mobile App, Landing Page, WordPress, Webcake** | `webapp-app-ux-workflow`, `ui-ux-design-pro-max`, `generative_ui`, `design-landingpage-vip-v2`, `wordpress-flatsome-designer`, `html-to-webcake`, `gsap-skills` | **Nhóm 1** |
+| **🏛️ [BƯỚC 0] Tạo Project mới hoặc Chức năng mới — Phỏng vấn chốt 1 file Master Blueprint** | `project-blueprint-architect` *(Ánh xạ công nghệ & lộ trình 93 Skills cho 8 ngành)* | **Bước 0** |
+| **Làm & Kiểm toán giao diện Web App thao tác chức năng (User/Admin/ERP/SaaS), Mobile Responsive, Web Doanh Nghiệp, Landing Page CRO, WordPress, Webcake** | `webapp-app-ux-workflow`, `ui-ux-cro-auditor`, `ui-ux-design-pro-max`, `generative_ui`, `design-landingpage-vip-v2`, `wordpress-flatsome-designer`, `html-to-webcake`, `gsap-skills` | **Nhóm 1** |
 | **Thiết kế Logo SVG, Bộ nhận diện CIP, Banner Ads, Báo giá PDF A4, Hồ sơ năng lực, Tạp chí** | `brand-editorial-graphic-studio` *(5 Modules đồ họa & chế bản in ấn)* | **Nhóm 2** |
 | **Kiểm toán SEO / AI Search (GEO), Chạy Google Ads, Tối ưu CRO, Vẽ chân dung khách, Viết Content, Ebook** | `claude-seo`, `google-ads-master`, `chan-dung-khach-hang-9-phan`, `cong-thuc-viet-content-by-noti-v4`, `tao-san-pham-so-bang-ai` | **Nhóm 3** |
 | **Kiểm tra Bảo mật Web/Code/API, Dịch ngược phần mềm (REA), Kiểm toán AI, Tra nguồn, Nạp tài liệu, Check Update Git** | `security-audit`, `reverse-engineer-anything`, `ifixai-agent-auditor`, `verified-source-researcher`, `lean-teamwork`, `nap-tai-lieu-antigravity`, `prompts-chat` + 9 Builtin/SDK | **Nhóm 4** |
@@ -161,6 +161,33 @@ Dùng skill `gsap-skills` bổ sung hiệu ứng chuyển động mượt 60fps 
 ### 1.7. Mở Nhanh Bảng Điều Khiển Sidecar Trên IDE — [`ui-plugin-navigation`](~/.gemini/antigravity/builtin/skills/ui-plugin-navigation/SKILL.md)
 ```text
 Dùng `ui-plugin-navigation` kiểm tra các bảng giao diện plugin (sidecar panels) đang có trên máy và hiển thị nút mở nhanh 1 chạm cho công việc [VD: Xem cấu trúc phân tử 3D / Điều khiển thiết bị Android / Xem trước Jetpack Compose].
+```
+
+---
+
+### 1.8. Kiểm Toán Độc Lập Logic UI Web App, Responsive Mobile, Web Doanh Nghiệp & CRO Landing Page — [`ui-ux-cro-auditor`](./config/skills/ui-ux-cro-auditor/SKILL.md)
+*Hợp nhất tinh hoa từ 6 kho kiểm toán UI/UX/CRO chuẩn quốc tế (`garrytan/gstack` 138k★ `/qa` + `/design-review`, `addyosmani/web-quality-skills` CWV + WCAG 2.2 AA, `coreyhaines31/marketingskills` 57k★ `cro` + `site-architecture`, `pbakaus/impeccable` `audit` + `critique` + `AI Slop`, `narenkatakam/ux-audit` Norman/Krug/Nielsen, `tommygeoco/ui-audit` 55-point QA) kèm công cụ CLI `audit_ui_ux_cro.py` quét tĩnh HTML/JSX/CSS + lái Headless Chrome/Edge qua CDP đo thực tế trên 3 màn hình (`375x812`, `768x1024`, `1440x900`).*
+
+**Mẫu 1.8A — Kiểm toán Logic UI Web App (User / Admin / SaaS / ERP) & Responsive Mobile 3-Viewport (`--live --screenshots`):**
+```text
+Dùng skill `ui-ux-cro-auditor` chạy kiểm toán Logic UI Web App & Responsive Mobile cho dự án tại `[Đường dẫn thư mục hoặc URL đang chạy, VD: http://localhost:3000]`:
+1. Chạy công cụ `audit_ui_ux_cro.py "[Đường dẫn/URL]" --surface webapp --live --screenshots "audit_shots"` để quét mã nguồn tĩnh kết hợp đo thực tế trên Headless Browser ở 3 khung hình (`375x812` Mobile, `768x1024` Tablet, `1440x900` Desktop).
+2. Kiểm tra đầy đủ 6 cổng `Operate Mode`: 8 trạng thái UI, nút trong `<form>` thiếu `type="button"`, `<input type="number">` bị trôi số khi cuộn chuột, bảng thiếu `tabular-nums`, mất vòng `focus-visible`, tràn ngang mobile, ô nhập `< 16px` tự zoom trên iOS và vùng chạm `< 44x44px`.
+3. Xuất Báo cáo Kiểm toán phân hạng `P0 -> P1 -> P2` kèm ảnh chụp bằng chứng 3 màn hình, điểm Scorecard `0–100 (A–F)` và sửa trực tiếp code đạt hạng `A (>= 90/100)`.
+```
+
+**Mẫu 1.8B — Kiểm toán Website Doanh Nghiệp (B2B / B2C Corporate Trust, Kiến Trúc Điều Hướng, Core Web Vitals & WCAG 2.2 AA):**
+```text
+Dùng skill `ui-ux-cro-auditor` (`--surface corporate`) kiểm toán toàn diện Website Doanh nghiệp tại `[Đường dẫn code hoặc URL]`:
+- Kiểm tra Krug's 6-Point Trunk Test, kiến trúc điều hướng `4–7` mục (luật 3-Click), tín hiệu uy tín B2B/B2C (MST, địa chỉ thật, Case Study số liệu thật thay cho khẩu hiệu chung chung "Happy Talk"), tốc độ tải CWV (`LCP / INP / CLS`), chuẩn tiếp cận WCAG 2.2 AA và bộ lọc 12 dấu hiệu `AI Design Slop`.
+- Xuất bảng lỗi kèm tọa độ file/dòng hoặc selector DOM cụ thể và đề xuất bản vá tối ưu.
+```
+
+**Mẫu 1.8C — Kiểm toán Tối Ưu Tỷ Lệ Chuyển Đổi (`CRO Audit`) & Bảo Mật Tracking Cho Landing Page Bán Hàng / Sự Kiện:**
+```text
+Dùng skill `ui-ux-cro-auditor` (`--surface landing --live`) kiểm toán chuyển đổi CRO 7 chiều cho Landing Page tại `[Đường dẫn file HTML hoặc URL]`:
+1. Đánh giá bài test 5 giây Above-the-Fold, độ khớp thông điệp quảng cáo (Message Match), rò rỉ điều hướng khỏi mục tiêu chuyển đổi duy nhất (Attention Ratio 1:1), sức mạnh văn bản nút CTA, ma sát trường Form (3 vs 4–6 vs 7+ ô) và bằng chứng xã hội / cam kết hoàn tiền sát nút bấm.
+2. Quét lỗi kỹ thuật trang đích: hiển thị Mobile `375x812`, luồng thanh toán VietQR và kiểm tra an toàn đảm bảo tuyệt đối KHÔNG lộ Meta CAPI / TikTok Events API Access Token ở mã nguồn Frontend HTML/JS.
 ```
 
 ---

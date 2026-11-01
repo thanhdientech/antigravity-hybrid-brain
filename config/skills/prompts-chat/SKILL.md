@@ -1,6 +1,6 @@
 ---
 name: prompts-chat
-description: "Tra cứu, tối ưu System Prompt & săn Agent Skills từ kho 2,627 mẫu Awesome Prompts + 31 chương sách Prompting & MCP trực tuyến."
+description: "Tra cứu, tối ưu System Prompt & Agent Skills từ 2,627 mẫu Awesome Prompts + 31 chương sách Prompting & MCP."
 group: "Kiểm Toán & Điều Phối AI"
 ---
 

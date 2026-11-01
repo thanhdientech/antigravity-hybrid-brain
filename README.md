@@ -1,11 +1,12 @@
 # 🧠 Antigravity x Javis Hybrid Skill Brain & 5-Gate Anti-Hallucination Suite
 
-> **Hệ điều hành Tri thức Lai (Hybrid Knowledge & Skill Router), Quy Tắc Bước 0 Lập Master Blueprint Đa Ngành (`project-blueprint-architect`), Khung Kiểm soát Chống Ảo Giác 5 Chốt Chặn (18 Ngành) và Hệ sinh thái 92 Kỹ năng Chuyên sâu (33 Global Skills + 12 Bộ Plugins + 9 Builtin) dành cho Google Antigravity IDE / CLI (`agy`).**
+> **Hệ điều hành Tri thức Lai (Hybrid Knowledge & Skill Router), Quy Tắc Bước 0 Lập Master Blueprint Đa Ngành (`project-blueprint-architect`), Khung Kiểm soát Chống Ảo Giác 5 Chốt Chặn (18 Ngành) và Hệ sinh thái 93 Kỹ năng Chuyên sâu (34 Global Skills + 12 Bộ Plugins + 9 Builtin) dành cho Google Antigravity IDE / CLI (`agy`).**
 
 > [!IMPORTANT]
 > **GHI CHÚ QUY TẮC BƯỚC 0 BẮT BUỘC (`BLUEPRINT-FIRST RULE`):**
-> Mỗi khi **tạo một Project mới** (Phần mềm, Website/LP, SEO/GEO, Marketing/Ads, Bảo mật, Server/VPS, ERP SAP B1/Beas, Học tập/Sản phẩm số) hoặc **xây dựng một Chức năng / Phân hệ lớn mới**, bắt buộc áp dụng **`project-blueprint-architect` ĐẦU TIÊN**. AI đóng vai **CEO + CPO + Kiến trúc sư trưởng** phỏng vấn gỡ điểm mù (`Grill-Me`) và xuất ra **1 file chốt yêu cầu duy nhất (`BLUEPRINT_<TEN_DU_AN>.md`)** quy định rõ Yêu cầu (`FR/NFR`), Công nghệ sử dụng, Bảng ánh xạ từng bước vào đúng Skill trong **92 Skills** và Bộ Prompt thực thi từng Phase (kiểm định bằng `validate_blueprint.py` đạt `Exit code 0`) trước khi bắt tay vào code hay thiết kế. *(Xem mẫu câu lệnh gọi nhanh tại [`SO_TAY_PROMPT_MAU_GOI_TOAN_BO_SKILL_AGENT.md`](./SO_TAY_PROMPT_MAU_GOI_TOAN_BO_SKILL_AGENT.md)).*
+> Mỗi khi **tạo một Project mới** (Phần mềm, Website/LP, SEO/GEO, Marketing/Ads, Bảo mật, Server/VPS, ERP SAP B1/Beas, Học tập/Sản phẩm số) hoặc **xây dựng một Chức năng / Phân hệ lớn mới**, bắt buộc áp dụng **`project-blueprint-architect` ĐẦU TIÊN**. AI đóng vai **CEO + CPO + Kiến trúc sư trưởng** phỏng vấn gỡ điểm mù (`Grill-Me`) và xuất ra **1 file chốt yêu cầu duy nhất (`BLUEPRINT_<TEN_DU_AN>.md`)** quy định rõ Yêu cầu (`FR/NFR`), Công nghệ sử dụng, Bảng ánh xạ từng bước vào đúng Skill trong **93 Skills** và Bộ Prompt thực thi từng Phase (kiểm định bằng `validate_blueprint.py` đạt `Exit code 0`) trước khi bắt tay vào code hay thiết kế. *(Xem mẫu câu lệnh gọi nhanh tại [`SO_TAY_PROMPT_MAU_GOI_TOAN_BO_SKILL_AGENT.md`](./SO_TAY_PROMPT_MAU_GOI_TOAN_BO_SKILL_AGENT.md)).*
 > - **MỚI — Tách Bạch Giao Diện Web App Thao Tác Chức Năng (`webapp-app-ux-workflow` — `Operate Mode`):** Khi xây dựng **Web App người dùng (`User Portal`), Trang quản trị (`Admin Panel`), Hệ thống SaaS / ERP / CRM / MES hoặc Mobile App (`iOS/Android`)**, hệ thống kích hoạt chuyên biệt **`webapp-app-ux-workflow`** (khóa luồng `Shape Flow & RBAC` $\rightarrow$ Ma trận `60+` Component chống lạm dụng Modal $\rightarrow$ `URL-as-State` & `8` trạng thái UI $\rightarrow$ `Enterprise Data Table / Form / Wizard` $\rightarrow$ `100dvh` App Shell & Mobile Navigation $\rightarrow$ Thử tải dữ liệu xấu nhất `Break-UI` & quét lỗi logic tự động bằng `audit_webapp_ux.py`), không bị lẫn với phong cách Landing Page xem tin thông thường.
+> - **MỚI — Kiểm Toán Độc Lập 4 Bề Mặt Giao Diện & Chuyển Đổi (`ui-ux-cro-auditor` — `4-Surface Static + Live CDP 3-Viewport Auditor`):** Hợp nhất tinh hoa 6 kho kiểm toán quốc tế (`garrytan/gstack`, `addyosmani/web-quality-skills`, `coreyhaines31/marketingskills`, `pbakaus/impeccable`, `narenkatakam/ux-audit`, `tommygeoco/ui-audit`) kèm công cụ `audit_ui_ux_cro.py` (100% Python stdlib + Headless Chrome/Edge CDP đo trực tiếp `375x812`, `768x1024`, `1440x900`) để kiểm toán độc lập **Logic UI Web App (`--surface webapp`)**, **Responsive Mobile (`--surface mobile`)**, **Website Doanh nghiệp (`--surface corporate`)** và **CRO Landing Page (`--surface landing`)**, xuất điểm `0–100 (A–F)` & bảng lỗi `P0/P1/P2` kèm ảnh chụp màn hình thực tế.
 
 ---
 
@@ -20,7 +21,7 @@ Bộ giải pháp này giải quyết triệt để cả 3 bài toán thông qua
 
 | Chỉ Số Vận Hành Thực Tế | Kết Quả Đạt Được | Cơ Chế Kỹ Thuật Đằng Sau |
 | :--- | :--- | :--- |
-| **Quy mô tri thức quản lý** | **92 Skills** (`2,163+` files, `18,415+` chunks) | Quét đa tầng: Workspace $\rightarrow$ Global (`33`) $\rightarrow$ Plugins (`50`) $\rightarrow$ Builtin (`9`) |
+| **Quy mô tri thức quản lý** | **93 Skills** (`2,170+` files, `18,465+` chunks) | Quét đa tầng: Workspace $\rightarrow$ Global (`34`) $\rightarrow$ Plugins (`50`) $\rightarrow$ Builtin (`9`) |
 | **Tốc độ tìm kiếm lai (Warm Search)** | **`6 ms – 56 ms`** | SQLite WAL + FTS5 tiếng Việt không dấu (`đ/Đ`) + Reciprocal Rank Fusion (RRF) |
 | **Tốc độ cập nhật Delta SHA-256** | **`~210 ms – 420 ms`** | Chỉ cập nhật đúng file có thay đổi mã băm SHA-256 với FTS5 `contentless_delete=1` |
 | **Tiết kiệm Context Token** | **`70% – 85%`** | Lazy Section Excerpt: chỉ cắt đúng mục Heading hoặc đoạn dòng `L_start..L_end` |
@@ -36,7 +37,7 @@ flowchart TD
 
     subgraph Javis_Brain ["🧠 Bộ Não Lai Javis Hybrid Skill Brain (config/scripts/)"]
         Hook -->|"Đọc 192KB cuối transcript (< 1ms)"| Engine["🔍 agy_skill_engine.py v2\n(SQLite WAL + FTS5 Tiếng Việt đ/Đ + RRF + Đồng nghĩa Việt-Anh)"]
-        Engine <-->|"Quét Delta SHA-256 (~210ms)"| IndexDB[("agy_skill_index.db\n2,163+ Files | 18,415+ Chunks")]
+        Engine <-->|"Quét Delta SHA-256 (~210ms)"| IndexDB[("agy_skill_index.db\n2,170+ Files | 18,465+ Chunks")]
         Engine -->|"Tiêm gợi ý Top 3 Skill + Dòng L_start..L_end\n(ephemeralMessage tự hủy)"| Agent["🤖 Antigravity AI Agent"]
         Agent <-->|"Gọi 4 Tools qua MCP Stdio"| MCP["🔌 Trạm MCP: agy-skill-hub\n(agy_skill_mcp_server.py)"]
         MCP <--> Engine
@@ -83,7 +84,7 @@ Thư mục `config/scripts/` đóng vai trò là **nhân điều phối trung t�
 - Cập nhật `hooks.json`, khởi tạo tệp cấu hình mẫu từ `config.example.json` (nếu tải về từ Git) và dựng mới hoàn toàn `agy_skill_index.db`.
 
 ### 3.5. `check_skill_git_updates.py` & `skill_upstreams.json` — Trình Kiểm Tra Bản Cập Nhật Từ GitHub Gốc (Read-Only 100%)
-- Sử dụng `git ls-remote` song song đa luồng siêu nhẹ để kiểm tra xem **25 kho GitHub mã nguồn mở gốc** của các bộ Skill đã có commit nâng cấp mới hay chưa mà không tốn ổ cứng và tuyệt đối không ghi đè làm hỏng Frontmatter Tiếng Việt (`<= 150` ký tự) của `SKILL.md`.
+- Sử dụng `git ls-remote` song song đa luồng siêu nhẹ để kiểm tra xem **30 kho GitHub mã nguồn mở gốc** của các bộ Skill đã có commit nâng cấp mới hay chưa mà không tốn ổ cứng và tuyệt đối không ghi đè làm hỏng Frontmatter Tiếng Việt (`<= 150` ký tự) của `SKILL.md`.
 
 ---
 
@@ -103,14 +104,14 @@ Thư mục `config/scripts/` đóng vai trò là **nhân điều phối trung t�
 
 ---
 
-## 🧰 5. Danh Mục & Giải Thích Chi Tiết 33 Global Skills (`config/skills/`)
+## 🧰 5. Danh Mục & Giải Thích Chi Tiết 34 Global Skills (`config/skills/`)
 
-Toàn bộ **33 Global Skills** được tổ chức thành **8 Cụm Chuyên Môn** hiệp đồng chặt chẽ (kèm sổ tay [`SO_TAY_PROMPT_MAU_GOI_TOAN_BO_SKILL_AGENT.md`](./SO_TAY_PROMPT_MAU_GOI_TOAN_BO_SKILL_AGENT.md) chứa mẫu câu lệnh gọi chuẩn cho toàn bộ 92 Skills):
+Toàn bộ **34 Global Skills** được tổ chức thành **8 Cụm Chuyên Môn** hiệp đồng chặt chẽ (kèm sổ tay [`SO_TAY_PROMPT_MAU_GOI_TOAN_BO_SKILL_AGENT.md`](./SO_TAY_PROMPT_MAU_GOI_TOAN_BO_SKILL_AGENT.md) chứa mẫu câu lệnh gọi chuẩn cho toàn bộ 93 Skills):
 
 ### Cụm A — Kiến Trúc Blueprint Dự Án, Điều Phối Đa Tác Tử, Quản Trị Tri Thức & Kiểm Toán AI (6 Skills)
 | Tên Skill | Vai Trò & Năng Lực Cốt Lõi | Công Cụ / CLI Đi Kèm |
 | :--- | :--- | :--- |
-| **`project-blueprint-architect`** | **[Bước 0 Bắt Buộc Khi Tạo Project Mới / Chức Năng Mới]** Đóng vai CEO + CPO + Kiến trúc sư trưởng phỏng vấn Socratic (`Grill-Me`), khóa phạm vi `In-Scope / Out-of-Scope`, áp dụng checklist 8 ngành và xuất **1 file Master Blueprint duy nhất (`BLUEPRINT_<TEN_DU_AN>.md`)** quy định rõ `FR/NFR`, Tech Stack, sơ đồ Mermaid, ánh xạ từng Phase vào đúng **92 Skills** và bộ Prompt thực thi. | `scripts/validate_blueprint.py` (`--self-test`), hợp nhất từ `superpowers`, `mattpocock/skills`, `spec-kit`, `pm-skills` |
+| **`project-blueprint-architect`** | **[Bước 0 Bắt Buộc Khi Tạo Project Mới / Chức Năng Mới]** Đóng vai CEO + CPO + Kiến trúc sư trưởng phỏng vấn Socratic (`Grill-Me`), khóa phạm vi `In-Scope / Out-of-Scope`, áp dụng checklist 8 ngành và xuất **1 file Master Blueprint duy nhất (`BLUEPRINT_<TEN_DU_AN>.md`)** quy định rõ `FR/NFR`, Tech Stack, sơ đồ Mermaid, ánh xạ từng Phase vào đúng **93 Skills** và bộ Prompt thực thi. | `scripts/validate_blueprint.py` (`--self-test`), hợp nhất từ `superpowers`, `mattpocock/skills`, `spec-kit`, `pm-skills` |
 | **`lean-teamwork`** | Điều phối đa tác tử tinh gọn, tối ưu Token/Quota, chia nhỏ Atomic Task Cards, 3 Thiết luật First-Time Right & kết nối Desktop Widget HUD. | `scripts/teamwork_bridge.py`, `scripts/manage_skills.py`, `sync_skill.py` |
 | **`nap-tai-lieu-antigravity`** | Quy chuẩn 5 bước chưng cất tài liệu mới (PDF, Word, Sách dài 3-Pass, SQL) thành Skill chuẩn Javis (`description <= 150` ký tự) & đồng bộ chỉ mục. | Kết nối trực tiếp 4 MCP Tools của `agy-skill-hub` |
 | **`verified-source-researcher`** | Động cơ kiểm chứng nguồn sự thật gốc: quét link sống `HTTP 200`, xác thực mã học thuật CrossRef DOI, PubMed PMID, OpenLibrary ISBN. | `cli.py`, `scripts/link_validator.py`, `academic_checker.py`, `book_checker.py` |
@@ -136,10 +137,11 @@ Toàn bộ **33 Global Skills** được tổ chức thành **8 Cụm Chuyên M�
 | **`recordly-tutorial-ai`** | Quay màn hình hướng dẫn sử dụng phần mềm/ERP/Web với **Recordly v1.4.0** kết hợp AI tự động đọc lời bình giải thích từng bước (`vi-VN-HoaiMyNeural` / `vi-VN-NamMinhNeural` + 40 ngôn ngữ), tự sinh phụ đề **`.srt` / `.vtt`** khớp từng mili-giây theo `WordBoundary`, xuất kép dự án **`.recordly` v2** (`audioRegions`, `autoCaptions`, `zoomRegions`, `annotationRegions`, `RECORDLY_SMOKE_EXPORT=1`) và video **`.mp4`** đốt sẵn phụ đề Tiếng Việt sắc nét. | `scripts/recordly_tutorial_pipeline.py` (`discover`, `capture` `wgc-capture.exe` 60fps, `transcribe` `whisper-cli.exe`, `build`, `--self-test`) |
 | **`shopee-affiliate-video-studio`** | Phân tích sâu từ khóa ngách Shopee (gom cụm so sánh giá `Image dHash + TF-IDF` & chấm điểm `Winning Score 0–100`), bóc thông số kỹ thuật NSX thật, dùng AI Vision đọc ảnh sản phẩm sáng tác câu chuyện đời thường 5 cảnh đa ngành, ghi chữ 3 vùng lên màn hình & kết xuất video `.MP4` dọc `9:16` (`1080x1920`). | `scripts/shopee_story_cli.py` (`status`, `scan`, `niche-analyze`, `extract`, `story-render`, `sync-8500`) |
 
-### Cụm D — Kiến Trúc Luồng UX Web App/App (`Operate Mode`), UI/UX Đa Ngành, Nhận Diện Thương Hiệu, Báo Giá/Tạp Chí, Web/LP & SEO/GEO (7 Skills)
+### Cụm D — Kiến Trúc Luồng UX Web App/App (`Operate Mode`), Kiểm Toán 4 Bề Mặt UI/UX/CRO, UI/UX Đa Ngành, Nhận Diện Thương Hiệu, Báo Giá/Tạp Chí, Web/LP & SEO/GEO (8 Skills)
 | Tên Skill | Vai Trò & Năng Lực Cốt Lõi | Công Cụ / CLI Đi Kèm |
 | :--- | :--- | :--- |
 | **`webapp-app-ux-workflow`** | **Kiến Trúc Luồng Thao Tác UX, Logic State/URL & CRUD Cho Web App (`User/Admin/ERP/SaaS`) & Mobile App (`Operate Mode`)**: tách biệt rõ phần mềm thao tác chức năng thực tế với web xem tin/quảng cáo; quy chuẩn 6 bước bắt buộc từ vẽ Task Flow & phân quyền `RBAC`, ma trận quyết định `60+` SaaS Components (chống lạm dụng Modal, ưu tiên Inline/Slide-over Drawer/Wizard), khóa trạng thái `URL-as-State` & đủ 8 trạng thái UI, chuẩn hóa Enterprise Data Table (`tabular-nums`, Bulk Actions) & Form (`Dirty-state Guard`, `AlertDialog`), App Shell `100dvh` & điều hướng Mobile App (`Stateful Tabs / Stack / Form Sheet`), đến thử tải dữ liệu xấu nhất **`Break-UI`**. | `scripts/audit_webapp_ux.py` (`--self-test`, quét 12 lỗi UX logic) + 6 sổ tay `references/01..06` hợp nhất từ 8 kho (`impeccable`, `emilkowalski`, `vercel-labs`, `ui-design-brain`, `ui-skills`, `callstack`, `flutter`) |
+| **`ui-ux-cro-auditor`** | **Kiểm Toán Độc Lập Logic UI Web App, Responsive Mobile, Website Doanh Nghiệp & CRO Landing Page (`4-Surface Evidence-Led Auditor`)**: phân loại đúng loại bề mặt (`Classifier-First`) rồi kiểm toán đa tầng từ **Logic thao tác Web App** (`Operate Mode` 8 trạng thái, nút `<form>` thiếu `type`, `<input type="number">` trôi số khi cuộn, bảng thiếu `tabular-nums`, mất `focus-visible`), **Giao diện Mobile Responsive** (tràn ngang, khóa zoom, ô nhập `< 16px` tự zoom iOS, vùng chạm `< 44x44px`, `100vh` vs `100dvh`, thanh ghim che `> 22%`), **Web Doanh nghiệp** (Krug Trunk Test, điều hướng `4–7` mục, B2B/B2C E-E-A-T Trust, CWV `LCP/INP/CLS`, WCAG 2.2 AA), đến **CRO Landing Page** (Test 5 giây, Message Match, Attention Ratio `1:1`, Form Friction, VietQR & chặn lộ Token CAPI ở Frontend) + bộ lọc **12 dấu hiệu `AI Design Slop`**, chấm điểm `0–100 (A–F)` & phân hạng `P0/P1/P2`. | `scripts/audit_ui_ux_cro.py` (`--self-test`, `--surface webapp\|mobile\|corporate\|landing\|all`, `--live --screenshots` lái Headless Chrome/Edge qua RFC-6455 CDP đo trực tiếp `375x812`, `768x1024`, `1440x900`) + 5 sổ tay `references/01..05` hợp nhất từ 6 kho (`gstack`, `web-quality-skills`, `marketingskills`, `impeccable`, `ux-audit`, `ui-audit`) |
 | **`ui-ux-design-pro-max`** | **Siêu Hub UI/UX Phần Mềm & Web Đa Ngành Nghề + Design-to-Code (`308` files)**: hợp nhất động cơ suy luận Python BM25 cho **192 ngành nghề** (ERP, SaaS, Fintech, Ngân hàng, Y tế, TMĐT, BĐS, F&B, Spa, Pháp lý, Giáo dục...), **79 phong cách UI**, **192 bảng màu theo ngành**, **74 cặp Google Fonts**, **25 biểu đồ Dashboard**, **119 luật UX**, kiến trúc Design Tokens 3 tầng, kho **84 hồ sơ `DESIGN.md` thương hiệu quốc tế** (*Apple, Stripe, Linear, Vercel, Figma, Airbnb, Shopify, Notion, WIRED, Ferrari...*), `frontend-design` (Anthropic), bộ lọc `no-ai-design-slop` và quy chuẩn chuyển thiết kế sang code cho **22 Tech Stacks** (`HTML+Tailwind`, `React`, `Next.js`, `shadcn/ui`, `Vue`, `Nuxt`, `Angular`, `Laravel`, `Svelte`, `Flutter`, `React Native`, `SwiftUI`, `Jetpack Compose`, `WPF`, `WinUI 3`, `JavaFX`...). | `skills/01_ui-ux-pro-max/scripts/search.py`, `scripts/search_brand_design.py`, 35 bảng CSV offline & 84 bộ `brands/*/DESIGN.md` |
 | **`brand-editorial-graphic-studio`** | **Siêu Hub Thiết Kế Logo SVG, Bộ Nhận Diện Thương Hiệu CIP, Ảnh/Banner, Báo Giá & Tạp Chí Dàn Trang (`450+` files)**: thiết kế **Logo Vector SVG hình học** (55+ phong cách, 30 bảng màu tâm lý học, 25 ngành nghề), **Bộ Nhận Diện Thương Hiệu CIP** (50+ hạng mục ấn phẩm văn phòng/thương mại & đồng bộ `design-tokens`), **Ảnh Banner Quảng Cáo & Poster** (22 trường phái + 14 phong cách Illustration + `canvas-design` chuẩn Safe-zone & tỷ lệ chữ `<20%` Meta Ads), cùng hệ thống chế bản **Báo Giá Thương Mại A4, Hồ Sơ Năng Lực, Hồ Sơ Thầu & Dàn Trang Tạp Chí Đa Cột** bằng Paged CSS `@page` / Typst xuất thẳng ra **PDF A4 chuẩn in ấn**, **Word (`.docx`)**, **PowerPoint (`.pptx`)** và **PNG 2x Retina**. | `scripts/editorial_pdf_renderer.py` (Dual-Engine Playwright + Zero-Dependency Native Chromium), `logo/search.py`, `cip/search.py`, `typst/scripts/search-api.py` & 3 mẫu HTML/SVG A4 |
 | **`design-landingpage-vip-v2`** | Thiết kế Landing Page chuyển đổi cao đóng gói gọn trong 1 tệp HTML hoàn chỉnh: 9 Design Systems (Liquid Glass, Apple, E-commerce...), 138 icon SVG inline, form đăng ký, mã thanh toán VietQR động & Server-side Meta/TikTok CAPI qua Webhook (tuyệt đối không lộ Token ở Frontend). | 9 bộ `system-design/`, kho 138 SVG `assets/icons/`, mẫu workflow `n8n` |
@@ -153,6 +155,7 @@ Toàn bộ **33 Global Skills** được tổ chức thành **8 Cụm Chuyên M�
 > | **Web App Người Dùng (`User Portal`), Trang Quản Trị (`Admin`), `ERP/SaaS/CRM/MES` & `Mobile App`** *(nơi người dùng đăng nhập thao tác chức năng nghiệp vụ)* | **`Operate Mode`** *(Tối ưu tốc độ thao tác, logic State/URL, CRUD Table/Form/Drawer & chống lỗi biên)* | **`webapp-app-ux-workflow`** *(kết hợp `ui-ux-design-pro-max` khi cần tra màu ngành nghề / `DESIGN.md`)* |
 > | **Hệ màu 192 ngành, Cặp Font, Design Tokens & 84 phong cách thương hiệu lớn (`Linear`, `Stripe`, `Apple`...)** | **`Visual Design System`** *(Thẩm mỹ, màu sắc & chuyển sang 22 frameworks)* | **`ui-ux-design-pro-max`** |
 > | **Landing Page bán hàng/sự kiện, Website giới thiệu doanh nghiệp, WordPress Flatsome, Webcake** | **`Persuade / Read Mode`** *(Thuyết phục chuyển đổi, VietQR & CAPI)* | **`design-landingpage-vip-v2`**, **`wordpress-flatsome-designer`**, **`html-to-webcake`** |
+> | **Kiểm toán độc lập Logic UI Web App, Responsive Mobile `375px`, Web Doanh nghiệp & CRO Landing Page** | **`Audit & QA Mode`** *(Quét tĩnh + Headless CDP 3-Viewport, xuất điểm `A–F` & lỗi `P0–P2`)* | **`ui-ux-cro-auditor`** |
 
 ### Cụm E — Tự Động Hóa Trình Duyệt Đa Profile & Dây Chuyền Kênh Video (2 Skills)
 | Tên Skill | Vai Trò & Năng Lực Cốt Lõi | Công Cụ / CLI Đi Kèm |
@@ -184,7 +187,7 @@ Toàn bộ **33 Global Skills** được tổ chức thành **8 Cụm Chuyên M�
 
 ## 🧩 6. Hệ Sinh Thái 12 Bộ Plugins Mở Rộng (`config/plugins/` — 50+ Sub-Skills)
 
-Bên cạnh 33 Global Skills, gói cài đặt tích hợp sẵn **12 Bộ Plugins chuyên ngành**:
+Bên cạnh 34 Global Skills, gói cài đặt tích hợp sẵn **12 Bộ Plugins chuyên ngành**:
 
 1. **`science` (27 Kỹ năng Nghiên cứu Khoa học & Y Sinh học Quốc tế):**
    - *Cấu trúc Protein & Phân tử 3D:* `alphafold-database-fetch-and-analyze`, `pdb-database`, `uniprot-database`, `interpro-database`, `foldseek-structural-search`, `protein-sequence-msa`, `protein-sequence-similarity-search`, `pymol` và trình xem cấu trúc 3D tương tác trực tiếp **`biomolecular-structure-viewer` (Mol\* Sidecar)**.
@@ -213,7 +216,7 @@ Bên cạnh 33 Global Skills, gói cài đặt tích hợp sẵn **12 Bộ Plugi
    cd antigravity-hybrid-brain
    ```
 2. Nhấp đúp chạy **`CAI_DAT_1_CLICK_WINDOWS.bat`**:
-   - Tự động sao chép `GEMINI.md`, sổ tay quy trình, sổ tay Prompt mẫu 92 Skills, `scripts/`, **33 Global Skills** và **12 Plugins** vào `%USERPROFILE%\.gemini\config\`.
+   - Tự động sao chép `GEMINI.md`, sổ tay quy trình, sổ tay Prompt mẫu 93 Skills, `scripts/`, **34 Global Skills** và **12 Plugins** vào `%USERPROFILE%\.gemini\config\`.
    - Tự động chạy `setup_portable_antigravity.py` để đăng ký MCP Server `agy-skill-hub` và `PreInvocation Hook` khớp với đường dẫn Python của máy mới.
 3. Nhấp đúp chạy tiếp **`CAI_THU_VIEN_PYTHON_CHO_SKILLS.bat`**:
    - Cài đặt đầy đủ các thư viện Python (`mcp`, `pyyaml`, `aiohttp`, `websockets`, `beautifulsoup4`, `requests`, `playwright`, `pyodbc`, `pymssql`, `reportlab`, `pydantic`, `rich`...) và trình duyệt Chromium Headless.
@@ -240,14 +243,17 @@ python3 ~/.gemini/config/scripts/setup_portable_antigravity.py
 
 ### Kiểm Tra Trạng Thái Bộ Não Lai & Check Update Git Sau Khi Cài Đặt
 ```bash
-# Kiểm toán sức khỏe 92 Skills và đo tốc độ chỉ mục:
+# Kiểm toán sức khỏe 93 Skills và đo tốc độ chỉ mục:
 python ~/.gemini/config/scripts/agy_skill_engine.py --audit
 
-# Kiểm tra an toàn (Read-Only) xem 25 kho Skill có bản cập nhật mới từ GitHub gốc không:
+# Kiểm tra an toàn (Read-Only) xem 30 kho Skill có bản cập nhật mới từ GitHub gốc không:
 python ~/.gemini/config/scripts/check_skill_git_updates.py
 
 # Tự kiểm định trình quét 12 lỗi UX & Logic thao tác Web App / App (Exit code 0):
 python ~/.gemini/config/skills/webapp-app-ux-workflow/scripts/audit_webapp_ux.py --self-test
+
+# Tự kiểm định trình Kiểm toán Đa Bề mặt (Web App / Mobile / Corporate / Landing CRO + CDP 3-Viewport):
+python ~/.gemini/config/skills/ui-ux-cro-auditor/scripts/audit_ui_ux_cro.py --self-test
 
 # Thử nghiệm tìm kiếm lai tiếng Việt không dấu / song ngữ (< 50ms):
 python ~/.gemini/config/scripts/agy_skill_engine.py --search "tao project moi lap master blueprint chot yeu cau"

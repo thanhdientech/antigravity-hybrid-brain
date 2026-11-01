@@ -1,6 +1,6 @@
 ---
 name: verified-source-researcher
-description: "Kiểm toán 2 nhóm nguồn gốc (Người Dùng & Mạng/Sách Báo) chống ảo giác AI: định vị đủ 4 tọa độ, trích nguyên văn & bảng 6 cột."
+description: "Kiểm toán 2 nguồn gốc (Người Dùng & Mạng/Sách) chống ảo giác AI: đủ 4 tọa độ, trích nguyên văn & bảng 6 cột."
 group: "Kiểm Toán & Điều Phối AI"
 ---
 

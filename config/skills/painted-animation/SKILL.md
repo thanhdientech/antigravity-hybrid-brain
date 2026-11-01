@@ -1,6 +1,6 @@
 ---
 name: painted-animation
-description: "Sản xuất phim hoạt hình màu nước vẽ tay (MP4) bằng code p5.js + p5.brush, đồng bộ nhạc/lời và render Headless Chrome FFmpeg."
+description: "Làm phim hoạt hình màu nước (MP4) bằng p5.js + p5.brush, khớp nhạc/lời và render Headless Chrome FFmpeg."
 group: "Làm Phim & Video AI"
 ---
 

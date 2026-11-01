@@ -119,6 +119,7 @@ HIGH_SPECIFICITY_SINGLE_TOKENS = {
     "gdocs", "gsheets", "gdrive", "gslides", "gaql", "pmax", "troas", "tcpa",
     "sitelinks", "callouts", "iztro", "pythagoras", "numerology", "bazi",
     "webapp", "impeccable", "rbac", "stepper", "gorouter", "blueprint", "asar", "ghidra", "pyinstaller", "recordly", "webcake",
+    "wcag", "cwv", "gstack", "viewport", "responsive",
 }
 
 CONCEPT_SYNONYMS: list[tuple[set[str], list[str]]] = [
@@ -181,7 +182,7 @@ CONCEPT_SYNONYMS: list[tuple[set[str], list[str]]] = [
     ({"tu", "khoa", "keyword", "planner", "nhom", "ngan", "sach", "phu", "dinh", "negative"},
      ["google-ads-master", "keyword-analysis", "planner", "negative", "cpc"]),
     ({"chuyen", "doi", "cro", "trang", "dich", "tracking", "conversion", "message", "match"},
-     ["google-ads-master", "toi-uu-chuyen-doi-web", "measurement", "conversion", "cro"]),
+     ["ui-ux-cro-auditor", "google-ads-master", "toi-uu-chuyen-doi-web", "measurement", "conversion", "cro"]),
     ({"tu", "vi", "dau", "bat", "tru", "binh", "dung", "than", "menh", "tiet", "khi", "iztro", "bazi", "astrolabe"},
      ["tu-vi-bat-tu-than-so-hoc", "iztro", "pythagoras", "bazi", "tiet", "khi"]),
     ({"pythagoras", "numerology", "nhan", "than", "hoc", "duong", "doi", "linh", "hon", "pinnacle"},
@@ -202,6 +203,8 @@ CONCEPT_SYNONYMS: list[tuple[set[str], list[str]]] = [
      ["html-to-webcake", "webcake", "pke"]),
     ({"shopee", "affiliate", "dhash"},
      ["shopee-affiliate-video-studio", "shopee", "affiliate"]),
+    ({"audit", "ui", "ux", "responsive", "mobile", "viewport", "wcag", "cwv", "corporate", "doanh", "nghiep", "vo", "khung", "giao", "dien", "logic", "gstack"},
+     ["ui-ux-cro-auditor", "webapp-app-ux-workflow", "viewport", "wcag", "cro"]),
 ]
 
 

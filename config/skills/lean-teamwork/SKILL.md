@@ -1,6 +1,6 @@
 ---
 name: lean-teamwork
-description: "Điều phối đa tác tử tinh gọn (Lean Multi-Agent): tối ưu token, Atomic Task Cards, First-Time Right & cổng kiểm chứng độc lập."
+description: "Điều phối đa tác tử (Lean Multi-Agent): tối ưu token, Atomic Task Cards, First-Time Right & kiểm chứng."
 group: "Kiểm Toán & Điều Phối AI"
 ---
 

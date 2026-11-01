@@ -133,6 +133,41 @@
       "local_dir": "~/.gemini/config/skills/webapp-app-ux-workflow",
       "recorded_sha": "1bd8f2caa144c11b9153706c8de5f6d3e074b799",
       "recorded_date": "2026-10-30"
+    },
+    {
+      "skill": "ui-ux-cro-auditor (gstack)",
+      "remote_url": "https://github.com/garrytan/gstack.git",
+      "local_dir": "~/.gemini/config/skills/ui-ux-cro-auditor",
+      "recorded_sha": "a2ce5bd8880e4ddab77e9656ff2a776082f31972",
+      "recorded_date": "2026-11-01"
+    },
+    {
+      "skill": "ui-ux-cro-auditor (web-quality-skills)",
+      "remote_url": "https://github.com/addyosmani/web-quality-skills.git",
+      "local_dir": "~/.gemini/config/skills/ui-ux-cro-auditor",
+      "recorded_sha": "afa8da942115f2961fdbfa80807ea0b232ff6c00",
+      "recorded_date": "2026-08-24"
+    },
+    {
+      "skill": "ui-ux-cro-auditor (marketingskills)",
+      "remote_url": "https://github.com/coreyhaines31/marketingskills.git",
+      "local_dir": "~/.gemini/config/skills/ui-ux-cro-auditor",
+      "recorded_sha": "88c79f6528a9347420e57ceb1fff9a60de651768",
+      "recorded_date": "2026-10-30"
+    },
+    {
+      "skill": "ui-ux-cro-auditor (ux-audit)",
+      "remote_url": "https://github.com/narenkatakam/ux-audit.git",
+      "local_dir": "~/.gemini/config/skills/ui-ux-cro-auditor",
+      "recorded_sha": "72753bb7d3ee7ac296408c480735cb93ab371c94",
+      "recorded_date": "2026-04-30"
+    },
+    {
+      "skill": "ui-ux-cro-auditor (ui-audit)",
+      "remote_url": "https://github.com/tommygeoco/ui-audit.git",
+      "local_dir": "~/.gemini/config/skills/ui-ux-cro-auditor",
+      "recorded_sha": "eea862b35b6c472590c6c72b91e0cc2c184f5326",
+      "recorded_date": "2026-01-17"
     }
   ]
 }

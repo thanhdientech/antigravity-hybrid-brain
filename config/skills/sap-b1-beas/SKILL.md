@@ -1,6 +1,6 @@
 ---
 name: sap-b1-beas
-description: "Kiến trúc sư SAP Business One (9.3/10.0) & Boyum Beas Manufacturing: sản xuất, giá thành WIP 154, Thông tư 99/2025, SDK & DTW."
+description: "Kiến trúc SAP Business One (9.3/10.0) & Boyum Beas: sản xuất, giá thành WIP 154, Thông tư 99/2025, SDK & DTW."
 group: "ERP SAP B1 & SQL"
 ---
 
