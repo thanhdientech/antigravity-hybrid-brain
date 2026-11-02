@@ -1,6 +1,6 @@
 ---
 name: antigravity-browser-controller
-description: "Điều khiển đa trình duyệt (Cốc Cốc, Chrome) qua CDP/WebSocket: đa profile, nạp file ngầm, tự động đăng Facebook & chụp ảnh."
+description: "Điều khiển trình duyệt (Cốc Cốc, Chrome) qua CDP/WebSocket: đa profile, nạp file ngầm, auto-post FB & chụp ảnh."
 group: "Tự động hóa & Trình duyệt"
 ---
 

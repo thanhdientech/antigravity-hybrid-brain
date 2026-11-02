@@ -119,7 +119,7 @@ HIGH_SPECIFICITY_SINGLE_TOKENS = {
     "gdocs", "gsheets", "gdrive", "gslides", "gaql", "pmax", "troas", "tcpa",
     "sitelinks", "callouts", "iztro", "pythagoras", "numerology", "bazi",
     "webapp", "impeccable", "rbac", "stepper", "gorouter", "blueprint", "asar", "ghidra", "pyinstaller", "recordly", "webcake",
-    "wcag", "cwv", "gstack", "viewport", "responsive",
+    "wcag", "cwv", "gstack", "viewport", "responsive", "deeptutor", "eduhub", "lightrag", "graphrag",
 }
 
 CONCEPT_SYNONYMS: list[tuple[set[str], list[str]]] = [
@@ -205,6 +205,8 @@ CONCEPT_SYNONYMS: list[tuple[set[str], list[str]]] = [
      ["shopee-affiliate-video-studio", "shopee", "affiliate"]),
     ({"audit", "ui", "ux", "responsive", "mobile", "viewport", "wcag", "cwv", "corporate", "doanh", "nghiep", "vo", "khung", "giao", "dien", "logic", "gstack"},
      ["ui-ux-cro-auditor", "webapp-app-ux-workflow", "viewport", "wcag", "cro"]),
+    ({"deeptutor", "eduhub", "lightrag", "graphrag", "anki", "vu", "tru", "khoa", "hoc", "thien", "van", "quy", "dao", "manim", "remotion"},
+     ["deeptutor-cli", "create-and-edit-video", "lam-phim-video-master", "math_animator", "video_lesson"]),
 ]
 
 

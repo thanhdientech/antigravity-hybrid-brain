@@ -1,6 +1,6 @@
 ---
 name: claude-seo
-description: "Kiểm toán SEO & AI Search (GEO) v2.4.2: Technical SEO, Core Web Vitals, E-E-A-T, Schema JSON-LD, AI Overviews & Local SEO."
+description: "Kiểm toán SEO & AI Search (GEO): Technical SEO, Core Web Vitals, E-E-A-T, Schema JSON-LD, AI Overviews & Local SEO."
 group: "Marketing, Web & SEO"
 ---
 

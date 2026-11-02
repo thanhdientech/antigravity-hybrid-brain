@@ -1,6 +1,6 @@
 ---
 name: viet-sql-sap-b1
-description: "Viết & test T-SQL / HANA SQLScript SAP B1 & Beas: nối bảng chuẩn, FMS, TransactionNotification & kho 323 mẫu SQL thực chiến."
+description: "Viết & test T-SQL/HANA SQLScript SAP B1 & Beas: nối bảng, FMS, TransactionNotification & 323 mẫu thực chiến."
 group: "ERP SAP B1 & SQL"
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: cinematic-video-prompt
-description: "Biên soạn prompt ảnh/video điện ảnh AI (Veo 3, Seedance, Kling, Sora): góc máy, chuyển động camera, ánh sáng, màu & bố cục."
+description: "Biên soạn prompt ảnh/video điện ảnh AI (Veo 3, Seedance, Kling, Sora): góc máy, camera, ánh sáng, màu & bố cục."
 group: "Làm Phim & Video AI"
 ---
 

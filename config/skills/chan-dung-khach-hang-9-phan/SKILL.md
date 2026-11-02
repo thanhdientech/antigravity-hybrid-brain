@@ -1,6 +1,6 @@
 ---
 name: chan-dung-khach-hang-9-phan
-description: "Vẽ chân dung khách hàng 9 phần: Value Proposition (Jobs/Pains/Gains), Bản đồ Thấu cảm 6 vùng, Top 3 ưu tiên & 3 góc bán hàng."
+description: "Vẽ chân dung khách hàng 9 phần: Value Proposition (Jobs/Pains/Gains), Bản đồ Thấu cảm 6 vùng & góc bán hàng."
 group: "Quảng Cáo & Marketing"
 ---
 

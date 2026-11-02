@@ -1,6 +1,6 @@
 ---
 name: ifixai-agent-auditor
-description: "Kiểm toán độc lập AI Agent theo 5 trụ cột iFixAi (Fabrication, Deception, Manipulation, Unpredictability, Opacity) xuất A-F."
+description: "Kiểm toán độc lập AI Agent 5 trụ cột iFixAi (Fabrication, Deception, Manipulation, Unpredictability, Opacity)."
 group: "Kiểm Toán & Điều Phối AI"
 ---
 

@@ -1,10 +1,10 @@
-# Sổ Tay Prompt Mẫu Gọi Chuẩn Toàn Bộ 93 Skill Trên Antigravity & Javis
+# Sổ Tay Prompt Mẫu Gọi Chuẩn Toàn Bộ 94 Skill Trên Antigravity & Javis
 
-Tài liệu này tổng hợp các **Prompt mẫu thực chiến (Copy & Paste điền khung `[...]` dùng ngay)** cho toàn bộ **92 Kỹ năng (Skills)** đang hoạt động trong hệ thống của anh (`34 Global Skills` + `50 Plugin Skills` + `9 Builtin Skills`). Mỗi mẫu câu lệnh đã được thiết kế sẵn đủ **Từ khóa kích hoạt (`Trigger`)** và **Dữ kiện đầu vào bắt buộc**, giúp AI Agent bắt đúng công cụ và thực thi chuẩn ngay lần đầu tiên mà không cần dừng lại hỏi bổ sung thông tin cơ bản.
+Tài liệu này tổng hợp các **Prompt mẫu thực chiến (Copy & Paste điền khung `[...]` dùng ngay)** cho toàn bộ **94 Kỹ năng (Skills)** đang hoạt động trong hệ thống của anh (`35 Global Skills` + `50 Plugin Skills` + `9 Builtin Skills`). Mỗi mẫu câu lệnh đã được thiết kế sẵn đủ **Từ khóa kích hoạt (`Trigger`)** và **Dữ kiện đầu vào bắt buộc**, giúp AI Agent bắt đúng công cụ và thực thi chuẩn ngay lần đầu tiên mà không cần dừng lại hỏi bổ sung thông tin cơ bản.
 
 > [!IMPORTANT]
 > **QUY TẮC BƯỚC 0 BẮT BUỘC KHI TẠO PROJECT MỚI HOẶC LÀM CHỨC NĂNG MỚI (`BLUEPRINT-FIRST RULE`):**
-> Mỗi khi bắt đầu **một dự án mới** (Phần mềm, Website, SEO, Marketing/Ads, Bảo mật, Server/VPS, ERP SAP B1/Beas, Học tập/Sản phẩm số) hoặc **thêm một chức năng / phân hệ lớn mới**, anh **luôn gọi [`project-blueprint-architect`](./config/skills/project-blueprint-architect/SKILL.md) ĐẦU TIÊN** (xem **Bước 0** ngay bên dưới). Agent sẽ đóng vai **CEO + CPO + Kiến trúc sư trưởng** phỏng vấn gỡ điểm mù (`Grill-Me`) và xuất ra **1 file chốt yêu cầu duy nhất (`BLUEPRINT_<TEN_DU_AN>.md`)** quy định rõ *Yêu cầu chức năng (`FR/NFR`) + Công nghệ sử dụng + Từng Phase gọi đúng Skill nào trong 93 Skills + Prompt thực thi từng Phase*. Chốt xong file này mới bắt đầu làm!
+> Mỗi khi bắt đầu **một dự án mới** (Phần mềm, Website, SEO, Marketing/Ads, Bảo mật, Server/VPS, ERP SAP B1/Beas, Học tập/Sản phẩm số) hoặc **thêm một chức năng / phân hệ lớn mới**, anh **luôn gọi [`project-blueprint-architect`](./config/skills/project-blueprint-architect/SKILL.md) ĐẦU TIÊN** (xem **Bước 0** ngay bên dưới). Agent sẽ đóng vai **CEO + CPO + Kiến trúc sư trưởng** phỏng vấn gỡ điểm mù (`Grill-Me`) và xuất ra **1 file chốt yêu cầu duy nhất (`BLUEPRINT_<TEN_DU_AN>.md`)** quy định rõ *Yêu cầu chức năng (`FR/NFR`) + Công nghệ sử dụng + Từng Phase gọi đúng Skill nào trong 94 Skills + Prompt thực thi từng Phase*. Chốt xong file này mới bắt đầu làm!
 
 > [!TIP]
 > **Công Thức Vàng 4 Thành Phần Khi Giao Việc Cho Agent:**
@@ -42,21 +42,21 @@ Yêu cầu: Không hỏi lại những gì code đã có; chỉ lập 1 Bảng G
 
 | Nhu Cầu Thực Tế Của Anh | Các Skill Chủ Lực Sẽ Kích Hoạt | Đi Tới Mục |
 | :--- | :--- | :--- |
-| **🏛️ [BƯỚC 0] Tạo Project mới hoặc Chức năng mới — Phỏng vấn chốt 1 file Master Blueprint** | `project-blueprint-architect` *(Ánh xạ công nghệ & lộ trình 93 Skills cho 8 ngành)* | **Bước 0** |
+| **🏛️ [BƯỚC 0] Tạo Project mới hoặc Chức năng mới — Phỏng vấn chốt 1 file Master Blueprint** | `project-blueprint-architect` *(Ánh xạ công nghệ & lộ trình 94 Skills cho 8 ngành)* | **Bước 0** |
 | **Làm & Kiểm toán giao diện Web App thao tác chức năng (User/Admin/ERP/SaaS), Mobile Responsive, Web Doanh Nghiệp, Landing Page CRO, WordPress, Webcake** | `webapp-app-ux-workflow`, `ui-ux-cro-auditor`, `ui-ux-design-pro-max`, `generative_ui`, `design-landingpage-vip-v2`, `wordpress-flatsome-designer`, `html-to-webcake`, `gsap-skills` | **Nhóm 1** |
 | **Thiết kế Logo SVG, Bộ nhận diện CIP, Banner Ads, Báo giá PDF A4, Hồ sơ năng lực, Tạp chí** | `brand-editorial-graphic-studio` *(5 Modules đồ họa & chế bản in ấn)* | **Nhóm 2** |
 | **Kiểm toán SEO / AI Search (GEO), Chạy Google Ads, Tối ưu CRO, Vẽ chân dung khách, Viết Content, Ebook** | `claude-seo`, `google-ads-master`, `chan-dung-khach-hang-9-phan`, `cong-thuc-viet-content-by-noti-v4`, `tao-san-pham-so-bang-ai` | **Nhóm 3** |
 | **Kiểm tra Bảo mật Web/Code/API, Dịch ngược phần mềm (REA), Kiểm toán AI, Tra nguồn, Nạp tài liệu, Check Update Git** | `security-audit`, `reverse-engineer-anything`, `ifixai-agent-auditor`, `verified-source-researcher`, `lean-teamwork`, `nap-tai-lieu-antigravity`, `prompts-chat` + 9 Builtin/SDK | **Nhóm 4** |
-| **Quay màn hình hướng dẫn + Giọng AI `.SRT`, Làm phim AI, Hoạt hình màu nước, Video Shopee, Xây kênh YouTube/FB** | `recordly-tutorial-ai`, `lam-phim-video-master`, `video-storytelling`, `cinematic-video-prompt`, `create-and-edit-video`, `painted-animation`, `kinetic-reel`, `shopee-affiliate-video-studio`, `yt-shortcode-commander`, `antigravity-browser-controller` | **Nhóm 5** |
+| **Quay màn hình hướng dẫn + Giọng AI `.SRT`, Làm Video Khoa học/Kỹ thuật/Vũ trụ (Manim + Remotion), Làm phim AI, Hoạt hình màu nước, Video Shopee, Xây kênh YouTube/FB** | `deeptutor-cli`, `recordly-tutorial-ai`, `lam-phim-video-master`, `video-storytelling`, `cinematic-video-prompt`, `create-and-edit-video`, `painted-animation`, `kinetic-reel`, `shopee-affiliate-video-studio`, `yt-shortcode-commander`, `antigravity-browser-controller` | **Nhóm 5** |
 | **Truy vấn SQL 4 Server / 19 DB SAP B1, Viết FMS / TransactionNotification, Giá thành Beas WIP 154** | `sql-sap-b1`, `viet-sql-sap-b1`, `sap-b1-beas` | **Nhóm 6** |
 | **Lập lá số Tử Vi Đẩu Số, Bát Tự 24 Tiết Khí, Thần Số Học Pythagoras & Xuất 10 Hồ sơ Mệnh Thư** | `tu-vi-bat-tu-than-so-hoc` | **Nhóm 7** |
-| **Quản lý Google Drive/Docs/Sheets/Slides, Lập trình App Android, Nghiên cứu Khoa học & Y Sinh Quốc tế** | `gdrive`, `gdocs`, `gsheets`, `gslides`, `android-cli`, `compose-preview` + 39 Skills `science` (`PubMed`, `AlphaFold`, `ClinVar`...) | **Nhóm 8** |
+| **Nghiên cứu arXiv/RAG đa engine (`DeepTutor`), Quản lý Google Drive/Docs/Sheets/Slides, Lập trình App Android, Nghiên cứu Khoa học & Y Sinh Quốc tế** | `deeptutor-cli`, `gdrive`, `gdocs`, `gsheets`, `gslides`, `android-cli`, `compose-preview` + 39 Skills `science` (`PubMed`, `AlphaFold`, `ClinVar`...) | **Nhóm 8** |
 
 ---
 
 ## Nhóm 1 — Thiết Kế Giao Diện Web App Thao Tác Chức Năng (`Operate Mode`), Mobile App, Landing Page & Hiệu Ứng
 
-### 1.0. Kiến Trúc Luồng Thao Tác UX, Logic State/URL & CRUD Cho Web App (User/Admin/ERP/SaaS) & Mobile App — [`webapp-app-ux-workflow`](./skills/webapp-app-ux-workflow/SKILL.md)
+### 1.0. Kiến Trúc Luồng Thao Tác UX, Logic State/URL & CRUD Cho Web App (User/Admin/ERP/SaaS) & Mobile App — [`webapp-app-ux-workflow`](./config/skills/webapp-app-ux-workflow/SKILL.md)
 *Hợp nhất tinh hoa từ 8 kho Design Engineering chuẩn quốc tế (`pbakaus/impeccable` v4.8.0 `Operate Mode`, `emilkowalski/skill` `break-ui`, `vercel-labs/web-interface-guidelines` + `agent-skills`, `carmahhawwari/ui-design-brain` 60+ SaaS Components, `ibelick/ui-skills`, `callstack` React Navigation & `flutter` GoRouter). Chuyên trị **Web App người dùng/Admin thao tác chức năng thực tế** — tách biệt hoàn toàn với web xem tin/quảng cáo thông thường.*
 
 **Mẫu 1.0A — Thiết kế & code Web App Người Dùng / Trang Quản Trị Admin / ERP / SaaS có luồng thao tác chặt chẽ:**
@@ -165,7 +165,7 @@ Dùng `ui-plugin-navigation` kiểm tra các bảng giao diện plugin (sidecar 
 
 ---
 
-### 1.8. Kiểm Toán Độc Lập Logic UI Web App, Responsive Mobile, Web Doanh Nghiệp & CRO Landing Page — [`ui-ux-cro-auditor`](./skills/ui-ux-cro-auditor/SKILL.md)
+### 1.8. Kiểm Toán Độc Lập Logic UI Web App, Responsive Mobile, Web Doanh Nghiệp & CRO Landing Page — [`ui-ux-cro-auditor`](./config/skills/ui-ux-cro-auditor/SKILL.md)
 *Hợp nhất tinh hoa từ 6 kho kiểm toán UI/UX/CRO chuẩn quốc tế (`garrytan/gstack` 138k★ `/qa` + `/design-review`, `addyosmani/web-quality-skills` CWV + WCAG 2.2 AA, `coreyhaines31/marketingskills` 57k★ `cro` + `site-architecture`, `pbakaus/impeccable` `audit` + `critique` + `AI Slop`, `narenkatakam/ux-audit` Norman/Krug/Nielsen, `tommygeoco/ui-audit` 55-point QA) kèm công cụ CLI `audit_ui_ux_cro.py` quét tĩnh HTML/JSX/CSS + lái Headless Chrome/Edge qua CDP đo thực tế trên 3 màn hình (`375x812`, `768x1024`, `1440x900`).*
 
 **Mẫu 1.8A — Kiểm toán Logic UI Web App (User / Admin / SaaS / ERP) & Responsive Mobile 3-Viewport (`--live --screenshots`):**
@@ -490,6 +490,32 @@ Gọi `yt-shortcode-commander` thực thi dây chuyền sản xuất kênh:
 ### 5.10. Điều Khiển Đa Trình Duyệt Chrome / Cốc Cốc Đa Profile & Tự Động Đăng Bài — [`antigravity-browser-controller`](./config/skills/antigravity-browser-controller/SKILL.md)
 ```text
 Dùng skill `antigravity-browser-controller` kiểm tra kết nối phiên trình duyệt của Profile `[default / profile_1]`, sau đó tự động đăng bài lên Facebook kèm nội dung văn bản `[Nội dung bài đăng]` và tệp phương tiện tại `[Đường dẫn file ảnh .png hoặc video .mp4]`. Sau khi đăng xong, bắt buộc chụp ảnh màn hình (Screenshot) bài đăng thực tế để anh nghiệm thu.
+```
+
+---
+
+### 5.11. Sản Xuất Video Kênh Khoa Học – Kỹ Thuật – Vũ Trụ (Manim + Remotion + Vision AI Review), Nghiên Cứu arXiv & Kho Tri Thức RAG Đa Engine — [`deeptutor-cli`](./config/skills/deeptutor-cli/SKILL.md)
+*Tích hợp từ `HKUDS/DeepTutor` (`v1.7.1`, `D:\DeepTutor`, `53,316+ ★`, hỗ trợ Tiếng Việt bản địa): điều phối 11 Capabilities (`math_animator`, `video_lesson`, `deep_solve`, `deep_question`, `deep_research`, `audio_overview`, `guided_learning`, `brainstorm`, `note_assistant`, `quiz`, `chat`), bộ công cụ nghiên cứu `preprint`/`research_audit`/`research_lit`, 5 Engine RAG (`LlamaIndex`, `LightRAG`, `GraphRAG`, `PageIndex`, `Obsidian`) kèm `kb eval` và Sách tương tác `Living Books` xuất thẻ `Anki`.*
+
+**Mẫu 5.11A — Dựng Video Hoạt Hình Toán – Lý – Kỹ Thuật – Vũ Trụ Bằng Manim Có Vision AI Tự Soi Sửa Lỗi Khung Hình (`math_animator`):**
+```text
+Dùng skill `deeptutor-cli` (chế độ `math_animator`, bật `enable_visual_review=true`, `max_fix_round=4`, chất lượng `manim_quality=h` 1080p) dựng cho anh 1 video hoạt hình Manim giải thích trực quan chủ đề khoa học vũ trụ / kỹ thuật: `[VD: Cơ chế Quỹ đạo Chuyển tiếp Hohmann đưa tàu vũ trụ từ Trái Đất sang Sao Hỏa / Độ cong không-thời gian và bán kính Schwarzschild của Hố đen / Bản chất hình học của Biến đổi Fourier]`.
+Yêu cầu:
+1. Hiển thị rõ đồ thị 2D/3D, vector chuyển động và các phương trình vật lý/toán học chuẩn xác bằng LaTeX.
+2. Toàn bộ nhãn chú thích dùng Tiếng Việt rõ ràng, bật chế độ Vision AI tự kiểm tra từng frame để đảm bảo chữ/công thức không bị đè lên hình vẽ và xuất file `.mp4` hoàn chỉnh.
+```
+
+**Mẫu 5.11B — Dựng Video Bài Giảng Đồ Họa Chuyển Động Nhiều Cảnh Bằng Remotion Kèm Thuyết Minh Tiếng Việt (`video_lesson`):**
+```text
+Dùng skill `deeptutor-cli` (chế độ `video_lesson`, giọng thuyết minh Tiếng Việt `tts_voice=vi-VN-NamMinhNeural`) tạo video bài giảng Motion Graphics bằng Remotion (`Lesson.tsx`) giải thích chủ đề kỹ thuật: `[VD: Cấu tạo và nguyên lý hoạt động của động cơ tên lửa đẩy Raptor chu trình đốt phân tầng toàn phần / Nguyên lý quang khắc EUV chế tạo chip bán dẫn 2nm]`.
+Yêu cầu: Chia kịch bản thành 5 phân cảnh rõ ràng, tự động kiểm tra bố cục không tràn chữ (`layout_check`), lồng tiếng khớp từng câu thoại và xuất file `.mp4`.
+```
+
+**Mẫu 5.11C — Nghiên Cứu Bài Báo Khoa Học `arXiv`, Kiểm Toán Công Thức So Với Code GitHub & Nạp RAG Đa Engine (`preprint` + `research_audit` + `kb eval`):**
+```text
+Dùng skill `deeptutor-cli` thực hiện tác vụ nghiên cứu khoa học & quản trị tri thức:
+- [Đọc & Kiểm toán bài báo arXiv]: Dùng công cụ `preprint` và `research_audit` đọc bài báo `arXiv:[Mã bài báo]` đối chiếu với kho code GitHub `[Link repo]`, trích xuất toàn bộ sơ đồ hình vẽ và kiểm tra xem các phương trình toán học trong bài báo có khớp 100% với mã nguồn thực tế không.
+- [Tạo Kho tri thức RAG & Chấm điểm tự động]: Chạy `deeptutor kb create [ten_kb] --pipeline lightrag [Đường dẫn thư mục PDF]`, sau đó chạy `deeptutor kb eval [ten_kb] --generate 20` để đo lường độ chính xác truy xuất (Precision, Recall, MRR) và xuất Sách điện tử tương tác (`Living Book`) kèm bộ thẻ học Anki (`.apkg`).
 ```
 
 ---

@@ -50,6 +50,7 @@ LOCAL_REPO_TO_SKILL = {
     "marketingskills": "ui-ux-cro-auditor (marketingskills)",
     "ux-audit": "ui-ux-cro-auditor (ux-audit)",
     "ui-audit": "ui-ux-cro-auditor (ui-audit)",
+    "DeepTutor": "deeptutor-cli",
 }
 
 
