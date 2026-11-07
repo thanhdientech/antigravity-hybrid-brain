@@ -4,6 +4,9 @@ description: "Chuyển trang HTML sang file .pke mở trực tiếp trên trình
 group: "Thiết Kế & Web"
 ---
 
+
+- **Nguồn gốc / Kho Git Upstream:** [Webcake Landing Page Converter Engine](https://webcake.io) (`Công cụ chuyển đổi`)
+
 # HTML sang Webcake (.pke)
 
 ## Khi nào dùng

@@ -12,6 +12,8 @@ group: "Kiểm Toán & Điều Phối AI"
 > Hệ thống Tra cứu, Tối ưu hóa System Prompt & Săn Agent Skills lớn nhất thế giới từ f/prompts.chat (Awesome ChatGPT Prompts — 174k+ Stars). Tích hợp kép: (1) Kho dữ liệu Offline 2,627 System Prompts (TEXT, STRUCTURED JSON/YAML, IMAGE) + 31 chương sách "The Interactive Book of Prompting" (Context Engineering, Loop Engineering, Multimodal, Agents & Skills), và (2) Kết nối trực tiếp MCP Server https://prompts.chat/api/mcp (search_prompts, get_prompt, improve_prompt, search_skills, get_skill). TRIGGERS: "prompts.chat", "tìm prompt", "tra cứu prompt", "nâng cấp prompt", "tối ưu prompt", "tìm skill mới", "săn skill", "awesome prompts", "prompt mẫu".
 <!-- JAVIS_TRIGGER_ARCHIVE_END -->
 
+- **Nguồn gốc / Kho Git Upstream:** [f/awesome-chatgpt-prompts & prompts.chat](https://github.com/f/awesome-chatgpt-prompts) (`Open-Source Git Repo`)
+
 Kỹ năng kết nối trực tiếp kho **2,627 System Prompts**, **31 chương sách kỹ thuật Prompt Engineering** và **Chợ Agent Skills (`prompts.chat`)** vào Antigravity.
 
 ---

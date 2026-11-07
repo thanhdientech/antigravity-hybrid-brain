@@ -13,8 +13,14 @@ group: "Thiết Kế Web, UI/UX & Thương Hiệu"
 > TRIGGERS: "web app", "webapp", "ux workflow", "user flow", "luồng người dùng", "luong nguoi dung", "luồng thao tác", "giao diện admin", "giao dien admin", "admin panel", "admin dashboard", "user portal", "trang quản trị", "trang quan tri", "crud ui", "data table", "bảng dữ liệu", "multi-step form", "form nhiều bước", "wizard ui", "phân quyền giao diện", "rbac ui", "url state", "operate mode", "impeccable", "break-ui", "mobile app ui", "mobile navigation", "app navigation", "app workflow", "luồng màn hình app", "webapp-app-ux-workflow".
 <!-- JAVIS_TRIGGER_ARCHIVE_END -->
 
+- **Nguồn gốc / Kho Git Upstream:** [vercel-labs/agent-skills & callstackincubator](https://github.com/vercel-labs/agent-skills) (`Open-Source Web/Mobile App UX Hub`)
+
 - **Hợp nhất tinh hoa từ 8 kho mã nguồn mở chuẩn Design Engineering quốc tế (đã lưu tại `ui-workflow-repos/` & theo dõi qua `check_skill_git_updates.py`):**
-  1. [pbakaus/impeccable](https://github.com/pbakaus/impeccable) (`v4.8.0` — Chế độ `Operate Mode` cho App/Admin, quy trình `shape` $ightarrow$ `onboard` $ightarrow$ `harden` $ightarrow$ `clarify` $ightarrow$ `adapt`).
+  1. [pbakaus/impeccable](https://github.com/pbakaus/impeccable) (`v4.8.0` — Chế độ `Operate Mode` cho App/Admin, quy trình `shape` $
+ightarrow$ `onboard` $
+ightarrow$ `harden` $
+ightarrow$ `clarify` $
+ightarrow$ `adapt`).
   2. [emilkowalski/skill](https://github.com/emilkowalski/skill) (Kỹ nghệ vi tương tác Linear/Vercel, `ui-cheatsheet`, `mobile-native` và bài test phá giao diện **`break-ui`**).
   3. [vercel-labs/agent-skills](https://github.com/vercel-labs/agent-skills) & [vercel-labs/web-interface-guidelines](https://github.com/vercel-labs/web-interface-guidelines) (`100+` luật `URL-as-State`, Form validation, Focus trap & `composition-patterns` React 19).
   4. [carmahhawwari/ui-design-brain](https://github.com/carmahhawwari/ui-design-brain) (Từ điển hành vi & bố cục của `60+` Component Web App/SaaS từ `component.gallery`).

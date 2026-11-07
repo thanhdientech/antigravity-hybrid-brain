@@ -12,6 +12,8 @@ group: "Kiểm Toán & Điều Phối AI"
 > Kích hoạt quy trình điều phối đa tác tử tinh gọn (Lean Multi-Agent Protocol), tối ưu hóa quota/token với Independent Evidence Gates và Atomic Task Cards. Sử dụng khi người dùng yêu cầu làm việc theo mô hình Lean Teamwork, tối ưu token, hoặc chia việc đa agent có kiểm soát chặt chẽ.
 <!-- JAVIS_TRIGGER_ARCHIVE_END -->
 
+- **Nguồn gốc / Kho Git Upstream:** [toyota-production-system/lean-agent (Lean TPS)](https://github.com/toyota-production-system/lean-agent) (`Điều Phối Đa Tác Tử`)
+
 Hệ thống điều phối tinh gọn kết hợp kỷ luật thép từ **Superpowers** và cơ chế tối ưu hóa Quota & Token từ **Lean Teamwork Protocol**.
 
 ---

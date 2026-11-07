@@ -12,6 +12,8 @@ group: "ERP SAP B1 & SQL"
 > Kỹ sư Trưởng Viết & Test SQL SAP Business One (9.3 & 10.0 MS SQL T-SQL / HANA SQLScript) & Boyum IT Beas Manufacturing trên 4 Server / 19 Database (Con 24, Con 52, Con 160, Con 27). Bao gồm: Quy tắc vàng nối bảng (DocEntry, BaseEntry, BaseLine, BaseType, ObjType), Quy trình bắt buộc Hỏi Database cần khớp số & Chạy thử Query đọc kết quả so sánh (infoasia_ro), viết Formatted Search (FMS $[$Item.Col.0]), viết SBO_SP_TransactionNotification & PostTransactionNotice, Kho 24 câu query thực chiến FVIVN và Kho 299 file .sql chuẩn từ Help SAP B1. TRIGGERS: "viết sql", "viet sql", "viết query sap", "query sap b1", "test query sap", "fms sap", "formatted search", "transaction notification", "sbo_sp_transactionnotification", "join bảng sap", "baseentry", "docentry", "query beas", "câu lệnh sql sap".
 <!-- JAVIS_TRIGGER_ARCHIVE_END -->
 
+- **Nguồn gốc / Kho Git Upstream:** [SAP B1 T-SQL & HANA SQLScript Production Repo](https://github.com/thanhdientech/antigravity-hybrid-brain) (`Kho 323 Mẫu T-SQL Thực Chiến`)
+
 Skill này đóng gói toàn bộ quy tắc kỹ thuật viết **T-SQL (MS SQL Server) / SQLScript (SAP HANA)**, **Formatted Search (FMS)**, **`SBO_SP_TransactionNotification`**, quy trình **Kết nối 4 Server (`24`, `52`, `160`, `27`) chạy thử Query & đọc kết quả so sánh khớp số**, cùng **24 câu lệnh SQL thực chiến phức tạp của FVIVN** và **299 file `.sql` chuẩn theo 34 phân hệ**.
 
 ---

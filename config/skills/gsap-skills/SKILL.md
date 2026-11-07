@@ -12,6 +12,8 @@ group: "Làm Phim & Video AI"
 > Official AI skills for GSAP (GreenSock Animation Platform) by Jack Doyle / Webflow. Teaches coding agents correct GSAP usage: core tweens (gsap.to/from/fromTo), timelines, ScrollTrigger (pin, scrub, snap), 100% free Club GSAP plugins (SplitText, MorphSVG, Flip, Draggable, ScrollSmoother, ScrambleText), gsap.utils, React (useGSAP hook), Vue/Nuxt/Svelte lifecycle cleanup, and 60fps GPU animation performance. TRIGGERS: "gsap", "greensock", "scrolltrigger", "splittext", "morphsvg", "scrollsmoother", "flip animation", "flip layout", "useGSAP", "hiệu ứng cuộn", "hiệu ứng cuộn trang", "ghim màn hình khi cuộn", "chữ chạy splittext", "biến hình svg", "animation web", "hiệu ứng chuyển động web", "chuyển động 60fps", "tween timeline".
 <!-- JAVIS_TRIGGER_ARCHIVE_END -->
 
+- **Nguồn gốc / Kho Git Upstream:** [greensock/GSAP (Web & Video 60fps)](https://github.com/greensock/GSAP) (`Open-Source Git Repo`)
+
 Bộ kỹ năng chính thức từ **GreenSock (GSAP) & Webflow** (`https://github.com/greensock/gsap-skills`) giúp AI Agent lập trình hiệu ứng chuyển động Web, Landing Page VIP và Motion Graphics chuẩn 60fps.
 
 > **LƯU Ý QUAN TRỌNG:** Kể từ khi Webflow mua lại GSAP, **100% thư viện GSAP và toàn bộ các Plugin cao cấp trước đây thuộc Club GSAP (`SplitText`, `MorphSVG`, `ScrollSmoother`, `Flip`, `Draggable`, `ScrambleText`, `DrawSVG`, `Physics2D`...) đều MIỄN PHÍ 100%** cho cả mục đích thương mại. Cài đặt trực tiếp từ gói public `npm install gsap` (không cần `.npmrc` hay token bản quyền).

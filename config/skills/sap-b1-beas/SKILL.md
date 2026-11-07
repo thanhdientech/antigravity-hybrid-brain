@@ -12,6 +12,8 @@ group: "ERP SAP B1 & SQL"
 > Kiến trúc sư Giải pháp & Tổng Công Trình Sư SAP Business One (9.3 & 10.0 MS SQL / HANA) và Boyum IT Beas Manufacturing. Bao gồm: Kiến trúc DB 9.3 vs 10.0, Beas Manufacturing (Work Order, BOM Batch Changes batchanderung.htm, Routing, BDC Time Receipt, QC, đóng lệnh ABGKZ), Kế toán Giá thành Sản xuất (WIP TK 154, lệch sổ kho OINM vs sổ cái OJDT), Luồng Mua-Bán-Kho (P2P, O2C, Batch OBTN, Serial OSRN, Bin OBIN, MRP), Thuế & Chế độ Kế toán (Thông tư 99/2025/TT-BTC thay TT 200 từ 01/01/2026, TT 78, TT 98), Lập trình SDK (DI API, UI API, Service Layer port 50000, UDO) và DTW Import Master Data. TRIGGERS: "sap b1", "beas", "beas manufacturing", "batchanderung", "lệnh sản xuất beas", "giá thành sap", "wip 154", "thông tư 99", "dtw import", "service layer sap", "di api", "ui api", "udo sap".
 <!-- JAVIS_TRIGGER_ARCHIVE_END -->
 
+- **Nguồn gốc / Kho Git Upstream:** [SAP Business One SDK & Boyum IT Beas Docs](https://help.sap.com/viewer/p/SAP_BUSINESS_ONE) (`ERP Chuẩn Hãng & Kế Toán Việt Nam`)
+
 Skill này đóng gói toàn bộ kho tri thức chuyên sâu của **Javis OS InfoAsia ERP Center** về **SAP Business One (9.3 & 10.0)** và **Boyum IT Beas Manufacturing**, đã được băm nhỏ thành **10 học phần tham chiếu (`references/`)** và **công cụ thực thi (`scripts/`)** để tối ưu hóa ngữ cảnh (chỉ đọc đúng file cần dùng, không nạp thừa).
 
 ---

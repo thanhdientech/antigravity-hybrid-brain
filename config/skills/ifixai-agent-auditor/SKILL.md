@@ -12,6 +12,8 @@ group: "Kiểm Toán & Điều Phối AI"
 > Khung kiểm toán độc lập cho AI Agent dựa trên iFixAi (Independent Auditing of AI Agents). Đánh giá hành vi, độ trung thực, an toàn và độ tin cậy của AI Agent theo 5 trụ cột (Fabrication, Deception, Manipulation, Unpredictability, Opacity) và xuất Scorecard A-F trong dưới 120 giây với mô hình 2 vai trò SUT vs. Independent Judge. Kích hoạt khi cần audit agent, kiểm tra an toàn prompt, hoặc đánh giá chất lượng agent.
 <!-- JAVIS_TRIGGER_ARCHIVE_END -->
 
+- **Nguồn gốc / Kho Git Upstream:** [agent-audit/ifixai (Kiểm toán 5 Trụ Cột AI)](https://github.com/agent-audit/ifixai) (`AI Safety & Auditor Suite`)
+
 Hệ thống kỹ năng kiểm toán độc lập dành cho AI Agent trong hệ sinh thái Antigravity, được xây dựng dựa trên tiêu chuẩn mã nguồn mở **iFixAi** (Apache 2.0).
 
 ---

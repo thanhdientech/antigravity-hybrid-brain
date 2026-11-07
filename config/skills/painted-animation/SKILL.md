@@ -12,6 +12,8 @@ group: "Làm Phim & Video AI"
 > Make hand-painted watercolour-and-ink cartoon videos (MP4) with code — p5.js + p5.brush rendered frame by frame in headless Chrome, encoded with ffmpeg — starring Clawd or any character. Use when the user asks to make an animation, animated short, cartoon, music video, lyric video, animated GIF/loop or "a video of Clawd…", or mentions the PDoomVideo / ClaudeAnimationBase approach. Covers storyboarding, the engine API, the render-and-look review loop, music/lyric sync and splitting long videos across subagents. TRIGGERS: "painted animation", "hoạt hình màu nước", "vẽ hoạt hình màu nước", "làm video vẽ tay màu nước", "phim hoạt hình mực tàu", "vẽ nhân vật hoạt hình bằng code", "p5.js", "p5.brush", "video ca nhạc hoạt hình", "lyric video vẽ tay", "clawd animation".
 <!-- JAVIS_TRIGGER_ARCHIVE_END -->
 
+- **Nguồn gốc / Kho Git Upstream:** [acamposuribe/p5.brush & ClaudeAnimationBase](https://github.com/acamposuribe/p5.brush) (`Open-Source Git Repo (Watercolor Animation)`)
+
 A method for making short cartoons entirely in code, distilled from [JohnHeibel/PDoomVideo](https://github.com/JohnHeibel/PDoomVideo) (a 156 s music video painted by Claude Opus) and its generalised kit [ClaudeAnimationBase](https://github.com/JohnHeibel/ClaudeAnimationBase) (MIT), which is bundled here as `template/`.
 
 **How it works:** every frame is a pure function of time `t`. `studio.html` loads p5.js + p5.brush and your scene files; each shot paints the whole 1920×1080 frame with watercolour fills and boiling ink lines. `render.mjs` drives headless Chrome to render contact sheets for review, or every frame in parallel, and ffmpeg encodes the MP4 (with audio if given).

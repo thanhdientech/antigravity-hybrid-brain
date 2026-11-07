@@ -13,6 +13,8 @@ group: "Thiết Kế Web, UI/UX & Thương Hiệu"
 > TRIGGERS: "audit ui", "audit ux", "kiểm toán giao diện", "kiem toan giao dien", "kiểm tra giao diện", "kiem tra giao dien", "bắt lỗi ui", "bat loi ui", "review ui", "design review", "ux audit", "ui audit", "audit web app", "audit mobile", "kiểm tra responsive", "kiem tra responsive", "vỡ giao diện mobile", "vo giao dien mobile", "tràn khung mobile", "audit landing page", "audit cro", "tối ưu chuyển đổi", "toi uu chuyen doi", "audit web doanh nghiệp", "audit web doanh nghiep", "audit web bán hàng", "audit shop giỏ hàng", "qa checklist ecommerce", "ai slop", "ui-ux-cro-auditor".
 <!-- JAVIS_TRIGGER_ARCHIVE_END -->
 
+- **Nguồn gốc / Kho Git Upstream:** [garrytan/gstack & addyosmani/web-quality-skills](https://github.com/garrytan/gstack) (`Open-Source UI/UX & CRO Audit`)
+
 - **Hợp nhất tinh hoa thực chiến từ 6 hệ thống kiểm toán giao diện mã nguồn mở hàng đầu (đã lưu tại `ui-audit-repos/` & `ui-workflow-repos/`, theo dõi qua `check_skill_git_updates.py`):**
   1. [garrytan/gstack](https://github.com/garrytan/gstack) (`design-review` & `qa-only` — Quy tắc phân loại bề mặt `Classifier-First`, `Trunk Test`, `Goodwill Reservoir 70/100`, bộ nhận diện `AI Slop` & kiểm thử trình duyệt đa khung hình `375 / 768 / 1440`).
   2. [addyosmani/web-quality-skills](https://github.com/addyosmani/web-quality-skills) (`web-quality-audit`, `accessibility`, `core-web-vitals`, `best-practices` — Chuẩn Google Chrome Lighthouse 13+ & WCAG 2.2 AA).

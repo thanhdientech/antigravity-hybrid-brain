@@ -14,6 +14,8 @@ group: "Kiểm Toán & Điều Phối AI"
 > TRIGGERS: "lập blueprint", "lap blueprint", "master blueprint", "lên kế hoạch dự án", "len ke hoach du an", "tạo project mới", "tao project moi", "dự án mới", "du an moi", "làm chức năng mới", "lam chuc nang moi", "thêm tính năng mới", "them tinh nang moi", "chốt yêu cầu", "chot yeu cau", "đặc tả yêu cầu", "dac ta yeu cau", "đặc tả chức năng", "viết prd", "viet prd", "product requirements document", "grill me", "phỏng vấn yêu cầu", "spec driven", "spec-kit", "kiến trúc dự án", "lộ trình triển khai", "project-blueprint-architect".
 <!-- JAVIS_TRIGGER_ARCHIVE_END -->
 
+- **Nguồn gốc / Kho Git Upstream:** [github/spec-kit & obra/superpowers](https://github.com/github/spec-kit) (`Open-Source Spec Kit Architecture`)
+
 - **Nền tảng phương pháp luận hợp nhất từ 4 kho mã nguồn mở chuẩn quốc tế (đã lưu tại `blueprint-repos/` để theo dõi cập nhật Git):**
   1. [obra/superpowers](https://github.com/obra/superpowers) (`skills/brainstorming` & `skills/writing-plans` — Cổng chặn thực thi sớm & chia nhỏ tác vụ có kiểm chứng).
   2. [mattpocock/skills](https://github.com/mattpocock/skills) (`grill-me` & `to-spec` — Phỏng vấn Socratic xóa điểm mù & biên dịch quyết định thành đặc tả).

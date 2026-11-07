@@ -12,6 +12,8 @@ group: "Làm Phim & Video AI"
 > Bách khoa toàn thư biên kịch và kiến tạo kịch bản video đa thể loại (Short-form 15-60s, Ads chuyển đổi, YouTube dài 8-20m, Phim tài liệu khoa học, Kể chuyện điện ảnh) tích hợp 20+ công thức quốc tế (AIDA, BAB, PAS-T, HVC, ABT, 7-Beat Scientific Debate, Dan Harmon 8-Beat, Pixar Story Spine, 3-Act Structure, Kishōtenketsu). Tự động phân tách 2 luồng prompt chuẩn kỹ thuật: ByteDance Seedance 2.0/2.5 (@Image/@Video reference mapping) và Google Veo 3/3.1 (Cinematic 5-Part Formula + Lip-sync Dialogue + SFX + Zero Ambient Tape Noise). Hỗ trợ khóa diện mạo nhân vật Character Consistency 4-view và tích hợp 700+ thuật ngữ quay phim DoP Cinematic Director. TRIGGERS: "kịch bản video", "kể chuyện bằng video", "video storytelling", "viết kịch bản", "công thức kịch bản", "công thức video", "kịch bản tiktok", "kịch bản quảng cáo", "kịch bản tài liệu", "kịch bản youtube", "prompt seedance", "prompt veo 3", "đồng bộ nhân vật video", "dan harmon", "pixar story spine", "7 beat debate", "abt formula".
 <!-- JAVIS_TRIGGER_ARCHIVE_END -->
 
+- **Nguồn gốc / Kho Git Upstream:** [ByteDance Seedance & Pixar Story Engine](https://github.com/video-storytelling/story-engine) (`Biên Kịch Video AI Đa Thể Loại`)
+
 Hệ thống kỹ năng AI chuyên sâu kết hợp nghệ thuật biên kịch điện ảnh, tâm lý học giữ chân khán giả (Audience Retention) và công nghệ Video Generative AI thế hệ mới nhất.
 
 ---

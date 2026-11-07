@@ -13,6 +13,8 @@ group: "Dịch Ngược & Tái Lập Phần Mềm"
 > TRIGGERS: "craft-anything", "craft anything", "tái lập phần mềm", "clean-room", "tai lap web", "clone website", "soi app", "reverse engineering rust", "cany", "302 tools".
 <!-- JAVIS_TRIGGER_ARCHIVE_END -->
 
+- **Nguồn gốc / Kho Git Upstream:** [storytold/craft-anything](https://github.com/storytold/craft-anything) (`Open-Source Git Repo (100% Rust)`)
+
 ## 1. Nguồn Gốc & Bộ Công Cụ Cục Bộ
 - **Kho mã nguồn:** [`E:\DIEN APP\Skill AI\craft-anything`](file:///E:/DIEN%20APP/Skill%20AI/craft-anything) (100% Rust thuần).
 - **Desktop GUI App:** [`E:\DIEN APP\Skill AI\craft-anything\bin\craft-anything.exe`](file:///E:/DIEN%20APP/Skill%20AI/craft-anything/bin/craft-anything.exe)

@@ -13,6 +13,8 @@ group: "Giáo Dục, Nghiên Cứu & Video Khoa Học"
 - **Từ khóa Tiếng Anh (English Triggers):** `deeptutor`, `deeptutor-cli`, `HKUDS/DeepTutor`, `math_animator`, `enable_visual_review`, `video_lesson`, `deep_solve`, `deep_question`, `deep_research`, `audio_overview`, `guided_learning`, `brainstorm`, `preprint`, `research_audit`, `research_lit`, `kb eval`, `kb eval-diff`, `Living Books`, `EduHub`, `arXiv:2604.26962`.
 <!-- JAVIS_TRIGGER_ARCHIVE_END -->
 
+- **Nguồn gốc / Kho Git Upstream:** [HKUDS/DeepTutor (AI Science & Manim Video)](https://github.com/HKUDS/DeepTutor) (`Open-Source Git Repo`)
+
 ---
 
 ## 🌟 1. Giải Thích Rõ: DeepTutor Là Ứng Dụng Gì & Dùng Để Làm Gì?

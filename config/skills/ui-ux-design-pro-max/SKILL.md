@@ -13,6 +13,8 @@ group: "Thiết Kế Web, UI/UX & Thương Hiệu"
 > TRIGGERS: "ui ux", "ui/ux", "thiết kế giao diện", "thiet ke giao dien", "giao diện phần mềm", "giao dien phan mem", "giao diện web", "giao dien web", "chuyển thiết kế thành code", "design to code", "design system", "DESIGN.md", "ui-ux-pro-max", "shadcn", "tailwind ui", "dashboard ui", "erp ui", "saas ui", "fintech ui", "mobile app ui", "flutter ui", "wpf ui", "winui", "retheme app", "đổi giao diện phần mềm", "chống ai slop".
 <!-- JAVIS_TRIGGER_ARCHIVE_END -->
 
+- **Nguồn gốc / Kho Git Upstream:** [carmahhawwari/ui-design-brain & ibelick/ui-skills](https://github.com/carmahhawwari/ui-design-brain) (`Open-Source Design System Hub`)
+
 ---
 
 ## 📌 1. BẢN ĐỒ ĐIỀU PHỐI 6 MODULE THÀNH PHẦN & CÔNG CỤ CLI (`skills/` & `scripts/`)

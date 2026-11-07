@@ -13,6 +13,8 @@ group: "Làm Phim & Video AI"
 > TRIGGERS: "tiếp thị liên kết shopee", "tiep thi lien ket shopee", "shopee affiliate", "phân tích ngách shopee", "phan tich ngach shopee", "so sánh giá shopee", "chọn sản phẩm shopee", "sáng tác câu chuyện shopee", "làm video shopee", "lam video shopee", "quét link shopee làm video", "người mẫu mặc áo shopee", "virtual try-on shopee", "shopee video studio", "s.shopee.vn", "video bán hàng shopee", "dựng phim bán hàng shopee", "viết text lên video shopee", "shopee storytelling".
 <!-- JAVIS_TRIGGER_ARCHIVE_END -->
 
+- **Nguồn gốc / Kho Git Upstream:** [Shopee Open API & Affiliate Studio Suite](https://open.shopee.com) (`E-Commerce Video Automation`)
+
 ## 1. Bảng Điều Phối Tài Liệu & Công Cụ Thực Thi (`references/` & `scripts/`)
 
 | Tình Huống / Yêu Cầu | Tệp Tham Chiếu / Script | Nội Dung Cốt Lõi |

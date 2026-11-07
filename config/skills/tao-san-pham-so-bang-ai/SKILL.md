@@ -4,6 +4,9 @@ description: "Đồng hành tạo sản phẩm số (ebook, workbook, template) 
 group: "Quảng Cáo & Marketing"
 ---
 
+
+- **Nguồn gốc / Kho Git Upstream:** [Strategyzer & Digital Product Launch Hub](https://www.strategyzer.com) (`Sản Phẩm Số & Phễu Bán`)
+
 # Tạo sản phẩm số bằng AI
 
 Skill này giúp một người bình thường biến kinh nghiệm sẵn có thành sản phẩm số hoàn chỉnh, sẵn sàng bán, trong 7 ngày.

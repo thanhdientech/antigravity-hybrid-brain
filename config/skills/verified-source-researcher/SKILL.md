@@ -12,6 +12,8 @@ group: "Kiểm Toán & Điều Phối AI"
 > Hệ thống kiểm toán 2 nhóm nguồn gốc (Nguồn Người Dùng & Nguồn Mạng/Sách Báo), chống bịa đặt dữ liệu (Zero Hallucination), bắt buộc ghi rõ Ở đâu - File/Sách nào - Trang/Dòng nào - Của tác giả nào, và tự động lập bảng ánh xạ trích dẫn 6 cột. TRIGGERS: "kiểm tra nguồn", "chống ảo giác", "trích dẫn nguồn", "bài báo khoa học", "kiểm tra mã doi", "kiểm tra pmid", "kiểm tra isbn", "pubmed", "openalex", "europepmc", "arxiv", "biorxiv", "bảng ánh xạ nguồn 6 cột".
 <!-- JAVIS_TRIGGER_ARCHIVE_END -->
 
+- **Nguồn gốc / Kho Git Upstream:** [NCBI PubMed E-utilities & DOI Foundation](https://github.com/ncbi/e-utilities) (`Kiểm Toán Nguồn Cấp 1`)
+
 Hệ thống kỹ năng chuyên sâu dành cho AI Agent trong việc nghiên cứu tài liệu chính thống, chống bịa đặt nguồn (Zero Hallucination), phân tách bạch **2 Nhóm Nguồn (`Nguồn Người Dùng` & `Nguồn Mạng/Sách Báo`)** và bắt buộc định vị chính xác **Ở đâu — File/Sách nào — Trang/Dòng/Mục nào — Của tác giả nào**.
 
 ---

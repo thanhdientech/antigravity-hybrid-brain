@@ -12,6 +12,8 @@ group: "Tự động hóa & Trình duyệt"
 > Điều khiển toàn năng mọi trình duyệt (Cốc Cốc, Chrome, Edge...) qua Omni-Browser Bridge (WebSocket & CDP). Hỗ trợ tự động hóa đa profile (default, profile_1, profile_2, work, marketing...), click, type, scroll, nạp file nhị phân ngầm qua CDP DOM.setFileInputFiles, tự động đăng bài viết kèm Ảnh/Video lên Facebook không cần Windows File Dialog, chụp ảnh màn hình bằng chứng, và duy trì kết nối 24/7 qua nhịp tim Keepalive. Kích hoạt khi người dùng muốn điều khiển trình duyệt, tự động hóa web, đăng bài Facebook, up video Facebook, hoặc thao tác đa profile.
 <!-- JAVIS_TRIGGER_ARCHIVE_END -->
 
+- **Nguồn gốc / Kho Git Upstream:** [ChromeDevTools/devtools-protocol & Puppeteer](https://github.com/ChromeDevTools/devtools-protocol) (`CDP & Browser Automation`)
+
 Kỹ năng chuyên sâu điều khiển toàn diện mọi trình duyệt web (Cốc Cốc, Google Chrome, Microsoft Edge, Brave...) qua kiến trúc **Omni-Browser Bridge** (WebSocket Server `:8765` + REST API `:8766` + Chrome DevTools Protocol Native 1.3).
 
 ---

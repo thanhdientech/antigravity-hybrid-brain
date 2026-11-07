@@ -12,6 +12,8 @@ group: "Marketing, Web & SEO"
 > Chuyên gia Kiểm toán SEO & AI Search (GEO) toàn diện v2.4.2 với 26 sub-skills và 19 specialist agents chạy song song. Hỗ trợ Technical SEO, Core Web Vitals (INP), Content Quality (E-E-A-T QRG 09/2025), Schema.org JSON-LD, AI Overviews / ChatGPT / Perplexity Citability (GEO), Agentic Browsing (/seo agentic), Local SEO, Maps và E-commerce SEO. TRIGGERS: "seo", "kiểm toán seo", "seo audit", "schema", "core web vitals", "sitemap", "e-e-a-t", "geo", "ai overviews", "llms.txt", "technical seo", "backlinks", "local seo".
 <!-- JAVIS_TRIGGER_ARCHIVE_END -->
 
+- **Nguồn gốc / Kho Git Upstream:** [coreyhaines31/marketingskills (SEO Engine)](https://github.com/coreyhaines31/marketingskills) (`Open-Source Git Repo`)
+
 Hệ thống kiểm toán SEO & AI Search (Generative Engine Optimization - GEO) toàn diện cho mọi loại hình website (SaaS, E-commerce, Local Business, Publisher, Agency). Tích hợp **26 sub-skills chuyên biệt**, **19 specialist sub-agents** và **60 Python execution scripts**.
 
 ---

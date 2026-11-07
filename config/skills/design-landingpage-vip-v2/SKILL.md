@@ -12,6 +12,8 @@ group: "Marketing, Web & SEO"
 > Skill thiết kế landing page Noti.vn/GĐT — 1 file HTML hoàn chỉnh, chọn design system từ template trong system-design/ (mặc định noti-vn liquid glass) hoặc tự nhập. Có form đăng ký + countdown + FAQ + thanh toán QR VietQR + Meta CAPI/TikTok Events API 2.0/dual-tracking qua backend webhook (KHÔNG gọi CAPI từ frontend). 138 icon SVG inline từ assets/icons/ (6 category ui/commerce/trust/contact/feature/payments), 100% tiếng Việt có dấu. TRIGGERS: landing page VIP, LP VIP, landing page Noti, landing page GĐT, landing có CAPI, Meta CAPI, TikTok CAPI, dual tracking, landing page sự kiện, landing page khóa học, landing page đăng ký, form thanh toán VietQR, landing page có QR, event landing, meetup landing. Trigger cả khi user chỉ nói làm landing page hoặc landing có form + thanh toán.
 <!-- JAVIS_TRIGGER_ARCHIVE_END -->
 
+- **Nguồn gốc / Kho Git Upstream:** [noti-vn/design-landingpage-vip (Liquid Glass & CAPI)](https://github.com/noti-vn/design-landingpage-vip) (`Design System Nội Bộ VIP`)
+
 > **Last updated:** 2026-05-29 (v2.44) — lịch sử thay đổi đầy đủ ở `changelog.md`.
 >
 > **QUY TẮC**: Mỗi lần Claude sửa bất kỳ file nào trong skill này (SKILL.md, references/*.md, system-design/**), BẮT BUỘC: (1) cập nhật dòng `Last updated` ở trên thành ngày hiện tại + bump version (v2.4 -> v2.5...); (2) thêm 1 mục changelog mới vào ĐẦU file `changelog.md`. KHÔNG ghi changelog trực tiếp vào SKILL.md — để SKILL.md gọn gàng.

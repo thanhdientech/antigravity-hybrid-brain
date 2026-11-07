@@ -13,6 +13,8 @@ group: "Thiết Kế Web, UI/UX & Thương Hiệu"
 > TRIGGERS: "thiết kế logo", "thiet ke logo", "design logo", "logo svg", "bộ nhận diện thương hiệu", "bo nhan dien thuong hieu", "brand identity", "brand guidelines", "brand book", "cip", "namecard", "danh thiếp", "thiết kế báo giá", "thiet ke bao gia", "mẫu báo giá", "quotation", "hồ sơ năng lực", "ho so nang luc", "company profile", "proposal", "tạp chí", "tap chi", "magazine", "dàn trang", "dan trang", "editorial layout", "catalogue", "brochure", "typst", "thiết kế banner", "thiet ke banner", "thiết kế ảnh", "poster quảng cáo", "social cover", "ảnh quảng cáo".
 <!-- JAVIS_TRIGGER_ARCHIVE_END -->
 
+- **Nguồn gốc / Kho Git Upstream:** [typst/typst (Chế bản PDF & In ấn hiện đại)](https://github.com/typst/typst) (`Open-Source Engine`)
+
 ---
 
 ## 📌 1. BẢN ĐỒ ĐIỀU PHỐI 5 MODULE CHUYÊN NGÀNH & CÔNG CỤ XUẤT BẢN (`skills/`, `scripts/`, `templates/`)

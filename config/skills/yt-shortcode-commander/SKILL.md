@@ -12,6 +12,8 @@ group: "YouTube & Tự Động Hóa MXH"
 > Hệ thống điều khiển dây chuyền sản xuất YouTube & Facebook 6 Lệnh (1. Viết Nội Dung, 2. Viết Prompt, 3. Render, 4. Lên lịch đăng video, 5. Nuôi thiết bị, 6. Lên kế hoạch cho kênh mới) & 3 Kênh hiện tại (1. Every Myth Explained, 2. KosmosGeist, 3. The Midnight Ledger (@TheMidnightLedger — thư mục Some Guy Who Knows Stuff)) + Template Kênh Mới A-to-Z (`_TEMPLATE_KENH_MOI_A_TO_Z`). Hỗ trợ chọn từng bước trên Bot, tự động lấy đề tài từ Kế hoạch CSV nếu chưa có thư mục, kiểm tra đầu vào (Pre-Flight Check) và phân phối đến đúng Agent Quản lý kênh hoặc Team chuyên môn. TRIGGERS: "youtube", "/youtube", "eme", "sgw", "kg", "k1", "k2", "k3", "viết nội dung", "viết prompt", "qa check", "render", "test5", "lên lịch đăng video", "nuôi thiết bị", "lên kế hoạch kênh mới", "xây kênh mới", "tạo kênh mới".
 <!-- JAVIS_TRIGGER_ARCHIVE_END -->
 
+- **Nguồn gốc / Kho Git Upstream:** [YouTube Data API v3 & Video Pipeline](https://developers.google.com/youtube/v3) (`YouTube & FB Pipeline`)
+
 Khi người dùng gõ từ khóa **`youtube`** (hoặc **`/youtube`**, **`yt`**, **`xây kênh mới`**) trên Bot hoặc Web Dashboard, hệ thống lập tức hiển thị **6 Lệnh Cốt Lõi (`1..6`)**:
 1. **`1. Viết Nội Dung`**
 2. **`2. Viết Prompt`**

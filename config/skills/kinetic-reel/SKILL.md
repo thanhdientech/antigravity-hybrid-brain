@@ -12,6 +12,8 @@ group: "Làm Phim & Video AI"
 > Make kinetic-typography motion reels (MP4) in code: showreels, portfolio or work reels, product promos, intro films, "motion design"-style videos with bold condensed type, HUD micro-type, black/cream/lime palette, three.js generative layers (particle terrain, liquid marble, chrome knot, particle clouds), shape-continuity transitions and a synthesized, beat-locked score. Canvas 2D + WebGL rendered frame by frame in headless Chrome, encoded with ffmpeg. Use when the user asks for a reel, showreel, motion-graphics / kinetic-type video, a "Work Reel" in this style, or to extend/re-cut the Work Reel ’26. TRIGGERS: "kinetic reel", "kinetic typography", "dựng video chuyển động chữ", "motion reel", "dựng showreel", "video portfolio bằng code", "video quảng cáo sản phẩm bằng code", "three.js webgl video", "canvas 2d motion graphics", "nhạc khớp nhịp khung hình", "beat-locked score".
 <!-- JAVIS_TRIGGER_ARCHIVE_END -->
 
+- **Nguồn gốc / Kho Git Upstream:** [mrdoob/three.js & FFmpeg WebGL Motion](https://github.com/mrdoob/three.js) (`Motion Graphics Engine`)
+
 A method for making editorial, high-energy motion reels entirely in code, distilled from "Work Reel ’26" (an 84 s
 portfolio reel: Microsoft → UW–Madison Surgery → Enterprise RAG → trace finale). It's bundled as a runnable
 `template/` (a 17 s demo that uses every technique) and a full worked example in `examples/work-reel-26/`.

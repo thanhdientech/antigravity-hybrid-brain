@@ -13,6 +13,8 @@ group: "Quảng Cáo & Marketing"
 > TRIGGERS: "google ads", "chạy quảng cáo google", "chay quang cao google", "audit google ads", "kiem toan google ads", "gaql", "money leak", "rò rỉ ngân sách", "wasted spend", "conversion tracking", "kiem tra tracking", "double count", "enhanced conversions", "phân tích từ khóa", "phan tich tu khoa", "phân nhóm từ khóa", "keyword analysis", "keyword planner", "ngân sách từ khóa", "lập kế hoạch google ads", "google ads plan", "search campaign", "chiến dịch tìm kiếm", "pmax", "performance max", "demand gen", "rsa headline", "sitelink", "callout", "negative keyword", "từ khóa phủ định", "search term miner", "tối ưu roas", "troas", "tcpa", "google ads editor", "tối ưu chuyển đổi web", "toi uu chuyen doi web", "cro audit", "audit landing page", "message match".
 <!-- JAVIS_TRIGGER_ARCHIVE_END -->
 
+- **Nguồn gốc / Kho Git Upstream:** [googleads/google-ads-python (Google Ads Hub)](https://github.com/googleads/google-ads-python) (`Marketing & Ads Hub`)
+
 ---
 
 ## 📌 1. BẢN ĐỒ ĐIỀU PHỐI 12 BỘ SKILL THÀNH PHẦN & TÀI LIỆU GỐC (`skills/` & `references/`)

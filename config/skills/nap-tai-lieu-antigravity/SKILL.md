@@ -13,6 +13,8 @@ group: "Kiểm Toán & Điều Phối AI"
 > TRIGGERS: "nạp tài liệu", "nap tai lieu", "thêm tài liệu", "them tai lieu", "đưa tài liệu vào antigravity", "tạo skill mới", "tao skill moi", "sửa skill", "cập nhật skill", "training skill", "ingest source", "ingest tài liệu", "đánh chỉ mục skill", "agy-skill-hub".
 <!-- JAVIS_TRIGGER_ARCHIVE_END -->
 
+- **Nguồn gốc / Kho Git Upstream:** [blogminhquy/javis-os (Bộ Não Lai Javis OS)](https://github.com/blogminhquy/javis-os) (`Hệ Điều Hành & Chỉ Mục Lai`)
+
 ## 1. Bảng Điều Phối Tài Liệu Chuyên Sâu (`references/`)
 
 | Hạng Mục Thực Thi | Tệp Tham Chiếu Chi Tiết | Nội Dung Cốt Lõi |

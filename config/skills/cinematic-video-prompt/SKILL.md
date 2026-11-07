@@ -12,6 +12,8 @@ group: "Làm Phim & Video AI"
 > Dùng khi viết hoặc sửa prompt tạo video/ảnh AI (Veo 3, Google Flow, Kling, Runway, Sora, Midjourney, Hailuo, Luma): từ vựng chuẩn về góc máy, chuyển động camera, ánh sáng, bố cục, phong cách, màu, cảm xúc và công thức ghép prompt. Use when writing or fixing AI video/image prompts — cinematic camera angles, camera movement, lighting, composition, style, color grading, mood and a prompt formula.
 <!-- JAVIS_TRIGGER_ARCHIVE_END -->
 
+- **Nguồn gốc / Kho Git Upstream:** [ByteDance Seedance & Google DeepMind Veo](https://github.com/google-deepmind/veo) (`Cinematic AI Prompts`)
+
 Skill này là "từ điển kỹ thuật quay phim" để AI hiểu đúng ý về ánh sáng, góc máy, chuyển động. Dùng kèm với skill/pipeline tạo video khác (video truyện, video sản phẩm, video đào tạo...). Prompt cuối cùng luôn viết bằng **tiếng Anh**, thuật ngữ giữ nguyên như bảng dưới.
 
 Cần tra sâu hơn (700+ thuật ngữ có giải thích): xem thư mục `references/`.

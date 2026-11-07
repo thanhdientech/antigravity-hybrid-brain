@@ -12,6 +12,8 @@ group: "Làm Phim & Video AI"
 > Hệ thống toàn năng kiến tạo, lập trình và biên tập video tự động (Programmatic Video Creation & Automation Editing) tích hợp 5 Engine hàng đầu thế giới: Remotion (React/TS GPU Motion Graphics), Motion Canvas (Web-based Math & Science Animations), Manim (3Blue1Brown Python Mathematical Morphing & LaTeX), Auto-Editor (Tự động quét & cắt gọt khoảng lặng Podcast/Talkshow/Shorts), Editly (Tự động biên tập video hàng loạt bằng JSON spec + GLSL Shaders + FFmpeg), và Kho 703 Prompt Code-as-Video Claude Opus 5.5 (Awesome Opus Videos). Kèm theo hệ sinh thái 20 Repositories đa tầng và REA Reverse Engineering. TRIGGERS: "create and edit video", "làm video tự động", "biên tập video", "render video", "cắt khoảng lặng", "auto-editor", "remotion", "motion-canvas", "manim", "editly", "tạo video bằng code", "programmatic video", "video bằng react", "video toán học", "edit video ai", "dựng video tự động", "awesome-opus", "opus video", "code as video".
 <!-- JAVIS_TRIGGER_ARCHIVE_END -->
 
+- **Nguồn gốc / Kho Git Upstream:** [remotion-dev/remotion & motion-canvas](https://github.com/remotion-dev/remotion) (`Video-as-Code Engines`)
+
 ## Kiến Tạo, Lập Trình & Biên Tập Video Tự Động Toàn Diện Với 5 Đại Engine
 
 > **Khẩu hiệu cốt lõi:** *"Code Your Motion, Automate Your Cuts, Scale Your Video Pipeline."*  

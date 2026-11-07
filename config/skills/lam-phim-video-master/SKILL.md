@@ -12,6 +12,8 @@ group: "Làm Phim & Video AI"
 > Siêu Skill Tổng Hợp (Master Hub) gom chung toàn bộ 13 Bộ Skill & 1,875 Files Làm Phim, Sản Xuất Video AI, Hoạt Hình Màu Nước Code-as-Video, Đồ Họa GSAP/Remotion/WebGL, Quay Màn Hình Auto-Zoom và Tự Động Hóa Kênh YouTube vào chung 1 thư mục duy nhất (`skills/01..13`). Chỉ cần gọi 1 lệnh duy nhất để điều phối trọn gói 5 Giai đoạn: (1) Tra cứu mẫu & Biên kịch (01_video-storytelling, 11_prompts-chat-lookup, 13_PromptDirector), (2) Thiết kế Nhân vật 6 Lớp & Giải phẫu Tư thế 3D 5 Tầng (02_cinematic-video-prompt), (3) Render Video bằng Code hoặc AI (04_painted-animation p5.brush màu nước, 05_kinetic-reel WebGL, 06_gsap-skills, 07_remotion-skills, 08_motion-ai-kit, 12_awesome-opus-703-prompts), (4) Quay màn hình & Hậu kỳ tự động (03_create-and-edit-video, 09_entervi-auto-edit-logic, Recordly, Auto-Editor, Editly), (5) Xuất bản YouTube (10_yt-shortcode-commander). TRIGGERS: "làm phim", "làm video", "master video", "skill làm phim", "tổng hợp skill video", "sản xuất video", "dựng phim ai", "hoạt hình màu nước", "painted animation", "kinetic reel", "prompt director".
 <!-- JAVIS_TRIGGER_ARCHIVE_END -->
 
+- **Nguồn gốc / Kho Git Upstream:** [JohnHeibel/PDoomVideo & Lam Phim AI Suite](https://github.com/JohnHeibel/PDoomVideo) (`Siêu Hub Làm Phim AI`)
+
 *(Kho Tổng Hợp Tự Chứa 13 Bộ Skill Làm Phim & Video — 1,875 Files Gom Chung Trong Thư Mục `./skills/`)*
 
 > **Sổ tay hướng dẫn tiếng Việt đầy đủ:** [`SO_TAY_TONG_HOP_SKILL_LAM_PHIM_VIDEO.md`](./SO_TAY_TONG_HOP_SKILL_LAM_PHIM_VIDEO.md)  

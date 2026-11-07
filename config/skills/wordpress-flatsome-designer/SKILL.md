@@ -13,6 +13,8 @@ group: "Marketing, Web & SEO"
 > TRIGGERS: "flatsome", "ux builder", "wordpress flatsome", "web thương mại dịch vụ", "web thuong mai dich vu", "web bán hàng có giỏ hàng", "web ban hang co gio hang", "web có shop có giá", "web co shop co gia", "web dịch vụ không bán hàng", "web tư vấn b2b", "web công ty luật", "qa checklist web dịch vụ", "qa checklist web bán hàng", "qa checklist ecommerce", "bộ lọc thông minh woocommerce", "mua nhanh 1 chạm", "sản phẩm báo giá vip", "mini crm wordpress", "chống lỗi html_gzip wp rocket", "strip_ols_incompatible_gzip_rewrite".
 <!-- JAVIS_TRIGGER_ARCHIVE_END -->
 
+- **Nguồn gốc / Kho Git Upstream:** [UX-Themes Flatsome 3.x & UX Builder Core](https://uxthemes.com/flatsome) (`Theme & Page Builder Chuẩn`)
+
 Kỹ năng chuyên sâu dành cho AI Agent trong việc thiết kế giao diện, lập trình tùy biến và tối ưu hóa website WordPress vận hành trên **Flatsome Theme** và công cụ **UX Builder**.
 
 ## 0. Bảng Điều Phối Tài Liệu Chuyên Sâu (`references/`)

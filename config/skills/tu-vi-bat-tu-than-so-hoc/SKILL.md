@@ -13,6 +13,8 @@ group: "Huyền Học & Khai Vấn"
 > TRIGGERS: "tử vi", "tu vi", "tử vi đẩu số", "tu vi dau so", "lá số tử vi", "la so tu vi", "bát tự", "bat tu", "tứ trụ", "tu tru", "tử bình", "tu binh", "dụng thần", "dung than", "thần số học", "than so hoc", "nhân số học", "nhan so hoc", "pythagoras", "numerology", "iztro", "mệnh thư", "menh thu", "lai nhân cung", "kim tự tháp thần số học", "kim lâu", "hoang ốc", "tam tai", "hôn phối", "căn tu", "7 đại họa".
 <!-- JAVIS_TRIGGER_ARCHIVE_END -->
 
+- **Nguồn gốc / Kho Git Upstream:** [Sylar-Long/iztro-py (Thiên Văn Bát Tự & Tử Vi)](https://github.com/Sylar-Long/iztro-py) (`Open-Source Git Repo (Python)`)
+
 ## 1. Thiết Luật Chống Ảo Giác Ngành #11 (`GEMINI.md` — Cấm Tự Nhẩm Bằng LLM)
 
 1. **Cấm tự đổi lịch Dương $\leftrightarrow$ Âm, cấm tự nhẩm Can Chi / Cục số / An sao / Cộng số bằng LLM:** Bắt buộc chạy động cơ tất định [`scripts/destiny_pipeline.py`](./scripts/destiny_pipeline.py) trước khi viết bất kỳ dòng luận giải nào.

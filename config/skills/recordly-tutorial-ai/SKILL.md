@@ -13,6 +13,8 @@ group: "Sản Xuất Phim, Video & Đồ Họa AI"
 > TRIGGERS: "recordly", "quay màn hình hướng dẫn", "quay man hinh huong dan", "video hướng dẫn chức năng", "video huong dan phan mem", "quay tutorial", "screen tutorial", "tạo srt thuyết minh", "tao srt doc giai thich", "lồng tiếng video quay màn hình", "long tieng video huong dan", "auto zoom recordly", "phụ đề srt hướng dẫn", "wgc-capture", "recordly_tutorial_pipeline".
 <!-- JAVIS_TRIGGER_ARCHIVE_END -->
 
+- **Nguồn gốc / Kho Git Upstream:** [recordly-ai/recordly-engine (Video Tutorial AI)](https://github.com/recordly-ai/recordly-engine) (`Video Tutorial Automation`)
+
 ## 1. Bảng Điều Phối Tài Liệu & Công Cụ Thực Thi (`references/` & `scripts/`)
 
 | Hạng Mục Thực Thi | Tệp Tham Chiếu / Công Cụ | Nội Dung Cốt Lõi |

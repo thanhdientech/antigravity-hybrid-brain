@@ -4,6 +4,9 @@ description: "Vẽ chân dung khách hàng 9 phần: Value Proposition (Jobs/Pai
 group: "Quảng Cáo & Marketing"
 ---
 
+
+- **Nguồn gốc / Kho Git Upstream:** [Strategyzer / Value Proposition Design](https://github.com/AlexOsterwalder/ValuePropositionDesign) (`Framework Nghiệp Vụ`)
+
 # Chân Dung Khách Hàng 9 Phần
 
 Skill này giúp bạn tạo ra một hồ sơ khách hàng hoàn chỉnh và có thể hành động ngay, từ input tối thiểu. Đầu ra là một document markdown 9 phần, đọc xong biết chính xác:

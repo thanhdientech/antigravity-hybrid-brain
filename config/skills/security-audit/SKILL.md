@@ -12,6 +12,8 @@ group: "Kiểm Toán & Điều Phối AI"
 > Security guidance and vulnerability review for codebases, APIs, services, CLI tools, libraries, and daemons. Use for security questions, focused reviews, vulnerability research, security audits, or pen tests. Run the complete workflow only for explicit codebase audit or pen-test requests, full/comprehensive/end-to-end reviews, or requested report artifacts. TRIGGERS: "kiểm tra bảo mật", "rà soát bảo mật", "kiểm tra lỗ hổng bảo mật", "lỗ hổng bảo mật web", "bảo mật api", "lộ api key", "lộ secret", "lộ token", "lộ mật khẩu", "kiểm thử xâm nhập", "pentest", "sql injection", "xss", "csrf", "ssrf", "idor", "rce", "command injection", "path traversal", "auth bypass", "trust boundary", "owasp top 10", "thẩm định an toàn mã nguồn".
 <!-- JAVIS_TRIGGER_ARCHIVE_END -->
 
+- **Nguồn gốc / Kho Git Upstream:** [OWASP/CheatSheetSeries & Code Security Audit](https://github.com/OWASP/CheatSheetSeries) (`Security & Vulnerability Audit`)
+
 Find vulnerabilities that violate a real trust boundary, then give owners the source evidence, safe reproduction, priority, and smallest effective fix. This is a defensive, source-first workflow. A candidate without a concrete affected principal, resource, or security outcome is not a confirmed finding.
 
 ## Operating modes

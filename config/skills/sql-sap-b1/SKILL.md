@@ -12,6 +12,8 @@ group: "ERP SAP B1 & SQL"
 > Hệ thống Kết nối, Định tuyến 4 Server / 19 Database SAP Business One (Con 24 infoasia56 + 9 DB, Con 160 FVIVN_PROD_TRAIN / FVIVN_GoLive_2024 / FVIVN_PROD + 3 DB, Con 52 PenflexPRD_NEW, Con 27 ECC / HTL_DEMO), Thực thi Truy vấn SQL Read-Only an toàn (infoasia_ro / InfoAsia@RO2026!), Test Query & So Sánh Khớp Số Thực Tế, Gọi SAP Service Layer REST API (Port 50000 trên Server 24) và Xuất Báo Cáo 3 Định Dạng (.xlsx, .pdf, .csv). TRIGGERS: "sql sap b1", "kết nối sql sap", "con 24", "/24", "/160", "/160 hcm", "/160 lt", "/52", "/27", "ecc", "htl_demo", "infoasia56", "fvivn_prod", "fvivn_golive_2024", "fvivn_prod_train", "penflexprd_new", "infoasia_ro", "truy vấn sap b1", "test query sap", "xuất báo cáo sap".
 <!-- JAVIS_TRIGGER_ARCHIVE_END -->
 
+- **Nguồn gốc / Kho Git Upstream:** [InfoAsia SAP B1 Enterprise SQL Architecture](https://github.com/thanhdientech/antigravity-hybrid-brain) (`Hệ Thống SQL Độc Quyền (19 DBs)`)
+
 Skill này cung cấp bộ công cụ thực thi và tài liệu cấu hình kết nối **MS SQL Server Read-Only (`infoasia_ro` / `InfoAsia@RO2026!`)** cùng **SAP B1 10.0 Service Layer (`:50000`)** trên toàn bộ 4 hệ thống máy chủ SAP Business One (`Con 24`, `Con 52`, `Con 160`, `Con 27`) của **InfoAsia** (đồng bộ từ `E:\DIEN APP\JavisOS\create user`).
 
 ---
