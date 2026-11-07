@@ -13,7 +13,8 @@ group: "Kiểm Toán & Điều Phối AI"
 > TRIGGERS: "agency-agents", "agency agents", "nhân sự ai", "phòng ban ai", "growth hacker persona", "seo specialist persona", "tiktok strategist persona", "product manager persona", "vai trò chuyên gia", "kịch bản nhập vai ai".
 <!-- JAVIS_TRIGGER_ARCHIVE_END -->
 
-- **Kho mã nguồn gốc trên máy (có `.git` để check update):** [`E:\DIEN APP\Skill AI\agency-agents\`](file:///E:/DIEN%20APP/Skill%20AI/agency-agents/) (`origin`: [msitarzewski/agency-agents](https://github.com/msitarzewski/agency-agents), 167k+ ⭐).
+- **Thư viện nhân sự đi kèm (Tự chứa 100% - Chạy trên mọi máy tính):** `./departments/` (324 hồ sơ nhân sự 18 phòng ban tích hợp sẵn).
+- **Kho Git Upstream gốc (để kiểm tra cập nhật):** [msitarzewski/agency-agents](https://github.com/msitarzewski/agency-agents) (167k+ ⭐).
 
 ---
 
@@ -41,4 +42,4 @@ group: "Kiểm Toán & Điều Phối AI"
    - Dùng hồ sơ của `growth-hacker` hoặc `seo-specialist` để định hướng chiến lược.
    - Dùng các công cụ thực tế của `google-ads-master`, `claude-seo`, `craft-anything` để chạy code và render thật.
 2. **Quy tắc trích xuất kịch bản:**
-   - Khi cần một vai trò, mở trực tiếp file `E:\DIEN APP\Skill AI\agency-agents\<phong_ban>\<ten_agent>.md` để nạp các mục: **Mission, Process, Deliverables Checklist**.
+   - Khi cần một vai trò, mở trực tiếp file `./departments/<phong_ban>/<ten_agent>.md` (nằm ngay bên trong Skill) để nạp các mục: **Mission, Process, Deliverables Checklist**.

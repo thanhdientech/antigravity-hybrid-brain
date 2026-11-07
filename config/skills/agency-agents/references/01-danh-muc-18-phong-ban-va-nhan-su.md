@@ -1,6 +1,8 @@
 # DANH MỤC 18 PHÒNG BAN & HỒ SƠ 140+ NHÂN SỰ AGENCY AGENTS
 
-Kho mã nguồn gốc đặt tại: `E:\DIEN APP\Skill AI\agency-agents`
+> **Vị trí thư viện nhân sự (Tự chứa 100% - Portable trên mọi máy tính):** `./departments/`  
+> *Đã tích hợp trọn vẹn 324 hồ sơ nhân sự thuộc 18 phòng ban ngay bên trong Skill. Bất kỳ ai tải/clone về máy khác đều dùng được ngay mà không cần cài đặt thêm hay phụ thuộc ổ đĩa cụ thể.*  
+> - **Nguồn gốc Upstream:** [msitarzewski/agency-agents](https://github.com/msitarzewski/agency-agents) (167k+ ⭐).
 
 ## 1. Phòng Ban Tiếp Thị & Truyền Thông (`marketing/` & `paid-media/`)
 - `marketing-growth-hacker.md`: Tối ưu hóa kênh tăng trưởng, viral loops, A/B testing, phễu chuyển đổi.

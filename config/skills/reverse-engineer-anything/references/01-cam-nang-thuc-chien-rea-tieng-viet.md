@@ -4,8 +4,8 @@
 > **Khẩu hiệu chính thức:** *"One MCP for reverse engineering across binaries, applications, and runtime behavior."*  
 > *(Một giao thức MCP duy nhất để kỹ thuật dịch ngược xuyên suốt mã nhị phân, ứng dụng desktop/web và hành vi khi đang chạy).*  
 > **Tác giả & Bản quyền:** `morluto/rea` (License: MIT)  
-> **Kho mã nguồn nội bộ trên máy:** [`E:\DIEN APP\Skill AI\rea\`](file:///E:/DIEN%20APP/Skill%20AI/rea/)  
-> **Tài liệu gốc tiếng Việt của tác giả:** [`E:\DIEN APP\Skill AI\rea\docs\readme\README_vi.md`](file:///E:/DIEN%20APP/Skill%20AI/rea/docs/readme/README_vi.md)
+> **Kho mã nguồn nội bộ trên máy:** [`.\engine\`](file:///E:/DIEN%20APP/Skill%20AI/rea/)  
+> **Tài liệu gốc tiếng Việt của tác giả:** [`.\engine\docs\readme\README_vi.md`](file:///E:/DIEN%20APP/Skill%20AI/rea/docs/readme/README_vi.md)
 
 ---
 
@@ -121,9 +121,9 @@ Tạo hoặc sửa file `.cursor/mcp.json` trong thư mục dự án:
 ```
 
 #### 3. Chạy trực tiếp từ mã nguồn nội bộ đã clone:
-Nếu không muốn phụ thuộc vào mạng Internet tải gói npm, Sếp có thể chạy trực tiếp từ thư mục [`E:\DIEN APP\Skill AI\rea`](file:///E:/DIEN%20APP/Skill%20AI/rea/):
+Nếu không muốn phụ thuộc vào mạng Internet tải gói npm, Sếp có thể chạy trực tiếp từ thư mục [`.\engine`](file:///E:/DIEN%20APP/Skill%20AI/rea/):
 ```bash
-cd "E:\DIEN APP\Skill AI\rea"
+cd ".\engine"
 npm install
 npm run build
 node dist/cli.js mcp

@@ -1,0 +1,36 @@
+/** Closing all sessions could not confirm that these debuggers stopped. */
+export class OwnedDebuggerCleanupError extends AggregateError {
+    /** Process IDs when cleanup gave up. Observations, not lasting proof of identity. */
+    retainedProcessIds;
+    constructor(failures, message, retainedProcessIds) {
+        super(failures, message);
+        this.retainedProcessIds = retainedProcessIds;
+    }
+}
+/** Retained debugger process IDs anywhere in a composed cleanup failure. */
+export const retainedDebuggerProcessIds = (cause) => {
+    const found = new Set();
+    const visited = new WeakSet();
+    const visit = (node) => {
+        if (typeof node !== "object" || node === null || visited.has(node))
+            return;
+        visited.add(node);
+        if (node instanceof OwnedDebuggerCleanupError)
+            for (const pid of node.retainedProcessIds)
+                found.add(pid);
+        if (node instanceof AggregateError)
+            for (const error of node.errors)
+                visit(error);
+        if (node instanceof Error)
+            visit(node.cause);
+    };
+    visit(cause);
+    return [...found];
+};
+/** Log or diagnostic fields naming those processes; empty when none are known. */
+export const retainedDebuggerDiagnostics = (cause) => {
+    const pids = retainedDebuggerProcessIds(cause);
+    return pids.length === 0 ? {} : { retained_debugger_pids: [...pids] };
+};
+/** What a caller must do once REA ends with these debuggers unconfirmed. */
+export const retainedDebuggerRemediation = (pids) => `REA exits without confirming that the debugger stopped, and no later REA command can retry this cleanup. Check process ${pids.join(", ")} and its target, and stop them if they are still running.`;

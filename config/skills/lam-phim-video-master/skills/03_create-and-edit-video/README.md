@@ -3,7 +3,7 @@
 
 > **Dự án chính thức:** `create and edit video`  
 > **Skill hệ thống đăng ký:** [`create-and-edit-video`](file:///C:/Users/INFOASIA/.gemini/config/skills/create-and-edit-video/SKILL.md)  
-> **Kho 20 Repositories 6 Tầng:** [`E:\DIEN APP\Skill AI\editor video ai\`](file:///E:/DIEN%20APP/Skill%20AI/editor%20video%20ai/)
+> **Kho 20 Repositories 6 Tầng:** [`<video-editor-repos>\`](file:///E:/DIEN%20APP/Skill%20AI/editor%20video%20ai/)
 
 ---
 
@@ -22,7 +22,7 @@ Dự án **`create and edit video`** hợp nhất 5 công nghệ biên tập và
 ## 📂 CẤU TRÚC THƯ MỤC DỰ ÁN
 
 ```
-E:\DIEN APP\Skill AI\create and edit video\
+<video-project-dir>\
 ├── README.md                                # Tổng quan dự án
 ├── HUONG_DAN_CHI_TIET_SU_DUNG.md            # Sổ tay vận hành kỹ thuật toàn diện từ A-Z
 │

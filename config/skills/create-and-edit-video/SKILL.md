@@ -17,8 +17,8 @@ group: "Làm Phim & Video AI"
 ## Kiến Tạo, Lập Trình & Biên Tập Video Tự Động Toàn Diện Với 5 Đại Engine
 
 > **Khẩu hiệu cốt lõi:** *"Code Your Motion, Automate Your Cuts, Scale Your Video Pipeline."*  
-> **Kho tài nguyên dự án cục bộ:** [`E:\DIEN APP\Skill AI\create and edit video\`](file:///E:/DIEN%20APP/Skill%20AI/create%20and%20edit%20video/)  
-> **Kho 20 Repositories 6 Tầng:** [`E:\DIEN APP\Skill AI\editor video ai\`](file:///E:/DIEN%20APP/Skill%20AI/editor%20video%20ai/)
+> **Kho tài nguyên dự án cục bộ:** [`<video-project-dir>\`](file:///E:/DIEN%20APP/Skill%20AI/create%20and%20edit%20video/)  
+> **Kho 20 Repositories 6 Tầng:** [`<video-editor-repos>\`](file:///E:/DIEN%20APP/Skill%20AI/editor%20video%20ai/)
 
 ---
 
@@ -213,7 +213,7 @@ python -m manim -pql scene_math.py MathExplanation
 ---
 
 ### 🌟 SIÊU TÀI NGUYÊN: KHO 703 PROMPTS "CODE-AS-VIDEO" (AWESOME OPUS 5.5 VIDEOS)
-* **Vị trí cục bộ:** [`E:\DIEN APP\Skill AI\awesome-opus5-5-videos\`](file:///E:/DIEN%20APP/Skill%20AI/awesome-opus5-5-videos/)
+* **Vị trí cục bộ:** [`<awesome-opus5-5-videos>\`](file:///E:/DIEN%20APP/Skill%20AI/awesome-opus5-5-videos/)
 * **Công cụ tìm kiếm siêu tốc CLI:** [`search_prompts.py`](file:///E:/DIEN%20APP/Skill%20AI/awesome-opus5-5-videos/search_prompts.py)
 * **Kho lưu trữ:** 703 Prompts thực chiến tạo video bằng code HTML, Canvas, Three.js, SVG, GSAP, GLSL Shaders và Web Audio API. 418 video đã được remake trực tiếp trên [Skillry](https://skillry.dev/ai-videos/opus-5-5).
 * **4 Nhóm lớn:**
@@ -225,13 +225,13 @@ python -m manim -pql scene_math.py MathExplanation
 #### 📋 Cú Pháp Tra Cứu Nhanh:
 ```bash
 # Tìm prompt ra mắt sản phẩm SaaS:
-python "E:\DIEN APP\Skill AI\awesome-opus5-5-videos\search_prompts.py" -q "saas"
+python "<awesome-opus5-5-videos>\search_prompts.py" -q "saas"
 
 # Tìm prompt video giải thích (explainer) dùng GSAP:
-python "E:\DIEN APP\Skill AI\awesome-opus5-5-videos\search_prompts.py" -c "explainer" -t "gsap"
+python "<awesome-opus5-5-videos>\search_prompts.py" -c "explainer" -t "gsap"
 
 # Tìm prompt 3D Three.js:
-python "E:\DIEN APP\Skill AI\awesome-opus5-5-videos\search_prompts.py" -c "3d" -t "threejs"
+python "<awesome-opus5-5-videos>\search_prompts.py" -c "3d" -t "threejs"
 ```
 
 ---
@@ -267,7 +267,7 @@ Trong một hệ thống sản xuất video tự động đẳng cấp thế gi�
 ## 📌 4. BỘ SCRIPTS VÀ TÀI NGUYÊN SẴN SÀNG TRÊN MÁY
 
 Toàn bộ các file chạy tự động nằm tại thư mục:  
-📂 [`E:\DIEN APP\Skill AI\create and edit video\`](file:///E:/DIEN%20APP/Skill%20AI/create%20and%20edit%20video/)
+📂 [`<video-project-dir>\`](file:///E:/DIEN%20APP/Skill%20AI/create%20and%20edit%20video/)
 
 1. **`HUONG_DAN_CHI_TIET_SU_DUNG.md`**: Sổ tay vận hành kỹ thuật chi tiết nhất.
 2. **`scripts/run_auto_editor.py`**: Wrapper Python gọi Auto-Editor cắt video/audio 1 chạm.

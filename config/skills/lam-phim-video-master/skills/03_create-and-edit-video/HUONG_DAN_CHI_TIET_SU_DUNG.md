@@ -85,7 +85,7 @@ Auto-Editor phân tích luồng âm thanh của file video/audio theo ngưỡng 
 #### D. Chạy qua Script Python tự động trong dự án:
 Sếp có thể gọi script Python có sẵn trong thư mục dự án:
 ```bash
-& "E:\DIEN APP\Xây Kênh Youtube\Tool render edit Video\.venv\Scripts\python.exe" "E:\DIEN APP\Skill AI\create and edit video\scripts\run_auto_editor.py" "duong_dan_file_video.mp4"
+& "E:\DIEN APP\Xây Kênh Youtube\Tool render edit Video\.venv\Scripts\python.exe" "<video-project-dir>\scripts\run_auto_editor.py" "duong_dan_file_video.mp4"
 ```
 
 ---
@@ -220,7 +220,7 @@ Motion Canvas sinh ra để viết code hoạt họa toán học và khoa học 
 
 #### C. Lệnh khởi chạy Web Studio:
 ```bash
-cd "E:\DIEN APP\Skill AI\editor video ai\04_Video\motion-canvas"
+cd "<video-editor-repos>\04_Video\motion-canvas"
 npm install
 npm run dev
 # Mở trình duyệt tại http://localhost:9000
@@ -281,19 +281,19 @@ Trong thư mục [`create and edit video/scripts/`](file:///E:/DIEN%20APP/Skill%
 
 ### 1. Script Cắt Khoảng Lặng Tự Động (`scripts/run_auto_editor.py`):
 ```bash
-& "E:\DIEN APP\Xây Kênh Youtube\Tool render edit Video\.venv\Scripts\python.exe" "E:\DIEN APP\Skill AI\create and edit video\scripts\run_auto_editor.py" "file_can_cat.mp4" [margin_sec]
+& "E:\DIEN APP\Xây Kênh Youtube\Tool render edit Video\.venv\Scripts\python.exe" "<video-project-dir>\scripts\run_auto_editor.py" "file_can_cat.mp4" [margin_sec]
 ```
 
 ### 2. Script Render Remotion Đa Phân Cảnh (`scripts/run_remotion_render.py`):
 ```bash
-& "E:\DIEN APP\Xây Kênh Youtube\Tool render edit Video\.venv\Scripts\python.exe" "E:\DIEN APP\Skill AI\create and edit video\scripts\run_remotion_render.py" "props.json" "output.mp4"
+& "E:\DIEN APP\Xây Kênh Youtube\Tool render edit Video\.venv\Scripts\python.exe" "<video-project-dir>\scripts\run_remotion_render.py" "props.json" "output.mp4"
 ```
 
 ---
 
 ## 📌 PHẦN 4: LIÊN KẾT VỚI HỆ THỐNG REA (DỊCH NGƯỢC VIDEO APPS)
 
-Khi Sếp gặp một phần mềm dựng video thương mại trên thị trường có tính năng hay (như Entervi, CapCut, vMix, AutoClip,...), Sếp có thể kết hợp dự án này với công cụ **REA (Reverse Engineer Anything)** tại [`E:\DIEN APP\Skill AI\rea\`](file:///E:/DIEN%20APP/Skill%20AI/rea/) để:
+Khi Sếp gặp một phần mềm dựng video thương mại trên thị trường có tính năng hay (như Entervi, CapCut, vMix, AutoClip,...), Sếp có thể kết hợp dự án này với công cụ **REA (Reverse Engineer Anything)** tại [`./engine\`](file:///E:/DIEN%20APP/Skill%20AI/rea/) để:
 1. Mổ xẻ thuật toán xử lý âm thanh/hình ảnh ngầm của đối thủ.
 2. Tái hiện lại mã nguồn sạch bằng Python/Node.js.
 3. Tích hợp trực tiếp vào hệ thống `create and edit video` để làm giàu thêm kho công nghệ của công ty.

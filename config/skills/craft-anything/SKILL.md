@@ -16,9 +16,9 @@ group: "Dịch Ngược & Tái Lập Phần Mềm"
 - **Nguồn gốc / Kho Git Upstream:** [storytold/craft-anything](https://github.com/storytold/craft-anything) (`Open-Source Git Repo (100% Rust)`)
 
 ## 1. Nguồn Gốc & Bộ Công Cụ Cục Bộ
-- **Kho mã nguồn:** [`E:\DIEN APP\Skill AI\craft-anything`](file:///E:/DIEN%20APP/Skill%20AI/craft-anything) (100% Rust thuần).
-- **Desktop GUI App:** [`E:\DIEN APP\Skill AI\craft-anything\bin\craft-anything.exe`](file:///E:/DIEN%20APP/Skill%20AI/craft-anything/bin/craft-anything.exe)
-- **CLI & MCP Tool:** `E:\DIEN APP\Skill AI\craft-anything\bin\craft-anything-cli.exe` (302 tools, 17 toolsets).
+- **Kho mã nguồn:** [`. (Tự chứa 100% trong Skill)`](file:///E:/DIEN%20APP/Skill%20AI/craft-anything) (100% Rust thuần).
+- **Desktop GUI App:** [`.\bin\craft-anything.exe`](file:///E:/DIEN%20APP/Skill%20AI/craft-anything/bin/craft-anything.exe)
+- **CLI & MCP Tool:** `.\bin\craft-anything-cli.exe` (302 tools, 17 toolsets).
 
 Use Craft Anything when an answer depends on something that was *built and shipped*: an executable, a
 library, an app bundle, an APK, an Electron app, a WebAssembly module, firmware, a crash dump or a

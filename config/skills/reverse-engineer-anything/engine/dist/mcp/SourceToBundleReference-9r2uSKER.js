@@ -1,0 +1,55 @@
+import { t as __esmMin } from "./rolldown-runtime-BjeaiXFo.js";
+import { n as init_result, r as ok, t as err } from "./result-Dbqc_peo.js";
+import { f as init_analysisErrorCore, i as AnalysisCancelledError } from "./analysisErrorCore-BCqhUcUc.js";
+import { r as init_inputIssueProjection, t as analysisInputErrorFromIssues } from "./inputIssueProjection-rtSG7-RA.js";
+import { Bo as init_JsonFiles, Vo as readJsonFileWithSource } from "./createServer-CMxQrH3I.js";
+import { n as historicalSourceGraphSchema, r as init_referenceSourceGraph } from "./referenceSourceGraph-D2kUlLbx.js";
+import { n as init_JsonAuthenticationHeadroom, r as requireAuthenticationHeadroom } from "./JsonAuthenticationHeadroom-CXha_Mvo.js";
+import { setImmediate } from "node:timers/promises";
+
+//#region dist/application/javascript/SourceToBundleReference.js
+var resolveSourceToBundleReference;
+function init_SourceToBundleReference() {
+	return (init_SourceToBundleReference = __esmMin((() => {
+		init_JsonAuthenticationHeadroom();
+		init_referenceSourceGraph();
+		init_analysisErrorCore();
+		init_inputIssueProjection();
+		init_result();
+		init_JsonFiles();
+		resolveSourceToBundleReference = async (reference, signal, resources) => {
+			const cancelled = () => signal?.aborted === true;
+			if (cancelled()) return err(new AnalysisCancelledError("compare_source_to_bundle", { cause: signal?.reason }));
+			if (!("kind" in reference)) return ok({ reference });
+			const read = await readJsonFileWithSource(reference.path, signal, resources, "compare_source_to_bundle");
+			if (!read.ok) return read;
+			await setImmediate();
+			if (cancelled()) return err(new AnalysisCancelledError("compare_source_to_bundle", { cause: signal?.reason }));
+			const headroom = requireAuthenticationHeadroom(read.value.data, {
+				operation: "compare_source_to_bundle",
+				path: read.value.path,
+				description: "Insufficient heap headroom to authenticate the historical source graph"
+			});
+			if (!headroom.ok) return headroom;
+			const parsed = historicalSourceGraphSchema.safeParse(read.value.data);
+			await setImmediate();
+			if (cancelled()) return err(new AnalysisCancelledError("compare_source_to_bundle", { cause: signal?.reason }));
+			if (!parsed.success) return err(analysisInputErrorFromIssues("compare_source_to_bundle", parsed.error.issues.map((issue) => ({
+				...issue,
+				path: ["reference", ...issue.path]
+			})), { reference: read.value.data }, { cause: parsed.error }));
+			return ok({
+				reference: parsed.data,
+				reference_source: {
+					kind: "file",
+					path: read.value.path,
+					requested_path: reference.path
+				}
+			});
+		};
+	})))();
+}
+
+//#endregion
+init_SourceToBundleReference();
+export { resolveSourceToBundleReference };

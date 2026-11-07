@@ -13,7 +13,7 @@ Kỹ năng kết nối trực tiếp kho **2,627 System Prompts**, **31 chương
 
 ## 1. Tọa Độ Tài Nguyên Cục Bộ & MCP Server
 
-- **Thư mục dữ liệu trên máy:** [`E:\DIEN APP\Skill AI\prompts-chat\`](file:///E:/DIEN%20APP/Skill%20AI/prompts-chat/)
+- **Thư mục dữ liệu trên máy:** [`./data\`](file:///E:/DIEN%20APP/Skill%20AI/prompts-chat/)
   - `prompts.csv`: **2,627 System Prompts** (`2,262 TEXT`, `344 STRUCTURED`, `21 IMAGE`; `189 Developer` & `2,438 Business/Creative`).
   - `book/`: **31 chương sách** *The Interactive Book of Prompting* (`00a-preface.mdx` $\rightarrow$ `27-tools-mcp-connectors.mdx`).
   - `search_prompts_chat.py`: Công cụ CLI tìm kiếm siêu tốc Offline (0.05s) + gọi Live MCP Online.
@@ -27,20 +27,20 @@ Sử dụng Python để tra cứu tức thì mà không tốn token đọc toà
 
 ```powershell
 # 1. Tìm kiếm trong 2,627 prompts offline theo từ khóa (VD: sql, youtube, canvas, three.js, seo, story):
-python "E:\DIEN APP\Skill AI\prompts-chat\search_prompts_chat.py" -q "three.js" -l 5
+python "./data\search_prompts_chat.py" -q "three.js" -l 5
 
 # 2. Lọc riêng các mẫu STRUCTURED prompt (ép đầu ra JSON/YAML/Table):
-python "E:\DIEN APP\Skill AI\prompts-chat\search_prompts_chat.py" -q "video" -t STRUCTURED -l 5
+python "./data\search_prompts_chat.py" -q "video" -t STRUCTURED -l 5
 
 # 3. Xem toàn văn 1 Prompt theo số thứ tự #ID:
-python "E:\DIEN APP\Skill AI\prompts-chat\search_prompts_chat.py" --id 15
+python "./data\search_prompts_chat.py" --id 15
 
 # 4. Đọc các chương sách kỹ thuật Prompt & Agent (VD: context-engineering, loop-engineering, multimodal, agents-and-skills):
-python "E:\DIEN APP\Skill AI\prompts-chat\search_prompts_chat.py" --book "context-engineering"
+python "./data\search_prompts_chat.py" --book "context-engineering"
 
 # 5. Tìm Prompt hoặc Agent Skill mới nhất trực tiếp trên Live MCP Server prompts.chat:
-python "E:\DIEN APP\Skill AI\prompts-chat\search_prompts_chat.py" --mcp-search "cinematic video"
-python "E:\DIEN APP\Skill AI\prompts-chat\search_prompts_chat.py" --mcp-skills "automation"
+python "./data\search_prompts_chat.py" --mcp-search "cinematic video"
+python "./data\search_prompts_chat.py" --mcp-skills "automation"
 ```
 
 ---

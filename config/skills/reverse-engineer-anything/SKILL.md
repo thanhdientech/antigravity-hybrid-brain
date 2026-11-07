@@ -13,8 +13,8 @@ group: "Kiểm Toán & Điều Phối AI"
 > TRIGGERS: "rea", "reverse engineer", "reverse engineering", "reverse-engineer-anything", "dịch ngược", "dich nguoc", "bóc tách phần mềm", "boc tach phan mem", "bung file exe", "giải nén asar", "app.asar", "electron decompile", "pyinstaller unpack", "decompile c#", "decompile dotnet", "bóc tách apk", "ghidra", "bắt gói tin api", "reverse api", "clean-room rewrite", "phân tích file nhị phân".
 <!-- JAVIS_TRIGGER_ARCHIVE_END -->
 
-- **Kho mã nguồn gốc trên máy (có `.git` để check update):** [`E:\DIEN APP\Skill AI\rea\`](file:///E:/DIEN%20APP/Skill%20AI/rea/) (`origin`: [morluto/rea](https://github.com/morluto/rea), version `6.8.0`).
-- **Tệp thực thi CLI cục bộ:** `node "E:\DIEN APP\Skill AI\rea\scripts\rea.mjs"` (hoặc `npx -y rea-agents@latest`).
+- **Kho mã nguồn gốc trên máy (có `.git` để check update):** [`.\engine\`](file:///E:/DIEN%20APP/Skill%20AI/rea/) (`origin`: [morluto/rea](https://github.com/morluto/rea), version `6.8.0`).
+- **Tệp thực thi CLI cục bộ:** `node ".\engine\scripts\rea.mjs"` (hoặc `npx -y rea-agents@latest`).
 
 ---
 
@@ -37,13 +37,13 @@ group: "Kiểm Toán & Điều Phối AI"
 
 ```powershell
 # 1. Kiểm tra sức khỏe kết nối REA với Antigravity (Read-Only):
-node "E:\DIEN APP\Skill AI\rea\scripts\rea.mjs" doctor --client antigravity --json
+node ".\engine\scripts\rea.mjs" doctor --client antigravity --json
 
 # 2. Phân tích trực tiếp ứng dụng Electron (.asar) hoặc cây thư mục JavaScript đóng gói:
-node "E:\DIEN APP\Skill AI\rea\scripts\rea.mjs" analyze-javascript-application "E:\duong_dan\app.asar" --json
+node ".\engine\scripts\rea.mjs" analyze-javascript-application "E:\duong_dan\app.asar" --json
 
 # 3. Khởi chạy máy chủ REA MCP từ bản cài đặt cục bộ (khi cấu hình vào mcp_config.json):
-node "E:\DIEN APP\Skill AI\rea\scripts\rea.mjs" mcp
+node ".\engine\scripts\rea.mjs" mcp
 ```
 
 ---

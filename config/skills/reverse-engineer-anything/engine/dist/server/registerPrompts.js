@@ -1,0 +1,60 @@
+import { promptArgumentsSchema } from "./promptArguments.js";
+import { currentMcpRequestSignal } from "./EvidenceMcpServerCore.js";
+import { guidedPromptArgumentValues, renderGuidedPrompt, } from "../contracts/promptContracts.js";
+import { promptsForToolFamilies } from "../contracts/promptToolFamilyScope.js";
+import { createPromptCompletionSource, } from "./promptCompletion.js";
+/** Register every guided workflow and its session-scoped argument completers. */
+export const registerGuidedPrompts = (server, analysis, session) => {
+    const source = createPromptCompletionSource(analysis, session);
+    const completion = server.bindPromptCompletion({
+        async complete(kind, value, context) {
+            // Completions can query the same providers as tools. Cancellation alone
+            // does not mean their provider cleanup has finished.
+            return server.runRequest(currentMcpRequestSignal(), () => source.complete(kind, value, context));
+        },
+    });
+    const prompts = new Map();
+    // The shared projection keeps required tools and removes disabled routes.
+    for (const contract of promptsForToolFamilies(server.advertisedToolFamilies))
+        prompts.set(contract.name, registerPrompt(server, contract, completion));
+    return {
+        update(contract) {
+            const prompt = prompts.get(contract.name);
+            const scoped = promptsForToolFamilies(server.advertisedToolFamilies, [
+                contract,
+            ])[0];
+            if (prompt === undefined || scoped === undefined)
+                throw new RangeError(`Unknown guided prompt ${contract.name}`);
+            const argsSchema = promptArgumentsSchema(scoped, completion);
+            prompt.update({
+                title: scoped.title,
+                description: scoped.description,
+                argsSchema,
+                callback: (arguments_) => promptResult(scoped, arguments_),
+            });
+        },
+    };
+};
+const registerPrompt = (server, contract, completion) => {
+    const argsSchema = promptArgumentsSchema(contract, completion);
+    return server.registerCanonicalPrompt(contract.name, {
+        title: contract.title,
+        description: contract.description,
+        argsSchema,
+    }, (arguments_) => promptResult(contract, arguments_));
+};
+const promptResult = (contract, arguments_) => {
+    const values = guidedPromptArgumentValues(contract, arguments_);
+    return {
+        description: contract.description,
+        messages: [
+            {
+                role: "user",
+                content: {
+                    type: "text",
+                    text: renderGuidedPrompt(contract, values),
+                },
+            },
+        ],
+    };
+};
