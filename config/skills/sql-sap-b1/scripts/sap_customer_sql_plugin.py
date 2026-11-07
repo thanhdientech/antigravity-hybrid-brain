@@ -1,8 +1,8 @@
 """
 Plugin: sap-b1-customer-sql
 Quan ly ket noi dong thoi nhieu Server SQL SAP B1 (Mac dinh 100% truy van tren Server 24 -
-Database SBO_MAIN_PROD SAP 10.0 + Service Layer :50000; khi nguoi dung go cu phap /160 hoac /<server>
-thi dinh tuyen sang Server 10.0.0.20 hoac server tuong ung), chay truy van SELECT an toan,
+Database infoasia56 SAP 10.0 + Service Layer :50000; khi nguoi dung go cu phap /160 hoac /<server>
+thi dinh tuyen sang Server 192.168.42.160 hoac server tuong ung), chay truy van SELECT an toan,
 goi SAP Service Layer tren Server 24, tu dong xuat file CSV/XLSX/PDF tai ve 1-click va chay 7 nhom
 bao cao chuan SSMS.
 """
@@ -18,7 +18,7 @@ import uuid
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
-DEFAULT_SQL_APP_DIR = Path(os.getenv("SAP_B1_SQL_DIR", r"<WORKSPACE_DIR>\SQL SAP B1"))
+DEFAULT_SQL_APP_DIR = Path(os.getenv("SAP_B1_SQL_DIR", r"E:\DIEN APP\SQL SAP B1"))
 DEFAULT_CONFIG_PATH = Path(os.getenv("SAP_B1_SQL_CONFIG", str(DEFAULT_SQL_APP_DIR / "config.json")))
 
 FORBIDDEN_SQL_KEYWORDS = (
@@ -47,10 +47,10 @@ FORBIDDEN_SQL_KEYWORDS = (
 
 
 def _load_external_manager():
-    """Uu tien nap customer_profile_manager.py tai <WORKSPACE_DIR>\\SQL SAP B1 hoac Linux data/sql_sap_b1."""
+    """Uu tien nap customer_profile_manager.py tai E:\\DIEN APP\\SQL SAP B1 hoac Linux data/sql_sap_b1."""
     candidates = [
         DEFAULT_SQL_APP_DIR / "customer_profile_manager.py",
-        Path("/opt/antigravity-erp/data/sql_sap_b1/customer_profile_manager.py"),
+        Path("/home/infoasia/javis-os/data/sql_sap_b1/customer_profile_manager.py"),
         Path("/data/sql_sap_b1/customer_profile_manager.py"),
     ]
     for p in candidates:
@@ -71,7 +71,7 @@ def _resolve_config_paths(ctx) -> List[Path]:
     if DEFAULT_CONFIG_PATH.parent.exists():
         paths.append(DEFAULT_CONFIG_PATH)
     for linux_cfg in (
-        Path("/opt/antigravity-erp/data/sql_sap_b1/config.json"),
+        Path("/home/infoasia/javis-os/data/sql_sap_b1/config.json"),
         Path("/data/sql_sap_b1/config.json"),
     ):
         if linux_cfg not in paths and linux_cfg.parent.exists():
@@ -119,7 +119,7 @@ def _normalize_profile(raw: Dict[str, Any], idx: int = 0) -> Dict[str, Any]:
         "has_beas": has_beas,
         "server": str(raw.get("server") or "localhost").strip(),
         "database": db_name,
-        "username": str(raw.get("username") or "sap_readonly_user").strip(),
+        "username": str(raw.get("username") or "infoasia_ro").strip(),
         "password": str(raw.get("password") or ""),
         "allow_unsafe": bool(raw.get("allow_unsafe", False)),
         "allow_service_layer": bool(raw.get("allow_service_layer", False)),
@@ -249,7 +249,7 @@ def _handle_customer_upsert(args: dict, ctx) -> str:
     name = str(args.get("name") or "").strip()
     server = str(args.get("server") or "").strip()
     database = str(args.get("database") or "").strip()
-    username = str(args.get("username") or "sap_readonly_user").strip()
+    username = str(args.get("username") or "infoasia_ro").strip()
     password = str(args.get("password") or "")
     customer_id = str(args.get("id") or args.get("customer_id") or "").strip()
     customer_code = str(args.get("customer_code") or "").strip()
@@ -290,7 +290,7 @@ def _handle_customer_upsert(args: dict, ctx) -> str:
 
 def _handle_customer_test(args: dict, ctx) -> str:
     args = args or {}
-    customer_id = str(args.get("customer_id") or args.get("id") or args.get("name") or "SBO_MAIN_PROD").strip() or "SBO_MAIN_PROD"
+    customer_id = str(args.get("customer_id") or args.get("id") or args.get("name") or "infoasia56").strip() or "infoasia56"
     timeout = int(args.get("timeout") or 8)
     ext = _load_external_manager()
     if ext and hasattr(ext, "test_connection"):
@@ -305,7 +305,7 @@ def _handle_customer_test(args: dict, ctx) -> str:
 def _handle_customer_query(args: dict, ctx) -> str:
     args = args or {}
     allowed_customer = str(args.get("allowed_customer") or "").strip()
-    customer_id = str(args.get("customer_id") or args.get("id") or allowed_customer or "SBO_MAIN_PROD").strip() or "SBO_MAIN_PROD"
+    customer_id = str(args.get("customer_id") or args.get("id") or allowed_customer or "infoasia56").strip() or "infoasia56"
     sql = str(args.get("sql") or "").strip()
     max_rows = int(args.get("max_rows") or 30)
     export_csv_path = str(args.get("export_csv_path") or "").strip()
@@ -336,10 +336,10 @@ def _handle_customer_query(args: dict, ctx) -> str:
     )
 
 
-def _handle_run_mfg_report(args: dict, ctx) -> str:
+def _handle_run_fvivn_report(args: dict, ctx) -> str:
     args = args or {}
     allowed_customer = str(args.get("allowed_customer") or "").strip()
-    customer_id = str(args.get("customer_id") or args.get("id") or allowed_customer or "SBO_MAIN_PROD").strip() or "SBO_MAIN_PROD"
+    customer_id = str(args.get("customer_id") or args.get("id") or allowed_customer or "infoasia56").strip() or "infoasia56"
     report_type = str(args.get("report_type") or "").strip()
     from_date = str(args.get("from_date") or "").strip()
     to_date = str(args.get("to_date") or "").strip()
@@ -363,8 +363,8 @@ def _handle_run_mfg_report(args: dict, ctx) -> str:
         )
 
     ext = _load_external_manager()
-    if ext and hasattr(ext, "run_mfg_standard_report"):
-        res = ext.run_mfg_standard_report(
+    if ext and hasattr(ext, "run_fvivn_standard_report"):
+        res = ext.run_fvivn_standard_report(
             customer_key=customer_id,
             report_type=report_type,
             from_date=from_date,
@@ -386,7 +386,7 @@ def _handle_run_mfg_report(args: dict, ctx) -> str:
 
 def _handle_service_layer_call(args: dict, ctx) -> str:
     args = args or {}
-    customer_id = str(args.get("customer_id") or args.get("id") or "SBO_MAIN_PROD").strip() or "SBO_MAIN_PROD"
+    customer_id = str(args.get("customer_id") or args.get("id") or "infoasia56").strip() or "infoasia56"
     endpoint = str(args.get("endpoint") or "").strip()
     method = str(args.get("method") or "GET").strip().upper()
     payload = args.get("payload")
@@ -431,7 +431,7 @@ def _handle_help_query_search(args: dict, ctx) -> str:
     return json.dumps(
         {
             "ok": False,
-            "error": "Khong tim thay thu muc <WORKSPACE_DIR>\\SQL SAP B1 hoac /data/sql_sap_b1.",
+            "error": "Khong tim thay thu muc E:\\DIEN APP\\SQL SAP B1 hoac /data/sql_sap_b1.",
         },
         ensure_ascii=False,
     )
@@ -442,7 +442,7 @@ def register(ctx):
         name="sap_customer_list",
         description=(
             "Liet ke cac profile ket noi SQL Server & Service Layer SAP B1 (9.3 / 10.0) & Beas "
-            "(Mac dinh la Server 24 DB SBO_MAIN_PROD; ho tro chuyen server qua cu phap /160 hoac /<server>)."
+            "(Mac dinh la Server 24 DB infoasia56; ho tro chuyen server qua cu phap /160 hoac /<server>)."
         ),
         handler=_handle_customer_list,
         min_mode="readonly",
@@ -468,9 +468,9 @@ def register(ctx):
         schema={
             "type": "object",
             "properties": {
-                "id": {"type": "string", "description": "ID dinh danh profile (vd: SBO_MAIN_PROD, SBO_MFG_PLANT1, SBO_MFG_PROD)"},
-                "name": {"type": "string", "description": "Ten hien thi cua khach hang / database (vd: SBO_MAIN_PROD, SBO_MFG_PROD)"},
-                "customer_code": {"type": "string", "description": "Ma viet tat (vd: SBO_MAIN_PROD, SBO_MFG_PROD, SBO_MFG_PLANT1)"},
+                "id": {"type": "string", "description": "ID dinh danh profile (vd: infoasia56, fvivn_hcm, fvivn_lt)"},
+                "name": {"type": "string", "description": "Ten hien thi cua khach hang / database (vd: INFOASIA_DEMO_56, FVIVN_PROD)"},
+                "customer_code": {"type": "string", "description": "Ma viet tat (vd: INFOASIA56, FVIVN_LT, FVIVN_HCM)"},
                 "sap_version": {
                     "type": "string",
                     "enum": ["9.3", "10.0"],
@@ -481,7 +481,7 @@ def register(ctx):
                     "description": "Co cai dat Beas Manufacturing khong (true/false)",
                 },
                 "server": {"type": "string", "description": "Dia chi IP hoac hostname SQL Server"},
-                "database": {"type": "string", "description": "Ten Database SAP B1 (vd: SBO_MAIN_PROD)"},
+                "database": {"type": "string", "description": "Ten Database SAP B1 (vd: infoasia56)"},
                 "username": {"type": "string", "description": "Username SQL rieng"},
                 "password": {"type": "string", "description": "Password SQL rieng"},
                 "mapped_folders": {
@@ -500,8 +500,8 @@ def register(ctx):
         description=(
             "Kiem tra ket noi pyodbc toi SQL Server va SAP Service Layer theo customer_id, "
             "tu dong truy van bang CINF lay CompnyName, Version (SAP B1 9.3/10.0) va kiem tra bang BEAS_FTHAUPT. "
-            "MAC DINH: Luon dung customer_id='SBO_MAIN_PROD' (Server 24) khi nguoi dung hoi binh thuong. "
-            "Chi dung 'SBO_MFG_PROD' hoac 'SBO_MFG_PLANT1' khi cau hoi co cu phap /160."
+            "MAC DINH: Luon dung customer_id='infoasia56' (Server 24) khi nguoi dung hoi binh thuong. "
+            "Chi dung 'FVIVN_LT' hoac 'FVIVN_HCM' khi cau hoi co cu phap /160."
         ),
         handler=_handle_customer_test,
         min_mode="readonly",
@@ -511,8 +511,8 @@ def register(ctx):
                 "customer_id": {
                     "type": "string",
                     "description": (
-                        "Mac dinh la 'SBO_MAIN_PROD' (Server 24). "
-                        "Chi truyen 'SBO_MFG_PROD' (khi co /160 hoac /160 lt), 'SBO_MFG_PLANT1' (khi co /160 hcm), "
+                        "Mac dinh la 'infoasia56' (Server 24). "
+                        "Chi truyen 'FVIVN_LT' (khi co /160 hoac /160 lt), 'FVIVN_HCM' (khi co /160 hcm), "
                         "hoac ma server khac khi co cu phap /<server>."
                     ),
                 },
@@ -529,11 +529,11 @@ def register(ctx):
         description=(
             "Chay cau lenh SELECT (hoac script SSMS su dung bang tam #Temp) tren database SAP B1 / Beas. "
             "QUY TAC DINH TUYEN: "
-            "(1) Hoi tu do (khong co /) hoac /24 -> truyen customer_id='SBO_MAIN_PROD' (Server A - SBO_MAIN_PROD, SAP 10.0). "
-            "(2) /160 (mac dinh) -> truyen customer_id='SBO_MFG_TRAIN' (Server B - SBO_MFG_TRAIN, SAP 9.3). "
-            "(3) /160 HCM -> truyen customer_id='SBO_MFG_PLANT1' (Server B HCM - SBO_MFG_PLANT1, SAP 9.3). "
-            "(4) /160 LT -> truyen customer_id='SBO_MFG_PROD' (Server B LT - SBO_MFG_PROD, SAP 9.3). "
-            "(5) /52 -> truyen customer_id='SBO_PLANT_C' (Server C - SBO_PLANT_C, SAP 9.3)."
+            "(1) Hoi tu do (khong co /) hoac /24 -> truyen customer_id='infoasia56' (con 24 - infoasia56, SAP 10.0). "
+            "(2) /160 (mac dinh) -> truyen customer_id='FVIVN_TRAIN' (con 160 - FVIVN_PROD_TRAIN, SAP 9.3). "
+            "(3) /160 HCM -> truyen customer_id='FVIVN_HCM' (con 160 HCM - FVIVN_GoLive_2024, SAP 9.3). "
+            "(4) /160 LT -> truyen customer_id='FVIVN_LT' (con 160 LT - FVIVN_PROD, SAP 9.3). "
+            "(5) /52 -> truyen customer_id='PENFLEX_52' (con 52 - PenflexPRD_NEW, SAP 9.3)."
         ),
         handler=_handle_customer_query,
         min_mode="readonly",
@@ -543,11 +543,11 @@ def register(ctx):
                 "customer_id": {
                     "type": "string",
                     "description": (
-                        "Mac dinh la 'SBO_MAIN_PROD' (Server A). "
-                        "Khi co /160 -> 'SBO_MFG_TRAIN' (SBO_MFG_TRAIN). "
-                        "Khi co /160 HCM -> 'SBO_MFG_PLANT1' (SBO_MFG_PLANT1). "
-                        "Khi co /160 LT -> 'SBO_MFG_PROD' (SBO_MFG_PROD). "
-                        "Khi co /52 -> 'SBO_PLANT_C' (SBO_PLANT_C)."
+                        "Mac dinh la 'infoasia56' (con 24). "
+                        "Khi co /160 -> 'FVIVN_TRAIN' (FVIVN_PROD_TRAIN). "
+                        "Khi co /160 HCM -> 'FVIVN_HCM' (FVIVN_GoLive_2024). "
+                        "Khi co /160 LT -> 'FVIVN_LT' (FVIVN_PROD). "
+                        "Khi co /52 -> 'PENFLEX_52' (PenflexPRD_NEW)."
                     ),
                 },
                 "sql": {
@@ -572,16 +572,16 @@ def register(ctx):
     )
 
     ctx.register_tool(
-        name="sap_run_mfg_report",
+        name="sap_run_fvivn_report",
         description=(
             "Chay truc tiep 1 trong 7 nhom bao cao chuan SSMS (tinh trang PO, Sale SO-Delivery-AR, "
             "Lai lo Gross Profit, Tinh hinh san xuat WO Cost Allocation, Chi tiet WO Costing Detail, "
             "San xuat theo ngay Daily Hour Report, va 7 bao cao Inventory). "
             "QUY TAC MAC DINH: Moi cau hoi binh thuong (khong co /160 hay /<server>) BAT BUOC truyen "
-            "customer_id='SBO_MAIN_PROD' (Server 24 - Database SBO_MAIN_PROD) va chay ngay, KHONG hoi lai alias va "
-            "KHONG nhac den Server 160. Chi khi co '/160' thi truyen 'SBO_MFG_PROD' (hoac 'SBO_MFG_PLANT1' neu '/160 hcm')."
+            "customer_id='infoasia56' (Server 24 - Database infoasia56) va chay ngay, KHONG hoi lai alias va "
+            "KHONG nhac den Server 160. Chi khi co '/160' thi truyen 'FVIVN_LT' (hoac 'FVIVN_HCM' neu '/160 hcm')."
         ),
-        handler=_handle_run_mfg_report,
+        handler=_handle_run_fvivn_report,
         min_mode="readonly",
         schema={
             "type": "object",
@@ -589,8 +589,8 @@ def register(ctx):
                 "customer_id": {
                     "type": "string",
                     "description": (
-                        "Mac dinh la 'SBO_MAIN_PROD' (Server 24 - Database SBO_MAIN_PROD). "
-                        "Truyen 'SBO_MFG_PROD' khi co /160 (hoac /160 lt), 'SBO_MFG_PLANT1' khi co /160 hcm, "
+                        "Mac dinh la 'infoasia56' (Server 24 - Database infoasia56). "
+                        "Truyen 'FVIVN_LT' khi co /160 (hoac /160 lt), 'FVIVN_HCM' khi co /160 hcm, "
                         "hoac ma server khac khi co /<server>."
                     ),
                 },
@@ -664,9 +664,9 @@ def register(ctx):
     ctx.register_tool(
         name="sap_service_layer_call",
         description=(
-            "Goi REST API SAP B1 10.0 Service Layer tren Server 24 database 'SBO_MAIN_PROD' "
+            "Goi REST API SAP B1 10.0 Service Layer tren Server 24 database 'infoasia56' "
             "(tu dong Login session manager, thuc thi GET/POST/PATCH/DELETE va Logout). "
-            "Mac dinh customer_id='SBO_MAIN_PROD'."
+            "Mac dinh customer_id='infoasia56'."
         ),
         handler=_handle_service_layer_call,
         min_mode="readonly",
@@ -675,7 +675,7 @@ def register(ctx):
             "properties": {
                 "customer_id": {
                     "type": "string",
-                    "description": "Mac dinh la 'SBO_MAIN_PROD' (Server 24).",
+                    "description": "Mac dinh la 'infoasia56' (Server 24).",
                 },
                 "endpoint": {
                     "type": "string",
@@ -684,7 +684,7 @@ def register(ctx):
                 "method": {
                     "type": "string",
                     "enum": ["GET", "POST", "PATCH", "PUT", "DELETE"],
-                    "description": "HTTP method (mac dinh 'GET' de tra cuu; dung 'POST'/'PATCH' khi test tao/cap nhat chung tu hoac master data tren SBO_MAIN_PROD)",
+                    "description": "HTTP method (mac dinh 'GET' de tra cuu; dung 'POST'/'PATCH' khi test tao/cap nhat chung tu hoac master data tren infoasia56)",
                 },
                 "query_params": {
                     "type": "object",
@@ -706,7 +706,7 @@ def register(ctx):
     ctx.register_tool(
         name="sap_help_query_search",
         description=(
-            "Tim kiem cau lenh SQL mau chuan SAP B1 & Beas Manufacturing trong thu muc queries/SYNC_SBO_MFG_PROD_SSMS "
+            "Tim kiem cau lenh SQL mau chuan SAP B1 & Beas Manufacturing trong thu muc queries/SYNC_FVIVN_PROD_SSMS "
             "va Help/SAPStandard_query.txt, Default_query.txt theo tu khoa hoac ten bang."
         ),
         handler=_handle_help_query_search,

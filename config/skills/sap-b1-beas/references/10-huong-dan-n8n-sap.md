@@ -8,12 +8,12 @@ Tài liệu này mô tả chi tiết quy trình tự động hóa (Automation Wo
 - Tự động phân luồng Thành công/Thất bại và phản hồi (Reply) báo cáo chi tiết qua Email cho người gửi.
 
 ## 2. TẠI SAO LẠI DÙNG EMAIL TRUNG GIAN (GMAIL)?
-Hệ thống KHÔNG đọc trực tiếp email cá nhân của nhân viên Sale/Kế toán, mà sử dụng một tài khoản Gmail trung gian (Ví dụ: `erp-orders-bot@example.com`). 
+Hệ thống KHÔNG đọc trực tiếp email cá nhân của nhân viên Sale/Kế toán, mà sử dụng một tài khoản Gmail trung gian (Ví dụ: `infoasiavietnam@gmail.com`). 
 
 **Lý do cốt lõi:**
 - **Bảo mật dữ liệu:** Hệ thống n8n cần cấp quyền đọc/ghi toàn bộ hòm thư. Việc cấp quyền này trên email cá nhân/công việc là rủi ro về quyền riêng tư. Dùng mail trung gian giúp cô lập rủi ro.
 - **Tính ổn định & Bàn giao:** Khi nhân sự nghỉ việc hoặc đổi email, hệ thống lõi không bị ảnh hưởng. Người dùng chỉ cần cấu hình luật **Chuyển tiếp tự động (Auto-Forward)** các thư có chữ "đơn hàng" từ mail cá nhân sang mail trung gian.
-- **Truy vết lỗi chính xác:** Khi email được Forward từ `sales-user@example.com` sang mail trung gian, hệ thống n8n sẽ xử lý và dùng lệnh **Reply**. Nó sẽ thông minh tự động Reply ngược lại thẳng hòm thư `sales-user@example.com` để chửi lỗi hoặc báo thành công. Ai làm sai, người đó tự nhận được thông báo để chịu trách nhiệm sửa chữa.
+- **Truy vết lỗi chính xác:** Khi email được Forward từ `diennt@...` sang mail trung gian, hệ thống n8n sẽ xử lý và dùng lệnh **Reply**. Nó sẽ thông minh tự động Reply ngược lại thẳng hòm thư `diennt@...` để chửi lỗi hoặc báo thành công. Ai làm sai, người đó tự nhận được thông báo để chịu trách nhiệm sửa chữa.
 
 ---
 
@@ -67,7 +67,7 @@ Nếu quy trình có sự thay đổi trong tương lai, người bảo trì c�
 - Cột Tiền tệ (`Currency`) phải điền đúng định dạng (Ví dụ: `USD` hoặc `VND`). Đảm bảo SAP đã khai báo tỷ giá hối đoái của ngày hôm đó, nếu không SAP sẽ từ chối tạo đơn.
 
 **Bước 2: Gửi Đơn hàng**
-- Gửi (hoặc Chuyển tiếp) email đến địa chỉ trung gian (`erp-orders-bot@example.com`).
+- Gửi (hoặc Chuyển tiếp) email đến địa chỉ trung gian (`infoasiavietnam@gmail.com`).
 - Tiêu đề bắt buộc phải có chữ **"đơn hàng"**.
 - Đính kèm file Excel (đuôi `.xlsx`).
 

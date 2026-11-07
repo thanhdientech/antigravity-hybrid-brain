@@ -17,7 +17,7 @@ Bộ công cụ và kỹ năng kiểm toán nguồn gốc, chống bịa đặt 
 
 ```bash
 # Di chuyển vào thư mục của skill:
-cd "%USERPROFILE%\.gemini\config\skills\verified-source-researcher"
+cd "E:\DIEN APP\Skill AI\verified-source-researcher"
 
 # 1. Kiểm tra một đường link web có sống thực tế không (HTTP 200 OK):
 python cli.py check-url "https://www.nature.com"

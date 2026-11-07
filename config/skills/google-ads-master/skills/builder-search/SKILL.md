@@ -35,7 +35,7 @@ the account's whole search-term data (Search + PMax), not a catalog brainstorm.*
   (`campaign_type: "search"`, with `ad_groups[]`).
 - Verify every Final URL is live. Enforce guardrails (conversion goals at campaign level; ENABLED-only).
 
-## Model dispatch (run cheap, decide expensive) — see `~/.gemini/config/skills/google-ads-master/skills/google-ads-shared/references/model-tier-dispatch.md`
+## Model dispatch (run cheap, decide expensive) — see `C:/Users/INFOASIA/.gemini/config/skills/google-ads-master/skills/google-ads-shared/references/model-tier-dispatch.md`
 - **Scout (`haiku`)** — per-URL 200 checks; the char-count validation pass; keyword dedupe.
 - **Routine (`sonnet`)** — pulling the **dual-source search-term data** (`search_term_view` + `campaign_search_term_insight` per active PMax, incl. the catch-all) + catalog/services + Keyword Planner volume. Dispatch as `general-purpose`; **return raw converting terms, don't theme**.
 - **Judge (main session)** — STEP 2 ad-group theming, STEP 3 match-type strategy, STEP 4 RSA copy (via `assets`), STEP 5 brand/non-brand separation. The keyword *data* is cheap; the *structure* is judgment.
@@ -72,7 +72,7 @@ Keyword identification + match type is where Search wins or wastes money. Do it 
   `campaign_search_term_insight` looped **per active PMax campaign** — especially the generic/catch-all PMax,
   which is where non-brand intent actually lives (brand-specific PMax campaigns return only their own brand's
   terms). Build ad groups around what genuinely CONVERTS in that data, not category names you guessed.
-  (Same dual-source rule the optimizer uses — see `~/.gemini/config/skills/google-ads-master/skills/google-ads-shared/references/optimization-playbook.md`.)
+  (Same dual-source rule the optimizer uses — see `C:/Users/INFOASIA/.gemini/config/skills/google-ads-master/skills/google-ads-shared/references/optimization-playbook.md`.)
   Then supplement with Keyword Planner volume and catalog/services. Group tightly by intent (one theme per AG).
   - *Worked example:* on one live account, catalog-derived ad groups MISSED the highest-AOV real intent — a
     high-ticket equipment category ($500+/conv) — while over-weighting a thin low-volume theme. The PMax
@@ -90,7 +90,7 @@ Keyword identification + match type is where Search wins or wastes money. Do it 
   Phrase/Exact, not broad.)
 - Dedupe by (ad_group + text + match_type).
 - **Match type is ALWAYS output ready-to-copy** — wrapped `[exact]` / `"phrase"` / broad — so it pastes
-  straight into the UI/Editor with no re-formatting (`spec_to_paste.py`; `~/.gemini/config/skills/google-ads-master/skills/google-ads-shared/references/google-ads-formatting.md`).
+  straight into the UI/Editor with no re-formatting (`spec_to_paste.py`; `C:/Users/INFOASIA/.gemini/config/skills/google-ads-master/skills/google-ads-shared/references/google-ads-formatting.md`).
 
 ## STEP 4 — RSAs (via `assets`)
 One strong RSA per ad group: up to **15 headlines (≤30 chars)** and **4 descriptions (≤90 chars)**, themed
@@ -119,9 +119,9 @@ negatives[], rsa{final_url, headlines[{text,pinned}], descriptions[{text,pinned}
 Set `campaign.status: "paused"`, `conversion_goals.scope: "campaign"`. Put any sitelinks/callouts/snippets in
 the campaign-level `extensions` block (not per ad group). Render the workbook with the shared renderer (it
 handles `ad_groups` → one AG sheet per ad group with keywords/RSA/negatives/paths):
-`python ~/.gemini/config/skills/google-ads-master/scripts/spec_to_xlsx.py <campaign-spec.json> --output blueprint.xlsx`
+`python C:/Users/INFOASIA/.gemini/config/skills/google-ads-master/scripts/spec_to_xlsx.py <campaign-spec.json> --output blueprint.xlsx`
 Verify with `validate_spec.py`: RSA char limits + counts (≤15/≤4) using **Google-accurate counting**
-(`~/.gemini/config/skills/google-ads-master/skills/google-ads-shared/references/google-ads-formatting.md`), keyword match types valid, every Final URL live (200, no
+(`C:/Users/INFOASIA/.gemini/config/skills/google-ads-master/skills/google-ads-shared/references/google-ads-formatting.md`), keyword match types valid, every Final URL live (200, no
 redirect, group-specific), negatives Exact/Phrase. Hand the JSON to `pusher` → Editor CSV
 (`spec_to_editor_csv.py`) + ready-to-copy keyword/negative blocks (`spec_to_paste.py`).
 

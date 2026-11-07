@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 CLI Tìm kiếm nhanh trong kho 299 file .sql chuẩn SAP B1 & Beas Manufacturing
-và Kho 24 câu query thực chiến SBO_MFG (thuộc skill viet-sql-sap-b1).
+và Kho 24 câu query thực chiến FVIVN (thuộc skill viet-sql-sap-b1).
 """
 import os
 import sys
@@ -13,7 +13,7 @@ sys.stdout.reconfigure(encoding="utf-8")
 SKILL_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 REF_DIR = os.path.join(SKILL_DIR, "references")
 QUERIES_DIR = os.path.join(REF_DIR, "queries")
-FALLBACK_QUERIES_DIR = r"<WORKSPACE_DIR>\SQL SAP B1\queries"
+FALLBACK_QUERIES_DIR = r"E:\DIEN APP\SQL SAP B1\queries"
 
 
 def search_queries(keyword: str, max_results: int = 15):

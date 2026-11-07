@@ -1,7 +1,7 @@
 import json
 from pathlib import Path
 
-FILE_PATH = Path(r"%USERPROFILE%\.gemini\config\skills\video-storytelling\output\batch_test_all_9_formulas\01_pas_t\storytelling_prompts.json")
+FILE_PATH = Path(r"E:\DIEN APP\Skill AI\video-storytelling\output\batch_test_all_9_formulas\01_pas_t\storytelling_prompts.json")
 
 with open(FILE_PATH, "r", encoding="utf-8") as f:
     data = json.load(f)

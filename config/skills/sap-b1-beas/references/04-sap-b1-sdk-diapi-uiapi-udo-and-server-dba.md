@@ -9,7 +9,7 @@ wiki_links:
 ---
 # LẬP TRÌNH SAP B1 SDK (DI API, UI API, SERVICE LAYER, UDO), DTW IMPORT MASTER DATA & QUẢN TRỊ SERVER MS SQL DBA
 
-Tài liệu kỹ thuật tổng hợp từ bộ tài liệu gốc của SAP Business One SDK (`<WORKSPACE_DIR>\SQL SAP B1\Help`: `REFDB.chm`, `REFDI.chm`, `REFUI.chm`, `SDK_EN.chm`, `Creating a UDO.pps`) kết hợp quy trình chuẩn hóa `Data Transfer Workbench (DTW)` và Quản trị Hạ tầng MS SQL Server dành cho đội ngũ Kỹ sư Phần mềm & DBA của công ty **Enterprise**.
+Tài liệu kỹ thuật tổng hợp từ bộ tài liệu gốc của SAP Business One SDK (`E:\DIEN APP\SQL SAP B1\Help`: `REFDB.chm`, `REFDI.chm`, `REFUI.chm`, `SDK_EN.chm`, `Creating a UDO.pps`) kết hợp quy trình chuẩn hóa `Data Transfer Workbench (DTW)` và Quản trị Hạ tầng MS SQL Server dành cho đội ngũ Kỹ sư Phần mềm & DBA của công ty **InfoAsia**.
 
 ---
 
@@ -51,7 +51,7 @@ Tài liệu kỹ thuật tổng hợp từ bộ tài liệu gốc của SAP Busi
 
 ## 2. QUY TRÌNH ĐĂNG KÝ UDT, UDF & UDO (`USER-DEFINED OBJECT` - THAM CHIẾU `CREATING A UDO.PPS`)
 
-Khi khách hàng của Enterprise có một nghiệp vụ đặc thù không có sẵn màn hình trong SAP B1 (ví dụ: *Quản lý Hợp đồng Bảo trì*, *Phiếu Yêu cầu Cấp phát Khuôn mẫu*, *Định mức Hoa hồng Đại lý*), kỹ sư sử dụng **UDO (`User-Defined Object`)** thay vì tạo bảng SQL bên ngoài:
+Khi khách hàng của InfoAsia có một nghiệp vụ đặc thù không có sẵn màn hình trong SAP B1 (ví dụ: *Quản lý Hợp đồng Bảo trì*, *Phiếu Yêu cầu Cấp phát Khuôn mẫu*, *Định mức Hoa hồng Đại lý*), kỹ sư sử dụng **UDO (`User-Defined Object`)** thay vì tạo bảng SQL bên ngoài:
 
 ### 2.1. Phân Biệt 2 Loại UDT / UDO Chuẩn SAP B1
 
@@ -118,7 +118,7 @@ Khi khách hàng của Enterprise có một nghiệp vụ đặc thù không có
 
 ## 4. CHUẨN HÓA QUY TRÌNH DTW (`DATA TRANSFER WORKBENCH`) IMPORT MASTER DATA & SỐ DƯ ĐẦU KỲ
 
-Khi triển khai dự án SAP B1 mới tại Enterprise, thứ tự nạp dữ liệu qua **DTW** bắt buộc phải tuân thủ chuỗi phụ thuộc khóa ngoại sau đây để không bị lỗi:
+Khi triển khai dự án SAP B1 mới tại InfoAsia, thứ tự nạp dữ liệu qua **DTW** bắt buộc phải tuân thủ chuỗi phụ thuộc khóa ngoại sau đây để không bị lỗi:
 
 ### 4.1. Thứ Tự 8 Bước Import Dữ Liệu Chuẩn Khi Go-Live
 1. **Bước 1 - Hệ thống Tài khoản (`Chart of Accounts - OACT`):** Import từ cấp cha (`Level 1`) xuống cấp con (`Level 2, 3, 4, 5`). Lưu ý cột `FatherAccountKey` phải tồn tại trước, tài khoản tổng hợp để `ActiveAccount = tNO`, tài khoản chi tiết hạch toán để `ActiveAccount = tYES`.
@@ -141,7 +141,7 @@ Khi triển khai dự án SAP B1 mới tại Enterprise, thứ tự nạp dữ l
 | **`-10`** | `Invalid value / Field cannot be updated` | Giá trị truyền vào không đúng kiểu (`tYES`/`tNO` bị gõ thành `Y`/`N` trên một số trường hệ thống), hoặc mã khóa ngoại (`GroupCode`, `WhsCode`, `UomEntry`) chưa được tạo trong SAP B1. |
 | **`-5002`** | `Linked value does not exist / Account is not active` | Tài khoản kế toán gắn vào dòng chứng từ là tài khoản cấp cha (`Title Account / Postable = 'N'`), hoặc mã `CardCode`/`ItemCode` có chứa khoảng trắng thừa ở cuối chuỗi trong file Excel. Dùng hàm `=TRIM(CLEAN(A2))` trước khi lưu CSV/TXT. |
 | **`-2028`** | `No matching records found (ODBC -2028)` | Khi chạy chế độ `Update` nhưng mã `ItemCode`/`CardCode`/`DocEntry` trong file không tồn tại trong Database, hoặc `LineNum` truyền vào không khớp với dòng thực tế. |
-| **`65171`** | `Invalid column name / Format error` | Dòng thứ 1 và dòng thứ 2 của file Template DTW bị lệch cột, hoặc file lưu định dạng CSV trên máy Windows dùng dấu chấm phẩy (`;`) thay vì dấu phẩy (`,`). **Khuyến nghị vàng của Enterprise:** Luôn lưu file DTW dưới định dạng **`Text (Tab delimited) (*.txt)`** hoặc **`Unicode Text (*.txt)`** để giữ nguyên tiếng Việt có dấu và không bao giờ lỗi dấu phân cách! |
+| **`65171`** | `Invalid column name / Format error` | Dòng thứ 1 và dòng thứ 2 của file Template DTW bị lệch cột, hoặc file lưu định dạng CSV trên máy Windows dùng dấu chấm phẩy (`;`) thay vì dấu phẩy (`,`). **Khuyến nghị vàng của InfoAsia:** Luôn lưu file DTW dưới định dạng **`Text (Tab delimited) (*.txt)`** hoặc **`Unicode Text (*.txt)`** để giữ nguyên tiếng Việt có dấu và không bao giờ lỗi dấu phân cách! |
 
 ---
 

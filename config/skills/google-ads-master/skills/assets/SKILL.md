@@ -18,7 +18,7 @@ One creative generator used by every builder, so copy rules and voice live in on
 - Enforce character limits and policy/trademark rules. Never put a competitor trademark in ad text.
 - Use REAL product names/prices/stock from the data source; don't invent.
 
-## Model dispatch (run cheap, decide expensive) — see `~/.gemini/config/skills/google-ads-master/skills/google-ads-shared/references/model-tier-dispatch.md`
+## Model dispatch (run cheap, decide expensive) — see `C:/Users/INFOASIA/.gemini/config/skills/google-ads-master/skills/google-ads-shared/references/model-tier-dispatch.md`
 - **Scout (`haiku`)** — pulling real product names/prices/stock from the data source; the Google-accurate char-count + ready-to-copy wrapping pass.
 - **Judge (main session)** — **all copywriting** (headlines, descriptions, long headlines, search themes, sitelinks, briefs), voice/positioning, policy/trademark safety, pin discipline. Creative is the one thing that never goes to a cheap tier; only the *inputs* (product facts) and the *validation* (char count) do.
 
@@ -31,7 +31,7 @@ claims (over-pinning kills RSA flexibility). Aim for Good/Excellent ad strength.
 ## STEP 2 — PMax asset-group copy
 Per asset group: **15 headlines (≤30)**, **5 long headlines (≤90)**, **5 descriptions (≤90; #1 ≤60)**, and
 up to **50 search themes** (raised from 25 in 2025; distinct per AG, no overlap). Use the angle mix in
-`~/.gemini/config/skills/google-ads-master/skills/google-ads-shared/references/pmax-best-practices.md`.
+`C:/Users/INFOASIA/.gemini/config/skills/google-ads-master/skills/google-ads-shared/references/pmax-best-practices.md`.
 
 ## STEP 3 — Demand Gen briefs
 Image + video briefs by spec (sizes + shot list + CTA). Combined image+video outperforms video-only.
@@ -45,7 +45,7 @@ differ enough to warrant distinct links). See `builder-pmax` STEP 7b.
 
 ## Validation
 **Count characters the Google way** (NFC-normalized, CJK/full-width = 2, no trailing/hidden whitespace) per
-`~/.gemini/config/skills/google-ads-master/skills/google-ads-shared/references/google-ads-formatting.md` — not naive `len()`, which lets copy pass here but get rejected on
+`C:/Users/INFOASIA/.gemini/config/skills/google-ads-master/skills/google-ads-shared/references/google-ads-formatting.md` — not naive `len()`, which lets copy pass here but get rejected on
 entry. Flag off-brand/banned phrasing or competitor trademark in text; confirm product references are real
 (in stock, correct price). Keywords/negatives come back **ready-to-copy wrapped** (`[exact]` / `"phrase"` /
 broad). Return assets keyed by campaign type + group for the builder to drop into `campaign-spec.json`.

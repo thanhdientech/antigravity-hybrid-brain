@@ -37,7 +37,7 @@ every output that needed the missing source is flagged `UNVERIFIED`, never fabri
 ## STEP 1 — Assess lifecycle stage
 Run the context validator to read readiness, and scan the working dir for prior artifacts:
 ```
-python ~/.gemini/config/skills/google-ads-master/skills/setup/scripts/validate_context.py ./account-context.yaml
+python C:/Users/INFOASIA/.gemini/config/skills/google-ads-master/skills/setup/scripts/validate_context.py ./account-context.yaml
 ```
 Map state → the next sensible step:
 | Readiness | Artifacts present | Likely next step |
@@ -81,7 +81,7 @@ When the user just says /google-ads (no task), produce a short status: readiness
 and the single recommended next action — then offer to run it. Don't dump everything; point to the next step.
 
 ## Model dispatch (run cheap, decide expensive)
-Spend compute by cognitive load, not by habit — see `~/.gemini/config/skills/google-ads-master/skills/google-ads-shared/references/model-tier-dispatch.md`.
+Spend compute by cognitive load, not by habit — see `C:/Users/INFOASIA/.gemini/config/skills/google-ads-master/skills/google-ads-shared/references/model-tier-dispatch.md`.
 The router itself is **Judge (J)** work (lifecycle reasoning, routing, gates). But the heavy *collection*
 each sub-skill needs is **Scout/Routine** — so as orchestrator, push it down:
 - **Scout (S, `haiku`)** — the `validate_context.py` run in STEP 1, a single status pull, one URL check.
@@ -95,5 +95,5 @@ it to **return raw, not conclude**. Each sub-skill carries its own per-STEP tier
   directory. Business data never lives in the plugin — it stays in your local `account-context.yaml`.
 - **One working folder per business; nothing scattered.** All context + outputs live under a single
   `<workdir>` with dated subfolders, and secrets are recorded as POINTERS (not copied) — see
-  `~/.gemini/config/skills/google-ads-master/skills/google-ads-shared/references/workspace-layout.md`. If there's no working folder yet, `setup` creates it.
+  `C:/Users/INFOASIA/.gemini/config/skills/google-ads-master/skills/google-ads-shared/references/workspace-layout.md`. If there's no working folder yet, `setup` creates it.
 - Sub-skills are invoked by their namespaced names (`google-ads-setup`, `google-ads-audit`, …).

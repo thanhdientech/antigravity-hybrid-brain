@@ -16,7 +16,7 @@ Tài liệu này giúp `project-blueprint-architect` thẩm định không sót 
 ### B. Công Nghệ Chuẩn & Ánh Xạ Skill Thực Thi
 | Giai Đoạn (Phase) | Công Nghệ / Tiêu Chuẩn Đề Xuất | Skill Chính Xác Cần Gọi (Trong 94 Skills) |
 | :--- | :--- | :--- |
-| **P0. Khảo sát / Bóc tách phần mềm mẫu (nếu có)** | REA Static/Dynamic Decompilation, HAR/API trace | `reverse-engineer-anything` |
+| **P0. Khảo sát / Tái lập phần mềm mẫu (Clean-Room & Deep)** | Craft Anything (Pure Rust 302 tools, Desktop GUI egui/CLI/MCP), REA Static/Dynamic Decompilation, HAR/API trace | `craft-anything`, `reverse-engineer-anything` |
 | **P1. Kiến trúc Luồng UX Web App/Admin & Design System** | `Operate Mode`, `URL-as-State`, CRUD Table/Form/Drawer, Next.js/React + Tailwind + `shadcn/ui`, `audit_webapp_ux.py` | `webapp-app-ux-workflow`, `ui-ux-design-pro-max`, `generative_ui`, `gsap-skills` |
 | **P2. Xây dựng Mobile App & Điều hướng Bản địa (nếu có)** | Stateful Bottom Tabs/Stack/Sheet, Kotlin Jetpack Compose / React Native / Flutter, Android SDK CLI | `webapp-app-ux-workflow`, `android-cli`, `android-device-hub`, `compose-preview` |
 | **P3. Lập trình Backend, DB & Tác vụ tự động** | FastAPI / Node.js / Python, SQLite WAL / PostgreSQL / MS SQL | `lean-teamwork`, `automation`, `antigravity-guide` |
@@ -87,7 +87,7 @@ Tài liệu này giúp `project-blueprint-architect` thẩm định không sót 
 | Giai Đoạn (Phase) | Công Nghệ / Tiêu Chuẩn Đề Xuất | Skill Chính Xác Cần Gọi (Trong 94 Skills) |
 | :--- | :--- | :--- |
 | **P1. Lập Sổ cái Bao phủ (`Coverage Ledger`) & Threat Model** | Liệt kê 100% file/endpoint trong phạm vi để chống bỏ sót | `security-audit` |
-| **P2. Dịch ngược tệp nhị phân / Gói đóng gói (nếu không có source)** | REA CLI/MCP (`app.asar`, `.NET`, `PyInstaller`, `.apk`, `Ghidra`) | `reverse-engineer-anything` |
+| **P2. Dịch ngược tệp nhị phân & Tái lập phần mềm (nếu không có source)** | Craft Anything (`craft-anything-cli`, Rust 302 tools, Desktop App egui, Clean-room/Deep), REA CLI/MCP (`app.asar`, `.NET`, `PyInstaller`, `.apk`, `Ghidra`) | `craft-anything`, `reverse-engineer-anything` |
 | **P3. Quét chuyên sâu các lớp lỗ hổng & Đối chứng PoC** | `ATTACK-CLASSES.md`, `validate-findings.cjs`, `validate-coverage-ledger.cjs` | `security-audit` |
 | **P4. Kiểm toán hành vi AI Agent / Prompt Injection** | 60 bài test iFixAi 5 trụ cột, xuất Scorecard `A–F` | `ifixai-agent-auditor`, `credentials` |
 

@@ -1,6 +1,6 @@
 ---
 name: wordpress-flatsome-designer
-description: "Thiết kế website WordPress theme Flatsome 3.x: Shortcodes UX Builder chuẩn 100%, Child Theme, tối ưu SEO & CRO."
+description: "Thiết kế web WordPress Flatsome 3.x, Shop bán hàng, Giỏ hàng, Dịch vụ, Báo giá VIP, CRM, Tốc độ, SEO & 80 QA Checklist."
 group: "Marketing, Web & SEO"
 ---
 
@@ -9,10 +9,19 @@ group: "Marketing, Web & SEO"
 <!-- JAVIS_TRIGGER_ARCHIVE_START -->
 ## Khi nào dùng (Triggers & Ngữ cảnh kích hoạt đầy đủ)
 
-> Thiết kế, xây dựng và tùy biến website WordPress sử dụng theme Flatsome 3.x và UX Builder. Hỗ trợ tạo cấu trúc Shortcodes UX Builder chuẩn xác 100%, cấu hình responsive, viết mã Child Theme (hooks, filters, functions.php, style.css), và thiết kế giao diện showroom, landing page, thương mại điện tử chuẩn SEO và chuyển đổi cao.
+> Thiết kế, xây dựng, nâng cấp và kiểm toán website WordPress sử dụng theme Flatsome 3.x và UX Builder. Hỗ trợ tạo cấu trúc Shortcodes UX Builder chuẩn xác 100%, cấu hình responsive, viết mã Child Theme (`functions.php`, `style.css`, `archive.php`, `content-single.php`), thiết kế **(1) Website Thương mại Dịch vụ & Tư vấn B2B không có giỏ hàng** VÀ **(2) Website Thương mại Dịch vụ – Cửa hàng (Shop) có bán hàng, có giỏ hàng (Cart/Checkout), có sản phẩm niêm yết giá song song sản phẩm Báo giá VIP (`0₫`) & Dịch vụ đặt lịch**, bộ lọc thông minh (`URL-as-State`), hộp thoại Mua Nhanh 1 bước (`Quick-Buy Modal`), Trợ lý AI bán hàng nhớ lịch sử (`sessionStorage`) + Mini-CRM Realtime (`/crm/`), tối ưu tốc độ WP Rocket + khóa chống lỗi tự tải file `.html_gzip` trên LiteSpeed/OpenLiteSpeed, SEO/GEO (`6 lớp Schema JSON-LD`, `llms.txt`) và kiểm toán 80 tiêu chí QA trước khi bàn giao.
+> TRIGGERS: "flatsome", "ux builder", "wordpress flatsome", "web thương mại dịch vụ", "web thuong mai dich vu", "web bán hàng có giỏ hàng", "web ban hang co gio hang", "web có shop có giá", "web co shop co gia", "web dịch vụ không bán hàng", "web tư vấn b2b", "web công ty luật", "qa checklist web dịch vụ", "qa checklist web bán hàng", "qa checklist ecommerce", "bộ lọc thông minh woocommerce", "mua nhanh 1 chạm", "sản phẩm báo giá vip", "mini crm wordpress", "chống lỗi html_gzip wp rocket", "strip_ols_incompatible_gzip_rewrite".
 <!-- JAVIS_TRIGGER_ARCHIVE_END -->
 
 Kỹ năng chuyên sâu dành cho AI Agent trong việc thiết kế giao diện, lập trình tùy biến và tối ưu hóa website WordPress vận hành trên **Flatsome Theme** và công cụ **UX Builder**.
+
+## 0. Bảng Điều Phối Tài Liệu Chuyên Sâu (`references/`)
+
+| Hạng Mục Thực Thi | Tệp Tham Chiếu Chi Tiết | Nội Dung Cốt Lõi |
+| :--- | :--- | :--- |
+| **Playbook & 75 Tiêu Chí QA Web Thương Mại Dịch Vụ – B2B (Không Giỏ Hàng)** | [`references/01-b2b-service-leadgen-crm-speed-seo-qa-playbook.md`](./references/01-b2b-service-leadgen-crm-speed-seo-qa-playbook.md) | Kiến trúc No-Cart Service Website, chia ô cân đối chiều cao (`Equal-Height Grid`), 7 chốt chặn UI/UX Mobile & Desktop, cấu hình WP Rocket + khóa chống lỗi download `.html_gzip` LiteSpeed, SEO/GEO (`llms.txt`) & Mini-CRM (`/crm/`). |
+| **Đại Từ Điển 120+ Tiêu Chí QA Web B2B / Thương Mại – Dịch Vụ Có Trang Sản Phẩm Trưng Bày (Catalog Showcase Không Giỏ Hàng + CRM + Chatbot 3 Tầng)** | [`references/02-b2b-catalog-showcase-crm-chatbot-qa-master.md`](./references/02-b2b-catalog-showcase-crm-chatbot-qa-master.md) | Kiến trúc 6 lớp cho Website có trang Sản phẩm/Danh mục trưng bày nhưng không bán lẻ trực tiếp: Báo giá nhanh `0ms` (`Zero-AJAX`), Tìm kiếm chính xác 3 tầng trọng số (`Precision Search`), Bộ lọc không điểm chết (`Zero-Dead-End Fallback`), Mobile Instant-Nav + Khóa `.html_gzip` OpenLiteSpeed/Tadu WAF, Chatbot 3 tầng & Web CRM chống Click Tặc. |
+| **Master Blueprint & 80 Tiêu Chí QA Web Thương Mại Dịch Vụ Có Bán Hàng, Có Shop, Có Giỏ Hàng, Có Giá & CRM (`v2.5.2`)** | [`references/02-ecommerce-shop-cart-service-crm-qa-checklist.md`](./references/02-ecommerce-shop-cart-service-crm-qa-checklist.md) | Kiến trúc Hybrid Catalog (Hàng có giá + Hàng báo giá VIP `0₫` + Gói dịch vụ đặt lịch), Smart Filter (`URL-as-State` & `$wp_the_query`), 1-Click Quick-Buy Modal, Checkout rút gọn VN, UI/UX Mobile `390×844` & Laptop `1366×768`, WP Rocket + OpenLiteSpeed `.html_gzip` Guard, 6 lớp Schema JSON-LD, Chatbot AI (`sessionStorage`) & CRM Realtime. |
 
 ---
 

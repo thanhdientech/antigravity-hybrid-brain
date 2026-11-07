@@ -21,7 +21,7 @@ context and the audit/measurement outputs — no hardcoding, no guessing where d
    user to fix tracking first. WARN is allowed but carried into the plan as a risk note.
 3. Confirm `campaign_defaults.daily_budget` (or ask). Output is written to the working directory.
 
-## Model dispatch (run cheap, decide expensive) — see `~/.gemini/config/skills/google-ads-master/skills/google-ads-shared/references/model-tier-dispatch.md`
+## Model dispatch (run cheap, decide expensive) — see `C:/Users/INFOASIA/.gemini/config/skills/google-ads-master/skills/google-ads-shared/references/model-tier-dispatch.md`
 - **Scout (`haiku`)** — the `forecaster.py` run; reading existing campaign budgets.
 - **Routine (`sonnet`)** — STEP 1 mode-detection pull (existing campaigns + spend), STEP 4 deriving CPC/CVR from account data. Dispatch as `general-purpose` sub-agents; **return raw, don't decide the mode**.
 - **Judge (main session)** — STEP 0 measurement gate, the campaign mix + sequencing, budget split, forecast interpretation (band not promise), ramp roadmap, risks. The data is cheap; the plan is judgment.
@@ -78,7 +78,7 @@ Recommend additions/reallocations against what already exists, not a from-scratc
 State which mode you detected and why.
 
 ## STEP 2 — Campaign mix (which types, in what order)
-Use the vertical priority in `~/.gemini/config/skills/google-ads-master/skills/google-ads-shared/references/vertical-defaults.md` + what's missing in the account:
+Use the vertical priority in `C:/Users/INFOASIA/.gemini/config/skills/google-ads-master/skills/google-ads-shared/references/vertical-defaults.md` + what's missing in the account:
 - ecommerce: PMax/Shopping → Branded Search → Search → Demand Gen.
 - leadgen / saas / b2b: (Branded) Search → Search → Demand Gen.
 Justify each: goal it serves (acquisition / defense / scale), and why now. Coordinate **Branded Search +
@@ -96,7 +96,7 @@ PMax brand exclusion** so they don't cannibalize (honor `pmax-brand-exclusion` g
   number of campaigns/AGs the budget can actually feed and say so.
 - Apply `margin_tiers`: high-margin lines can run at lower ROAS; reflect that in the split.
 
-## STEP 4 — Forecast (derive, don't guess) — see `~/.gemini/config/skills/google-ads-master/skills/google-ads-shared/references/forecasting-and-benchmarks.md`
+## STEP 4 — Forecast (derive, don't guess) — see `C:/Users/INFOASIA/.gemini/config/skills/google-ads-master/skills/google-ads-shared/references/forecasting-and-benchmarks.md`
 - **EXPANSION**: derive CPC and CVR from the account's own recent data; project
   clicks = budget / CPC, conversions = clicks × CVR, revenue = conversions × AOV, ROAS = revenue / spend,
   CPA = spend / conversions. Present as a band, not a point estimate.
@@ -106,7 +106,7 @@ PMax brand exclusion** so they don't cannibalize (honor `pmax-brand-exclusion` g
   data (context `connections.store = missing`), say so and label the revenue/ROAS line **UNVERIFIED —
   connect store for a real AOV**; use a clearly-flagged provisional only with the user's OK. Never present a
   guessed AOV as fact — it silently distorts every revenue/ROAS number downstream.
-- Runnable helper: `python ~/.gemini/config/skills/google-ads-master/skills/plan/scripts/forecaster.py --budget B --cpc C --cvr R --aov A
+- Runnable helper: `python C:/Users/INFOASIA/.gemini/config/skills/google-ads-master/skills/plan/scripts/forecaster.py --budget B --cpc C --cvr R --aov A
   [--target-roas T]` → prints conv/revenue/ROAS/CPA bands + learning capacity (how many campaigns the
   budget can feed).
 

@@ -14,7 +14,7 @@ Tài liệu này là chỉ mục băm nhỏ (Smart-Loading Chunk) cho nhóm câu
 | **Ngân hàng & Dòng tiền (`Banking`)** | `references/queries/Banking/` | 5 file `.sql` truy vấn Phiếu thu (`ORCT`), Phiếu chi (`OVPM`), Sổ phụ ngân hàng và tiền mặt. |
 | **Tài sản cố định (`Fixed Asset`)** | `references/queries/Fixed Asset/` | 2 file `.sql` theo dõi danh mục TSCĐ và khấu hao. |
 | **Khóa sổ cuối tháng (`98.Monthly closing` & `Monthly Closing`)** | `references/queries/98.Monthly closing/`<br>`references/queries/Monthly Closing/` | 5 file `.sql` kiểm tra chênh lệch Sổ kho (`OINM`) vs Sổ cái (`OJDT`/`JDT1`), kiểm tra chứng từ treo trước khi khóa kỳ kế toán (`OFPR`). |
-| **Tài chính Thực chiến SBO_MFG (`SYNC_SBO_MFG_PROD_SSMS\Financials`)** | `references/queries/SYNC_SBO_MFG_PROD_SSMS/Financials/` | 5 file `.sql` thực chiến đang chạy tại SBO_MFG (`SBO_MFG_PROD` / `SBO_MFG_PLANT1`). |
+| **Tài chính Thực chiến FVIVN (`SYNC_FVIVN_PROD_SSMS\Financials`)** | `references/queries/SYNC_FVIVN_PROD_SSMS/Financials/` | 5 file `.sql` thực chiến đang chạy tại FVIVN (`FVIVN_PROD` / `FVIVN_GoLive_2024`). |
 
 ---
 

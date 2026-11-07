@@ -12,7 +12,7 @@ group: "ERP SAP B1 & SQL"
 > Kiến trúc sư Giải pháp & Tổng Công Trình Sư SAP Business One (9.3 & 10.0 MS SQL / HANA) và Boyum IT Beas Manufacturing. Bao gồm: Kiến trúc DB 9.3 vs 10.0, Beas Manufacturing (Work Order, BOM Batch Changes batchanderung.htm, Routing, BDC Time Receipt, QC, đóng lệnh ABGKZ), Kế toán Giá thành Sản xuất (WIP TK 154, lệch sổ kho OINM vs sổ cái OJDT), Luồng Mua-Bán-Kho (P2P, O2C, Batch OBTN, Serial OSRN, Bin OBIN, MRP), Thuế & Chế độ Kế toán (Thông tư 99/2025/TT-BTC thay TT 200 từ 01/01/2026, TT 78, TT 98), Lập trình SDK (DI API, UI API, Service Layer port 50000, UDO) và DTW Import Master Data. TRIGGERS: "sap b1", "beas", "beas manufacturing", "batchanderung", "lệnh sản xuất beas", "giá thành sap", "wip 154", "thông tư 99", "dtw import", "service layer sap", "di api", "ui api", "udo sap".
 <!-- JAVIS_TRIGGER_ARCHIVE_END -->
 
-Skill này đóng gói toàn bộ kho tri thức chuyên sâu của **Javis OS Enterprise ERP Center** về **SAP Business One (9.3 & 10.0)** và **Boyum IT Beas Manufacturing**, đã được băm nhỏ thành **10 học phần tham chiếu (`references/`)** và **công cụ thực thi (`scripts/`)** để tối ưu hóa ngữ cảnh (chỉ đọc đúng file cần dùng, không nạp thừa).
+Skill này đóng gói toàn bộ kho tri thức chuyên sâu của **Javis OS InfoAsia ERP Center** về **SAP Business One (9.3 & 10.0)** và **Boyum IT Beas Manufacturing**, đã được băm nhỏ thành **10 học phần tham chiếu (`references/`)** và **công cụ thực thi (`scripts/`)** để tối ưu hóa ngữ cảnh (chỉ đọc đúng file cần dùng, không nạp thừa).
 
 ---
 
@@ -40,7 +40,7 @@ Khi giải quyết yêu cầu của người dùng, **chỉ đọc (`read_file`)
 ### 2.1. An Toàn Dữ Liệu & Bảo Hành Hãng (Zero Direct Write on Standard Tables)
 - **CẤM TUYỆT ĐỐI** chạy hoặc xúi giục chạy `INSERT`, `UPDATE`, `DELETE`, `DROP`, `ALTER`, `TRUNCATE` trực tiếp bằng SQL lên các bảng chuẩn của SAP B1 (`OITM`, `OCRD`, `ORDR`, `OINV`, `OJDT`, `OINM`...) và các bảng chuẩn của Beas (`BEAS_FTHAUPT`, `BEAS_FTPOS`, `BEAS_STL`...).
 - Mọi thao tác ghi dữ liệu vào SAP B1 bắt buộc đi qua:
-  1. **SAP B1 Service Layer (`https://<server>:50000/b1s/v1/Login`)** trên SAP B1 10.0 (ví dụ Server A — Database `SBO_MAIN_PROD`, tài khoản `manager`).
+  1. **SAP B1 Service Layer (`https://<server>:50000/b1s/v1/Login`)** trên SAP B1 10.0 (ví dụ Con 24 — Database `infoasia56`, tài khoản `manager`).
   2. **DI API (`SAPbobsCOM`)** hoặc **Beas Script / BSL (Beas Service Layer)**.
   3. **DTW (Data Transfer Workbench)** cho Import Master Data / Chứng từ hàng loạt.
 
@@ -65,5 +65,5 @@ Khi giải quyết yêu cầu của người dùng, **chỉ đọc (`read_file`)
 ## 3. Công Cụ DTW Import Master Data (`scripts/dtw_master_importer.py`)
 
 Khi cần kiểm tra cấu trúc 2 dòng Header chuẩn của DTW (Row 1: Tên trường DTW API, Row 2: Tên cột DB SAP), chuyển đổi Hệ thống Tài khoản Kế toán (ví dụ mở rộng đầu `642` sang `643` theo Thông tư 99/2025/TT-BTC), hoặc kiểm tra lỗi trùng khóa trước khi Import DTW:
-- Sử dụng script: `scripts/dtw_master_importer.py` (hoặc thư mục gốc `<WORKSPACE_DIR>\SAP B1 IMPORT MASTER DATA\dtw_master_importer.py`).
+- Sử dụng script: `scripts/dtw_master_importer.py` (hoặc thư mục gốc `E:\DIEN APP\SAP B1 IMPORT MASTER DATA\dtw_master_importer.py`).
 - Khi cần truy vấn dữ liệu trực tiếp trên 5 Server SAP B1 (`/24`, `/160`, `/160 HCM`, `/160 LT`, `/52`), kết hợp ngay với skill **`sql-sap-b1`** và **`viet-sql-sap-b1`**.

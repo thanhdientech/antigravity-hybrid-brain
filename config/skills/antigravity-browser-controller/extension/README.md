@@ -25,7 +25,7 @@ Tiện ích mở rộng Google Chrome (Manifest V3) chuyên dụng dành cho **A
 2. Bấm vào nút **"Load unpacked" (Tải tiện ích đã giải nén)** ở góc trên bên trái.
 3. Chọn thư mục:
    ```text
-   %USERPROFILE%\.gemini\config\skills\antigravity-browser-extension
+   E:\DIEN APP\Skill AI\antigravity-browser-extension
    ```
 4. Ngay lập tức, biểu tượng **Antigravity Omni-Browser Controller** màu xanh Cyan sẽ xuất hiện trên thanh công cụ của Chrome!
 
@@ -34,10 +34,10 @@ Tiện ích mở rộng Google Chrome (Manifest V3) chuyên dụng dành cho **A
 ## 🖥️ HƯỚNG DẪN KẾT NỐI VỚI ANTIGRAVITY AGENT
 
 1. Chạy máy chủ cầu nối Bridge Server:
-   - Click đúp vào file: `%USERPROFILE%\.gemini\config\skills\antigravity-browser-bridge\start_bridge.bat`
+   - Click đúp vào file: `E:\DIEN APP\Skill AI\antigravity-browser-bridge\start_bridge.bat`
    - Hoặc gõ lệnh:
      ```bash
-     python "%USERPROFILE%\.gemini\config\skills\antigravity-browser-bridge\server.py"
+     python "E:\DIEN APP\Skill AI\antigravity-browser-bridge\server.py"
      ```
 2. Bấm vào icon tiện ích trên Chrome: Sẽ thấy chấm xanh 🟢 **ĐÃ KẾT NỐI (Live)**!
 3. Giờ đây, Antigravity Agent có thể điều khiển Chrome bằng CLI:

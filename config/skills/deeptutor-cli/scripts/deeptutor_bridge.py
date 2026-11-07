@@ -26,6 +26,7 @@ DEFAULT_REPO_CANDIDATES = [
     os.environ.get("DEEPTUTOR_REPO_PATH", ""),
     r"D:\DeepTutor",
     str(Path.home() / "DeepTutor"),
+    "/home/infoasia/DeepTutor",
 ]
 
 OFFICIAL_CAPABILITIES: Dict[str, str] = {

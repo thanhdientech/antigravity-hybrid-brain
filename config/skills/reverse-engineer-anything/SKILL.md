@@ -4,17 +4,17 @@ description: "Dịch ngược & bóc tách phần mềm/nhị phân (.exe, Elect
 group: "Kiểm Toán & Điều Phối AI"
 ---
 
-# 🛠️ REA — Reverse Engineer Anything (`reverse-engineer-anything` v6.7.0)
+# 🛠️ REA — Reverse Engineer Anything (`reverse-engineer-anything` v6.8.0)
 
 <!-- JAVIS_TRIGGER_ARCHIVE_START -->
 ## Khi nào dùng (Triggers & Ngữ cảnh kích hoạt đầy đủ)
 
-> Kỹ thuật dịch ngược (Reverse Engineering), bóc tách gói cài đặt và phân tích hành vi thực thi của phần mềm đóng gói / tệp nhị phân bằng bộ công cụ **REA (`morluto/rea` v6.7.0)** qua CLI hoặc MCP Server: bung bộ cài NSIS/InnoSetup/MSI/ZIP, bóc tách ứng dụng Electron (`app.asar` & JavaScript/Webpack bundle), dịch ngược `.NET / C#` Managed Assembly, giải nén `PyInstaller (.exe -> .pyc -> .py)`, phân tích Android `.apk` (JADX), mã máy Native `.exe / .dll / ELF / Mach-O` (Ghidra/Hopper/Rizin), firmware, bắt gói tin mạng `.har / mitmproxy` tìm API ngầm và tái tạo mã nguồn sạch (`Clean-Room Rewrite`). Không dùng REA khi đã có sẵn toàn bộ mã nguồn gốc của repo thông thường.
+> Kỹ thuật dịch ngược (Reverse Engineering), bóc tách gói cài đặt và phân tích hành vi thực thi của phần mềm đóng gói / tệp nhị phân bằng bộ công cụ **REA (`morluto/rea` v6.8.0)** qua CLI hoặc MCP Server: bung bộ cài NSIS/InnoSetup/MSI/ZIP, bóc tách ứng dụng Electron (`app.asar` & JavaScript/Webpack bundle), dịch ngược `.NET / C#` Managed Assembly, giải nén `PyInstaller (.exe -> .pyc -> .py)`, phân tích Android `.apk` (JADX), mã máy Native `.exe / .dll / ELF / Mach-O` (Ghidra/Hopper/Rizin), firmware, bắt gói tin mạng `.har / mitmproxy` tìm API ngầm và tái tạo mã nguồn sạch (`Clean-Room Rewrite`). Không dùng REA khi đã có sẵn toàn bộ mã nguồn gốc của repo thông thường.
 > TRIGGERS: "rea", "reverse engineer", "reverse engineering", "reverse-engineer-anything", "dịch ngược", "dich nguoc", "bóc tách phần mềm", "boc tach phan mem", "bung file exe", "giải nén asar", "app.asar", "electron decompile", "pyinstaller unpack", "decompile c#", "decompile dotnet", "bóc tách apk", "ghidra", "bắt gói tin api", "reverse api", "clean-room rewrite", "phân tích file nhị phân".
 <!-- JAVIS_TRIGGER_ARCHIVE_END -->
 
-- **Kho mã nguồn gốc trên máy (có `.git` để check update):** `~/.gemini/config/skills/reverse-engineer-anything/` (hoặc `npx -y rea-agents@latest`) (`origin`: [morluto/rea](https://github.com/morluto/rea), version `6.7.0`).
-- **Tệp thực thi CLI cục bộ:** `npx -y rea-agents@latest` (hoặc `npx -y rea-agents@latest`).
+- **Kho mã nguồn gốc trên máy (có `.git` để check update):** [`E:\DIEN APP\Skill AI\rea\`](file:///E:/DIEN%20APP/Skill%20AI/rea/) (`origin`: [morluto/rea](https://github.com/morluto/rea), version `6.8.0`).
+- **Tệp thực thi CLI cục bộ:** `node "E:\DIEN APP\Skill AI\rea\scripts\rea.mjs"` (hoặc `npx -y rea-agents@latest`).
 
 ---
 
@@ -37,13 +37,13 @@ group: "Kiểm Toán & Điều Phối AI"
 
 ```powershell
 # 1. Kiểm tra sức khỏe kết nối REA với Antigravity (Read-Only):
-npx -y rea-agents@latest doctor --client antigravity --json
+node "E:\DIEN APP\Skill AI\rea\scripts\rea.mjs" doctor --client antigravity --json
 
 # 2. Phân tích trực tiếp ứng dụng Electron (.asar) hoặc cây thư mục JavaScript đóng gói:
-npx -y rea-agents@latest analyze-javascript-application "E:\duong_dan\app.asar" --json
+node "E:\DIEN APP\Skill AI\rea\scripts\rea.mjs" analyze-javascript-application "E:\duong_dan\app.asar" --json
 
 # 3. Khởi chạy máy chủ REA MCP từ bản cài đặt cục bộ (khi cấu hình vào mcp_config.json):
-npx -y rea-agents@latest mcp
+node "E:\DIEN APP\Skill AI\rea\scripts\rea.mjs" mcp
 ```
 
 ---

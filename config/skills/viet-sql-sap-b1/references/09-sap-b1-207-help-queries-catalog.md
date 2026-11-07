@@ -1,6 +1,6 @@
 # DANH MỤC 207 CÂU LỆNH SQL CHUẨN TỪ THƯ MỤC HELP (SAP B1 & BEAS)
 
-Tổng số câu lệnh SQL thực chiến đã trích xuất từ <WORKSPACE_DIR>\SQL SAP B1\Help: **207 queries**.
+Tổng số câu lệnh SQL thực chiến đã trích xuất từ E:\DIEN APP\SQL SAP B1\Help: **207 queries**.
 
 
 ## Nhóm: 01.Finance Queries (16 queries)
@@ -42,8 +42,7 @@ Tổng số câu lệnh SQL thực chiến đã trích xuất từ <WORKSPACE_DI
 
 - **00.Vendor List** (Vendor List): Bảng `OCRD, OCTG` | Tham số: `Không có`
 - **01.Purchase Request List** (Purchase Request List): Bảng `OPEN, OPRC, OPRQ, OUSR, PRQ1` | Tham số: `@StartDate (DateTime), @EndDate (DateTime), @UserCode (String)`
-- **02.Purchase Quotation Details** (Purchase Quotation Details
-
+- **02.Purchase Quotation Details** (Purchase Quotation Details
 ): Bảng `OPEN, OPQT, PQT1` | Tham số: `@Reference (String), @CardCode (String), @ItemCode (String), @StartDate (DateTime), @EndDate (DateTime), @OPENorCLOSE (String)`
 - **03.PO Details** (Purchase Orders Details): Bảng `OPEN, OPOR, POR1` | Tham số: `@Reference (String), @CardCode (String), @ItemCode (String), @StartDate (DateTime), @EndDate (DateTime), @OPEN (String)`
 - **04.GRPO Details** (GRPO List): Bảng `OPDN, OPEN, PDN1` | Tham số: `@Reference (String), @CardCode (String), @ItemCode (String), @StartDate (DateTime), @EndDate (DateTime), @OPENorCLOSE (String)`
@@ -71,24 +70,16 @@ Tổng số câu lệnh SQL thực chiến đã trích xuất từ <WORKSPACE_DI
 
 ## Nhóm: 06.Production Queries (4 queries)
 
-- **Material Issue Details** (Material Issue Details
-
-Set the parameter value here ('FG' for 'FG', 'Material' for 'Material', or NULL for all)
-
-FG means rework into WIP
-
-Material means material issue
-
+- **Material Issue Details** (Material Issue Details
+Set the parameter value here ('FG' for 'FG', 'Material' for 'Material', or NULL for all)
+FG means rework into WIP
+Material means material issue
 ): Bảng `BEAS_FTHAUPT, BEAS_FTSTL, IGE1, IVL1, OIGE, OIVL` | Tham số: `@StartDate (DateTime), @EndDate (DateTime)`
-- **Production Item IN/OUT and Cost List (this year)** (Production Item IN/OUT and Cost List (this year)
-
+- **Production Item IN/OUT and Cost List (this year)** (Production Item IN/OUT and Cost List (this year)
 ): Bảng `N/A` | Tham số: `Không có`
-- **Production POST-IN** (Production POST-In Details
-
-Set the parameter value here ('FG' for 'FG', 'Material' for 'Material', or NULL for all)
-
-FG means Production IN
-
+- **Production POST-IN** (Production POST-In Details
+Set the parameter value here ('FG' for 'FG', 'Material' for 'Material', or NULL for all)
+FG means Production IN
 Material means "Material Return"): Bảng `BEAS_FTHAUPT, IGN1, OIGN, OITM` | Tham số: `@StartDate (DateTime), @EndDate (DateTime)`
 - **Workorder  List** (Workorder  list): Bảng `BEAS_FTHAUPT, BEAS_FTPOS` | Tham số: `@Reference (String), @SItemcode (String), @EItemcode (String), @Close (String)`
 
@@ -107,12 +98,10 @@ Material means "Material Return"): Bảng `BEAS_FTHAUPT, IGN1, OIGN, OITM` | Tha
 
 ## Nhóm: 98.Monthly closing (3 queries)
 
-- **Manual WIP Voucher (Should be empty)** (This is a query to show manual wip account voucher. 
-
+- **Manual WIP Voucher (Should be empty)** (This is a query to show manual wip account voucher. 
 Normally, show be empty. WIP Voucher should not exist.): Bảng `IGE1, IGN1, JDT1, OIGE, OIGN, OJDT` | Tham số: `@EndDate (String)`
 - **The account summary by each WO at a Specific Date** (This is a query to show the account summary for each WO on a specific date.): Bảng `BEAS_FTHAUPT, BEAS_FTPOS, IGE1, IGN1, JDT1, OIGE, OIGN, OJDT` | Tham số: `@EndDate (DateTime)`
-- **WIP Value by End of Date** (This query is to show the WIP Value of Work order by end of date.The Total value will be the same as Trial balance.
-
+- **WIP Value by End of Date** (This query is to show the WIP Value of Work order by end of date.The Total value will be the same as Trial balance.
 For example, in trial balance, end of year, the WIP value is 100M. Then, run this q): Bảng `BEAS_FTHAUPT, BEAS_FTPOS, IGE1, IGN1, JDT1, OIGE, OIGN, OJDT` | Tham số: `@date (String)`
 
 ## Nhóm: 99.Master Data Queries (4 queries)

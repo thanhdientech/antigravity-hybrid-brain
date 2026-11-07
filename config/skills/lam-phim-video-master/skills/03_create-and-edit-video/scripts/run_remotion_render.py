@@ -9,7 +9,7 @@ if hasattr(sys.stdout, 'reconfigure'):
 if hasattr(sys.stderr, 'reconfigure'):
     sys.stderr.reconfigure(encoding='utf-8')
 
-REMOTION_ROOT = r"<WORKSPACE_DIR>\Xây Kênh Youtube\Tool render edit Video\omniflash\video-ai-workflow\pro-text-to-video"
+REMOTION_ROOT = r"E:\DIEN APP\Xây Kênh Youtube\Tool render edit Video\omniflash\video-ai-workflow\pro-text-to-video"
 RENDER_SCRIPT = os.path.join(REMOTION_ROOT, "scripts", "render-universal.mjs")
 
 def render_remotion(props_json_path, output_mp4_path, audio_path=None, srt_path=None):

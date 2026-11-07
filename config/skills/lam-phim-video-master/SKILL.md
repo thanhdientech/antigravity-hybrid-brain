@@ -15,7 +15,7 @@ group: "Làm Phim & Video AI"
 *(Kho Tổng Hợp Tự Chứa 13 Bộ Skill Làm Phim & Video — 1,875 Files Gom Chung Trong Thư Mục `./skills/`)*
 
 > **Sổ tay hướng dẫn tiếng Việt đầy đủ:** [`SO_TAY_TONG_HOP_SKILL_LAM_PHIM_VIDEO.md`](./SO_TAY_TONG_HOP_SKILL_LAM_PHIM_VIDEO.md)  
-> **Thư mục dự án:** [`%USERPROFILE%\.gemini\config\skills\lam-phim-video-master\`](file:///WORKSPACE_DIR/Skill%20AI/lam-phim-video-master/)
+> **Thư mục dự án:** [`E:\DIEN APP\Skill AI\lam-phim-video-master\`](file:///E:/DIEN%20APP/Skill%20AI/lam-phim-video-master/)
 
 ---
 
@@ -34,7 +34,7 @@ Toàn bộ các skill cũ và mới đã được copy trực tiếp vào thư m
 | **[`07_remotion-skills`](./skills/07_remotion-skills/)** | 285 files | Kho kỹ năng chuyên sâu lập trình video React/TypeScript bằng Remotion (Captions, 3D, Charts, Shaders, Transitions) | `remotion/SKILL.md` & `rules/` |
 | **[`08_motion-ai-kit`](./skills/08_motion-ai-kit/)** | 20 files | Bộ công cụ AI thiết kế chuyển động UI/UX & đồ họa động (Motion Design System) | `plugins/`, `docs/` |
 | **[`09_entervi-auto-edit-logic`](./skills/09_entervi-auto-edit-logic/LOGIC_GHEP_VIDEO_AUTO_ENTERVI.md)** | 2 files | Thuật toán và kiến trúc ghép video hàng loạt tự động bóc tách từ hệ thống Entervi Auto Edit | `LOGIC_GHEP_VIDEO_AUTO_ENTERVI.md` |
-| **[`10_yt-shortcode-commander`](./skills/10_yt-shortcode-commander/SKILL.md)** | 1 file | Dây chuyền 6 lệnh sản xuất tự động cho 3 kênh YouTube (Channel_01_Mythology_EN, Channel_02_Science_DE, Some Guy) | `SKILL.md` |
+| **[`10_yt-shortcode-commander`](./skills/10_yt-shortcode-commander/SKILL.md)** | 1 file | Dây chuyền 6 lệnh sản xuất tự động cho 3 kênh YouTube (Every Myth Explained, KosmosGeist, Some Guy) | `SKILL.md` |
 | **[`11_prompts-chat-lookup`](./skills/11_prompts-chat-lookup/SKILL.md)** | 2 files | Công cụ tìm kiếm 2,627 System Prompts + 31 chương sách Prompt Engineering & kết nối Live MCP `prompts.chat` | `SKILL.md`, `search_prompts_chat.py` |
 | **[`12_awesome-opus-703-prompts`](./skills/12_awesome-opus-703-prompts/HUONG_DAN_SU_DUNG_KHO_703_OPUS_VIDEO_PROMPTS.md)** | 707 files | Toàn bộ 703 Prompts mẫu "Code-as-Video" (Motion, 3D Three.js, Explainer, Interactive) kèm công cụ tìm kiếm | `search_prompts.py`, `prompts/`, `data/` |
 | **[`13_PromptDirector`](./skills/13_PromptDirector/README.md)** | 694 files | Tiện ích Chrome/Edge lưu mẫu Video/Prompt 1 chạm từ Seedance, Higgsfield, Midjourney + Cổng kết nối Local MCP | `README.md`, `extension/`, `connector/` |

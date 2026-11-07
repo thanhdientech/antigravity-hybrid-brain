@@ -31,7 +31,7 @@ These are generic; `guardrails` in the context may strengthen or add to them. Ho
   **Before flagging ANY conversion-action contamination (out-of-brand / micro / duplicate), check
   `primary_for_goal`.** A non-primary action does not enter Smart Bidding and does not affect performance —
   it's harmless; surface it as a NOTE (tidy-up), never a scored finding. Only a PRIMARY out-of-brand/micro
-  action that an active campaign optimizes toward is a real issue. See `~/.gemini/config/skills/google-ads-master/skills/google-ads-shared/references/conversion-tracking-logic.md`.
+  action that an active campaign optimizes toward is a real issue. See `C:/Users/INFOASIA/.gemini/config/skills/google-ads-master/skills/google-ads-shared/references/conversion-tracking-logic.md`.
 - **GUARD-2 Negatives — FOUR sources, merge ALL.** (1) `campaign_criterion` (negative=true) — campaign-level;
   (2) `campaign_shared_set` → `shared_set` → `shared_criterion` — SHARED LISTS (the bulk: e.g. "Account Level
   Negative", "OPI Negative", brand blocks); (3) `customer_negative_criterion` — ACCOUNT-LEVEL negatives applied
@@ -64,7 +64,7 @@ ENABLED asset groups / ad groups, and auditing them produces stale, misleading f
 queries by `campaign.id IN (active set)`, or pull them WITH metrics over the window and drop zero-impression
 rows app-side (metrics can't go in a GAQL WHERE). Never audit a campaign that hasn't served in the window.
 
-## Model dispatch (run cheap, decide expensive) — see `~/.gemini/config/skills/google-ads-master/skills/google-ads-shared/references/model-tier-dispatch.md`
+## Model dispatch (run cheap, decide expensive) — see `C:/Users/INFOASIA/.gemini/config/skills/google-ads-master/skills/google-ads-shared/references/model-tier-dispatch.md`
 - **Scout (`haiku`)** — STEP 0 context read; the `money_leak_report.py` render (→ the single `AUDIT.html`) after the Judge writes `audit-result.json`; single URL/landing 200 checks.
 - **Routine (`sonnet`)** — build the active-campaign set; the account data-bundle pull (campaigns, assets, change history); the dual-source search-term pull (per-PMax `campaign_search_term_insight` loop). Dispatch as `general-purpose` sub-agents (they keep MCP); tell them to **return raw rows, not score**.
 - **Judge (main session)** — applying GUARD-1…6, every PASS/WARN/FAIL call, the score, the Gap-to-100 ledger, Quick Wins. **Never delegate a guard or a verdict** — a Scout pulls numbers, the Judge says what they mean.
@@ -73,7 +73,7 @@ rows app-side (metrics can't go in a GAQL WHERE). Never audit a campaign that ha
 1. **Pre-flight**: load context + guards; **build the active campaign set** (above); stage the GUARD data
    pulls (campaign conversion goals, merged negatives, `change_event`, `ad_group.status`) scoped to it.
 2. **Collect** account data via the Google Ads MCP, **scoped to the active campaign set**. Honor GAQL gotchas
-   in `~/.gemini/config/skills/google-ads-master/skills/audit/references/gaql-notes.md` (dedup keywords; ENABLED-only +
+   in `C:/Users/INFOASIA/.gemini/config/skills/google-ads-master/skills/audit/references/gaql-notes.md` (dedup keywords; ENABLED-only +
    impressions-in-window; explicit YYYY-MM-DD date ranges; `search_term_view` can't use a 90-day DURING).
    **MANDATORY pulls — a missing one = a false finding, not a clean account (this is the checklist a dispatched
    Scout MUST be handed in full):**
@@ -180,12 +180,12 @@ rows app-side (metrics can't go in a GAQL WHERE). Never audit a campaign that ha
 3. **Validate coverage**: confirm ≥30 days of data and a Search Terms Report before scoring; if a source
    is down, degrade gracefully (flag it, continue) per the fallback chain in `setup`.
 4. **Evaluate** each applicable check as PASS / WARNING / FAIL — applying GUARD-1…6 so nothing fires on an
-   assumption. Use `~/.gemini/config/skills/google-ads-master/skills/audit/references/google-audit-checks.md` for the check catalog and severities.
-5. **Score** per `~/.gemini/config/skills/google-ads-master/skills/audit/references/scoring-system.md` (weighted by severity × category).
+   assumption. Use `C:/Users/INFOASIA/.gemini/config/skills/google-ads-master/skills/audit/references/google-audit-checks.md` for the check catalog and severities.
+5. **Score** per `C:/Users/INFOASIA/.gemini/config/skills/google-ads-master/skills/audit/references/scoring-system.md` (weighted by severity × category).
 6. **Report** with the per-category Gap-to-100 ledger and an action plan.
 
 ## Money-Leak deep-dive (MANDATORY — this is what makes the audit worth paying for)
-Beyond scoring, run the money-leak diagnostics in `~/.gemini/config/skills/google-ads-master/skills/google-ads-shared/references/diagnostic-playbook.md`
+Beyond scoring, run the money-leak diagnostics in `C:/Users/INFOASIA/.gemini/config/skills/google-ads-master/skills/google-ads-shared/references/diagnostic-playbook.md`
 (A1 bid/target health · A2 budget pacing & allocation · A3 geo waste · A4 dayparting · A5 search-term/spam/
 wrong-brand · A6 structure/setup · A7 Quality Score · A8 PMax channel/placement · A9 ad copy/assets/extensions ·
 A10 settings hygiene · A11 audience signals/search themes · A12 conversion-lag gate · A13 change-history timeline ·
@@ -207,7 +207,7 @@ layers, each from a different source — degrade cleanly, don't lump them as "ne
   check each SKU), `variant_sku`, `variant_price`, `variant_compareAtPrice`, `variant_inventoryPolicy`,
   `total_available_all_locations`, `classification` (`OOS_DENY` | `LOW_STOCK` | `IN_STOCK_NEEDS_PDP_AUDIT`),
   `reason`. Then render:
-  `python ~/.gemini/config/skills/google-ads-master/skills/audit/scripts/a14_product_report.py <items>.json --out-dir <workdir>
+  `python C:/Users/INFOASIA/.gemini/config/skills/google-ads-master/skills/audit/scripts/a14_product_report.py <items>.json --out-dir <workdir>
   --account "<name>" --window "<range>"` → a visual, self-contained `A14-PRODUCT-CHECK.html`: KPI strip, one
   color-coded section per classification (OOS=red / low-stock=amber / in-stock=blue), a burn bar per row, and a
   **full SKU appendix where every product title links to its live storefront URL**. ALWAYS pull the PDP URL +
@@ -222,10 +222,10 @@ Money-Leak Report in the output.
 
 **One-command pipeline (model-tier dispatch) → ONE comprehensive report:** dispatch a **Routine** sub-agent
 (`general-purpose`, sonnet) to run the PULL MANIFEST in
-`~/.gemini/config/skills/google-ads-master/skills/audit/scripts/money_leak_report.py` (its docstring lists every GAQL query + the
+`C:/Users/INFOASIA/.gemini/config/skills/google-ads-master/skills/audit/scripts/money_leak_report.py` (its docstring lists every GAQL query + the
 `bundle.json` schema) → it writes `bundle.json`. **Write `audit-result.json` (the score — STEP 5) into the SAME
 directory** so the generator merges score + money-leak. Then **Scout**-run
-`python ~/.gemini/config/skills/google-ads-master/skills/audit/scripts/money_leak_report.py bundle.json --out-dir <workdir>` to
+`python C:/Users/INFOASIA/.gemini/config/skills/google-ads-master/skills/audit/scripts/money_leak_report.py bundle.json --out-dir <workdir>` to
 generate `MONEY-LEAK-REPORT.md` + `DETAILED-ACCOUNT-REPORT.md` AND the **single comprehensive `AUDIT.html`** —
 score donut + grade, the 6 weighted category bars (fixable/unverified findings), money-leak $ chart + findings,
 a **visual per-campaign section** (ROAS-vs-target bar with target tick, status pill, channel-split bar,
@@ -290,7 +290,7 @@ name / resource / missing `metrics.*` / repeated-enum serialize), not an API lim
 **Derive bands from the account's OWN historical data first**; fall back to these only for a brand-new account,
 and state the basis. Never FAIL a campaign on a benchmark its niche legitimately runs below.)
 
-## Report architecture — PER-CAMPAIGN VISUAL EXPLAINER (see `~/.gemini/config/skills/google-ads-master/skills/google-ads-shared/references/per-campaign-report-template.md`)
+## Report architecture — PER-CAMPAIGN VISUAL EXPLAINER (see `C:/Users/INFOASIA/.gemini/config/skills/google-ads-master/skills/google-ads-shared/references/per-campaign-report-template.md`)
 The audit is a **per-campaign visual explainer**, not a generic account summary. Document order: **Account
 panel → one chart-rich block per active campaign → Action Plan**.
 
@@ -340,7 +340,7 @@ next to the bundle for the score + the account panel's category verdicts.
 6. **Findings feed `optimizer` and `plan`** — but audit itself changes nothing.
 
 ### Also emit a structured result — it feeds the ONE comprehensive HTML report
-- Write **`audit-result.json`** (schema: `~/.gemini/config/skills/google-ads-master/skills/google-ads-shared/templates/audit-result.json`): health_score, grade, per-category
+- Write **`audit-result.json`** (schema: `C:/Users/INFOASIA/.gemini/config/skills/google-ads-master/skills/google-ads-shared/templates/audit-result.json`): health_score, grade, per-category
   scores + fixable/unverified findings, quick_wins, wasted_spend_monthly, notes. **Put it next to `bundle.json`.**
 - The client report is **`AUDIT.html`** from `money_leak_report.py` (above): a **per-campaign visual explainer**
   that auto-merges this score JSON (account panel + category verdicts) with the per-campaign chart blocks
@@ -353,7 +353,7 @@ next to the bundle for the score + the account panel's category verdicts.
 - [x] **Per-campaign visual-explainer `AUDIT.html`** — `scripts/money_leak_report.py` renders the chart-rich,
   data→verdict→action report (gauge/ring/donut/bars/heatmap + account panel + scorecards). This is the SOLE HTML
   report; the legacy `audit_to_html.py` was removed. Done.
-- [x] Full granular check-ID catalog (G01…G61 + extensions) in `~/.gemini/config/skills/google-ads-master/skills/audit/references/google-audit-checks.md`. Done.
-- [ ] Vertical-specific benchmark bands in `~/.gemini/config/skills/google-ads-master/skills/google-ads-shared/references/`.
+- [x] Full granular check-ID catalog (G01…G61 + extensions) in `C:/Users/INFOASIA/.gemini/config/skills/google-ads-master/skills/audit/references/google-audit-checks.md`. Done.
+- [ ] Vertical-specific benchmark bands in `C:/Users/INFOASIA/.gemini/config/skills/google-ads-master/skills/google-ads-shared/references/`.
 - [ ] Per-keyword QS + RSA pin/headline-count detail for Search campaigns (currently summarized).
 - [ ] Geo as a US choropleth (currently colored bars).

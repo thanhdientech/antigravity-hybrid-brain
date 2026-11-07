@@ -38,6 +38,7 @@ group: "Kiểm Toán & Điều Phối AI"
 | **Bước 2 — Checklist 8 Ngành & Ánh Xạ 94 Skills** | [`references/02-checklist-8-nganh-cong-nghe-va-anh-xa-91-skills.md`](./references/02-checklist-8-nganh-cong-nghe-va-anh-xa-91-skills.md) | Bộ câu hỏi chống sót yêu cầu, Tech Stack chuẩn & Bảng ánh xạ chính xác từng giai đoạn sang **94 Skills** cho 8 ngành. |
 | **Bước 3 — Xuất 1 File Master Blueprint Duy Nhất** | [`references/03-mau-1-file-master-blueprint-chuan.md`](./references/03-mau-1-file-master-blueprint-chuan.md) | Khung chuẩn 10 phần của file `BLUEPRINT_<TEN_DU_AN>.md` kèm sơ đồ Mermaid, bảng `FR/NFR`, Hợp đồng Agent & Prompt từng pha. |
 | **Bước 4 — Kiểm Định Tự Động File Blueprint (`Exit 0`)** | [`scripts/validate_blueprint.py`](./scripts/validate_blueprint.py) | Script kiểm tra đủ 10 mục bắt buộc, `0` chỗ trống `TBD/TODO`, và đối chiếu 100% tên `@skill` khớp với `agy_skill_index.db`. |
+| **Bước 5 — Vòng Lặp Hội Tụ Tự Động (`/speckit-converge`)** | [`scripts/converge_blueprint.py`](./scripts/converge_blueprint.py) | Hai chế độ: `blueprint` (hội tụ chất lượng file trước thực thi) & `phase <N>` (hội tụ Gate Check từng Phase). Tối đa `MAX_ROUNDS=5` vòng → gợi ý sửa cụ thể mỗi vòng → báo `Exit 0` khi đạt. |
 
 ---
 
@@ -57,3 +58,16 @@ group: "Kiểm Toán & Điều Phối AI"
      python ~/.gemini/config/skills/project-blueprint-architect/scripts/validate_blueprint.py "duong_dan/BLUEPRINT_TEN_DU_AN.md"
      ```
    - Trình file Blueprint sạch 100% cho người dùng duyệt. Chỉ khi người dùng xác nhận **"Chốt Blueprint / Bắt đầu làm Phase 1"** mới chuyển giao sang các Skill thực thi tương ứng theo cơ chế cuốn chiếu của `lean-teamwork`.
+
+5. **Bước 5 — Vòng Lặp Hội Tụ `/speckit-converge` (Khuyến nghị mạnh):**
+   - **Chế độ 1 — Hội tụ trước thực thi (`converge blueprint`):** Nếu `validate_blueprint.py` vẫn còn lỗi, thay vì sửa thủ công, chạy:
+     ```powershell
+     python ~/.gemini/config/skills/project-blueprint-architect/scripts/converge_blueprint.py blueprint "duong_dan/BLUEPRINT_TEN_DU_AN.md"
+     ```
+     → Script tự động: Validate → In gợi ý sửa cụ thể → Chờ Agent sửa → Validate lại → Lặp tối đa **5 vòng** → Báo `Exit 0` khi đạt. Nếu hết 5 vòng fail → báo cáo người dùng.
+   - **Chế độ 2 — Hội tụ trong lúc thực thi (`converge phase <N>`):** Sau khi Agent hoàn thành một Phase, chạy:
+     ```powershell
+     python ~/.gemini/config/skills/project-blueprint-architect/scripts/converge_blueprint.py phase --phase 1 "duong_dan/BLUEPRINT_TEN_DU_AN.md"
+     ```
+     → Script trích xuất lệnh Gate Check từ cột *Cổng Nghiệm Thu* của Phase N trong bảng Mục 7 → chạy → nếu fail → in output lỗi + hướng dẫn sửa → chờ Agent fix → chạy lại → tối đa **5 vòng** → báo `Exit 0` và cho phép tiến sang Phase N+1.
+   - **Quy tắc bất biến:** Agent **CẤM tự báo cáo "Xong Phase N"** khi `converge phase` chưa đạt `Exit code 0`. Mọi Phase phải đi qua vòng lặp hội tụ trước khi chuyển tiếp.

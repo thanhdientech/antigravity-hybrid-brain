@@ -9,7 +9,7 @@ wiki_links:
 ---
 # NGHIỆP VỤ KẾ TOÁN TỔNG HỢP, CHI PHÍ GIÁ THÀNH SẢN XUẤT, MUA - BÁN - KHO, BÁO CÁO THUẾ & THÔNG TƯ 99/2025/TT-BTC - TT 200 - TT 78 - TT 98 TRÊN SAP B1
 
-Tài liệu chuẩn hóa nghiệp vụ Tài chính - Kế toán - Giá thành - Thuế - Kiểm soát nội bộ trên hệ thống **SAP Business One 9.3 / 10.0** và **Beas Manufacturing** dành cho đội ngũ Tư vấn Nghiệp vụ (`Functional Consultants`) của công ty **Enterprise**.
+Tài liệu chuẩn hóa nghiệp vụ Tài chính - Kế toán - Giá thành - Thuế - Kiểm soát nội bộ trên hệ thống **SAP Business One 9.3 / 10.0** và **Beas Manufacturing** dành cho đội ngũ Tư vấn Nghiệp vụ (`Functional Consultants`) của công ty **InfoAsia**.
 
 ---
 
@@ -134,7 +134,7 @@ Trong hệ thống kê khai thường xuyên (`Perpetual Inventory`) của SAP B
      - Thông tư 99/2025/TT-BTC trao quyền chủ động lớn hơn cho doanh nghiệp trong việc mở thêm các tài khoản cấp 2, cấp 3, cấp 4 và thiết kế danh mục tài khoản quản trị phù hợp với đặc thù vận hành miễn là đảm bảo lên đúng chỉ tiêu trên Báo cáo tài chính (Báo cáo tình hình tài chính, Báo cáo kết quả hoạt động kinh doanh, Báo cáo lưu chuyển tiền tệ).
      - **Kịch bản chuyển đổi/tách tài khoản chi phí (VD mở rộng hoặc ánh xạ đầu `642 -> 643` hoặc tách tiểu khoản quản trị):**
        - Trên SAP B1, cấu trúc `OACT` có 10 ngăn (`Drawers` từ `1` đến `10`: Assets, Liabilities, Equity, Revenues, Cost of Sales, Expenses...).
-       - Khi doanh nghiệp cần tách chi phí quản lý doanh nghiệp (`642`), chi phí bán hàng (`641`) hoặc mở thêm nhóm tài khoản chi phí chuyên biệt (như `643` cho chi phí quản trị/phát triển/dự án nội bộ theo quy chế tài chính công ty hoặc tập đoàn đa quốc gia), tư vấn viên Enterprise thực hiện:
+       - Khi doanh nghiệp cần tách chi phí quản lý doanh nghiệp (`642`), chi phí bán hàng (`641`) hoặc mở thêm nhóm tài khoản chi phí chuyên biệt (như `643` cho chi phí quản trị/phát triển/dự án nội bộ theo quy chế tài chính công ty hoặc tập đoàn đa quốc gia), tư vấn viên InfoAsia thực hiện:
          - Tạo mã tài khoản mới trong `OACT` (`Postable = 'Y'` cho tài khoản hạch toán chi tiết, `Postable = 'N'` cho tài khoản tổng hợp cấp cha).
          - Điền mã tài khoản cũ hoặc mã tài khoản tập đoàn vào cột **`ExportCode`** hoặc **`FatherNum`** để hỗ trợ đối chiếu song song (`Dual Reporting` TT200 <-> TT99).
          - Cập nhật lại cây **Financial Report Templates (`OFRC` / `FRC1`)** cho Bảng Cân đối Kế toán (nay là **Báo cáo tình hình tài chính**) và Báo cáo Kết quả HĐKD để gom đủ số dư tài khoản mới vào đúng Mã chỉ tiêu (`Code`).

@@ -20,7 +20,7 @@ Read `account-context.yaml`: `google_ads.customer_id`, `conversion_actions`, `me
 `data_source` (for value sanity), `business.model/vertical` (lead vs purchase expectations). Output goes
 to the working directory; update the context's `conversion_actions` + `measurement.*` as you verify them.
 
-## Model dispatch (run cheap, decide expensive) — see `~/.gemini/config/skills/google-ads-master/skills/google-ads-shared/references/model-tier-dispatch.md`
+## Model dispatch (run cheap, decide expensive) — see `C:/Users/INFOASIA/.gemini/config/skills/google-ads-master/skills/google-ads-shared/references/model-tier-dispatch.md`
 - **Scout (`haiku`)** — STEP 0 context read; the conversion-action list pull.
 - **Routine (`sonnet`)** — STEP 1 per-campaign conversion segmentation (`segments.conversion_action_name`), STEP 3 Ads/GA4/store value pulls. Dispatch as `general-purpose` sub-agents; **return raw, don't conclude**.
 - **Judge (main session)** — the WHOLE-picture verdict, every is-it-a-problem call, the double-count judgment, the PASS/WARN/FAIL that gates plan/builder. **Never let a cheap tier raise the alarm** — that holistic judgment is the entire point of this skill.
@@ -30,7 +30,7 @@ A conversion list read in isolation lies. The same flag is fine or fatal dependi
 
 1. **Actions** — enabled conversion actions: name, category, primary_for_goal, counting_type,
    value_settings.default_value (value tracking on/off), source. (Omit `conversion_action.type` if the MCP
-   rejects it; see ~/.gemini/config/skills/google-ads-master/skills/audit/references/gaql-notes.md.) **Decode the enums:**
+   rejects it; see C:/Users/INFOASIA/.gemini/config/skills/google-ads-master/skills/audit/references/gaql-notes.md.) **Decode the enums:**
    `category` 4=PURCHASE · 6=LEAD · 5=SIGNUP · 3=PAGE_VIEW · 8=ADD_TO_CART · 9=BEGIN_CHECKOUT ·
    11=PHONE_CALL_LEAD · 13=SUBMIT_LEAD_FORM · 16=GET_DIRECTIONS · 18=CONTACT · 19=ENGAGEMENT · 20=STORE_VISIT;
    `counting_type` 2=ONE (one per click) · 3=EVERY (many per click). For ecommerce, the working primary
@@ -42,7 +42,7 @@ A conversion list read in isolation lies. The same flag is fine or fatal dependi
    (store channel, e.g. Shopify Google&YouTube "App Purchase" / WooCommerce / GA4 import / gtag /
    Merchant Center). Two value
    purchases both PRIMARY and both firing = double count. One primary + one secondary = correct.
-   See `~/.gemini/config/skills/google-ads-master/skills/google-ads-shared/references/conversion-tracking-logic.md`.
+   See `C:/Users/INFOASIA/.gemini/config/skills/google-ads-master/skills/google-ads-shared/references/conversion-tracking-logic.md`.
 4. **Verdict** — only now, per the rules below.
 
 ## What is / isn't a problem

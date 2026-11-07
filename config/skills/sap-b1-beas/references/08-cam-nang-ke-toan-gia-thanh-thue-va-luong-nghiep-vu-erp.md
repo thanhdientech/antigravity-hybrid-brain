@@ -16,7 +16,7 @@ source: "[[03-ke-toan-gia-thanh-mua-ban-kho-thue-tt99-tt98]], [[01-sap-b1-93-vs-
 
 # Cẩm Nang Kế Toán Tổng Hợp, Giá Thành Sản Xuất (WIP TK 154), Mua - Bán - Kho & Thuế (TT 99/2025 - TT 200 - TT 78 - TT 98)
 
-> Trang Wiki nghiệp vụ cốt lõi dành cho **[[ia-02-chuyen-gia-ke-toan-gia-thanh-thue]]** và **[[ia-01-tong-cong-trinh-su-sap-b1-beas]]** thuộc đội ngũ Tư vấn **Enterprise**. Chưng cất từ [[03-ke-toan-gia-thanh-mua-ban-kho-thue-tt99-tt98]], liên kết trực tiếp với [[cam-nang-sap-b1-93-10-sql-va-beas-manufacturing]] và [[cam-nang-sql-fms-sdk-dtw-va-quan-tri-server]].
+> Trang Wiki nghiệp vụ cốt lõi dành cho **[[ia-02-chuyen-gia-ke-toan-gia-thanh-thue]]** và **[[ia-01-tong-cong-trinh-su-sap-b1-beas]]** thuộc đội ngũ Tư vấn **InfoAsia**. Chưng cất từ [[03-ke-toan-gia-thanh-mua-ban-kho-thue-tt99-tt98]], liên kết trực tiếp với [[cam-nang-sap-b1-93-10-sql-va-beas-manufacturing]] và [[cam-nang-sql-fms-sdk-dtw-va-quan-tri-server]].
 
 ---
 
@@ -74,6 +74,6 @@ source: "[[03-ke-toan-gia-thanh-mua-ban-kho-thue-tt99-tt98]], [[01-sap-b1-93-vs-
 
 ---
 
-## Liên Kết Hệ Sinh Thái Tri Thức Enterprise
+## Liên Kết Hệ Sinh Thái Tri Thức InfoAsia
 - [[cam-nang-sap-b1-93-10-sql-va-beas-manufacturing]] - Kiến trúc SAP B1 9.3/10.0 và Quản trị sản xuất Beas Manufacturing (`batchanderung.htm`).
 - [[cam-nang-sql-fms-sdk-dtw-va-quan-tri-server]] - Truy vấn SQL, FMS, TransactionNotification, DTW Import và Lập trình SDK / Quản trị Server.

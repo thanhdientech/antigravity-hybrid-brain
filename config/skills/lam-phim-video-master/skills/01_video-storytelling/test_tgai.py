@@ -1,4 +1,3 @@
-import os
 import requests
 import json
 import time
@@ -11,7 +10,7 @@ try:
 except Exception:
     pass
 
-KEY = os.environ.get("TAOGIONGAI_API_KEY", "<YOUR_TAOGIONGAI_API_KEY>")
+KEY = "sk_0cad91a0efae9b45054c54da0f173c8a35376a3e936b"
 HEADERS = {"xi-api-key": KEY, "Content-Type": "application/json"}
 
 def generate_tts(text: str, voice_id: str, out_path: Path):

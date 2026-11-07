@@ -8,7 +8,7 @@ if hasattr(sys.stdout, 'reconfigure'):
 if hasattr(sys.stderr, 'reconfigure'):
     sys.stderr.reconfigure(encoding='utf-8')
 
-AUTO_EDITOR_EXE = r"<WORKSPACE_DIR>\Xây Kênh Youtube\Tool render edit Video\.venv\Scripts\auto-editor.exe"
+AUTO_EDITOR_EXE = r"E:\DIEN APP\Xây Kênh Youtube\Tool render edit Video\.venv\Scripts\auto-editor.exe"
 
 def cut_silence(input_path, output_path=None, margin="0.2s", threshold="-24dB"):
     if not os.path.exists(input_path):

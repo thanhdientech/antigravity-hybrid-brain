@@ -16,7 +16,7 @@ source: "[[01-sap-b1-93-vs-100-sql-architecture]], [[04-sap-b1-sdk-diapi-uiapi-u
 
 # Cẩm Nang Kỹ Thuật T-SQL, FMS, TransactionNotification, DTW Import, Lập Trình SDK & Quản Trị Server DBA
 
-> Trang Wiki kỹ thuật toàn diện dành cho **[[ia-03-ky-su-sql-fms-transaction-notification]]**, **[[ia-04-chuyen-gia-dtw-import-master-data]]** và **[[ia-05-ky-su-sdk-lap-trinh-va-quan-tri-server]]** của công ty **Enterprise**. Chưng cất từ [[01-sap-b1-93-vs-100-sql-architecture]] và [[04-sap-b1-sdk-diapi-uiapi-udo-and-server-dba]], phối hợp trực tiếp với [[cam-nang-sap-b1-93-10-sql-va-beas-manufacturing]] và [[cam-nang-ke-toan-gia-thanh-thue-va-luong-nghiep-vu-erp]].
+> Trang Wiki kỹ thuật toàn diện dành cho **[[ia-03-ky-su-sql-fms-transaction-notification]]**, **[[ia-04-chuyen-gia-dtw-import-master-data]]** và **[[ia-05-ky-su-sdk-lap-trinh-va-quan-tri-server]]** của công ty **InfoAsia**. Chưng cất từ [[01-sap-b1-93-vs-100-sql-architecture]] và [[04-sap-b1-sdk-diapi-uiapi-udo-and-server-dba]], phối hợp trực tiếp với [[cam-nang-sap-b1-93-10-sql-va-beas-manufacturing]] và [[cam-nang-ke-toan-gia-thanh-thue-va-luong-nghiep-vu-erp]].
 
 ---
 
@@ -42,7 +42,7 @@ source: "[[01-sap-b1-93-vs-100-sql-architecture]], [[04-sap-b1-sdk-diapi-uiapi-u
 
 ## 2. Quy Trình 8 Bước Chuẩn Hóa DTW (`Data Transfer Workbench`) Import Master Data
 
-Khi triển khai Go-Live cho khách hàng của Enterprise, chuyên gia **[[ia-04-chuyen-gia-dtw-import-master-data]]** thực hiện nạp dữ liệu qua DTW theo đúng trình tự 8 bước [[04-sap-b1-sdk-diapi-uiapi-udo-and-server-dba]]:
+Khi triển khai Go-Live cho khách hàng của InfoAsia, chuyên gia **[[ia-04-chuyen-gia-dtw-import-master-data]]** thực hiện nạp dữ liệu qua DTW theo đúng trình tự 8 bước [[04-sap-b1-sdk-diapi-uiapi-udo-and-server-dba]]:
 1. **Bước 1:** Hệ thống tài khoản kế toán `OACT` (nạp từ `Level 1` xuống `Level 5`, `ActiveAccount = tNO` cho TK tổng hợp và `tYES` cho TK chi tiết) [[04-sap-b1-sdk-diapi-uiapi-udo-and-server-dba]].
 2. **Bước 2:** Danh mục phụ trợ (`OCRG`, `OITB`, `OCTG`, `OSLP`, `OPRC`, `OWHS`, `OBIN`) [[04-sap-b1-sdk-diapi-uiapi-udo-and-server-dba]].
 3. **Bước 3:** Danh mục Đối tác `OCRD` + Địa chỉ `CRD1` + Liên hệ `OCPR` [[04-sap-b1-sdk-diapi-uiapi-udo-and-server-dba]].
@@ -70,6 +70,6 @@ Khi triển khai Go-Live cho khách hàng của Enterprise, chuyên gia **[[ia-0
 
 ---
 
-## Liên Kết Hệ Sinh Thái Tri Thức Enterprise
+## Liên Kết Hệ Sinh Thái Tri Thức InfoAsia
 - [[cam-nang-sap-b1-93-10-sql-va-beas-manufacturing]] - Kiến trúc SAP B1 9.3/10.0 và Quản trị sản xuất Beas Manufacturing (`batchanderung.htm`).
 - [[cam-nang-ke-toan-gia-thanh-thue-va-luong-nghiep-vu-erp]] - Luồng kế toán giá thành sản xuất (`WIP TK 154`), Mua - Bán - Kho và Thông tư 99/2025/TT-BTC.

@@ -41,8 +41,8 @@ Trước khi nạp tài liệu, xác định ngay tài liệu thuộc trường 
 
 | Trường Hợp | Khi Nào Áp Dụng | Vị Trí Lưu Chuẩn |
 | :--- | :--- | :--- |
-| **Trường hợp A — Bổ sung vào Skill đã có** *(Khuyên dùng nhất)* | Tài liệu cùng chủ đề với 1 trong các Skill hiện có (vd: thêm mẫu SQL mới vào `viet-sql-sap-b1`, thêm công thức kịch bản vào `video-storytelling`, thêm quy định kế toán mới vào `sap-b1-beas`). | Thả thêm file `.md` / `.sql` vào `%USERPROFILE%\.gemini\config\skills\<ten-skill>\references\` và thêm 1 dòng link vào `SKILL.md`. |
-| **Trường hợp B — Tạo Skill Global mới** | Mở thêm một mảng chuyên môn hoàn toàn mới muốn dùng chung cho **mọi dự án** trên máy. | Tạo thư mục mới tại `%USERPROFILE%\.gemini\config\skills\<ten-skill-moi>\`. |
+| **Trường hợp A — Bổ sung vào Skill đã có** *(Khuyên dùng nhất)* | Tài liệu cùng chủ đề với 1 trong các Skill hiện có (vd: thêm mẫu SQL mới vào `viet-sql-sap-b1`, thêm công thức kịch bản vào `video-storytelling`, thêm quy định kế toán mới vào `sap-b1-beas`). | Thả thêm file `.md` / `.sql` vào `C:\Users\INFOASIA\.gemini\config\skills\<ten-skill>\references\` và thêm 1 dòng link vào `SKILL.md`. |
+| **Trường hợp B — Tạo Skill Global mới** | Mở thêm một mảng chuyên môn hoàn toàn mới muốn dùng chung cho **mọi dự án** trên máy. | Tạo thư mục mới tại `C:\Users\INFOASIA\.gemini\config\skills\<ten-skill-moi>\`. |
 | **Trường hợp C — Nạp Tài Liệu Riêng Cho 1 Dự Án** | Tài liệu đặc thù nội bộ chỉ dùng cho 1 dự án/khách hàng cụ thể, không muốn hiện ở các dự án khác. | Tạo thư mục tại `<Thu_Muc_Du_An>\.agents\skills\<ten-skill-du-an>\` (có độ ưu tiên cao nhất `authority = 1.05`). |
 
 ---
@@ -73,7 +73,7 @@ Trước khi nạp tài liệu, xác định ngay tài liệu thuộc trường 
 2. **`description`:**
    - **Bắt buộc `<= 150` ký tự** (tối ưu nhất là `110–140` ký tự) và **bọc trong dấu ngoặc kép `"..."`** (để không bị lỗi YAML khi bên trong có dấu hai chấm `:`).
    - **Cấm mở đầu bằng cụm từ sáo rỗng** như *"Kích hoạt khi..."*, *"Dùng skill này khi..."*, *"Skill này dùng để..."*, *"Use this skill when..."* — hãy nêu thẳng năng lực cốt lõi!
-3. **`group`:** Tên nhóm phân loại tiếng Việt có dấu (để đồng bộ đẹp lên giao diện Javis Tomi / Enterprise).
+3. **`group`:** Tên nhóm phân loại tiếng Việt có dấu (để đồng bộ đẹp lên giao diện Javis Tomi / InfoAsia).
 4. **Mục `## Khi nào dùng (Triggers & Ngữ cảnh kích hoạt đầy đủ)`:** Đặt ngay đầu thân bài để chứa toàn bộ danh sách từ khóa kích hoạt tiếng Việt có dấu, không dấu, từ viết tắt và tiếng Anh.
 
 **Mẫu `SKILL.md` chuẩn 100% để copy-paste:**
@@ -133,13 +133,13 @@ Sau khi thêm hoặc sửa bất kỳ file nào trong `skills/`:
    - **Cách 1 (Ngay trong khung chat Antigravity):** Bảo AI gọi công cụ MCP `agy_sync_and_audit_skills(force_rebuild=False)`.
    - **Cách 2 (Chạy lệnh CLI trên PowerShell):**
      ```powershell
-     & "%LOCALAPPDATA%\Programs\Python\Python313\python.exe" "%USERPROFILE%\.gemini\config\scripts\agy_skill_engine.py"
+     & "C:\Users\INFOASIA\AppData\Local\Programs\Python\Python313\python.exe" "C:\Users\INFOASIA\.gemini\config\scripts\agy_skill_engine.py"
      ```
 2. **Kiểm tra báo cáo sức khỏe (`audit_report`):**
    - Đảm bảo `health_warnings` không báo lỗi `desc_warning` (vượt 150 ký tự) và không báo `broken_links` (link tới file trong `references/` bị sai đường dẫn).
    - Kiểm tra chỉ số `global_20_desc_char_budget` luôn nằm dưới trần **`4000 chars`** của Javis Router.
 3. **(Tùy chọn nâng cao) Bổ sung từ đồng nghĩa chuyên ngành mới:**
-   - Nếu lĩnh vực mới có các cặp từ lóng tiếng Việt $\leftrightarrow$ mã kỹ thuật tiếng Anh không chung mặt chữ (ví dụ: `"tờ khai hải quan"` $\leftrightarrow$ `"vnaccs ecus hs_code"`), thêm 1 dòng vào danh sách `CONCEPT_SYNONYMS` trong file `%USERPROFILE%\.gemini\config\scripts\agy_skill_engine.py`.
+   - Nếu lĩnh vực mới có các cặp từ lóng tiếng Việt $\leftrightarrow$ mã kỹ thuật tiếng Anh không chung mặt chữ (ví dụ: `"tờ khai hải quan"` $\leftrightarrow$ `"vnaccs ecus hs_code"`), thêm 1 dòng vào danh sách `CONCEPT_SYNONYMS` trong file `C:\Users\INFOASIA\.gemini\config\scripts\agy_skill_engine.py`.
 
 ---
 
@@ -147,14 +147,14 @@ Sau khi thêm hoặc sửa bất kỳ file nào trong `skills/`:
 
 1. **Test thử 3 câu truy vấn thực tế** (1 câu tiếng Việt có dấu, 1 câu tiếng Việt không dấu có chữ `d/đ`, 1 câu dùng thuật ngữ tiếng Anh):
    ```powershell
-   & "%LOCALAPPDATA%\Programs\Python\Python313\python.exe" "%USERPROFILE%\.gemini\config\scripts\agy_skill_engine.py" search "cau hoi khong dau can tim thu"
+   & "C:\Users\INFOASIA\AppData\Local\Programs\Python\Python313\python.exe" "C:\Users\INFOASIA\.gemini\config\scripts\agy_skill_engine.py" search "cau hoi khong dau can tim thu"
    ```
    - Kết quả đạt chuẩn khi Skill vừa nạp nằm trong **Top 1–2 (`score >= 0.65`)** và trỏ đúng vào file con `references/...` kèm dòng `L_start..L_end`.
 2. **Quy tắc phân luồng khi muốn đồng bộ sang Javis OS (Tuyệt đối không trộn lẫn 2 hệ thống):**
    - **Nếu là Skill phục vụ Làm Phim, Video AI, Xây Kênh YouTube/TikTok/FB, Nuôi Nick, OPC cá nhân:**
-     - Chỉ đồng bộ vào **Tomi Local** (`<WORKSPACE_DIR>\JavisOS\brains\Brain Default\skills` & `<WORKSPACE_DIR>\Tomi_ai_agent\brains\Brain Default\skills`) và **Server 29 Tomi (`:7777`)** (`/opt/antigravity-erp/brains_personal/Brain Default/skills`).
-   - **Nếu là Skill phục vụ ERP SAP B1, Boyum Beas, Kế toán – Thuế doanh nghiệp Enterprise:**
-     - Đồng bộ riêng theo luồng **Enterprise (`:7778`)** (`/opt/antigravity-erp/brains_enterprise/Brain Default/skills`) khi có yêu cầu rõ ràng.
+     - Chỉ đồng bộ vào **Tomi Local** (`E:\DIEN APP\JavisOS\brains\Brain Default\skills` & `E:\DIEN APP\Tomi_ai_agent\brains\Brain Default\skills`) và **Server 29 Tomi (`:7777`)** (`/home/infoasia/javis-os/brains_dien/Brain Default/skills`).
+   - **Nếu là Skill phục vụ ERP SAP B1, Boyum Beas, Kế toán – Thuế doanh nghiệp InfoAsia:**
+     - Đồng bộ riêng theo luồng **InfoAsia (`:7778`)** (`/home/infoasia/javis-os/brains_infoasia/Brain Default/skills`) khi có yêu cầu rõ ràng.
 
 ---
 
@@ -197,9 +197,9 @@ Em gọi `agy_sync_and_audit_skills` kiểm tra sức khỏe toàn bộ kho Skil
 
 | Thành Phần | Đường Dẫn Thực Tế Trên Máy | Công Dụng Chính |
 | :--- | :--- | :--- |
-| **Kho Global Skills** | `%USERPROFILE%\.gemini\config\skills\` | Chứa các bộ Skill dùng chung mọi dự án trên Antigravity. |
-| **Bộ máy Chỉ mục Lai** | `%USERPROFILE%\.gemini\config\scripts\agy_skill_engine.py` | Nhân xử lý SQLite WAL + FTS5 `đ/Đ` + RRF Fusion + Kiểm toán Skill. |
-| **Trạm MCP Server** | `%USERPROFILE%\.gemini\config\scripts\agy_skill_mcp_server.py` | Cung cấp 4 tools MCP `agy-skill-hub` cho Antigravity IDE. |
-| **Hook Định vị Tự động** | `%USERPROFILE%\.gemini\config\scripts\auto_reanchor_hook.py` | Tự động gợi ý Top 3 Skill + File con + Số dòng đầu mỗi lượt chat. |
-| **File DB Chỉ mục** | `%USERPROFILE%\.gemini\config\agy_skill_index.db` | Cơ sở dữ liệu chỉ mục phái sinh (xóa đi tự động dựng lại được 100%). |
-| **Kho Backup Tự động** | `%USERPROFILE%\.gemini\config\backups\` | Lưu bản gốc `pre_javis_brain_20261028/` và các bản `.bak` mỗi khi sửa Skill. |
+| **Kho Global Skills** | `C:\Users\INFOASIA\.gemini\config\skills\` | Chứa các bộ Skill dùng chung mọi dự án trên Antigravity. |
+| **Bộ máy Chỉ mục Lai** | `C:\Users\INFOASIA\.gemini\config\scripts\agy_skill_engine.py` | Nhân xử lý SQLite WAL + FTS5 `đ/Đ` + RRF Fusion + Kiểm toán Skill. |
+| **Trạm MCP Server** | `C:\Users\INFOASIA\.gemini\config\scripts\agy_skill_mcp_server.py` | Cung cấp 4 tools MCP `agy-skill-hub` cho Antigravity IDE. |
+| **Hook Định vị Tự động** | `C:\Users\INFOASIA\.gemini\config\scripts\auto_reanchor_hook.py` | Tự động gợi ý Top 3 Skill + File con + Số dòng đầu mỗi lượt chat. |
+| **File DB Chỉ mục** | `C:\Users\INFOASIA\.gemini\config\agy_skill_index.db` | Cơ sở dữ liệu chỉ mục phái sinh (xóa đi tự động dựng lại được 100%). |
+| **Kho Backup Tự động** | `C:\Users\INFOASIA\.gemini\config\backups\` | Lưu bản gốc `pre_javis_brain_20261028/` và các bản `.bak` mỗi khi sửa Skill. |

@@ -252,7 +252,7 @@ Mỗi sheet trình bày theo cấu trúc tầng:
 - **Subtotal L2**: nền **#F5F5F5** | **Grand total**: nền **#263238** chữ trắng
 - Viền **#D0D0D0**, số format `#,##0`
 - **Dùng Excel formula cho MỌI tổng/subtotal — KHÔNG hardcode**
-- Chạy `python ~/.gemini/config/skills/google-ads-master/scripts/recalc_xlsx_check.py <file>` sau khi tạo để đảm bảo 0 formula error
+- Chạy `python C:/Users/INFOASIA/.gemini/config/skills/google-ads-master/scripts/recalc_xlsx_check.py <file>` sau khi tạo để đảm bảo 0 formula error
 
 ---
 

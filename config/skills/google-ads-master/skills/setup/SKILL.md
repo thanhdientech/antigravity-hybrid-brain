@@ -15,9 +15,9 @@ suite reads. Nothing downstream (audit, plan, builder, pusher, tracker, optimize
 
 ## Operating rules
 - **Establish ONE working folder per business and keep everything in it** — see
-  `~/.gemini/config/skills/google-ads-master/skills/google-ads-shared/references/workspace-layout.md`. On first run, agree the `<workdir>` path with the user,
+  `C:/Users/INFOASIA/.gemini/config/skills/google-ads-master/skills/google-ads-shared/references/workspace-layout.md`. On first run, agree the `<workdir>` path with the user,
   create it, and write `account-context.yaml` there. Every downstream output goes into its dated subfolder
-  (`audits/`, `plans/`, `builds/`, `changes/`, `raw/`). NEVER scatter files into the plugin folder, `./tmp`,
+  (`audits/`, `plans/`, `builds/`, `changes/`, `raw/`). NEVER scatter files into the plugin folder, `D:\tmp`,
   `/tmp`, or the cwd root — a user who installs the plugin must get ONE tidy folder, not sprinkled files.
 - **Secrets are POINTERS, never copies.** Do NOT write raw API tokens/keys into the working folder, any output,
   or `account-context.yaml`. The `connections` registry records *where* each token lives (`via: env:/path#KEY`,
@@ -40,12 +40,12 @@ suite reads. Nothing downstream (audit, plan, builder, pusher, tracker, optimize
 - **Confirm before writing.** Show the assembled context, get a yes, then write.
 
 ## Inputs / Outputs
-- Reads: connected MCP tools, the user's answers, the storefront URL, and `~/.gemini/config/skills/google-ads-master/skills/google-ads-shared/templates/account-context.yaml`.
+- Reads: connected MCP tools, the user's answers, the storefront URL, and `C:/Users/INFOASIA/.gemini/config/skills/google-ads-master/skills/google-ads-shared/templates/account-context.yaml`.
 - Writes: `./account-context.yaml`. Then runs the validator and prints a context-health report.
 
 ---
 
-## Model dispatch (run cheap, decide expensive) — see `~/.gemini/config/skills/google-ads-master/skills/google-ads-shared/references/model-tier-dispatch.md`
+## Model dispatch (run cheap, decide expensive) — see `C:/Users/INFOASIA/.gemini/config/skills/google-ads-master/skills/google-ads-shared/references/model-tier-dispatch.md`
 - **Scout (`haiku`)** — individual detection pulls (`list_accessible_customers`, `get-shop-info`, currency/timezone GAQL, conversion-action list); STEP 4 `validate_context.py` run.
 - **Routine (`sonnet`)** — STEP 1 capability scan across connectors; AOV derivation from store orders (pull, filter to Online-Store channel, compute). Dispatch as `general-purpose` sub-agents; **return raw values, don't judge them** (setup records facts).
 - **Judge (main session)** — competitor research (understand the niche, name real rivals), the interview, smart-default choices, STEP 3 assemble + confirm with the user. Detection is mechanical; deciding what's *true* and talking to the user is not.
@@ -117,10 +117,10 @@ place — push to connect, never to guess.
 
 **Derive first, then confirm — don't just ask.** For anything that exists in the data, pull a value,
 show it, and ask the user to confirm or correct. Only ask cold when nothing is derivable. Offer smart
-defaults from `~/.gemini/config/skills/google-ads-master/skills/google-ads-shared/references/vertical-defaults.md` based on the vertical.
+defaults from `C:/Users/INFOASIA/.gemini/config/skills/google-ads-master/skills/google-ads-shared/references/vertical-defaults.md` based on the vertical.
 
 1. **Business**: name, vertical, model, primary market, languages.
-   **AOV — derive it properly (see `~/.gemini/config/skills/google-ads-master/skills/google-ads-shared/references/aov-and-sales-sourcing.md`).** Do NOT shortcut via Google
+   **AOV — derive it properly (see `C:/Users/INFOASIA/.gemini/config/skills/google-ads-master/skills/google-ads-shared/references/aov-and-sales-sourcing.md`).** Do NOT shortcut via Google
    Ads: that fails for new/low-spend accounts and is biased otherwise. Priority:
    (a) **Store sales first** — pull orders from the store connector/API and compute AOV from the
        **Online Store channel only**. Exclude draft orders, POS, TikTok/marketplace/social channels,
@@ -167,7 +167,7 @@ Keep it conversational — pre-fill everything you detected, only ask for what's
 
 ## STEP 3 — Assemble & confirm
 
-1. Start from `~/.gemini/config/skills/google-ads-master/skills/google-ads-shared/templates/account-context.yaml`.
+1. Start from `C:/Users/INFOASIA/.gemini/config/skills/google-ads-master/skills/google-ads-shared/templates/account-context.yaml`.
 2. Fill every field you have; leave unknowns blank/null (don't guess).
 3. Show the user the assembled YAML and a short summary of what's set vs missing.
 4. On confirmation, write `./account-context.yaml`.
@@ -179,7 +179,7 @@ Keep it conversational — pre-fill everything you detected, only ask for what's
 Run the validator:
 
 ```
-python ~/.gemini/config/skills/google-ads-master/skills/setup/scripts/validate_context.py ./account-context.yaml
+python C:/Users/INFOASIA/.gemini/config/skills/google-ads-master/skills/setup/scripts/validate_context.py ./account-context.yaml
 ```
 
 It checks schema/types/enums and prints readiness per stage:

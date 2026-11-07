@@ -4,8 +4,8 @@
 > **Khẩu hiệu chính thức:** *"One MCP for reverse engineering across binaries, applications, and runtime behavior."*  
 > *(Một giao thức MCP duy nhất để kỹ thuật dịch ngược xuyên suốt mã nhị phân, ứng dụng desktop/web và hành vi khi đang chạy).*  
 > **Tác giả & Bản quyền:** `morluto/rea` (License: MIT)  
-> **Kho mã nguồn nội bộ trên máy:** `~/.gemini/config/skills/reverse-engineer-anything/` (hoặc `npx -y rea-agents@latest`)  
-> **Tài liệu gốc tiếng Việt của tác giả:** [morluto/rea README_vi.md](https://github.com/morluto/rea)
+> **Kho mã nguồn nội bộ trên máy:** [`E:\DIEN APP\Skill AI\rea\`](file:///E:/DIEN%20APP/Skill%20AI/rea/)  
+> **Tài liệu gốc tiếng Việt của tác giả:** [`E:\DIEN APP\Skill AI\rea\docs\readme\README_vi.md`](file:///E:/DIEN%20APP/Skill%20AI/rea/docs/readme/README_vi.md)
 
 ---
 
@@ -92,7 +92,7 @@ Trình hướng dẫn (Wizard) của REA sẽ tự động phát hiện các IDE
 ### Cách 2: Cấu hình thủ công vào Antigravity / Cursor / Claude Desktop
 
 #### 1. Cấu hình cho Antigravity / Gemini CLI:
-Mở hoặc tạo file cấu hình MCP tại `~/.gemini/antigravity\mcp_config.json`:
+Mở hoặc tạo file cấu hình MCP tại `C:\Users\INFOASIA\.gemini\antigravity\mcp_config.json`:
 ```json
 {
   "mcpServers": {
@@ -121,9 +121,9 @@ Tạo hoặc sửa file `.cursor/mcp.json` trong thư mục dự án:
 ```
 
 #### 3. Chạy trực tiếp từ mã nguồn nội bộ đã clone:
-Nếu không muốn phụ thuộc vào mạng Internet tải gói npm, Sếp có thể chạy trực tiếp từ thư mục `<thu_muc_clone_rea>`:
+Nếu không muốn phụ thuộc vào mạng Internet tải gói npm, Sếp có thể chạy trực tiếp từ thư mục [`E:\DIEN APP\Skill AI\rea`](file:///E:/DIEN%20APP/Skill%20AI/rea/):
 ```bash
-cd "<thu_muc_clone_rea>"
+cd "E:\DIEN APP\Skill AI\rea"
 npm install
 npm run build
 node dist/cli.js mcp
@@ -179,15 +179,17 @@ Khi REA MCP Server khởi chạy, nó cung cấp cho AI Agent một danh mục c
 
 ## 6. NGHIÊN CỨU ĐIỂN HÌNH (CASE STUDY): BÓC TÁCH PHẦN MỀM ENTERVI AUTO-EDIT
 
-Minh chứng thực tế cho quy trình bóc tách Clean-Room trên dự án mẫu `<workspace>/auto-edit-audit/`:
+Minh chứng sống động nhất cho quy trình này chính là dự án mà hệ thống vừa hoàn thành tại:  
+📂 [`E:\DIEN APP\Skill AI\audo edit\`](file:///E:/DIEN%20APP/Skill%20AI/audo%20edit/)  
+📄 Chi tiết: [BAO_CAO_GIAI_MA_VA_BOC_TACH_ENTERVI_AUTO_EDIT.md](file:///E:/DIEN%20APP/Skill%20AI/audo%20edit/BAO_CAO_GIAI_MA_VA_BOC_TACH_ENTERVI_AUTO_EDIT.md)
 
 ### 🧩 Diễn biến thực tế:
 1. **Đầu vào ban đầu:** Chỉ có file cài đặt `Entervi-Setup-win-x64.exe` nặng **715 KB** (vỏ NSIS Web Installer).
 2. **Bóc tách tầng 1 (Network & Archive):** Giải mã header NSIS $\rightarrow$ bắt được link tải trọn gói ứng dụng độc lập 189 MB từ GitHub (`entervi-0.6.30-x64.nsis.7z`).
-3. **Bóc tách tầng 2 (Runtime Unpack):** Bung gói 189 MB $\rightarrow$ thu được thư mục ứng dụng `entervi_app_full/` nặng **631 MB** chứa 2 binary độc lập: `ffmpeg.exe` (222 MB) và `yt-dlp.exe` (17.8 MB).
-4. **Bóc tách tầng 3 (ASAR Extraction):** Dùng trình bóc tách ASAR bung sạch file `resources/app.asar` $\rightarrow$ đưa về `source_code/`.
+3. **Bóc tách tầng 2 (Runtime Unpack):** Bung gói 189 MB $\rightarrow$ thu được thư mục ứng dụng [entervi_app_full/](file:///E:/DIEN%20APP/Skill%20AI/audo%20edit/entervi_app_full/) nặng **631 MB** chứa 2 binary độc lập: `ffmpeg.exe` (222 MB) và `yt-dlp.exe` (17.8 MB).
+4. **Bóc tách tầng 3 (ASAR Extraction):** Dùng trình bóc tách ASAR bung sạch file `resources/app.asar` $\rightarrow$ đưa về [source_code/](file:///E:/DIEN%20APP/Skill%20AI/audo%20edit/source_code/).
 5. **Thu hoạch toàn bộ thuật toán biên tập tự động:**
-   - Khám phá file lõi `source_code/dist/main.js` (4.2 MB - hơn 4,238,000 ký tự code).
+   - Khám phá file lõi [`source_code/dist/main.js`](file:///E:/DIEN%20APP/Skill%20AI/audo%20edit/source_code/dist/main.js) (4.2 MB - hơn 4,238,000 ký tự code).
    - Bóc tách chính xác thuật toán cắt khoảng lặng:
      ```javascript
      "-i", file, "-af", `silencedetect=n=${noise}dB:d=${min}`, "-f", "null", "-"
@@ -207,10 +209,10 @@ Minh chứng thực tế cho quy trình bóc tách Clean-Room trên dự án m�
 | `npx rea-agents analyze <path>` | Phân tích nhanh 1 tệp tin hoặc thư mục ứng dụng trực tiếp từ dòng lệnh. |
 | `npx skills add morluto/rea --skill reverse-engineer-anything` | Cài đặt toàn bộ tri thức kỹ thuật đảo ngược vào bộ nhớ Agent dưới dạng Skill. |
 
-### 💡 Mẹo nhỏ khi tác chiến trên Windows:
-1. **Tránh lỗi đường dẫn dài (MAX_PATH):** Luôn để thư mục phần mềm cần bóc tách ở đường dẫn ngắn (ví dụ: `D:\RE_Audit\...`).
-2. **Tận dụng binary đóng gói kèm:** Nhiều ứng dụng Electron tích hợp sẵn `ffmpeg.exe` / `yt-dlp.exe` trong `resources/bin/win32-x64/`.
-3. **Mã hóa Clean-Room:** Sau khi AI Agent đọc hiểu mã nguồn bằng REA, luôn yêu cầu AI: *"Hãy viết lại tính năng này bằng Python/Node.js theo phong cách module sạch của dự án"* để sản phẩm vừa sạch sẽ, vừa tối ưu tốc độ vượt trội hơn bản gốc!
+### 💡 Mẹo nhỏ cho Sếp khi tác chiến trên Windows:
+1. **Tránh lỗi đường dẫn dài (MAX_PATH):** Luôn để thư mục phần mềm cần bóc tách ở đường dẫn ngắn (ví dụ: `E:\DIEN APP\Skill AI\...`).
+2. **Bộ binary FFmpeg & yt-dlp di động:** Khi cần xử lý video/audio trong các script của mình, Sếp có thể mượn ngay file `ffmpeg.exe` và `yt-dlp.exe` trong thư mục [`audo edit/entervi_app_full/resources/bin/win32-x64/`](file:///E:/DIEN%20APP/Skill%20AI/audo%20edit/entervi_app_full/resources/bin/win32-x64/) để chạy mà không cần cài đặt phần mềm lên Windows.
+3. **Mã hóa Clean-Room:** Sau khi AI Agent đọc hiểu mã nguồn đối thủ bằng REA, luôn yêu cầu AI: *"Hãy viết lại tính năng này bằng Python/Node.js theo phong cách module của công ty chúng ta"* để sản phẩm vừa sạch sẽ, vừa tối ưu tốc độ vượt trội hơn bản gốc!
 
 ---
 *Tài liệu được biên soạn đồng bộ với phiên bản REA v6.7.0. Bản quyền hướng dẫn thuộc hệ sinh thái Skill AI.*

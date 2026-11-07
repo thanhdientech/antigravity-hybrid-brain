@@ -27,10 +27,10 @@ Từ file ban đầu **`Entervi-Setup-win-x64.exe`** (chỉ nặng **715 KB**), 
 
 ## 📂 PHẦN 2: CẤU TRÚC TÀI NGUYÊN ĐÃ BUNG RA TRÊN MÁY SẾP
 
-Toàn bộ kết quả hiện đã nằm gọn gàng tại thư mục `%USERPROFILE%\.gemini\config\skills\audo edit\`:
+Toàn bộ kết quả hiện đã nằm gọn gàng tại thư mục `E:\DIEN APP\Skill AI\audo edit\`:
 
 ```
-%USERPROFILE%\.gemini\config\skills\audo edit\
+E:\DIEN APP\Skill AI\audo edit\
 ├── Entervi-Setup-win-x64.exe             # File cài đặt ban đầu (715 KB)
 ├── entervi-0.6.30-x64.nsis.7z            # Gói cài đặt đầy đủ tải từ GitHub (189 MB)
 │
@@ -94,8 +94,8 @@ Entervi xây dựng kịch bản từ file JSON manifest, ghép nhạc nền (`l
 Bây giờ Sếp đã sở hữu trọn vẹn toàn bộ mã nguồn của Entervi:
 
 1. **Tận dụng ngay 2 bộ công cụ Binary chuẩn:**
-   - [`ffmpeg.exe` (222 MB)](file:///WORKSPACE_DIR/Skill%20AI/audo%20edit/entervi_app_full/resources/bin/win32-x64/ffmpeg.exe)
-   - [`yt-dlp.exe` (17.8 MB)](file:///WORKSPACE_DIR/Skill%20AI/audo%20edit/entervi_app_full/resources/bin/win32-x64/yt-dlp.exe)
+   - [`ffmpeg.exe` (222 MB)](file:///E:/DIEN%20APP/Skill%20AI/audo%20edit/entervi_app_full/resources/bin/win32-x64/ffmpeg.exe)
+   - [`yt-dlp.exe` (17.8 MB)](file:///E:/DIEN%20APP/Skill%20AI/audo%20edit/entervi_app_full/resources/bin/win32-x64/yt-dlp.exe)
    *(Sếp có thể mang 2 file này sang bất kỳ dự án tải video hay render video nào của mình để dùng mà không cần cài đặt gì thêm).*
 
 2. **Học hỏi thuật toán Render Video trong `dist/main.js`:**

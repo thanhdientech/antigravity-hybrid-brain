@@ -10,13 +10,13 @@ wiki_links:
 ---
 # BOYUM IT BEAS MANUFACTURING: CHỨC NĂNG THAY ĐỔI ĐỊNH MỨC HÀNG LOẠT (BATCH CHANGES - BATCHANDERUNG.HTM) & KIẾN TRÚC DATABASE SẢN XUẤT
 
-Tài liệu kỹ thuật chuyên sâu chuẩn hóa từ tài liệu chính thức của Boyum IT Beas Manufacturing (`https://help.beascloud.com/beas202206/index.html?batchanderung.htm`, Window `artikel_stlpos_batch.psr`) và cấu trúc cơ sở dữ liệu sản xuất Beas trên MS SQL Server dành cho đội ngũ Tư vấn & Kỹ sư **Enterprise**.
+Tài liệu kỹ thuật chuyên sâu chuẩn hóa từ tài liệu chính thức của Boyum IT Beas Manufacturing (`https://help.beascloud.com/beas202206/index.html?batchanderung.htm`, Window `artikel_stlpos_batch.psr`) và cấu trúc cơ sở dữ liệu sản xuất Beas trên MS SQL Server dành cho đội ngũ Tư vấn & Kỹ sư **InfoAsia**.
 
 ---
 
 ## 1. CHỨC NĂNG THAY ĐỔI ĐỊNH MỨC BOM HÀNG LOẠT (BILL OF MATERIALS - BATCH CHANGES / `batchanderung.htm`)
 
-Khi doanh nghiệp sản xuất cần thay thế một nguyên vật liệu cũ bằng nguyên vật liệu mới, cập nhật định mức tiêu hao, thêm phụ gia mới hoặc xóa một bán thành phẩm ngừng sử dụng trên **hàng trăm công thức BOM (`BEAS_STL_HEADER` / `BEAS_STL`) cùng lúc**, kỹ sư Enterprise hướng dẫn khách hàng sử dụng công cụ **BoM Batch changes** thay vì sửa thủ công từng mã.
+Khi doanh nghiệp sản xuất cần thay thế một nguyên vật liệu cũ bằng nguyên vật liệu mới, cập nhật định mức tiêu hao, thêm phụ gia mới hoặc xóa một bán thành phẩm ngừng sử dụng trên **hàng trăm công thức BOM (`BEAS_STL_HEADER` / `BEAS_STL`) cùng lúc**, kỹ sư InfoAsia hướng dẫn khách hàng sử dụng công cụ **BoM Batch changes** thay vì sửa thủ công từng mã.
 
 ### 1.1. Đường Dẫn Truy Cập & Thông Tin Cửa Sổ Kỹ Thuật
 - **Đường dẫn Menu trên Beas / SAP B1:**
@@ -127,7 +127,7 @@ Tên bảng trong Beas tuân theo quy tắc ghép từ tiếng Đức: **`BEAS_`
 
 ## 3. CHECKLIST 5 NGUYÊN NHÂN KHÔNG ĐÓNG ĐƯỢC LỆNH SẢN XUẤT BEAS (`ABGKZ <> 'J'`) & SQL CHẨN ĐOÁN
 
-Khi kế toán giá thành hoặc điều độ sản xuất báo lỗi không thể đóng (`Close`) Lệnh sản xuất (`BELNR_ID`), kỹ sư Enterprise kiểm tra tuần tự theo 5 nguyên nhân sau:
+Khi kế toán giá thành hoặc điều độ sản xuất báo lỗi không thể đóng (`Close`) Lệnh sản xuất (`BELNR_ID`), kỹ sư InfoAsia kiểm tra tuần tự theo 5 nguyên nhân sau:
 
 1. **Nguyên nhân 1 - Còn công nhân đang bấm `Start` (`Logon`) mà chưa bấm `Stop` trên BDE Terminal / WebApps:**
    - Kiểm tra bảng `BEAS_FTSTAMP` (các phiên đang bấm giờ dở dang) hoặc `BEAS_ARBZEIT` chưa hoàn tất kết chuyển.

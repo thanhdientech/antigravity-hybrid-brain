@@ -19,10 +19,10 @@ sys.stdout.reconfigure(encoding="utf-8")
 
 GLOBAL_SKILLS_DIR = os.path.expanduser(os.path.join("~", ".gemini", "config", "skills"))
 EXTRA_SOURCE_ROOTS = [
-    os.environ.get("AGY_SKILL_SOURCE_DIR", ""),
-    os.path.join(os.environ.get("AGY_SKILL_SOURCE_DIR", ""), "blueprint-repos"),
-    os.path.join(os.environ.get("AGY_SKILL_SOURCE_DIR", ""), "ui-workflow-repos"),
-    os.path.join(os.environ.get("AGY_SKILL_SOURCE_DIR", ""), "ui-audit-repos"),
+    os.environ.get("AGY_SKILL_SOURCE_DIR", r"E:\DIEN APP\Skill AI"),
+    os.path.join(os.environ.get("AGY_SKILL_SOURCE_DIR", r"E:\DIEN APP\Skill AI"), "blueprint-repos"),
+    os.path.join(os.environ.get("AGY_SKILL_SOURCE_DIR", r"E:\DIEN APP\Skill AI"), "ui-workflow-repos"),
+    os.path.join(os.environ.get("AGY_SKILL_SOURCE_DIR", r"E:\DIEN APP\Skill AI"), "ui-audit-repos"),
 ]
 MANIFEST_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "skill_upstreams.json")
 

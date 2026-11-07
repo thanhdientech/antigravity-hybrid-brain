@@ -2,8 +2,8 @@ import shutil
 import subprocess
 from pathlib import Path
 
-video = Path(r"<WORKSPACE_DIR>\Xây Kênh Youtube\Tool render edit Video\omniflash\output\ep01_anh_ay_luon_di_ben_ngoai_9x16\ep01_anh_ay_luon_di_ben_ngoai_9x16_sub.mp4")
-art_dir = Path(r"%USERPROFILE%\.gemini\antigravity\brain\<session-id>")
+video = Path(r"E:\DIEN APP\Xây Kênh Youtube\Tool render edit Video\omniflash\output\ep01_anh_ay_luon_di_ben_ngoai_9x16\ep01_anh_ay_luon_di_ben_ngoai_9x16_sub.mp4")
+art_dir = Path(r"C:\Users\INFOASIA\.gemini\antigravity\brain\e1bb566c-6a70-4a40-9357-b06201b6c46a")
 
 # 1. Copy final video to artifact dir
 target_video = art_dir / "ep01_anh_ay_luon_di_ben_ngoai_9x16_sub.mp4"

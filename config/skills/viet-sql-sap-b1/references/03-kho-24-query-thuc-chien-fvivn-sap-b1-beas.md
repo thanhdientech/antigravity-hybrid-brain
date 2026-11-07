@@ -1,24 +1,24 @@
 ---
-title: "Kho 24 Câu Lệnh SQL Thực Chiến SBO_MFG (SAP B1 9.3 & Beas Manufacturing)"
-source: "<WORKSPACE_DIR>\\SQL SAP B1\\queries\\SYNC_SBO_MFG_PROD_SSMS"
+title: "Kho 24 Câu Lệnh SQL Thực Chiến FVIVN (SAP B1 9.3 & Beas Manufacturing)"
+source: "E:\\DIEN APP\\SQL SAP B1\\queries\\SYNC_FVIVN_PROD_SSMS"
 databases:
-  - "SBO_MFG_PLANT1 (SBO_MFG_PLANT1 - Công ty ở TP.HCM)"
-  - "SBO_MFG_PROD (SBO_MFG_PROD - Công ty ở Long Thành)"
+  - "FVIVN_GoLive_2024 (FVIVN_HCM - Công ty ở TP.HCM)"
+  - "FVIVN_PROD (FVIVN_LT - Công ty ở Long Thành)"
 updated: "2026-10-18"
 ---
 
-# Kho 24 Câu Lệnh SQL Thực Chiến SBO_MFG (SAP B1 9.3 & Beas Manufacturing)
+# Kho 24 Câu Lệnh SQL Thực Chiến FVIVN (SAP B1 9.3 & Beas Manufacturing)
 
-Tài liệu này tổng hợp toàn bộ **24 câu lệnh SQL thực chiến** trích xuất từ hệ thống SSMS của khách hàng **FVI Việt Nam (`SYNC_SBO_MFG_PROD_SSMS`)**, áp dụng cho cả 2 Database trên máy chủ `10.0.0.20`:
-- **`SBO_MFG_PLANT1` (`SBO_MFG_PLANT1`)**: Công ty FVI Việt Nam tại TP.HCM.
-- **`SBO_MFG_PROD` (`SBO_MFG_PROD`)**: Chi nhánh FVI Việt Nam tại Long Thành.
+Tài liệu này tổng hợp toàn bộ **24 câu lệnh SQL thực chiến** trích xuất từ hệ thống SSMS của khách hàng **FVI Việt Nam (`SYNC_FVIVN_PROD_SSMS`)**, áp dụng cho cả 2 Database trên máy chủ `192.168.42.160`:
+- **`FVIVN_HCM` (`FVIVN_GoLive_2024`)**: Công ty FVI Việt Nam tại TP.HCM.
+- **`FVIVN_LT` (`FVIVN_PROD`)**: Chi nhánh FVI Việt Nam tại Long Thành.
 
 ---
 
-## 1. Từ Điển Trường Tùy Chỉnh (UDF), Bảng Mở Rộng (UDT) & Hệ Thống Tài Khoản (COA) Đặc Thù Của SBO_MFG
+## 1. Từ Điển Trường Tùy Chỉnh (UDF), Bảng Mở Rộng (UDT) & Hệ Thống Tài Khoản (COA) Đặc Thù Của FVIVN
 
-### 1.1. Các Trường UDF & Bảng UDT Đặc Thù Trên Hệ Thống SBO_MFG
-| Bảng / Cột | Ý Nghĩa Thực Tế Tại SBO_MFG | Cách Nối Bảng (Join Rule) |
+### 1.1. Các Trường UDF & Bảng UDT Đặc Thù Trên Hệ Thống FVIVN
+| Bảng / Cột | Ý Nghĩa Thực Tế Tại FVIVN | Cách Nối Bảng (Join Rule) |
 |---|---|---|
 | `IGN1.U_belnrid`, `IGN1.U_belposid` | Số Lệnh sản xuất Beas (`BELNR_ID`) và Vị trí (`BELPOS_ID`) trên dòng Nhập kho thành phẩm (`OIGN/IGN1`) | `IGN1.U_belnrid = BEAS_FTHAUPT.BELNR_ID AND IGN1.U_belposid = BEAS_FTPOS.BELPOS_ID` |
 | `IGE1.U_belnrid`, `IGE1.U_belposid`, `IGE1.U_posid` | Số Lệnh sản xuất Beas, Vị trí và Dòng BOM (`POS_ID`) trên dòng Xuất kho NVL (`OIGE/IGE1`) | `IGE1.U_belnrid = BEAS_FTSTL.BELNR_ID AND IGE1.U_belposid = BEAS_FTSTL.BELPOS_ID` |
@@ -32,7 +32,7 @@ Tài liệu này tổng hợp toàn bộ **24 câu lệnh SQL thực chiến** t
 | `OITM.U_ZNR` | Số bản vẽ / mã quy cách kỹ thuật (`Drawing Number`) của Item | Hiển thị kèm `ItemCode`, `ItemName` trong các báo cáo BOM và Tồn kho |
 | `OUSR.U_Dump` | Cờ phân quyền hiển thị dữ liệu nhạy cảm theo User | Dùng trong các báo cáo Sales Order / AR Invoice |
 
-### 1.2. Hệ Thống Tài Khoản Kế Toán & Kho Đặc Thù Tại SBO_MFG
+### 1.2. Hệ Thống Tài Khoản Kế Toán & Kho Đặc Thù Tại FVIVN
 - **Tài khoản Chi phí & Giá thành sản xuất**:
   - `154100`: Chi phí sản xuất kinh doanh dở dang - Sản xuất chính (WIP).
   - `154200`: Chi phí sản xuất dở dang khác / bán thành phẩm.
@@ -47,11 +47,11 @@ Tài liệu này tổng hợp toàn bộ **24 câu lệnh SQL thực chiến** t
 - **Nhóm Hàng Hóa (`OITB.ItmsGrpCod`) & Kho (`OWHS.WhsCode`)**:
   - `ItmsGrpCod = 109`: Thành phẩm (`Finished Goods`).
   - `ItmsGrpCod IN (100, 107)`: Nguyên vật liệu / Hóa chất / Bao bì chính dùng cho sản xuất.
-  - Các kho chuẩn tại SBO_MFG: `01.RM` (Kho Nguyên vật liệu), `01.FG` (Kho Thành phẩm), `01.WIP` (Kho Sản xuất dở dang), `01.QC` (Kho Chờ kiểm định QC), `01.SP` (Kho Phụ tùng Spare Parts).
+  - Các kho chuẩn tại FVIVN: `01.RM` (Kho Nguyên vật liệu), `01.FG` (Kho Thành phẩm), `01.WIP` (Kho Sản xuất dở dang), `01.QC` (Kho Chờ kiểm định QC), `01.SP` (Kho Phụ tùng Spare Parts).
 
 ---
 
-## 2. Danh Mục 24 Câu Lệnh SQL Thực Chiến (`SYNC_SBO_MFG_PROD_SSMS`)
+## 2. Danh Mục 24 Câu Lệnh SQL Thực Chiến (`SYNC_FVIVN_PROD_SSMS`)
 
 > **Lưu ý khi gọi bằng công cụ `sap_customer_query`**:
 > Vì `sap_customer_query` thực thi ở chế độ **Read-Only 100%** (chặn các lệnh `CREATE TABLE #...`, `DROP TABLE`, `INSERT INTO`), toàn bộ các câu truy vấn phức tạp dưới đây đã được chuẩn hóa sang dạng **`WITH ... AS (CTE)`** hoặc `SELECT` trực tiếp kèm `WITH (NOLOCK)` để AI có thể chạy lấy dữ liệu thật ngay lập tức.
@@ -311,7 +311,7 @@ ORDER BY N1.Warehouse, N1.ItemCode;
 ```
 
 #### 10. `Current_Stock_by_WH.sql` - Tồn Kho Tức Thời Trên 5 Kho Chính (`01.RM`, `01.FG`, `01.WIP`, `01.QC`, `01.SP`)
-- **Mục đích**: Xem nhanh tồn kho hiện tại (`OITW.OnHand`) của từng mặt hàng xoay cột (Pivot) theo 5 kho chính của SBO_MFG kèm số bản vẽ `U_ZNR` và đơn giá `AvgPrice`.
+- **Mục đích**: Xem nhanh tồn kho hiện tại (`OITW.OnHand`) của từng mặt hàng xoay cột (Pivot) theo 5 kho chính của FVIVN kèm số bản vẽ `U_ZNR` và đơn giá `AvgPrice`.
 ```sql
 SELECT TOP 200
     T0.ItemCode,
@@ -571,9 +571,9 @@ ORDER BY T0.CardType, T0.CardCode;
 
 ---
 
-## 3. Chỉ Mục Chính Xác 24 File Trong `queries/SYNC_SBO_MFG_PROD_SSMS` (Dùng Với `sap_help_query_search`)
+## 3. Chỉ Mục Chính Xác 24 File Trong `queries/SYNC_FVIVN_PROD_SSMS` (Dùng Với `sap_help_query_search`)
 
-Khi cần lấy nguyên bản toàn bộ câu lệnh SQL trong thư mục `<WORKSPACE_DIR>\SQL SAP B1\queries\SYNC_SBO_MFG_PROD_SSMS`, hãy gọi công cụ `sap_help_query_search(category="SYNC_SBO_MFG_PROD_SSMS", keyword="...")` với tên file tương ứng dưới đây:
+Khi cần lấy nguyên bản toàn bộ câu lệnh SQL trong thư mục `E:\DIEN APP\SQL SAP B1\queries\SYNC_FVIVN_PROD_SSMS`, hãy gọi công cụ `sap_help_query_search(category="SYNC_FVIVN_PROD_SSMS", keyword="...")` với tên file tương ứng dưới đây:
 
 ### 3.1. Thư mục `Financials` (5 file)
 1. `WORK ORDER PRODUCTION COST ALLOCATION.sql` - Phân bổ chi phí sản xuất theo Work Order (`BEAS_JOURNAL_HISTORIE`, TK `154100`, `155100`, `154200`, `152000`, `152100`, `622%`, `627%`).

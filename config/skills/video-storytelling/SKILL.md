@@ -116,7 +116,7 @@ python cli.py --topic "Chảo Titan Chống Dính Laser" --character "người p
 # 3. Kịch bản Quảng cáo theo công thức BAB (Before - After - Bridge):
 python cli.py --topic "Phần Mềm Quản Lý Tài Chính AI" --character "chủ doanh nghiệp nam 35 tuổi" --formula conversion_bab --out "./output/saas_bab"
 
-# 4. Kịch bản Phim Tài Liệu Tranh Biện 7 Nhịp (Chuẩn kênh Channel_03_Explainer_EN):
+# 4. Kịch bản Phim Tài Liệu Tranh Biện 7 Nhịp (Chuẩn kênh Some Guy Who Knows Stuff):
 python cli.py --topic "Bản Nhạc Bí Ẩn Vùng Tối Mặt Trăng Apollo 10" --character "phi hành gia Eugene Cernan" --formula scientific_debate_7beat --cinematic-style film_noir --out "./output/apollo10_debate"
 
 # 5. Kịch bản Phim Tài Liệu Khoa Học theo công thức ABT:

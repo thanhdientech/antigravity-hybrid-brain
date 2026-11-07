@@ -15,15 +15,15 @@ source: "[[01-sap-b1-93-vs-100-sql-architecture]], [[02-beas-manufacturing-batch
 
 # Cẩm Nang SAP B1 (9.3 vs 10.0 MS SQL) & Boyum IT Beas Manufacturing (Batch Changes & Cấu Trúc Bảng)
 
-> Trang Wiki trụ cột phục vụ trực tiếp cho **[[ia-01-tong-cong-trinh-su-sap-b1-beas]]** và toàn bộ đội ngũ Tư vấn / Kỹ sư triển khai **Enterprise**. Chưng cất từ [[01-sap-b1-93-vs-100-sql-architecture]] và [[02-beas-manufacturing-batchanderung-and-db]], kết nối chặt chẽ với [[cam-nang-ke-toan-gia-thanh-thue-va-luong-nghiep-vu-erp]] cùng [[cam-nang-sql-fms-sdk-dtw-va-quan-tri-server]].
+> Trang Wiki trụ cột phục vụ trực tiếp cho **[[ia-01-tong-cong-trinh-su-sap-b1-beas]]** và toàn bộ đội ngũ Tư vấn / Kỹ sư triển khai **InfoAsia**. Chưng cất từ [[01-sap-b1-93-vs-100-sql-architecture]] và [[02-beas-manufacturing-batchanderung-and-db]], kết nối chặt chẽ với [[cam-nang-ke-toan-gia-thanh-thue-va-luong-nghiep-vu-erp]] cùng [[cam-nang-sql-fms-sdk-dtw-va-quan-tri-server]].
 
 ---
 
 ## 1. Khác Biệt Kiến Trúc Database SAP Business One 9.3 vs 10.0 Trên MS SQL Server
 
-Khi triển khai mới, nâng cấp phiên bản hoặc viết câu lệnh SQL / Stored Procedure / Add-on SDK dùng chung cho nhiều khách hàng của Enterprise, kỹ sư bắt buộc phải đối chiếu bảng khác biệt Schema giữa **SAP B1 9.3** và **SAP B1 10.0** [[01-sap-b1-93-vs-100-sql-architecture]]:
+Khi triển khai mới, nâng cấp phiên bản hoặc viết câu lệnh SQL / Stored Procedure / Add-on SDK dùng chung cho nhiều khách hàng của InfoAsia, kỹ sư bắt buộc phải đối chiếu bảng khác biệt Schema giữa **SAP B1 9.3** và **SAP B1 10.0** [[01-sap-b1-93-vs-100-sql-architecture]]:
 
-| Trường / Bảng Dữ Liệu | SAP B1 9.3 (MS SQL) | SAP B1 10.0 (MS SQL) | Quy Tắc Áp Dụng Thực Chiến Cho Kỹ Sư Enterprise |
+| Trường / Bảng Dữ Liệu | SAP B1 9.3 (MS SQL) | SAP B1 10.0 (MS SQL) | Quy Tắc Áp Dụng Thực Chiến Cho Kỹ Sư InfoAsia |
 | :--- | :--- | :--- | :--- |
 | **`ItemCode` (`OITM`, `RDR1`, `INV1`, `WOR1`...)** | `NVARCHAR(20)` | **`NVARCHAR(50)`** | Khai báo mọi biến `@ItemCode` trong SQL/TransactionNotification là `NVARCHAR(50)` để không bị lỗi cắt chuỗi trên bản 10.0 [[01-sap-b1-93-vs-100-sql-architecture]]. |
 | **`ItemName` / `Dscription`** | `NVARCHAR(100)` | **`NVARCHAR(200)`** | Cột tên vật tư trong bảng tạm `#Temp` hoặc tham số báo cáo phải để `NVARCHAR(200)` [[01-sap-b1-93-vs-100-sql-architecture]]. |
@@ -78,7 +78,7 @@ Theo tài liệu chính thức của Boyum IT Beas Manufacturing (`https://help.
 
 ## 4. Checklist 5 Nguyên Nhân Không Đóng Được Lệnh Sản Xuất Beas (`ABGKZ <> 'J'`)
 
-Khi khách hàng báo lỗi không thể chuyển trạng thái Lệnh sản xuất (`BELNR_ID`) sang Đóng (`Closed` / `ABGKZ = 'J'`), kỹ sư Enterprise rà soát ngay 5 chốt chặn sau [[02-beas-manufacturing-batchanderung-and-db]]:
+Khi khách hàng báo lỗi không thể chuyển trạng thái Lệnh sản xuất (`BELNR_ID`) sang Đóng (`Closed` / `ABGKZ = 'J'`), kỹ sư InfoAsia rà soát ngay 5 chốt chặn sau [[02-beas-manufacturing-batchanderung-and-db]]:
 1. **Còn phiên bấm giờ dở dang (`Active Time Receipt / Terminal Logon`):** Công nhân đã bấm `Start` trên BDE Terminal / WebApps nhưng chưa bấm `Stop` (kiểm tra bảng `BEAS_FTSTAMP` / `BEAS_ARBZEIT`) [[02-beas-manufacturing-batchanderung-and-db]].
 2. **Còn phiếu QC chưa duyệt (`Open QC Order`):** Phiếu kiểm tra chất lượng trong `BEAS_QSFTHAUPT` gắn với vị trí lệnh chưa được đánh giá (`Release / Valuation / Transfer`) [[02-beas-manufacturing-batchanderung-and-db]].
 3. **Còn vị trí Bán thành phẩm con chưa đóng (`Open Sub-assembly Position`):** Trong lệnh sản xuất đa cấp, một vị trí cấp dưới (`BEAS_FTPOS.BELPOS_ID`) vẫn đang có `ABGKZ = 'N'` [[02-beas-manufacturing-batchanderung-and-db]].
@@ -87,6 +87,6 @@ Khi khách hàng báo lỗi không thể chuyển trạng thái Lệnh sản xu�
 
 ---
 
-## Liên Kết Hệ Sinh Thái Tri Thức Enterprise
+## Liên Kết Hệ Sinh Thái Tri Thức InfoAsia
 - [[cam-nang-ke-toan-gia-thanh-thue-va-luong-nghiep-vu-erp]] - Luồng kế toán giá thành sản xuất (`WIP TK 154`), Mua - Bán - Kho và Thông tư 99/2025/TT-BTC.
 - [[cam-nang-sql-fms-sdk-dtw-va-quan-tri-server]] - Truy vấn SQL, FMS, TransactionNotification, DTW Import và Lập trình SDK / Quản trị Server.

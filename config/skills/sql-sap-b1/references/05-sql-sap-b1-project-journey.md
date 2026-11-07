@@ -14,7 +14,7 @@ Tài liệu này ghi chú lại toàn bộ các cột mốc, những vấn đề
 ## 2. Xử lý "Nỗi đau" Kỹ thuật (Technical Debt & Bug Squashing)
 * **Smart SQL Temporal Quoting (Xử lý chuỗi và Ngày tháng):** Giải quyết triệt để lỗi cú pháp SQL khi tham số truyền vào thiếu hoặc dư dấu nháy đơn (`'`). AI đã viết thuật toán tự động nhận diện xem câu SQL gốc đã bọc nháy cho biến `[%0]` chưa, từ đó tự động thêm nháy an toàn cho các kiểu dữ liệu Date/Text mà không làm hỏng cú pháp.
 * **Quyền Truy Cập & Phân luồng Thư mục (Zero-Trust RBAC):** 
-  * Cấu trúc lại toàn bộ kho lưu trữ báo cáo từ thư mục chung `SYNC_default` sang các thư mục rành mạch theo tên Database (VD: `SYNC_SBO_MFG_PROD`).
+  * Cấu trúc lại toàn bộ kho lưu trữ báo cáo từ thư mục chung `SYNC_default` sang các thư mục rành mạch theo tên Database (VD: `SYNC_FVIVN_PROD`).
   * Hệ thống tự động thiết lập quyền (Visibility) để người dùng ở Database nào thì chỉ thấy báo cáo của Database đó, giúp tăng cường tính bảo mật.
 
 ## 3. Nâng cấp Trải nghiệm Người Dùng (UI/UX)

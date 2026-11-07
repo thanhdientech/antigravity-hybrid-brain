@@ -16,7 +16,7 @@ import subprocess
 import sys
 from pathlib import Path
 
-STUDIO_WORKSPACE = Path(os.environ.get("SHOPEE_STUDIO_WORKSPACE", os.path.expanduser("~/shopee-video-studio")))
+STUDIO_WORKSPACE = Path(r"e:\DIEN APP\Tiep thi lien ke shoppe\Tim repo tim san pham shope lam video")
 STUDIO_VENV_PY = STUDIO_WORKSPACE / "01_Shopee_API_Va_San_Ngach" / "shopee-scraper" / ".venv" / "Scripts" / "python.exe"
 
 
@@ -61,7 +61,7 @@ def main() -> int:
     p_sr = sub.add_parser("story-render", help="Dựng trọn gói Phim Câu Chuyện Người Mẫu Mặc Áo Thật (.MP4)")
     p_sr.add_argument("--url", required=True, help="Link sản phẩm Shopee.vn")
     p_sr.add_argument("--affiliate", default="", help="Link tiếp thị liên kết")
-    p_sr.add_argument("--flow-url", default="https://flow.google.com/project/<FLOW_PROJECT_ID>")
+    p_sr.add_argument("--flow-url", default="https://flow.google.com/project/f9f9f1d0-e543-484b-8f2c-cf011e463ed7")
     p_sr.add_argument("--engine", default="flowkit_auto", choices=["flowkit_auto", "muse_only"])
     p_sr.add_argument("--garment-index", type=int, default=1)
     p_sr.add_argument("--scenes", type=int, default=3)

@@ -41,7 +41,7 @@ and both fire in the same campaigns. (3) Only ENABLED actions; exclude HIDDEN/RE
 system-managed actions (locked attribution/counting). (4) **Before flagging any out-of-brand / micro /
 duplicate action, check `primary_for_goal`** — a NON-primary action does not enter Smart Bidding and is
 harmless (surface as a tidy-up NOTE, not a scored finding); only a PRIMARY one an active campaign optimizes
-toward is real. See `~/.gemini/config/skills/google-ads-master/skills/google-ads-shared/references/conversion-tracking-logic.md`.
+toward is real. See `C:/Users/INFOASIA/.gemini/config/skills/google-ads-master/skills/google-ads-shared/references/conversion-tracking-logic.md`.
 
 ---
 

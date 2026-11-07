@@ -30,25 +30,25 @@ async function detectAndSyncProfileIdentity() {
       });
       if (info && info.email) {
         currentProfileEmail = info.email.toLowerCase().trim();
-        if (currentProfileEmail.includes("enterprise_account")) {
-          currentProfileName = "enterprise";
-          await chrome.storage.local.set({ profile_name: "enterprise" });
+        if (currentProfileEmail.includes("infoasiavietnam")) {
+          currentProfileName = "infoasia";
+          await chrome.storage.local.set({ profile_name: "infoasia" });
           return;
-        } else if (currentProfileEmail.includes("erp_account")) {
+        } else if (currentProfileEmail.includes("scmsap2022")) {
           currentProfileName = "54";
           await chrome.storage.local.set({ profile_name: "54" });
           return;
-        } else if (currentProfileEmail.includes("creator_account")) {
+        } else if (currentProfileEmail.includes("thanhdientraining")) {
           currentProfileName = "7";
           await chrome.storage.local.set({ profile_name: "7" });
           return;
-        } else if (currentProfileEmail.includes("suno_account")) {
+        } else if (currentProfileEmail.includes("regsunoai2026")) {
           currentProfileName = "67";
           await chrome.storage.local.set({ profile_name: "67" });
           return;
-        } else if (currentProfileEmail.includes("store_account")) {
-          currentProfileName = "store_profile";
-          await chrome.storage.local.set({ profile_name: "store_profile" });
+        } else if (currentProfileEmail.includes("nerhor.densankhau")) {
+          currentProfileName = "nerhordensankhau";
+          await chrome.storage.local.set({ profile_name: "nerhordensankhau" });
           return;
         }
       }
@@ -80,9 +80,9 @@ async function detectAndSyncProfileIdentity() {
           currentProfileName = "67";
           await chrome.storage.local.set({ profile_name: "67" });
           break;
-        } else if (u.includes("example.com") || u.includes("sc-domain:example.com")) {
-          currentProfileName = "enterprise";
-          await chrome.storage.local.set({ profile_name: "enterprise" });
+        } else if (u.includes("infoasia.vn") || u.includes("sc-domain:infoasia.vn")) {
+          currentProfileName = "infoasia";
+          await chrome.storage.local.set({ profile_name: "infoasia" });
           break;
         }
       }

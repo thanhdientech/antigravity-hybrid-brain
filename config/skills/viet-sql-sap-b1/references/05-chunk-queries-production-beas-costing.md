@@ -11,8 +11,8 @@ Tài liệu này là chỉ mục băm nhỏ (Smart-Loading Chunk) cho nhóm câu
 | **Phát hiện Bất thường Giá vốn & Giá thành** | `references/queries/Cost_Anomaly_Detection.sql` | Quét biến động đơn giá vốn hàng xuất kho / nhập kho bất thường trên `OINM`, `OITM`, `OIGN`, `OIGE`. |
 | **Phân tích Giá thành Sản xuất (`97.Production Cost Analysis`)** | `references/queries/97.Production Cost Analysis/` | Phân tích chi phí Nguyên vật liệu (`621`), Nhân công (`622`), Sản xuất chung (`627`) và Dở dang (`WIP 154`) theo Lệnh sản xuất. |
 | **Truy vấn Sản xuất Chuẩn (`06.Production Queries` & `Production`)** | `references/queries/06.Production Queries/`<br>`references/queries/Production/` | Theo dõi tiến độ Lệnh sản xuất (`OWOR`/`WOR1` & `BEAS_FTHAUPT`/`BEAS_FTPOS`), định mức tiêu hao NVL thực tế vs định mức BOM (`BEAS_FTSTL`). |
-| **Truy vấn Sản xuất Thực chiến SBO_MFG (`SYNC_SBO_MFG_PROD_SSMS\Production`)** | `references/queries/SYNC_SBO_MFG_PROD_SSMS/Production/` | Bộ 5 câu lệnh SQL thực chiến trên hệ thống SBO_MFG (Lệnh sản xuất Beas, Giờ công `BEAS_ARBZEIT`, Nhập kho thành phẩm `OIGN`, Xuất kho NVL `OIGE`). |
-| **Truy vấn Sản xuất Thực chiến plant_c (`SYNC_SBO_PLANT_C\05. Production`)** | `references/queries/SYNC_SBO_PLANT_C/05. Production/` | Bộ 3 câu lệnh SQL theo dõi lệnh sản xuất và tiêu hao vật tư tại nhà máy plant_c (`SBO_PLANT_C`). |
+| **Truy vấn Sản xuất Thực chiến FVIVN (`SYNC_FVIVN_PROD_SSMS\Production`)** | `references/queries/SYNC_FVIVN_PROD_SSMS/Production/` | Bộ 5 câu lệnh SQL thực chiến trên hệ thống FVIVN (Lệnh sản xuất Beas, Giờ công `BEAS_ARBZEIT`, Nhập kho thành phẩm `OIGN`, Xuất kho NVL `OIGE`). |
+| **Truy vấn Sản xuất Thực chiến Penflex (`SYNC_PenflexPRD_NEW\05. Production`)** | `references/queries/SYNC_PenflexPRD_NEW/05. Production/` | Bộ 3 câu lệnh SQL theo dõi lệnh sản xuất và tiêu hao vật tư tại nhà máy Penflex (`PenflexPRD_NEW`). |
 
 ---
 
@@ -43,4 +43,4 @@ WHERE T0.BELDAT >= @FromDate
 ORDER BY T0.BELNR_ID DESC, T1.BELPOS_ID, T2.POS_ID;
 ```
 
-> **Gợi ý**: Để xem toàn văn 24 câu lệnh SQL thực chiến kèm giải thích nghiệp vụ chi tiết của SBO_MFG, đọc thêm `references/03-kho-24-query-thuc-chien-mfg-sap-b1-beas.md`.
+> **Gợi ý**: Để xem toàn văn 24 câu lệnh SQL thực chiến kèm giải thích nghiệp vụ chi tiết của FVIVN, đọc thêm `references/03-kho-24-query-thuc-chien-fvivn-sap-b1-beas.md`.

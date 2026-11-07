@@ -10,13 +10,13 @@ wiki_links:
 ---
 # KIẾN TRÚC CƠ SỞ DỮ LIỆU SAP BUSINESS ONE 9.3 VS 10.0 TRÊN MS SQL SERVER, BẢNG MÃ OBJTYPE, TRANSACTIONNOTIFICATION & FMS
 
-Tài liệu kỹ thuật cốt lõi dành cho đội ngũ Tư vấn & Kỹ sư Triển khai của công ty **Enterprise** khi làm việc trên các hệ thống khách hàng đang vận hành **SAP Business One 9.3** và **SAP Business One 10.0** (nền tảng Microsoft SQL Server 2016/2017/2019/2022).
+Tài liệu kỹ thuật cốt lõi dành cho đội ngũ Tư vấn & Kỹ sư Triển khai của công ty **InfoAsia** khi làm việc trên các hệ thống khách hàng đang vận hành **SAP Business One 9.3** và **SAP Business One 10.0** (nền tảng Microsoft SQL Server 2016/2017/2019/2022).
 
 ---
 
 ## 1. SO SÁNH CHI TIẾT KIẾN TRÚC DATABASE SAP B1 9.3 VS 10.0 TRÊN MS SQL SERVER
 
-Khi nâng cấp (Upgrade) từ SAP B1 9.3 lên 10.0 hoặc viết câu lệnh SQL, Stored Procedure, Add-on SDK dùng chung cho nhiều khách hàng đang ở cả 2 phiên bản, kỹ sư Enterprise bắt buộc phải nắm rõ các thay đổi cấp độ Schema dưới đây:
+Khi nâng cấp (Upgrade) từ SAP B1 9.3 lên 10.0 hoặc viết câu lệnh SQL, Stored Procedure, Add-on SDK dùng chung cho nhiều khách hàng đang ở cả 2 phiên bản, kỹ sư InfoAsia bắt buộc phải nắm rõ các thay đổi cấp độ Schema dưới đây:
 
 ### 1.1. Bảng Đối Chiếu Thay Đổi Độ Dài Trường & Cấu Trúc Bảng (9.3 vs 10.0)
 
@@ -104,7 +104,7 @@ Trong SAP Business One, mỗi chứng từ (Marketing Document) được tổ ch
 
 ---
 
-## 4. QUY TẮC NỐI BẢNG CHUẨN (GOLDEN JOIN RULES) CHO KỸ SƯ ENTERPRISE
+## 4. QUY TẮC NỐI BẢNG CHUẨN (GOLDEN JOIN RULES) CHO KỸ SƯ INFOASIA
 
 1. **Nguyên tắc 1 - Nối Header và Line bằng `DocEntry`:**
    - Mọi bảng Header (`ORDR`, `ODLN`, `OINV`, `OPOR`, `OPDN`, `OPCH`...) nối với bảng Line (`RDR1`, `DLN1`, `INV1`...) thông qua khóa chính **`DocEntry`** (`T0.DocEntry = T1.DocEntry`).
@@ -155,7 +155,7 @@ Trong SAP Business One, mỗi chứng từ (Marketing Document) được tổ ch
 
 ```sql
 -- =========================================================================
--- MẪU CHUẨN ENTERPRISE: SBO_SP_TransactionNotification
+-- MẪU CHUẨN INFOASIA: SBO_SP_TransactionNotification
 -- Lưu ý: Luôn đặt code bên dưới dòng "-- ADD YOUR CODE HERE"
 -- và dùng WITH (NOLOCK) để tránh làm chậm hoặc gây Deadlock toàn hệ thống.
 -- =========================================================================
@@ -194,7 +194,7 @@ BEGIN
     IF @BadLine IS NOT NULL
     BEGIN
         SET @error = 15001;
-        SET @error_message = N'[Enterprise ERP Rule] Dòng số ' + CAST(@BadLine AS NVARCHAR(10))
+        SET @error_message = N'[InfoAsia ERP Rule] Dòng số ' + CAST(@BadLine AS NVARCHAR(10))
                            + N' (Mã hàng: ' + ISNULL(@BadItem, '') + N') ' + @Reason + N'. Vui lòng kiểm tra lại!';
     END
 END
@@ -223,7 +223,7 @@ BEGIN
     IF @DupDocNum IS NOT NULL
     BEGIN
         SET @error = 18002;
-        SET @error_message = N'[Enterprise ERP Rule] Số hóa đơn NCC (' + @NumAtCard
+        SET @error_message = N'[InfoAsia ERP Rule] Số hóa đơn NCC (' + @NumAtCard
                            + N') đã tồn tại trên hệ thống tại chứng từ A/P Invoice số: ' + CAST(@DupDocNum AS NVARCHAR(20)) + N'!';
     END
 END

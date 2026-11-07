@@ -8,7 +8,7 @@ Tài liệu này là chỉ mục băm nhỏ (Smart-Loading Chunk) cho nhóm câu
 
 | Phân nhóm | Đường dẫn File `.sql` trong `references/` | Mục đích & Bảng sử dụng chính |
 | :--- | :--- | :--- |
-| **Tồn kho & Nhập Xuất Tồn (`05.Inventory Queries` & `Inventory`)** | `references/queries/05.Inventory Queries/`<br>`references/queries/Inventory/`<br>`references/queries/SYNC_SBO_MFG_PROD_SSMS/Inventory/` | 33 file `.sql` báo cáo Nhập - Xuất - Tồn theo kho (`OITW`, `OINM`), Tồn kho theo Lô (`OBTN`/`IBT1`), Serial (`OSRN`), Vị trí Bin (`OBIN`/`OIBQ`), tuổi tồn kho (Slow-moving Stock). |
+| **Tồn kho & Nhập Xuất Tồn (`05.Inventory Queries` & `Inventory`)** | `references/queries/05.Inventory Queries/`<br>`references/queries/Inventory/`<br>`references/queries/SYNC_FVIVN_PROD_SSMS/Inventory/` | 33 file `.sql` báo cáo Nhập - Xuất - Tồn theo kho (`OITW`, `OINM`), Tồn kho theo Lô (`OBTN`/`IBT1`), Serial (`OSRN`), Vị trí Bin (`OBIN`/`OIBQ`), tuổi tồn kho (Slow-moving Stock). |
 | **Hoạch định MRP (`04.MRP Queries` & `MRP`)** | `references/queries/04.MRP Queries/`<br>`references/queries/MRP/` | 4 file `.sql` phân tích cung - cầu vật tư, tồn kho an toàn (`MinLevel`) và đề xuất mua hàng/sản xuất. |
 | **Kiểm tra Chất lượng (`QC`)** | `references/queries/QC/` | 2 file `.sql` truy vấn kết quả kiểm định chất lượng nguyên vật liệu & thành phẩm (`BEAS_QSFTHAUPT`/`BEAS_QSFTPOS`). |
 | **Master Data & Đối tác (`99.Master Data Queries` & `Business Partners`)** | `references/queries/99.Master Data Queries/`<br>`references/queries/Business Partners/` | 8 file `.sql` kiểm tra tính toàn vẹn của Item Master Data (`OITM`), Business Partner (`OCRD`), Địa chỉ (`CRD1`), Người liên hệ (`OCPR`). |

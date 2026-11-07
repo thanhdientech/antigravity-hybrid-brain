@@ -81,11 +81,13 @@ flowchart LR
 ---
 
 ## 7. Lộ Trình Triển Khai Cuốn Chiếu & Bảng Ánh Xạ Chính Xác Vào 93 Skills
-| Giai Đoạn (Phase) | Hạng Mục Công Việc (Atomic Task) | Công Nghệ Sử Dụng | Skill Chủ Lực Cần Gọi (`@skill`) | Đầu Vào (`Consumes`) -> Đầu Ra (`Produces`) | Cổng Nghiệm Thu (`Gate Check`) |
+| Giai Đoạn (Phase) | Hạng Mục Công Việc (Atomic Task) | Công Nghệ Sử Dụng | Skill Chủ Lực Cần Gọi (`@skill`) | Đầu Vào (`Consumes`) -> Đầu Ra (`Produces`) | Cổng Nghiệm Thu (`converge phase N`) |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **Phase 1** | [Tên bước 1] | [Công nghệ 1] | `webapp-app-ux-workflow`, `ui-ux-design-pro-max` | Spec -> Luồng UX, Design System & UI | `audit_webapp_ux.py` `Exit 0` |
-| **Phase 2** | [Tên bước 2] | [Công nghệ 2] | `lean-teamwork` | Giao diện -> Logic & DB hoàn chỉnh | Unit/Integration test `Exit 0` |
-| **Phase 3** | [Tên bước 3] | [Công nghệ 3] | `ui-ux-cro-auditor`, `security-audit`, `ifixai-agent-auditor` | Toàn bộ mã nguồn -> Báo cáo Audit UI + Bảo mật | `0` lỗi P0/Critical, `Grade A` |
+| **Phase 1** | [Tên bước 1] | [Công nghệ 1] | `webapp-app-ux-workflow`, `ui-ux-design-pro-max` | Spec -> Luồng UX, Design System & UI | `python audit_webapp_ux.py` → Exit 0 |
+| **Phase 2** | [Tên bước 2] | [Công nghệ 2] | `lean-teamwork` | Giao diện -> Logic & DB hoàn chỉnh | `pytest tests/phase2/ -v` → Exit 0 |
+| **Phase 3** | [Tên bước 3] | [Công nghệ 3] | `ui-ux-cro-auditor`, `security-audit`, `ifixai-agent-auditor` | Toàn bộ mã nguồn -> Báo cáo Audit UI + Bảo mật | `python skills/ifixai-agent-auditor/cli.py` → Grade A/B |
+
+> **📌 Quy tắc cột `Cổng Nghiệm Thu`:** Ghi lệnh shell chạy được thực sự (không được viết mô tả mơ hồ như "kiểm tra thủ công" hay "xem kết quả"). Script `converge_blueprint.py phase --phase N BLUEPRINT.md` sẽ tự động trích xuất và chạy lệnh này trong vòng lặp hội tụ tối đa 5 vòng.
 
 ---
 

@@ -1,17 +1,17 @@
 # ============================================================================
-# SCRIPT TAO USER WINDOWS HAN CHE QUYEN (DUNG CHUNG CHO ENTERPRISE AI AGENT)
+# SCRIPT TAO USER WINDOWS HAN CHE QUYEN (DUNG CHUNG CHO INFOASIA AI AGENT)
 # - Chay bang PowerShell (Run as Administrator) tren cac may: 24, 52, 160...
-# - Ten User Windows : sap_readonly_user
-# - Mat khau         : CHANGE_ME_STRONG_RO_PASSWORD!
+# - Ten User Windows : infoasia_ro
+# - Mat khau         : InfoAsia@RO2026!
 # - Quyen han        : Standard User (Users + Performance Monitor Users + Event Log Readers)
 # - Cam tuyet doi    : KHONG thuoc Administrators, KHONG sua he thong/Registry/Services
 # ============================================================================
 
-$UserName = "sap_readonly_user"
-$PasswordPlain = "CHANGE_ME_STRONG_RO_PASSWORD!"
-$FullName = "Enterprise AI Agent RO"
+$UserName = "infoasia_ro"
+$PasswordPlain = "InfoAsia@RO2026!"
+$FullName = "InfoAsia AI Agent RO"
 # Luu y: New-LocalUser gioi han Description <= 48 ky tu tren Windows Server
-$Description = "Enterprise AI Agent Read-Only User"
+$Description = "InfoAsia AI Agent Read-Only User"
 
 $SecurePassword = ConvertTo-SecureString $PasswordPlain -AsPlainText -Force
 
@@ -84,7 +84,7 @@ foreach ($badGrp in $HighPrivilegeGroups) {
     }
 }
 
-# 3. Hien thi danh sach nhom hien tai cua sap_readonly_user de kiem chung
+# 3. Hien thi danh sach nhom hien tai cua infoasia_ro de kiem chung
 Write-Host "`n=== KIEM TRA QUYEN WINDOWS HIEN TAI CUA [$UserName] ===" -ForegroundColor Cyan
 $CurrentGroups = Get-LocalGroup | Where-Object {
     (Get-LocalGroupMember -Group $_.Name -ErrorAction SilentlyContinue).Name -like "*\$UserName"

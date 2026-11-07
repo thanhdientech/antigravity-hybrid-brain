@@ -1,7 +1,7 @@
 """
 Plugin: sap-b1-dtw-importer
 Cong cu chuan hoa, chuyen doi va kiem dinh file Excel DTW (Data Transfer Workbench)
-cho SAP Business One 9.3 / 10.0 tai <WORKSPACE_DIR>\\SAP B1 IMPORT MASTER DATA.
+cho SAP Business One 9.3 / 10.0 tai E:\\DIEN APP\\SAP B1 IMPORT MASTER DATA.
 """
 from __future__ import annotations
 
@@ -13,11 +13,11 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
-DEFAULT_DTW_DIR = Path(os.getenv("SAP_B1_DTW_DIR", r"<WORKSPACE_DIR>\SAP B1 IMPORT MASTER DATA"))
+DEFAULT_DTW_DIR = Path(os.getenv("SAP_B1_DTW_DIR", r"E:\DIEN APP\SAP B1 IMPORT MASTER DATA"))
 
 
 def _load_dtw_module():
-    """Uu tien nap dtw_master_importer.py tai <WORKSPACE_DIR>\\SAP B1 IMPORT MASTER DATA neu co."""
+    """Uu tien nap dtw_master_importer.py tai E:\\DIEN APP\\SAP B1 IMPORT MASTER DATA neu co."""
     candidates = [
         DEFAULT_DTW_DIR / "dtw_master_importer.py",
         Path("/data/sap_b1_dtw/dtw_master_importer.py"),
@@ -176,7 +176,7 @@ def register(ctx):
         name="dtw_list_files",
         description=(
             "Liet ke tat ca cac file Template DTW (.xlsx) va file du lieu nguon Master Data "
-            "trong thu muc <WORKSPACE_DIR>\\SAP B1 IMPORT MASTER DATA kem danh sach cac Sheet."
+            "trong thu muc E:\\DIEN APP\\SAP B1 IMPORT MASTER DATA kem danh sach cac Sheet."
         ),
         handler=_handle_dtw_list_files,
         min_mode="readonly",
@@ -185,7 +185,7 @@ def register(ctx):
             "properties": {
                 "base_dir": {
                     "type": "string",
-                    "description": "Thu muc DTW tuy chon (mac dinh: <WORKSPACE_DIR>\\SAP B1 IMPORT MASTER DATA)",
+                    "description": "Thu muc DTW tuy chon (mac dinh: E:\\DIEN APP\\SAP B1 IMPORT MASTER DATA)",
                 }
             },
         },

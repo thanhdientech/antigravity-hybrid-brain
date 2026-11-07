@@ -75,7 +75,7 @@ Mọi agent và phiên làm việc kích hoạt skill này bắt buộc phải t
 
 ### Chế Độ 1: Daily Lean Mode (Sửa Bug & Tác Vụ Hàng Ngày 1–3 Files)
 1. **Systematic Debugging & Pattern Retrieval**:
-   - Khi gặp lỗi quen thuộc hoặc phức tạp: liếc nhanh [`~/.gemini/config/learned_patterns.md`](./learned_patterns.md) để tái sử dụng ngay giải pháp đã từng thành công.
+   - Khi gặp lỗi quen thuộc hoặc phức tạp: liếc nhanh [`~/.gemini/config/learned_patterns.md`](file:///C:/Users/INFOASIA/.gemini/config/learned_patterns.md) để tái sử dụng ngay giải pháp đã từng thành công.
    - Đọc kỹ stacktrace/mã lỗi và tái hiện lỗi qua test case tối thiểu (Red Phase: test bắt buộc fail).
 2. **Minimal Compatible Diff**:
    - Sửa đúng nguyên nhân gốc trong 1 thao tác diff nhỏ nhất.
@@ -167,7 +167,7 @@ Hệ thống chuyển hướng toàn bộ khâu Đề xuất Kỹ thuật (🧭)
 1. **SKILL.md là Bộ Quy Tắc Tối Giản (Orchestration Rules Only)**:
    - `SKILL.md` chỉ chứa luật chơi, cấu trúc điều phối và giao thức tương tác (<150 dòng). Tuyệt đối không nhồi nhét log sửa lỗi, bài học tình huống, hay code snippets mẫu vào đây.
 2. **Kho Tri Thức Nằm Hoàn Toàn Bên Ngoài (External Segmented Store)**:
-   - Mọi bài học đúc kết được lưu tại [`~/.gemini/config/learned_patterns.md`](./learned_patterns.md) (cấp dự án) và `~/.gemini/config/learned_patterns.md` (toàn cục máy phát triển).
+   - Mọi bài học đúc kết được lưu tại [`~/.gemini/config/learned_patterns.md`](file:///C:/Users/INFOASIA/.gemini/config/learned_patterns.md) (cấp dự án) và `~/.gemini/config/learned_patterns.md` (toàn cục máy phát triển).
 3. **Truy Xuất Đúng Tag Khi Cần (Progressive On-Demand Retrieval)**:
    - Khi bước vào tác vụ mới, agent **không đọc toàn bộ** kho tri thức.
    - Chỉ khi gặp đúng lỗi/chủ đề cụ thể (ví dụ: `[Database]`, `[Build]`, `[Network]`), agent mới dùng `grep_search` quét đúng `[Tag]` tương ứng để đọc đúng 2–3 dòng giải pháp tối thiểu. Nhờ đó, lượng token context ban đầu luôn ở mức thấp nhất.

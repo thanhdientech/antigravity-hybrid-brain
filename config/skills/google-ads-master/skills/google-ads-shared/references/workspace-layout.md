@@ -1,7 +1,7 @@
 # Workspace layout — one working folder per business, nothing scattered
 
 Reusable, business-agnostic. Every skill in the suite READS and WRITES inside a single **working folder**
-per business (or per account-group). Nothing is written into the plugin, into `./tmp`, `/tmp`, or random
+per business (or per account-group). Nothing is written into the plugin, into `D:\tmp`, `/tmp`, or random
 locations. A user who installs the plugin and runs `/google-ads` gets ONE tidy folder — not files sprinkled
 across their disk.
 
@@ -39,8 +39,8 @@ The suite needs tokens (Google Ads, store Admin, GA4, Merchant) but must NOT sca
   connections:
     google_ads: { status: connected, via: "mcp:<server-id>" }
     store:      { status: connected, via: "env:/abs/path/.env#SHOPIFY_ADMIN_TOKEN_2" }   # key NAME, not value
-    ga4:        { status: connected, via: "script:analytics-hub  GA4Client('main')  prop=123456789" }
-    merchant:   { status: connected, via: "server:/abs/path/google-merchant-mcp (venv + ADC json)", id: "123456789" }
+    ga4:        { status: connected, via: "script:ktb-data-hub  GA4Hub('nd')  prop=318105347" }
+    merchant:   { status: connected, via: "server:/abs/path/google-merchant-mcp (venv + ADC json)", id: "585732301" }
     gsc:        { status: missing,   via: "", guide: "connect Search Console" }
   ```
 - If the user *wants* credentials kept locally, put them in a **gitignored** `secrets/` inside the workdir and

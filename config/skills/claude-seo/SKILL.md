@@ -50,7 +50,7 @@ Hệ thống kiểm toán SEO & AI Search (Generative Engine Optimization - GEO)
    - Sử dụng môi trường Python ảo đã cài sẵn tại `.venv` của skill hoặc trình khởi chạy chuẩn:
      ```powershell
      # Chạy kiểm tra trạng thái môi trường:
-     & "%USERPROFILE%\.gemini\config\skills\claude-seo\.venv\Scripts\python.exe" "%USERPROFILE%\.gemini\config\skills\claude-seo\scripts\fetch_page.py" --help
+     & "C:\Users\INFOASIA\.gemini\config\skills\claude-seo\.venv\Scripts\python.exe" "C:\Users\INFOASIA\.gemini\config\skills\claude-seo\scripts\fetch_page.py" --help
      ```
 3. **Phương pháp luận Tổng hợp 4 bước (Synthesis Methodology):**
    - `PERCEIVE` (Thu thập dữ liệu thực tế từ trang web/DOM/HTTP headers) $\rightarrow$ `ANALYZE` (Đối chiếu tiêu chuẩn kỹ thuật & E-E-A-T) $\rightarrow$ `VALIDATE` (Kiểm chứng chéo, chống dương tính giả) $\rightarrow$ `ACT` (Xếp hạng ưu tiên Critical / High / Medium / Low kèm giải pháp sửa lỗi cụ thể).

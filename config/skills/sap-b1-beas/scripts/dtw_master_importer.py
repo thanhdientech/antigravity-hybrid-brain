@@ -25,7 +25,7 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
-DEFAULT_DTW_DIR = Path(os.getenv("SAP_B1_DTW_DIR", r"<WORKSPACE_DIR>\SAP B1 IMPORT MASTER DATA"))
+DEFAULT_DTW_DIR = Path(os.getenv("SAP_B1_DTW_DIR", r"E:\DIEN APP\SAP B1 IMPORT MASTER DATA"))
 
 
 def _resolve_base_dir(base_dir: Optional[str] = None) -> Path:

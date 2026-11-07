@@ -1,5 +1,5 @@
 # 04. CÔNG THỨC KỊCH BẢN PHIM TÀI LIỆU, KHOA HỌC & ĐIỀU TRA
-*Áp dụng cho: Phim tài liệu vũ trụ, bí ẩn lịch sử, giải mã hồ sơ giải mật, Video Essay khoa học (Veritasium, Kurzgesagt, Vox, Lemmino, Channel_03_Explainer_EN)*
+*Áp dụng cho: Phim tài liệu vũ trụ, bí ẩn lịch sử, giải mã hồ sơ giải mật, Video Essay khoa học (Veritasium, Kurzgesagt, Vox, Lemmino, Some Guy Who Knows Stuff)*
 
 ---
 
@@ -39,7 +39,7 @@
 
 ### 3. CÔNG THỨC TRANH BIỆN KHOA HỌC 7 NHỊP (THE 7-BEAT SCIENTIFIC DEBATE)
 * **Thời lượng chuẩn:** Mỗi vụ việc đúng 56–64 giây (7–8 nhịp, mỗi nhịp 8.0 giây cố định). Ghép 10–12 vụ việc thành video dài 11 phút 20 giây (85 cảnh).
-* **Xuất xứ:** Chuẩn V9.0 kênh *"Channel_03_Explainer_EN"* (Thị trường Mỹ).
+* **Xuất xứ:** Chuẩn V9.0 kênh *"Some Guy Who Knows Stuff"* (Thị trường Mỹ).
 * **Cấu trúc 7 nhịp vàng:**
   ```text
   [NHỊP 1: TITLE CARD] ──► [NHỊP 2: HOST HOOK] ──► [NHỊP 3: INCIDENT POV] ──► [NHỊP 4: VISCERAL DETAIL]

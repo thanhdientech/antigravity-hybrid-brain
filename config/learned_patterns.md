@@ -170,7 +170,7 @@ Tài liệu này là nơi lưu trữ các tri thức kỹ thuật, mẫu sửa l
   - *Nguyên nhân gốc*:
     1. Khi tải repo sang máy tính mới chưa cài Cockpit Tool, Widget bị lỗi hiển thị `Offline` / `No Acc` do thiếu cơ chế kết nối trực tiếp tài khoản Google trong Antigravity IDE.
     2. Khi người dùng gặp lỗi tiếp tục chat mà chưa ấn Hoàn tất, nếu agent chỉ nhìn vào lượt cuối cùng sẽ mắc bẫy *Survivorship Bias*, bỏ sót toàn bộ chuỗi lỗi trung gian chưa được rút kinh nghiệm.
-    3. Việc chứa đường dẫn tuyệt đối cứng (`%USERPROFILE%...`) hoặc yêu cầu cài thêm thư viện qua pip khiến máy mới không thể chạy ngay lập tức.
+    3. Việc chứa đường dẫn tuyệt đối cứng (`C:\Users\tient...`) hoặc yêu cầu cài thêm thư viện qua pip khiến máy mới không thể chạy ngay lập tức.
   - *Giải pháp tối thiểu*:
     1. **Dual Account Detection**: Trích xuất trực tiếp tài khoản Google đang đăng nhập từ SQLite native của Antigravity IDE (`%APPDATA%\Antigravity IDE\User\globalStorage\state.vscdb`) làm fallback khi máy mới chưa có Cockpit Tool, hiển thị đầy đủ tên, email và trạng thái hoạt động 100%.
     2. **From-Last-Completion Retrospective Anchor**: Lưu mốc thời gian `last_completed_at` trong `teamwork_bridge.py` và `teamwork_service.py`. Khi thực hiện đúc kết bài học (Self-Evolution), bắt buộc rà soát và tổng hợp toàn bộ các lỗi trung gian phát sinh từ lần bấm Hoàn tất gần nhất đến nay.
@@ -231,10 +231,10 @@ Tài liệu này là nơi lưu trữ các tri thức kỹ thuật, mẫu sửa l
 
 ## Mẫu 19: [CI/CD Parity & Portability] Triệt Tiêu Tuyệt Đối Đường Dẫn Cứng Cục Bộ Cho GitHub Actions Runners (v1.5.8)
 - **[CI/CD Parity & Portability] [Triệt Tiêu Tuyệt Đối Đường Dẫn Cứng Cục Bộ Cho GitHub Actions Runners]**:
-  - *Nguyên nhân gốc*: Trong mã nguồn kiểm thử hoặc dịch vụ nền, việc vô tình để sót đường dẫn tuyệt đối cục bộ của máy phát triển cá nhân (ví dụ: `%USERPROFILE%\...`) khiến toàn bộ các bộ chạy tự động trên môi trường CI/CD (như GitHub Actions `ubuntu-latest` chạy tại `/home/runner` hoặc `windows-latest` tại `C:\Users\runneradmin`) lập tức bị ném ngoại lệ `AssertionError` hoặc `FileNotFoundError` và làm sập 100% các jobs kiểm thử tự động.
+  - *Nguyên nhân gốc*: Trong mã nguồn kiểm thử hoặc dịch vụ nền, việc vô tình để sót đường dẫn tuyệt đối cục bộ của máy phát triển cá nhân (ví dụ: `c:\Users\tient\...`) khiến toàn bộ các bộ chạy tự động trên môi trường CI/CD (như GitHub Actions `ubuntu-latest` chạy tại `/home/runner` hoặc `windows-latest` tại `C:\Users\runneradmin`) lập tức bị ném ngoại lệ `AssertionError` hoặc `FileNotFoundError` và làm sập 100% các jobs kiểm thử tự động.
   - *Giải pháp tối thiểu*:
     1. **Repo-Relative Test Target**: Trong tất cả các file kiểm thử (`tests/`), các tài nguyên mã nguồn và dịch vụ widget phải luôn được định vị tương đối thông qua gốc dự án: `REPO_ROOT / "widget" / "core"`, tuyệt đối không dùng đường dẫn tuyệt đối của máy dev.
-    2. **Universal User Home Resolution**: Thay thế toàn bộ các khai báo dự phòng `os.environ.get('USERPROFILE', r'%USERPROFILE%')` bằng `Path.home()` tiêu chuẩn (hoặc `Path(os.environ.get('USERPROFILE') or os.path.expanduser('~'))`). Điều này đảm bảo hoạt động chuẩn xác trên cả Windows, Linux và macOS runners mà không bị phụ thuộc vào biến môi trường cục bộ hay tên tài khoản cụ thể.
+    2. **Universal User Home Resolution**: Thay thế toàn bộ các khai báo dự phòng `os.environ.get('USERPROFILE', r'C:\Users\tient')` bằng `Path.home()` tiêu chuẩn (hoặc `Path(os.environ.get('USERPROFILE') or os.path.expanduser('~'))`). Điều này đảm bảo hoạt động chuẩn xác trên cả Windows, Linux và macOS runners mà không bị phụ thuộc vào biến môi trường cục bộ hay tên tài khoản cụ thể.
   - *Lệnh test*: `gh run view 34771122612` -> 6/6 jobs PASS 100% trên cả Ubuntu & Windows runners với Python 3.10, 3.11, 3.12 (Exit code 0).
 
 ## Mẫu 20: [Context Quota Optimization] Kiểm Toán Kỹ Năng Đa Chu Kỳ & Cất Gọn Theo Nhu Cầu (Multi-Cycle Skill Usage Audit & On-Demand Context Pruning) (v1.5.9)
@@ -304,10 +304,23 @@ Tài liệu này là nơi lưu trữ các tri thức kỹ thuật, mẫu sửa l
 - **[Anti-Hallucination & Lean-Teamwork Synergy] [Tiered 5-Gate, Silent Pass & Clean Deliverable Separation]**:
   - *Nguyên nhân gốc*:
     1. **Xung đột Chốt 1 vs Timeout 150s & Vâng lời mù quáng**: Thiếu cơ chế thẩm định ngược lệnh sai logic/rủi ro hệ thống của người dùng; hoặc nếu thiếu dữ kiện sự thật đầu vào mà áp dụng Timeout 150s sẽ khiến AI tự đoán mò dữ kiện gốc.
-    2. **Lỗi logic AND vs OR & Lỗi chèn Bảng Kiểm Chứng vào bài viết công khai ở Chốt 2**: Bắt buộc ghi Bảng Ánh Xạ Nguồn "ở cuối bài viết" khiến AI chèn nguyên mục `Bảng Ánh Xạ Nguồn Cấp 1`, `RULE[user_global]` và tên DB nội bộ (`SBO_MAIN_PROD`) vào thẳng bài viết web/báo giá/video thành phẩm.
+    2. **Lỗi logic AND vs OR & Lỗi chèn Bảng Kiểm Chứng vào bài viết công khai ở Chốt 2**: Bắt buộc ghi Bảng Ánh Xạ Nguồn "ở cuối bài viết" khiến AI chèn nguyên mục `Bảng Ánh Xạ Nguồn Cấp 1`, `RULE[user_global]` và tên DB nội bộ (`infoasia56`) vào thẳng bài viết web/báo giá/video thành phẩm.
     3. **Audit Theater & HEAD 404**: `support.google.com` trả về 404 với `HEAD` request (nhưng 200 với `GET`); `ifixai-agent-auditor/cli.py` chưa kiểm tra link chết trong `P1 Fabrication` và chưa chặn rò rỉ metadata kiểm chứng trong `P5 Opacity`.
   - *Giải pháp tối thiểu*:
     1. **Phân 2 Luồng & Tách Chốt 1A/1B/1C**: Luồng 1 (Hỏi nhanh) trả lời trực tiếp kèm nguồn; Luồng 2 (Dự án lớn) bật đủ 5 Chốt Chặn + `lean-teamwork`. Tại Chốt 1: `(1A)` Thẩm định ngược rủi ro hệ thống + `Silent Pass` (chống bắt bẻ vặt khi lệnh hợp lệ); `(1B)` Thiếu dữ kiện gốc -> `Hard Stop 100%`; `(1C)` Chọn phương án kỹ thuật -> `Timeout 150s Recommended`.
     2. **Quy tắc Làm Sạch Sản Phẩm & Tách 2 File (`Clean Deliverable & Dual-File Separation`)**: Nội dung sản phẩm (bài viết web, báo giá, video, HTML) phải sạch 100%; phần kiểm chứng nguồn & `Bảng Ánh Xạ 6 Cột` chỉ trả lời riêng cho người dùng trên khung Chat hoặc tách thành file thứ 2 (`<Ten_San_Pham>_THAM_CHIEU_NGUON.md`).
     3. **Nâng cấp CLI Kiểm toán**: `link_validator.py` tự động fallback `HEAD -> GET` và kiểm tra ISBN chuẩn ISO 2108; `ifixai-agent-auditor/cli.py` quét link chết ở `P1` và chặn rò rỉ `RULE[user_global]` / `Bảng Ánh Xạ Nguồn` trong file sản phẩm `.html`/`voiceover.txt` ở `P5`.
   - *Lệnh test*: `python skills/verified-source-researcher/cli.py audit-file "QUY_TRINH_CHUNG_5_CHOT_CHAN_CHONG_AO_GIAC_AI.md"` & `python skills/ifixai-agent-auditor/cli.py "GEMINI.md"` -> 100% HTTP 200 & GRADE A (100/100) (Exit code 0).
+
+
+## Mẫu 27: [Serverless Mailer & Sheet CRM Bridge] Học Kiến Trúc Google Sheet + Apps Script `MailApp` Tối Giản Theo Ngành (Không Copy Nguyên Bản Code Cũ)
+- **[Serverless Mailer & Sheet CRM Bridge] [Domain-Minimalist Google Apps Script Web App & Shared Dynamic Config]**:
+  - *Nguyên nhân gốc*:
+    1. Cấu hình SMTP truyền thống trên Shared Hosting hay vướng tường lửa chặn cổng `587/465` hoặc bắt người dùng bật 2FA tạo App Password 16 ký tự phức tạp.
+    2. Khi người dùng đưa mẫu Google Sheet + Apps Script từ dự án cũ (ví dụ: bán lẻ có giỏ hàng, phí ship 63 tỉnh, reviews), việc lấy nguyên file Sheet cũ hoặc copy nguyên khối code cũ sẽ gây trộn lẫn dữ liệu khách hàng giữa 2 dự án, gửi nhầm thương hiệu email và thừa 70% bảng không dùng tới.
+    3. Google Sheets mặc định tự cắt mất số `0` ở đầu SĐT Việt Nam (`098...` thành `98...`), và `POST` tới `script.google.com/macros/s/.../exec` trả về `HTTP 302` sang `script.googleusercontent.com` yêu cầu `GET` để đọc JSON.
+  - *Giải pháp tối thiểu*:
+    1. **Chỉ Học Cơ Chế — Viết Mới Tối Giản Đúng Nghiệp Vụ Dự Án**: Tự thiết kế file `.gs` tinh gọn riêng cho ngành của dự án mới, chỉ giữ các tab thực sự cần (`Leads`, `Orders`, `Config`), thêm dấu nháy đơn `"'" + normalizedPhone` để giữ số `0` đầu SĐT và gắn khóa `api_secret` chống bot spam URL `/exec`.
+    2. **Cấu Hình Động Trên Giao Diện Quản Trị Web (0 Hardcode)**: Lưu chung cấu hình (`webapp_url`, `sheet_url`, `sheet_id`, `api_secret`, `notify_to`) vào file JSON có PHP guard chia sẻ giữa Web và CRM; nhúng sẵn `notify_to` + `api_secret` vào nút **1-Click Copy Mã Apps Script** và có nút **Test Ping/Mail** ngay trên giao diện Admin.
+    3. **Xử Lý Chuẩn Redirect `302 POST -> GET`**: Khi gửi JSON tới Apps Script `/exec`, bắt mã `301/302/303/307` và gọi `GET` theo header `Location` để nhận trọn vẹn phản hồi JSON từ `ContentService` không bao giờ lỗi `HTTP 405`.
+  - *Lệnh test*: `php -l` + E2E Live Test & `ifixai-agent-auditor/cli.py` -> GRADE A (100/100) (Exit code 0).

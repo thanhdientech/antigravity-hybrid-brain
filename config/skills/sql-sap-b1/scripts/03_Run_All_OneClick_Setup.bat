@@ -1,10 +1,10 @@
 @echo off
 chcp 65001 >nul
 echo ============================================================================
-echo   CAI DAT TU DONG USER SQL VA USER WINDOWS DUNG CHUNG CHO ENTERPRISE AI AGENT
-echo   - May chu dang chay    : %COMPUTERNAME% (Ho tro Server A, Server C, Server B...)
-echo   - Tai khoan dung chung : sap_readonly_user
-echo   - Mat khau dung chung  : CHANGE_ME_STRONG_RO_PASSWORD!
+echo   CAI DAT TU DONG USER SQL VA USER WINDOWS DUNG CHUNG CHO INFOASIA AI AGENT
+echo   - May chu dang chay    : %COMPUTERNAME% (Ho tro Con 24, Con 52, Con 160...)
+echo   - Tai khoan dung chung : infoasia_ro
+echo   - Mat khau dung chung  : InfoAsia@RO2026!
 echo   - Quyen han            : Chi lay data (Read-Only), khong can thiep he thong
 echo ============================================================================
 echo.
@@ -18,12 +18,12 @@ if %ERRORLEVEL% NEQ 0 (
 )
 
 :: 1. Chay PowerShell tao Windows Local Limited User
-echo [BUOC 1/2] Dang tao/cap nhat Windows Local User [sap_readonly_user] (Standard User)...
+echo [BUOC 1/2] Dang tao/cap nhat Windows Local User [infoasia_ro] (Standard User)...
 powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp002_Create_Windows_Limited_Agent_User.ps1"
 echo.
 
 :: 2. Chay SQLCMD tao SQL Server Read-Only User tren localhost
-echo [BUOC 2/2] Dang tao/cap nhat SQL Server Read-Only Login/User [sap_readonly_user]...
+echo [BUOC 2/2] Dang tao/cap nhat SQL Server Read-Only Login/User [infoasia_ro]...
 sqlcmd -S localhost -E -C -i "%~dp001_Create_SQL_ReadOnly_Agent_User.sql" >nul 2>&1
 if %ERRORLEVEL% NEQ 0 (
     sqlcmd -S localhost -E -i "%~dp001_Create_SQL_ReadOnly_Agent_User.sql"
@@ -40,12 +40,12 @@ if %ERRORLEVEL% NEQ 0 (
         sqlcmd -S localhost -U sa -P "%SA_PASS%" -i "%~dp001_Create_SQL_ReadOnly_Agent_User.sql"
     )
     if %ERRORLEVEL% EQU 0 (
-        echo [OK] Da cai dat xong SQL Server Read-Only User [sap_readonly_user] bang tai khoan sa!
+        echo [OK] Da cai dat xong SQL Server Read-Only User [infoasia_ro] bang tai khoan sa!
     ) else (
         echo [THONG BAO] Vui long mo file 01_Create_SQL_ReadOnly_Agent_User.sql trong SSMS va bam F5 ^(Execute^).
     )
 ) else (
-    echo [OK] Da cai dat xong SQL Server Read-Only User [sap_readonly_user] tren tat ca DB SAP B1!
+    echo [OK] Da cai dat xong SQL Server Read-Only User [infoasia_ro] tren tat ca DB SAP B1!
 )
 
 echo.

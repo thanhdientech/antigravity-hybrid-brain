@@ -3,8 +3,8 @@
 
 > **Kho mã nguồn gốc:** [yihui-dev/awesome-opus5-5-videos](https://github.com/yihui-dev/awesome-opus5-5-videos)  
 > **Nền tảng xem trực tiếp 418 video remake:** [Skillry AI Videos](https://skillry.dev/ai-videos/opus-5-5)  
-> **Vị trí lưu trữ cục bộ trên máy:** [`%USERPROFILE%\.gemini\config\skills\awesome-opus5-5-videos\`](file:///WORKSPACE_DIR/Skill%20AI/awesome-opus5-5-videos/)  
-> **Công cụ tìm kiếm siêu tốc:** [`search_prompts.py`](file:///WORKSPACE_DIR/Skill%20AI/awesome-opus5-5-videos/search_prompts.py)  
+> **Vị trí lưu trữ cục bộ trên máy:** [`E:\DIEN APP\Skill AI\awesome-opus5-5-videos\`](file:///E:/DIEN%20APP/Skill%20AI/awesome-opus5-5-videos/)  
+> **Công cụ tìm kiếm siêu tốc:** [`search_prompts.py`](file:///E:/DIEN%20APP/Skill%20AI/awesome-opus5-5-videos/search_prompts.py)  
 
 ---
 
@@ -61,21 +61,21 @@ Toàn bộ 703 video và prompts được phân bổ theo 4 nhóm lớn:
 
 ## 🔍 3. HƯỚNG DẪN DÙNG CÔNG CỤ TÌM KIẾM PROMPT SIÊU TỐC
 
-Em đã tích hợp sẵn công cụ CLI [`search_prompts.py`](file:///WORKSPACE_DIR/Skill%20AI/awesome-opus5-5-videos/search_prompts.py) trên máy để Sếp có thể tra cứu nhanh:
+Em đã tích hợp sẵn công cụ CLI [`search_prompts.py`](file:///E:/DIEN%20APP/Skill%20AI/awesome-opus5-5-videos/search_prompts.py) trên máy để Sếp có thể tra cứu nhanh:
 
 ### Cú pháp lệnh:
 ```bash
 # 1. Tìm prompt theo từ khóa (Ví dụ: "saas", "cocktail", "finance", "game"):
-python "%USERPROFILE%\.gemini\config\skills\awesome-opus5-5-videos\search_prompts.py" -q "saas"
+python "E:\DIEN APP\Skill AI\awesome-opus5-5-videos\search_prompts.py" -q "saas"
 
 # 2. Lọc theo Danh mục (motion, 3d, explainer, interactive):
-python "%USERPROFILE%\.gemini\config\skills\awesome-opus5-5-videos\search_prompts.py" -c "explainer" -l 5
+python "E:\DIEN APP\Skill AI\awesome-opus5-5-videos\search_prompts.py" -c "explainer" -l 5
 
 # 3. Lọc theo Công nghệ (gsap, threejs, canvas, shader):
-python "%USERPROFILE%\.gemini\config\skills\awesome-opus5-5-videos\search_prompts.py" -t "threejs" -l 3
+python "E:\DIEN APP\Skill AI\awesome-opus5-5-videos\search_prompts.py" -t "threejs" -l 3
 
 # 4. Xuất định dạng JSON để tích hợp vào tool:
-python "%USERPROFILE%\.gemini\config\skills\awesome-opus5-5-videos\search_prompts.py" -q "launch" --json
+python "E:\DIEN APP\Skill AI\awesome-opus5-5-videos\search_prompts.py" -q "launch" --json
 ```
 
 ---

@@ -1,4 +1,4 @@
----
+﻿---
 name: yt-shortcode-commander
 description: "Điều khiển dây chuyền sản xuất YouTube & Facebook 6 lệnh (Nội dung, Prompt, Render, Đăng lịch, Nuôi nick, Kênh mới)."
 group: "YouTube & Tự Động Hóa MXH"
@@ -9,7 +9,7 @@ group: "YouTube & Tự Động Hóa MXH"
 <!-- JAVIS_TRIGGER_ARCHIVE_START -->
 ## Khi nào dùng (Triggers & Ngữ cảnh kích hoạt đầy đủ)
 
-> Hệ thống điều khiển dây chuyền sản xuất YouTube & Facebook 6 Lệnh (1. Viết Nội Dung, 2. Viết Prompt, 3. Render, 4. Lên lịch đăng video, 5. Nuôi thiết bị, 6. Lên kế hoạch cho kênh mới) & 3 Kênh hiện tại (1. Channel_01_Mythology_EN, 2. Channel_02_Science_DE, 3. Channel_03_Explainer_EN) + Template Kênh Mới A-to-Z (`_TEMPLATE_KENH_MOI_A_TO_Z`). Hỗ trợ chọn từng bước trên Bot, tự động lấy đề tài từ Kế hoạch CSV nếu chưa có thư mục, kiểm tra đầu vào (Pre-Flight Check) và phân phối đến đúng Agent Quản lý kênh hoặc Team chuyên môn. TRIGGERS: "youtube", "/youtube", "eme", "sgw", "kg", "k1", "k2", "k3", "viết nội dung", "viết prompt", "qa check", "render", "test5", "lên lịch đăng video", "nuôi thiết bị", "lên kế hoạch kênh mới", "xây kênh mới", "tạo kênh mới".
+> Hệ thống điều khiển dây chuyền sản xuất YouTube & Facebook 6 Lệnh (1. Viết Nội Dung, 2. Viết Prompt, 3. Render, 4. Lên lịch đăng video, 5. Nuôi thiết bị, 6. Lên kế hoạch cho kênh mới) & 3 Kênh hiện tại (1. Every Myth Explained, 2. KosmosGeist, 3. The Midnight Ledger (@TheMidnightLedger — thư mục Some Guy Who Knows Stuff)) + Template Kênh Mới A-to-Z (`_TEMPLATE_KENH_MOI_A_TO_Z`). Hỗ trợ chọn từng bước trên Bot, tự động lấy đề tài từ Kế hoạch CSV nếu chưa có thư mục, kiểm tra đầu vào (Pre-Flight Check) và phân phối đến đúng Agent Quản lý kênh hoặc Team chuyên môn. TRIGGERS: "youtube", "/youtube", "eme", "sgw", "kg", "k1", "k2", "k3", "viết nội dung", "viết prompt", "qa check", "render", "test5", "lên lịch đăng video", "nuôi thiết bị", "lên kế hoạch kênh mới", "xây kênh mới", "tạo kênh mới".
 <!-- JAVIS_TRIGGER_ARCHIVE_END -->
 
 Khi người dùng gõ từ khóa **`youtube`** (hoặc **`/youtube`**, **`yt`**, **`xây kênh mới`**) trên Bot hoặc Web Dashboard, hệ thống lập tức hiển thị **6 Lệnh Cốt Lõi (`1..6`)**:
@@ -26,10 +26,10 @@ Khi người dùng gõ từ khóa **`youtube`** (hoặc **`/youtube`**, **`yt`**
 
 | Mã Chọn | Mã Tắt | Tên Kênh & Đường Dẫn Gốc (`E:\`) | File Kế Hoạch CSV Gốc (`1 Viet Content\Plan\`) | File Hướng Dẫn Render & Ghép Video Duy Nhất (`3 Render video/AGENTS.md`) |
 | :---: | :---: | :--- | :--- | :--- |
-| **`1`** / **`K1`** | **`EME`** | **Channel_01_Mythology_EN** (`EN - US`)<br>`<WORKSPACE_DIR>\Xây Kênh Youtube\Channel_01_Mythology_EN` | `content-plan-100-us-v2-ancient-evidence.csv` *(100 video)*<br>& `kehoach.csv` *(10 video)* | [`Channel_01_Mythology_EN\3 Render video\AGENTS.md`](file:///WORKSPACE_DIR/X%C3%A2y%20K%C3%AAnh%20Youtube/Channel_01_Mythology_EN/3%20Render%20video/AGENTS.md) |
-| **`2`** / **`K2`** | **`KG`** | **Channel_02_Science_DE** (`DE - DACH`)<br>`<WORKSPACE_DIR>\Xây Kênh Youtube\Channel_02_Science_DE` | `0.content-plan-90-de-v2.csv` *(90 video Tiếng Đức)* | [`Channel_02_Science_DE\3 Render video\AGENTS.md`](file:///WORKSPACE_DIR/X%C3%A2y%20K%C3%AAnh%20Youtube/Channel_02_Science_DE/3%20Render%20video/AGENTS.md) |
-| **`3`** / **`K3`** | **`SGW`** | **Channel_03_Explainer_EN** (`EN - US`)<br>`<WORKSPACE_DIR>\Xây Kênh Youtube\Channel_03_Explainer_EN` | `content-plan-100-us-v1.csv` *(100 video)* | [`Channel_03_Explainer_EN\3 Render video\AGENTS.md`](file:///WORKSPACE_DIR/X%C3%A2y%20K%C3%AAnh%20Youtube/Channel_03_Explainer_EN/3%20Render%20video/AGENTS.md) |
-| **`MỚI`** | **`TPL`** | **Template Kênh Mới A-to-Z (YouTube & Facebook)**<br>[`<WORKSPACE_DIR>\Xây Kênh Youtube\_TEMPLATE_KENH_MOI_A_TO_Z`](file:///WORKSPACE_DIR/X%C3%A2y%20K%C3%AAnh%20Youtube/_TEMPLATE_KENH_MOI_A_TO_Z/AGENTS.md) | [`content-plan-100-videos-template.csv`](file:///WORKSPACE_DIR/X%C3%A2y%20K%C3%AAnh%20Youtube/_TEMPLATE_KENH_MOI_A_TO_Z/1%20Viet%20Content/Plan/content-plan-100-videos-template.csv) *(Chuẩn 11 cột chấm điểm 10đ)* | [`_TEMPLATE_KENH_MOI_A_TO_Z\3 Render video\AGENTS.md`](file:///WORKSPACE_DIR/X%C3%A2y%20K%C3%AAnh%20Youtube/_TEMPLATE_KENH_MOI_A_TO_Z/3%20Render%20video/AGENTS.md) |
+| **`1`** / **`K1`** | **`EME`** | **Every Myth Explained** (`EN - US`)<br>`E:\DIEN APP\Xây Kênh Youtube\Every Myth Explained` | `content-plan-100-us-v2-ancient-evidence.csv` *(100 video)*<br>& `kehoach.csv` *(10 video)* | [`Every Myth Explained\3 Render video\AGENTS.md`](file:///E:/DIEN%20APP/X%C3%A2y%20K%C3%AAnh%20Youtube/Every%20Myth%20Explained/3%20Render%20video/AGENTS.md) |
+| **`2`** / **`K2`** | **`KG`** | **KosmosGeist** (`DE - DACH`)<br>`E:\DIEN APP\Xây Kênh Youtube\KosmosGeist` | `0.content-plan-90-de-v2.csv` *(90 video Tiếng Đức)* | [`KosmosGeist\3 Render video\AGENTS.md`](file:///E:/DIEN%20APP/X%C3%A2y%20K%C3%AAnh%20Youtube/KosmosGeist/3%20Render%20video/AGENTS.md) |
+| **`3`** / **`K3`** | **`SGW` / `TML`** | **The Midnight Ledger (`@TheMidnightLedger` - `EN - US`)**<br>`E:\DIEN APP\Xây Kênh Youtube\Some Guy Who Knows Stuff` | `content-plan-100-us-v1.csv` *(100 video)* | [`Some Guy Who Knows Stuff\3 Render video\AGENTS.md`](file:///E:/DIEN%20APP/X%C3%A2y%20K%C3%AAnh%20Youtube/Some%20Guy%20Who%20Knows%20Stuff/3%20Render%20video/AGENTS.md) |
+| **`MỚI`** | **`TPL`** | **Template Kênh Mới A-to-Z (YouTube & Facebook)**<br>[`E:\DIEN APP\Xây Kênh Youtube\_TEMPLATE_KENH_MOI_A_TO_Z`](file:///E:/DIEN%20APP/X%C3%A2y%20K%C3%AAnh%20Youtube/_TEMPLATE_KENH_MOI_A_TO_Z/AGENTS.md) | [`content-plan-100-videos-template.csv`](file:///E:/DIEN%20APP/X%C3%A2y%20K%C3%AAnh%20Youtube/_TEMPLATE_KENH_MOI_A_TO_Z/1%20Viet%20Content/Plan/content-plan-100-videos-template.csv) *(Chuẩn 11 cột chấm điểm 10đ)* | [`_TEMPLATE_KENH_MOI_A_TO_Z\3 Render video\AGENTS.md`](file:///E:/DIEN%20APP/X%C3%A2y%20K%C3%AAnh%20Youtube/_TEMPLATE_KENH_MOI_A_TO_Z/3%20Render%20video/AGENTS.md) |
 
 ---
 
@@ -41,7 +41,7 @@ Khi người dùng gõ từ khóa **`youtube`** (hoặc **`/youtube`**, **`yt`**
 - Xuất bộ 7 file kịch bản chuẩn (`Buoc_1`..`Buoc_5`, `voiceover.txt`, `storyboard.csv`) chuẩn `utf-8-sig`.
 
 ### Lệnh `2` — Viết Prompt (`2 Viet Prompt/AGENTS.md` $\rightarrow$ `B1`, `B2`, `B3`, `B5`, `B8`, `B9`, `5 srt`)
-- Băm kịch bản thành các cảnh `8.0s` (`B1_Phan_Canh.csv` 13 cột), kiểm soát chặt số từ mỗi cảnh (`16–22 từ EN`, `12–16 từ DE`, `20–26 âm tiết VI`) để không tràn 8s và không dư khoảng lặng.
+- Băm kịch bản thành các cảnh `8.0s` (`B1_Phan_Canh.csv` **14 cột chuẩn DeepTutor V10.1**): `EME` (`82 cảnh`, `13–16 từ EN <=115c`), `The Midnight Ledger` (`84 cảnh`, `12–15 từ EN <=115c`), `KosmosGeist` (`96 cảnh`, `9–13 từ DE <=95c`), xuất kèm `remotion_scenes_config.json` & `3 prompt video/B5_Motion2D.json`.
 - Thiết kế bộ Prompt CSV (`B2` Nhân vật, `B3` Ảnh cảnh, `B5` Video không cột Voice, `B9` Nhạc nền, `5 srt` Phụ đề, `B8` Thumbnail) chuẩn `utf-8-sig`, hỗ trợ cả `16:9` (Video dài) và `9:16` (Shorts/Reels).
 
 ### Lệnh `3` — Render & Ghép Video Master (`3 Render video/AGENTS.md` — 1 File Hướng Dẫn Duy Nhất Mỗi Kênh)
@@ -58,7 +58,7 @@ Khi người dùng gõ từ khóa **`youtube`** (hoặc **`/youtube`**, **`yt`**
 - Tạo thiết bị ảo cách ly, gắn Proxy tĩnh đúng quốc gia (`US`, `DE`, `VN`...), gắn tài khoản kênh YouTube / Facebook Page và chạy kịch bản lướt xem/tương tác tự nhiên cùng ngách để tăng Trust Score.
 
 ### Lệnh `6` — Lên Kế Hoạch & Xây Dựng Kênh Mới Từ Con Số 0 (`_TEMPLATE_KENH_MOI_A_TO_Z`)
-Khi người dùng chọn **Lệnh `6`** hoặc yêu cầu tạo kênh mới (YouTube / Facebook), AI Agent đọc ngay [`_TEMPLATE_KENH_MOI_A_TO_Z\AGENTS.md`](file:///WORKSPACE_DIR/X%C3%A2y%20K%C3%AAnh%20Youtube/_TEMPLATE_KENH_MOI_A_TO_Z/AGENTS.md) và thực hiện 5 bước chuẩn:
+Khi người dùng chọn **Lệnh `6`** hoặc yêu cầu tạo kênh mới (YouTube / Facebook), AI Agent đọc ngay [`_TEMPLATE_KENH_MOI_A_TO_Z\AGENTS.md`](file:///E:/DIEN%20APP/X%C3%A2y%20K%C3%AAnh%20Youtube/_TEMPLATE_KENH_MOI_A_TO_Z/AGENTS.md) và thực hiện 5 bước chuẩn:
 1. **Bước 6.1 — Hỏi 6 Đầu Vào Cốt Lõi Từ Người Dùng:**
    - (1) Nền tảng (`YouTube` / `Facebook` / `Đa kênh`)?
    - (2) Khung hình & Thời lượng (`16:9` Dài `8–15 phút` hay `9:16` Ngắn Shorts/Reels `30–90s`)?
@@ -67,10 +67,10 @@ Khi người dùng chọn **Lệnh `6`** hoặc yêu cầu tạo kênh mới (Yo
    - (5) Chế độ Nhân vật (`Mode A: Fixed Host UID01.png` / `Mode B: Dynamic Cast` / `Mode C: 100% Hostless`)?
    - (6) Phong cách Hình ảnh (`2D/3D Cartoon`, `Photorealistic 8K`, `3D Cutaway`...)?
 2. **Bước 6.2 — Chạy Công Cụ Săn "Ngách Ngon" Ra Số Liệu Thật:**
-   - **Với YouTube:** Chạy **Tool 2 (`http://127.0.0.1:15000/` — YT Niche Radar `mcp_server.py`)**: Quét `ytradar_scan_niches`/`ytradar_scan_csv` tìm ngách có tỷ lệ Đại dương xanh cao $\rightarrow$ Quét `ytradar_scan_channel_videos` tìm Top Video Outlier (`Views/Subs >= 3x`) $\rightarrow$ Tải bản chép lời (`ytradar_fetch_transcript`) và phân tích bình luận (`ytradar_analyze_comments`) tìm `Content Requests`.
-   - **Với Facebook:** Chạy **Tool 3 (`http://127.0.0.1:8088/` — MCP `antigravity-tools`)**: Quét `server_search_videos` & `server_deep_scan` tìm video viral $\rightarrow$ Tải video & bản chép lời `.srt`/`.txt` qua `server_batch_download`/`server_quick_download`.
+   - **Với YouTube:** Chạy **Tool 2 (`http://202.43.110.175:15000/` — YT Niche Radar `mcp_server.py`)**: Quét `ytradar_scan_niches`/`ytradar_scan_csv` tìm ngách có tỷ lệ Đại dương xanh cao $\rightarrow$ Quét `ytradar_scan_channel_videos` tìm Top Video Outlier (`Views/Subs >= 3x`) $\rightarrow$ Tải bản chép lời (`ytradar_fetch_transcript`) và phân tích bình luận (`ytradar_analyze_comments`) tìm `Content Requests`.
+   - **Với Facebook:** Chạy **Tool 3 (`http://202.43.110.175:8088/` — MCP `antigravity-tools`)**: Quét `server_search_videos` & `server_deep_scan` tìm video viral $\rightarrow$ Tải video & bản chép lời `.srt`/`.txt` qua `server_batch_download`/`server_quick_download`.
 3. **Bước 6.3 — Nhân Bản Thư Mục Template & Xây Dựng `Channel_Branding`:**
-   - Copy `<WORKSPACE_DIR>\Xây Kênh Youtube\_TEMPLATE_KENH_MOI_A_TO_Z\` thành `<WORKSPACE_DIR>\Xây Kênh Youtube\<Ten_Kenh_Moi>\`.
+   - Copy `E:\DIEN APP\Xây Kênh Youtube\_TEMPLATE_KENH_MOI_A_TO_Z\` thành `E:\DIEN APP\Xây Kênh Youtube\<Ten_Kenh_Moi>\`.
    - Tạo thiết bị ảo + gắn Proxy trên **Tool 1 (`Anti-Detect Social Automator`)**.
    - Điền `channel_config.json`, `CHANNEL_BRANDING_VA_THONG_SO_RENDER.md`, và render `Channel_Branding/UID01.png` (nếu Mode A) + Logo + Banner.
 4. **Bước 6.4 — Lập File Kế Hoạch 100 Video Chuẩn 11 Cột (`1 Viet Content/Plan/*.csv`):**

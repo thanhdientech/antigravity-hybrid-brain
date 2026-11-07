@@ -2,8 +2,8 @@ import subprocess
 from pathlib import Path
 import shutil
 
-OUT_DIR = Path(r"<WORKSPACE_DIR>\Xây Kênh Youtube\Tool render edit Video\omniflash\output\ep01_anh_ay_luon_di_ben_ngoai_9x16")
-ART_DIR = Path(r"%USERPROFILE%\.gemini\antigravity\brain\<session-id>")
+OUT_DIR = Path(r"E:\DIEN APP\Xây Kênh Youtube\Tool render edit Video\omniflash\output\ep01_anh_ay_luon_di_ben_ngoai_9x16")
+ART_DIR = Path(r"C:\Users\INFOASIA\.gemini\antigravity\brain\e1bb566c-6a70-4a40-9357-b06201b6c46a")
 
 raw_video = OUT_DIR / "ep01_anh_ay_luon_di_ben_ngoai_raw.mp4"
 ass_file = OUT_DIR / "subtitles_premium_9x16.ass"

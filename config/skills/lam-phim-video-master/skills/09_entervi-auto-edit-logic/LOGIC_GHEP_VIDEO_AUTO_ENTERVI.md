@@ -2,7 +2,7 @@
 ## Bóc tách Kiến trúc Kỹ thuật từ Mã Nguồn Entervi Desktop v0.6.30
 
 > **Tài liệu Kỹ thuật Nội bộ**
-> **Nguồn trích xuất:** `%USERPROFILE%\.gemini\config\skills\audo edit\source_code\dist\main.js` (Hàm `renderFromScenes`, `renderProject`, `buildRenderPlan`)
+> **Nguồn trích xuất:** `E:\DIEN APP\Skill AI\audo edit\source_code\dist\main.js` (Hàm `renderFromScenes`, `renderProject`, `buildRenderPlan`)
 > **Công cụ thực thi cục bộ:** `resources\bin\win32-x64\ffmpeg.exe` (222 MB - FFmpeg custom tích hợp `whisper.cpp`)
 
 ---

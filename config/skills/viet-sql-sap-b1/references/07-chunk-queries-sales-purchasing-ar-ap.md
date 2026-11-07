@@ -12,7 +12,7 @@ Tài liệu này là chỉ mục băm nhỏ (Smart-Loading Chunk) cho nhóm câu
 | **Truy vấn Bán hàng Chuẩn (`02.Sales Queries` & `Sales AR`)** | `references/queries/02.Sales Queries/`<br>`references/queries/Sales AR/` | 14 file `.sql` phân tích doanh thu theo Khách hàng, Nhân viên kinh doanh (`OSLP`), Mặt hàng (`OITM`), Lợi nhuận gộp (`Gross Profit`). |
 | **Truy vấn Mua hàng Chuẩn (`03.Purchase Queries`)** | `references/queries/03.Purchase Queries/` | 11 file `.sql` theo dõi Yêu cầu mua hàng (`OPRQ`), Đơn mua hàng (`OPOR`), Nhập kho mua hàng GRPO (`OPDN`), Hóa đơn AP (`OPCH`). |
 | **Tổng hợp Mua - Bán (`Sales and Purchasing`)** | `references/queries/Sales and Purchasing/` | 24 file `.sql` đối chiếu liên phân hệ Mua hàng - Tồn kho - Bán hàng. |
-| **Mua - Bán Thực chiến SBO_MFG (`SYNC_SBO_MFG_PROD_SSMS`)** | `references/queries/SYNC_SBO_MFG_PROD_SSMS/Purchasing AP/`<br>`references/queries/SYNC_SBO_MFG_PROD_SSMS/Sales AR/` | Bộ 5 file `.sql` thực chiến theo dõi PO, GRPO, Hóa đơn AP và Doanh thu AR tại SBO_MFG. |
+| **Mua - Bán Thực chiến FVIVN (`SYNC_FVIVN_PROD_SSMS`)** | `references/queries/SYNC_FVIVN_PROD_SSMS/Purchasing AP/`<br>`references/queries/SYNC_FVIVN_PROD_SSMS/Sales AR/` | Bộ 5 file `.sql` thực chiến theo dõi PO, GRPO, Hóa đơn AP và Doanh thu AR tại FVIVN. |
 
 ---
 

@@ -4,12 +4,12 @@ customer_profile_manager.py - Bo quan ly cau hinh ket noi SQL Server theo tung k
 cho SAP B1 (9.3 / 10.0) & Beas Manufacturing.
 
 Ho tro:
-- Dong bo 2 chieu giua <WORKSPACE_DIR>\\SQL SAP B1\\config.json va JAVIS_STATE_DIR/customer_sql_profiles.json
+- Dong bo 2 chieu giua E:\\DIEN APP\\SQL SAP B1\\config.json va JAVIS_STATE_DIR/customer_sql_profiles.json
 - Cau hinh User / Password SQL rieng biet cho tung khach hang (multi-tenant profile)
 - Kiem tra ket noi pyodbc, tu dong nhan dien phien ban SAP B1 (CINF.Version) va Beas (BEAS_FTHAUPT)
 - Chay truy van SELECT & multi-statement #Temp table an toan (Read-Only Guard chan 100% lenh ghi bang thật)
 - Tu dong xuat ket qua ra file CSV (UTF-8 with BOM de mo Excel tieng Viet) va tra link tai 1-click
-- Chay truc tiep 7 nhom bao cao chuan SBO_MFG SSMS (sap_run_mfg_report)
+- Chay truc tiep 7 nhom bao cao chuan FVIVN SSMS (sap_run_fvivn_report)
 """
 from __future__ import annotations
 
@@ -34,10 +34,10 @@ if hasattr(sys.stdout, "reconfigure"):
 _ENV_SQL_DIR = os.getenv("SAP_B1_SQL_DIR", "").strip()
 if _ENV_SQL_DIR and Path(_ENV_SQL_DIR).exists():
     DEFAULT_SQL_APP_DIR = Path(_ENV_SQL_DIR)
-elif Path(r"<WORKSPACE_DIR>\SQL SAP B1").exists():
-    DEFAULT_SQL_APP_DIR = Path(r"<WORKSPACE_DIR>\SQL SAP B1")
-elif Path("/opt/antigravity-erp/data/sql_sap_b1").exists():
-    DEFAULT_SQL_APP_DIR = Path("/opt/antigravity-erp/data/sql_sap_b1")
+elif Path(r"E:\DIEN APP\SQL SAP B1").exists():
+    DEFAULT_SQL_APP_DIR = Path(r"E:\DIEN APP\SQL SAP B1")
+elif Path("/home/infoasia/javis-os/data/sql_sap_b1").exists():
+    DEFAULT_SQL_APP_DIR = Path("/home/infoasia/javis-os/data/sql_sap_b1")
 else:
     DEFAULT_SQL_APP_DIR = Path(__file__).resolve().parent
 
@@ -68,8 +68,8 @@ FORBIDDEN_SQL_KEYWORDS = (
     "XP_CMDSHELL",
 )
 
-# Ban do 7 nhom bao cao chuan SBO_MFG SSMS (+ cac bao cao con trong Inventory)
-MFG_STANDARD_REPORTS: Dict[str, Dict[str, str]] = {
+# Ban do 7 nhom bao cao chuan FVIVN SSMS (+ cac bao cao con trong Inventory)
+FVIVN_STANDARD_REPORTS: Dict[str, Dict[str, str]] = {
     "po_status": {
         "rel_path": "Purchasing AP/PO, Goods Receipt & AP Invoice Reconciliation Report.sql",
         "title": "PO, Goods Receipt & AP Invoice Reconciliation Report (Tinh trang PO)",
@@ -185,7 +185,7 @@ def _resolve_config_paths(custom_path: Optional[str] = None) -> List[Path]:
     if DEFAULT_CONFIG_PATH not in paths:
         paths.append(DEFAULT_CONFIG_PATH)
     for linux_cfg in (
-        Path("/opt/antigravity-erp/data/sql_sap_b1/config.json"),
+        Path("/home/infoasia/javis-os/data/sql_sap_b1/config.json"),
         Path("/data/sql_sap_b1/config.json"),
     ):
         if linux_cfg not in paths and linux_cfg.parent.exists():
@@ -203,8 +203,8 @@ def _resolve_exports_dir() -> Path:
     state_dir = os.getenv("JAVIS_STATE_DIR", "").strip()
     if state_dir:
         d = Path(state_dir) / "exports"
-    elif Path("/opt/antigravity-erp/state_enterprise").exists():
-        d = Path("/opt/antigravity-erp/state_enterprise/exports")
+    elif Path("/home/infoasia/javis-os/state_infoasia").exists():
+        d = Path("/home/infoasia/javis-os/state_infoasia/exports")
     else:
         d = DEFAULT_SQL_APP_DIR / "exports"
     d.mkdir(parents=True, exist_ok=True)
@@ -244,7 +244,7 @@ def _export_rows_to_csv(
         except Exception:
             pass
 
-    base_url = os.getenv("JAVIS_PUBLIC_EXPORT_BASE", "https://erp-portal.example.com").rstrip("/")
+    base_url = os.getenv("JAVIS_PUBLIC_EXPORT_BASE", "https://ai.infoasia.vn:9443").rstrip("/")
     download_url = f"{base_url}/exports/{filename}"
     return str(out_p.resolve()), download_url
 
@@ -322,7 +322,7 @@ def _export_rows_to_xlsx(
             ws.column_dimensions[col_letter].width = max(10, min(max_len + 4, 42))
 
         wb.save(str(out_p))
-        base_url = os.getenv("JAVIS_PUBLIC_EXPORT_BASE", "https://erp-portal.example.com").rstrip("/")
+        base_url = os.getenv("JAVIS_PUBLIC_EXPORT_BASE", "https://ai.infoasia.vn:9443").rstrip("/")
         return str(out_p.resolve()), f"{base_url}/exports/{filename}"
     except Exception:
         return "", ""
@@ -427,7 +427,7 @@ def _export_rows_to_pdf(
         )
 
         story = []
-        story.append(Paragraph(f"ENTERPRISE SAP B1 / BEAS REPORT: {safe_slug} ({safe_cust})", title_style))
+        story.append(Paragraph(f"INFOASIA SAP B1 / BEAS REPORT: {safe_slug} ({safe_cust})", title_style))
         story.append(
             Paragraph(
                 f"Exported: {datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')} | Total Rows: {len(rows)} "
@@ -472,7 +472,7 @@ def _export_rows_to_pdf(
         story.append(tbl)
         doc.build(story)
 
-        base_url = os.getenv("JAVIS_PUBLIC_EXPORT_BASE", "https://erp-portal.example.com").rstrip("/")
+        base_url = os.getenv("JAVIS_PUBLIC_EXPORT_BASE", "https://ai.infoasia.vn:9443").rstrip("/")
         return str(out_p.resolve()), f"{base_url}/exports/{filename}"
     except Exception:
         return "", ""
@@ -537,20 +537,20 @@ def _normalize_profile(raw: Dict[str, Any], index: int = 0) -> Dict[str, Any]:
     srv_str = str(raw.get("server") or "localhost").strip()
     ip_last = srv_str.split(".")[-1] if "." in srv_str else srv_str
     default_banner = f"Em đang trả kết quả từ con {ip_last} ({db_name})."
-    if db_name.upper() == "SBO_MFG_PLANT1" or cid.lower() == "SBO_MFG_PLANT1":
-        default_banner = "Em đang trả kết quả từ Server B HCM."
-    elif db_name.upper() == "SBO_MFG_PROD" or cid.lower() == "SBO_MFG_PROD":
-        default_banner = "Em đang trả kết quả từ Server B LT."
-    elif db_name.upper() == "SBO_MFG_TRAIN" or cid.lower() == "SBO_MFG_TRAIN":
-        default_banner = "Em đang trả kết quả từ Server B (SBO_MFG_TRAIN)."
-    elif db_name.upper() == "SBO_PLANT_C" or cid.lower() == "SBO_PLANT_C":
-        default_banner = "Em đang trả kết quả từ Server C (SBO_PLANT_C)."
-    elif db_name.upper() == "ECC" or cid.lower() == "SBO_PLANT_D_MAIN":
-        default_banner = "Em đang trả kết quả từ Server D (ECC)."
-    elif db_name.upper() == "SBO_PLANT_D_DEMO" or cid.lower() == "SBO_PLANT_D_DEMO":
-        default_banner = "Em đang trả kết quả từ Server D (SBO_PLANT_D_DEMO)."
-    elif db_name.lower() == "SBO_MAIN_PROD" or cid.lower() == "SBO_MAIN_PROD":
-        default_banner = "Em đang trả kết quả từ Server A (SBO_MAIN_PROD)."
+    if db_name.upper() == "FVIVN_GOLIVE_2024" or cid.lower() == "fvivn_hcm":
+        default_banner = "Em đang trả kết quả từ con 160 HCM."
+    elif db_name.upper() == "FVIVN_PROD" or cid.lower() == "fvivn_lt":
+        default_banner = "Em đang trả kết quả từ con 160 LT."
+    elif db_name.upper() == "FVIVN_PROD_TRAIN" or cid.lower() == "fvivn_train":
+        default_banner = "Em đang trả kết quả từ con 160 (FVIVN_PROD_TRAIN)."
+    elif db_name.upper() == "PENFLEXPRD_NEW" or cid.lower() == "penflex_52":
+        default_banner = "Em đang trả kết quả từ con 52 (PenflexPRD_NEW)."
+    elif db_name.upper() == "ECC" or cid.lower() == "ecc_27":
+        default_banner = "Em đang trả kết quả từ con 27 (ECC)."
+    elif db_name.upper() == "HTL_DEMO" or cid.lower() == "htl_demo_27":
+        default_banner = "Em đang trả kết quả từ con 27 (HTL_DEMO)."
+    elif db_name.lower() == "infoasia56" or cid.lower() == "infoasia56":
+        default_banner = "Em đang trả kết quả từ con 24 (infoasia56)."
     source_banner = str(raw.get("source_banner") or default_banner).strip()
 
     return {
@@ -562,7 +562,7 @@ def _normalize_profile(raw: Dict[str, Any], index: int = 0) -> Dict[str, Any]:
         "has_beas": has_beas,
         "server": srv_str,
         "database": db_name,
-        "username": str(raw.get("username") or "sap_readonly_user").strip(),
+        "username": str(raw.get("username") or "infoasia_ro").strip(),
         "password": str(raw.get("password") or ""),
         "service_layer_url": str(raw.get("service_layer_url") or "").strip(),
         "sl_username": str(raw.get("sl_username") or "").strip(),
@@ -649,7 +649,7 @@ _DEFAULT_SERVER24_KEYS = {
     "/24",
     "server24",
     "server_24",
-    "SBO_MAIN_PROD",
+    "infoasia56",
     "demo",
     "all",
     "any",
@@ -665,17 +665,17 @@ _DEFAULT_SERVER24_KEYS = {
     "sap_b1",
     "sapb1",
     "beas",
-    "enterprise",
+    "infoasia",
 }
 
 
 def _find_default_server24_profile(conns: List[Dict[str, Any]]) -> Optional[Dict[str, Any]]:
-    """Tim profile mac dinh Server 24 - Database SBO_MAIN_PROD."""
+    """Tim profile mac dinh Server 24 - Database infoasia56."""
     for c in conns:
         cid = str(c.get("id") or "").lower()
         db = str(c.get("database") or "").lower()
         srv = str(c.get("server") or "").lower()
-        if cid == "SBO_MAIN_PROD" or db == "SBO_MAIN_PROD" or srv.endswith(".24"):
+        if cid == "infoasia56" or db == "infoasia56" or srv.endswith(".24"):
             return c
     return conns[0] if conns else None
 
@@ -684,8 +684,8 @@ def build_clarify_customer_message(customer_key: str = "", custom_path: Optional
     """Thong bao khi ma server khong ton tai."""
     return (
         f"Khong tim thay cau hinh server/database phu hop voi '{customer_key}'. "
-        "Mac dinh he thong su dung database 'SBO_MAIN_PROD' (Server 24). "
-        "Neu muon truy van server khac, vui long dung cu phap '/160' (SBO_MFG Long Thanh), '/160 hcm' (SBO_MFG HCM) hoac '/<ma_server>'."
+        "Mac dinh he thong su dung database 'infoasia56' (Server 24). "
+        "Neu muon truy van server khac, vui long dung cu phap '/160' (FVIVN Long Thanh), '/160 hcm' (FVIVN HCM) hoac '/<ma_server>'."
     )
 
 
@@ -694,11 +694,11 @@ def resolve_profile_strict(
 ) -> Tuple[Optional[Dict[str, Any]], str]:
     """
     Tim profile theo quy tac:
-    1. Mac dinh (khi hoi tu do / khong truyen hoac truyen 24 / SBO_MAIN_PROD) -> Server 24 Database 'SBO_MAIN_PROD'.
-    2. Khi truyen '/160', '160', '160_train', 'SBO_MFG_TRAIN', 'SBO_MFG_TRAIN' -> Server 160 Database 'SBO_MFG_TRAIN'.
-    3. Khi truyen '/160 hcm', '160_hcm', 'SBO_MFG_PLANT1', 'SBO_MFG_PLANT1' -> Server 160 Database 'SBO_MFG_PLANT1'.
-    4. Khi truyen '/160 lt', '160_lt', 'SBO_MFG_PROD', 'SBO_MFG_PROD' -> Server 160 Database 'SBO_MFG_PROD'.
-    5. Khi truyen '/52', '52', 'plant_c', 'SBO_PLANT_C', 'SBO_PLANT_C' -> Server 52 Database 'SBO_PLANT_C'.
+    1. Mac dinh (khi hoi tu do / khong truyen hoac truyen 24 / infoasia56) -> Server 24 Database 'infoasia56'.
+    2. Khi truyen '/160', '160', '160_train', 'fvivn_train', 'fvivn_prod_train' -> Server 160 Database 'FVIVN_PROD_TRAIN'.
+    3. Khi truyen '/160 hcm', '160_hcm', 'fvivn_hcm', 'fvivn_golive_2024' -> Server 160 Database 'FVIVN_GoLive_2024'.
+    4. Khi truyen '/160 lt', '160_lt', 'fvivn_lt', 'fvivn_prod' -> Server 160 Database 'FVIVN_PROD'.
+    5. Khi truyen '/52', '52', 'penflex', 'penflex_52', 'penflexprd_new' -> Server 52 Database 'PenflexPRD_NEW'.
     6. Khi truyen '/<duoi_IP>' hoac '<ma_server>' cho cac server mo rong sau nay -> Tu dong khop theo duoi IP hoac id/alias.
     """
     data, _ = load_raw_config(custom_path)
@@ -709,46 +709,46 @@ def resolve_profile_strict(
     raw_k = _strip_accents(customer_key).lstrip("/").strip()
     k_compact = re.sub(r"[^a-z0-9]+", "_", raw_k).strip("_")
 
-    # 1. Mac dinh -> Server 24 (database SBO_MAIN_PROD)
+    # 1. Mac dinh -> Server 24 (database infoasia56)
     if not raw_k or raw_k in _DEFAULT_SERVER24_KEYS or k_compact in _DEFAULT_SERVER24_KEYS:
         prof24 = _find_default_server24_profile(conns)
         if prof24:
             return prof24, ""
 
-    # 2. Cu phap /160 HCM -> SBO_MFG_PLANT1
-    if k_compact in ("160_hcm", "160hcm", "SBO_MFG_PLANT1", "SBO_MFG_PLANT1", "hcm", "con_160_hcm"):
+    # 2. Cu phap /160 HCM -> FVIVN_GoLive_2024
+    if k_compact in ("160_hcm", "160hcm", "fvivn_hcm", "fvivn_golive_2024", "hcm", "con_160_hcm"):
         for c in conns:
-            if str(c.get("id") or "").upper() == "SBO_MFG_PLANT1" or str(c.get("database") or "").upper() == "SBO_MFG_PLANT1":
+            if str(c.get("id") or "").upper() == "FVIVN_HCM" or str(c.get("database") or "").upper() == "FVIVN_GOLIVE_2024":
                 return c, ""
 
-    # 3. Cu phap /160 LT -> SBO_MFG_PROD
-    if k_compact in ("160_lt", "160lt", "160_long_thanh", "SBO_MFG_PROD", "SBO_MFG_PROD", "long_thanh", "con_160_lt"):
+    # 3. Cu phap /160 LT -> FVIVN_PROD
+    if k_compact in ("160_lt", "160lt", "160_long_thanh", "fvivn_lt", "fvivn_prod", "long_thanh", "con_160_lt"):
         for c in conns:
-            if str(c.get("id") or "").upper() == "SBO_MFG_PROD" or str(c.get("database") or "").upper() == "SBO_MFG_PROD":
+            if str(c.get("id") or "").upper() == "FVIVN_LT" or str(c.get("database") or "").upper() == "FVIVN_PROD":
                 return c, ""
 
-    # 4. Cu phap /160 (mac dinh cua 160) -> SBO_MFG_TRAIN
-    if k_compact in ("160", "160_train", "160train", "SBO_MFG_TRAIN", "SBO_MFG_TRAIN", "sbo_mfg", "fvi", "con_160"):
+    # 4. Cu phap /160 (mac dinh cua 160) -> FVIVN_PROD_TRAIN
+    if k_compact in ("160", "160_train", "160train", "fvivn_train", "fvivn_prod_train", "fvivn", "fvi", "con_160"):
         for c in conns:
-            if str(c.get("id") or "").upper() == "SBO_MFG_TRAIN" or str(c.get("database") or "").upper() == "SBO_MFG_TRAIN":
+            if str(c.get("id") or "").upper() == "FVIVN_TRAIN" or str(c.get("database") or "").upper() == "FVIVN_PROD_TRAIN":
                 return c, ""
 
-    # 5. Cu phap /52 -> SBO_PLANT_C
-    if k_compact in ("52", "server_52", "con_52", "plant_c", "SBO_PLANT_C", "SBO_PLANT_C"):
+    # 5. Cu phap /52 -> PenflexPRD_NEW
+    if k_compact in ("52", "server_52", "con_52", "penflex", "penflex_52", "penflexprd_new"):
         for c in conns:
-            if str(c.get("id") or "").upper() == "SBO_PLANT_C" or str(c.get("database") or "").upper() == "SBO_PLANT_C":
+            if str(c.get("id") or "").upper() == "PENFLEX_52" or str(c.get("database") or "").upper() == "PENFLEXPRD_NEW":
                 return c, ""
 
-    # 6. Cu phap /27 HTL -> SBO_PLANT_D_DEMO
-    if k_compact in ("27_htl", "27htl", "27_plant_d_demo", "htl", "SBO_PLANT_D_DEMO", "SBO_PLANT_D_DEMO", "con_27_htl"):
+    # 6. Cu phap /27 HTL -> HTL_DEMO
+    if k_compact in ("27_htl", "27htl", "27_htl_demo", "htl", "htl_demo", "htl_demo_27", "con_27_htl"):
         for c in conns:
-            if str(c.get("id") or "").upper() == "SBO_PLANT_D_DEMO" or str(c.get("database") or "").upper() == "SBO_PLANT_D_DEMO":
+            if str(c.get("id") or "").upper() == "HTL_DEMO_27" or str(c.get("database") or "").upper() == "HTL_DEMO":
                 return c, ""
 
     # 7. Cu phap /27 hoac /27 ECC -> ECC
-    if k_compact in ("27", "27_ecc", "27ecc", "ecc", "SBO_PLANT_D_MAIN", "server_27", "con_27"):
+    if k_compact in ("27", "27_ecc", "27ecc", "ecc", "ecc_27", "server_27", "con_27"):
         for c in conns:
-            if str(c.get("id") or "").upper() == "SBO_PLANT_D_MAIN" or str(c.get("database") or "").upper() == "ECC":
+            if str(c.get("id") or "").upper() == "ECC_27" or str(c.get("database") or "").upper() == "ECC":
                 return c, ""
 
     # 3. Kiem tra khop chinh xac 100% tren id, customer_code, name, database, aliases, hoac duoi IP server (vd: /165 -> .165)
@@ -797,7 +797,7 @@ def resolve_profile_strict(
     if len(sub_matches) >= 1:
         return sub_matches[0], ""
 
-    # Fallback an toan ve Server 24 SBO_MAIN_PROD
+    # Fallback an toan ve Server 24 infoasia56
     prof24 = _find_default_server24_profile(conns)
     if prof24:
         return prof24, ""
@@ -814,7 +814,7 @@ def upsert_profile(
     name: str,
     server: str,
     database: str,
-    username: str = "sap_readonly_user",
+    username: str = "infoasia_ro",
     password: str = "",
     customer_id: str = "",
     customer_code: str = "",
@@ -830,7 +830,7 @@ def upsert_profile(
     name = str(name or "").strip()
     server = str(server or "").strip()
     database = str(database or "").strip()
-    username = str(username or "sap_readonly_user").strip()
+    username = str(username or "infoasia_ro").strip()
 
     if not name or not server or not database:
         return {
@@ -937,7 +937,7 @@ def _open_pyodbc_connection(profile: Dict[str, Any], timeout: int = 10):
 
     server = profile.get("server", "localhost")
     database = profile.get("database", "")
-    username = profile.get("username", "sap_readonly_user")
+    username = profile.get("username", "infoasia_ro")
     password = profile.get("password", "")
 
     last_err = None
@@ -1095,8 +1095,8 @@ def call_service_layer(
 ) -> Dict[str, Any]:
     """
     Goi SAP B1 10.0 Service Layer REST API (/b1s/v1/<endpoint>) voi tu dong Login -> Request -> Logout.
-    CHOT CHAN AN TOAN: Chi cho phep goi tren cac profile co allow_service_layer == True (Server Demo SBO_MAIN_PROD 10.0.0.10).
-    Neu nguoi dung KHONG noi ro alias (demo / SBO_MAIN_PROD / SBO_MFG...), tra ve require_clarification=True de Agent hoi ro!
+    CHOT CHAN AN TOAN: Chi cho phep goi tren cac profile co allow_service_layer == True (Server Demo infoasia56 192.168.42.24).
+    Neu nguoi dung KHONG noi ro alias (demo / infoasia56 / FVIVN...), tra ve require_clarification=True de Agent hoi ro!
     """
     profile, clarify_err = resolve_profile_strict(customer_key, custom_path)
     if not profile:
@@ -1116,7 +1116,7 @@ def call_service_layer(
             "error": (
                 f"CHOT CHAN AN TOAN: He thong '{profile['name']}' (Server {profile['server']} / DB {profile['database']}) "
                 "la Database Khach Hang (Read-Only 100%), KHONG cho phep goi Service Layer. "
-                "Chi duoc phep goi Service Layer tren Server Demo 'SBO_MAIN_PROD' (10.0.0.10:50000)."
+                "Chi duoc phep goi Service Layer tren Server Demo 'infoasia56' (192.168.42.24:50000)."
             ),
         }
 
@@ -1328,8 +1328,8 @@ DROP TABLE #TmpResult2;
 """
 
 
-def adapt_mfg_sql(sql: str, database: str = "") -> str:
-    """Chuyen doi CURSOR sp_daily_hour_report sang set-based #WOTime va tuong thich giua SBO_MFG_PROD, SBO_MFG_PLANT1 & SBO_MAIN_PROD."""
+def adapt_fvivn_sql(sql: str, database: str = "") -> str:
+    """Chuyen doi CURSOR sp_daily_hour_report sang set-based #WOTime va tuong thich giua FVIVN_PROD, FVIVN_GoLive_2024 & infoasia56."""
     out = str(sql or "")
     if "sp_daily_hour_report" in out:
         out = re.sub(
@@ -1339,7 +1339,7 @@ def adapt_mfg_sql(sql: str, database: str = "") -> str:
             flags=re.DOTALL | re.IGNORECASE,
         )
     db_norm = database.strip().lower()
-    if db_norm and db_norm != "SBO_MFG_PROD":
+    if db_norm and db_norm != "fvivn_prod":
         out = re.sub(
             r"\[@IOT_PARAMETERS\]",
             "(SELECT CAST(NULL AS NVARCHAR(100)) AS Code, CAST(NULL AS NVARCHAR(100)) AS U_I_LineType, CAST(NULL AS NVARCHAR(50)) AS U_I_Ac1Balls, CAST(NULL AS NVARCHAR(50)) AS U_I_Ac2Balls WHERE 1=0)",
@@ -1366,7 +1366,7 @@ def validate_readonly_sql(sql: str) -> Tuple[bool, str]:
     if not sql or not str(sql).strip():
         return False, "Cau lenh SQL trong."
 
-    adapted = adapt_mfg_sql(str(sql))
+    adapted = adapt_fvivn_sql(str(sql))
     cleaned = _strip_sql_comments_and_strings(adapted)
     if not cleaned:
         return False, "Cau lenh SQL chi chua comment hoac rong."
@@ -1454,7 +1454,7 @@ def execute_readonly_query(
 
     try:
         cur = conn.cursor()
-        final_sql = adapt_mfg_sql(sql, database=profile.get("database", ""))
+        final_sql = adapt_fvivn_sql(sql, database=profile.get("database", ""))
         cur.execute(final_sql)
 
         while cur.description is None:
@@ -1547,7 +1547,7 @@ def _read_text_safe(p: Path) -> str:
     return p.read_text(encoding="utf-8", errors="replace")
 
 
-def run_mfg_standard_report(
+def run_fvivn_standard_report(
     customer_key: str,
     report_type: str,
     from_date: str = "",
@@ -1561,27 +1561,27 @@ def run_mfg_standard_report(
     sql_app_dir: Optional[str] = None,
     custom_path: Optional[str] = None,
 ) -> Dict[str, Any]:
-    """Chay 1 trong 7 nhom bao cao chuan SBO_MFG SSMS, tu dong thay tham so ngay/kho/ma hang/WO va xuat file CSV/XLSX/PDF."""
+    """Chay 1 trong 7 nhom bao cao chuan FVIVN SSMS, tu dong thay tham so ngay/kho/ma hang/WO va xuat file CSV/XLSX/PDF."""
     rk = _strip_accents(report_type)
     rk_compact = re.sub(r"[^a-z0-9]+", "_", rk).strip("_")
     canonical_key = REPORT_ALIASES.get(rk_compact, rk_compact)
-    if canonical_key not in MFG_STANDARD_REPORTS:
+    if canonical_key not in FVIVN_STANDARD_REPORTS:
         return {
             "ok": False,
             "error": (
                 f"Khong nhan dien duoc report_type={report_type!r}. "
-                f"Cac gia tri hop le: {', '.join(MFG_STANDARD_REPORTS.keys())}"
+                f"Cac gia tri hop le: {', '.join(FVIVN_STANDARD_REPORTS.keys())}"
             ),
         }
 
-    rep_meta = MFG_STANDARD_REPORTS[canonical_key]
+    rep_meta = FVIVN_STANDARD_REPORTS[canonical_key]
     base_dir = Path(sql_app_dir) if sql_app_dir else DEFAULT_SQL_APP_DIR
-    if not base_dir.exists() and Path("/opt/antigravity-erp/data/sql_sap_b1").exists():
-        base_dir = Path("/opt/antigravity-erp/data/sql_sap_b1")
+    if not base_dir.exists() and Path("/home/infoasia/javis-os/data/sql_sap_b1").exists():
+        base_dir = Path("/home/infoasia/javis-os/data/sql_sap_b1")
     elif not base_dir.exists() and Path("/data/sql_sap_b1").exists():
         base_dir = Path("/data/sql_sap_b1")
 
-    sql_file = base_dir / "queries" / "SYNC_SBO_MFG_PROD_SSMS" / rep_meta["rel_path"]
+    sql_file = base_dir / "queries" / "SYNC_FVIVN_PROD_SSMS" / rep_meta["rel_path"]
     if not sql_file.is_file():
         return {
             "ok": False,
@@ -1724,7 +1724,7 @@ def run_mfg_standard_report(
 
     res["report_type"] = canonical_key
     res["report_title"] = rep_meta["title"]
-    res["source_file"] = f"queries/SYNC_SBO_MFG_PROD_SSMS/{rep_meta['rel_path']}"
+    res["source_file"] = f"queries/SYNC_FVIVN_PROD_SSMS/{rep_meta['rel_path']}"
     res["from_date"] = f_date
     res["to_date"] = t_date
     return res
@@ -1739,8 +1739,8 @@ def search_help_queries(
 ) -> Dict[str, Any]:
     """Tim kiem cau lenh SQL mau trong thu muc queries/ va Help/SAPStandard_query.txt, Default_query.txt."""
     base_dir = Path(sql_app_dir) if sql_app_dir else DEFAULT_SQL_APP_DIR
-    if not base_dir.exists() and Path("/opt/antigravity-erp/data/sql_sap_b1").exists():
-        base_dir = Path("/opt/antigravity-erp/data/sql_sap_b1")
+    if not base_dir.exists() and Path("/home/infoasia/javis-os/data/sql_sap_b1").exists():
+        base_dir = Path("/home/infoasia/javis-os/data/sql_sap_b1")
     elif not base_dir.exists() and Path("/data/sql_sap_b1").exists():
         base_dir = Path("/data/sql_sap_b1")
 
@@ -1763,7 +1763,7 @@ def search_help_queries(
 
     queries_dir = base_dir / "queries"
     if queries_dir.is_dir():
-        ssms_dir = queries_dir / "SYNC_SBO_MFG_PROD_SSMS"
+        ssms_dir = queries_dir / "SYNC_FVIVN_PROD_SSMS"
         priority_files: List[Path] = []
         if ssms_dir.is_dir():
             priority_files.extend(sorted(ssms_dir.rglob("*.sql")))
@@ -1777,15 +1777,15 @@ def search_help_queries(
             q_name = sql_file.stem
             sql_text = _read_text_safe(sql_file)
             if _matches(q_name, rel_cat, sql_text):
-                is_ssms_gold = "SYNC_SBO_MFG_PROD_SSMS" in rel_cat
+                is_ssms_gold = "SYNC_FVIVN_PROD_SSMS" in rel_cat
                 results.append(
                     {
                         "source": f"queries/{rel_cat}/{sql_file.name}",
                         "category": rel_cat,
                         "query_name": q_name,
-                        "priority": "HIGH_MFG_GOLD" if is_ssms_gold else "STANDARD",
+                        "priority": "HIGH_FVIVN_GOLD" if is_ssms_gold else "STANDARD",
                         "description": (
-                            f"[KHO CHUAN SBO_MFG SSMS] {rel_cat} - {q_name}"
+                            f"[KHO CHUAN FVIVN SSMS] {rel_cat} - {q_name}"
                             if is_ssms_gold
                             else f"File SQL mau trong {rel_cat}"
                         ),
@@ -2015,7 +2015,7 @@ def search_sap_article_images(
 
         doc.build(story)
         guide_pdf_path = str(out_pdf.resolve())
-        base_url = os.getenv("JAVIS_PUBLIC_EXPORT_BASE", "https://erp-portal.example.com").rstrip("/")
+        base_url = os.getenv("JAVIS_PUBLIC_EXPORT_BASE", "https://ai.infoasia.vn:9443").rstrip("/")
         guide_pdf_url = f"{base_url}/exports/{pdf_name}"
     except Exception:
         pass
@@ -2040,12 +2040,12 @@ def main():
     sub.add_parser("list", help="Liet ke tat ca profile SQL khach hang")
 
     p_up = sub.add_parser("upsert", help="Them moi hoac cap nhat profile SQL khach hang")
-    p_up.add_argument("--id", default="", help="ID profile (vd: db_mfg)")
+    p_up.add_argument("--id", default="", help="ID profile (vd: db_fvivn)")
     p_up.add_argument("--name", required=True, help="Ten khach hang / ket noi")
-    p_up.add_argument("--code", default="", help="Ma khach hang (vd: SBO_MFG_PROD, SBO_MFG_PLANT1)")
+    p_up.add_argument("--code", default="", help="Ma khach hang (vd: FVIVN_LT, FVIVN_HCM)")
     p_up.add_argument("--server", required=True, help="IP hoac hostname SQL Server")
     p_up.add_argument("--database", required=True, help="Ten database SAP B1")
-    p_up.add_argument("--username", default="sap_readonly_user", help="User SQL rieng cua khach hang")
+    p_up.add_argument("--username", default="infoasia_ro", help="User SQL rieng cua khach hang")
     p_up.add_argument("--password", default="", help="Password SQL rieng cua khach hang")
     p_up.add_argument("--sap-version", default="10.0", choices=["9.3", "10.0"])
     p_up.add_argument("--has-beas", default="true", choices=["true", "false"])
@@ -2060,8 +2060,8 @@ def main():
     p_query.add_argument("--max-rows", type=int, default=30)
     p_query.add_argument("--csv", default="", help="Duong dan xuat file CSV")
 
-    p_rep = sub.add_parser("report", help="Chay bao cao chuan SBO_MFG SSMS")
-    p_rep.add_argument("customer", help="ID hoac ma khach hang (SBO_MFG_PROD / SBO_MFG_PLANT1)")
+    p_rep = sub.add_parser("report", help="Chay bao cao chuan FVIVN SSMS")
+    p_rep.add_argument("customer", help="ID hoac ma khach hang (FVIVN_LT / FVIVN_HCM)")
     p_rep.add_argument("report_type", help="Loai bao cao (po_status, sale_status, gross_profit, wo_cost_allocation, wo_cost_detail, daily_hour_report, inventory_movement...)")
     p_rep.add_argument("--from-date", default="", help="Tu ngay YYYY-MM-DD")
     p_rep.add_argument("--to-date", default="", help="Den ngay YYYY-MM-DD")
@@ -2101,7 +2101,7 @@ def main():
             args.customer, args.sql, max_rows=args.max_rows, export_csv_path=args.csv
         )
     elif args.cmd == "report":
-        res = run_mfg_standard_report(
+        res = run_fvivn_standard_report(
             customer_key=args.customer,
             report_type=args.report_type,
             from_date=args.from_date,

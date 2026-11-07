@@ -15,8 +15,8 @@ group: "Làm Phim & Video AI"
 ## Kiến Tạo, Lập Trình & Biên Tập Video Tự Động Toàn Diện Với 5 Đại Engine
 
 > **Khẩu hiệu cốt lõi:** *"Code Your Motion, Automate Your Cuts, Scale Your Video Pipeline."*  
-> **Kho tài nguyên dự án cục bộ:** [`%USERPROFILE%\.gemini\config\skills\create and edit video\`](file:///WORKSPACE_DIR/Skill%20AI/create%20and%20edit%20video/)  
-> **Kho 20 Repositories 6 Tầng:** [`%USERPROFILE%\.gemini\config\skills\editor video ai\`](file:///WORKSPACE_DIR/Skill%20AI/editor%20video%20ai/)
+> **Kho tài nguyên dự án cục bộ:** [`E:\DIEN APP\Skill AI\create and edit video\`](file:///E:/DIEN%20APP/Skill%20AI/create%20and%20edit%20video/)  
+> **Kho 20 Repositories 6 Tầng:** [`E:\DIEN APP\Skill AI\editor video ai\`](file:///E:/DIEN%20APP/Skill%20AI/editor%20video%20ai/)
 
 ---
 
@@ -60,8 +60,8 @@ group: "Làm Phim & Video AI"
 ---
 
 ### 🚀 ENGINE 1: REMOTION (React + TypeScript GPU Render)
-* **Vị trí repo:** [`editor video ai/04_Video/remotion/`](file:///WORKSPACE_DIR/Skill%20AI/editor%20video%20ai/04_Video/remotion/)
-* **Dự án render hoàn chỉnh:** [`<WORKSPACE_DIR>\Xây Kênh Youtube\Tool render edit Video\omniflash\video-ai-workflow\pro-text-to-video\`](file:///WORKSPACE_DIR/X%C3%A2y%20K%C3%AAnh%20Youtube/Tool%20render%20edit%20Video/omniflash/video-ai-workflow/pro-text-to-video/)
+* **Vị trí repo:** [`editor video ai/04_Video/remotion/`](file:///E:/DIEN%20APP/Skill%20AI/editor%20video%20ai/04_Video/remotion/)
+* **Dự án render hoàn chỉnh:** [`E:\DIEN APP\Xây Kênh Youtube\Tool render edit Video\omniflash\video-ai-workflow\pro-text-to-video\`](file:///E:/DIEN%20APP/X%C3%A2y%20K%C3%AAnh%20Youtube/Tool%20render%20edit%20Video/omniflash/video-ai-workflow/pro-text-to-video/)
 * **Script thực thi một chạm:** `scripts/render_remotion_render.py`
 
 #### 📋 Cấu trúc lệnh Render Remotion qua GPU Chromium:
@@ -82,8 +82,8 @@ node scripts/render-universal.mjs <propsJsonPath> <outputPath> [stagingAssetsDir
 ---
 
 ### 🎙️ ENGINE 2: AUTO-EDITOR (Cắt Khoảng Lặng Tự Động Cho Video/Podcast)
-* **Vị trí repo:** [`editor video ai/04_Video/auto-editor/`](file:///WORKSPACE_DIR/Skill%20AI/editor%20video%20ai/04_Video/auto-editor/)
-* **Đường dẫn binary trên máy:** `<WORKSPACE_DIR>\Xây Kênh Youtube\Tool render edit Video\.venv\Scripts\auto-editor.exe`
+* **Vị trí repo:** [`editor video ai/04_Video/auto-editor/`](file:///E:/DIEN%20APP/Skill%20AI/editor%20video%20ai/04_Video/auto-editor/)
+* **Đường dẫn binary trên máy:** `E:\DIEN APP\Xây Kênh Youtube\Tool render edit Video\.venv\Scripts\auto-editor.exe`
 * **Công dụng:** Tự động phát hiện các đoạn người nói dừng ngập ngừng, khoảng im lặng không có âm thanh và cắt bỏ tức thì, giữ lại nhịp điệu nói nhanh, cuốn hút kiểu TikTok/Shorts.
 
 #### 📋 Cú Pháp Lệnh Thực Chiến:
@@ -107,7 +107,7 @@ node scripts/render-universal.mjs <propsJsonPath> <outputPath> [stagingAssetsDir
 ---
 
 ### 🎬 ENGINE 3: EDITLY (Biên Tập Video Hàng Loạt Bằng JSON Spec)
-* **Vị trí repo:** [`editor video ai/04_Video/editly/`](file:///WORKSPACE_DIR/Skill%20AI/editor%20video%20ai/04_Video/editly/)
+* **Vị trí repo:** [`editor video ai/04_Video/editly/`](file:///E:/DIEN%20APP/Skill%20AI/editor%20video%20ai/04_Video/editly/)
 * **Cơ chế:** Khai báo cấu trúc video bằng JSON thuần $\rightarrow$ Editly gọi FFmpeg kết hợp OpenGL Shaders render video chuyển cảnh mượt mà.
 
 #### 📋 Mẫu file cấu hình JSON (`editly_spec.json`):
@@ -147,7 +147,7 @@ npx editly editly_spec.json
 ---
 
 ### 📐 ENGINE 4: MOTION CANVAS (Diễn Họa Khoa Học Tương Tác Web)
-* **Vị trí repo:** [`editor video ai/04_Video/motion-canvas/`](file:///WORKSPACE_DIR/Skill%20AI/editor%20video%20ai/04_Video/motion-canvas/)
+* **Vị trí repo:** [`editor video ai/04_Video/motion-canvas/`](file:///E:/DIEN%20APP/Skill%20AI/editor%20video%20ai/04_Video/motion-canvas/)
 * **Điểm mạnh:** Sử dụng TypeScript với Generator function (`yield*`) để tạo hoạt ảnh toán học 2D. Có giao diện Web Editor để xem trước 60 FPS từng frame.
 
 #### 📋 Mẫu Animation Code (`scene.tsx`):
@@ -174,7 +174,7 @@ npm run dev
 ---
 
 ### 🧮 ENGINE 5: MANIM (Đỉnh Cao Toán Học 3Blue1Brown Bằng Python)
-* **Vị trí repo:** [`editor video ai/04_Video/manim/`](file:///WORKSPACE_DIR/Skill%20AI/editor%20video%20ai/04_Video/manim/)
+* **Vị trí repo:** [`editor video ai/04_Video/manim/`](file:///E:/DIEN%20APP/Skill%20AI/editor%20video%20ai/04_Video/manim/)
 * **Tác giả:** Grant Sanderson (`3b1b/manim`)
 * **Điểm mạnh:** Biến hình đồ thị (Shape Morphing), render phương trình toán học phức tạp bằng LaTeX $\LaTeX$, mô phỏng ma trận, không gian vector 3D cực kỳ trơn tru.
 
@@ -203,16 +203,16 @@ python -m manim -pql scene_math.py MathExplanation
 ---
 
 ### 🖥️ ENGINE 6: RECORDLY (Quay Màn Hình Auto-Zoom & Dựng Video Demo / Tutorial)
-* **Vị trí repo:** [`editor video ai/04_Video/Recordly/`](file:///WORKSPACE_DIR/Skill%20AI/editor%20video%20ai/04_Video/Recordly/)
-* **Bộ cài Windows x64 (`v1.4.0`):** [`editor video ai/04_Video/Recordly/installer/Recordly-windows-x64.exe`](file:///WORKSPACE_DIR/Skill%20AI/editor%20video%20ai/04_Video/Recordly/installer/Recordly-windows-x64.exe)
+* **Vị trí repo:** [`editor video ai/04_Video/Recordly/`](file:///E:/DIEN%20APP/Skill%20AI/editor%20video%20ai/04_Video/Recordly/)
+* **Bộ cài Windows x64 (`v1.4.0`):** [`editor video ai/04_Video/Recordly/installer/Recordly-windows-x64.exe`](file:///E:/DIEN%20APP/Skill%20AI/editor%20video%20ai/04_Video/Recordly/installer/Recordly-windows-x64.exe)
 * **Tác giả:** `webadderallorg/Recordly` (35k+ Stars, AGPL-3.0 — Bản mã nguồn mở miễn phí thay thế *Screen Studio*).
 * **Điểm mạnh:** Quay màn hình phần mềm/web kèm hiệu ứng **Auto-Zoom thông minh theo cú click chuột**, làm mượt quỹ đạo con trỏ chuột (Cursor smoothing), tự động đóng khung nền Wallpaper sang trọng, chèn Webcam bo góc và xuất MP4 nét cao cho Video Tutorial, SaaS Demo, hướng dẫn ERP/SAP B1 hoặc khóa học E-Learning.
 
 ---
 
 ### 🌟 SIÊU TÀI NGUYÊN: KHO 703 PROMPTS "CODE-AS-VIDEO" (AWESOME OPUS 5.5 VIDEOS)
-* **Vị trí cục bộ:** [`%USERPROFILE%\.gemini\config\skills\awesome-opus5-5-videos\`](file:///WORKSPACE_DIR/Skill%20AI/awesome-opus5-5-videos/)
-* **Công cụ tìm kiếm siêu tốc CLI:** [`search_prompts.py`](file:///WORKSPACE_DIR/Skill%20AI/awesome-opus5-5-videos/search_prompts.py)
+* **Vị trí cục bộ:** [`E:\DIEN APP\Skill AI\awesome-opus5-5-videos\`](file:///E:/DIEN%20APP/Skill%20AI/awesome-opus5-5-videos/)
+* **Công cụ tìm kiếm siêu tốc CLI:** [`search_prompts.py`](file:///E:/DIEN%20APP/Skill%20AI/awesome-opus5-5-videos/search_prompts.py)
 * **Kho lưu trữ:** 703 Prompts thực chiến tạo video bằng code HTML, Canvas, Three.js, SVG, GSAP, GLSL Shaders và Web Audio API. 418 video đã được remake trực tiếp trên [Skillry](https://skillry.dev/ai-videos/opus-5-5).
 * **4 Nhóm lớn:**
   1. `motion` (369 videos): SaaS Launch, UI Motion, Dribbble micro-interactions, Kinetic typography.
@@ -223,13 +223,13 @@ python -m manim -pql scene_math.py MathExplanation
 #### 📋 Cú Pháp Tra Cứu Nhanh:
 ```bash
 # Tìm prompt ra mắt sản phẩm SaaS:
-python "%USERPROFILE%\.gemini\config\skills\awesome-opus5-5-videos\search_prompts.py" -q "saas"
+python "E:\DIEN APP\Skill AI\awesome-opus5-5-videos\search_prompts.py" -q "saas"
 
 # Tìm prompt video giải thích (explainer) dùng GSAP:
-python "%USERPROFILE%\.gemini\config\skills\awesome-opus5-5-videos\search_prompts.py" -c "explainer" -t "gsap"
+python "E:\DIEN APP\Skill AI\awesome-opus5-5-videos\search_prompts.py" -c "explainer" -t "gsap"
 
 # Tìm prompt 3D Three.js:
-python "%USERPROFILE%\.gemini\config\skills\awesome-opus5-5-videos\search_prompts.py" -c "3d" -t "threejs"
+python "E:\DIEN APP\Skill AI\awesome-opus5-5-videos\search_prompts.py" -c "3d" -t "threejs"
 ```
 
 ---
@@ -265,7 +265,7 @@ Trong một hệ thống sản xuất video tự động đẳng cấp thế gi�
 ## 📌 4. BỘ SCRIPTS VÀ TÀI NGUYÊN SẴN SÀNG TRÊN MÁY
 
 Toàn bộ các file chạy tự động nằm tại thư mục:  
-📂 [`%USERPROFILE%\.gemini\config\skills\create and edit video\`](file:///WORKSPACE_DIR/Skill%20AI/create%20and%20edit%20video/)
+📂 [`E:\DIEN APP\Skill AI\create and edit video\`](file:///E:/DIEN%20APP/Skill%20AI/create%20and%20edit%20video/)
 
 1. **`HUONG_DAN_CHI_TIET_SU_DUNG.md`**: Sổ tay vận hành kỹ thuật chi tiết nhất.
 2. **`scripts/run_auto_editor.py`**: Wrapper Python gọi Auto-Editor cắt video/audio 1 chạm.

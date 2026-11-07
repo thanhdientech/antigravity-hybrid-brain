@@ -2,7 +2,7 @@
 ## Cẩm Nang Thực Chiến Vận Hành 5 Đại Engine Sản Xuất & Biên Tập Video Tự Động
 
 > **Dự án:** `create and edit video`  
-> **Skill Agent:** [`create-and-edit-video`](./skills/create-and-edit-video/SKILL.md)  
+> **Skill Agent:** [`create-and-edit-video`](file:///C:/Users/INFOASIA/.gemini/config/skills/create-and-edit-video/SKILL.md)  
 > **Hệ sinh thái:** Remotion · Motion Canvas · Manim · Auto-Editor · Editly · 20 Video Repos · REA
 
 ---
@@ -51,41 +51,41 @@ Hệ thống **`create and edit video`** được thiết kế nhằm mục đí
 Auto-Editor phân tích luồng âm thanh của file video/audio theo ngưỡng decibel (dB) và khung hình chuyển động. Nếu âm lượng giảm xuống dưới ngưỡng trong một khoảng thời gian liên tục, nó sẽ tự động loại bỏ đoạn đó và ghép các đoạn nói lại với nhau, giữ cho video luôn có nhịp độ dồn dập, giữ chân khán giả tốt nhất.
 
 #### B. Vị trí cài đặt trên máy:
-* **Binary CLI:** `<WORKSPACE_DIR>\Xây Kênh Youtube\Tool render edit Video\.venv\Scripts\auto-editor.exe`
-* **Source repo:** [`editor video ai/04_Video/auto-editor/`](file:///WORKSPACE_DIR/Skill%20AI/editor%20video%20ai/04_Video/auto-editor/)
+* **Binary CLI:** `E:\DIEN APP\Xây Kênh Youtube\Tool render edit Video\.venv\Scripts\auto-editor.exe`
+* **Source repo:** [`editor video ai/04_Video/auto-editor/`](file:///E:/DIEN%20APP/Skill%20AI/editor%20video%20ai/04_Video/auto-editor/)
 
 #### C. Lệnh CLI thực chiến:
 
 1. **Cắt cơ bản cho Video nói chuyện / Podcast:**
    ```bash
-   & "<WORKSPACE_DIR>\Xây Kênh Youtube\Tool render edit Video\.venv\Scripts\auto-editor.exe" input_video.mp4 --margin 0.2s -o output_clean.mp4
+   & "E:\DIEN APP\Xây Kênh Youtube\Tool render edit Video\.venv\Scripts\auto-editor.exe" input_video.mp4 --margin 0.2s -o output_clean.mp4
    ```
    *(Tham số `--margin 0.2s`: Giữ lại 0.2 giây trước và sau mỗi câu nói để giọng đọc nghe tự nhiên, không bị ngắt cụt).*
 
 2. **Cắt gắt cho Shorts / TikTok / Reels (Fast-Paced Style):**
    ```bash
-   & "<WORKSPACE_DIR>\Xây Kênh Youtube\Tool render edit Video\.venv\Scripts\auto-editor.exe" input_video.mp4 --edit audio:threshold=-23dB --margin 0.08s -o output_tiktok.mp4
+   & "E:\DIEN APP\Xây Kênh Youtube\Tool render edit Video\.venv\Scripts\auto-editor.exe" input_video.mp4 --edit audio:threshold=-23dB --margin 0.08s -o output_tiktok.mp4
    ```
 
 3. **Cắt chỉ riêng file Audio lồng tiếng (Voiceover MP3):**
    ```bash
-   & "<WORKSPACE_DIR>\Xây Kênh Youtube\Tool render edit Video\.venv\Scripts\auto-editor.exe" voice.mp3 --margin 0.15s -o voice_cut.wav
+   & "E:\DIEN APP\Xây Kênh Youtube\Tool render edit Video\.venv\Scripts\auto-editor.exe" voice.mp3 --margin 0.15s -o voice_cut.wav
    ```
 
 4. **Xuất dòng thời gian (Timeline) sang phần mềm dựng phim chuyên nghiệp:**
    * Xuất sang Adobe Premiere Pro:
      ```bash
-     & "<WORKSPACE_DIR>\Xây Kênh Youtube\Tool render edit Video\.venv\Scripts\auto-editor.exe" input.mp4 --export premiere -o project_timeline.xml
+     & "E:\DIEN APP\Xây Kênh Youtube\Tool render edit Video\.venv\Scripts\auto-editor.exe" input.mp4 --export premiere -o project_timeline.xml
      ```
    * Xuất sang DaVinci Resolve:
      ```bash
-     & "<WORKSPACE_DIR>\Xây Kênh Youtube\Tool render edit Video\.venv\Scripts\auto-editor.exe" input.mp4 --export resolve -o timeline.fcpxml
+     & "E:\DIEN APP\Xây Kênh Youtube\Tool render edit Video\.venv\Scripts\auto-editor.exe" input.mp4 --export resolve -o timeline.fcpxml
      ```
 
 #### D. Chạy qua Script Python tự động trong dự án:
 Sếp có thể gọi script Python có sẵn trong thư mục dự án:
 ```bash
-& "<WORKSPACE_DIR>\Xây Kênh Youtube\Tool render edit Video\.venv\Scripts\python.exe" "%USERPROFILE%\.gemini\config\skills\create and edit video\scripts\run_auto_editor.py" "duong_dan_file_video.mp4"
+& "E:\DIEN APP\Xây Kênh Youtube\Tool render edit Video\.venv\Scripts\python.exe" "E:\DIEN APP\Skill AI\create and edit video\scripts\run_auto_editor.py" "duong_dan_file_video.mp4"
 ```
 
 ---
@@ -96,7 +96,7 @@ Sếp có thể gọi script Python có sẵn trong thư mục dự án:
 Remotion cho phép sử dụng 100% công nghệ web hiện đại (React, TypeScript, CSS Grid/Flexbox, SVG, Canvas, Three.js) để tạo ra video độ phân giải cao bằng cách điều khiển từng khung hình (frame-by-frame) qua GPU Chromium.
 
 #### B. Vị trí dự án trên máy:
-* **Remotion Root:** [`<WORKSPACE_DIR>\Xây Kênh Youtube\Tool render edit Video\omniflash\video-ai-workflow\pro-text-to-video\`](file:///WORKSPACE_DIR/X%C3%A2y%20K%C3%AAnh%20Youtube/Tool%20render%20edit%20Video/omniflash/video-ai-workflow/pro-text-to-video/)
+* **Remotion Root:** [`E:\DIEN APP\Xây Kênh Youtube\Tool render edit Video\omniflash\video-ai-workflow\pro-text-to-video\`](file:///E:/DIEN%20APP/X%C3%A2y%20K%C3%AAnh%20Youtube/Tool%20render%20edit%20Video/omniflash/video-ai-workflow/pro-text-to-video/)
 * **Engine Component:** `src/UniversalExplainer16x9.tsx` (hơn 3.000 dòng code quản lý toàn bộ các mẫu thị giác chuyên sâu).
 
 #### C. Quy trình Render Remotion qua file Props JSON:
@@ -142,7 +142,7 @@ Tạo một file JSON khai báo danh sách các cảnh (scenes), sau đó gọi 
 
 #### D. Lệnh thực thi:
 ```bash
-node "<WORKSPACE_DIR>\Xây Kênh Youtube\Tool render edit Video\omniflash\video-ai-workflow\pro-text-to-video\scripts\render-universal.mjs" props.json output_raw.mp4
+node "E:\DIEN APP\Xây Kênh Youtube\Tool render edit Video\omniflash\video-ai-workflow\pro-text-to-video\scripts\render-universal.mjs" props.json output_raw.mp4
 ```
 Sau đó dùng FFmpeg ghép âm thanh và phụ đề Karaoke viền 1.6px sát đáy.
 
@@ -154,7 +154,7 @@ Sau đó dùng FFmpeg ghép âm thanh và phụ đề Karaoke viền 1.6px sát 
 Editly loại bỏ hoàn toàn việc phải mở phần mềm dựng phim GUI khi làm video hàng loạt. Sếp chỉ cần tạo 1 file `spec.json` mô tả các clip, hình ảnh, văn bản tiêu đề, hiệu ứng chuyển cảnh (transitions) và nhạc nền. Editly sẽ tự động xử lý toàn bộ qua FFmpeg và OpenGL shaders.
 
 #### B. Vị trí repo:
-* **Repo:** [`editor video ai/04_Video/editly/`](file:///WORKSPACE_DIR/Skill%20AI/editor%20video%20ai/04_Video/editly/)
+* **Repo:** [`editor video ai/04_Video/editly/`](file:///E:/DIEN%20APP/Skill%20AI/editor%20video%20ai/04_Video/editly/)
 
 #### C. Mẫu JSON Spec chuẩn chỉ (`templates/editly_spec_example.json`):
 ```json
@@ -216,11 +216,11 @@ Motion Canvas sinh ra để viết code hoạt họa toán học và khoa học 
 * Chuyển đổi trạng thái linh hoạt (state transition) và hỗ trợ biến hình SVG cực mượt.
 
 #### B. Vị trí repo:
-* **Repo:** [`editor video ai/04_Video/motion-canvas/`](file:///WORKSPACE_DIR/Skill%20AI/editor%20video%20ai/04_Video/motion-canvas/)
+* **Repo:** [`editor video ai/04_Video/motion-canvas/`](file:///E:/DIEN%20APP/Skill%20AI/editor%20video%20ai/04_Video/motion-canvas/)
 
 #### C. Lệnh khởi chạy Web Studio:
 ```bash
-cd "%USERPROFILE%\.gemini\config\skills\editor video ai\04_Video\motion-canvas"
+cd "E:\DIEN APP\Skill AI\editor video ai\04_Video\motion-canvas"
 npm install
 npm run dev
 # Mở trình duyệt tại http://localhost:9000
@@ -237,7 +237,7 @@ npm run dev
 * Tự động tính toán các đường cong Bezier và phép biến đổi afin (affine transformation).
 
 #### B. Vị trí repo:
-* **Repo:** [`editor video ai/04_Video/manim/`](file:///WORKSPACE_DIR/Skill%20AI/editor%20video%20ai/04_Video/manim/)
+* **Repo:** [`editor video ai/04_Video/manim/`](file:///E:/DIEN%20APP/Skill%20AI/editor%20video%20ai/04_Video/manim/)
 
 #### C. Mẫu kịch bản Python Manim (`templates/manim_scene_example.py`):
 ```python
@@ -269,7 +269,7 @@ class AIAlgorithmExplanation(Scene):
 
 #### D. Lệnh Render Manim sang MP4:
 ```bash
-& "<WORKSPACE_DIR>\Xây Kênh Youtube\Tool render edit Video\.venv\Scripts\python.exe" -m manim -pqh templates/manim_scene_example.py AIAlgorithmExplanation
+& "E:\DIEN APP\Xây Kênh Youtube\Tool render edit Video\.venv\Scripts\python.exe" -m manim -pqh templates/manim_scene_example.py AIAlgorithmExplanation
 ```
 *(Cờ `-pqh`: Render chất lượng cao 1080p 60fps; Cờ `-pql`: Render nhanh 480p để kiểm tra layout).*
 
@@ -277,23 +277,23 @@ class AIAlgorithmExplanation(Scene):
 
 ## 📌 PHẦN 3: BỘ SCRIPT THỰC THI SẴN SÀNG TRONG THƯ MỤC DỰ ÁN
 
-Trong thư mục [`create and edit video/scripts/`](file:///WORKSPACE_DIR/Skill%20AI/create%20and%20edit%20video/scripts/), hệ thống đã chuẩn bị sẵn các bộ script Python đóng gói để Sếp chỉ cần chạy 1 dòng lệnh:
+Trong thư mục [`create and edit video/scripts/`](file:///E:/DIEN%20APP/Skill%20AI/create%20and%20edit%20video/scripts/), hệ thống đã chuẩn bị sẵn các bộ script Python đóng gói để Sếp chỉ cần chạy 1 dòng lệnh:
 
 ### 1. Script Cắt Khoảng Lặng Tự Động (`scripts/run_auto_editor.py`):
 ```bash
-& "<WORKSPACE_DIR>\Xây Kênh Youtube\Tool render edit Video\.venv\Scripts\python.exe" "%USERPROFILE%\.gemini\config\skills\create and edit video\scripts\run_auto_editor.py" "file_can_cat.mp4" [margin_sec]
+& "E:\DIEN APP\Xây Kênh Youtube\Tool render edit Video\.venv\Scripts\python.exe" "E:\DIEN APP\Skill AI\create and edit video\scripts\run_auto_editor.py" "file_can_cat.mp4" [margin_sec]
 ```
 
 ### 2. Script Render Remotion Đa Phân Cảnh (`scripts/run_remotion_render.py`):
 ```bash
-& "<WORKSPACE_DIR>\Xây Kênh Youtube\Tool render edit Video\.venv\Scripts\python.exe" "%USERPROFILE%\.gemini\config\skills\create and edit video\scripts\run_remotion_render.py" "props.json" "output.mp4"
+& "E:\DIEN APP\Xây Kênh Youtube\Tool render edit Video\.venv\Scripts\python.exe" "E:\DIEN APP\Skill AI\create and edit video\scripts\run_remotion_render.py" "props.json" "output.mp4"
 ```
 
 ---
 
 ## 📌 PHẦN 4: LIÊN KẾT VỚI HỆ THỐNG REA (DỊCH NGƯỢC VIDEO APPS)
 
-Khi Sếp gặp một phần mềm dựng video thương mại trên thị trường có tính năng hay (như Entervi, CapCut, vMix, AutoClip,...), Sếp có thể kết hợp dự án này với công cụ **REA (Reverse Engineer Anything)** tại [`%USERPROFILE%\.gemini\config\skills\rea\`](file:///WORKSPACE_DIR/Skill%20AI/rea/) để:
+Khi Sếp gặp một phần mềm dựng video thương mại trên thị trường có tính năng hay (như Entervi, CapCut, vMix, AutoClip,...), Sếp có thể kết hợp dự án này với công cụ **REA (Reverse Engineer Anything)** tại [`E:\DIEN APP\Skill AI\rea\`](file:///E:/DIEN%20APP/Skill%20AI/rea/) để:
 1. Mổ xẻ thuật toán xử lý âm thanh/hình ảnh ngầm của đối thủ.
 2. Tái hiện lại mã nguồn sạch bằng Python/Node.js.
 3. Tích hợp trực tiếp vào hệ thống `create and edit video` để làm giàu thêm kho công nghệ của công ty.

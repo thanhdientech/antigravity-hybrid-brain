@@ -25,7 +25,7 @@ cookies.json
 # 3. Internal ERP / SAP B1 SQL Server Credentials Shield (Use config.example.json instead)
 config/skills/sql-sap-b1/config.json
 config/skills/sql-sap-b1/scripts/THONG_TIN_KET_NOI_USER_CAC_SERVER.txt
-config/skills/sql-sap-b1/scripts/*OpenVPN*.ps1
+config/skills/sql-sap-b1/scripts/*OpenVPN*
 
 # 4. Python, Node.js, Virtual Environments & Audit Run Logs
 __pycache__/

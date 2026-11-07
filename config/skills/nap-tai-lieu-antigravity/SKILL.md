@@ -40,4 +40,4 @@ group: "Kiểm Toán & Điều Phối AI"
    - Kiểm tra `health_warnings` đảm bảo `0` lỗi YAML, `0` lỗi vượt 150 ký tự, `0` lỗi đứt link `references/`, và tổng ngân sách Global nằm gọn trong trần `4,000` ký tự.
 5. **Bước 5 — Nghiệm thu Truy xuất Thực tế & Phân luồng Đồng bộ Javis (Nếu được yêu cầu):**
    - Gọi `agy_search_skills` test tối thiểu **3 câu truy vấn** (Tiếng Việt có dấu, Tiếng Việt không dấu có chữ `d/đ`, và Tiếng Anh) để xác nhận Skill/File mới lên Top 1–2 kèm đúng dòng `L_start..L_end`.
-   - Nếu đồng bộ sang Javis OS: giữ kỷ luật **cách ly tuyệt đối** giữa **Tomi (`:7777` — `brains_personal`)** và **Enterprise (`:7778` — `brains_enterprise`)**.
+   - Nếu đồng bộ sang Javis OS: giữ kỷ luật **cách ly tuyệt đối** giữa **Tomi (`:7777` — `brains_dien`)** và **InfoAsia (`:7778` — `brains_infoasia`)**.

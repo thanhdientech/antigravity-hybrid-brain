@@ -2,16 +2,16 @@
 
 ## 1. Bản Đồ Cổng Dịch Vụ & Thư Mục Mã Nguồn Gốc (Port & Workspace Topology)
 
-- **Thư mục dự án chính:** `<SHOPEE_STUDIO_WORKSPACE>`
+- **Thư mục dự án chính:** `e:\DIEN APP\Tiep thi lien ke shoppe\Tim repo tim san pham shope lam video`
 - **File khởi động 1 chạm (tự bật FlowKit + Muse + Web Studio):** `START_SHOPEE_STUDIO.bat` / `START_SHOPEE_STUDIO.ps1`
 - **Web Studio & Cổng MCP Shopee (`http://127.0.0.1:8600`):**
   - Giao diện Web UI 2 chế độ: `http://127.0.0.1:8600`
   - Cổng HTTP JSON-RPC MCP: `POST http://127.0.0.1:8600/mcp` (hoặc `/api/mcp/tools`, `/api/mcp/call`)
   - Cổng STDIO MCP: `python shopee_video_studio/mcp_shopee_studio.py`
-- **Các dịch vụ liên kết từ hệ thống `<VIDEO_RENDER_SUITE_WORKSPACE>`:**
-  - **FlowKit Server (`http://127.0.0.1:8100`, WS `:8222`):** Kết nối Chrome `Profile 7` tới Google Flow Project (mặc định `https://flow.google.com/project/<FLOW_PROJECT_ID>`). Endpoint kiểm tra kết nối: `GET http://127.0.0.1:8100/api/flow/status`.
+- **Các dịch vụ liên kết từ hệ thống `E:\DIEN APP\Xây Kênh Youtube\Tool render edit Video`:**
+  - **FlowKit Server (`http://127.0.0.1:8100`, WS `:8222`):** Kết nối Chrome `Profile 7` tới Google Flow Project (mặc định `https://flow.google.com/project/f9f9f1d0-e543-484b-8f2c-cf011e463ed7`). Endpoint kiểm tra kết nối: `GET http://127.0.0.1:8100/api/flow/status`.
   - **Muse.ai Local OpenAI-Compatible API (`http://127.0.0.1:8010/v1`):** Kết nối Chrome `Profile tomi` (`https://muse.ai`), cung cấp `/v1/chat/completions` (`muse-spark`), `/v1/images/generations` (có `reference_images`), `/v1/videos/generations` (có `reference_image`) miễn phí 100%.
-  - **OmniFlow Timeline Studio (`http://127.0.0.1:8500`):** Nơi nhận đồng bộ tự động các dự án 8 ngăn trong kênh `<TIMELINE_STUDIO_WORKSPACE>/Shopee_Affiliate/Video/<Tên_Dự_Án>`.
+  - **OmniFlow Timeline Studio (`http://127.0.0.1:8500`):** Nơi nhận đồng bộ tự động các dự án 8 ngăn trong kênh `E:\DIEN APP\Xây Kênh Youtube\Shopee Affiliate\Video\<Tên_Dự_Án>`.
 
 ## 2. Quy Trình 5 Bước Dựng Phim Câu Chuyện Có Người Mẫu Mặc Áo Thật (Storytelling Virtual Try-On Pipeline)
 
@@ -48,11 +48,11 @@
 - **Cách gọi nhanh bằng Python CLI trong Skill:**
   ```powershell
   # 1. Kiểm tra trạng thái toàn hệ thống (FlowKit :8100, Muse :8010, AI33.pro, agy CLI, Timeline :8500)
-  python "~/.gemini/config\skills\shopee-affiliate-video-studio\scripts\shopee_story_cli.py" status
+  python "C:\Users\INFOASIA\.gemini\config\skills\shopee-affiliate-video-studio\scripts\shopee_story_cli.py" status
 
   # 2. Phân tích sâu từ khóa ngách, gom cụm so sánh giá/chất lượng & chấm điểm sản phẩm thắng (0-100)
-  python "~/.gemini/config\skills\shopee-affiliate-video-studio\scripts\shopee_story_cli.py" niche-analyze --keyword "làm vườn" --limit 40
+  python "C:\Users\INFOASIA\.gemini\config\skills\shopee-affiliate-video-studio\scripts\shopee_story_cli.py" niche-analyze --keyword "làm vườn" --limit 40
 
   # 3. Dựng trọn gói 1 Phim Ngắn Câu Chuyện Có Người Mẫu Mặc Áo Thật từ link Shopee
-  python "~/.gemini/config\skills\shopee-affiliate-video-studio\scripts\shopee_story_cli.py" story-render --url "https://shopee.vn/product/377587075/45412511996" --affiliate "https://s.shopee.vn/ma_cua_ban" --scenes 3
+  python "C:\Users\INFOASIA\.gemini\config\skills\shopee-affiliate-video-studio\scripts\shopee_story_cli.py" story-render --url "https://shopee.vn/product/377587075/45412511996" --affiliate "https://s.shopee.vn/ma_cua_ban" --scenes 3
   ```

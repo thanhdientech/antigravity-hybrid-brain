@@ -72,7 +72,7 @@ sequenceDiagram
    * Voice ID tuyển chọn:
      * Nữ chính (Hạ My): **Thu Thảo** (`Jmio6r8OUeqiK3cZ3N0K`) — Giọng tâm sự, truyền cảm.
      * Nam chính (Minh Quân): **Đô Trịnh** (`CxJbDdwqY48MY3gPVYwe`) — Giọng nam thần trầm ấm.
-   * API Key sẵn có: `<YOUR_TAOGIONGAI_API_KEY>` (nạp qua biến môi trường `TAOGIONGAI_API_KEY`) (Còn hơn **66.000 credits**).
+   * API Key sẵn có: `sk_0cad91a0efae9b45054c54da0f173c8a35376a3e936b` (Còn hơn **66.000 credits**).
 2. **Nhạc Nền Độc Quyền Bản Quyền:**
    * Nền tảng: **`https://www.flowmusic.app/`** điều khiển qua Chrome CDP Port `9334` (`FlowMusic_Auto`).
    * Dòng nhạc: **Acoustic Guitar, Lofi Piano, Sáo trúc hiện đại, R&B Soul êm dịu**.

@@ -14,10 +14,10 @@ description: >
 Get a change into the account without ever spending money unexpectedly. Two units of work, auto-detected by
 the input's `kind`:
 - **`campaign-spec.json`** (from `builder-*`, `kind` absent) — creates a NEW campaign. Schema:
-  `~/.gemini/config/skills/google-ads-master/skills/google-ads-shared/references/campaign-spec.md`.
+  `C:/Users/INFOASIA/.gemini/config/skills/google-ads-master/skills/google-ads-shared/references/campaign-spec.md`.
 - **`change-set.json`** (from `optimizer`/`routine`, `kind: "change-set"`) — EDITS to live campaigns
   (negatives, geo/product exclusions, budget/target moves, pauses, extensions, signals). Schema:
-  `~/.gemini/config/skills/google-ads-master/skills/google-ads-shared/references/change-set.md`.
+  `C:/Users/INFOASIA/.gemini/config/skills/google-ads-master/skills/google-ads-shared/references/change-set.md`.
 
 **Read the JSON, never the .xlsx.** The safety invariants below apply to both paths.
 
@@ -29,7 +29,7 @@ the input's `kind`:
 - **Mode honesty**: if `api_write` is false, do NOT claim auto-create — emit an importable file + guided
   UI steps. State precisely what is automated vs manual.
 
-## Model dispatch (run cheap, decide expensive) — see `~/.gemini/config/skills/google-ads-master/skills/google-ads-shared/references/model-tier-dispatch.md`
+## Model dispatch (run cheap, decide expensive) — see `C:/Users/INFOASIA/.gemini/config/skills/google-ads-master/skills/google-ads-shared/references/model-tier-dispatch.md`
 - **Scout (`haiku`)** — STEP 1 `validate_spec.py` + `spec_to_paste.py`; STEP 2 generators (`spec_to_editor_csv.py`, `spec_to_pmax_checklist.py`); STEP 1c/2c `validate_changeset.py` + `changeset_to_actions.py`; per-URL 200 checks. These are deterministic script runs — push them all down.
 - **Judge (main session)** — STEP 3 **the approval gate** (print the plan, require an explicit "yes"), the spend-cap call, Mode B mutation oversight, and any FAIL interpretation. **Never delegate the gate.** A safety decision is judgment by definition.
 - (No Routine tier here — validation and generation are single-shot Scout runs; the only judgment is the gate.)
@@ -41,7 +41,7 @@ otherwise treat it as a `campaign-spec.json` → the build path (STEP 1/2).
 
 ## STEP 1c — Validate a change-set (dry-run gate)
 ```
-python ~/.gemini/config/skills/google-ads-master/skills/pusher/scripts/validate_changeset.py <change-set.json> \
+python C:/Users/INFOASIA/.gemini/config/skills/google-ads-master/skills/pusher/scripts/validate_changeset.py <change-set.json> \
        --context ./account-context.yaml --max-budget <cap>
 ```
 It enforces the Scaling Ladder + account guardrails: **cooldown gate** (BLOCKS a budget/target move on a
@@ -53,7 +53,7 @@ direction reversal inside the cooldown, PMax-scales-down-by-pausing (not budget 
 
 ## STEP 2c — Render the change into operator actions
 ```
-python ~/.gemini/config/skills/google-ads-master/skills/pusher/scripts/changeset_to_actions.py <change-set.json> --output-dir .
+python C:/Users/INFOASIA/.gemini/config/skills/google-ads-master/skills/pusher/scripts/changeset_to_actions.py <change-set.json> --output-dir .
 ```
 Emits `CHANGE-PLAN.md` (ordered, checkboxed, each step with its data reason + UI path + discipline note +
 $/mo), `negatives-editor.csv` (Search/Branded campaign negatives → Editor import), and `negatives-paste.txt`
@@ -64,29 +64,29 @@ budget/target/pause are mutations on existing entities — nothing is created en
 ## STEP 1 — Validate (dry-run gate)
 Run the validator:
 ```
-python ~/.gemini/config/skills/google-ads-master/skills/pusher/scripts/validate_spec.py <campaign-spec.json> --max-budget <cap>
+python C:/Users/INFOASIA/.gemini/config/skills/google-ads-master/skills/pusher/scripts/validate_spec.py <campaign-spec.json> --max-budget <cap>
 ```
 It checks: char limits + counts per asset group (**Google-accurate counting** — NFC-normalized, CJK/full-
-width = 2, trailing whitespace + hidden/non-breaking chars flagged; see `~/.gemini/config/skills/google-ads-master/skills/google-ads-shared/references/google-ads-formatting.md`),
+width = 2, trailing whitespace + hidden/non-breaking chars flagged; see `C:/Users/INFOASIA/.gemini/config/skills/google-ads-master/skills/google-ads-shared/references/google-ads-formatting.md`),
 listing-group Everything-Else nodes + no cross-AG product overlap, `status = paused`,
 `conversion_goals.scope = campaign`, `brand_exclusion` for PMax, negative match types, and
 `daily_budget ≤ cap`. **FAIL → stop and report.** On PASS, set `provenance.verified = true`.
 
 Also emit ready-to-copy keyword/negative/search-theme blocks (already wrapped `[exact]` / `"phrase"` / broad
 so the operator pastes them straight in — no re-formatting):
-`python ~/.gemini/config/skills/google-ads-master/skills/pusher/scripts/spec_to_paste.py <campaign-spec.json> --output paste.txt`
+`python C:/Users/INFOASIA/.gemini/config/skills/google-ads-master/skills/pusher/scripts/spec_to_paste.py <campaign-spec.json> --output paste.txt`
 
-## STEP 2 — Choose the push path (honest, per `~/.gemini/config/skills/google-ads-master/skills/google-ads-shared/references/campaign-spec.md` pushability matrix)
+## STEP 2 — Choose the push path (honest, per `C:/Users/INFOASIA/.gemini/config/skills/google-ads-master/skills/google-ads-shared/references/campaign-spec.md` pushability matrix)
 Decide by `api_write` AND `campaign_type`:
 
 - **Mode A — Guided build (default; `api_write: false`)**
   - **Search / Branded Search** → generate a Google Ads **Editor import CSV** (campaigns, ad groups,
     keywords + match types, RSAs, negatives) with:
-    `python ~/.gemini/config/skills/google-ads-master/skills/pusher/scripts/spec_to_editor_csv.py <campaign-spec.json> --output editor-import.csv`
+    `python C:/Users/INFOASIA/.gemini/config/skills/google-ads-master/skills/pusher/scripts/spec_to_editor_csv.py <campaign-spec.json> --output editor-import.csv`
     Then: Google Ads Editor → Account → Import → From file → REVIEW → post. Editor handles these well.
   - **Performance Max / Demand Gen** → PMax is mostly API-or-UI. Emit a **precise, ordered UI build
     checklist** with all copy/values/URLs **paste-ready** and Google-accurate char counts:
-    `python ~/.gemini/config/skills/google-ads-master/skills/pusher/scripts/spec_to_pmax_checklist.py <campaign-spec.json> --output checklist.md`
+    `python C:/Users/INFOASIA/.gemini/config/skills/google-ads-master/skills/pusher/scripts/spec_to_pmax_checklist.py <campaign-spec.json> --output checklist.md`
     It renders campaign settings, per-asset-group listing-group include/exclude steps, paste blocks
     (headlines/long/descriptions/search themes), asset-upload list, sitelinks, audience signals, and
     wrapped campaign negatives — each as a checkbox. The operator follows it click-by-click in the UI.

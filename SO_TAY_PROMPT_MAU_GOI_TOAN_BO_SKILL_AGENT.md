@@ -4,7 +4,7 @@ Tài liệu này tổng hợp các **Prompt mẫu thực chiến (Copy & Paste �
 
 > [!IMPORTANT]
 > **QUY TẮC BƯỚC 0 BẮT BUỘC KHI TẠO PROJECT MỚI HOẶC LÀM CHỨC NĂNG MỚI (`BLUEPRINT-FIRST RULE`):**
-> Mỗi khi bắt đầu **một dự án mới** (Phần mềm, Website, SEO, Marketing/Ads, Bảo mật, Server/VPS, ERP SAP B1/Beas, Học tập/Sản phẩm số) hoặc **thêm một chức năng / phân hệ lớn mới**, anh **luôn gọi [`project-blueprint-architect`](./config/skills/project-blueprint-architect/SKILL.md) ĐẦU TIÊN** (xem **Bước 0** ngay bên dưới). Agent sẽ đóng vai **CEO + CPO + Kiến trúc sư trưởng** phỏng vấn gỡ điểm mù (`Grill-Me`) và xuất ra **1 file chốt yêu cầu duy nhất (`BLUEPRINT_<TEN_DU_AN>.md`)** quy định rõ *Yêu cầu chức năng (`FR/NFR`) + Công nghệ sử dụng + Từng Phase gọi đúng Skill nào trong 94 Skills + Prompt thực thi từng Phase*. Chốt xong file này mới bắt đầu làm!
+> Mỗi khi bắt đầu **một dự án mới** (Phần mềm, Website, SEO, Marketing/Ads, Bảo mật, Server/VPS, ERP SAP B1/Beas, Học tập/Sản phẩm số) hoặc **thêm một chức năng / phân hệ lớn mới**, anh **luôn gọi [`project-blueprint-architect`](file:///C:/Users/INFOASIA/.gemini/config/skills/project-blueprint-architect/SKILL.md) ĐẦU TIÊN** (xem **Bước 0** ngay bên dưới). Agent sẽ đóng vai **CEO + CPO + Kiến trúc sư trưởng** phỏng vấn gỡ điểm mù (`Grill-Me`) và xuất ra **1 file chốt yêu cầu duy nhất (`BLUEPRINT_<TEN_DU_AN>.md`)** quy định rõ *Yêu cầu chức năng (`FR/NFR`) + Công nghệ sử dụng + Từng Phase gọi đúng Skill nào trong 94 Skills + Prompt thực thi từng Phase*. Chốt xong file này mới bắt đầu làm!
 
 > [!TIP]
 > **Công Thức Vàng 4 Thành Phần Khi Giao Việc Cho Agent:**
@@ -13,7 +13,7 @@ Tài liệu này tổng hợp các **Prompt mẫu thực chiến (Copy & Paste �
 
 ---
 
-## 🏛️ BƯỚC 0 BẮT BUỘC — Lên Kế Hoạch & Chốt 1 File Master Blueprint Trước Khi Làm — [`project-blueprint-architect`](./config/skills/project-blueprint-architect/SKILL.md)
+## 🏛️ BƯỚC 0 BẮT BUỘC — Lên Kế Hoạch & Chốt 1 File Master Blueprint Trước Khi Làm — [`project-blueprint-architect`](file:///C:/Users/INFOASIA/.gemini/config/skills/project-blueprint-architect/SKILL.md)
 
 *Hợp nhất tinh hoa từ 4 kho chuẩn quốc tế (`obra/superpowers`, `mattpocock/skills`, `github/spec-kit`, `product-on-purpose/pm-skills`). Tuyệt đối không viết code/thiết kế hấp tấp khi chưa khóa xong file `BLUEPRINT_<TEN_DU_AN>.md`.*
 
@@ -46,7 +46,7 @@ Yêu cầu: Không hỏi lại những gì code đã có; chỉ lập 1 Bảng G
 | **Làm & Kiểm toán giao diện Web App thao tác chức năng (User/Admin/ERP/SaaS), Mobile Responsive, Web Doanh Nghiệp, Landing Page CRO, WordPress, Webcake** | `webapp-app-ux-workflow`, `ui-ux-cro-auditor`, `ui-ux-design-pro-max`, `generative_ui`, `design-landingpage-vip-v2`, `wordpress-flatsome-designer`, `html-to-webcake`, `gsap-skills` | **Nhóm 1** |
 | **Thiết kế Logo SVG, Bộ nhận diện CIP, Banner Ads, Báo giá PDF A4, Hồ sơ năng lực, Tạp chí** | `brand-editorial-graphic-studio` *(5 Modules đồ họa & chế bản in ấn)* | **Nhóm 2** |
 | **Kiểm toán SEO / AI Search (GEO), Chạy Google Ads, Tối ưu CRO, Vẽ chân dung khách, Viết Content, Ebook** | `claude-seo`, `google-ads-master`, `chan-dung-khach-hang-9-phan`, `cong-thuc-viet-content-by-noti-v4`, `tao-san-pham-so-bang-ai` | **Nhóm 3** |
-| **Kiểm tra Bảo mật Web/Code/API, Dịch ngược phần mềm (REA), Kiểm toán AI, Tra nguồn, Nạp tài liệu, Check Update Git** | `security-audit`, `reverse-engineer-anything`, `ifixai-agent-auditor`, `verified-source-researcher`, `lean-teamwork`, `nap-tai-lieu-antigravity`, `prompts-chat` + 9 Builtin/SDK | **Nhóm 4** |
+| **Kiểm tra Bảo mật Web/Code/API, Tái lập phần mềm sạch (Craft Anything), Dịch ngược phần mềm (REA), Kiểm toán AI, Tra nguồn, Nạp tài liệu, Check Update Git** | `security-audit`, `craft-anything`, `reverse-engineer-anything`, `ifixai-agent-auditor`, `verified-source-researcher`, `lean-teamwork`, `nap-tai-lieu-antigravity`, `prompts-chat` + 9 Builtin/SDK | **Nhóm 4** |
 | **Quay màn hình hướng dẫn + Giọng AI `.SRT`, Làm Video Khoa học/Kỹ thuật/Vũ trụ (Manim + Remotion), Làm phim AI, Hoạt hình màu nước, Video Shopee, Xây kênh YouTube/FB** | `deeptutor-cli`, `recordly-tutorial-ai`, `lam-phim-video-master`, `video-storytelling`, `cinematic-video-prompt`, `create-and-edit-video`, `painted-animation`, `kinetic-reel`, `shopee-affiliate-video-studio`, `yt-shortcode-commander`, `antigravity-browser-controller` | **Nhóm 5** |
 | **Truy vấn SQL 4 Server / 19 DB SAP B1, Viết FMS / TransactionNotification, Giá thành Beas WIP 154** | `sql-sap-b1`, `viet-sql-sap-b1`, `sap-b1-beas` | **Nhóm 6** |
 | **Lập lá số Tử Vi Đẩu Số, Bát Tự 24 Tiết Khí, Thần Số Học Pythagoras & Xuất 10 Hồ sơ Mệnh Thư** | `tu-vi-bat-tu-than-so-hoc` | **Nhóm 7** |
@@ -56,7 +56,7 @@ Yêu cầu: Không hỏi lại những gì code đã có; chỉ lập 1 Bảng G
 
 ## Nhóm 1 — Thiết Kế Giao Diện Web App Thao Tác Chức Năng (`Operate Mode`), Mobile App, Landing Page & Hiệu Ứng
 
-### 1.0. Kiến Trúc Luồng Thao Tác UX, Logic State/URL & CRUD Cho Web App (User/Admin/ERP/SaaS) & Mobile App — [`webapp-app-ux-workflow`](./config/skills/webapp-app-ux-workflow/SKILL.md)
+### 1.0. Kiến Trúc Luồng Thao Tác UX, Logic State/URL & CRUD Cho Web App (User/Admin/ERP/SaaS) & Mobile App — [`webapp-app-ux-workflow`](file:///C:/Users/INFOASIA/.gemini/config/skills/webapp-app-ux-workflow/SKILL.md)
 *Hợp nhất tinh hoa từ 8 kho Design Engineering chuẩn quốc tế (`pbakaus/impeccable` v4.8.0 `Operate Mode`, `emilkowalski/skill` `break-ui`, `vercel-labs/web-interface-guidelines` + `agent-skills`, `carmahhawwari/ui-design-brain` 60+ SaaS Components, `ibelick/ui-skills`, `callstack` React Navigation & `flutter` GoRouter). Chuyên trị **Web App người dùng/Admin thao tác chức năng thực tế** — tách biệt hoàn toàn với web xem tin/quảng cáo thông thường.*
 
 **Mẫu 1.0A — Thiết kế & code Web App Người Dùng / Trang Quản Trị Admin / ERP / SaaS có luồng thao tác chặt chẽ:**
@@ -89,7 +89,7 @@ Dùng skill `webapp-app-ux-workflow` (quy trình `05-gia-co-edge-cases-harden-va
 
 ---
 
-### 1.1. Thiết Kế Giao Diện Phần Mềm & Web App 192 Ngành — [`ui-ux-design-pro-max`](./config/skills/ui-ux-design-pro-max/SKILL.md)
+### 1.1. Thiết Kế Giao Diện Phần Mềm & Web App 192 Ngành — [`ui-ux-design-pro-max`](file:///C:/Users/INFOASIA/.gemini/config/skills/ui-ux-design-pro-max/SKILL.md)
 *Hợp nhất 6 module: 192 quy tắc ngành nghề, 22 frameworks (`React`, `Next.js`, `HTML+Tailwind`, `Vue`, `Flutter`, `WPF`, `WinUI 3`...), kiến trúc Token 3 tầng, `shadcn/ui`, **84 hồ sơ `DESIGN.md` thương hiệu lớn** (`Stripe`, `Linear`, `Apple`, `Vercel`, `Notion`, `Shopify`, `Supabase`...) và bộ lọc chống giao diện AI rập khuôn (`no-ai-design-slop`).*
 
 **Mẫu 1A — Tạo mới giao diện Web App / Dashboard / Phần mềm ERP theo ngành:**
@@ -114,14 +114,14 @@ Dùng skill `ui-ux-design-pro-max` (module `06_anti-ai-slop-and-patterns`) kiể
 
 ---
 
-### 1.2. Vẽ Khung Giao Diện & Biểu Đồ Tương Tác Trực Tiếp — [`generative_ui`](~/.gemini/antigravity/builtin/skills/generative_ui/SKILL.md)
+### 1.2. Vẽ Khung Giao Diện & Biểu Đồ Tương Tác Trực Tiếp — [`generative_ui`](file:///C:/Users/INFOASIA/.gemini/antigravity/builtin/skills/generative_ui/SKILL.md)
 ```text
 Dùng `generative_ui` dựng một bảng mô phỏng tương tác trực quan cho [VD: Máy tính điểm hòa vốn ROAS & Lợi nhuận ròng theo ngân sách quảng cáo / Sơ đồ luồng quy trình sản xuất SAP B1 -> Beas] có thanh trượt điều chỉnh tham số thời gian thực.
 ```
 
 ---
 
-### 1.3. Thiết Kế Landing Page VIP Có Form, Đếm Ngược, VietQR & CAPI — [`design-landingpage-vip-v2`](./config/skills/design-landingpage-vip-v2/SKILL.md)
+### 1.3. Thiết Kế Landing Page VIP Có Form, Đếm Ngược, VietQR & CAPI — [`design-landingpage-vip-v2`](file:///C:/Users/INFOASIA/.gemini/config/skills/design-landingpage-vip-v2/SKILL.md)
 ```text
 Dùng skill `design-landingpage-vip-v2` thiết kế trọn bộ Landing Page chuyển đổi cao (1 file HTML hoàn chỉnh + các trang chính sách đi kèm) cho:
 - Sản phẩm / Sự kiện: [VD: Khóa học / Hội thảo / Phần mềm / Dịch vụ X].
@@ -133,7 +133,7 @@ Dùng skill `design-landingpage-vip-v2` thiết kế trọn bộ Landing Page ch
 
 ---
 
-### 1.4. Thiết Kế Website WordPress Theme Flatsome 3.x Chuẩn UX Builder — [`wordpress-flatsome-designer`](./config/skills/wordpress-flatsome-designer/SKILL.md)
+### 1.4. Thiết Kế Website WordPress Theme Flatsome 3.x Chuẩn UX Builder — [`wordpress-flatsome-designer`](file:///C:/Users/INFOASIA/.gemini/config/skills/wordpress-flatsome-designer/SKILL.md)
 ```text
 Dùng skill `wordpress-flatsome-designer` viết mã giao diện chuẩn 100% cây Shortcodes nguyên bản của Flatsome UX Builder (`[section]`, `[row]`, `[col]`, `[ux_banner]`, `[ux_products]` — không dùng HTML thuần thay thế khối chính) cho trang: [VD: Trang chủ Showroom Ô tô / Trang giới thiệu doanh nghiệp B2B].
 - Cấu trúc các khối cần có: [VD: Hero Banner full-width, 4 điểm mạnh thương hiệu, Danh mục sản phẩm nổi bật, Bảng thông số kỹ thuật, Đánh giá khách hàng, Form nhận báo giá].
@@ -142,14 +142,14 @@ Dùng skill `wordpress-flatsome-designer` viết mã giao diện chuẩn 100% c�
 
 ---
 
-### 1.5. Chuyển File HTML Sang File `.pke` Mở Trên Webcake — [`html-to-webcake`](./config/skills/html-to-webcake/SKILL.md)
+### 1.5. Chuyển File HTML Sang File `.pke` Mở Trên Webcake — [`html-to-webcake`](file:///C:/Users/INFOASIA/.gemini/config/skills/html-to-webcake/SKILL.md)
 ```text
 Dùng skill `html-to-webcake` chuyển đổi trang HTML tại `[Đường dẫn file .html]` sang file định dạng `.pke` để mở chỉnh sửa kéo-thả trực tiếp trên nền tảng Webcake. Yêu cầu giữ nguyên bố cục đa cột, màu sắc, cỡ chữ, hình ảnh và chạy checklist thẩm mỹ đầy đủ trước khi xuất file `.pke`.
 ```
 
 ---
 
-### 1.6. Lập Trình Hiệu Ứng Chuyển Động Web 60fps Bằng GSAP — [`gsap-skills`](./config/skills/gsap-skills/SKILL.md)
+### 1.6. Lập Trình Hiệu Ứng Chuyển Động Web 60fps Bằng GSAP — [`gsap-skills`](file:///C:/Users/INFOASIA/.gemini/config/skills/gsap-skills/SKILL.md)
 ```text
 Dùng skill `gsap-skills` bổ sung hiệu ứng chuyển động mượt 60fps cho trang web tại `[Đường dẫn file HTML/React]`:
 - Hiệu ứng yêu cầu: [VD: Hero text xuất hiện từng chữ bằng SplitText, cuộn trang ghim khung sản phẩm bằng ScrollTrigger, chuyển đổi bố cục thẻ mượt bằng GSAP Flip].
@@ -158,14 +158,14 @@ Dùng skill `gsap-skills` bổ sung hiệu ứng chuyển động mượt 60fps 
 
 ---
 
-### 1.7. Mở Nhanh Bảng Điều Khiển Sidecar Trên IDE — [`ui-plugin-navigation`](~/.gemini/antigravity/builtin/skills/ui-plugin-navigation/SKILL.md)
+### 1.7. Mở Nhanh Bảng Điều Khiển Sidecar Trên IDE — [`ui-plugin-navigation`](file:///C:/Users/INFOASIA/.gemini/antigravity/builtin/skills/ui-plugin-navigation/SKILL.md)
 ```text
 Dùng `ui-plugin-navigation` kiểm tra các bảng giao diện plugin (sidecar panels) đang có trên máy và hiển thị nút mở nhanh 1 chạm cho công việc [VD: Xem cấu trúc phân tử 3D / Điều khiển thiết bị Android / Xem trước Jetpack Compose].
 ```
 
 ---
 
-### 1.8. Kiểm Toán Độc Lập Logic UI Web App, Responsive Mobile, Web Doanh Nghiệp & CRO Landing Page — [`ui-ux-cro-auditor`](./config/skills/ui-ux-cro-auditor/SKILL.md)
+### 1.8. Kiểm Toán Độc Lập Logic UI Web App, Responsive Mobile, Web Doanh Nghiệp & CRO Landing Page — [`ui-ux-cro-auditor`](file:///C:/Users/INFOASIA/.gemini/config/skills/ui-ux-cro-auditor/SKILL.md)
 *Hợp nhất tinh hoa từ 6 kho kiểm toán UI/UX/CRO chuẩn quốc tế (`garrytan/gstack` 138k★ `/qa` + `/design-review`, `addyosmani/web-quality-skills` CWV + WCAG 2.2 AA, `coreyhaines31/marketingskills` 57k★ `cro` + `site-architecture`, `pbakaus/impeccable` `audit` + `critique` + `AI Slop`, `narenkatakam/ux-audit` Norman/Krug/Nielsen, `tommygeoco/ui-audit` 55-point QA) kèm công cụ CLI `audit_ui_ux_cro.py` quét tĩnh HTML/JSX/CSS + lái Headless Chrome/Edge qua CDP đo thực tế trên 3 màn hình (`375x812`, `768x1024`, `1440x900`).*
 
 **Mẫu 1.8A — Kiểm toán Logic UI Web App (User / Admin / SaaS / ERP) & Responsive Mobile 3-Viewport (`--live --screenshots`):**
@@ -194,7 +194,7 @@ Dùng skill `ui-ux-cro-auditor` (`--surface landing --live`) kiểm toán chuy�
 
 ## Nhóm 2 — Thiết Kế Logo SVG, Bộ Nhận Diện CIP, Banner Ads, Báo Giá & Tạp Chí
 
-Toàn bộ nhóm này được điều phối bởi Siêu Hub **[`brand-editorial-graphic-studio`](./config/skills/brand-editorial-graphic-studio/SKILL.md)** (5 Modules chuyên sâu + trình kết xuất PDF A4 vector & PNG nét cao).
+Toàn bộ nhóm này được điều phối bởi Siêu Hub **[`brand-editorial-graphic-studio`](file:///C:/Users/INFOASIA/.gemini/config/skills/brand-editorial-graphic-studio/SKILL.md)** (5 Modules chuyên sâu + trình kết xuất PDF A4 vector & PNG nét cao).
 
 ### 2.1. Thiết Kế Logo Vector SVG & Bộ Nhận Diện Thương Hiệu CIP 50+ Ấn Phẩm
 ```text
@@ -242,7 +242,7 @@ Dùng skill `brand-editorial-graphic-studio` (module `04_magazine-editorial-typs
 
 ## Nhóm 3 — Kiểm Toán SEO / AI Search (GEO), Google Ads, Copywriting & Marketing
 
-### 3.1. Kiểm Toán SEO Toàn Diện & Tối Ưu Tìm Kiếm AI (GEO) — [`claude-seo`](./config/skills/claude-seo/SKILL.md)
+### 3.1. Kiểm Toán SEO Toàn Diện & Tối Ưu Tìm Kiếm AI (GEO) — [`claude-seo`](file:///C:/Users/INFOASIA/.gemini/config/skills/claude-seo/SKILL.md)
 *Hỗ trợ đầy đủ 19 chế độ `/seo ...`: Technical SEO, Core Web Vitals (INP), E-E-A-T, Schema JSON-LD, AI Overviews / ChatGPT / Perplexity (`llms.txt`), Topic Cluster, Local SEO và E-commerce SEO.*
 
 **Mẫu 3.1A — Kiểm toán SEO tổng thể Website hoặc 1 Trang đích:**
@@ -265,7 +265,7 @@ Dùng skill `claude-seo` chạy `/seo cluster` và `/seo content-brief` cho ch�
 
 ---
 
-### 3.2. Thiết Lập, Kiểm Toán Rò Rỉ Ngân Sách A1–A14 & Tối Ưu Google Ads / CRO — [`google-ads-master`](./config/skills/google-ads-master/SKILL.md)
+### 3.2. Thiết Lập, Kiểm Toán Rò Rỉ Ngân Sách A1–A14 & Tối Ưu Google Ads / CRO — [`google-ads-master`](file:///C:/Users/INFOASIA/.gemini/config/skills/google-ads-master/SKILL.md)
 *Siêu Hub 12 bộ skill điều phối trọn vòng đời Google Ads thực chiến & kiểm toán tối ưu chuyển đổi trang đích (CRO).*
 
 **Mẫu 3.2A — Kiểm toán tài khoản Google Ads đang chạy & tìm điểm rò rỉ tiền (A1–A14):**
@@ -289,7 +289,7 @@ Dùng skill `google-ads-master` (bộ `toi-uu-chuyen-doi-web`) kiểm toán tỷ
 
 ---
 
-### 3.3. Vẽ Chân Dung Khách Hàng Thực Chiến 9 Phần — [`chan-dung-khach-hang-9-phan`](./config/skills/chan-dung-khach-hang-9-phan/SKILL.md)
+### 3.3. Vẽ Chân Dung Khách Hàng Thực Chiến 9 Phần — [`chan-dung-khach-hang-9-phan`](file:///C:/Users/INFOASIA/.gemini/config/skills/chan-dung-khach-hang-9-phan/SKILL.md)
 ```text
 Dùng skill `chan-dung-khach-hang-9-phan` phân tích sâu chân dung khách hàng mục tiêu cho sản phẩm: `[Tên sản phẩm/dịch vụ & mức giá]`.
 - Thông tin khách hàng thực tế anh đang có: `[Mô tả tệp khách hiện tại, độ tuổi, nghề nghiệp, lý do họ hay mua hoặc hay từ chối, hoặc đường dẫn file ghi chú khảo sát]`.
@@ -298,7 +298,7 @@ Hãy lập đầy đủ 9 phần theo đúng thứ tự chuẩn (Chốt phân kh
 
 ---
 
-### 3.4. Viết Content Bán Hàng & Quảng Cáo Theo 14 Công Thức — [`cong-thuc-viet-content-by-noti-v4`](./config/plugins/content-writing-by-noti-plugin/skills/cong-thuc-viet-content-by-noti-v4/SKILL.md)
+### 3.4. Viết Content Bán Hàng & Quảng Cáo Theo 14 Công Thức — [`cong-thuc-viet-content-by-noti-v4`](file:///C:/Users/INFOASIA/.gemini/config/plugins/content-writing-by-noti-plugin/skills/cong-thuc-viet-content-by-noti-v4/SKILL.md)
 ```text
 Dùng skill `cong-thuc-viet-content-by-noti-v4` viết bài quảng cáo chuyển đổi cao theo thông tin sau:
 - Sản phẩm / Dịch vụ: `[Tên SP/DV]` | Ngành nghề: `[VD: B2B SaaS / Mỹ phẩm / Thời trang / F&B / Khóa học / BĐS / Sức khỏe / Tài chính / TMĐT]`.
@@ -312,7 +312,7 @@ Yêu cầu kèm thêm 5 biến thể câu mở đầu (Hook Variations) để te
 
 ---
 
-### 3.5. Đóng Gói Kinh Nghiệm Thật Thành Sản Phẩm Số (Ebook / Workbook / Template) — [`tao-san-pham-so-bang-ai`](./config/skills/tao-san-pham-so-bang-ai/SKILL.md)
+### 3.5. Đóng Gói Kinh Nghiệm Thật Thành Sản Phẩm Số (Ebook / Workbook / Template) — [`tao-san-pham-so-bang-ai`](file:///C:/Users/INFOASIA/.gemini/config/skills/tao-san-pham-so-bang-ai/SKILL.md)
 ```text
 Dùng skill `tao-san-pham-so-bang-ai` đồng hành cùng anh tạo một sản phẩm số `[Ebook / Workbook / Bộ Template thực hành]` từ kinh nghiệm thực tế của anh trong lĩnh vực `[VD: Triển khai ERP cho nhà máy sản xuất / Quản trị tài chính cá nhân]`.
 Hiện tại anh đang ở giai đoạn: `[Chưa chốt ngách / Đã có chủ đề và muốn lên khung tam giác 3 phần Tư duy - Chiến lược - Thực thi]`. Hãy hỏi anh để khai thác câu chuyện thật (tuyệt đối không tự bịa câu chuyện cá nhân) và viết cuốn chiếu từng chương một.
@@ -322,7 +322,7 @@ Hiện tại anh đang ở giai đoạn: `[Chưa chốt ngách / Đã có chủ 
 
 ## Nhóm 4 — Bảo Mật, Dịch Ngược Phần Mềm (REA), Kiểm Toán AI, Chống Ảo Giác & Quản Trị Hệ Thống
 
-### 4.1. Rà Soát Bảo Mật & Kiểm Thử Lỗ Hổng Chuyên Sâu — [`security-audit`](./config/skills/security-audit/SKILL.md)
+### 4.1. Rà Soát Bảo Mật & Kiểm Thử Lỗ Hổng Chuyên Sâu — [`security-audit`](file:///C:/Users/INFOASIA/.gemini/config/skills/security-audit/SKILL.md)
 *Hỗ trợ 2 chế độ rõ ràng: **Guidance Mode** (rà soát nhanh 1 file/API không sinh thư mục phụ) và **Full Audit Mode** (kiểm toán toàn diện 6 pha độc lập toàn bộ kho mã nguồn, xuất báo cáo lỗ hổng có bằng chứng dòng code & bản vá nhỏ nhất).*
 
 **Mẫu 4.1A — Rà soát nhanh lỗ hổng cho 1 Module / API / Lộ Khóa Bí Mật (`Guidance Mode`):**
@@ -332,14 +332,14 @@ Dùng skill `security-audit` ở chế độ `Guidance mode` kiểm tra bảo m�
 
 **Mẫu 4.1B — Kiểm toán bảo mật toàn diện 6 pha cho toàn bộ Dự án (`Full Audit Mode`):**
 ```text
-Dùng skill `security-audit` chạy chế độ `Full audit mode` toàn diện cho kho mã nguồn tại `[Đường dẫn gốc của Repository]` và lưu báo cáo thẩm định an toàn ra thư mục ngoài dự án tại `[VD: ~/Security_Audits/<Ten_Repo>/run-1]`. Yêu cầu tuân thủ nghiêm ngặt quy tắc chỉ đọc trên mã nguồn gốc, xác minh từng lỗ hổng có bằng chứng thực tế và xếp hạng mức độ ưu tiên khắc phục.
+Dùng skill `security-audit` chạy chế độ `Full audit mode` toàn diện cho kho mã nguồn tại `[Đường dẫn gốc của Repository]` và lưu báo cáo thẩm định an toàn ra thư mục ngoài dự án tại `[VD: E:\Security_Audits\<Ten_Repo>\run-1]`. Yêu cầu tuân thủ nghiêm ngặt quy tắc chỉ đọc trên mã nguồn gốc, xác minh từng lỗ hổng có bằng chứng thực tế và xếp hạng mức độ ưu tiên khắc phục.
 ```
 
 ---
 
-### 4.1C. Dịch Ngược & Bóc Tách Phần Mềm Đóng Gói / Nhị Phân (`.exe`, Electron `.asar`, `.NET`, `APK`, `PyInstaller`, `API`) — [`reverse-engineer-anything`](./config/skills/reverse-engineer-anything/SKILL.md)
+### 4.1C. Dịch Ngược & Bóc Tách Phần Mềm Đóng Gói / Nhị Phân (`.exe`, Electron `.asar`, `.NET`, `APK`, `PyInstaller`, `API`) — [`reverse-engineer-anything`](file:///C:/Users/INFOASIA/.gemini/config/skills/reverse-engineer-anything/SKILL.md)
 ```text
-Dùng skill `reverse-engineer-anything` (REA CLI / MCP qua `npx -y rea-agents@latest`) phân tích và bóc tách tệp đóng gói tại `[Đường dẫn file .exe / app.asar / .dll / .apk]`:
+Dùng skill `reverse-engineer-anything` (REA CLI / MCP tại `E:\DIEN APP\Skill AI\rea`) phân tích và bóc tách tệp đóng gói tại `[Đường dẫn file .exe / app.asar / .dll / .apk]`:
 1. Nhận diện chính xác kiến trúc đóng gói (Electron ASAR, .NET Managed, PyInstaller, Native C++/Rust hay NSIS Installer).
 2. Bóc tách lớp ứng dụng cốt lõi (bỏ qua thư viện bên thứ 3), trích xuất sơ đồ thuật toán / cấu trúc API endpoint liên quan đến tính năng `[Tên tính năng muốn nghiên cứu]`.
 3. Tái tạo lại tính năng đó bằng mã nguồn sạch 100% (`Clean-Room Rewrite`) viết bằng `[Python / TypeScript]` lưu tại `[Thư mục dự án mới]`.
@@ -347,14 +347,27 @@ Dùng skill `reverse-engineer-anything` (REA CLI / MCP qua `npx -y rea-agents@la
 
 ---
 
-### 4.2. Kiểm Toán Độc Lập Chất Lượng AI Theo 5 Trụ Cột — [`ifixai-agent-auditor`](./config/skills/ifixai-agent-auditor/SKILL.md)
+### 4.1D. Nghiên Cứu & Tái Lập Phần Mềm / Website Phòng Sạch 4 Bước — [`craft-anything`](file:///C:/Users/INFOASIA/.gemini/config/skills/craft-anything/SKILL.md)
+```text
+Dùng skill `craft-anything` (Rust Engine 302 tools, CLI/MCP tại `E:\DIEN APP\Skill AI\craft-anything\bin\craft-anything-cli.exe` hoặc Desktop GUI `craft-anything.exe`) để nghiên cứu và tái lập sản phẩm tại `[URL website / đường dẫn file app .exe / apk / thư mục game]`:
+1. Chế độ thực thi: Chọn `[Clean room (mặc định - không đọc trộm code gốc) / Deep mode (soi sâu decompile/Ghidra)]`.
+2. Quy trình 4 bước:
+   - Bước 1 (Tìm hiểu): Đo đạc layout ở 3 độ phân giải (Mobile, Tablet, Desktop), ghi nhận cấu trúc DOM, màu sắc, font chữ và các luồng tương tác UX chính.
+   - Bước 2 (Xây dựng): Dựng một dự án mã nguồn sạch mới bằng `[React + Tailwind / Next.js / Rust / Godot / Vue]` tại thư mục `[Đường dẫn dự án mới]`.
+   - Bước 3 (Kiểm tra): Tự động render, đối chiếu ảnh chụp màn hình bản dựng mới với bản gốc để đo độ lệch.
+   - Bước 4 (Hoàn thiện): Tinh chỉnh CSS/logic cho đến khi đạt độ tương đồng cao nhất mà không sao chép trái phép bất kỳ mã nguồn độc quyền nào.
+```
+
+---
+
+### 4.2. Kiểm Toán Độc Lập Chất Lượng AI Theo 5 Trụ Cột — [`ifixai-agent-auditor`](file:///C:/Users/INFOASIA/.gemini/config/skills/ifixai-agent-auditor/SKILL.md)
 ```text
 Dùng skill `ifixai-agent-auditor` chạy kiểm toán độc lập (cấm tự chấm điểm) cho sản phẩm đầu ra tại `[Đường dẫn file báo cáo / kịch bản CSV / mã nguồn]` đối chiếu với tài liệu gốc tại `[Đường dẫn nguồn gốc]`. Chấm điểm đầy đủ 5 trụ cột (P1 Bịa đặt Fabrication, P2 Đánh lừa Deception, P3 Thao túng Manipulation, P4 Thiếu nhất quán Unpredictability, P5 Mập mờ nguồn Opacity) và xuất Bảng điểm Scorecard hạng A–F.
 ```
 
 ---
 
-### 4.3. Tra Cứu & Kiểm Chứng Nguồn Sự Thật Cấp 1 Chống Ảo Giác — [`verified-source-researcher`](./config/skills/verified-source-researcher/SKILL.md)
+### 4.3. Tra Cứu & Kiểm Chứng Nguồn Sự Thật Cấp 1 Chống Ảo Giác — [`verified-source-researcher`](file:///C:/Users/INFOASIA/.gemini/config/skills/verified-source-researcher/SKILL.md)
 ```text
 Dùng skill `verified-source-researcher` kiểm chứng độc lập toàn bộ số liệu, trích dẫn, văn bản pháp luật và đường link trong tài liệu `[Đường dẫn file .md/.docx]` (hoặc tra cứu chủ đề `[Chủ đề cần nghiên cứu]`). Yêu cầu:
 - Kiểm tra trạng thái sống `HTTP 200`, mã `DOI / PMID / ISBN` thật bằng CLI của skill.
@@ -363,26 +376,26 @@ Dùng skill `verified-source-researcher` kiểm chứng độc lập toàn bộ 
 
 ---
 
-### 4.4. Điều Phối Đa Tác Tử Tinh Gọn Cho Dự Án Lớn — [`lean-teamwork`](./config/skills/lean-teamwork/SKILL.md)
+### 4.4. Điều Phối Đa Tác Tử Tinh Gọn Cho Dự Án Lớn — [`lean-teamwork`](file:///C:/Users/INFOASIA/.gemini/config/skills/lean-teamwork/SKILL.md)
 ```text
 Dùng skill `lean-teamwork` (chế độ `Multi-Agent Lean Mode`) lập kế hoạch chia nhỏ dự án `[Tên dự án lớn đa module]` tại `[Đường dẫn workspace]` thành các thẻ việc nguyên tử (Atomic Task Cards). Thực thi cuốn chiếu từng hạng mục nhỏ, chạy kiểm thử độc lập đạt `Exit code 0` xong trọn vẹn phần 1 mới chuyển sang phần 2.
 ```
 
 ---
 
-### 4.5. Nạp Tài Liệu Mới, Tạo Skill & Kiểm Tra Cập Nhật Từ Git Gốc — [`nap-tai-lieu-antigravity`](./config/skills/nap-tai-lieu-antigravity/SKILL.md)
+### 4.5. Nạp Tài Liệu Mới, Tạo Skill & Kiểm Tra Cập Nhật Từ Git Gốc — [`nap-tai-lieu-antigravity`](file:///C:/Users/INFOASIA/.gemini/config/skills/nap-tai-lieu-antigravity/SKILL.md)
 ```text
 Dùng skill `nap-tai-lieu-antigravity` nạp toàn bộ tài liệu chuyên môn mới trong thư mục `[Đường dẫn chứa file PDF/DOCX/XLSX/SQL]` để tạo mới (hoặc nâng cấp) skill `[Tên skill muốn tạo, VD: ke-toan-gia-thanh-tt99]` ở tầng `[Global (dùng mọi dự án) HOẶC On-Demand (chỉ nạp khi gọi)]`. Yêu cầu tuân thủ đủ 5 bước chuẩn Bộ Não Lai Javis: băm nhỏ vào `references/`, giữ `SKILL.md` tinh gọn kèm khối `JAVIS_TRIGGER_ARCHIVE` và chạy đồng bộ kiểm định `agy_sync_and_audit_skills` đạt 0 lỗi.
 ```
 
 **Mẫu kiểm tra nhanh xem các Skill trên máy có bản cập nhật mới từ GitHub gốc không:**
 ```text
-Chạy công cụ `~/.gemini/config\scripts\check_skill_git_updates.py --changelog` để kiểm tra xem các kho Skill trên máy có bản cập nhật mới nào từ GitHub gốc không, liệt kê các thay đổi mới và chỉ nâng cấp an toàn vào `references/` & `scripts/` (giữ nguyên Frontmatter Tiếng Việt và khối `JAVIS_TRIGGER_ARCHIVE` của `SKILL.md`).
+Chạy công cụ `C:\Users\INFOASIA\.gemini\config\scripts\check_skill_git_updates.py --changelog` để kiểm tra xem các kho Skill trên máy có bản cập nhật mới nào từ GitHub gốc không, liệt kê các thay đổi mới và chỉ nâng cấp an toàn vào `references/` & `scripts/` (giữ nguyên Frontmatter Tiếng Việt và khối `JAVIS_TRIGGER_ARCHIVE` của `SKILL.md`).
 ```
 
 ---
 
-### 4.6. Săn & Tối Ưu System Prompt Từ Kho 2,627 Mẫu Quốc Tế — [`prompts-chat`](./config/skills/prompts-chat/SKILL.md)
+### 4.6. Săn & Tối Ưu System Prompt Từ Kho 2,627 Mẫu Quốc Tế — [`prompts-chat`](file:///C:/Users/INFOASIA/.gemini/config/skills/prompts-chat/SKILL.md)
 ```text
 Dùng skill `prompts-chat` tra cứu trong kho 2,627 mẫu Awesome Prompts và 31 chương sách kỹ thuật Prompt Engineering về chủ đề `[VD: Kiến trúc sư giải pháp SQL / Biên kịch phim tài liệu / Kiểm toán tài chính]`, sau đó nâng cấp câu lệnh thô sau của anh thành một System Prompt có cấu trúc chặt chẽ, chống ảo giác và ép định dạng đầu ra chuẩn: "[Dán câu prompt thô của anh]".
 ```
@@ -393,20 +406,20 @@ Dùng skill `prompts-chat` tra cứu trong kho 2,627 mẫu Awesome Prompts và 3
 
 | Tên Skill | Đường Dẫn Gốc | Mẫu Câu Lệnh Gọi Chuẩn |
 | :--- | :--- | :--- |
-| **`google-antigravity-sdk`** | [`SKILL.md`](./config/plugins/google-antigravity-sdk/SKILL.md) | ``Dùng `google-antigravity-sdk` thiết kế và viết code hệ thống AI Agent tự hành bằng Python SDK cho bài toán [Mô tả tác vụ], có xử lý công cụ và kiểm soát lỗi.`` |
-| **`automation`** | [`SKILL.md`](~/.gemini/antigravity/builtin/skills/automation/SKILL.md) | ``Dùng skill `automation` thiết lập tác vụ tự động chạy định kỳ vào lúc [VD: 08:00 sáng thứ Hai hàng tuần] để thực hiện công việc: [Mô tả việc cần tự động hóa].`` |
-| **`workflow-skill-creator`** | [`SKILL.md`](./config/plugins/science/skills/workflow_skill_creator/SKILL.md) | ``Dùng `workflow-skill-creator` đóng gói toàn bộ quy trình các bước anh em mình vừa thực hiện thành công trong phiên làm việc này thành một Skill tái sử dụng tên là `[ten-skill-moi]`.`` |
-| **`agy-customizations`** | [`SKILL.md`](~/.gemini/antigravity/builtin/skills/agy-customizations/SKILL.md) | ``Dùng `agy-customizations` hướng dẫn và cấu hình [Rule / Hook / MCP Server] mới cho Antigravity để tự động kiểm tra [Điều kiện] mỗi khi Agent sửa code.`` |
-| **`plugin`** | [`SKILL.md`](~/.gemini/antigravity/builtin/skills/plugin/SKILL.md) | ``Dùng skill `plugin` đóng gói bộ Skill, MCP Server và Rules tại `[Đường dẫn]` thành một gói Plugin độc lập có thể bật/tắt gọn gàng trên Antigravity.`` |
-| **`antigravity-guide`** | [`SKILL.md`](~/.gemini/antigravity/builtin/skills/antigravity_guide/SKILL.md) | ``Dùng `antigravity-guide` tra cứu cú pháp chuẩn của `agy` CLI và các phím tắt / tính năng mới trên Antigravity 2.0 cho tác vụ `[Tên tính năng]`.`` |
-| **`migrate-workflows`** | [`SKILL.md`](~/.gemini/antigravity/builtin/skills/migrate-workflows/SKILL.md) | ``Dùng `migrate-workflows` quét các file workflow cũ trong dự án `[Đường dẫn]` và chuyển đổi an toàn sang chuẩn `SKILL.md` mới.`` |
-| **`run-workflow` & `permissioned-github`** | [`run-workflow`](~/.gemini/antigravity/builtin/skills/run-workflow/SKILL.md) / [`github`](~/.gemini/antigravity/builtin/skills/permissioned-github/SKILL.md) | ``Viết kịch bản điều phối đa bước chuẩn `run-workflow` cho tác vụ `[Tên quy trình]` (hoặc thao tác GitHub PR/Issue an toàn có xin quyền xác nhận qua `permissioned-github`).`` |
+| **`google-antigravity-sdk`** | [`SKILL.md`](file:///C:/Users/INFOASIA/.gemini/config/plugins/google-antigravity-sdk/SKILL.md) | ``Dùng `google-antigravity-sdk` thiết kế và viết code hệ thống AI Agent tự hành bằng Python SDK cho bài toán [Mô tả tác vụ], có xử lý công cụ và kiểm soát lỗi.`` |
+| **`automation`** | [`SKILL.md`](file:///C:/Users/INFOASIA/.gemini/antigravity/builtin/skills/automation/SKILL.md) | ``Dùng skill `automation` thiết lập tác vụ tự động chạy định kỳ vào lúc [VD: 08:00 sáng thứ Hai hàng tuần] để thực hiện công việc: [Mô tả việc cần tự động hóa].`` |
+| **`workflow-skill-creator`** | [`SKILL.md`](file:///C:/Users/INFOASIA/.gemini/config/plugins/science/skills/workflow_skill_creator/SKILL.md) | ``Dùng `workflow-skill-creator` đóng gói toàn bộ quy trình các bước anh em mình vừa thực hiện thành công trong phiên làm việc này thành một Skill tái sử dụng tên là `[ten-skill-moi]`.`` |
+| **`agy-customizations`** | [`SKILL.md`](file:///C:/Users/INFOASIA/.gemini/antigravity/builtin/skills/agy-customizations/SKILL.md) | ``Dùng `agy-customizations` hướng dẫn và cấu hình [Rule / Hook / MCP Server] mới cho Antigravity để tự động kiểm tra [Điều kiện] mỗi khi Agent sửa code.`` |
+| **`plugin`** | [`SKILL.md`](file:///C:/Users/INFOASIA/.gemini/antigravity/builtin/skills/plugin/SKILL.md) | ``Dùng skill `plugin` đóng gói bộ Skill, MCP Server và Rules tại `[Đường dẫn]` thành một gói Plugin độc lập có thể bật/tắt gọn gàng trên Antigravity.`` |
+| **`antigravity-guide`** | [`SKILL.md`](file:///C:/Users/INFOASIA/.gemini/antigravity/builtin/skills/antigravity_guide/SKILL.md) | ``Dùng `antigravity-guide` tra cứu cú pháp chuẩn của `agy` CLI và các phím tắt / tính năng mới trên Antigravity 2.0 cho tác vụ `[Tên tính năng]`.`` |
+| **`migrate-workflows`** | [`SKILL.md`](file:///C:/Users/INFOASIA/.gemini/antigravity/builtin/skills/migrate-workflows/SKILL.md) | ``Dùng `migrate-workflows` quét các file workflow cũ trong dự án `[Đường dẫn]` và chuyển đổi an toàn sang chuẩn `SKILL.md` mới.`` |
+| **`run-workflow` & `permissioned-github`** | [`run-workflow`](file:///C:/Users/INFOASIA/.gemini/antigravity/builtin/skills/run-workflow/SKILL.md) / [`github`](file:///C:/Users/INFOASIA/.gemini/antigravity/builtin/skills/permissioned-github/SKILL.md) | ``Viết kịch bản điều phối đa bước chuẩn `run-workflow` cho tác vụ `[Tên quy trình]` (hoặc thao tác GitHub PR/Issue an toàn có xin quyền xác nhận qua `permissioned-github`).`` |
 
 ---
 
 ## Nhóm 5 — Quay Màn Hình Hướng Dẫn, Làm Phim AI, Video Shopee & Xây Kênh Tự Động
 
-### 5.1. Quay Màn Hình Hướng Dẫn Phần Mềm + Giọng Đọc AI Giải Thích & Phụ Đề `.SRT` — [`recordly-tutorial-ai`](./config/skills/recordly-tutorial-ai/SKILL.md)
+### 5.1. Quay Màn Hình Hướng Dẫn Phần Mềm + Giọng Đọc AI Giải Thích & Phụ Đề `.SRT` — [`recordly-tutorial-ai`](file:///C:/Users/INFOASIA/.gemini/config/skills/recordly-tutorial-ai/SKILL.md)
 ```text
 Dùng skill `recordly-tutorial-ai` xử lý video quay thao tác màn hình tại `[Đường dẫn file video .mp4/.mkv đã quay bằng Recordly — hoặc yêu cầu quay cửa sổ phần mềm X qua wgc-capture.exe]`:
 - Chức năng đang hướng dẫn trong video: `[VD: Cách lập Lệnh sản xuất và xuất kho NVL trên SAP B1]`.
@@ -416,7 +429,7 @@ Yêu cầu: Tự động biên soạn lời thuyết minh giải thích khớp t
 
 ---
 
-### 5.2. Điều Phối Tổng Lực 13 Bộ Skill Làm Phim & Đồ Họa Động — [`lam-phim-video-master`](./config/skills/lam-phim-video-master/SKILL.md)
+### 5.2. Điều Phối Tổng Lực 13 Bộ Skill Làm Phim & Đồ Họa Động — [`lam-phim-video-master`](file:///C:/Users/INFOASIA/.gemini/config/skills/lam-phim-video-master/SKILL.md)
 ```text
 Dùng Siêu Hub `lam-phim-video-master` sản xuất trọn gói video chủ đề: `[Tên chủ đề video]`
 - Thời lượng dự kiến: `[VD: 3 phút]` | Khung hình: `[16:9 ngang YouTube HOẶC 9:16 dọc Shorts/TikTok]`.
@@ -426,7 +439,7 @@ Hãy điều phối cuốn chiếu đủ 5 bước: Biên kịch -> Khóa tạo 
 
 ---
 
-### 5.3. Biên Kịch Video Đa Thể Loại Theo 20+ Công Thức Quốc Tế — [`video-storytelling`](./config/skills/video-storytelling/SKILL.md)
+### 5.3. Biên Kịch Video Đa Thể Loại Theo 20+ Công Thức Quốc Tế — [`video-storytelling`](file:///C:/Users/INFOASIA/.gemini/config/skills/video-storytelling/SKILL.md)
 ```text
 Dùng skill `video-storytelling` viết kịch bản chi tiết và bảng phân cảnh (Storyboard) cho video:
 - Chủ đề: `[Nội dung chính]` | Đối tượng khán giả: `[Tệp người xem]`.
@@ -438,14 +451,14 @@ Yêu cầu lời bình (`voiceover.txt`) sạch 100% ký hiệu kỹ thuật đ�
 
 ---
 
-### 5.4. Biên Soạn Prompt Ảnh & Video Điện Ảnh AI Khóa Nhân Vật — [`cinematic-video-prompt`](./config/skills/cinematic-video-prompt/SKILL.md)
+### 5.4. Biên Soạn Prompt Ảnh & Video Điện Ảnh AI Khóa Nhân Vật — [`cinematic-video-prompt`](file:///C:/Users/INFOASIA/.gemini/config/skills/cinematic-video-prompt/SKILL.md)
 ```text
 Dùng skill `cinematic-video-prompt` thiết kế hồ sơ Khóa Gen Nhân Vật 6 Lớp (`6-Layer Character DNA`) cho `[Số lượng]` nhân vật chính và viết trọn bộ Prompt Ảnh + Prompt Chuyển động Video cho bảng kịch bản tại `[Đường dẫn kịch bản]` (Engine đích: `[Veo 3 / Seedance 2.0 / Kling]`, tỷ lệ `[16:9 hoặc 9:16]`). Yêu cầu chỉ định rõ cỡ cảnh, góc máy, chuyển động camera, ánh sáng, màu phim và tư thế giải phẫu 3D 5 tầng để nhân vật không bị lệch mặt hay đổi trang phục giữa các cảnh.
 ```
 
 ---
 
-### 5.5. Dựng & Biên Tập Video Bằng Code (5 Engine: Remotion, Auto-Editor, Editly, Motion Canvas, Manim) — [`create-and-edit-video`](./config/skills/create-and-edit-video/SKILL.md)
+### 5.5. Dựng & Biên Tập Video Bằng Code (5 Engine: Remotion, Auto-Editor, Editly, Motion Canvas, Manim) — [`create-and-edit-video`](file:///C:/Users/INFOASIA/.gemini/config/skills/create-and-edit-video/SKILL.md)
 ```text
 Dùng skill `create-and-edit-video` thực hiện tác vụ:
 - [Trường hợp 1 - Cắt khoảng lặng tự động]: Dùng Engine `Auto-Editor` cắt bỏ toàn bộ đoạn ngập ngừng / khoảng lặng thừa trong video thu âm tại `[Đường dẫn file .mp4]` nhưng vẫn giữ nhịp thở tự nhiên, xuất ra `[File đích.mp4]`.
@@ -454,21 +467,21 @@ Dùng skill `create-and-edit-video` thực hiện tác vụ:
 
 ---
 
-### 5.6. Sản Xuất Phim Hoạt Hình Màu Nước Vẽ Tay Bằng Code — [`painted-animation`](./config/skills/painted-animation/SKILL.md)
+### 5.6. Sản Xuất Phim Hoạt Hình Màu Nước Vẽ Tay Bằng Code — [`painted-animation`](file:///C:/Users/INFOASIA/.gemini/config/skills/painted-animation/SKILL.md)
 ```text
 Dùng skill `painted-animation` (`p5.js` + `p5.brush`) sáng tác và render một bộ phim hoạt hình màu nước & mực tàu vẽ tay dài `[VD: 45 giây]`, khung hình `[16:9 hoặc 9:16]` kể câu chuyện `[Mô tả cốt truyện / bài thơ / lời bài hát tại đường dẫn ...]`. Yêu cầu lập Storyboard từng cảnh trước khi code, kiểm tra trực quan từng khung hình (frame) nhiều lần và xuất file `.MP4` sắc nét đồng bộ âm thanh.
 ```
 
 ---
 
-### 5.7. Dựng Video Intro / Showreel Chữ Chuyển Động & 3D WebGL — [`kinetic-reel`](./config/skills/kinetic-reel/SKILL.md)
+### 5.7. Dựng Video Intro / Showreel Chữ Chuyển Động & 3D WebGL — [`kinetic-reel`](file:///C:/Users/INFOASIA/.gemini/config/skills/kinetic-reel/SKILL.md)
 ```text
 Dùng skill `kinetic-reel` dựng một video Showreel / Intro thương hiệu kiểu Kinetic Typography kết hợp đồ họa `Canvas 2D / Three.js WebGL` dài `[VD: 20 giây]`, tỷ lệ `[16:9]` cho thương hiệu `[Tên thương hiệu & 5 thông điệp chính cần nhấn mạnh]`. Tự động tổng hợp nhạc nền bắt đúng nhịp chuyển cảnh (beat-synced) và xuất ra file `.MP4` chất lượng cao.
 ```
 
 ---
 
-### 5.8. Phân Tích Ngách Shopee & Dựng Video Bán Hàng Affiliate 9:16 — [`shopee-affiliate-video-studio`](./config/skills/shopee-affiliate-video-studio/SKILL.md)
+### 5.8. Phân Tích Ngách Shopee & Dựng Video Bán Hàng Affiliate 9:16 — [`shopee-affiliate-video-studio`](file:///C:/Users/INFOASIA/.gemini/config/skills/shopee-affiliate-video-studio/SKILL.md)
 ```text
 Dùng skill `shopee-affiliate-video-studio` sản xuất video bán hàng tiếp thị liên kết Shopee từ `[Link sản phẩm shopee.vn / s.shopee.vn HOẶC Từ khóa ngách cần quét chọn sản phẩm điểm cao nhất]`:
 1. Bóc tách đúng 100% thông số kỹ thuật thật của Nhà Sản Xuất và tải ảnh gốc HD làm mẫu khóa sản phẩm (`UID02.png`).
@@ -478,23 +491,23 @@ Dùng skill `shopee-affiliate-video-studio` sản xuất video bán hàng tiếp
 
 ---
 
-### 5.9. Trung Tâm Điều Khiển Dây Chuyền YouTube & Facebook 6 Lệnh — [`yt-shortcode-commander`](./config/skills/yt-shortcode-commander/SKILL.md)
+### 5.9. Trung Tâm Điều Khiển Dây Chuyền YouTube & Facebook 6 Lệnh — [`yt-shortcode-commander`](file:///C:/Users/INFOASIA/.gemini/config/skills/yt-shortcode-commander/SKILL.md)
 ```text
 Gọi `yt-shortcode-commander` thực thi dây chuyền sản xuất kênh:
-- [Chạy cho kênh có sẵn]: Thực thi `[Lệnh 1: Viết nội dung / Lệnh 2: Viết bộ Prompt B1-B9 & .SRT / Lệnh 3: Render Video Master / Lệnh 4: Lên lịch đăng video / Lệnh 5: Nuôi thiết bị cổng :8000]` cho kênh `[Tên kênh YouTube / Facebook của bạn]`, Video số `[#XX]` với chủ đề `[Tên chủ đề]`.
+- [Chạy cho kênh có sẵn]: Thực thi `[Lệnh 1: Viết nội dung / Lệnh 2: Viết bộ Prompt B1-B9 & .SRT / Lệnh 3: Render Video Master / Lệnh 4: Lên lịch đăng video / Lệnh 5: Nuôi thiết bị cổng :8000]` cho kênh `[Every Myth Explained / KosmosGeist / Some Guy / Tên kênh]`, Video số `[#XX]` với chủ đề `[Tên chủ đề]`.
 - [Xây kênh mới từ con số 0]: Thực thi `Lệnh 6` khởi tạo trọn bộ thư mục chuẩn từ `_TEMPLATE_KENH_MOI_A_TO_Z` cho kênh mới ngách `[Ngách nội dung]`, ngôn ngữ `[Tiếng Anh / Tiếng Việt]`, định hướng thẩm mỹ hình ảnh và làm cuốn chiếu Video `#01` đầu tiên.
 ```
 
 ---
 
-### 5.10. Điều Khiển Đa Trình Duyệt Chrome / Cốc Cốc Đa Profile & Tự Động Đăng Bài — [`antigravity-browser-controller`](./config/skills/antigravity-browser-controller/SKILL.md)
+### 5.10. Điều Khiển Đa Trình Duyệt Chrome / Cốc Cốc Đa Profile & Tự Động Đăng Bài — [`antigravity-browser-controller`](file:///C:/Users/INFOASIA/.gemini/config/skills/antigravity-browser-controller/SKILL.md)
 ```text
 Dùng skill `antigravity-browser-controller` kiểm tra kết nối phiên trình duyệt của Profile `[default / profile_1]`, sau đó tự động đăng bài lên Facebook kèm nội dung văn bản `[Nội dung bài đăng]` và tệp phương tiện tại `[Đường dẫn file ảnh .png hoặc video .mp4]`. Sau khi đăng xong, bắt buộc chụp ảnh màn hình (Screenshot) bài đăng thực tế để anh nghiệm thu.
 ```
 
 ---
 
-### 5.11. Sản Xuất Video Kênh Khoa Học – Kỹ Thuật – Vũ Trụ (Manim + Remotion + Vision AI Review), Nghiên Cứu arXiv & Kho Tri Thức RAG Đa Engine — [`deeptutor-cli`](./config/skills/deeptutor-cli/SKILL.md)
+### 5.11. Sản Xuất Video Kênh Khoa Học – Kỹ Thuật – Vũ Trụ (Manim + Remotion + Vision AI Review), Nghiên Cứu arXiv & Kho Tri Thức RAG Đa Engine — [`deeptutor-cli`](file:///C:/Users/INFOASIA/.gemini/config/skills/deeptutor-cli/SKILL.md)
 *Tích hợp từ `HKUDS/DeepTutor` (`v1.7.1`, `D:\DeepTutor`, `53,316+ ★`, hỗ trợ Tiếng Việt bản địa): điều phối 11 Capabilities (`math_animator`, `video_lesson`, `deep_solve`, `deep_question`, `deep_research`, `audio_overview`, `guided_learning`, `brainstorm`, `note_assistant`, `quiz`, `chat`), bộ công cụ nghiên cứu `preprint`/`research_audit`/`research_lit`, 5 Engine RAG (`LlamaIndex`, `LightRAG`, `GraphRAG`, `PageIndex`, `Obsidian`) kèm `kb eval` và Sách tương tác `Living Books` xuất thẻ `Anki`.*
 
 **Mẫu 5.11A — Dựng Video Hoạt Hình Toán – Lý – Kỹ Thuật – Vũ Trụ Bằng Manim Có Vision AI Tự Soi Sửa Lỗi Khung Hình (`math_animator`):**
@@ -524,25 +537,25 @@ Dùng skill `deeptutor-cli` thực hiện tác vụ nghiên cứu khoa học & q
 
 > [!IMPORTANT]
 > **Quy Tắc Định Tuyến Cứng Của `sql-sap-b1`:**
-> Nếu câu lệnh **KHÔNG ghi tiền tố máy chủ** (`/mfg-train`, `/trading`, `/demo`, `/mes`), hệ thống luôn mặc định truy vấn vào **Server Chính (`SBO_MAIN_PROD`)**. Khi muốn lấy số liệu ở máy chủ khác, anh luôn đặt tiền tố định tuyến ngay đầu câu lệnh như bảng dưới đây; khi xong việc chỉ cần gõ `/exit` để quay về mặc định Server Chính. Toàn bộ truy vấn SQL trên cả 4 Server đều chạy chế độ **Read-Only 100%** an toàn tuyệt đối cho dữ liệu gốc.
+> Nếu câu lệnh **KHÔNG ghi tiền tố máy chủ** (`/160`, `/52`, `/27`, `/buwon`), hệ thống luôn mặc định truy vấn vào **Con 24 (`infoasia56`)**. Khi muốn lấy số liệu ở máy chủ khác, anh luôn đặt tiền tố định tuyến ngay đầu câu lệnh như bảng dưới đây; khi xong việc chỉ cần gõ `/exit` để quay về mặc định Con 24. Toàn bộ truy vấn SQL trên cả 4 Server đều chạy chế độ **Read-Only 100%** an toàn tuyệt đối cho dữ liệu gốc.
 
-### 6.1. Truy Vấn Số Liệu Thực Tế & Xuất Báo Cáo Trên 4 Server / 19 DB — [`sql-sap-b1`](./config/skills/sql-sap-b1/SKILL.md)
+### 6.1. Truy Vấn Số Liệu Thực Tế & Xuất Báo Cáo Trên 4 Server / 19 DB — [`sql-sap-b1`](file:///C:/Users/INFOASIA/.gemini/config/skills/sql-sap-b1/SKILL.md)
 
 | Máy Chủ & Database Đích | Tiền Tố Bắt Buộc Đầu Câu | Mẫu Prompt Gọi Lấy Số Liệu Thực Tế |
 | :--- | :--- | :--- |
-| **Server Chính (`SBO_MAIN_PROD`)** | `/main` *(hoặc hỏi tự do)* | ``/main Truy vấn tổng doanh thu thuần (đã trừ hàng bán trả lại ORIN), giá vốn và lãi gộp theo khách hàng từ ngày [01/01/2026] đến [31/10/2026], đối chiếu khớp số và xuất ra file Excel `.xlsx`.`` |
-| **Server Sản Xuất Train (`SBO_MFG_TRAIN`)** | `/mfg-train` | ``/mfg-train Kiểm tra danh sách Lệnh sản xuất Beas đang mở chưa đóng được và đối chiếu tồn kho bán thành phẩm theo kho tính đến ngày hôm nay.`` |
-| **Server Chi Nhánh HCM (`SBO_BRANCH_HCM`)** | `/hcm` | ``/hcm Lấy báo cáo nhập - xuất - tồn kho nguyên vật liệu chính kỳ tháng [10/2026] và xuất file `.xlsx` + `.pdf`.`` |
-| **Server Nhà Máy (`SBO_MFG_PROD`)** | `/mfg` | ``/mfg Kiểm tra chi phí sản xuất kinh doanh dở dang WIP 154 theo từng Lệnh sản xuất Beas trong kỳ `[MM/YYYY]`, tách rõ chi phí NVL, nhân công và sản xuất chung.`` |
-| **Server Thương Mại (`SBO_TRADING_PROD`)** | `/trading` | ``/trading Liệt kê các đơn mua hàng (OPOR) đã quá hạn giao hàng nhưng còn số lượng `OpenQty > 0` kèm tên Nhà cung cấp.`` |
-| **Server Demo (`SBO_DEMO_DB`)** | `/demo` | ``/demo Kiểm tra công nợ phải thu khách hàng quá hạn trên 30 ngày tính đến hôm nay và xuất bảng tổng hợp.`` |
-| **Server MES (`SBO_MES_DB`)** | `/mes` | ``/mes Kiểm tra sản lượng ghi nhận từ MES đối chiếu với phiếu nhập kho thành phẩm SAP B1 trong ngày `[DD/MM/YYYY]`.`` |
+| **Con 24 (`infoasia56` + 9 DB phụ)** | `/24` *(hoặc hỏi tự do)* | ``/24 Truy vấn tổng doanh thu thuần (đã trừ hàng bán trả lại ORIN), giá vốn và lãi gộp theo khách hàng từ ngày [01/01/2026] đến [31/10/2026], đối chiếu khớp số và xuất ra file Excel `.xlsx`.`` |
+| **Con 160 Train (`FVIVN_PROD_TRAIN`)** | `/160` | ``/160 Kiểm tra danh sách Lệnh sản xuất Beas đang mở chưa đóng được và đối chiếu tồn kho bán thành phẩm theo kho tính đến ngày hôm nay.`` |
+| **Con 160 HCM (`FVIVN_GoLive_2024`)** | `/160 HCM` | ``/160 HCM Lấy báo cáo nhập - xuất - tồn kho nguyên vật liệu chính kỳ tháng [10/2026] và xuất file `.xlsx` + `.pdf`.`` |
+| **Con 160 Long Thành (`FVIVN_PROD`)** | `/160 LT` | ``/160 LT Kiểm tra chi phí sản xuất kinh doanh dở dang WIP 154 theo từng Lệnh sản xuất Beas trong kỳ `[MM/YYYY]`, tách rõ chi phí NVL, nhân công và sản xuất chung.`` |
+| **Con 52 (`PenflexPRD_NEW`)** | `/52` | ``/52 Liệt kê các đơn mua hàng (OPOR) đã quá hạn giao hàng nhưng còn số lượng `OpenQty > 0` kèm tên Nhà cung cấp.`` |
+| **Con 27 (`ECC` / `HTL_DEMO`)** | `/27` hoặc `/27 HTL` | ``/27 HTL Kiểm tra công nợ phải thu khách hàng quá hạn trên 30 ngày tính đến hôm nay và xuất bảng tổng hợp.`` |
+| **Con 41 (`BUWON` / `Buwon_mes`)** | `/buwon` hoặc `/buwon mes` | ``/buwon mes Kiểm tra sản lượng ghi nhận từ MES đối chiếu với phiếu nhập kho thành phẩm SAP B1 trong ngày `[DD/MM/YYYY]`.`` |
 
 ---
 
-### 6.2. Viết Câu Lệnh T-SQL / HANA SQLScript, FMS & TransactionNotification — [`viet-sql-sap-b1`](./config/skills/viet-sql-sap-b1/SKILL.md)
+### 6.2. Viết Câu Lệnh T-SQL / HANA SQLScript, FMS & TransactionNotification — [`viet-sql-sap-b1`](file:///C:/Users/INFOASIA/.gemini/config/skills/viet-sql-sap-b1/SKILL.md)
 ```text
-Dùng skill `viet-sql-sap-b1` viết và kiểm thử thực tế câu lệnh `[MS SQL T-SQL HOẶC SAP HANA SQLScript]` cho hệ thống `[Tên tiền tố DB, VD: /main hoặc /mfg]`:
+Dùng skill `viet-sql-sap-b1` viết và kiểm thử thực tế câu lệnh `[MS SQL T-SQL HOẶC SAP HANA SQLScript]` cho hệ thống `[Tên tiền tố DB, VD: /24 hoặc /160 LT]`:
 - Yêu cầu nghiệp vụ:
   + [Trường hợp 1 - Báo cáo truy vết chuỗi chứng từ]: Nối chuẩn chuỗi chứng từ `Báo giá -> Đơn bán hàng (ORDR) -> Giao hàng (ODLN) -> Hóa đơn A/R (OINV) -> Phiếu trả hàng (ORIN)` kỳ `[Từ ngày - Đến ngày]`.
   + [Trường hợp 2 - Formatted Search (FMS)]: Viết cú pháp FMS chuẩn `$[$Item.Column.0]` tự động điền `[Tên trường đích]` trên màn hình `[Tên chứng từ SAP B1]`.
@@ -551,7 +564,7 @@ Dùng skill `viet-sql-sap-b1` viết và kiểm thử thực tế câu lệnh `[
 
 ---
 
-### 6.3. Tư Vấn Nghiệp Vụ Sản Xuất Boyum Beas, Giá Thành `WIP 154` (TT 99/2025) & DTW/SDK — [`sap-b1-beas`](./config/skills/sap-b1-beas/SKILL.md)
+### 6.3. Tư Vấn Nghiệp Vụ Sản Xuất Boyum Beas, Giá Thành `WIP 154` (TT 99/2025) & DTW/SDK — [`sap-b1-beas`](file:///C:/Users/INFOASIA/.gemini/config/skills/sap-b1-beas/SKILL.md)
 ```text
 Dùng skill `sap-b1-beas` chẩn đoán và hướng dẫn xử lý bài toán nghiệp vụ trên SAP Business One `[9.3 / 10.0]` & Boyum Beas Manufacturing:
 - Tình huống cần giải quyết: `[VD: Lệnh sản xuất Beas số #XXXX không đóng được (ABGKZ) / Thiết kế quy trình tính giá thành WIP 154 và định khoản kế toán chuẩn Thông tư 99/2025/TT-BTC áp dụng từ 2026 / Chuẩn bị mẫu file DTW import BOM & Master Data / Tích hợp tạo chứng từ an toàn qua SAP Service Layer :50000]`.
@@ -562,7 +575,7 @@ Yêu cầu tuân thủ tuyệt đối nguyên tắc bảo hành hãng (không gh
 
 ## Nhóm 7 — Luận Giải Tử Vi Đẩu Số, Bát Tự 24 Tiết Khí & Thần Số Học SOP V3.0
 
-Điều phối bởi skill **[`tu-vi-bat-tu-than-so-hoc`](./config/skills/tu-vi-bat-tu-than-so-hoc/SKILL.md)** — bắt buộc chạy động cơ tính toán tất định `destiny_pipeline.py` (`iztro-py` + `lunar_python` 24 Tiết Khí + Pythagoras) và kiểm toán QA 13 bước, tuyệt đối cấm AI tự nhẩm đổi lịch Âm Dương hay tự cộng con số.
+Điều phối bởi skill **[`tu-vi-bat-tu-than-so-hoc`](file:///C:/Users/INFOASIA/.gemini/config/skills/tu-vi-bat-tu-than-so-hoc/SKILL.md)** — bắt buộc chạy động cơ tính toán tất định `destiny_pipeline.py` (`iztro-py` + `lunar_python` 24 Tiết Khí + Pythagoras) và kiểm toán QA 13 bước, tuyệt đối cấm AI tự nhẩm đổi lịch Âm Dương hay tự cộng con số.
 
 **Mẫu 7A — Xem Lá Số Tổng Hợp & Bản Đồ Tinh Bàn HTML Cho 1 Cá Nhân:**
 ```text
@@ -591,15 +604,15 @@ Lưu toàn bộ hồ sơ theo từng thư mục thành viên tại `[Đường d
 
 | Kỹ Năng | Link Gốc | Prompt Mẫu Gọi Chuẩn |
 | :--- | :--- | :--- |
-| **`gdrive`** | [`SKILL.md`](./config/plugins/gdrive/skills/gdrive/SKILL.md) | ``Dùng skill `gdrive` tìm kiếm trong thư mục Google Drive `[Link thư mục drive.google.com]` tất cả các file liên quan đến `[Từ khóa]`, kiểm tra quyền chia sẻ và tải/xuất bản PDF về thư mục `[Đường dẫn máy]`.`` |
-| **`gdocs`** | [`SKILL.md`](./config/plugins/gdocs/skills/gdocs/SKILL.md) | ``Dùng skill `gdocs` đọc nội dung tài liệu tại `[Link docs.google.com]`, sau đó tạo mới / cập nhật định dạng tiêu đề, chèn bảng tổng hợp từ file `[Đường dẫn file .md]` lên Google Docs.`` |
-| **`gsheets`** | [`SKILL.md`](./config/plugins/gsheets/skills/gsheets/SKILL.md) | ``Dùng skill `gsheets` đọc bảng tính tại `[Link docs.google.com/spreadsheets]`, nhập dữ liệu từ `[File .csv/.xlsx]`, định dạng bảng chuẩn, tạo Pivot Table & biểu đồ tổng hợp doanh thu theo tháng.`` |
-| **`gslides`** | [`SKILL.md`](./config/plugins/gslides/skills/gslides/SKILL.md) | ``Dùng skill `gslides` khởi tạo bộ Slide thuyết trình `[Số lượng, VD: 12 slides]` trên Google Slides cho chủ đề `[Tên buổi thuyết trình]` dựa trên số liệu thật tại `[Đường dẫn tài liệu]`.`` |
+| **`gdrive`** | [`SKILL.md`](file:///C:/Users/INFOASIA/.gemini/config/plugins/gdrive/skills/gdrive/SKILL.md) | ``Dùng skill `gdrive` tìm kiếm trong thư mục Google Drive `[Link thư mục drive.google.com]` tất cả các file liên quan đến `[Từ khóa]`, kiểm tra quyền chia sẻ và tải/xuất bản PDF về thư mục `[Đường dẫn máy]`.`` |
+| **`gdocs`** | [`SKILL.md`](file:///C:/Users/INFOASIA/.gemini/config/plugins/gdocs/skills/gdocs/SKILL.md) | ``Dùng skill `gdocs` đọc nội dung tài liệu tại `[Link docs.google.com]`, sau đó tạo mới / cập nhật định dạng tiêu đề, chèn bảng tổng hợp từ file `[Đường dẫn file .md]` lên Google Docs.`` |
+| **`gsheets`** | [`SKILL.md`](file:///C:/Users/INFOASIA/.gemini/config/plugins/gsheets/skills/gsheets/SKILL.md) | ``Dùng skill `gsheets` đọc bảng tính tại `[Link docs.google.com/spreadsheets]`, nhập dữ liệu từ `[File .csv/.xlsx]`, định dạng bảng chuẩn, tạo Pivot Table & biểu đồ tổng hợp doanh thu theo tháng.`` |
+| **`gslides`** | [`SKILL.md`](file:///C:/Users/INFOASIA/.gemini/config/plugins/gslides/skills/gslides/SKILL.md) | ``Dùng skill `gslides` khởi tạo bộ Slide thuyết trình `[Số lượng, VD: 12 slides]` trên Google Slides cho chủ đề `[Tên buổi thuyết trình]` dựa trên số liệu thật tại `[Đường dẫn tài liệu]`.`` |
 
 ---
 
 ### 8.2. Lập Trình, Xem Trước Giao Diện & Điều Khiển Thiết Bị Android (3 Plugin Skills)
-*Bao gồm [`android-cli`](./config/plugins/android-cli-plugin/skills/SKILL.md), [`android-device-hub`](./config/plugins/android-cli-plugin/skills/device-hub/SKILL.md) và [`compose-preview`](./config/plugins/android-cli-plugin/skills/compose-preview/SKILL.md).*
+*Bao gồm [`android-cli`](file:///C:/Users/INFOASIA/.gemini/config/plugins/android-cli-plugin/skills/SKILL.md), [`android-device-hub`](file:///C:/Users/INFOASIA/.gemini/config/plugins/android-cli-plugin/skills/device-hub/SKILL.md) và [`compose-preview`](file:///C:/Users/INFOASIA/.gemini/config/plugins/android-cli-plugin/skills/compose-preview/SKILL.md).*
 
 ```text
 Kết hợp bộ skill `android-cli`, `compose-preview` và `android-device-hub` cho dự án Android tại `[Đường dẫn dự án Android]`:
@@ -647,7 +660,7 @@ Tra cứu hồ sơ dược học và thử nghiệm lâm sàng cho hoạt chất
 ```
 
 #### Cụm E — Phục Dựng Văn Bản Cổ & Công Cụ Môi Trường Khoa Học (3 Skills)
-*Bao gồm: [`predictingthepast`](./config/plugins/science/skills/predictingthepast/SKILL.md), [`credentials`](./config/plugins/science/skills/credentials/SKILL.md), [`uv`](./config/plugins/science/skills/uv/SKILL.md).*
+*Bao gồm: [`predictingthepast`](file:///C:/Users/INFOASIA/.gemini/config/plugins/science/skills/predictingthepast/SKILL.md), [`credentials`](file:///C:/Users/INFOASIA/.gemini/config/plugins/science/skills/credentials/SKILL.md), [`uv`](file:///C:/Users/INFOASIA/.gemini/config/plugins/science/skills/uv/SKILL.md).*
 ```text
 - [Phục dựng văn bản khắc cổ La Mã / Hy Lạp]: Dùng skill `predictingthepast` (mô hình Aeneas / Ithaca) phục dựng đoạn khuyết, xác định niên đại và vùng địa lý gốc cho văn bản khắc cổ sau: "[Đoạn văn bản Latin hoặc Hy Lạp cổ]".
 - [Kiểm tra khóa API & môi trường Python khoa học]: Dùng skill `credentials` và `uv` kiểm tra an toàn sự tồn tại của các biến môi trường API Key cần thiết (không in giá trị khóa bí mật ra màn hình) và đảm bảo trình quản lý gói `uv` sẵn sàng trên PATH.
