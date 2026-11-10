@@ -1,11 +1,11 @@
-# 🎬 SỔ TAY TỔNG HỢP: HỆ THỐNG 13 SKILL LÀM PHIM & SẢN XUẤT VIDEO AI TOÀN DIỆN
-*(Tài liệu trung tâm gom chung toàn bộ 13 Bộ Skill — 1,875 Files vào chung 1 thư mục `lam-phim-video-master/skills/` — Dễ nhớ, Dễ tra cứu, Gọi 1 Lệnh)*
+# 🎬 SỔ TAY TỔNG HỢP: HỆ THỐNG 14 SKILL LÀM PHIM & SẢN XUẤT VIDEO AI TOÀN DIỆN
+*(Tài liệu trung tâm gom chung toàn bộ 14 Bộ Skill — 3,800+ Files vào chung 1 thư mục `lam-phim-video-master/skills/` — Dễ nhớ, Dễ tra cứu, Gọi 1 Lệnh)*
 
 ---
 
 ## 🌟 MỤC ĐÍCH CỦA BỘ TỔNG HỢP NÀY
 Trước đây các công cụ làm video nằm rải rác ở nhiều thư mục khác nhau (`video-storytelling`, `cinematic-video-prompt`, `create-and-edit-video`, `opus-video-skills`, `gsap-skills`, `remotion-skills`, `motion-ai-kit`, `awesome-opus5-5-videos`, `PromptDirector`, `Recordly`...).  
-Hiện tại toàn bộ **13 bộ skill cũ & mới (`1,875 files`)** đã được **copy vật lý 100% về chung 1 thư mục duy nhất**:
+Hiện tại toàn bộ **14 bộ skill cũ & mới (`3,800+ files`)** đã được **copy vật lý 100% về chung 1 thư mục duy nhất**:
 - 📂 **Trong Dự Án:** [`E:\DIEN APP\Skill AI\lam-phim-video-master\skills\`](file:///E:/DIEN%20APP/Skill%20AI/lam-phim-video-master/skills/)
 - 📂 **Trong Hệ Thống Antigravity:** [`C:\Users\INFOASIA\.gemini\config\skills\lam-phim-video-master\skills\`](file:///C:/Users/INFOASIA/.gemini/config/skills/lam-phim-video-master/skills/)
 
@@ -15,27 +15,27 @@ Hiện tại toàn bộ **13 bộ skill cũ & mới (`1,875 files`)** đã đư�
 
 ---
 
-## 🗺️ PHẦN 1: BẢN ĐỒ PHÂN LOẠI 13 BỘ SKILL THEO 5 GIAI ĐOẠN LÀM PHIM
+## 🗺️ PHẦN 1: BẢN ĐỒ PHÂN LOẠI 14 BỘ SKILL THEO 5 GIAI ĐOẠN LÀM PHIM
 
 ```
 ┌──────────────────────────────────────────────────────────────────────────────────────────────┐
-│                 SIÊU SKILL TỔNG HỢP: lam-phim-video-master (13 Bộ / 1,875 Files)             │
+│                 SIÊU SKILL TỔNG HỢP: lam-phim-video-master (14 Bộ / 3,800+ Files)             │
 └──────────────────────────────────────────────┬───────────────────────────────────────────────┘
                                                │
     ┌────────────────────┬─────────────────────┼──────────────────────┬────────────────────┐
     ▼                    ▼                     ▼                      ▼                    ▼
 [1. KỊCH BẢN & MẪU]  [2. NHÂN VẬT & POSE]  [3. RENDER BẰNG CODE]  [4. QUAY & HẬU KỲ]   [5. ĐĂNG KÊNH]
-• 01_video-story     • 02_cinematic-prompt • 04_painted-animation • 03_create-edit     • 10_yt-shortcode
-• 11_prompts-chat      - 6-Layer DNA Lock  • 05_kinetic-reel      • 09_entervi-logic   • browser-ctrl
+• 01_video-story     • 02_cinematic-prompt • 04_painted-animation • 14_ai-video-studio • 10_yt-shortcode
+• 11_prompts-chat      - 6-Layer DNA Lock  • 05_kinetic-reel      • 03_create-edit     • browser-ctrl
 • 13_PromptDirector    - 5-Tier Pose 3D    • 06_gsap-skills       • Recordly (Zoom)
                                            • 07_remotion-skills   • Auto-Editor
                                            • 08_motion-ai-kit     • Editly / FFmpeg
-                                           • 12_awesome-opus-703
+                                           • 12_awesome-opus-703  • 09_entervi-logic
 ```
 
 ---
 
-## 📚 PHẦN 2: DANH SÁCH 13 THƯ MỤC SKILL ĐÃ COPY VÀO `./skills/` & HƯỚNG DẪN SỬ DỤNG
+## 📚 PHẦN 2: DANH SÁCH 14 THƯ MỤC SKILL ĐÃ COPY VÀO `./skills/` & HƯỚNG DẪN SỬ DỤNG
 
 ### NHÓM 1: VIẾT KỊCH BẢN & SƯU TẦM MẪU (TRƯỚC KHI BẮT ĐẦU)
 

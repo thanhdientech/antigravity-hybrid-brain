@@ -1,6 +1,6 @@
 ---
 name: create-and-edit-video
-description: "Lập trình và biên tập video tự động bằng 5 Engine: Remotion, Motion Canvas, Manim, Auto-Editor cắt khoảng lặng & Editly."
+description: "Lập trình và biên tập video tự động bằng 7 Engine: AI Video Studio (Web Timeline + 90 Template), Remotion, Motion Canvas, Manim, Auto-Editor, Editly & Recordly."
 group: "Làm Phim & Video AI"
 ---
 
@@ -9,7 +9,7 @@ group: "Làm Phim & Video AI"
 <!-- JAVIS_TRIGGER_ARCHIVE_START -->
 ## Khi nào dùng (Triggers & Ngữ cảnh kích hoạt đầy đủ)
 
-> Hệ thống toàn năng kiến tạo, lập trình và biên tập video tự động (Programmatic Video Creation & Automation Editing) tích hợp 5 Engine hàng đầu thế giới: Remotion (React/TS GPU Motion Graphics), Motion Canvas (Web-based Math & Science Animations), Manim (3Blue1Brown Python Mathematical Morphing & LaTeX), Auto-Editor (Tự động quét & cắt gọt khoảng lặng Podcast/Talkshow/Shorts), Editly (Tự động biên tập video hàng loạt bằng JSON spec + GLSL Shaders + FFmpeg), và Kho 703 Prompt Code-as-Video Claude Opus 5.5 (Awesome Opus Videos). Kèm theo hệ sinh thái 20 Repositories đa tầng và REA Reverse Engineering. TRIGGERS: "create and edit video", "làm video tự động", "biên tập video", "render video", "cắt khoảng lặng", "auto-editor", "remotion", "motion-canvas", "manim", "editly", "tạo video bằng code", "programmatic video", "video bằng react", "video toán học", "edit video ai", "dựng video tự động", "awesome-opus", "opus video", "code as video".
+> Hệ thống toàn năng kiến tạo, lập trình và biên tập video tự động (Programmatic Video Creation & Automation Editing) tích hợp 7 Engine hàng đầu thế giới: AI Video Studio (Web Timeline Editor 90 Template + 200 HyperFrames + Whisper Sub + Autopilot của Nguyễn Tất Kiểm), Remotion (React/TS GPU Motion Graphics), Motion Canvas (Web-based Math & Science Animations), Manim (3Blue1Brown Python Mathematical Morphing & LaTeX), Auto-Editor (Tự động quét & cắt gọt khoảng lặng Podcast/Talkshow/Shorts), Editly (Tự động biên tập video hàng loạt bằng JSON spec + GLSL Shaders + FFmpeg), Recordly (Quay màn hình Auto-Zoom), và Kho 703 Prompt Code-as-Video Claude Opus 5.5 (Awesome Opus Videos). Kèm theo hệ sinh thái 20 Repositories đa tầng và REA Reverse Engineering. TRIGGERS: "create and edit video", "làm video tự động", "biên tập video", "render video", "cắt khoảng lặng", "auto-editor", "remotion", "motion-canvas", "manim", "editly", "ai video studio", "studio video", "tạo video bằng code", "programmatic video", "video bằng react", "video toán học", "edit video ai", "dựng video tự động", "awesome-opus", "opus video", "code as video".
 <!-- JAVIS_TRIGGER_ARCHIVE_END -->
 
 - **Nguồn gốc / Kho Git Upstream:** [remotion-dev/remotion & motion-canvas](https://github.com/remotion-dev/remotion) (`Video-as-Code Engines`)
@@ -34,21 +34,32 @@ group: "Làm Phim & Video AI"
          ┌─────────────────────┬───────────────────────────┼───────────────────────────┬─────────────────────┐
          ▼                     ▼                           ▼                           ▼                     ▼
 ┌─────────────────┐   ┌─────────────────┐         ┌─────────────────┐         ┌─────────────────┐   ┌─────────────────┐
-│    REMOTION     │   │  MOTION CANVAS  │         │      MANIM      │         │   AUTO-EDITOR   │   │     EDITLY      │
-│ (React/TS GPU)  │   │  (Vite Web 2D)  │         │ (Python 3B1B)   │         │ (Smart Cut CLI) │   │ (JSON Spec GLSL)│
+│ AI VIDEO STUDIO │   │    REMOTION     │         │  MOTION CANVAS  │         │      MANIM      │   │   AUTO-EDITOR   │
+│ (Web Timeline)  │   │ (React/TS GPU)  │         │  (Vite Web 2D)  │         │ (Python 3B1B)   │   │ (Smart Cut CLI) │
 ├─────────────────┤   ├─────────────────┤         ├─────────────────┤         ├─────────────────┤   ├─────────────────┤
-│ • Motion HUD    │   │ • Thuật toán 2D │         │ • Biến hình hình│         │ • Cắt khoảng    │   │ • Ghép clip hàng│
-│ • Map vệ tinh   │   │ • Trực quan hóa │         │   học (Morphing)│         │   lặng tự động  │   │   loạt bằng JSON│
-│ • Tin tức nóng  │   │   mạng nơ-ron   │         │ • Phương trình  │         │ • Lọc tạp âm dB │   │ • Hiệu ứng GLSL │
-│ • Karaoke Sub   │   │ • Timeline xem  │         │   toán học LaTeX│         │ • Xuất XML sang │   │ • Nhanh, nhẹ,   │
-│ • Dashboard UI  │   │   trực tiếp Web │         │ • Không gian 3D │         │   Premiere/FCPX │   │   không cần code│
+│ • 90 Templates  │   │ • Motion HUD    │         │ • Thuật toán 2D │         │ • Biến hình hình│   │ • Cắt khoảng    │
+│ • 200 HyperFrame│   │ • Map vệ tinh   │         │ • Trực quan hóa │         │   học (Morphing)│   │   lặng tự động  │
+│ • Whisper Sub   │   │ • Tin tức nóng  │         │   mạng nơ-ron   │         │ • Phương trình  │   │ • Lọc tạp âm dB │
+│ • Autopilot     │   │ • Karaoke Sub   │         │ • Timeline xem  │         │   toán học LaTeX│   │ • Xuất XML sang │
+│ • Bot Telegram  │   │ • Dashboard UI  │         │   trực tiếp Web │         │ • Không gian 3D │   │   Premiere/FCPX │
 └─────────────────┘   └─────────────────┘         └─────────────────┘         └─────────────────┘   └─────────────────┘
+                                   │                                                   │
+                                   ▼                                                   ▼
+                          ┌─────────────────┐                                 ┌─────────────────┐
+                          │     EDITLY      │                                 │    RECORDLY     │
+                          │ (JSON Spec GLSL)│                                 │ (Screen Studio) │
+                          ├─────────────────┤                                 ├─────────────────┤
+                          │ • Ghép hàng loạt│                                 │ • Quay màn hình │
+                          │ • Shaders OpenGL│                                 │ • Auto-Zoom mượt│
+                          └─────────────────┘                                 └─────────────────┘
 ```
 
 ### 🎯 Bảng Quy Chuẩn Lựa Chọn Engine:
 
 | Nhu Cầu Của Người Dùng | Engine Tối Ưu Nhất | Ngôn Ngữ / Format | Đầu Ra (Output) |
 | :--- | :--- | :--- | :--- |
+| **Biên tập video trực quan, timeline đa track, áp 90 template ngành, bám sub tiếng Việt** | **AI Video Studio** | Web UI (Local 5186) + Python Whisper + FFmpeg | MP4 1080p/4K, phụ đề chuẩn âm, B-roll thông minh |
+| **Biên tập video trực quan, timeline đa track, áp 90 template ngành, bám sub tiếng Việt** | **AI Video Studio** | Web UI (Local 5186) + Python Whisper + FFmpeg | MP4 1080p/4K, phụ đề chuẩn âm, B-roll thông minh |
 | **Làm video tin tức, dashboard nhảy số, bản đồ vệ tinh, giao diện UI** | **Remotion** | React + TypeScript | MP4 1080p/4K 60fps qua GPU Chromium |
 | **Làm video bài giảng giải thích thuật toán, vừa code vừa preview trên web** | **Motion Canvas** | TypeScript (Generator `yield*`) | Preview Web 60fps + MP4 / WebM / Image Sequence |
 | **Diễn họa toán học cao cấp, công thức tích phân LaTeX, biến hình hình học** | **Manim** | Python (`3b1b/manim`) | MP4 chất lượng điện ảnh 4K 60fps |
@@ -209,6 +220,33 @@ python -m manim -pql scene_math.py MathExplanation
 * **Bộ cài Windows x64 (`v1.4.0`):** [`editor video ai/04_Video/Recordly/installer/Recordly-windows-x64.exe`](file:///E:/DIEN%20APP/Skill%20AI/editor%20video%20ai/04_Video/Recordly/installer/Recordly-windows-x64.exe)
 * **Tác giả:** `webadderallorg/Recordly` (35k+ Stars, AGPL-3.0 — Bản mã nguồn mở miễn phí thay thế *Screen Studio*).
 * **Điểm mạnh:** Quay màn hình phần mềm/web kèm hiệu ứng **Auto-Zoom thông minh theo cú click chuột**, làm mượt quỹ đạo con trỏ chuột (Cursor smoothing), tự động đóng khung nền Wallpaper sang trọng, chèn Webcam bo góc và xuất MP4 nét cao cho Video Tutorial, SaaS Demo, hướng dẫn ERP/SAP B1 hoặc khóa học E-Learning.
+
+---
+
+---
+
+### 🎬 ENGINE 7: AI VIDEO STUDIO (Editor Timeline Web Local + 90 Template + 200 HyperFrames)
+* **Vị trí repo:** [`E:\DIEN APP\Skill AI\ai-video-studio\`](file:///E:/DIEN%20APP/Skill%20AI/ai-video-studio/)
+* **Tác giả:** `nguyentatkiem/ai-video-studio` (MIT License).
+* **Điểm mạnh:**
+  - **Giao diện Web Timeline trực quan:** Chạy local tại `http://localhost:5186` (qua `studio.cmd` hoặc `node studio/server.mjs`). Hỗ trợ timeline đa track (cắt ghép, keyframe, mặt nạ, phông xanh, lọc màu).
+  - **90 Template xem trước:** Chia đều 9 nhóm ngành thực chiến (BĐS, Khóa học, Review, Bán hàng, Tin tức, AI, Podcast...).
+  - **200 Khối hoạt ảnh HyperFrames:** Hoạt ảnh đồ họa mượt mà bằng GSAP/Three.js (Demo app, biểu đồ, social proof, logo, chuyển cảnh).
+  - **Nhận diện giọng nói & phụ đề bám âm offline:** Tích hợp `faster-whisper` (`transcribe.py`) và lọc âm cắt nói vấp (`voice_clean.py`).
+  - **Chế độ tự lái (Autopilot) & Telegram Agent:** Thả video thô là tự động cắt gọt, chèn b-roll, ghép nhạc xuất video; điều khiển từ xa qua Telegram bot.
+
+#### 📋 Cú Pháp Khởi Chạy Nhanh:
+```bash
+# 1. Mở giao diện Web Timeline Editor:
+cd "E:\DIEN APP\Skill AI\ai-video-studio"
+studio.cmd
+
+# 2. Tạo dự án tự động từ video thô (Autopilot):
+studio.cmd --new "C:\duong\dan\video.mp4"
+
+# 3. Chạy bám phụ đề tiếng Việt offline:
+python scripts/transcribe.py "video.mp4" --output "captions.json"
+```
 
 ---
 
