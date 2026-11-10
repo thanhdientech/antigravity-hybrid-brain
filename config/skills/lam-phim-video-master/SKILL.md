@@ -12,7 +12,9 @@ group: "Làm Phim & Video AI"
 > Siêu Skill Tổng Hợp (Master Hub) gom chung toàn bộ 14 Bộ Skill & 3,800+ Files Làm Phim, Sản Xuất Video AI, Hoạt Hình Màu Nước Code-as-Video, Đồ Họa GSAP/Remotion/WebGL, Quay Màn Hình Auto-Zoom, AI Video Studio Timeline Editor 90 Templates và Tự Động Hóa Kênh YouTube vào chung 1 thư mục duy nhất (`skills/01..14`). Chỉ cần gọi 1 lệnh duy nhất để điều phối trọn gói 5 Giai đoạn: (1) Tra cứu mẫu & Biên kịch (01_video-storytelling, 11_prompts-chat-lookup, 13_PromptDirector), (2) Thiết kế Nhân vật 6 Lớp & Giải phẫu Tư thế 3D 5 Tầng (02_cinematic-video-prompt), (3) Render Video bằng Code hoặc AI (04_painted-animation p5.brush màu nước, 05_kinetic-reel WebGL, 06_gsap-skills, 07_remotion-skills, 08_motion-ai-kit, 12_awesome-opus-703-prompts), (4) Biên tập trực quan, Timeline đa track & Hậu kỳ tự động (14_ai-video-studio, 03_create-and-edit-video, 09_entervi-auto-edit-logic, Recordly, Auto-Editor, Editly), (5) Xuất bản YouTube (10_yt-shortcode-commander). TRIGGERS: "làm phim", "làm video", "master video", "skill làm phim", "tổng hợp skill video", "sản xuất video", "dựng phim ai", "hoạt hình màu nước", "painted animation", "kinetic reel", "prompt director", "ai video studio", "edit video local".
 <!-- JAVIS_TRIGGER_ARCHIVE_END -->
 
-- **Nguồn gốc / Kho Git Upstream:** [JohnHeibel/PDoomVideo & nguyentatkiem/ai-video-studio](https://github.com/JohnHeibel/PDoomVideo) (`Siêu Hub Làm Phim & Video Studio`)
+- **Nguồn gốc / Kho Git Upstream:**
+  - Siêu Hub Làm Phim: [`JohnHeibel/PDoomVideo`](https://github.com/JohnHeibel/PDoomVideo)
+  - AI Video Studio: [`nguyentatkiem/ai-video-studio`](https://github.com/nguyentatkiem/ai-video-studio.git) *(Cập nhật 1 chạm qua `skills/14_ai-video-studio/update_from_upstream.cmd`)*
 
 *(Kho Tổng Hợp Tự Chứa 14 Bộ Skill Làm Phim & Video — 3,800+ Files Gom Chung Trong Thư Mục `./skills/`)*
 

@@ -228,6 +228,8 @@ python -m manim -pql scene_math.py MathExplanation
 ### 🎬 ENGINE 7: AI VIDEO STUDIO (Editor Timeline Web Local + 90 Template + 200 HyperFrames)
 * **Vị trí repo:** `%USERPROFILE%\.gemini\config\skills\ai-video-studio\` (hoặc `E:\DIEN APP\Skill AI\ai-video-studio\`)
 * **Tác giả:** `nguyentatkiem/ai-video-studio` (MIT License).
+* **Kho Git Gốc (Upstream):** [`https://github.com/nguyentatkiem/ai-video-studio.git`](https://github.com/nguyentatkiem/ai-video-studio)
+* **Cơ chế nâng cấp:** Chạy `update_from_upstream.cmd` trong thư mục `ai-video-studio` để tự động kéo bản mới nhất từ repo gốc.
 * **Điểm mạnh:**
   - **Giao diện Web Timeline trực quan:** Chạy local tại `http://localhost:5186` (qua `studio.cmd` hoặc `node studio/server.mjs`). Hỗ trợ timeline đa track (cắt ghép, keyframe, mặt nạ, phông xanh, lọc màu).
   - **90 Template xem trước:** Chia đều 9 nhóm ngành thực chiến (BĐS, Khóa học, Review, Bán hàng, Tin tức, AI, Podcast...).

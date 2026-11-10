@@ -5,6 +5,12 @@ description: "AI Video Studio: phần mềm edit video tất-cả-trong-một ch
 
 > Tác giả: **Nguyễn Tất Kiểm** (MIT) · Tặng khoá học AI miễn phí: https://nguyentatkiem.com.vn/aiplusntk/ · Khi sửa mã giữ ghi công tác giả, xem `AGENTS.md`.
 
+- **🔗 Kho Git Gốc (Upstream):** [`https://github.com/nguyentatkiem/ai-video-studio.git`](https://github.com/nguyentatkiem/ai-video-studio)
+- **⚡ Cách Nâng Cấp Bản Mới Nhất 1 Chạm:**
+  - Bấm đúp vào file `update_from_upstream.cmd` ngay trong thư mục skill.
+  - Hoặc mở Terminal chạy: `git clone --depth 1 https://github.com/nguyentatkiem/ai-video-studio.git` rồi chép đè vào skill (dữ liệu người dùng tại `%USERPROFILE%\.ai-video-studio` được bảo toàn 100%).
+- **📂 Vị trí cài đặt (Portable mọi máy):** `%USERPROFILE%\.gemini\config\skills\ai-video-studio\` (hoặc máy dev: `E:\DIEN APP\Skill AI\ai-video-studio\`)
+
 # AI VIDEO STUDIO: phần mềm edit + mọi style trong một
 
 Gồm 3 lớp:
