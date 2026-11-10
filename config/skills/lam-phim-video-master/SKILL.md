@@ -18,7 +18,7 @@ group: "Làm Phim & Video AI"
 
 > **Sổ tay hướng dẫn tiếng Việt đầy đủ:** [`SO_TAY_TONG_HOP_SKILL_LAM_PHIM_VIDEO.md`](./SO_TAY_TONG_HOP_SKILL_LAM_PHIM_VIDEO.md)  
 > **Thư mục dự án:** [`E:\DIEN APP\Skill AI\lam-phim-video-master\`](file:///E:/DIEN%20APP/Skill%20AI/lam-phim-video-master/)  
-> **Kho AI Video Studio:** [`E:\DIEN APP\Skill AI\ai-video-studio\`](file:///E:/DIEN%20APP/Skill%20AI/ai-video-studio/)
+> **Kho AI Video Studio:** `%USERPROFILE%\.gemini\config\skills\ai-video-studio\` (hoặc `E:\DIEN APP\Skill AI\ai-video-studio\`)
 
 ---
 

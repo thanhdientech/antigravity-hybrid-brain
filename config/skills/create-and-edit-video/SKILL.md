@@ -226,7 +226,7 @@ python -m manim -pql scene_math.py MathExplanation
 ---
 
 ### 🎬 ENGINE 7: AI VIDEO STUDIO (Editor Timeline Web Local + 90 Template + 200 HyperFrames)
-* **Vị trí repo:** [`E:\DIEN APP\Skill AI\ai-video-studio\`](file:///E:/DIEN%20APP/Skill%20AI/ai-video-studio/)
+* **Vị trí repo:** `%USERPROFILE%\.gemini\config\skills\ai-video-studio\` (hoặc `E:\DIEN APP\Skill AI\ai-video-studio\`)
 * **Tác giả:** `nguyentatkiem/ai-video-studio` (MIT License).
 * **Điểm mạnh:**
   - **Giao diện Web Timeline trực quan:** Chạy local tại `http://localhost:5186` (qua `studio.cmd` hoặc `node studio/server.mjs`). Hỗ trợ timeline đa track (cắt ghép, keyframe, mặt nạ, phông xanh, lọc màu).
