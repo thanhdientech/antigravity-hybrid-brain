@@ -42,6 +42,7 @@ Bảng quy chuẩn ánh xạ chính xác thể loại video sang công thức k�
 | **Kể chuyện hoạt hình / Nhân văn** | Hoạt hình ngắn AI | 60s – 3 phút | **Pixar Story Spine** (Once upon a time...) | Mối quan hệ nhân quả chặt chẽ | [`references/05-cinematic-drama-formulas.md`](./references/05-cinematic-drama-formulas.md) |
 | **Hành trình nhân vật lột xác** | Drama ngắn / Series | 1 – 5 phút | **Dan Harmon 8-Beat Story Circle** | Chu kỳ 8 bước khép kín hoàn chỉnh | [`references/05-cinematic-drama-formulas.md`](./references/05-cinematic-drama-formulas.md) |
 | **Kể chuyện chiêm nghiệm nhẹ nhàng** | Phim nghệ thuật / Ghibli | 1 – 5 phút | **Kishōtenketsu** (Khởi - Thừa - Chuyển - Kết) | Không cần xung đột, bẻ cua góc nhìn | [`references/05-cinematic-drama-formulas.md`](./references/05-cinematic-drama-formulas.md) |
+| **Phim Drama Đoản kịch / Sảng kịch (Cổ trang & Hiện đại)** | TikTok, Reels, Shorts, YouTube (`9:16` / `16:9`) | 3 – 5 phút / tập (Series) | **Hongguo Dual-Round + Payoff Debt Ledger (20 Repo Trung Quốc)** | 5 giây vàng mở màn, Sổ nợ vả mặt, Móc câu giữa/cuối tập, Ghép BGM 6 pha & Dựng nhịp nhanh `FAST_CUT` trên Google Flow | [`references/07-doan-kich-sang-kich-drama-ai-google-flow.md`](./references/07-doan-kich-sang-kich-drama-ai-google-flow.md) |
 
 ---
 
