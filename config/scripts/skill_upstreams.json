@@ -175,6 +175,13 @@
       "local_dir": "~/.gemini/config/skills/deeptutor-cli",
       "recorded_sha": "f7aed0744c36c5afef16a4261c31ebee1208cac2",
       "recorded_date": "2026-11-01"
+    },
+    {
+      "skill": "marketingskills (coreyhaines31)",
+      "remote_url": "https://github.com/coreyhaines31/marketingskills.git",
+      "local_dir": "~/.gemini/config/skills/marketingskills",
+      "recorded_sha": "1f837447b20bb6f0e72d87b80ece1c221c362c7d",
+      "recorded_date": "2026-11-16"
     }
   ]
 }

@@ -52,6 +52,7 @@ Mỗi kỹ năng trong hệ thống được phân thành 2 nhóm nguồn:
 | **37** | **`security-audit`** | Chuẩn OWASP Top 10 & Code Audit | [`C:\Users\INFOASIA\.gemini\config\skills\security-audit`](file:///C:/Users/INFOASIA/.gemini/config/skills/security-audit/) | Chạy scan an toàn mã nguồn |
 | **38** | **`viet-kich-ban-drama`** | 20 Repo Đoản Kịch & Sảng Kịch Trung Quốc (`hongguo`, `novel-writer`, `Story-Flicks`, `ViMax`...) | [`E:\DIEN APP\Lam phim AI Trung\github_drama_repos`](file:///E:/DIEN%20APP/Lam%20phim%20AI%20Trung/github_drama_repos/) | Đồng bộ công thức kịch bản & Sổ Nợ Sảng Khoái |
 | **39** | **`viet-prompt-lam-phim-drama`** | Cỗ máy Prompt Google Flow (`Veo 3.1` + `Nano Banana Pro`), Hòa âm 6 Cao Trào & Edit Nhịp Nhanh Chậm | [`E:\DIEN APP\Lam phim AI Trung\CAM_NANG_TOAN_DIEN_LAM_PHIM_CO_TRANG_DRAMA_AI_GOOGLE_FLOW.md`](file:///E:/DIEN%20APP/Lam%20phim%20AI%20Trung/CAM_NANG_TOAN_DIEN_LAM_PHIM_CO_TRANG_DRAMA_AI_GOOGLE_FLOW.md) | Kiểm tra khóa 3 trụ cột (`CHAR_LOCK`, `LOC_LOCK`, `PROP_LOCK`) |
+| **40** | **`marketingskills`** | [coreyhaines31/marketingskills](https://github.com/coreyhaines31/marketingskills) (Siêu Hub 53 Skills Marketing & Growth + 67 Node.js CLIs) | `%USERPROFILE%\.gemini\config\skills\marketingskills` | `powershell -ExecutionPolicy Bypass -File scripts/update_from_upstream.ps1` |
 
 ---
 
