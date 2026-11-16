@@ -121,6 +121,7 @@ HIGH_SPECIFICITY_SINGLE_TOKENS = {
     "webapp", "impeccable", "rbac", "stepper", "gorouter", "blueprint", "asar", "ghidra", "pyinstaller", "recordly", "webcake",
     "wcag", "cwv", "gstack", "viewport", "responsive", "deeptutor", "eduhub", "lightrag", "graphrag",
     "marketingskills", "andromeda", "dunning", "paywall", "paywalls", "revops", "aarrr",
+    "renderlongytb", "rendershortvideo", "omniflow",
 }
 
 CONCEPT_SYNONYMS: list[tuple[set[str], list[str]]] = [
@@ -210,6 +211,10 @@ CONCEPT_SYNONYMS: list[tuple[set[str], list[str]]] = [
      ["deeptutor-cli", "create-and-edit-video", "lam-phim-video-master", "math_animator", "video_lesson"]),
     ({"marketingskills", "andromeda", "churn", "dunning", "paywall", "paywalls", "revops", "aarrr", "outbound", "offer", "pricing", "onboarding", "huy", "goi", "doi", "thu", "dinh", "gia"},
      ["marketingskills", "andromeda", "churn", "offers", "pricing", "funnel", "revops", "outbound"]),
+    ({"renderlongytb", "omniflow", "8500", "muse", "flowkit", "8100", "dai", "youtube"},
+     ["renderlongytb", "lam-phim-video-master", "omniflow", "8500", "flowboard"]),
+    ({"rendershortvideo", "8600", "8650", "ngan", "reels", "shorts", "koc", "diy", "shopee"},
+     ["rendershortvideo", "shopee-affiliate-video-studio", "lam-phim-video-master", "8600", "safe-zone"]),
 ]
 
 
